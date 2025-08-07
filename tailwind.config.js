@@ -5,6 +5,33 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  safelist: [
+    'bg-red-500',
+    'bg-blue-500',
+    'bg-green-500',
+    'bg-gradient-to-r',
+    'from-blue-500',
+    'from-blue-600', 
+    'to-green-500',
+    'to-green-600',
+    'from-blue-700',
+    'to-green-700',
+    'text-white',
+    'p-4',
+    'text-center',
+    'mb-4',
+    'mb-8',
+    'hover:scale-105',
+    'transform',
+    'transition-all',
+    'duration-300',
+    'shadow-lg',
+    'hover:shadow-xl',
+    'bg-clip-text',
+    'text-transparent',
+    'animate-pulse',
+    'min-h-screen'
+  ],
   theme: {
     extend: {
       colors: {

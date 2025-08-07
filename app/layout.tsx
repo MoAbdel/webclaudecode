@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { structuredData } from '@/lib/seo';
-import './globals.css';
+import './globals-simple.css';
 
 export const metadata: Metadata = {
   title: 'Mo Abdel | Mortgage Broker in Orange County, CA | NMLS #1426884',

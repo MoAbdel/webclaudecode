@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Simple test CSS */
+.test-gradient {
+  background: linear-gradient(to right, #3b82f6, #10b981);
+}
+
+/* Force include some utilities */
+@layer utilities {
+  .force-red {
+    background-color: #ef4444 !important;
+    color: white !important;
+  }
+  
+  .force-gradient {
+    background: linear-gradient(to right, #3b82f6, #10b981) !important;
+    color: white !important;
+  }
+}

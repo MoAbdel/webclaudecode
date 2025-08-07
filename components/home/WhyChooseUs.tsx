@@ -61,8 +61,8 @@ export default function WhyChooseUs() {
           {features.map((feature, index) => (
             <Card key={index} className="card-hover shadow-base44 border-slate-200 group flex flex-col transform hover:scale-105 transition-all duration-300 fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-6 flex flex-col items-center text-center flex-grow">
-                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:from-primary group-hover:to-secondary transition-all duration-300 mb-4 flex-shrink-0 shadow-md group-hover:shadow-lg">
-                  <feature.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-green-100 rounded-lg flex items-center justify-center group-hover:from-blue-600 group-hover:to-green-600 transition-all duration-300 mb-4 flex-shrink-0 shadow-md group-hover:shadow-lg">
+                  <feature.icon className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900">{feature.title}</h3>
                 <Badge variant="outline" className="text-xs bg-green-50 text-green-700 border-green-200 my-2">

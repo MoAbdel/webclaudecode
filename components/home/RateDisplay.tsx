@@ -66,7 +66,7 @@ export default function RateDisplay() {
               <CardHeader className="pb-4">
                 <div className="flex items-start justify-between">
                   <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center shadow-md">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-green-600 rounded-lg flex items-center justify-center shadow-md">
                       <loan.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -76,7 +76,7 @@ export default function RateDisplay() {
                   </div>
                   
                   <div className="text-right">
-                    <div className="text-3xl font-bold gradient-text rate-pulse">{loan.rate}</div>
+                    <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent animate-pulse">{loan.rate}</div>
                     <div className="text-sm text-slate-600">APR {loan.apr}</div>
                   </div>
                 </div>
@@ -120,7 +120,7 @@ export default function RateDisplay() {
           </p>
           
           <Link href="/calculator">
-            <Button size="lg" className="gradient-bg hover:shadow-base44-lg text-white px-8 py-3 btn-base44 transform hover:scale-105 transition-all duration-300">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
               <Calculator className="w-5 h-5 mr-2" />
               Get Your Personalized Rate Quote
             </Button>

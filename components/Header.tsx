@@ -50,18 +50,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 sm:gap-4">
-            <div className="relative h-16 w-16 sm:h-20 sm:w-20 rounded-full overflow-hidden">
-              <Image
-                src="/images/mo-headshot.webp"
-                alt="Mo The Broker Headshot"
-                fill
-                className="object-cover object-[30%_15%]"
-                sizes="(max-width: 640px) 64px, 80px"
-                priority
-              />
-            </div>
-            <span className="text-xl md:text-2xl font-bold gradient-text">Mo The Broker</span>
+          <Link href="/" className="flex items-center">
+            <span className="text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">Mo The Broker</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -88,7 +78,7 @@ export default function Header() {
               (949) 579-2057
             </a>
             <Link href="/contact">
-              <Button className="gradient-bg hover:shadow-base44 text-white px-6 btn-base44 transform hover:scale-105 transition-all duration-300">
+              <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Get Quote
               </Button>
             </Link>
@@ -135,7 +125,7 @@ export default function Header() {
                 (949) 579-2057
               </a>
               <Link href="/contact" className="block px-3 py-2">
-                <Button className="w-full gradient-bg hover:shadow-base44 text-white btn-base44">
+                <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white shadow-lg hover:shadow-xl">
                   Get Quote
                 </Button>
               </Link>

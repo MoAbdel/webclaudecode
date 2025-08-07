@@ -47,7 +47,7 @@ export default function LocalMarketInsights() {
             <Card key={index} className="card-hover shadow-base44 border-slate-200 transform hover:scale-105 transition-all duration-300 fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-6 text-center">
                 <div className="mb-4">
-                  <div className="text-3xl font-bold gradient-text mb-1 rate-pulse">{data.value}</div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-1 animate-pulse">{data.value}</div>
                   <div className="text-sm font-medium text-slate-600">{data.metric}</div>
                 </div>
                 
@@ -144,7 +144,7 @@ export default function LocalMarketInsights() {
           </p>
           
           <Link href="/programs">
-            <Button size="lg" className="gradient-bg hover:shadow-base44-lg text-white px-8 py-3 btn-base44 transform hover:scale-105 transition-all duration-300">
+            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
               Explore Loan Programs
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>

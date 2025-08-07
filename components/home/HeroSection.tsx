@@ -9,11 +9,11 @@ export default function HeroSection() {
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden hero-pattern">
       {/* Background decoration with Base44 gradient */}
-      <div className="absolute inset-0 gradient-bg opacity-5"></div>
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-50"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse-slow floating"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-pulse-slow floating" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-hero-pattern opacity-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-green-600 opacity-5"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-slate-50 to-green-50"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-bounce" style={{ animationDuration: '3s' }}></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -25,19 +25,19 @@ export default function HeroSection() {
                 NEXA Mortgage | NMLS #1426884
               </Badge>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight fade-in-up">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight animate-fade-in-up">
                 Orange County&apos;s Trusted Mortgage Broker
               </h1>
-              <h2 className="text-2xl font-semibold gradient-text fade-in-up-delay-1">Your Guide to Better Rates & Faster Closings</h2>
+              <h2 className="text-2xl font-semibold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent animate-fade-in-up" style={{ animationDelay: '0.1s' }}>Your Guide to Better Rates & Faster Closings</h2>
               
-              <p className="text-lg text-slate-600 leading-relaxed fade-in-up-delay-2">
+              <p className="text-lg text-slate-600 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                 As a Wholesale Mortgage Broker with NEXA Mortgage—the nation&apos;s largest wholesale brokerage—I provide Orange County residents with direct access to over 200 lenders. My mission is to &apos;hack&apos; the traditional mortgage process by forcing lenders to compete for your business. This strategy secures you better rates, faster approvals, and more flexible loan options than any big bank can offer. I am committed to a transparent, tech-savvy process that eliminates junk fees and empowers you to achieve your homeownership goals with confidence.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
-                <Button size="lg" className="gradient-bg hover:shadow-base44-lg text-white px-8 py-3 text-lg font-semibold shadow-base44 btn-base44 transform hover:scale-105 transition-all duration-300">
+                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-3 text-lg font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
                   <Calculator className="w-5 h-5 mr-2" />
                   Get My Rate Quote
                   <ArrowRight className="w-5 h-5 ml-2" />

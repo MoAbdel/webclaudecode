@@ -94,7 +94,7 @@ export default function QuickQuote() {
         </div>
 
         <Card className="shadow-xl border-slate-200">
-          <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-t-lg">
+          <CardHeader className="bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-t-lg">
             <CardTitle className="flex items-center text-2xl">
               <Calculator className="w-6 h-6 mr-3" />
               Quick Rate Calculator
@@ -191,7 +191,7 @@ export default function QuickQuote() {
                 type="submit"
                 size="lg"
                 disabled={isSubmitting}
-                className="w-full gradient-bg hover:shadow-base44-lg text-white py-4 text-lg font-semibold btn-base44 transform hover:scale-105 transition-all duration-300"
+                className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 {isSubmitting ? (
                   "Processing..."

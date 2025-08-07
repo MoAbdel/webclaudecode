@@ -51,14 +51,15 @@ export default function Header() {
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-20 h-20 md:w-24 md:h-24 rounded-full overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 ring-2 ring-blue-200">
+            <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 ring-1 ring-blue-200">
               <Image
                 src="/images/mo-headshot.webp"
                 alt="Mo The Broker"
                 fill
                 className="object-cover scale-150"
                 style={{ objectPosition: 'center 30%' }}
-                sizes="(max-width: 768px) 80px, 96px"
+                sizes="(max-width: 768px) 56px, 64px"
+                quality={85}
                 priority
               />
             </div>

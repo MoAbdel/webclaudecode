@@ -1,0 +1,129 @@
+import React from 'react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Button } from '@/components/ui/Button';
+import { seoData } from '@/lib/seo';
+import Image from 'next/image';
+
+export const metadata: Metadata = {
+  title: seoData.About.title,
+  description: seoData.About.description,
+};
+
+export default function AboutPage() {
+  return (
+    <div className="min-h-screen py-12">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Hero Section */}
+        <div className="text-center mb-12">
+          <div className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-lg">
+            <Image
+              src="/images/mo-headshot.webp"
+              alt="Mo Abdel - Orange County Mortgage Broker"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+          <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+            About Mo Abdel
+          </h1>
+          <p className="text-xl text-slate-600">
+            Your Trusted Orange County Mortgage Professional
+          </p>
+          <p className="text-lg text-blue-600 mt-2">NMLS #1426884</p>
+        </div>
+
+        {/* Story Section */}
+        <div className="prose prose-lg max-w-none mb-12">
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">My Story</h2>
+            <p className="text-slate-700 mb-4">
+              As a wholesale mortgage broker serving Orange County, I've dedicated my career to helping 
+              families achieve their homeownership dreams. With access to over 200 wholesale lenders, 
+              I can offer you rates and programs that traditional banks simply cannot match.
+            </p>
+            <p className="text-slate-700 mb-4">
+              What sets me apart is my commitment to personal service. When you work with me, you're 
+              not just another loan number. I take the time to understand your unique financial 
+              situation and goals, then craft a mortgage strategy that works specifically for you.
+            </p>
+            <p className="text-slate-700">
+              My clients appreciate my straightforward approach, quick response times, and the fact 
+              that I'm available 24/7 to answer questions throughout the loan process. I believe 
+              that buying a home should be exciting, not stressful.
+            </p>
+          </div>
+
+          {/* Credentials */}
+          <div className="bg-blue-50 rounded-lg p-8 mb-8">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Credentials & Expertise</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="text-xl font-semibold mb-3">Professional Licenses</h3>
+                <ul className="space-y-2 text-slate-700">
+                  <li>• NMLS #1426884</li>
+                  <li>• California Licensed Mortgage Broker</li>
+                  <li>• Continuing Education Current</li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-xl font-semibold mb-3">Specializations</h3>
+                <ul className="space-y-2 text-slate-700">
+                  <li>• First-Time Homebuyers</li>
+                  <li>• Refinancing Specialists</li>
+                  <li>• Jumbo & High-Balance Loans</li>
+                  <li>• Investment Properties</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Why Wholesale */}
+          <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Wholesale Mortgage Brokerage?</h2>
+            <p className="text-slate-700 mb-4">
+              Unlike retail banks that can only offer their own loan products, I work with a network 
+              of wholesale lenders. This means I can shop your loan to multiple sources and find the 
+              best possible rate and terms for your specific situation.
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+              <div className="text-center p-4 bg-slate-50 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600 mb-2">200+</div>
+                <div className="text-sm text-slate-600">Wholesale Lenders</div>
+              </div>
+              <div className="text-center p-4 bg-slate-50 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600 mb-2">24/7</div>
+                <div className="text-sm text-slate-600">Availability</div>
+              </div>
+              <div className="text-center p-4 bg-slate-50 rounded-lg">
+                <div className="text-2xl font-bold text-blue-600 mb-2">100%</div>
+                <div className="text-sm text-slate-600">Personal Service</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center bg-blue-600 text-white rounded-lg p-8">
+          <h2 className="text-3xl font-bold mb-4">Ready to Work Together?</h2>
+          <p className="text-xl mb-6 text-blue-100">
+            Let's discuss your mortgage needs and find the perfect loan program for you.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link href="/contact">
+              <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
+                Get Free Consultation
+              </Button>
+            </Link>
+            <a href="tel:(949) 579-2057">
+              <Button variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
+                Call (949) 579-2057
+              </Button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}

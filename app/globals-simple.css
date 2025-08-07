@@ -2,20 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Simple test CSS */
-.test-gradient {
-  background: linear-gradient(to right, #3b82f6, #10b981);
+/* Base44 Theme - Simplified */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
-/* Force include some utilities */
 @layer utilities {
-  .force-red {
-    background-color: #ef4444 !important;
-    color: white !important;
+  /* Custom animations that work with Tailwind */
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
   
-  .force-gradient {
-    background: linear-gradient(to right, #3b82f6, #10b981) !important;
-    color: white !important;
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  /* Glass effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 }

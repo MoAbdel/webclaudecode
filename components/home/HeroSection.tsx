@@ -7,13 +7,12 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden hero-pattern">
-      {/* Background decoration with Base44 gradient */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-green-600 opacity-5"></div>
+    <section className="relative py-20 lg:py-32 overflow-hidden">
+      {/* Enhanced background with working gradients */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-slate-50 to-green-50"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-400 rounded-full mix-blend-multiply filter blur-3xl opacity-25 animate-pulse" style={{ animationDelay: '2s' }}></div>
-      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-purple-300 rounded-full mix-blend-multiply filter blur-2xl opacity-20 animate-bounce" style={{ animationDuration: '3s' }}></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse animate-float"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-br from-green-400 to-green-600 rounded-full mix-blend-multiply filter blur-3xl opacity-15 animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-gradient-to-br from-purple-300 to-pink-300 rounded-full mix-blend-multiply filter blur-2xl opacity-10 animate-bounce" style={{ animationDuration: '4s' }}></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -70,8 +69,8 @@ export default function HeroSection() {
           </div>
 
           {/* Visual */}
-          <div className="relative fade-in-up-delay-3">
-            <div className="bg-white rounded-2xl shadow-base44-lg p-8 border border-slate-200 card-hover">
+          <div className="relative">
+            <div className="bg-white/80 glass rounded-2xl shadow-2xl p-8 border border-slate-200/50 hover:shadow-3xl transition-all duration-500 hover:-translate-y-2">
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold text-slate-900">Today&apos;s Sample Rates</h3>

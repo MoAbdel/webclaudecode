@@ -76,38 +76,6 @@ export default function ProgramsPage() {
           </p>
         </div>
 
-        {/* Loan Programs Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-          {loanPrograms.map((program, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-lg p-8 border border-slate-200">
-              <div className="flex items-center mb-6">
-                <program.icon className="w-12 h-12 text-blue-600 mr-4" />
-                <div>
-                  <h2 className="text-2xl font-bold text-slate-900">{program.title}</h2>
-                  <p className="text-slate-600">{program.description}</p>
-                </div>
-              </div>
-              
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-3">Key Features:</h3>
-                <ul className="space-y-2">
-                  {program.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-blue-600 mr-3 mt-1">✓</span>
-                      <span className="text-slate-700">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              
-              <div className="mb-6">
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">Best For:</h3>
-                <p className="text-slate-600">{program.bestFor}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Refinancing Programs - Prominent Call-out Boxes */}
         <div className="mb-16">
           <div className="text-center mb-12">
@@ -224,6 +192,47 @@ export default function ProgramsPage() {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Other Loan Programs */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Purchase & Other Loan Programs
+            </h2>
+          </div>
+        </div>
+
+        {/* Loan Programs Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          {loanPrograms.map((program, index) => (
+            <div key={index} className="bg-white rounded-lg shadow-lg p-8 border border-slate-200">
+              <div className="flex items-center mb-6">
+                <program.icon className="w-12 h-12 text-blue-600 mr-4" />
+                <div>
+                  <h2 className="text-2xl font-bold text-slate-900">{program.title}</h2>
+                  <p className="text-slate-600">{program.description}</p>
+                </div>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-slate-900 mb-3">Key Features:</h3>
+                <ul className="space-y-2">
+                  {program.features.map((feature, idx) => (
+                    <li key={idx} className="flex items-start">
+                      <span className="text-blue-600 mr-3 mt-1">✓</span>
+                      <span className="text-slate-700">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              <div className="mb-6">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">Best For:</h3>
+                <p className="text-slate-600">{program.bestFor}</p>
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Additional Programs */}

@@ -24,7 +24,9 @@ export default function LocalMarketInsights() {
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50">
+    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+      {/* Background pattern */}
+      <div className="absolute inset-0 bg-hero-pattern opacity-5"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <Badge className="bg-green-100 text-green-800 mb-4">
@@ -42,10 +44,10 @@ export default function LocalMarketInsights() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
           {marketData.map((data, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300 border-slate-200">
+            <Card key={index} className="card-hover shadow-base44 border-slate-200 transform hover:scale-105 transition-all duration-300 fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-6 text-center">
                 <div className="mb-4">
-                  <div className="text-3xl font-bold text-slate-900 mb-1">{data.value}</div>
+                  <div className="text-3xl font-bold gradient-text mb-1 rate-pulse">{data.value}</div>
                   <div className="text-sm font-medium text-slate-600">{data.metric}</div>
                 </div>
                 
@@ -66,7 +68,7 @@ export default function LocalMarketInsights() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           {/* Orange County Highlights */}
-          <Card className="border-slate-200 shadow-lg">
+          <Card className="border-slate-200 shadow-base44-lg card-hover">
             <CardHeader>
               <CardTitle className="flex items-center text-xl">
                 <Home className="w-6 h-6 text-blue-600 mr-3" />
@@ -101,7 +103,7 @@ export default function LocalMarketInsights() {
           </Card>
 
           {/* Financing Programs */}
-          <Card className="border-slate-200 shadow-lg">
+          <Card className="border-slate-200 shadow-base44-lg card-hover">
             <CardHeader>
               <CardTitle className="flex items-center text-xl">
                 <DollarSign className="w-6 h-6 text-green-600 mr-3" />
@@ -142,7 +144,7 @@ export default function LocalMarketInsights() {
           </p>
           
           <Link href="/programs">
-            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+            <Button size="lg" className="gradient-bg hover:shadow-base44-lg text-white px-8 py-3 btn-base44 transform hover:scale-105 transition-all duration-300">
               Explore Loan Programs
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>

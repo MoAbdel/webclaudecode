@@ -7,11 +7,13 @@ import Image from "next/image";
 
 export default function HeroSection() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden">
-      {/* Background decoration */}
+    <section className="relative py-20 lg:py-32 overflow-hidden hero-pattern">
+      {/* Background decoration with Base44 gradient */}
+      <div className="absolute inset-0 gradient-bg opacity-5"></div>
       <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-slate-50"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-xl opacity-30 animate-pulse"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-green-100 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse delay-1000"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse-slow floating"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary rounded-full mix-blend-multiply filter blur-xl opacity-15 animate-pulse-slow floating" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-hero-pattern opacity-10"></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -23,19 +25,19 @@ export default function HeroSection() {
                 NEXA Mortgage | NMLS #1426884
               </Badge>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 leading-tight fade-in-up">
                 Orange County&apos;s Trusted Mortgage Broker
               </h1>
-              <h2 className="text-2xl font-semibold text-blue-600">Your Guide to Better Rates & Faster Closings</h2>
+              <h2 className="text-2xl font-semibold gradient-text fade-in-up-delay-1">Your Guide to Better Rates & Faster Closings</h2>
               
-              <p className="text-lg text-slate-600 leading-relaxed">
+              <p className="text-lg text-slate-600 leading-relaxed fade-in-up-delay-2">
                 As a Wholesale Mortgage Broker with NEXA Mortgage—the nation&apos;s largest wholesale brokerage—I provide Orange County residents with direct access to over 200 lenders. My mission is to &apos;hack&apos; the traditional mortgage process by forcing lenders to compete for your business. This strategy secures you better rates, faster approvals, and more flexible loan options than any big bank can offer. I am committed to a transparent, tech-savvy process that eliminates junk fees and empowers you to achieve your homeownership goals with confidence.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Link href="/contact">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg font-semibold shadow-lg">
+                <Button size="lg" className="gradient-bg hover:shadow-base44-lg text-white px-8 py-3 text-lg font-semibold shadow-base44 btn-base44 transform hover:scale-105 transition-all duration-300">
                   <Calculator className="w-5 h-5 mr-2" />
                   Get My Rate Quote
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -68,8 +70,8 @@ export default function HeroSection() {
           </div>
 
           {/* Visual */}
-          <div className="relative">
-            <div className="bg-white rounded-2xl shadow-2xl p-8 border border-slate-200">
+          <div className="relative fade-in-up-delay-3">
+            <div className="bg-white rounded-2xl shadow-base44-lg p-8 border border-slate-200 card-hover">
               <div className="space-y-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold text-slate-900">Today&apos;s Sample Rates</h3>

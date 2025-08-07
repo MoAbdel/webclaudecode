@@ -59,10 +59,10 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {features.map((feature, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300 border-slate-200 group flex flex-col">
+            <Card key={index} className="card-hover shadow-base44 border-slate-200 group flex flex-col transform hover:scale-105 transition-all duration-300 fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-6 flex flex-col items-center text-center flex-grow">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300 mb-4 flex-shrink-0">
-                  <feature.icon className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-lg flex items-center justify-center group-hover:from-primary group-hover:to-secondary transition-all duration-300 mb-4 flex-shrink-0 shadow-md group-hover:shadow-lg">
+                  <feature.icon className="w-6 h-6 text-primary group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-lg font-semibold text-slate-900">{feature.title}</h3>
                 <Badge variant="outline" className="text-xs bg-green-50 text-green-700 border-green-200 my-2">
@@ -75,7 +75,7 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Testimonials */}
-        <div className="bg-slate-50 rounded-2xl p-8">
+        <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 shadow-base44">
           <h3 className="text-2xl font-bold text-center text-slate-900 mb-8">What Our Clients Say</h3>
           
           <div className="max-w-3xl mx-auto">

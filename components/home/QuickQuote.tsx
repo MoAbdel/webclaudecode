@@ -191,7 +191,7 @@ export default function QuickQuote() {
                 type="submit"
                 size="lg"
                 disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold"
+                className="w-full gradient-bg hover:shadow-base44-lg text-white py-4 text-lg font-semibold btn-base44 transform hover:scale-105 transition-all duration-300"
               >
                 {isSubmitting ? (
                   "Processing..."

@@ -46,7 +46,7 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm border-b border-slate-200 sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-24">
           {/* Logo */}
@@ -61,7 +61,7 @@ export default function Header() {
                 priority
               />
             </div>
-            <span className="text-xl md:text-2xl font-bold text-slate-800">Mo The Broker</span>
+            <span className="text-xl md:text-2xl font-bold gradient-text">Mo The Broker</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -88,7 +88,7 @@ export default function Header() {
               (949) 579-2057
             </a>
             <Link href="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6">
+              <Button className="gradient-bg hover:shadow-base44 text-white px-6 btn-base44 transform hover:scale-105 transition-all duration-300">
                 Get Quote
               </Button>
             </Link>
@@ -135,7 +135,7 @@ export default function Header() {
                 (949) 579-2057
               </a>
               <Link href="/contact" className="block px-3 py-2">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white">
+                <Button className="w-full gradient-bg hover:shadow-base44 text-white btn-base44">
                   Get Quote
                 </Button>
               </Link>

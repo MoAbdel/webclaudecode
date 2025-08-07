@@ -44,7 +44,7 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <Badge className="bg-blue-100 text-blue-800 mb-4">The Mortgage Hacker Advantage</Badge>

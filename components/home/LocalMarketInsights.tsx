@@ -24,7 +24,7 @@ export default function LocalMarketInsights() {
   }, []);
 
   return (
-    <section className="py-16 bg-gradient-to-br from-slate-50 to-blue-50 relative overflow-hidden">
+    <section className="py-16 bg-white relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute inset-0 bg-hero-pattern opacity-5"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

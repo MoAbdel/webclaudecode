@@ -37,21 +37,21 @@ export default function AboutPage() {
         {/* Story Section */}
         <div className="prose prose-lg max-w-none mb-12">
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">My Story</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Your Equity. Your Goals. Your Success.</h2>
             <p className="text-slate-700 mb-4">
-              As a wholesale mortgage broker serving Orange County, I've dedicated my career to helping 
-              families achieve their homeownership dreams. With access to over 200 wholesale lenders, 
-              I can offer you rates and programs that traditional banks simply cannot match.
+              As a wholesale mortgage broker serving Orange County, I specialize in helping homeowners unlock the power of their home's equity and secure better mortgage terms through strategic refinancing. With access to over 200 wholesale lenders, I can offer you rates and equity programs that traditional banks simply cannot match.
             </p>
             <p className="text-slate-700 mb-4">
-              What sets me apart is my commitment to personal service. When you work with me, you're 
-              not just another loan number. I take the time to understand your unique financial 
-              situation and goals, then craft a mortgage strategy that works specifically for you.
+              Your home is likely your largest asset—let's make it work harder for you.
+            </p>
+            <p className="text-slate-700 mb-4">
+              Whether you're looking to lower your monthly payments, eliminate PMI, consolidate high-interest debt, or access cash for home improvements, investment opportunities, or major life expenses, I have the expertise and lender relationships to find the perfect solution.
+            </p>
+            <p className="text-slate-700 mb-4">
+              What sets me apart is my commitment to maximizing your financial benefits. When you work with me, you're not just refinancing—you're optimizing your entire financial strategy. I take the time to analyze your current mortgage, assess your home's equity potential, and craft a refinancing or equity strategy that delivers real value to your bottom line.
             </p>
             <p className="text-slate-700">
-              My clients appreciate my straightforward approach, quick response times, and the fact 
-              that I'm available 24/7 to answer questions throughout the loan process. I believe 
-              that buying a home should be exciting, not stressful.
+              My clients appreciate my data-driven approach, lightning-fast processing times, and the fact that I'm available 24/7 to guide you through every step. I believe tapping into your home's equity should be profitable and stress-free, not complicated.
             </p>
           </div>
 

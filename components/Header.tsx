@@ -16,10 +16,10 @@ const navigationItems = [
     icon: Home,
   },
   {
-    title: 'About',
-    page: 'About',
-    url: createPageUrl('About'),
-    icon: User,
+    title: 'Rate Calculator',
+    page: 'Calculator',
+    url: createPageUrl('Calculator'),
+    icon: Calculator,
   },
   {
     title: 'Loan Programs',
@@ -28,10 +28,10 @@ const navigationItems = [
     icon: FileText,
   },
   {
-    title: 'Rate Calculator',
-    page: 'Calculator',
-    url: createPageUrl('Calculator'),
-    icon: Calculator,
+    title: 'About',
+    page: 'About',
+    url: createPageUrl('About'),
+    icon: User,
   },
   {
     title: 'Contact',

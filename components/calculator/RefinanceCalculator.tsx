@@ -16,7 +16,6 @@ export default function RefinanceCalculator() {
     remainingYears: "27",
     newInterestRate: "7.00",
     newLoanTerm: "30",
-    closingCosts: "8500",
     cashOutAmount: "0"
   });
 
@@ -26,7 +25,6 @@ export default function RefinanceCalculator() {
     totalInterestCurrentLoan: 0,
     totalInterestNewLoan: 0,
     totalInterestSavings: 0,
-    breakEvenMonths: 0,
     newLoanAmount: 0
   });
 
@@ -38,10 +36,9 @@ export default function RefinanceCalculator() {
     
     const newRate = parseFloat(formData.newInterestRate) / 100 / 12;
     const newTermMonths = parseInt(formData.newLoanTerm) * 12;
-    const closingCosts = parseFloat(formData.closingCosts);
     const cashOut = parseFloat(formData.cashOutAmount);
     
-    const newLoanAmount = currentBalance + closingCosts + cashOut;
+    const newLoanAmount = currentBalance + cashOut;
     
     // Calculate new monthly payment
     const newPayment = newLoanAmount * (newRate * Math.pow(1 + newRate, newTermMonths)) / 
@@ -56,9 +53,6 @@ export default function RefinanceCalculator() {
     // Calculate savings
     const monthlySavings = currentPayment - newPayment;
     const totalSavings = totalCurrentInterest - totalNewInterest;
-    
-    // Calculate break-even point
-    const breakEven = monthlySavings > 0 ? closingCosts / monthlySavings : 0;
 
     setResults({
       newMonthlyPayment: newPayment,
@@ -66,7 +60,6 @@ export default function RefinanceCalculator() {
       totalInterestCurrentLoan: totalCurrentInterest,
       totalInterestNewLoan: totalNewInterest,
       totalInterestSavings: totalSavings,
-      breakEvenMonths: breakEven,
       newLoanAmount: newLoanAmount
     });
   };
@@ -82,7 +75,7 @@ export default function RefinanceCalculator() {
     calculateRefinance();
   }, [formData]);
 
-  const isGoodDeal = results.monthlySavings > 0 && results.breakEvenMonths > 0 && results.breakEvenMonths <= 60;
+  const isGoodDeal = results.monthlySavings > 0;
 
   return (
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -208,21 +201,6 @@ export default function RefinanceCalculator() {
                 </div>
 
                 <div className="space-y-2">
-                  <Label htmlFor="closingCosts" className="text-slate-700 font-medium">Estimated Closing Costs</Label>
-                  <div className="relative">
-                    <DollarSign className="absolute left-3 top-3 h-4 w-4 text-slate-400" />
-                    <Input
-                      id="closingCosts"
-                      type="number"
-                      value={formData.closingCosts}
-                      onChange={(e) => handleInputChange("closingCosts", e.target.value)}
-                      className="pl-9 border-slate-300"
-                      placeholder="8500"
-                    />
-                  </div>
-                </div>
-
-                <div className="space-y-2">
                   <Label htmlFor="cashOutAmount" className="text-slate-700 font-medium">Cash-Out Amount</Label>
                   <div className="relative">
                     <DollarSign className="absolute left-3 top-3 h-4 w-4 text-slate-400" />
@@ -276,13 +254,6 @@ export default function RefinanceCalculator() {
                 <span className="text-slate-600">Monthly Savings:</span>
                 <span className={`font-semibold text-lg ${results.monthlySavings >= 0 ? 'text-green-600' : 'text-red-500'}`}>
                   ${results.monthlySavings >= 0 ? '+' : ''}${Math.abs(results.monthlySavings).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}
-                </span>
-              </div>
-              
-              <div className="flex justify-between items-center">
-                <span className="text-slate-600">Break-Even Point:</span>
-                <span className="font-semibold text-slate-900">
-                  {results.breakEvenMonths > 0 ? `${Math.ceil(results.breakEvenMonths)} months` : 'N/A'}
                 </span>
               </div>
               

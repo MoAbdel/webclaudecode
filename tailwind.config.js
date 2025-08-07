@@ -43,7 +43,16 @@ module.exports = {
     'bg-white/80',
     'border-slate-200/50',
     'hover:-translate-y-2',
-    'min-h-screen'
+    'min-h-screen',
+    'w-20',
+    'h-20',
+    'w-24',
+    'h-24',
+    'rounded-full',
+    'scale-150',
+    'ring-2',
+    'ring-blue-200',
+    'object-cover'
   ],
   theme: {
     extend: {

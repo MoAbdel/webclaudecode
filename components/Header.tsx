@@ -52,11 +52,11 @@ export default function Header() {
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center">
             <Image 
-              src="/images/mo-logo.png" 
+              src="/images/mo-logo-white.webp" 
               alt="Mo The Broker - NMLS#1426884"
-              width={280}
-              height={80}
-              className="h-14 w-auto"
+              width={200}
+              height={60}
+              className="h-12 w-auto"
               priority
             />
           </Link>

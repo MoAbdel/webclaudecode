@@ -100,6 +100,25 @@ RateQuote.list('-created_at')
     }
   };
 
+  const handleUpdateRate = async () => {
+    if (!editingRate) return;
+    try {
+      await MortgageRate.update(editingRate.id, {
+        ...editingRate,
+        rate: parseFloat(editingRate.rate),
+        apr: parseFloat(editingRate.apr),
+        points: parseFloat(editingRate.points || '0'),
+        loan_term: parseInt(editingRate.loan_term),
+        min_credit_score: parseInt(editingRate.min_credit_score),
+        max_ltv: parseFloat(editingRate.max_ltv)
+      });
+      setEditingRate(null);
+      loadData();
+    } catch (error) {
+      console.error('Error updating rate:', error);
+    }
+  };
+
   const handleCreateInsight = async () => {
     try {
       await MarketInsight.create({
@@ -117,6 +136,20 @@ RateQuote.list('-created_at')
       loadData();
     } catch (error) {
       console.error('Error creating insight:', error);
+    }
+  };
+
+  const handleUpdateInsight = async () => {
+    if (!editingInsight) return;
+    try {
+      await MarketInsight.update(editingInsight.id, {
+        ...editingInsight,
+        display_order: parseInt(editingInsight.display_order)
+      });
+      setEditingInsight(null);
+      loadData();
+    } catch (error) {
+      console.error('Error updating insight:', error);
     }
   };
 
@@ -305,33 +338,68 @@ RateQuote.list('-created_at')
               {rates.map((rate) => (
                 <Card key={rate.id} className="shadow-sm border-slate-200">
                   <CardContent className="p-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-slate-900">{rate.loan_type}</h3>
-                        <div className="flex items-center space-x-4 mt-1 text-sm text-slate-600">
-                          <span>Rate: {rate.rate}%</span>
-                          <span>APR: {rate.apr}%</span>
-                          {rate.is_featured && <Badge className="bg-green-100 text-green-800">Featured</Badge>}
+                    {editingRate?.id === rate.id ? (
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                          <Input
+                            value={editingRate.loan_type}
+                            onChange={(e) => setEditingRate({...editingRate, loan_type: e.target.value})}
+                            placeholder="Loan Type"
+                          />
+                          <Input
+                            type="number"
+                            step="0.125"
+                            value={editingRate.rate}
+                            onChange={(e) => setEditingRate({...editingRate, rate: e.target.value})}
+                            placeholder="Rate"
+                          />
+                          <Input
+                            type="number"
+                            step="0.125"
+                            value={editingRate.apr}
+                            onChange={(e) => setEditingRate({...editingRate, apr: e.target.value})}
+                            placeholder="APR"
+                          />
+                        </div>
+                        <div className="flex gap-2">
+                          <Button onClick={handleUpdateRate} className="bg-green-600 hover:bg-green-700">
+                            <Save className="w-4 h-4 mr-2" />
+                            Save
+                          </Button>
+                          <Button onClick={() => setEditingRate(null)} variant="ghost">
+                            Cancel
+                          </Button>
                         </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => setEditingRate(rate)}
-                        >
-                          <Edit3 className="w-4 h-4" />
-                        </Button>
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => handleDeleteRate(rate.id)}
-                          className="text-red-600 hover:text-red-700"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </Button>
+                    ) : (
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-slate-900">{rate.loan_type}</h3>
+                          <div className="flex items-center space-x-4 mt-1 text-sm text-slate-600">
+                            <span>Rate: {rate.rate}%</span>
+                            <span>APR: {rate.apr}%</span>
+                            {rate.is_featured && <Badge className="bg-green-100 text-green-800">Featured</Badge>}
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => setEditingRate(rate)}
+                          >
+                            <Edit3 className="w-4 h-4" />
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => handleDeleteRate(rate.id)}
+                            className="text-red-600 hover:text-red-700"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </Button>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </CardContent>
                 </Card>
               ))}
@@ -415,40 +483,87 @@ RateQuote.list('-created_at')
               {insights.map((insight) => (
                 <Card key={insight.id} className="shadow-sm border-slate-200">
                   <CardContent className="p-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-3">
-                          <h3 className="font-semibold text-slate-900">{insight.metric}</h3>
-                          <span className="text-2xl font-bold text-blue-600">{insight.value}</span>
-                          <div className={`flex items-center space-x-1 text-sm font-medium ${
-                            insight.trend === 'up' ? 'text-green-600' : 
-                            insight.trend === 'down' ? 'text-red-500' : 'text-slate-600'
-                          }`}>
-                            {insight.trend === 'up' && <TrendingUp className="w-4 h-4" />}
-                            {insight.trend === 'down' && <TrendingDown className="w-4 h-4" />}
-                            <span>{insight.change}</span>
-                          </div>
+                    {editingInsight?.id === insight.id ? (
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <Input
+                            value={editingInsight.metric}
+                            onChange={(e) => setEditingInsight({...editingInsight, metric: e.target.value})}
+                            placeholder="Metric Name"
+                          />
+                          <Input
+                            value={editingInsight.value}
+                            onChange={(e) => setEditingInsight({...editingInsight, value: e.target.value})}
+                            placeholder="Value"
+                          />
+                          <Input
+                            value={editingInsight.change}
+                            onChange={(e) => setEditingInsight({...editingInsight, change: e.target.value})}
+                            placeholder="Change"
+                          />
+                          <Select value={editingInsight.trend} onValueChange={(value) => setEditingInsight({...editingInsight, trend: value})}>
+                            <SelectTrigger>
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="up">Up</SelectItem>
+                              <SelectItem value="down">Down</SelectItem>
+                              <SelectItem value="stable">Stable</SelectItem>
+                            </SelectContent>
+                          </Select>
                         </div>
-                        <p className="text-sm text-slate-600 mt-1">{insight.description}</p>
+                        <Textarea
+                          value={editingInsight.description}
+                          onChange={(e) => setEditingInsight({...editingInsight, description: e.target.value})}
+                          placeholder="Description"
+                          rows={2}
+                        />
+                        <div className="flex gap-2">
+                          <Button onClick={handleUpdateInsight} className="bg-green-600 hover:bg-green-700">
+                            <Save className="w-4 h-4 mr-2" />
+                            Save
+                          </Button>
+                          <Button onClick={() => setEditingInsight(null)} variant="ghost">
+                            Cancel
+                          </Button>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => setEditingInsight(insight)}
-                        >
-                          <Edit3 className="w-4 h-4" />
-                        </Button>
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => handleDeleteInsight(insight.id)}
-                          className="text-red-600 hover:text-red-700"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </Button>
+                    ) : (
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-3">
+                            <h3 className="font-semibold text-slate-900">{insight.metric}</h3>
+                            <span className="text-2xl font-bold text-blue-600">{insight.value}</span>
+                            <div className={`flex items-center space-x-1 text-sm font-medium ${
+                              insight.trend === 'up' ? 'text-green-600' : 
+                              insight.trend === 'down' ? 'text-red-500' : 'text-slate-600'
+                            }`}>
+                              {insight.trend === 'up' && <TrendingUp className="w-4 h-4" />}
+                              {insight.trend === 'down' && <TrendingDown className="w-4 h-4" />}
+                              <span>{insight.change}</span>
+                            </div>
+                          </div>
+                          <p className="text-sm text-slate-600 mt-1">{insight.description}</p>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => setEditingInsight(insight)}
+                          >
+                            <Edit3 className="w-4 h-4" />
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => handleDeleteInsight(insight.id)}
+                            className="text-red-600 hover:text-red-700"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </Button>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </CardContent>
                 </Card>
               ))}

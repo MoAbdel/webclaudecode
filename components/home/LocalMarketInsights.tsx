@@ -67,41 +67,6 @@ export default function LocalMarketInsights() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-          {/* Orange County Highlights */}
-          <Card className="border-slate-200 shadow-base44-lg card-hover">
-            <CardHeader>
-              <CardTitle className="flex items-center text-xl">
-                <Home className="w-6 h-6 text-blue-600 mr-3" />
-                Why Orange County is a Great Investment
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                <div>
-                  <h4 className="font-semibold text-slate-900">Top-Rated Schools</h4>
-                  <p className="text-slate-600 text-sm">Multiple highly-rated school districts throughout the county</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                <div>
-                  <h4 className="font-semibold text-slate-900">Prime Location</h4>
-                  <p className="text-slate-600 text-sm">Easy access to beaches, mountains, and major employment centers</p>
-                </div>
-              </div>
-              
-              <div className="flex items-start space-x-3">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                <div>
-                  <h4 className="font-semibold text-slate-900">Strong Property Values</h4>
-                  <p className="text-slate-600 text-sm">Consistent appreciation and desirable communities throughout OC</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
           {/* Financing Programs */}
           <Card className="border-slate-200 shadow-base44-lg card-hover">
             <CardHeader>
@@ -136,6 +101,41 @@ export default function LocalMarketInsights() {
               </div>
             </CardContent>
           </Card>
+
+          {/* Orange County Highlights */}
+          <Card className="border-slate-200 shadow-base44-lg card-hover">
+            <CardHeader>
+              <CardTitle className="flex items-center text-xl">
+                <Home className="w-6 h-6 text-blue-600 mr-3" />
+                Why Orange County is a Great Investment
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <div>
+                  <h4 className="font-semibold text-slate-900">Top-Rated Schools</h4>
+                  <p className="text-slate-600 text-sm">Multiple highly-rated school districts throughout the county</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <div>
+                  <h4 className="font-semibold text-slate-900">Prime Location</h4>
+                  <p className="text-slate-600 text-sm">Easy access to beaches, mountains, and major employment centers</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-3">
+                <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
+                <div>
+                  <h4 className="font-semibold text-slate-900">Strong Property Values</h4>
+                  <p className="text-slate-600 text-sm">Consistent appreciation and desirable communities throughout OC</p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         <div className="text-center">
@@ -144,7 +144,7 @@ export default function LocalMarketInsights() {
           </p>
           
           <Link href="/programs">
-            <Button size="lg" className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
               Explore Loan Programs
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>

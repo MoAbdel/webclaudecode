@@ -77,7 +77,7 @@ export default function Header() {
               (949) 579-2057
             </a>
             <Link href="/contact">
-              <Button className="bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Get Quote
               </Button>
             </Link>
@@ -123,7 +123,7 @@ export default function Header() {
                 (949) 579-2057
               </a>
               <Link href="/contact" className="block px-3 py-2">
-                <Button className="w-full bg-gradient-to-r from-blue-600 to-green-600 hover:from-blue-700 hover:to-green-700 text-white shadow-lg hover:shadow-xl">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl">
                   Get Quote
                 </Button>
               </Link>

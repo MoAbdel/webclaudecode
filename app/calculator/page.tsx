@@ -67,43 +67,6 @@ export default function CalculatorPage() {
           </div>
         </div>
 
-        {/* Additional Info */}
-        <div className="mt-12 bg-gradient-to-r from-blue-50 to-green-50 rounded-xl p-8">
-          <div className="text-center">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">
-              Why Our Calculators Are Different
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-blue-600">📊</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Real Market Rates</h3>
-                <p className="text-slate-600">
-                  Based on current wholesale rates from over 200 lenders, not inflated bank rates.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-green-600">⚡</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Instant Results</h3>
-                <p className="text-slate-600">
-                  No waiting, no personal information required. Get your numbers immediately.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-purple-600">🎯</span>
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Orange County Focused</h3>
-                <p className="text-slate-600">
-                  Calculations include local tax rates, insurance estimates, and market conditions.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="mt-12 text-center bg-slate-900 text-white rounded-xl p-8">

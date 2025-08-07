@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function ReadyToGetStarted() {
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Ready to Get Started CTA Section */}
         <div className="bg-blue-600 text-white rounded-2xl p-8 text-center shadow-lg">

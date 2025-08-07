@@ -48,7 +48,7 @@ export default function Header() {
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-40 py-4">
+        <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center">
             <Image 
@@ -56,7 +56,7 @@ export default function Header() {
               alt="Mo The Broker - NMLS#1426884"
               width={600}
               height={180}
-              className="h-36 w-auto md:h-36 sm:h-28"
+              className="h-24 w-auto md:h-36 lg:h-36"
               priority
             />
           </Link>

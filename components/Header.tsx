@@ -50,30 +50,15 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo/Brand */}
-          <Link href="/" className="flex items-center space-x-3">
-            {/* House Icon */}
-            <svg 
-              className="w-12 h-12 text-slate-800" 
-              viewBox="0 0 100 100" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path 
-                d="M 15 45 L 50 15 L 85 45 L 85 80 L 15 80 Z" 
-                stroke="currentColor" 
-                strokeWidth="3" 
-                fill="none"
-              />
-              <path 
-                d="M 15 80 L 85 80" 
-                stroke="currentColor" 
-                strokeWidth="3"
-              />
-            </svg>
-            <div className="flex flex-col items-start">
-              <span className="text-2xl font-bold text-slate-900 tracking-wider">MO THE BROKER</span>
-              <span className="text-xs text-slate-600 italic tracking-wide">NMLS#1426884</span>
-            </div>
+          <Link href="/" className="flex items-center">
+            <Image 
+              src="/images/mo-logo.png" 
+              alt="Mo The Broker - NMLS#1426884"
+              width={280}
+              height={80}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
 
           {/* Desktop Navigation */}

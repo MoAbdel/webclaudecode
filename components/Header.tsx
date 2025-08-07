@@ -71,14 +71,13 @@ export default function Header() {
               <Link
                 key={item.title}
                 href={item.url}
-                className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                   pathname === item.url
                     ? 'text-blue-600 bg-blue-50'
                     : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                 }`}
               >
-                <item.icon className="w-4 h-4" />
-                <span>{item.title}</span>
+                {item.title}
               </Link>
             ))}
           </nav>
@@ -120,15 +119,14 @@ export default function Header() {
               <Link
                 key={item.title}
                 href={item.url}
-                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-base font-medium ${
+                className={`block px-3 py-2 rounded-md text-base font-medium ${
                   pathname === item.url
                     ? 'text-blue-600 bg-blue-50'
                     : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                 }`}
                 onClick={() => setMobileMenuOpen(false)}
               >
-                <item.icon className="w-5 h-5" />
-                <span>{item.title}</span>
+                {item.title}
               </Link>
             ))}
             <div className="pt-4 border-t border-slate-200 mt-4">

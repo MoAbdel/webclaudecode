@@ -75,17 +75,17 @@ export default function HeroSection() {
                 </div>
                 
                 <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3">
+                  <div className="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg">
                     <span className="font-medium text-slate-700">30-Year Fixed</span>
                     <span className="text-2xl font-bold text-green-600">6.875%</span>
                   </div>
                   
-                  <div className="flex justify-between items-center py-3">
+                  <div className="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg">
                     <span className="font-medium text-slate-700">15-Year Fixed</span>
                     <span className="text-2xl font-bold text-green-600">6.250%</span>
                   </div>
                   
-                  <div className="flex justify-between items-center py-3">
+                  <div className="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg">
                     <span className="font-medium text-slate-700">FHA 30-Year</span>
                     <span className="text-2xl font-bold text-green-600">6.500%</span>
                   </div>

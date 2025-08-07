@@ -37,7 +37,7 @@ export default function AboutPage() {
         {/* Story Section */}
         <div className="prose prose-lg max-w-none mb-12">
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">Your Equity. Your Goals. Your Success.</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">Your Equity. Your Goals. Your Success.</h2>
             <p className="text-slate-700 mb-4">
               As a wholesale mortgage broker serving Orange County, I specialize in helping homeowners unlock the power of their home's equity and secure better mortgage terms through strategic refinancing. With access to over 200 wholesale lenders, I can offer you rates and equity programs that traditional banks simply cannot match.
             </p>
@@ -74,6 +74,7 @@ export default function AboutPage() {
                   <li>• Refinancing Specialists</li>
                   <li>• Jumbo & High-Balance Loans</li>
                   <li>• Investment Properties</li>
+                  <li>• Bank Statement Loans (No W2 Programs)</li>
                 </ul>
               </div>
             </div>

@@ -48,21 +48,10 @@ export default function Header() {
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-24">
-          {/* Logo */}
+        <div className="flex justify-between items-center h-16">
+          {/* Logo/Brand */}
           <Link href="/" className="flex items-center">
-            <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 ring-1 ring-blue-200">
-              <Image
-                src="/images/mo-headshot.webp"
-                alt="Mo The Broker"
-                fill
-                className="object-cover scale-150"
-                style={{ objectPosition: 'center 30%' }}
-                sizes="(max-width: 768px) 56px, 64px"
-                quality={85}
-                priority
-              />
-            </div>
+            <span className="text-2xl font-bold text-slate-900">Mo The Broker</span>
           </Link>
 
           {/* Desktop Navigation */}

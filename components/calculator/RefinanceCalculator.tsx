@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
@@ -9,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Calculator, RefreshCw, DollarSign, Percent, TrendingDown, Clock, CheckCircle } from "lucide-react";
 
 export default function RefinanceCalculator() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     currentLoanBalance: "500000",
     currentInterestRate: "8.25",
@@ -298,7 +300,9 @@ export default function RefinanceCalculator() {
             </CardContent>
           </Card>
 
-          <Button className={`w-full ${isGoodDeal ? 'bg-green-600 hover:bg-green-700' : 'bg-purple-600 hover:bg-purple-700'} text-white py-3 text-lg font-semibold`}>
+          <Button 
+            onClick={() => router.push('/contact')}
+            className={`w-full ${isGoodDeal ? 'bg-green-600 hover:bg-green-700' : 'bg-purple-600 hover:bg-purple-700'} text-white py-3 text-lg font-semibold`}>
             Get My Refinance Quote
           </Button>
         </div>

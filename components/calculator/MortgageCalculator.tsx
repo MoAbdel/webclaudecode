@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
@@ -9,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Calculator, Home, DollarSign, Percent, Calendar, TrendingUp } from "lucide-react";
 
 export default function MortgageCalculator() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     homePrice: "750000",
     downPayment: "150000",
@@ -318,7 +320,9 @@ export default function MortgageCalculator() {
             </CardContent>
           </Card>
 
-          <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold">
+          <Button 
+            onClick={() => router.push('/contact')}
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold">
             Get My Personalized Rate Quote
           </Button>
         </div>

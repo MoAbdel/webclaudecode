@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { Input } from "@/components/ui/Input";
@@ -9,6 +10,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Calculator, Home, DollarSign, Percent, Users, TrendingUp, CreditCard } from "lucide-react";
 
 export default function AffordabilityCalculator() {
+  const router = useRouter();
   const [formData, setFormData] = useState({
     grossIncome: "120000",
     monthlyDebts: "800",
@@ -363,7 +365,9 @@ export default function AffordabilityCalculator() {
             </CardContent>
           </Card>
 
-          <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg font-semibold">
+          <Button 
+            onClick={() => router.push('/contact')}
+            className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg font-semibold">
             Get Pre-Approved Now
           </Button>
         </div>

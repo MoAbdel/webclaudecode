@@ -32,6 +32,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <meta name="build-timestamp" content={new Date().toISOString()} />
       </head>
       <body className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <Header />

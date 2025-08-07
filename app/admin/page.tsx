@@ -8,7 +8,7 @@ import { Label } from "@/components/ui/Label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { Badge } from "@/components/ui/Badge";
-import { Settings, Plus, Edit3, Trash2, TrendingUp, TrendingDown, Save } from "lucide-react";
+import { Settings, Plus, Edit3, Trash2, TrendingUp, TrendingDown, Save, RefreshCw, Download } from "lucide-react";
 import { MortgageRate, MarketInsight, RateQuote } from "@/lib/entities";
 
 export default function AdminPage() {
@@ -20,6 +20,8 @@ export default function AdminPage() {
   const [quotes, setQuotes] = useState<any[]>([]);
   const [editingRate, setEditingRate] = useState<any>(null);
   const [editingInsight, setEditingInsight] = useState<any>(null);
+  const [isScrapingRates, setIsScrapingRates] = useState(false);
+  const [isScrapingInsights, setIsScrapingInsights] = useState(false);
   const [newRate, setNewRate] = useState({
     loan_type: '',
     rate: '',
@@ -187,6 +189,66 @@ RateQuote.list('-created_at')
     }
   };
 
+  const scrapeRates = async () => {
+    setIsScrapingRates(true);
+    try {
+      const response = await fetch('/api/scrape/rates');
+      const result = await response.json();
+      
+      if (result.success && result.data) {
+        // Clear existing rates
+        for (const rate of rates) {
+          await MortgageRate.delete(rate.id);
+        }
+        
+        // Add new scraped rates
+        for (const rateData of result.data) {
+          await MortgageRate.create(rateData);
+        }
+        
+        loadData();
+        alert(`Successfully imported ${result.data.length} rates from market data!`);
+      } else {
+        alert('Failed to scrape rates. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error scraping rates:', error);
+      alert('Error scraping rates. Please check your connection.');
+    } finally {
+      setIsScrapingRates(false);
+    }
+  };
+
+  const scrapeInsights = async () => {
+    setIsScrapingInsights(true);
+    try {
+      const response = await fetch('/api/scrape/insights');
+      const result = await response.json();
+      
+      if (result.success && result.data) {
+        // Clear existing insights
+        for (const insight of insights) {
+          await MarketInsight.delete(insight.id);
+        }
+        
+        // Add new scraped insights
+        for (const insightData of result.data) {
+          await MarketInsight.create(insightData);
+        }
+        
+        loadData();
+        alert(`Successfully imported ${result.data.length} market insights!`);
+      } else {
+        alert('Failed to scrape insights. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error scraping insights:', error);
+      alert('Error scraping insights. Please check your connection.');
+    } finally {
+      setIsScrapingInsights(false);
+    }
+  };
+
   // Show password form if not authenticated
   if (!isAuthenticated) {
     return (
@@ -282,13 +344,33 @@ RateQuote.list('-created_at')
         {/* Rates Tab */}
         {activeTab === 'rates' && (
           <div className="space-y-8">
-            {/* Add New Rate */}
+            {/* Scraping and Add New Rate */}
             <Card className="shadow-lg border-slate-200">
               <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-t-lg">
-                <CardTitle className="flex items-center text-xl">
-                  <Plus className="w-5 h-5 mr-2" />
-                  Add New Rate
-                </CardTitle>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="flex items-center text-xl">
+                    <Plus className="w-5 h-5 mr-2" />
+                    Manage Rates
+                  </CardTitle>
+                  <Button 
+                    onClick={scrapeRates}
+                    disabled={isScrapingRates}
+                    className="bg-white text-blue-600 hover:bg-blue-50"
+                    size="sm"
+                  >
+                    {isScrapingRates ? (
+                      <>
+                        <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
+                        Scraping...
+                      </>
+                    ) : (
+                      <>
+                        <Download className="w-4 h-4 mr-2" />
+                        Fetch Live Rates
+                      </>
+                    )}
+                  </Button>
+                </div>
               </CardHeader>
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -410,13 +492,33 @@ RateQuote.list('-created_at')
         {/* Insights Tab */}
         {activeTab === 'insights' && (
           <div className="space-y-8">
-            {/* Add New Insight */}
+            {/* Scraping and Add New Insight */}
             <Card className="shadow-lg border-slate-200">
               <CardHeader className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-t-lg">
-                <CardTitle className="flex items-center text-xl">
-                  <Plus className="w-5 h-5 mr-2" />
-                  Add New Market Insight
-                </CardTitle>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="flex items-center text-xl">
+                    <Plus className="w-5 h-5 mr-2" />
+                    Manage Market Insights
+                  </CardTitle>
+                  <Button 
+                    onClick={scrapeInsights}
+                    disabled={isScrapingInsights}
+                    className="bg-white text-green-600 hover:bg-green-50"
+                    size="sm"
+                  >
+                    {isScrapingInsights ? (
+                      <>
+                        <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
+                        Scraping...
+                      </>
+                    ) : (
+                      <>
+                        <Download className="w-4 h-4 mr-2" />
+                        Fetch Market Data
+                      </>
+                    )}
+                  </Button>
+                </div>
               </CardHeader>
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">

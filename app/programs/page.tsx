@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
-import { Home, Shield, Users, TrendingUp } from 'lucide-react';
+import { Home, Shield, Users, TrendingUp, TrendingDown, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: seoData.Programs.title,
@@ -106,6 +106,124 @@ export default function ProgramsPage() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* Refinancing Programs - Prominent Call-out Boxes */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Refinancing Options
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Already own a home? Unlock your home's potential with our specialized refinancing programs.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            {/* Cash-Out Refinancing */}
+            <div className="bg-white rounded-lg shadow-xl p-8 border-2 border-orange-200 relative">
+              <div className="absolute -top-4 left-6">
+                <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center">
+                  🔥 MOST POPULAR
+                </span>
+              </div>
+              
+              <div className="flex items-center mb-6 mt-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center mr-4">
+                  <span className="text-2xl">🏠</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900">Cash-Out Refinancing</h3>
+                  <p className="text-slate-600">Unlock your home's equity for major financial goals</p>
+                </div>
+              </div>
+
+              <div className="bg-orange-50 rounded-lg p-4 mb-6">
+                <p className="text-orange-800 font-semibold text-center">
+                  Unlock $50K - $500K+ from your home
+                </p>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-slate-900 mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-3 mt-1">✓</span>
+                    <span className="text-slate-700">Access up to 80% of your home's value in cash</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-3 mt-1">✓</span>
+                    <span className="text-slate-700">Rates often lower than personal loans or credit cards</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-3 mt-1">✓</span>
+                    <span className="text-slate-700">Tax-deductible interest on home improvements</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-3 mt-1">✓</span>
+                    <span className="text-slate-700">Consolidate high-interest debt into one low payment</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-slate-900 mb-2">Best For:</h4>
+                <p className="text-slate-600">Home improvements, debt consolidation, investment opportunities, education expenses, major purchases</p>
+              </div>
+            </div>
+
+            {/* Rate & Term Refinancing */}
+            <div className="bg-white rounded-lg shadow-xl p-8 border-2 border-green-200 relative">
+              <div className="absolute -top-4 left-6">
+                <span className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-bold flex items-center">
+                  💰 MONEY SAVER
+                </span>
+              </div>
+              
+              <div className="flex items-center mb-6 mt-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-lg flex items-center justify-center mr-4">
+                  <span className="text-2xl">📉</span>
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900">Rate & Term Refinancing</h3>
+                  <p className="text-slate-600">Lower your payments or pay off your mortgage faster</p>
+                </div>
+              </div>
+
+              <div className="bg-green-50 rounded-lg p-4 mb-6">
+                <p className="text-green-800 font-semibold text-center">
+                  Save $200-500/month on payments
+                </p>
+              </div>
+
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-slate-900 mb-3">Key Features:</h4>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-3 mt-1">✓</span>
+                    <span className="text-slate-700">Reduce monthly payments with today's rates</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-3 mt-1">✓</span>
+                    <span className="text-slate-700">Eliminate PMI when you reach 20% equity</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-3 mt-1">✓</span>
+                    <span className="text-slate-700">Switch from ARM to fixed-rate for stability</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-green-600 mr-3 mt-1">✓</span>
+                    <span className="text-slate-700">Shorten loan term to save thousands in interest</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-slate-900 mb-2">Best For:</h4>
+                <p className="text-slate-600">Homeowners with rates above 6%, those paying PMI, ARM loan holders wanting stability</p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Additional Programs */}

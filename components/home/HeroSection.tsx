@@ -9,18 +9,6 @@ export default function HeroSection() {
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Mobile Circular Image - Only visible on mobile */}
-        <div className="flex justify-center mb-8 lg:hidden">
-          <div className="w-32 h-32 rounded-full overflow-hidden shadow-lg border-4 border-blue-600">
-            <Image 
-              src="/images/mo-headshot.webp" 
-              alt="Mo The Broker" 
-              width={128} 
-              height={128}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content */}

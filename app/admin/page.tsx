@@ -12,6 +12,8 @@ import { Settings, Plus, Edit3, Trash2, TrendingUp, TrendingDown, Save } from "l
 import { MortgageRate, MarketInsight, RateQuote } from "@/lib/entities";
 
 export default function AdminPage() {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
   const [activeTab, setActiveTab] = useState('rates');
   const [rates, setRates] = useState<any[]>([]);
   const [insights, setInsights] = useState<any[]>([]);
@@ -39,8 +41,21 @@ export default function AdminPage() {
   });
 
   useEffect(() => {
-    loadData();
-  }, []);
+    if (isAuthenticated) {
+      loadData();
+    }
+  }, [isAuthenticated]);
+
+  const handlePasswordSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (password === 'hamadithegoat123') {
+      setIsAuthenticated(true);
+      setPassword(''); // Clear password from state for security
+    } else {
+      alert('Incorrect password');
+      setPassword('');
+    }
+  };
 
   const loadData = async () => {
     try {
@@ -138,6 +153,46 @@ RateQuote.list('-created_at')
       console.error('Error updating quote status:', error);
     }
   };
+
+  // Show password form if not authenticated
+  if (!isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-slate-50 flex items-center justify-center">
+        <div className="max-w-md w-full mx-4">
+          <Card className="shadow-xl border-slate-200">
+            <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-t-lg">
+              <CardTitle className="flex items-center justify-center text-xl">
+                <Settings className="w-6 h-6 mr-2" />
+                Admin Access
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="p-6">
+              <form onSubmit={handlePasswordSubmit} className="space-y-4">
+                <div>
+                  <Label htmlFor="password">Enter Password</Label>
+                  <Input
+                    id="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Enter admin password"
+                    className="mt-1"
+                    required
+                  />
+                </div>
+                <Button 
+                  type="submit" 
+                  className="w-full bg-blue-600 hover:bg-blue-700"
+                >
+                  Access Admin Dashboard
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="min-h-screen bg-slate-50 py-8">

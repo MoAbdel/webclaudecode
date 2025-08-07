@@ -40,7 +40,7 @@ export default function HeroSection() {
             </div>
 
             {/* Trust indicators */}
-            <div className="flex flex-wrap gap-12 pt-4">
+            <div className="flex flex-wrap gap-12 pt-4 justify-center lg:justify-start">
               <div className="text-center">
                 <div className="text-2xl font-bold text-slate-900 flex items-center">
                   <GitCompareArrows className="w-8 h-8 mr-2 text-blue-600"/>

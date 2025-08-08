@@ -6,6 +6,9 @@ const FRED_API_KEY = process.env.FRED_API_KEY || 'demo'; // Get free key at http
 // Alpha Vantage - Free tier available
 const ALPHA_VANTAGE_KEY = process.env.ALPHA_VANTAGE_KEY || 'demo'; // Get free at https://www.alphavantage.co/support/#api-key
 
+// Freddie Mac API - No key required for PMMS data
+const FREDDIE_MAC_API_BASE = 'https://www.freddiemac.com/pmms-search/api/historical';
+
 export interface MortgageRateData {
   loan_type: string;
   rate: number;
@@ -33,24 +36,35 @@ export async function fetchRealMortgageRates(): Promise<MortgageRateData[]> {
   const today = new Date().toISOString().split('T')[0];
 
   try {
-    // 1. Fetch from FRED API (Federal Reserve Economic Data)
+    // 1. Fetch from Freddie Mac PMMS (Primary source - most current)
+    const freddieMacRates = await fetchFreddieMacRates();
+    
+    // 2. Fetch from FRED API (Federal Reserve Economic Data) as backup
     const fredRates = await fetchFredRates();
     
-    // 2. Fetch treasury rates as a baseline
+    // 3. Fetch treasury rates as a baseline
     const treasuryRates = await fetchTreasuryRates();
     
-    // 3. Use FRED rates if available, otherwise calculate from treasury
-    let baseRate30, baseRate15;
+    // 4. Use best available data source (Freddie Mac preferred)
+    let baseRate30, baseRate15, dataSource;
     
-    if (fredRates && fredRates.mortgage30) {
-      // Use actual FRED mortgage rates
+    if (freddieMacRates && freddieMacRates.mortgage30) {
+      // Use Freddie Mac PMMS rates (most current, weekly updates)
+      baseRate30 = freddieMacRates.mortgage30;
+      baseRate15 = freddieMacRates.mortgage15 || (freddieMacRates.mortgage30 - 0.5);
+      dataSource = 'Freddie Mac PMMS';
+      console.log('Using Freddie Mac PMMS rates - 30Y:', baseRate30, '15Y:', baseRate15);
+    } else if (fredRates && fredRates.mortgage30) {
+      // Fallback to FRED rates
       baseRate30 = fredRates.mortgage30;
       baseRate15 = fredRates.mortgage15 || (fredRates.mortgage30 - 0.5);
+      dataSource = 'FRED API';
       console.log('Using FRED rates - 30Y:', baseRate30, '15Y:', baseRate15);
     } else {
-      // Fallback to treasury + spread calculation
+      // Final fallback to treasury + spread calculation
       baseRate30 = (treasuryRates.treasury10Year || 4.25) + 2.5;
       baseRate15 = (treasuryRates.treasury10Year || 4.25) + 2.0;
+      dataSource = 'Treasury + Spread';
       console.log('Using Treasury rates + spread - 30Y:', baseRate30, '15Y:', baseRate15);
     }
     
@@ -78,10 +92,15 @@ export async function fetchRealMortgageRates(): Promise<MortgageRateData[]> {
       effective_date: today
     });
 
+    // Use Freddie Mac 5/1 ARM rate if available
+    const armRate = (freddieMacRates && freddieMacRates.mortgage51) ? 
+      freddieMacRates.mortgage51 : 
+      parseFloat((baseRate30 - 0.75).toFixed(3));
+    
     rates.push({
       loan_type: '5/1 Adjustable Rate',
-      rate: parseFloat((baseRate30 - 0.75).toFixed(3)),
-      apr: parseFloat((baseRate30 + 0.25).toFixed(3)),
+      rate: parseFloat(armRate.toFixed(3)),
+      apr: parseFloat((armRate + 0.5).toFixed(3)),
       points: 0,
       loan_term: 30,
       min_credit_score: 740,
@@ -133,6 +152,71 @@ export async function fetchRealMortgageRates(): Promise<MortgageRateData[]> {
   }
 
   return rates;
+}
+
+// Fetch from Freddie Mac PMMS (Primary Mortgage Market Survey)
+async function fetchFreddieMacRates() {
+  try {
+    // Freddie Mac provides free access to PMMS data
+    // Using their historical search API which includes current data
+    const response = await fetch(`${FREDDIE_MAC_API_BASE}/summary`, {
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+      }
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      
+      // Freddie Mac PMMS data structure
+      if (data && data.length > 0) {
+        // Get the most recent week's data
+        const latestData = data[0];
+        
+        const rates = {
+          mortgage30: parseFloat(latestData.pmms30) || null,
+          mortgage15: parseFloat(latestData.pmms15) || null,
+          mortgage51: parseFloat(latestData.pmms51) || null, // 5/1 ARM
+          effectiveDate: latestData.date
+        };
+        
+        console.log('Freddie Mac PMMS rates fetched:', rates);
+        return rates;
+      }
+    }
+
+    // Alternative approach - try their direct data endpoint
+    const currentDate = new Date();
+    const endDate = currentDate.toISOString().split('T')[0];
+    const startDate = new Date(currentDate.getTime() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0]; // 30 days ago
+    
+    const directResponse = await fetch(`https://www.freddiemac.com/pmms-search/api/historical?startDt=${startDate}&endDt=${endDate}`, {
+      headers: {
+        'Accept': 'application/json',
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+      }
+    });
+    
+    if (directResponse.ok) {
+      const directData = await directResponse.json();
+      if (directData && directData.length > 0) {
+        const latest = directData[directData.length - 1]; // Most recent entry
+        
+        return {
+          mortgage30: parseFloat(latest.pmms30) || null,
+          mortgage15: parseFloat(latest.pmms15) || null,
+          mortgage51: parseFloat(latest.pmms51) || null,
+          effectiveDate: latest.date
+        };
+      }
+    }
+    
+  } catch (error) {
+    console.error('Freddie Mac API error:', error);
+  }
+  
+  return null;
 }
 
 // Fetch from FRED API

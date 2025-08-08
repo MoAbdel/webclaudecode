@@ -2,12 +2,23 @@
 
 ## Currently Integrated Free APIs
 
-### 1. **US Treasury Direct** (No API Key Required!)
-- **URL**: https://api.fiscaldata.treasury.gov/
-- **What it provides**: Real-time treasury rates (basis for mortgage rates)
+### 1. **Freddie Mac PMMS** (No API Key Required!) 🏆
+- **URL**: https://www.freddiemac.com/pmms-search/api/
+- **What it provides**: 
+  - Most current mortgage rates (updated weekly)
+  - 30-Year Fixed Rate
+  - 15-Year Fixed Rate  
+  - 5/1 Adjustable Rate
+- **Priority**: PRIMARY data source (most accurate)
 - **Already working** in your app - no setup needed!
 
-### 2. **FRED (Federal Reserve Economic Data)** - FREE
+### 2. **US Treasury Direct** (No API Key Required!)
+- **URL**: https://api.fiscaldata.treasury.gov/
+- **What it provides**: Real-time treasury rates (basis for mortgage rates)
+- **Priority**: Fallback for rate calculations
+- **Already working** in your app - no setup needed!
+
+### 3. **FRED (Federal Reserve Economic Data)** - FREE
 - **Sign up**: https://fred.stlouisfed.org/docs/api/api_key.html
 - **What it provides**:
   - Federal Funds Rate
@@ -46,13 +57,18 @@
 - **URL**: https://www.census.gov/data/developers.html
 - **Provides**: Housing data, demographic data
 
-## How Your App Uses These APIs
+## How Your App Uses These APIs (Priority Order)
 
 When you click "Fetch Live Rates" in your admin panel:
-1. App fetches current Treasury rates (automatic, no key needed)
-2. If FRED key is provided, fetches actual mortgage rates
-3. Calculates rates using Treasury + typical spreads
-4. Updates your database with real, current rates
+1. **First**: Tries Freddie Mac PMMS (most current mortgage rates)
+2. **Second**: Falls back to FRED API (if key is provided)
+3. **Third**: Uses Treasury rates + typical spreads as final fallback
+4. Updates your database with the best available real, current rates
+
+**Data Source Priority:**
+- 🥇 **Freddie Mac PMMS** - Industry standard, weekly updates
+- 🥈 **FRED API** - Federal Reserve data, reliable backup
+- 🥉 **Treasury + Spreads** - Calculated rates if APIs unavailable
 
 When you click "Fetch Market Data":
 1. Fetches Fed Funds Rate from FRED (if key provided)

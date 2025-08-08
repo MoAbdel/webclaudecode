@@ -36,13 +36,13 @@ const defaultRateData = [
     description: "Low down payment option for first-time buyers"
   },
   {
-    loanType: "VA 30-Year Fixed",
-    rate: "5.99%",
+    loanType: "Jumbo 30-Year Fixed",
+    rate: "6.70%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.26%",
+    change: "-0.20%",
     icon: Building,
-    description: "Exclusive benefit for veterans and service members"
+    description: "For loan amounts above conventional limits"
   }
 ];
 
@@ -50,50 +50,9 @@ export default function RateDisplay() {
   const [rateData, setRateData] = useState(defaultRateData);
   const [loading, setLoading] = useState(true);
 
+  // Use hardcoded rates only
   useEffect(() => {
-    const fetchRates = async () => {
-      try {
-        const response = await fetch('/api/rates', {
-          cache: 'no-store',
-          headers: {
-            'Cache-Control': 'no-cache'
-          }
-        });
-        const result = await response.json();
-        
-        if (result.success && result.data && result.data.length > 0) {
-          // Map database rates to display format
-          const mappedRates = result.data.slice(0, 4).map((rate: any) => {
-            // Find matching icon and description from defaults
-            const defaultRate = defaultRateData.find(d => 
-              d.loanType.toLowerCase().includes(rate.loan_type.toLowerCase().split(' ')[0])
-            );
-            
-            return {
-              loanType: rate.loan_type,
-              rate: `${rate.rate}%`,
-              apr: `${rate.apr}%`,
-              trend: "stable", // You could calculate this from historical data
-              change: "0.000%",
-              icon: defaultRate?.icon || Home,
-              description: defaultRate?.description || "Competitive mortgage rates"
-            };
-          });
-          
-          setRateData(mappedRates);
-        }
-      } catch (error) {
-        console.error('Error fetching rates:', error);
-        // Keep default rates if fetch fails
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    fetchRates();
-    // Refresh rates every 30 seconds
-    const interval = setInterval(fetchRates, 30000);
-    return () => clearInterval(interval);
+    setLoading(false);
   }, []);
   return (
     <section className="py-16 bg-white">

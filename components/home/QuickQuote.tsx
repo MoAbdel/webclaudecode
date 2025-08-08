@@ -64,9 +64,10 @@ export default function QuickQuote() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Quote Request Received!</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You for Your Inquiry!</h3>
               <p className="text-slate-600 mb-6">
-                Thank you for your interest! We&apos;ll review your information and contact you within 1 business hour with your personalized rate quote.
+                We received your information and will be reaching out within 1 business hour with your personalized rate quote. 
+                Mo will personally review your details to ensure you get the best possible terms.
               </p>
               <Button 
                 onClick={() => setShowSuccess(false)}

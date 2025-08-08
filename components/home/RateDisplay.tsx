@@ -10,39 +10,39 @@ import Link from "next/link";
 const defaultRateData = [
   {
     loanType: "30-Year Fixed Conventional",
-    rate: "6.875%",
-    apr: "6.920%",
+    rate: "6.57%",
+    apr: "APR may vary",
     trend: "down",
-    change: "-0.125%",
+    change: "-0.305%",
     icon: Home,
     description: "Perfect for stable payments over 30 years"
   },
   {
     loanType: "15-Year Fixed Conventional",
-    rate: "6.250%",
-    apr: "6.290%",
+    rate: "5.93%",
+    apr: "APR may vary",
     trend: "down",
-    change: "-0.100%",
+    change: "-0.32%",
     icon: TrendingDown,
     description: "Build equity faster with higher payments"
   },
   {
     loanType: "FHA 30-Year Fixed",
-    rate: "6.500%",
-    apr: "6.750%",
-    trend: "stable",
-    change: "0.000%",
+    rate: "6.15%",
+    apr: "APR may vary",
+    trend: "down",
+    change: "-0.35%",
     icon: Users,
     description: "Low down payment option for first-time buyers"
   },
   {
-    loanType: "Jumbo 30-Year Fixed",
-    rate: "7.125%",
-    apr: "7.150%",
-    trend: "up",
-    change: "+0.050%",
+    loanType: "VA 30-Year Fixed",
+    rate: "5.99%",
+    apr: "APR may vary",
+    trend: "down",
+    change: "-0.26%",
     icon: Building,
-    description: "For loan amounts above $766,550 in Orange County"
+    description: "Exclusive benefit for veterans and service members"
   }
 ];
 

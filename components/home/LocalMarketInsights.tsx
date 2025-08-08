@@ -9,15 +9,47 @@ import Link from "next/link";
 import { MarketInsight } from "@/lib/entities";
 
 export default function LocalMarketInsights() {
-  const [marketData, setMarketData] = useState<any[]>([]);
+  const [marketData, setMarketData] = useState<any[]>([
+    {
+      metric: "Median Home Price",
+      value: "$1.25M",
+      change: "+3.3%",
+      trend: "up",
+      description: "Orange County median sale price"
+    },
+    {
+      metric: "Fed Funds Rate",
+      value: "4.25-4.50%",
+      change: "-1.0%",
+      trend: "down",
+      description: "After December 2024 rate cut"
+    },
+    {
+      metric: "Days on Market",
+      value: "32 days",
+      change: "-5 days",
+      trend: "down",
+      description: "Homes selling faster"
+    },
+    {
+      metric: "Inventory",
+      value: "2.4 months",
+      change: "+0.3",
+      trend: "up",
+      description: "Supply slightly improving"
+    }
+  ]);
 
   useEffect(() => {
+    // Keep API call as backup but use hardcoded data
     const fetchInsights = async () => {
       try {
         const insights = await MarketInsight.list('display_order');
-        setMarketData(insights);
+        if (insights && insights.length > 0) {
+          setMarketData(insights);
+        }
       } catch (error) {
-        console.error("Failed to fetch market insights:", error);
+        console.error("Failed to fetch market insights, using default data");
       }
     };
     fetchInsights();

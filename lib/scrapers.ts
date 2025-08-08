@@ -9,6 +9,9 @@ const ALPHA_VANTAGE_KEY = process.env.ALPHA_VANTAGE_KEY || 'demo'; // Get free a
 // Freddie Mac API - No key required for PMMS data
 const FREDDIE_MAC_API_BASE = 'https://www.freddiemac.com/pmms-search/api/historical';
 
+// Mortgage News Daily - Public data endpoints
+const MND_API_BASE = 'https://www.mortgagenewsdaily.com';
+
 export interface MortgageRateData {
   loan_type: string;
   rate: number;

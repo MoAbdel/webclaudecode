@@ -77,7 +77,7 @@ export default function RateDisplay() {
                   
                   <div className="text-right">
                     <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent animate-pulse">{loan.rate}</div>
-                    <div className="text-sm text-slate-600">APR {loan.apr}</div>
+                    <div className="text-sm text-slate-600">APR may vary</div>
                   </div>
                 </div>
               </CardHeader>
@@ -116,7 +116,8 @@ export default function RateDisplay() {
         <div className="text-center">
           <p className="text-sm text-slate-500 mb-6">
             *Rates shown are for qualified borrowers and subject to change without notice. 
-            Actual rates may vary based on credit score, loan-to-value ratio, and other factors.
+            APR (Annual Percentage Rate) may vary based on loan amount, credit score, loan-to-value ratio, 
+            property type, loan purpose, and other factors. Contact us for personalized rate quotes and APR calculations.
           </p>
           
           <Link href="/calculator">

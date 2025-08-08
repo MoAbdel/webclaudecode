@@ -9,8 +9,8 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       data: rates,
-      source: 'Freddie Mac PMMS + FRED + Treasury',
-      message: 'Data fetched from Freddie Mac Primary Mortgage Market Survey, Federal Reserve (FRED), and US Treasury',
+      source: 'Mortgage News Daily',
+      message: 'Current mortgage rates from Mortgage News Daily',
       timestamp: new Date().toISOString()
     });
   } catch (error) {

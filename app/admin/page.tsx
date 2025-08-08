@@ -8,7 +8,8 @@ import { Label } from "@/components/ui/Label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { Badge } from "@/components/ui/Badge";
-import { Settings, Plus, Edit3, Trash2, TrendingUp, TrendingDown, Save, RefreshCw, Download } from "lucide-react";
+import { Settings, Plus, Edit3, Trash2, TrendingUp, TrendingDown, Save, RefreshCw, Download, Calendar } from "lucide-react";
+import Link from "next/link";
 import { MortgageRate, MarketInsight, RateQuote } from "@/lib/entities";
 
 export default function AdminPage() {
@@ -293,14 +294,24 @@ RateQuote.list('-created_at')
     <div className="min-h-screen bg-slate-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 flex items-center justify-center">
-            <Settings className="w-8 h-8 mr-3 text-blue-600" />
-            Admin Dashboard
-          </h1>
-          <p className="text-xl text-slate-600">
-            Manage mortgage rates, market insights, and customer inquiries
-          </p>
+        <div className="mb-8">
+          <div className="flex items-center justify-between">
+            <div className="text-center flex-1">
+              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 flex items-center justify-center">
+                <Settings className="w-8 h-8 mr-3 text-blue-600" />
+                Admin Dashboard
+              </h1>
+              <p className="text-xl text-slate-600">
+                Manage mortgage rates, market insights, and customer inquiries
+              </p>
+            </div>
+            <Link href="/admin/weekly-update">
+              <Button className="bg-green-600 hover:bg-green-700 text-white">
+                <Calendar className="w-5 h-5 mr-2" />
+                Weekly Update Hub
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {/* Tab Navigation */}

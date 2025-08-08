@@ -1,11 +1,14 @@
-import React from "react";
+'use client';
+
+import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TrendingDown, TrendingUp, Home, Building, Users, Calculator } from "lucide-react";
 import Link from "next/link";
+import { MortgageRate } from "@/lib/entities";
 
-const rateData = [
+const defaultRateData = [
   {
     loanType: "30-Year Fixed Conventional",
     rate: "6.875%",
@@ -45,6 +48,45 @@ const rateData = [
 ];
 
 export default function RateDisplay() {
+  const [rateData, setRateData] = useState(defaultRateData);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchRates = async () => {
+      try {
+        const rates = await MortgageRate.list('loan_type');
+        
+        if (rates && rates.length > 0) {
+          // Map database rates to display format
+          const mappedRates = rates.slice(0, 4).map((rate: any) => {
+            // Find matching icon and description from defaults
+            const defaultRate = defaultRateData.find(d => 
+              d.loanType.toLowerCase().includes(rate.loan_type.toLowerCase().split(' ')[0])
+            );
+            
+            return {
+              loanType: rate.loan_type,
+              rate: `${rate.rate}%`,
+              apr: `${rate.apr}%`,
+              trend: "stable", // You could calculate this from historical data
+              change: "0.000%",
+              icon: defaultRate?.icon || Home,
+              description: defaultRate?.description || "Competitive mortgage rates"
+            };
+          });
+          
+          setRateData(mappedRates);
+        }
+      } catch (error) {
+        console.error('Error fetching rates:', error);
+        // Keep default rates if fetch fails
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchRates();
+  }, []);
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -39,9 +39,20 @@ export async function fetchRealMortgageRates(): Promise<MortgageRateData[]> {
     // 2. Fetch treasury rates as a baseline
     const treasuryRates = await fetchTreasuryRates();
     
-    // 3. Calculate mortgage rates based on treasury + spread
-    const baseRate30 = (treasuryRates.treasury10Year || 4.25) + 2.5; // Typical 30-year spread
-    const baseRate15 = (treasuryRates.treasury10Year || 4.25) + 2.0; // Typical 15-year spread
+    // 3. Use FRED rates if available, otherwise calculate from treasury
+    let baseRate30, baseRate15;
+    
+    if (fredRates && fredRates.mortgage30) {
+      // Use actual FRED mortgage rates
+      baseRate30 = fredRates.mortgage30;
+      baseRate15 = fredRates.mortgage15 || (fredRates.mortgage30 - 0.5);
+      console.log('Using FRED rates - 30Y:', baseRate30, '15Y:', baseRate15);
+    } else {
+      // Fallback to treasury + spread calculation
+      baseRate30 = (treasuryRates.treasury10Year || 4.25) + 2.5;
+      baseRate15 = (treasuryRates.treasury10Year || 4.25) + 2.0;
+      console.log('Using Treasury rates + spread - 30Y:', baseRate30, '15Y:', baseRate15);
+    }
     
     rates.push({
       loan_type: '30-Year Fixed Conventional',
@@ -127,20 +138,37 @@ export async function fetchRealMortgageRates(): Promise<MortgageRateData[]> {
 // Fetch from FRED API
 async function fetchFredRates() {
   try {
-    // FRED series IDs for mortgage rates
-    const series = {
-      MORTGAGE30US: '30-Year Fixed Rate Mortgage Average',
-      MORTGAGE15US: '15-Year Fixed Rate Mortgage Average'
-    };
-
-    const seriesIds = Object.keys(series).join(',');
-    const url = `https://api.stlouisfed.org/fred/series/observations?series_id=${seriesIds}&api_key=${FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`;
-
-    const response = await fetch(url);
-    if (response.ok) {
-      const data = await response.json();
-      return data;
+    if (FRED_API_KEY === 'demo') {
+      console.log('Using demo FRED key - please add your actual key to .env.local');
+      return null;
     }
+
+    const rates: any = {};
+    
+    // Fetch 30-Year Fixed Rate
+    const mortgage30Url = `https://api.stlouisfed.org/fred/series/observations?series_id=MORTGAGE30US&api_key=${FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`;
+    const response30 = await fetch(mortgage30Url);
+    if (response30.ok) {
+      const data30 = await response30.json();
+      if (data30.observations && data30.observations.length > 0) {
+        rates.mortgage30 = parseFloat(data30.observations[0].value);
+        rates.mortgage30Date = data30.observations[0].date;
+      }
+    }
+
+    // Fetch 15-Year Fixed Rate
+    const mortgage15Url = `https://api.stlouisfed.org/fred/series/observations?series_id=MORTGAGE15US&api_key=${FRED_API_KEY}&file_type=json&limit=1&sort_order=desc`;
+    const response15 = await fetch(mortgage15Url);
+    if (response15.ok) {
+      const data15 = await response15.json();
+      if (data15.observations && data15.observations.length > 0) {
+        rates.mortgage15 = parseFloat(data15.observations[0].value);
+        rates.mortgage15Date = data15.observations[0].date;
+      }
+    }
+
+    console.log('FRED rates fetched:', rates);
+    return rates;
   } catch (error) {
     console.error('FRED API error:', error);
   }

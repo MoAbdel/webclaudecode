@@ -9,7 +9,8 @@ export async function GET() {
     return NextResponse.json({
       success: true,
       data: rates,
-      source: 'Live Market Data (Treasury, FRED)',
+      source: 'FRED API + US Treasury',
+      message: 'Data fetched from Federal Reserve Economic Data (FRED) and US Treasury',
       timestamp: new Date().toISOString()
     });
   } catch (error) {

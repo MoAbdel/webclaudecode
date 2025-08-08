@@ -17,13 +17,6 @@ export default function LocalMarketInsights() {
       description: "Orange County median sale price"
     },
     {
-      metric: "Fed Funds Rate",
-      value: "4.25-4.50%",
-      change: "-1.0%",
-      trend: "down",
-      description: "After December 2024 rate cut"
-    },
-    {
       metric: "Days on Market",
       value: "32 days",
       change: "+5 days",

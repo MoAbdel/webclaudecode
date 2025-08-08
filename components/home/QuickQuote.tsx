@@ -20,6 +20,7 @@ export default function QuickQuote() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,6 +44,8 @@ export default function QuickQuote() {
       });
     } catch (error) {
       console.error("Error submitting quote request:", error);
+      setShowError(true);
+      setTimeout(() => setShowError(false), 5000); // Hide error after 5 seconds
     }
     
     setIsSubmitting(false);
@@ -66,7 +69,7 @@ export default function QuickQuote() {
               </div>
               <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You for Your Inquiry!</h3>
               <p className="text-slate-600 mb-6">
-                We received your information and will be reaching out within 1 business hour with your personalized rate quote. 
+                We received your information and will be reaching out within 1 business day with your personalized rate quote. 
                 Mo will personally review your details to ensure you get the best possible terms.
               </p>
               <Button 
@@ -103,6 +106,13 @@ export default function QuickQuote() {
           </CardHeader>
           
           <CardContent className="p-8">
+            {showError && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-600 text-sm">
+                  There was an error submitting your request. Please try again or call us directly at (949) 579-2057.
+                </p>
+              </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: seoData.Contact.title,
@@ -52,7 +53,7 @@ export default function ContactPage() {
                   <a href="mailto:mabdelfattah@nexamortgage.com" className="text-blue-600 hover:text-blue-700">
                     mabdelfattah@nexamortgage.com
                   </a>
-                  <p className="text-sm text-slate-600">I respond within hours</p>
+                  <p className="text-sm text-slate-600">I respond within 1 business day</p>
                 </div>
               </div>
               
@@ -103,127 +104,7 @@ export default function ContactPage() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white rounded-lg shadow-lg p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-6">Get Your Free Quote</h2>
-            <p className="text-slate-600 mb-6">
-              Fill out the form below and I'll get back to you within 24 hours with a personalized rate quote.
-            </p>
-            
-            <form className="space-y-4" action="#" method="POST">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
-                    First Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="John"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-slate-700 mb-2">
-                    Last Name *
-                  </label>
-                  <input
-                    type="text"
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Email Address *
-                </label>
-                <input
-                  type="email"
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="john.doe@example.com"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Phone Number *
-                </label>
-                <input
-                  type="tel"
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="(949) 123-4567"
-                />
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Loan Purpose
-                </label>
-                <select className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                  <option value="">Select loan purpose</option>
-                  <option value="purchase">Home Purchase</option>
-                  <option value="refinance">Refinance</option>
-                  <option value="cashout">Cash-Out Refinance</option>
-                  <option value="investment">Investment Property</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Approximate Loan Amount
-                </label>
-                <select className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                  <option value="">Select amount range</option>
-                  <option value="under-500k">Under $500,000</option>
-                  <option value="500k-750k">$500,000 - $750,000</option>
-                  <option value="750k-1m">$750,000 - $1,000,000</option>
-                  <option value="1m-1.5m">$1,000,000 - $1,500,000</option>
-                  <option value="over-1.5m">Over $1,500,000</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Timeline
-                </label>
-                <select className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                  <option value="">When do you need this loan?</option>
-                  <option value="asap">ASAP</option>
-                  <option value="30-days">Within 30 days</option>
-                  <option value="60-days">Within 60 days</option>
-                  <option value="90-days">Within 90 days</option>
-                  <option value="exploring">Just exploring options</option>
-                </select>
-              </div>
-              
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Additional Information
-                </label>
-                <textarea
-                  rows={4}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  placeholder="Tell me about your situation, goals, or any specific questions you have..."
-                ></textarea>
-              </div>
-              
-              <Button 
-                type="submit" 
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg"
-              >
-                Get My Free Quote
-              </Button>
-            </form>
-            
-            <p className="text-xs text-slate-500 mt-4 text-center">
-              By submitting this form, you consent to be contacted by Mo The Broker regarding mortgage services. 
-              Your information will never be shared with third parties.
-            </p>
-          </div>
+          <ContactForm />
         </div>
 
         {/* Service Areas */}

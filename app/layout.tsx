@@ -33,6 +33,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
         <meta name="build-timestamp" content={new Date().toISOString()} />
+        <meta name="deployment-id" content="BGDyiFiyb-rollback" />
       </head>
       <body className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <Header />

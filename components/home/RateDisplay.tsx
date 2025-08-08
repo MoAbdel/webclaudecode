@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TrendingDown, TrendingUp, Home, Building, Users, Calculator } from "lucide-react";
 import Link from "next/link";
-import { MortgageRate } from "@/lib/entities";
 
 const defaultRateData = [
   {
@@ -54,11 +53,17 @@ export default function RateDisplay() {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const rates = await MortgageRate.list('loan_type');
+        const response = await fetch('/api/rates', {
+          cache: 'no-store',
+          headers: {
+            'Cache-Control': 'no-cache'
+          }
+        });
+        const result = await response.json();
         
-        if (rates && rates.length > 0) {
+        if (result.success && result.data && result.data.length > 0) {
           // Map database rates to display format
-          const mappedRates = rates.slice(0, 4).map((rate: any) => {
+          const mappedRates = result.data.slice(0, 4).map((rate: any) => {
             // Find matching icon and description from defaults
             const defaultRate = defaultRateData.find(d => 
               d.loanType.toLowerCase().includes(rate.loan_type.toLowerCase().split(' ')[0])
@@ -86,6 +91,9 @@ export default function RateDisplay() {
     };
 
     fetchRates();
+    // Refresh rates every 30 seconds
+    const interval = setInterval(fetchRates, 30000);
+    return () => clearInterval(interval);
   }, []);
   return (
     <section className="py-16 bg-white">

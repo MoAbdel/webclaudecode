@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/Badge";
 import { TrendingDown, Calculator, Phone, ArrowRight, Zap, GitCompareArrows, ShieldCheck } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { MortgageRate } from "@/lib/entities";
 
 export default function HeroSection() {
   const [rates, setRates] = useState({
@@ -18,13 +17,19 @@ export default function HeroSection() {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const rateData = await MortgageRate.list('loan_type');
+        const response = await fetch('/api/rates', {
+          cache: 'no-store',
+          headers: {
+            'Cache-Control': 'no-cache'
+          }
+        });
+        const result = await response.json();
         
-        if (rateData && rateData.length > 0) {
+        if (result.success && result.data && result.data.length > 0) {
           // Find specific loan types
-          const thirty = rateData.find((r: any) => r.loan_type.includes('30-Year Fixed'));
-          const fifteen = rateData.find((r: any) => r.loan_type.includes('15-Year Fixed'));
-          const fha = rateData.find((r: any) => r.loan_type.includes('FHA'));
+          const thirty = result.data.find((r: any) => r.loan_type.includes('30-Year Fixed'));
+          const fifteen = result.data.find((r: any) => r.loan_type.includes('15-Year Fixed'));
+          const fha = result.data.find((r: any) => r.loan_type.includes('FHA'));
           
           setRates({
             thirtyYear: thirty ? `${thirty.rate}%` : "6.875%",
@@ -38,6 +43,9 @@ export default function HeroSection() {
     };
 
     fetchRates();
+    // Refresh rates every 30 seconds
+    const interval = setInterval(fetchRates, 30000);
+    return () => clearInterval(interval);
   }, []);
   return (
     <section className="relative py-20 lg:py-32 overflow-hidden bg-white">

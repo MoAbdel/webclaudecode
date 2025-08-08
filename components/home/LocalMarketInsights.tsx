@@ -6,7 +6,6 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TrendingUp, Home, DollarSign, Calendar, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { MarketInsight } from "@/lib/entities";
 
 export default function LocalMarketInsights() {
   const [marketData, setMarketData] = useState<any[]>([
@@ -27,9 +26,9 @@ export default function LocalMarketInsights() {
     {
       metric: "Days on Market",
       value: "32 days",
-      change: "-5 days",
-      trend: "down",
-      description: "Homes selling faster"
+      change: "+5 days",
+      trend: "up",
+      description: "Homes taking longer to sell"
     },
     {
       metric: "Inventory",
@@ -40,20 +39,7 @@ export default function LocalMarketInsights() {
     }
   ]);
 
-  useEffect(() => {
-    // Keep API call as backup but use hardcoded data
-    const fetchInsights = async () => {
-      try {
-        const insights = await MarketInsight.list('display_order');
-        if (insights && insights.length > 0) {
-          setMarketData(insights);
-        }
-      } catch (error) {
-        console.error("Failed to fetch market insights, using default data");
-      }
-    };
-    fetchInsights();
-  }, []);
+  // Removed useEffect - using only hardcoded data
 
   return (
     <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50 relative overflow-hidden">

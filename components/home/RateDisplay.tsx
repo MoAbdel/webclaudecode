@@ -53,7 +53,7 @@ export default function RateDisplay() {
             Current Orange County Mortgage Rates
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Compare today&apos;s rates across different loan programs. All rates updated daily and subject to qualification.
+            Compare today&apos;s rates across different loan programs. All rates updated weekly and subject to qualification.
           </p>
           <Badge className="mt-4 bg-blue-100 text-blue-800 px-3 py-1">
             Last Updated: {new Date().toLocaleDateString()}

@@ -5,7 +5,7 @@ import QuickQuote from '@/components/home/QuickQuote';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import LocalMarketInsights from '@/components/home/LocalMarketInsights';
 import Testimonials from '@/components/home/Testimonials';
-import ReadyToGetStarted from '@/components/home/ReadyToGetStarted';
+import NewsletterSignup from '@/components/home/NewsletterSignup';
 
 export default function HomePage() {
   return (
@@ -16,7 +16,7 @@ export default function HomePage() {
       <LocalMarketInsights />
       <RateDisplay />
       <Testimonials />
-      <ReadyToGetStarted />
+      <NewsletterSignup />
     </div>
   );
 }

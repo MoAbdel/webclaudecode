@@ -25,8 +25,26 @@ export default function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      // Simulate API call - in production this would submit to your backend
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Submit to Supabase via API
+      const response = await fetch('/api/quotes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          full_name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          loan_type: formData.loanPurpose || 'inquiry',
+          loan_amount: 0, // Will be determined during consultation
+          notes: `Loan Amount Range: ${formData.loanAmount}, Timeline: ${formData.timeline}, Additional Info: ${formData.additionalInfo}`,
+          status: 'new'
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit contact form');
+      }
       setShowSuccess(true);
       setFormData({
         firstName: '',

@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Mail, Phone, Download, Users, MessageCircle, Calendar } from 'lucide-react';
-import { RateQuote, NewsletterSubscription } from '@/lib/entities';
+import { supabase } from '@/lib/supabase';
 
 interface Quote {
   id: string;
@@ -39,13 +39,32 @@ export default function AdminDataPage() {
   const loadData = async () => {
     setLoading(true);
     try {
-      const [quotesData, newslettersData] = await Promise.all([
-        RateQuote.list('-created_at'),
-        NewsletterSubscription.list('-created_at')
+      // Fetch from Supabase
+      const [quotesResponse, newslettersResponse] = await Promise.all([
+        supabase
+          .from('rate_quotes')
+          .select('*')
+          .order('created_at', { ascending: false }),
+        supabase
+          .from('newsletter_subscriptions')
+          .select('*')
+          .order('created_at', { ascending: false })
       ]);
       
-      setQuotes(quotesData as Quote[]);
-      setNewsletters(newslettersData as Newsletter[]);
+      if (quotesResponse.error) {
+        console.error('Error fetching quotes:', quotesResponse.error);
+      }
+      if (newslettersResponse.error) {
+        console.error('Error fetching newsletters:', newslettersResponse.error);
+      }
+      
+      setQuotes(quotesResponse.data || []);
+      setNewsletters(newslettersResponse.data?.map(sub => ({
+        ...sub,
+        firstName: sub.first_name,
+        subscribedAt: sub.subscribed_at,
+        isActive: sub.is_active
+      })) || []);
     } catch (error) {
       console.error('Error loading data:', error);
     } finally {

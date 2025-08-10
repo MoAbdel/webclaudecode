@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/Select";
 import { Calculator, ArrowRight, Shield } from "lucide-react";
-import { RateQuote } from "@/lib/entities";
 
 export default function QuickQuote() {
   const [formData, setFormData] = useState({
@@ -27,12 +26,22 @@ export default function QuickQuote() {
     setIsSubmitting(true);
     
     try {
-      await RateQuote.create({
-        ...formData,
-        loan_amount: parseFloat(formData.loan_amount),
-        property_value: parseFloat(formData.loan_amount) * 1.25, // Estimate
-        status: "new"
+      const response = await fetch('/api/quotes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          loan_amount: parseFloat(formData.loan_amount),
+          property_value: parseFloat(formData.loan_amount) * 1.25, // Estimate
+          status: "new"
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit quote');
+      }
       setShowSuccess(true);
       setFormData({
         full_name: "",

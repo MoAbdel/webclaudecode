@@ -4,7 +4,6 @@ import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Mail, Phone, Download, Users, MessageCircle, Calendar } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
 
 interface Quote {
   id: string;
@@ -39,22 +38,16 @@ export default function AdminDataPage() {
   const loadData = async () => {
     setLoading(true);
     try {
-      // Fetch from Supabase
+      // Fetch from API endpoints instead of direct Supabase
       const [quotesResponse, newslettersResponse] = await Promise.all([
-        supabase
-          .from('rate_quotes')
-          .select('*')
-          .order('created_at', { ascending: false }),
-        supabase
-          .from('newsletter_subscriptions')
-          .select('*')
-          .order('created_at', { ascending: false })
+        fetch('/api/quotes').then(res => res.json()),
+        fetch('/api/newsletter').then(res => res.json())
       ]);
       
-      if (quotesResponse.error) {
+      if (!quotesResponse.success) {
         console.error('Error fetching quotes:', quotesResponse.error);
       }
-      if (newslettersResponse.error) {
+      if (!newslettersResponse.success) {
         console.error('Error fetching newsletters:', newslettersResponse.error);
       }
       

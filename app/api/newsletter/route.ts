@@ -6,6 +6,13 @@ export const revalidate = 0;
 
 export async function POST(request: Request) {
   try {
+    // Debug environment variables
+    console.log('Environment check:', {
+      hasUrl: !!process.env.NEXT_PUBLIC_SUPABASE_URL,
+      hasKey: !!process.env.NEXT_PUBLIC_SUPABASE_AK,
+      url: process.env.NEXT_PUBLIC_SUPABASE_URL?.substring(0, 20) + '...'
+    });
+
     const body = await request.json();
     const { email, firstName, subscribedAt, source } = body;
 
@@ -68,7 +75,12 @@ export async function POST(request: Request) {
           { status: 500 }
         );
       }
-      throw error;
+      
+      // Return more specific error information for debugging
+      return NextResponse.json(
+        { success: false, error: `Database error: ${error.message}`, code: error.code },
+        { status: 500 }
+      );
     }
 
     return NextResponse.json({
@@ -85,7 +97,7 @@ export async function POST(request: Request) {
     console.error('Newsletter subscription error:', error);
     
     return NextResponse.json(
-      { success: false, error: 'Failed to subscribe to newsletter' },
+      { success: false, error: `Server error: ${error instanceof Error ? error.message : 'Unknown error'}` },
       { status: 500 }
     );
   }

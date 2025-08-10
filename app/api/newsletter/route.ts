@@ -27,12 +27,17 @@ export async function POST(request: Request) {
     }
 
     // Check if email already exists and is active
-    const { data: existingSubscription } = await supabase
+    const { data: existingSubscription, error: checkError } = await supabase
       .from('newsletter_subscriptions')
       .select('*')
       .eq('email', email.toLowerCase().trim())
       .eq('is_active', true)
       .single();
+
+    // Ignore "no rows" error - that's expected for new emails
+    if (checkError && checkError.code !== 'PGRST116') {
+      console.error('Error checking existing subscription:', checkError);
+    }
 
     if (existingSubscription) {
       return NextResponse.json(
@@ -55,7 +60,14 @@ export async function POST(request: Request) {
       .single();
 
     if (error) {
-      console.error('Supabase error:', error);
+      console.error('Supabase insert error:', error);
+      // Provide more detailed error message
+      if (error.code === '42P01') {
+        return NextResponse.json(
+          { success: false, error: 'Database tables not set up. Please run the SQL setup script in Supabase.' },
+          { status: 500 }
+        );
+      }
       throw error;
     }
 

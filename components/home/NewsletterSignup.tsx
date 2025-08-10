@@ -53,7 +53,7 @@ export default function NewsletterSignup() {
   return (
     <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-gradient-to-r from-blue-600 to-green-600 text-white rounded-2xl p-8 shadow-lg">
+        <div className="bg-blue-600 text-white rounded-2xl p-8 shadow-lg">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-4">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">

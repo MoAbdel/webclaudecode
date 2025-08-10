@@ -102,3 +102,31 @@ export async function POST(request: Request) {
     );
   }
 }
+
+export async function GET() {
+  try {
+    // Fetch newsletter subscriptions from Supabase (for admin use)
+    const { data, error } = await supabase
+      .from('newsletter_subscriptions')
+      .select('*')
+      .order('created_at', { ascending: false });
+
+    if (error) {
+      console.error('Supabase error:', error);
+      throw error;
+    }
+
+    return NextResponse.json({
+      success: true,
+      data: data || []
+    });
+
+  } catch (error) {
+    console.error('Error fetching newsletter subscriptions:', error);
+    
+    return NextResponse.json(
+      { success: false, error: 'Failed to fetch newsletter subscriptions' },
+      { status: 500 }
+    );
+  }
+}

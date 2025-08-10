@@ -52,7 +52,7 @@ export default function AdminDataPage() {
       }
       
       setQuotes(quotesResponse.data || []);
-      setNewsletters(newslettersResponse.data?.map(sub => ({
+      setNewsletters(newslettersResponse.data?.map((sub: any) => ({
         ...sub,
         firstName: sub.first_name,
         subscribedAt: sub.subscribed_at,

@@ -350,7 +350,7 @@ export default function CashOutRefinancePage() {
               <div className="text-sm text-slate-600 space-y-1">
                 <div>• Closing costs: 2-3% of loan amount</div>
                 <div>• Can be financed into loan</div>
-                <div>• 30-45 day process</div>
+                <div>• 2-3 week process</div>
                 <div>• Cash at closing</div>
               </div>
             </div>

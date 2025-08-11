@@ -185,7 +185,7 @@ export default function NonQMLoansOrangeCounty() {
                 </div>
                 <div className="flex justify-between items-center py-3">
                   <span className="font-semibold text-slate-700">Processing Time</span>
-                  <span className="text-xl font-bold text-blue-600">15-30 Days</span>
+                  <span className="text-xl font-bold text-blue-600">3-5 Weeks</span>
                 </div>
               </div>
               <div className="mt-6">

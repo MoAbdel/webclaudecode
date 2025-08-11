@@ -422,7 +422,7 @@ export default function NonQMLoansPage() {
                 <tr>
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Processing Time</td>
                   <td className="px-6 py-4 text-center text-orange-600">45-60 days</td>
-                  <td className="px-6 py-4 text-center text-blue-600 font-bold">21-30 days</td>
+                  <td className="px-6 py-4 text-center text-blue-600 font-bold">3-5 weeks</td>
                 </tr>
                 <tr className="bg-slate-50">
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Best For</td>

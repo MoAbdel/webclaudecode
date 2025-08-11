@@ -327,8 +327,8 @@ export default function VALoansOrangeCountyPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
-                  With Mo's wholesale lender network, most VA loans close in 30-45 days. 
-                  The VA appraisal is typically the longest part of the process.
+                  With Mo's wholesale lender network, most VA loans close within 2-3 weeks. 
+                  The VA appraisal is typically completed within this timeframe.
                 </p>
               </CardContent>
             </Card>

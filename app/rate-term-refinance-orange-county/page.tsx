@@ -359,7 +359,7 @@ export default function RateTermRefinanceOrangeCounty() {
               },
               {
                 question: 'How long does the refinance process take?',
-                answer: 'Most refinances close within 30-45 days. Our wholesale lender network and streamlined process often allows for faster closings when needed.'
+                answer: 'Most refinances close within 2-3 weeks from start to finish. Our wholesale lender network and streamlined process allows for faster closings than traditional lenders.'
               },
               {
                 question: 'Should I refinance from a 30-year to a 15-year loan?',

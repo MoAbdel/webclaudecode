@@ -324,7 +324,7 @@ export default function ConventionalLoansOrangeCounty() {
               },
               {
                 question: 'How long does it take to close on a conventional loan?',
-                answer: 'Typical closing times are 30-45 days, though our streamlined process and wholesale lender network often allows for faster closings when needed.'
+                answer: 'Most conventional loans close within 2-3 weeks from start to finish with our streamlined process and wholesale lender network.'
               }
             ].map((faq, index) => (
               <Card key={index} className="shadow-lg border-0">

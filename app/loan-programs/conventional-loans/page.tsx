@@ -179,7 +179,7 @@ export default function ConventionalLoansPage() {
               <CardContent className="p-6">
                 <h3 className="text-xl font-bold text-slate-900 mb-3">⚡ Faster Processing</h3>
                 <p className="text-slate-600 mb-3">No government approvals needed. Automated underwriting systems provide faster decisions and closings.</p>
-                <p className="text-sm font-semibold text-blue-600">Often close in 21-30 days</p>
+                <p className="text-sm font-semibold text-blue-600">Often close in 2-3 weeks</p>
               </CardContent>
             </Card>
 

@@ -362,7 +362,7 @@ export default function HELOANOrangeCounty() {
               },
               {
                 question: 'How long does it take to get approved for a HELOAN?',
-                answer: 'The typical approval and funding process takes 30-45 days, including the home appraisal and underwriting review.'
+                answer: 'Most home equity loans close within 2-3 weeks from start to finish, including the home appraisal and underwriting review.'
               },
               {
                 question: 'What credit score do I need for a HELOAN?',

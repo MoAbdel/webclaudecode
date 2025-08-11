@@ -75,9 +75,9 @@ export default function VALoansPage() {
           </div>
         </div>
 
-        {/* VA Loan Limits 2024 */}
+        {/* VA Loan Limits 2025 */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">2024 VA Loan Limits in Orange County</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">2025 VA Loan Limits in Orange County</h2>
           <div className="bg-red-50 p-8 rounded-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
@@ -93,14 +93,14 @@ export default function VALoansPage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">Total Available:</span>
-                    <span className="font-bold text-red-600">$766,550+</span>
+                    <span className="font-bold text-red-600">$1,089,300+</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">No Limit if 25% Down:</span>
                     <span className="font-bold text-green-600">Unlimited*</span>
                   </div>
                 </div>
-                <p className="text-xs text-slate-500 mt-4">*Above $766,550, you'll need 25% of the difference as down payment</p>
+                <p className="text-xs text-slate-500 mt-4">*Above $1,089,300, you'll need 25% of the difference as down payment</p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -431,7 +431,7 @@ export default function VALoansPage() {
                 <tr>
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Loan Limits</td>
                   <td className="px-6 py-4 text-center text-green-600 font-bold">No limit with 25% down</td>
-                  <td className="px-6 py-4 text-center text-slate-600">$766,550</td>
+                  <td className="px-6 py-4 text-center text-slate-600">$1,089,300</td>
                   <td className="px-6 py-4 text-center text-green-600">$766,550+</td>
                 </tr>
               </tbody>

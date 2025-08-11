@@ -56,7 +56,7 @@ export default function FHALoansPage() {
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="w-8 h-8 text-green-600" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Credit Score 580+</h3>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Credit Score 500+</h3>
             <p className="text-slate-600">Flexible credit requirements for Orange County buyers</p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
@@ -75,9 +75,9 @@ export default function FHALoansPage() {
           </div>
         </div>
 
-        {/* FHA Loan Limits 2024 */}
+        {/* FHA Loan Limits 2025 */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">2024 FHA Loan Limits in Orange County</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">2025 FHA Loan Limits in Orange County</h2>
           <div className="bg-blue-50 p-8 rounded-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
@@ -85,22 +85,22 @@ export default function FHALoansPage() {
                 <div className="space-y-4">
                   <div className="flex justify-between">
                     <span className="text-slate-600">Single Family Home:</span>
-                    <span className="font-bold text-blue-600">$766,550</span>
+                    <span className="font-bold text-blue-600">$1,089,300</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">2-Unit Property:</span>
-                    <span className="font-bold text-blue-600">$981,500</span>
+                    <span className="font-bold text-blue-600">$1,394,775</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">3-Unit Property:</span>
-                    <span className="font-bold text-blue-600">$1,186,350</span>
+                    <span className="font-bold text-blue-600">$1,685,850</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">4-Unit Property:</span>
-                    <span className="font-bold text-blue-600">$1,474,400</span>
+                    <span className="font-bold text-blue-600">$2,095,200</span>
                   </div>
                 </div>
-                <p className="text-xs text-slate-500 mt-4">*2024 FHA loan limits. Limits are updated annually by HUD.</p>
+                <p className="text-xs text-slate-500 mt-4">*2025 FHA loan limits. Limits are updated annually by HUD.</p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -195,7 +195,7 @@ export default function FHALoansPage() {
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
                   <div>
-                    <p className="font-semibold text-slate-900">Credit Score: 580+ (3.5% down) or 500+ (10% down)</p>
+                    <p className="font-semibold text-slate-900">Credit Score: 500+ (580+ for 3.5% down, 500-579 for 10% down)</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -281,7 +281,7 @@ export default function FHALoansPage() {
                 </tr>
                 <tr className="bg-slate-50">
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Credit Score Requirement</td>
-                  <td className="px-6 py-4 text-center text-blue-600 font-bold">580+</td>
+                  <td className="px-6 py-4 text-center text-blue-600 font-bold">500+</td>
                   <td className="px-6 py-4 text-center text-slate-600">620+</td>
                 </tr>
                 <tr>
@@ -301,7 +301,7 @@ export default function FHALoansPage() {
                 </tr>
                 <tr className="bg-slate-50">
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Loan Limits (OC)</td>
-                  <td className="px-6 py-4 text-center text-slate-600">$766,550</td>
+                  <td className="px-6 py-4 text-center text-slate-600">$1,089,300</td>
                   <td className="px-6 py-4 text-center text-green-600 font-bold">$766,550+</td>
                 </tr>
               </tbody>

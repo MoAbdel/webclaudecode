@@ -7,7 +7,7 @@ import { TrendingUp, DollarSign, Calendar, Shield, CheckCircle, AlertCircle } fr
 
 export const metadata: Metadata = {
   title: 'HELOC (Home Equity Line of Credit) - Orange County | Mo The Broker',
-  description: 'Get a HELOC in Orange County with rates from Prime + 0%. Access up to $2M+ from your home equity. Licensed broker with NEXA Mortgage. Call (949) 579-2057.',
+  description: 'Get a HELOC in Orange County with rates from Prime + 0%. Access up to $500K from your home equity. Licensed broker with NEXA Mortgage. Call (949) 579-2057.',
   keywords: 'HELOC Orange County, home equity line of credit California, HELOC rates, home equity credit line'
 };
 
@@ -26,7 +26,7 @@ export default function HELOCPage() {
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Unlock your Orange County home's equity with a flexible credit line. 
-            Access $50K to $2M+ for any purpose with competitive rates from Prime + 0%.
+            Access $50K to $500K for any purpose with competitive rates from Prime + 0%.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -55,8 +55,8 @@ export default function HELOCPage() {
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <DollarSign className="w-8 h-8 text-green-600" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Up to $2M+</h3>
-            <p className="text-slate-600">Access large credit lines for major projects</p>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Up to $500K</h3>
+            <p className="text-slate-600">Access substantial credit lines for major projects</p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
             <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -168,7 +168,7 @@ export default function HELOCPage() {
                 </tr>
                 <tr className="bg-slate-50">
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Maximum Amount</td>
-                  <td className="px-6 py-4 text-center text-green-600 font-bold">Up to $2M+</td>
+                  <td className="px-6 py-4 text-center text-green-600 font-bold">Up to $500K</td>
                   <td className="px-6 py-4 text-center text-slate-600">$100K max</td>
                   <td className="px-6 py-4 text-center text-slate-600">$50K max</td>
                   <td className="px-6 py-4 text-center text-slate-600">Based on equity</td>

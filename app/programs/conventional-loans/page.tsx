@@ -75,9 +75,9 @@ export default function ConventionalLoansPage() {
           </div>
         </div>
 
-        {/* Conventional Loan Limits 2024 */}
+        {/* Conventional Loan Limits 2025 */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">2024 Conventional Loan Limits in Orange County</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">2025 Conventional Loan Limits in Orange County</h2>
           <div className="bg-blue-50 p-8 rounded-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
@@ -85,26 +85,26 @@ export default function ConventionalLoansPage() {
                 <div className="space-y-4">
                   <div className="flex justify-between">
                     <span className="text-slate-600">Single Family Home:</span>
-                    <span className="font-bold text-blue-600">$766,550</span>
+                    <span className="font-bold text-blue-600">$1,089,300</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">2-Unit Property:</span>
-                    <span className="font-bold text-blue-600">$981,500</span>
+                    <span className="font-bold text-blue-600">$1,394,775</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">3-Unit Property:</span>
-                    <span className="font-bold text-blue-600">$1,186,350</span>
+                    <span className="font-bold text-blue-600">$1,685,850</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">4-Unit Property:</span>
-                    <span className="font-bold text-blue-600">$1,474,400</span>
+                    <span className="font-bold text-blue-600">$2,095,200</span>
                   </div>
                   <div className="flex justify-between border-t pt-2">
                     <span className="text-slate-600">Above Conforming:</span>
                     <span className="font-bold text-purple-600">Jumbo Loan Required</span>
                   </div>
                 </div>
-                <p className="text-xs text-slate-500 mt-4">*2024 conforming loan limits set by FHFA. Above these amounts require jumbo financing.</p>
+                <p className="text-xs text-slate-500 mt-4">*2025 conforming loan limits set by FHFA. Above these amounts require jumbo financing.</p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -393,7 +393,7 @@ export default function ConventionalLoansPage() {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Loan Limits (OC)</td>
-                  <td className="px-6 py-4 text-center text-blue-600 font-bold">$766,550</td>
+                  <td className="px-6 py-4 text-center text-blue-600 font-bold">$1,089,300</td>
                   <td className="px-6 py-4 text-center text-slate-600">$766,550</td>
                   <td className="px-6 py-4 text-center text-green-600">No limit</td>
                   <td className="px-6 py-4 text-center text-green-600">No limit</td>
@@ -438,7 +438,7 @@ export default function ConventionalLoansPage() {
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Perfect for OC Price Range</h3>
                     <p className="text-slate-600">
-                      Conforming limits of $766,550 cover many Orange County homes, while jumbo 
+                      Conforming limits of $1,089,300 cover many Orange County homes, while jumbo 
                       options handle luxury properties seamlessly.
                     </p>
                   </div>

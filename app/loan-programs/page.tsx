@@ -68,7 +68,7 @@ export default function ProgramsPage() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Orange County <span className="text-blue-600">Loan Programs</span>
+            Mortgage <span className="text-blue-600">Loan Programs</span> – FHA, VA, Jumbo & More
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             As a licensed broker with NEXA Mortgage - the nation's largest wholesale brokerage - 
@@ -81,7 +81,7 @@ export default function ProgramsPage() {
         <div className="mb-16">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              🔥 Most Requested: <span className="text-blue-600">Home Equity Solutions</span>
+              <span className="text-blue-600">HELOC & Cash-Out Refinance Options</span>
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Unlock your Orange County home's equity with flexible credit lines and loans

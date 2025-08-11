@@ -8,8 +8,8 @@ export const seoData = {
     description: "As a wholesale mortgage broker, Mo Abdel helps Orange County residents strategize their home financial goals. Learn about my commitment to excellence." 
   },
   Programs: { 
-    title: "Wholesale Mortgage Loan Programs | FHA, VA & Conventional Loans | Orange County", 
-    description: "Explore a wide range of wholesale mortgage loan programs in Orange County, including FHA, VA, Jumbo, and Conventional loans. Find the perfect fit for your needs." 
+    title: "Loan Programs | FHA, VA, Jumbo & HELOC – Orange County Mortgage Broker", 
+    description: "Explore FHA, VA, Jumbo, and HELOC options. Mo The Broker finds the right mortgage for your goals with wholesale rates & flexible terms." 
   },
   Calculator: { 
     title: "Wholesale Mortgage Calculators | Estimate Payments & Affordability | Orange County", 

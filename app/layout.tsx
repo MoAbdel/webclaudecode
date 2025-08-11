@@ -6,14 +6,14 @@ import { structuredData } from '@/lib/seo';
 import './globals-simple.css';
 
 export const metadata: Metadata = {
-  title: 'Mo Abdel | Wholesale Mortgage Broker in Orange County, CA | NMLS #1426884',
-  description: 'Looking for competitive wholesale mortgage rates in Orange County? Mo Abdel offers personalized home loan solutions with expert wholesale mortgage guidance. Get pre-approved today!',
+  title: 'Mo The Broker | Wholesale Mortgage Broker in Orange County, CA',
+  description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: 'Mo Abdel | Wholesale Mortgage Broker in Orange County, CA',
-    description: 'Looking for competitive wholesale mortgage rates in Orange County? Mo Abdel offers personalized home loan solutions with expert wholesale mortgage guidance.',
+    title: 'Mo The Broker | Wholesale Mortgage Broker in Orange County, CA',
+    description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
     type: 'website',
     locale: 'en_US',
     siteName: 'Mo The Broker - Wholesale Mortgage',

@@ -231,7 +231,7 @@ export default function IrvineMortgageBrokerPage() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Master-Planned Community Expertise</h3>
                   <p className="text-slate-600">
-                    15+ years experience with Irvine Company properties, HOA requirements, 
+                    Specialized expertise with Irvine Company properties, HOA requirements, 
                     and the unique aspects of master-planned communities.
                   </p>
                 </div>
@@ -271,19 +271,6 @@ export default function IrvineMortgageBrokerPage() {
           </div>
         </div>
 
-        {/* Testimonial */}
-        <div className="bg-slate-50 rounded-2xl p-8 mb-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="text-4xl text-blue-600 mb-4">"</div>
-            <p className="text-lg text-slate-700 mb-6 italic">
-              "Mo helped us secure a HELOC on our Woodbridge home to renovate and add an ADU. 
-              His knowledge of Irvine properties and wholesale rates saved us thousands compared 
-              to our bank's offer. The remote process was seamless and professional."
-            </p>
-            <div className="font-bold text-slate-900">Sarah & David L.</div>
-            <div className="text-slate-600">Woodbridge, Irvine</div>
-          </div>
-        </div>
 
         {/* FAQ Section */}
         <div className="mb-16">

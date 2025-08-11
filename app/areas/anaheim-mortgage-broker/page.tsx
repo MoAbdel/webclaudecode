@@ -271,19 +271,6 @@ export default function AnaheimMortgageBrokerPage() {
           </div>
         </div>
 
-        {/* Testimonial */}
-        <div className="bg-slate-50 rounded-2xl p-8 mb-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="text-4xl text-blue-600 mb-4">"</div>
-            <p className="text-lg text-slate-700 mb-6 italic">
-              "As first-time buyers in Anaheim, Mo's FHA loan expertise was perfect for us. 
-              With only 3.5% down, we were able to buy our family home near the schools we wanted. 
-              The Disney employee discounts were an added bonus we didn't expect!"
-            </p>
-            <div className="font-bold text-slate-900">Maria & Carlos R.</div>
-            <div className="text-slate-600">West Anaheim</div>
-          </div>
-        </div>
 
         {/* FAQ Section */}
         <div className="mb-16">

@@ -271,19 +271,6 @@ export default function SantaAnaMortgageBrokerPage() {
           </div>
         </div>
 
-        {/* Testimonial */}
-        <div className="bg-slate-50 rounded-2xl p-8 mb-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="text-4xl text-blue-600 mb-4">"</div>
-            <p className="text-lg text-slate-700 mb-6 italic">
-              "Mo understood our situation as first-time buyers in Santa Ana. His FHA loan expertise 
-              and knowledge of local assistance programs helped us buy our dream home in Floral Park. 
-              The bilingual support made the process so much easier for our family."
-            </p>
-            <div className="font-bold text-slate-900">Elena & Miguel S.</div>
-            <div className="text-slate-600">Floral Park, Santa Ana</div>
-          </div>
-        </div>
 
         {/* FAQ Section */}
         <div className="mb-16">

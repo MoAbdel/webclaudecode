@@ -176,7 +176,7 @@ export default function ServiceAreasPage() {
                 <MapPin className="w-6 h-6 text-blue-600 mr-3 mt-1" />
                 <div>
                   <h3 className="font-bold text-slate-900">Local Market Expertise</h3>
-                  <p className="text-slate-600">15+ years of Orange County real estate and lending experience</p>
+                  <p className="text-slate-600">Deep knowledge of Orange County neighborhoods and wholesale mortgage market</p>
                 </div>
               </div>
               <div className="flex items-start">

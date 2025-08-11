@@ -205,7 +205,7 @@ export default function HuntingtonBeachMortgageBrokerPage() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Coastal Property Expertise</h3>
                   <p className="text-slate-600">
-                    15+ years experience with beachfront properties, flood insurance requirements, 
+                    Specialized expertise with beachfront properties, flood insurance requirements, 
                     and coastal zone regulations. Understanding of Surf City lifestyle financing needs.
                   </p>
                 </div>
@@ -271,19 +271,6 @@ export default function HuntingtonBeachMortgageBrokerPage() {
           </div>
         </div>
 
-        {/* Testimonial */}
-        <div className="bg-slate-50 rounded-2xl p-8 mb-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="text-4xl text-blue-600 mb-4">"</div>
-            <p className="text-lg text-slate-700 mb-6 italic">
-              "As a veteran, Mo's VA loan expertise was invaluable for our Huntington Beach home purchase. 
-              His knowledge of coastal properties and military programs made the process smooth. We're 
-              now living two blocks from the beach with zero down payment!"
-            </p>
-            <div className="font-bold text-slate-900">Captain Robert & Lisa M.</div>
-            <div className="text-slate-600">Main Street, Huntington Beach</div>
-          </div>
-        </div>
 
         {/* FAQ Section */}
         <div className="mb-16">

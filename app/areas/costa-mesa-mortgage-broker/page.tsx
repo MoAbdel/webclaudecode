@@ -271,19 +271,6 @@ export default function CostaMesaMortgageBrokerPage() {
           </div>
         </div>
 
-        {/* Testimonial */}
-        <div className="bg-slate-50 rounded-2xl p-8 mb-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="text-4xl text-blue-600 mb-4">"</div>
-            <p className="text-lg text-slate-700 mb-6 italic">
-              "Mo helped us refinance our Mesa Verde home and eliminate PMI. His wholesale rates 
-              were significantly better than what our bank offered, and the process was completely 
-              remote and efficient. We saved over $400 per month!"
-            </p>
-            <div className="font-bold text-slate-900">Jennifer & Mark R.</div>
-            <div className="text-slate-600">Mesa Verde, Costa Mesa</div>
-          </div>
-        </div>
 
         {/* FAQ Section */}
         <div className="mb-16">

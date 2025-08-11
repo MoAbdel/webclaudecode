@@ -400,50 +400,6 @@ export default function NewportBeachMortgageBrokerPage() {
           </div>
         </div>
 
-        {/* Client Testimonials */}
-        <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">What Newport Beach Clients Say</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-slate-600 mb-4 italic">
-                "Mo expertly handled our $4.2M Newport Coast home purchase. His knowledge 
-                of luxury market conditions and jumbo loan options was invaluable."
-              </p>
-              <p className="text-sm text-slate-500">- Sarah & David L., Newport Coast</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-slate-600 mb-4 italic">
-                "Excellent service for our Balboa Island investment property. Mo found 
-                the perfect DSCR loan program and made the process seamless."
-              </p>
-              <p className="text-sm text-slate-500">- Michael R., Real Estate Investor</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-lg">
-              <div className="flex mb-4">
-                {[1, 2, 3, 4, 5].map((star) => (
-                  <Star key={star} className="w-5 h-5 text-yellow-400 fill-current" />
-                ))}
-              </div>
-              <p className="text-slate-600 mb-4 italic">
-                "As international buyers, Mo guided us through every step of purchasing 
-                our Corona del Mar home. Professional and knowledgeable."
-              </p>
-              <p className="text-sm text-slate-500">- Chen & Li W., International Clients</p>
-            </div>
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">

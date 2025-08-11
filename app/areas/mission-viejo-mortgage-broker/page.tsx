@@ -218,7 +218,7 @@ export default function MissionViejoMortgageBrokerPage() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">Master-Planned Community Expertise</h3>
                   <p className="text-slate-600">
-                    15+ years experience with Mission Viejo Company properties, HOA requirements, 
+                    Specialized expertise with Mission Viejo Company properties, HOA requirements, 
                     and the unique aspects of planned communities with amenities.
                   </p>
                 </div>
@@ -271,19 +271,6 @@ export default function MissionViejoMortgageBrokerPage() {
           </div>
         </div>
 
-        {/* Testimonial */}
-        <div className="bg-slate-50 rounded-2xl p-8 mb-16">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="text-4xl text-blue-600 mb-4">"</div>
-            <p className="text-lg text-slate-700 mb-6 italic">
-              "Mo helped us refinance our Lake Mission Viejo home and secure a HELOC for our 
-              children's college tuition. His understanding of our community and family priorities 
-              made all the difference. The wholesale rates saved us thousands!"
-            </p>
-            <div className="font-bold text-slate-900">Patricia & James K.</div>
-            <div className="text-slate-600">Lake Mission Viejo</div>
-          </div>
-        </div>
 
         {/* FAQ Section */}
         <div className="mb-16">

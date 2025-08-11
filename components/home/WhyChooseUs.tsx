@@ -81,37 +81,37 @@ export default function WhyChooseUs() {
           <h3 className="text-2xl font-bold text-slate-900 mb-6">Popular Orange County Loan Programs</h3>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/fha-loans-orange-county" className="inline-block">
-              <Button variant="ghost" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-4 py-2 text-sm">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
                 FHA Loans in Orange County
               </Button>
             </Link>
             <Link href="/va-loans-orange-county" className="inline-block">
-              <Button variant="ghost" className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-4 py-2 text-sm">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
                 VA Loans for Veterans
               </Button>
             </Link>
             <Link href="/heloc-orange-county" className="inline-block">
-              <Button variant="ghost" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-4 py-2 text-sm">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
                 HELOC in Orange County
               </Button>
             </Link>
             <Link href="/conventional-loans-orange-county" className="inline-block">
-              <Button variant="ghost" className="border-2 border-indigo-600 text-indigo-600 hover:bg-indigo-50 px-4 py-2 text-sm">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
                 Conventional Loans
               </Button>
             </Link>
             <Link href="/non-qm-loans-orange-county" className="inline-block">
-              <Button variant="ghost" className="border-2 border-orange-600 text-orange-600 hover:bg-orange-50 px-4 py-2 text-sm">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
                 Non-QM Loans
               </Button>
             </Link>
             <Link href="/heloan-orange-county" className="inline-block">
-              <Button variant="ghost" className="border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 px-4 py-2 text-sm">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
                 HELOAN
               </Button>
             </Link>
             <Link href="/rate-term-refinance-orange-county" className="inline-block">
-              <Button variant="ghost" className="border-2 border-cyan-600 text-cyan-600 hover:bg-cyan-50 px-4 py-2 text-sm">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
                 Rate & Term Refinance
               </Button>
             </Link>

@@ -101,6 +101,30 @@ export const mortgageLoanSchema = {
       "name": "HELOC",
       "description": "Home Equity Line of Credit with flexible access to funds",
       "url": "/heloc-orange-county"
+    },
+    {
+      "@type": "Offer",
+      "name": "Conventional Loans",
+      "description": "Traditional home financing with down payments as low as 3%",
+      "url": "/conventional-loans-orange-county"
+    },
+    {
+      "@type": "Offer",
+      "name": "Non-QM Loans",
+      "description": "Alternative documentation loans for self-employed and investors",
+      "url": "/non-qm-loans-orange-county"
+    },
+    {
+      "@type": "Offer",
+      "name": "HELOAN",
+      "description": "Fixed-rate home equity loan with lump sum funding",
+      "url": "/heloan-orange-county"
+    },
+    {
+      "@type": "Offer",
+      "name": "Rate & Term Refinance",
+      "description": "Lower your mortgage rate or eliminate PMI with refinancing",
+      "url": "/rate-term-refinance-orange-county"
     }
   ]
 };

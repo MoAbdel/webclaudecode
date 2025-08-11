@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { DollarSign, Home, TrendingUp, CheckCircle, AlertCircle, Calculator } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Cash-Out Refinance Orange County | Replace Mortgage + Get Cash | Mo The Broker',
-  description: 'Cash-out refinance in Orange County. Replace your mortgage with a larger loan and get cash from your equity. Wholesale rates through NEXA Mortgage. Call (949) 579-2057.',
+  title: 'Cash-Out Refinance Orange County | Replace Mortgage + Get Cash | Mo The Wholesale Mortgage Broker',
+  description: 'Cash-out refinance in Orange County. Replace your mortgage with a larger loan and get cash from your equity. Wholesale mortgage broker rates through NEXA Mortgage. Call (949) 579-2057.',
   keywords: 'cash out refinance Orange County, cash out refi California, home equity cash out, mortgage refinance cash'
 };
 
@@ -378,7 +378,7 @@ export default function CashOutRefinancePage() {
             </a>
           </div>
           <p className="text-sm text-orange-200 mt-4">
-            Licensed broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
+            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
           </p>
         </div>
       </div>

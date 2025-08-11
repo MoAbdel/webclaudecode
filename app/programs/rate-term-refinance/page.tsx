@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { TrendingDown, Calendar, Shield, CheckCircle, AlertCircle, Calculator } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Rate & Term Refinance Orange County | Lower Payment & Rate | Mo The Broker',
-  description: 'Rate and term refinance in Orange County. Lower your mortgage payment, eliminate PMI, or switch to fixed rate. Wholesale rates through NEXA Mortgage. Call (949) 579-2057.',
+  title: 'Rate & Term Refinance Orange County | Lower Payment & Rate | Mo The Wholesale Mortgage Broker',
+  description: 'Rate and term refinance in Orange County. Lower your mortgage payment, eliminate PMI, or switch to fixed rate. Wholesale mortgage broker rates through NEXA Mortgage. Call (949) 579-2057.',
   keywords: 'rate and term refinance Orange County, lower mortgage payment, eliminate PMI, refinance California'
 };
 
@@ -359,7 +359,7 @@ export default function RateTermRefinancePage() {
             </a>
           </div>
           <p className="text-sm text-green-200 mt-4">
-            Licensed broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
+            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
           </p>
         </div>
       </div>

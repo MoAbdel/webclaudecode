@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-slate-400 mb-4">
-              Your trusted local mortgage broker serving all of Orange County. 
+              Your trusted local wholesale mortgage broker serving all of Orange County. 
               I'm committed to finding you the best rates and loan programs available. NMLS #1426884.
             </p>
           </div>

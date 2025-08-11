@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, TrendingUp, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Orange County Mortgage Broker Service Areas | Mo The Broker',
-  description: 'Serving all Orange County cities with wholesale mortgage rates. HELOC, refinancing, and purchase loans in Irvine, Newport Beach, Costa Mesa, and more.',
-  keywords: 'Orange County mortgage broker, Irvine mortgage broker, Newport Beach loans, Costa Mesa mortgage'
+  title: 'Orange County Wholesale Mortgage Broker Service Areas | Mo The Broker',
+  description: 'Serving all Orange County cities with wholesale mortgage rates. HELOC, refinancing, and purchase loans in Irvine, Newport Beach, Costa Mesa, and more. Licensed wholesale mortgage broker.',
+  keywords: 'Orange County wholesale mortgage broker, Irvine wholesale mortgage broker, Newport Beach loans, Costa Mesa wholesale mortgage'
 };
 
 const serviceAreas = [
@@ -231,7 +231,7 @@ export default function ServiceAreasPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed broker with NEXA Mortgage • NMLS #1426884
+            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884
           </p>
         </div>
       </div>

@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Irvine Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
-  description: 'Irvine mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving University Park, Woodbridge, Northwood. Call (949) 579-2057.',
-  keywords: 'Irvine mortgage broker, Irvine home loans, Irvine HELOC, University Park mortgage, Woodbridge loans, Northwood mortgage broker'
+  title: 'Irvine Wholesale Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
+  description: 'Irvine wholesale mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving University Park, Woodbridge, Northwood. Call (949) 579-2057.',
+  keywords: 'Irvine wholesale mortgage broker, Irvine home loans, Irvine HELOC, University Park mortgage, Woodbridge loans, Northwood wholesale mortgage broker'
 };
 
 export default function IrvineMortgageBrokerPage() {
@@ -366,7 +366,7 @@ export default function IrvineMortgageBrokerPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed broker with NEXA Mortgage • NMLS #1426884 • Serving all Irvine neighborhoods
+            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Irvine neighborhoods
           </p>
         </div>
       </div>

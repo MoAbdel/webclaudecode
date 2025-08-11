@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Shield, Star, Users, CheckCircle, AlertCircle, Flag } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'VA Loans Orange County | 0% Down Military Benefits | Mo The Broker NMLS #1426884',
-  description: 'VA loans in Orange County with 0% down payment for veterans and active military. No PMI, competitive rates. Licensed broker with NEXA Mortgage. Call (949) 579-2057.',
+  title: 'VA Loans Orange County | 0% Down Military Benefits | Mo The Wholesale Mortgage Broker NMLS #1426884',
+  description: 'VA loans in Orange County with 0% down payment for veterans and active military. No PMI, competitive rates. Licensed wholesale mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
   keywords: 'VA loans Orange County, VA mortgage California, military home loans, veterans mortgage benefits, 0% down payment Orange County'
 };
 
@@ -461,7 +461,7 @@ export default function VALoansPage() {
             </a>
           </div>
           <p className="text-sm text-red-200 mt-4">
-            Licensed broker with NEXA Mortgage • NMLS #1426884 • Proudly serving our veterans and military families
+            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Proudly serving our veterans and military families
           </p>
         </div>
       </div>

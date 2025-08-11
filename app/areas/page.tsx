@@ -20,6 +20,20 @@ const serviceAreas = [
     highlights: ['Great Pacific Elementary', 'Irvine Spectrum', 'UCI proximity', 'Safe neighborhoods']
   },
   {
+    city: 'Mission Viejo',
+    description: 'Master-planned city with excellent schools and resort-style amenities',
+    medianHome: '$950K',
+    slug: 'mission-viejo-mortgage-broker',
+    highlights: ['Saddleback Valley', 'Lake Mission Viejo', 'Top schools', 'Family community']
+  },
+  {
+    city: 'Anaheim',
+    description: 'Home to Disneyland with diverse neighborhoods and growing downtown',
+    medianHome: '$750K',
+    slug: 'anaheim-mortgage-broker',
+    highlights: ['Disneyland Resort', 'Angel Stadium', 'Downtown growth', 'Family areas']
+  },
+  {
     city: 'Newport Beach',
     description: 'Luxury coastal living with world-class beaches and upscale amenities',
     medianHome: '$2.8M',
@@ -41,25 +55,18 @@ const serviceAreas = [
     highlights: ['Beach proximity', 'Main Street', 'Surf culture', 'Pier area']
   },
   {
-    city: 'Anaheim',
-    description: 'Home to Disneyland with diverse neighborhoods and growing downtown',
-    medianHome: '$750K',
-    slug: 'anaheim-mortgage-broker',
-    highlights: ['Disneyland Resort', 'Angel Stadium', 'Downtown growth', 'Family areas']
-  },
-  {
-    city: 'Mission Viejo',
-    description: 'Master-planned city with excellent schools and resort-style amenities',
-    medianHome: '$950K',
-    slug: 'mission-viejo-mortgage-broker',
-    highlights: ['Saddleback Valley', 'Lake Mission Viejo', 'Top schools', 'Family community']
-  },
-  {
     city: 'Laguna Beach',
     description: 'Artist community with stunning coastal scenery and unique architecture',
     medianHome: '$2.2M',
     slug: 'laguna-beach-mortgage-broker',
     highlights: ['Art galleries', 'Pageant of Masters', 'Coastal views', 'Unique homes']
+  },
+  {
+    city: 'Santa Ana',
+    description: 'Orange County seat with diverse neighborhoods and growing downtown',
+    medianHome: '$650K',
+    slug: 'santa-ana-mortgage-broker',
+    highlights: ['Downtown arts district', 'Floral Park', 'French Park', 'Affordable housing']
   },
   {
     city: 'Tustin',

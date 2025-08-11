@@ -21,6 +21,17 @@ const loanProgramsDropdown = [
   { title: 'Non-QM Loans', url: '/programs/non-qm-loans' }
 ];
 
+const serviceAreasDropdown = [
+  { title: 'All Service Areas', url: '/areas' },
+  { title: 'Irvine', url: '/areas/irvine-mortgage-broker' },
+  { title: 'Mission Viejo', url: '/areas/mission-viejo-mortgage-broker' },
+  { title: 'Anaheim', url: '/areas/anaheim-mortgage-broker' },
+  { title: 'Newport Beach', url: '/areas/newport-beach-mortgage-broker' },
+  { title: 'Costa Mesa', url: '/areas/costa-mesa-mortgage-broker' },
+  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' },
+  { title: 'Santa Ana', url: '/areas/santa-ana-mortgage-broker' }
+];
+
 const navigationItems = [
   {
     title: 'Home',
@@ -43,6 +54,14 @@ const navigationItems = [
     dropdownItems: loanProgramsDropdown
   },
   {
+    title: 'Service Areas',
+    page: 'Areas',
+    url: createPageUrl('Areas'),
+    icon: Home,
+    hasDropdown: true,
+    dropdownItems: serviceAreasDropdown
+  },
+  {
     title: 'About',
     page: 'About',
     url: createPageUrl('About'),
@@ -60,6 +79,7 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
+  const [areasDropdownOpen, setAreasDropdownOpen] = useState(false);
 
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
@@ -84,24 +104,39 @@ export default function Header() {
                 {item.hasDropdown ? (
                   <div 
                     className="relative"
-                    onMouseEnter={() => setProgramsDropdownOpen(true)}
-                    onMouseLeave={() => setProgramsDropdownOpen(false)}
+                    onMouseEnter={() => {
+                      if (item.page === 'Programs') {
+                        setProgramsDropdownOpen(true);
+                      } else if (item.page === 'Areas') {
+                        setAreasDropdownOpen(true);
+                      }
+                    }}
+                    onMouseLeave={() => {
+                      if (item.page === 'Programs') {
+                        setProgramsDropdownOpen(false);
+                      } else if (item.page === 'Areas') {
+                        setAreasDropdownOpen(false);
+                      }
+                    }}
                   >
                     <button
                       className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                        pathname.startsWith('/programs')
+                        (item.page === 'Programs' && pathname.startsWith('/programs')) ||
+                        (item.page === 'Areas' && pathname.startsWith('/areas'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}
                     >
                       {item.title}
                       <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                        programsDropdownOpen ? 'rotate-180' : ''
+                        (item.page === 'Programs' && programsDropdownOpen) ||
+                        (item.page === 'Areas' && areasDropdownOpen) ? 'rotate-180' : ''
                       }`} />
                     </button>
                     
                     {/* Dropdown Menu */}
-                    {programsDropdownOpen && (
+                    {((item.page === 'Programs' && programsDropdownOpen) ||
+                      (item.page === 'Areas' && areasDropdownOpen)) && (
                       <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           <Link
@@ -171,7 +206,8 @@ export default function Header() {
                     <Link
                       href={item.url}
                       className={`block px-3 py-2 rounded-md text-base font-medium ${
-                        pathname.startsWith('/programs')
+                        (item.page === 'Programs' && pathname.startsWith('/programs')) ||
+                        (item.page === 'Areas' && pathname.startsWith('/areas'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}

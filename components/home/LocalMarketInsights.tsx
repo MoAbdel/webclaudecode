@@ -154,7 +154,7 @@ export default function LocalMarketInsights() {
             Market data updated periodically. Sources may include: MLS, Orange County Association of Realtors, CoreLogic
           </p>
           
-          <Link href="/programs">
+          <Link href="/loan-programs">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
               Explore Loan Programs
               <ArrowRight className="w-5 h-5 ml-2" />

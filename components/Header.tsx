@@ -9,16 +9,16 @@ import { createPageUrl } from '@/lib/utils';
 import Image from 'next/image';
 
 const loanProgramsDropdown = [
-  { title: 'All Programs', url: '/programs' },
-  { title: 'HELOC', url: '/programs/heloc' },
-  { title: 'HELOAN', url: '/programs/heloan' },
-  { title: 'Cash-Out Refinance', url: '/programs/cash-out-refinance' },
-  { title: 'Rate & Term Refinance', url: '/programs/rate-term-refinance' },
-  { title: 'FHA Loans', url: '/programs/fha-loans' },
-  { title: 'VA Loans', url: '/programs/va-loans' },
-  { title: 'Conventional Loans', url: '/programs/conventional-loans' },
-  { title: 'Jumbo Loans', url: '/programs/jumbo-loans' },
-  { title: 'Non-QM Loans', url: '/programs/non-qm-loans' }
+  { title: 'All Programs', url: '/loan-programs' },
+  { title: 'HELOC', url: '/loan-programs/heloc' },
+  { title: 'HELOAN', url: '/loan-programs/heloan' },
+  { title: 'Cash-Out Refinance', url: '/loan-programs/cash-out-refinance' },
+  { title: 'Rate & Term Refinance', url: '/loan-programs/rate-term-refinance' },
+  { title: 'FHA Loans', url: '/loan-programs/fha-loans' },
+  { title: 'VA Loans', url: '/loan-programs/va-loans' },
+  { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
+  { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
+  { title: 'Non-QM Loans', url: '/loan-programs/non-qm-loans' }
 ];
 
 const serviceAreasDropdown = [
@@ -121,7 +121,7 @@ export default function Header() {
                   >
                     <button
                       className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                        (item.page === 'Programs' && pathname.startsWith('/programs')) ||
+                        (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'Areas' && pathname.startsWith('/areas'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
@@ -206,7 +206,7 @@ export default function Header() {
                     <Link
                       href={item.url}
                       className={`block px-3 py-2 rounded-md text-base font-medium ${
-                        (item.page === 'Programs' && pathname.startsWith('/programs')) ||
+                        (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'Areas' && pathname.startsWith('/areas'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'

@@ -154,7 +154,7 @@ export default function AnaheimMortgageBrokerPage() {
                       </div>
                     ))}
                   </div>
-                  <Link href="/programs">
+                  <Link href="/loan-programs">
                     <Button className="w-full bg-blue-600 hover:bg-blue-700">
                       Learn More
                     </Button>

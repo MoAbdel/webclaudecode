@@ -78,7 +78,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          <nav className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
               <div key={item.title} className="relative">
                 {item.hasDropdown ? (
@@ -88,7 +88,7 @@ export default function Header() {
                     onMouseLeave={() => setProgramsDropdownOpen(false)}
                   >
                     <button
-                      className={`flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                      className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                         pathname.startsWith('/programs')
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
@@ -118,7 +118,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.url}
-                    className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                    className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                       pathname === item.url
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'

@@ -253,7 +253,7 @@ export default function FHALoansPage() {
                   <AlertCircle className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-slate-900">MIP Duration</p>
-                    <p className="text-slate-600 text-sm">11+ years for loans with <90% LTV, life of loan for ≥90% LTV</p>
+                    <p className="text-slate-600 text-sm">11+ years for loans with &lt;90% LTV, life of loan for ≥90% LTV</p>
                   </div>
                 </div>
               </div>

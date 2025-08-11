@@ -273,7 +273,7 @@ export default function CashOutRefinancePage() {
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-green-700">You need a large lump sum (>$50K)</span>
+                  <span className="text-green-700">You need a large lump sum (&gt;$50K)</span>
                 </div>
                 <div className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />

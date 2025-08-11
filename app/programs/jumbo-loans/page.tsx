@@ -100,7 +100,7 @@ export default function JumboLoansPage() {
                     <span className="font-bold">$800K - $3M</span>
                   </div>
                   <div className="flex justify-between">
-                    <span className="text-slate-600">Ultra-Jumbo (>$1.5M):</span>
+                    <span className="text-slate-600">Ultra-Jumbo (&gt;$1.5M):</span>
                     <span className="font-bold">Specialized Pricing</span>
                   </div>
                 </div>

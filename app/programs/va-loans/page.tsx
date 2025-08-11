@@ -414,7 +414,7 @@ export default function VALoansPage() {
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Mortgage Insurance</td>
                   <td className="px-6 py-4 text-center text-red-600 font-bold">None</td>
                   <td className="px-6 py-4 text-center text-slate-600">MIP Required</td>
-                  <td className="px-6 py-4 text-center text-slate-600">PMI if <20% down</td>
+                  <td className="px-6 py-4 text-center text-slate-600">PMI if &lt;20% down</td>
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Credit Score</td>

@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { structuredData } from '@/lib/seo';
+import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
 
 export const metadata: Metadata = {
@@ -31,6 +31,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(mortgageLoanSchema) }}
         />
         <meta name="build-timestamp" content={new Date().toISOString()} />
         <meta name="deployment-id" content="BGDyiFiyb-rollback" />

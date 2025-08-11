@@ -89,7 +89,7 @@ export default function Header() {
           <Link href="/" className="flex items-center">
             <Image 
               src="/images/mo-logo-white.webp" 
-              alt="Mo The Broker - NMLS#1426884"
+              alt="Mo The Broker - Orange County Wholesale Mortgage Broker NMLS 1426884"
               width={600}
               height={180}
               className="h-24 w-auto md:h-36 lg:h-36"

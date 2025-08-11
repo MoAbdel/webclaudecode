@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 import { GitCompareArrows, Zap, Shield, Star, Award, TrendingUp } from "lucide-react";
 
 const features = [
@@ -72,6 +74,28 @@ export default function WhyChooseUs() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Internal Linking to Service Pages */}
+        <div className="text-center mt-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-6">Popular Orange County Loan Programs</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/fha-loans-orange-county" className="inline-block">
+              <Button variant="ghost" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-6 py-2">
+                FHA Loans in Orange County
+              </Button>
+            </Link>
+            <Link href="/va-loans-orange-county" className="inline-block">
+              <Button variant="ghost" className="border-2 border-green-600 text-green-600 hover:bg-green-50 px-6 py-2">
+                VA Loans for Veterans
+              </Button>
+            </Link>
+            <Link href="/heloc-orange-county" className="inline-block">
+              <Button variant="ghost" className="border-2 border-purple-600 text-purple-600 hover:bg-purple-50 px-6 py-2">
+                HELOC in Orange County
+              </Button>
+            </Link>
+          </div>
         </div>
 
       </div>

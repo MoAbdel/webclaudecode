@@ -21,7 +21,7 @@ export default function Footer() {
               <div className="relative h-32 w-auto">
                 <Image 
                   src="/images/mo-logo-white.webp"
-                  alt="Mo The Broker" 
+                  alt="Mo The Broker - Orange County Wholesale Mortgage Broker" 
                   width={128}
                   height={128}
                   className="filter invert"

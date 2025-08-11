@@ -18,7 +18,7 @@ export default function AboutPage() {
         <div className="text-center mb-12">
           <div className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-lg">
             <Image
-              src="/images/mo-headshot-new.webp"
+              src="/images/mo-headshot-final.webp"
               alt="Mo Abdel - Orange County Mortgage Broker"
               fill
               className="object-cover"

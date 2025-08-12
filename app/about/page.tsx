@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: seoData.About.title,

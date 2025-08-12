@@ -21,7 +21,7 @@ export default function AboutPage() {
               src="/images/mo-headshot-latest.webp"
               alt="Mo Abdel - Orange County Mortgage Broker"
               fill
-              className="object-cover scale-75"
+              className="object-cover scale-125"
               priority
             />
           </div>

@@ -29,6 +29,24 @@ export default function RootLayout({
     <html lang="en" data-theme="base44">
       <head>
         <meta name="google-site-verification" content="gje53lhRpuQPVaMLhtYAUYdO8ciKzx8APLNwNVhcT1A" />
+        <link rel="canonical" href="https://mothebroker.com" />
+        
+        {/* OpenGraph Meta Tags */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://mothebroker.com" />
+        <meta property="og:title" content="Mo Abdel | Wholesale Mortgage Broker Orange County | NMLS #1426884" />
+        <meta property="og:description" content="Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs. Expert guidance on FHA, VA, jumbo loans, and HELOC options." />
+        <meta property="og:image" content="https://mothebroker.com/images/moabdel-headshot-final.png" />
+        <meta property="og:site_name" content="Mo The Broker" />
+        <meta property="og:locale" content="en_US" />
+        
+        {/* Twitter Card Meta Tags */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://mothebroker.com" />
+        <meta name="twitter:title" content="Mo Abdel | Wholesale Mortgage Broker Orange County" />
+        <meta name="twitter:description" content="Get wholesale mortgage rates from 200+ lenders. Expert guidance on FHA, VA, jumbo loans, and HELOC options." />
+        <meta name="twitter:image" content="https://mothebroker.com/images/moabdel-headshot-final.png" />
+        
         <script
           async
           src="https://www.googletagmanager.com/gtag/js?id=G-P8RJLQYRVE"

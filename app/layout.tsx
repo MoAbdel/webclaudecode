@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
 
@@ -31,6 +32,10 @@ export default function RootLayout({
         <meta name="google-site-verification" content="gje53lhRpuQPVaMLhtYAUYdO8ciKzx8APLNwNVhcT1A" />
         <link rel="canonical" href="https://mothebroker.com" />
         
+        {/* Preconnect to external domains for performance */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        
         {/* OpenGraph Meta Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mothebroker.com" />
@@ -46,21 +51,6 @@ export default function RootLayout({
         <meta name="twitter:title" content="Mo Abdel | Wholesale Mortgage Broker Orange County" />
         <meta name="twitter:description" content="Get wholesale mortgage rates from 200+ lenders. Expert guidance on FHA, VA, jumbo loans, and HELOC options." />
         <meta name="twitter:image" content="https://mothebroker.com/images/moabdel-headshot-final.png" />
-        
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-P8RJLQYRVE"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-P8RJLQYRVE');
-            `,
-          }}
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -78,6 +68,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <GoogleAnalytics />
       </body>
     </html>
   );

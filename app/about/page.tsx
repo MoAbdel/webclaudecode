@@ -18,13 +18,14 @@ export default function AboutPage() {
         <div className="text-center mb-12">
           <div className="relative w-56 h-56 mx-auto mb-8 rounded-full overflow-hidden shadow-xl">
             <Image
-              src="/images/moabdel-broker-headshot.jpeg"
+              src="/images/moabdel-broker-headshot.jpeg?v=2"
               alt="Mo Abdel - Orange County Mortgage Broker"
               fill
               className="object-cover object-top"
               sizes="(max-width: 768px) 224px, 224px"
               priority
               quality={100}
+              unoptimized
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">

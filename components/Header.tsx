@@ -90,8 +90,8 @@ export default function Header() {
             <Image 
               src="/images/mo-logo-white.webp" 
               alt="Mo The Broker - Orange County Wholesale Mortgage Broker NMLS 1426884"
-              width={600}
-              height={180}
+              width={288}
+              height={86}
               className="h-24 w-auto md:h-36 lg:h-36"
               priority
             />

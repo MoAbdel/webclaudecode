@@ -1,11 +1,11 @@
 export const seoData = {
   Home: { 
     title: "Mo Abdel | Wholesale Mortgage Broker Orange County | NMLS #1426884", 
-    description: "Looking for competitive wholesale mortgage rates in Orange County? Mo Abdel offers personalized home loan solutions with expert wholesale mortgage guidance. Get pre-approved today!" 
+    description: "Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs. Expert guidance on FHA, VA, jumbo loans, and HELOC options." 
   },
   About: { 
-    title: "About Mo The Broker | NEXA Wholesale Mortgage Broker in California", 
-    description: "Meet Mo The Broker – licensed wholesale mortgage broker helping clients in CA, WA, VA & CO get better rates, faster approvals, and more loan options." 
+    title: "About Mo The Broker | NEXA Wholesale Mortgage Broker", 
+    description: "Meet Mo The Broker – licensed wholesale mortgage broker helping clients in CA, WA, VA & CO get better rates, faster approvals, and more loan options. Specializing in Orange County home loans with access to 200+ lenders." 
   },
   Programs: { 
     title: "Loan Programs | FHA, VA, Jumbo & HELOC – Orange County Mortgage Broker", 

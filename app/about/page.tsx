@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
-import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: seoData.About.title,
@@ -16,15 +15,12 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <div className="relative w-56 h-56 mx-auto mb-8 rounded-full overflow-hidden shadow-xl">
-            <Image
+          <div className="w-56 h-56 mx-auto mb-8 rounded-full overflow-hidden shadow-xl">
+            <img
               src="/images/mo-professional-headshot.jpeg"
               alt="Mo Abdel - Orange County Mortgage Broker"
-              fill
-              className="object-cover object-center"
-              sizes="(max-width: 768px) 224px, 224px"
-              priority
-              quality={100}
+              className="w-full h-full object-cover object-center"
+              loading="eager"
             />
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">

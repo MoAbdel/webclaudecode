@@ -14,28 +14,24 @@ const dataSourceCategories = [
     sources: [
       {
         name: "Redfin - Orange County Market Data",
-        url: "https://www.redfin.com/county/332/CA/Orange-County/housing-market",
         description: "Median sale price, homes sold, inventory levels",
         updateFrequency: "Weekly",
         badge: "Primary Source"
       },
       {
         name: "Realtor.com - Orange County Stats",
-        url: "https://www.realtor.com/realestateandhomes-search/Orange-County_CA/overview",
         description: "Median listing price, days on market, price trends",
         updateFrequency: "Monthly",
         badge: "Detailed"
       },
       {
         name: "California Association of Realtors",
-        url: "https://www.car.org/marketdata/data/countysalesactivity",
         description: "Official CA market reports, county-level data",
         updateFrequency: "Monthly",
         badge: "Official"
       },
       {
         name: "Zillow - Orange County Home Values",
-        url: "https://www.zillow.com/orange-county-ca/home-values/",
         description: "Zillow Home Value Index, forecast data",
         updateFrequency: "Monthly",
         badge: "Forecasts"
@@ -48,28 +44,24 @@ const dataSourceCategories = [
     sources: [
       {
         name: "Mortgage News Daily",
-        url: "https://www.mortgagenewsdaily.com/mortgage-rates",
         description: "Daily mortgage rates, market commentary",
         updateFrequency: "Daily",
         badge: "Industry Standard"
       },
       {
         name: "Freddie Mac PMMS",
-        url: "https://www.freddiemac.com/pmms",
         description: "Primary Mortgage Market Survey - official rates",
         updateFrequency: "Weekly (Thursday)",
         badge: "Official"
       },
       {
         name: "FRED - Mortgage Rates",
-        url: "https://fred.stlouisfed.org/series/MORTGAGE30US",
         description: "30-year fixed mortgage average",
         updateFrequency: "Weekly",
         badge: "Fed Data"
       },
       {
         name: "Bankrate - Mortgage Rates",
-        url: "https://www.bankrate.com/mortgages/current-interest-rates/",
         description: "National average rates, rate trends",
         updateFrequency: "Daily",
         badge: "Consumer"
@@ -82,28 +74,24 @@ const dataSourceCategories = [
     sources: [
       {
         name: "FRED - Fed Funds Rate",
-        url: "https://fred.stlouisfed.org/series/DFF",
         description: "Federal Reserve interest rate",
         updateFrequency: "Daily",
         badge: "Fed Data"
       },
       {
         name: "MBA Weekly Applications Survey",
-        url: "https://www.mba.org/news-and-research/newsroom/news",
         description: "Mortgage application volume, refinance index",
         updateFrequency: "Weekly (Wednesday)",
         badge: "Industry"
       },
       {
         name: "US Treasury Rates",
-        url: "https://www.treasury.gov/resource-center/data-chart-center/interest-rates/pages/textview.aspx?data=yield",
         description: "10-year treasury yield (mortgage rate indicator)",
         updateFrequency: "Daily",
         badge: "Treasury"
       },
       {
         name: "BLS - CPI Inflation Data",
-        url: "https://www.bls.gov/cpi/",
         description: "Consumer Price Index - affects Fed policy",
         updateFrequency: "Monthly",
         badge: "Official"
@@ -116,28 +104,24 @@ const dataSourceCategories = [
     sources: [
       {
         name: "NAR Housing Statistics",
-        url: "https://www.nar.realtor/research-and-statistics/housing-statistics",
         description: "National Association of Realtors reports",
         updateFrequency: "Monthly",
         badge: "NAR"
       },
       {
         name: "Census - New Home Sales",
-        url: "https://www.census.gov/construction/nrs/index.html",
         description: "New residential sales data",
         updateFrequency: "Monthly",
         badge: "Gov"
       },
       {
         name: "FHFA House Price Index",
-        url: "https://www.fhfa.gov/DataTools/Downloads/Pages/House-Price-Index.aspx",
         description: "Federal housing price index by region",
         updateFrequency: "Quarterly",
         badge: "Official"
       },
       {
         name: "CoreLogic Home Price Insights",
-        url: "https://www.corelogic.com/intelligence/u-s-home-price-insights/",
         description: "Home price index and forecasts",
         updateFrequency: "Monthly",
         badge: "Analytics"
@@ -311,15 +295,9 @@ export default function WeeklyUpdatePage() {
                         <span className="text-xs text-slate-500">
                           Updates: {source.updateFrequency}
                         </span>
-                        <a 
-                          href={source.url} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm font-medium"
-                        >
-                          Open Source
-                          <ExternalLink className="w-3 h-3 ml-1" />
-                        </a>
+                        <span className="text-xs text-slate-400 italic">
+                          Data source reference
+                        </span>
                       </div>
                     </div>
                   ))}

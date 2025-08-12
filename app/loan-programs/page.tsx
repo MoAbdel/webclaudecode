@@ -103,13 +103,13 @@ export default function ProgramsPage() {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold text-slate-900">HELOC (Home Equity Line of Credit)</h3>
-                  <p className="text-slate-700">Flexible credit line up to $2M+</p>
+                  <p className="text-slate-700">Flexible credit line up to $500K</p>
                 </div>
               </div>
 
               <div className="bg-blue-200 rounded-lg p-4 mb-6">
                 <p className="text-blue-900 font-bold text-center text-lg">
-                  Access $50K - $2M+ • Prime + 0% intro rates available
+                  Access $50K - $500K • Prime + 0% intro rates available
                 </p>
               </div>
 

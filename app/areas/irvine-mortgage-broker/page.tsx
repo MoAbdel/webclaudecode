@@ -49,7 +49,7 @@ export default function IrvineMortgageBrokerPage() {
     {
       title: 'HELOC for Irvine Homes',
       description: 'Access your home equity for renovations, education, or investment',
-      benefits: ['Up to $2M+ credit lines', 'Prime + 0% intro rates', 'No closing costs available'],
+      benefits: ['Up to $500K credit lines', 'Prime + 0% intro rates', 'No closing costs available'],
       icon: <TrendingUp className="w-8 h-8 text-blue-600" />
     },
     {

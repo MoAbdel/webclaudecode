@@ -255,7 +255,7 @@ export default function RefinanceCalculator() {
               <div className="flex justify-between items-center">
                 <span className="text-slate-600">Monthly Savings:</span>
                 <span className={`font-semibold text-lg ${results.monthlySavings >= 0 ? 'text-green-600' : 'text-red-500'}`}>
-                  ${results.monthlySavings >= 0 ? '+' : ''}${Math.abs(results.monthlySavings).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}
+                  {results.monthlySavings >= 0 ? '+' : ''}${Math.abs(results.monthlySavings).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}
                 </span>
               </div>
               
@@ -294,7 +294,7 @@ export default function RefinanceCalculator() {
               <div className="flex justify-between items-center border-t pt-2">
                 <span className="text-slate-600 font-medium">Interest Savings:</span>
                 <span className={`font-bold text-lg ${results.totalInterestSavings >= 0 ? 'text-green-600' : 'text-red-500'}`}>
-                  ${results.totalInterestSavings >= 0 ? '+' : ''}${Math.abs(results.totalInterestSavings).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}
+                  {results.totalInterestSavings >= 0 ? '+' : ''}${Math.abs(results.totalInterestSavings).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}
                 </span>
               </div>
             </CardContent>

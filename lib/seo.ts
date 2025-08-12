@@ -67,7 +67,7 @@ export const structuredData = {
   "url": "https://mothebroker.com",
   "priceRange": "$$",
   "description": "Licensed wholesale mortgage broker serving Orange County, CA and beyond, providing access to over 200 lenders for competitive wholesale mortgage rates on home loans and refinancing. NMLS #1426884.",
-  "image": "/images/mo-headshot-latest.webp",
+  "image": "/images/moabdel-headshot-final.png",
   "openingHours": "Mo-Su 08:00-20:00",
   "paymentAccepted": ["Cash", "Check", "Wire Transfer"],
   "currenciesAccepted": "USD"

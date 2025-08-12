@@ -1,14 +1,16 @@
-# Modern browsers that support ES2020+
-# This reduces polyfills and bundle size significantly
+# Ultra-modern browsers only - ES2022+ support
+# Eliminates all polyfills for maximum performance
 
->= 0.5%
-last 2 major versions
+# Only very modern browsers that support all ES2022 features
+Chrome >= 94
+Firefox >= 93
+Safari >= 15.4
+Edge >= 94
+
+# Exclude all legacy browsers completely
 not dead
-not IE 11
+not IE > 0
 not op_mini all
-
-# Target modern browsers specifically
-Chrome >= 87
-Firefox >= 78
-Safari >= 14
-Edge >= 88
+not and_chr < 94
+not and_ff < 93
+not ios_saf < 15.4

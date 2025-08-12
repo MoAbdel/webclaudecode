@@ -24,13 +24,31 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   
-  // Webpack optimizations
+  // Webpack optimizations for ultra-modern browsers
   webpack: (config, { dev, isServer }) => {
-    // Optimize for production builds
     if (!dev && !isServer) {
+      // Target ES2022 to eliminate all polyfills
+      config.target = ['web', 'es2022'];
+      
       config.optimization = {
         ...config.optimization,
         sideEffects: false,
+        providedExports: true,
+        usedExports: true,
+        concatenateModules: true,
+      };
+      
+      // Remove any polyfills
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        crypto: false,
+        stream: false,
+        assert: false,
+        http: false,
+        https: false,
+        os: false,
+        url: false,
+        zlib: false,
       };
     }
     

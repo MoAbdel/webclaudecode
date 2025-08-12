@@ -248,7 +248,7 @@ export default function Header() {
               <a href="tel:(949) 579-2057" className="block px-3 py-2 text-blue-600 font-medium">
                 (949) 579-2057
               </a>
-              <Link href="/contact" className="block px-3 py-2">
+              <Link href="/contact" className="block px-3 py-2" onClick={() => setMobileMenuOpen(false)}>
                 <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl">
                   Get Quote
                 </Button>

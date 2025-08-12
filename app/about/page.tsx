@@ -16,12 +16,13 @@ export default function AboutPage() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
-          <div className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-lg">
+          <div className="relative w-56 h-56 mx-auto mb-8 rounded-full overflow-hidden shadow-xl">
             <Image
               src="/images/moabdel-headshot-final.jpeg"
               alt="Mo Abdel - Orange County Mortgage Broker"
               fill
-              className="object-cover scale-110"
+              className="object-cover object-center"
+              sizes="(max-width: 768px) 224px, 224px"
               priority
             />
           </div>

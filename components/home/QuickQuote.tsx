@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/Select";
 import { Calculator, ArrowRight, Shield } from "lucide-react";
-import { RateQuote } from "@/lib/entities";
 
 export default function QuickQuote() {
   const [formData, setFormData] = useState({
@@ -20,18 +19,29 @@ export default function QuickQuote() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
     try {
-      await RateQuote.create({
-        ...formData,
-        loan_amount: parseFloat(formData.loan_amount),
-        property_value: parseFloat(formData.loan_amount) * 1.25, // Estimate
-        status: "new"
+      const response = await fetch('/api/quotes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...formData,
+          loan_amount: parseFloat(formData.loan_amount),
+          property_value: parseFloat(formData.loan_amount) * 1.25, // Estimate
+          status: "new"
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit quote');
+      }
       setShowSuccess(true);
       setFormData({
         full_name: "",
@@ -43,6 +53,8 @@ export default function QuickQuote() {
       });
     } catch (error) {
       console.error("Error submitting quote request:", error);
+      setShowError(true);
+      setTimeout(() => setShowError(false), 5000); // Hide error after 5 seconds
     }
     
     setIsSubmitting(false);
@@ -64,9 +76,10 @@ export default function QuickQuote() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Quote Request Received!</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You for Your Inquiry!</h3>
               <p className="text-slate-600 mb-6">
-                Thank you for your interest! We&apos;ll review your information and contact you within 1 business hour with your personalized rate quote.
+                We received your information and will be reaching out within 1 business day with your personalized rate quote. 
+                Mo will personally review your details to ensure you get the best possible terms.
               </p>
               <Button 
                 onClick={() => setShowSuccess(false)}
@@ -102,6 +115,13 @@ export default function QuickQuote() {
           </CardHeader>
           
           <CardContent className="p-8">
+            {showError && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-600 text-sm">
+                  There was an error submitting your request. Please try again or call us directly at (949) 579-2057.
+                </p>
+              </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">

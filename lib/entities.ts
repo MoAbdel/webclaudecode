@@ -46,8 +46,20 @@ interface MarketInsightData {
   created_at?: string;
 }
 
+interface NewsletterSubscriptionData {
+  id?: string;
+  email: string;
+  firstName: string;
+  subscribedAt: string;
+  source: string;
+  isActive?: boolean;
+  unsubscribedAt?: string;
+  created_at?: string;
+}
+
 // Mock data storage (in production, this would be a database)
 let rateQuotes: RateQuoteData[] = [];
+let newsletterSubscriptions: NewsletterSubscriptionData[] = [];
 let mortgageRates: MortgageRateData[] = [
   {
     id: '1',
@@ -257,6 +269,78 @@ export class MarketInsight {
     if (index === -1) return false;
     
     marketInsights.splice(index, 1);
+    return true;
+  }
+}
+
+export class NewsletterSubscription {
+  static async create(data: Omit<NewsletterSubscriptionData, 'id' | 'created_at'>): Promise<NewsletterSubscriptionData> {
+    // Check for duplicate email
+    const existingSubscription = newsletterSubscriptions.find(sub => 
+      sub.email.toLowerCase() === data.email.toLowerCase() && sub.isActive
+    );
+    
+    if (existingSubscription) {
+      throw new Error('Email already subscribed');
+    }
+
+    const newSubscription: NewsletterSubscriptionData = {
+      ...data,
+      id: Math.random().toString(36).substr(2, 9),
+      created_at: new Date().toISOString(),
+      isActive: data.isActive ?? true
+    };
+    
+    newsletterSubscriptions.push(newSubscription);
+    
+    // Simulate API delay
+    await new Promise(resolve => setTimeout(resolve, 500));
+    return newSubscription;
+  }
+
+  static async list(orderBy?: string): Promise<NewsletterSubscriptionData[]> {
+    await new Promise(resolve => setTimeout(resolve, 200));
+    return [...newsletterSubscriptions].sort((a, b) => {
+      if (orderBy === '-created_at') {
+        return new Date(b.created_at!).getTime() - new Date(a.created_at!).getTime();
+      }
+      if (orderBy === 'email') {
+        return a.email.localeCompare(b.email);
+      }
+      return 0;
+    });
+  }
+
+  static async findByEmail(email: string): Promise<NewsletterSubscriptionData | null> {
+    await new Promise(resolve => setTimeout(resolve, 200));
+    const subscription = newsletterSubscriptions.find(sub => 
+      sub.email.toLowerCase() === email.toLowerCase()
+    );
+    return subscription || null;
+  }
+
+  static async unsubscribe(email: string): Promise<boolean> {
+    await new Promise(resolve => setTimeout(resolve, 300));
+    const index = newsletterSubscriptions.findIndex(sub => 
+      sub.email.toLowerCase() === email.toLowerCase()
+    );
+    
+    if (index === -1) return false;
+    
+    newsletterSubscriptions[index] = { 
+      ...newsletterSubscriptions[index], 
+      isActive: false,
+      unsubscribedAt: new Date().toISOString()
+    };
+    return true;
+  }
+
+  static async delete(id: string): Promise<boolean> {
+    await new Promise(resolve => setTimeout(resolve, 200));
+    const index = newsletterSubscriptions.findIndex(sub => sub.id === id);
+    if (index === -1) return false;
+    
+    newsletterSubscriptions.splice(index, 1);
     return true;
   }
 }

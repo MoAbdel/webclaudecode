@@ -1,50 +1,59 @@
-import React from "react";
+'use client';
+
+import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TrendingDown, TrendingUp, Home, Building, Users, Calculator } from "lucide-react";
 import Link from "next/link";
 
-const rateData = [
+const defaultRateData = [
   {
     loanType: "30-Year Fixed Conventional",
-    rate: "6.875%",
-    apr: "6.920%",
+    rate: "6.57%",
+    apr: "APR may vary",
     trend: "down",
-    change: "-0.125%",
+    change: "-0.305%",
     icon: Home,
     description: "Perfect for stable payments over 30 years"
   },
   {
     loanType: "15-Year Fixed Conventional",
-    rate: "6.250%",
-    apr: "6.290%",
+    rate: "5.93%",
+    apr: "APR may vary",
     trend: "down",
-    change: "-0.100%",
+    change: "-0.32%",
     icon: TrendingDown,
     description: "Build equity faster with higher payments"
   },
   {
     loanType: "FHA 30-Year Fixed",
-    rate: "6.500%",
-    apr: "6.750%",
-    trend: "stable",
-    change: "0.000%",
+    rate: "6.15%",
+    apr: "APR may vary",
+    trend: "down",
+    change: "-0.35%",
     icon: Users,
     description: "Low down payment option for first-time buyers"
   },
   {
     loanType: "Jumbo 30-Year Fixed",
-    rate: "7.125%",
-    apr: "7.150%",
-    trend: "up",
-    change: "+0.050%",
+    rate: "6.70%",
+    apr: "APR may vary",
+    trend: "down",
+    change: "-0.20%",
     icon: Building,
-    description: "For loan amounts above $766,550 in Orange County"
+    description: "For loan amounts above conventional limits"
   }
 ];
 
 export default function RateDisplay() {
+  const [rateData, setRateData] = useState(defaultRateData);
+  const [loading, setLoading] = useState(true);
+
+  // Use hardcoded rates only
+  useEffect(() => {
+    setLoading(false);
+  }, []);
   return (
     <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +62,7 @@ export default function RateDisplay() {
             Current Orange County Mortgage Rates
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Compare today&apos;s rates across different loan programs. All rates updated daily and subject to qualification.
+            Compare today&apos;s rates across different loan programs. All rates updated weekly and subject to qualification.
           </p>
           <Badge className="mt-4 bg-blue-100 text-blue-800 px-3 py-1">
             Last Updated: {new Date().toLocaleDateString()}
@@ -77,7 +86,7 @@ export default function RateDisplay() {
                   
                   <div className="text-right">
                     <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent animate-pulse">{loan.rate}</div>
-                    <div className="text-sm text-slate-600">APR {loan.apr}</div>
+                    <div className="text-sm text-slate-600">APR may vary</div>
                   </div>
                 </div>
               </CardHeader>
@@ -116,7 +125,8 @@ export default function RateDisplay() {
         <div className="text-center">
           <p className="text-sm text-slate-500 mb-6">
             *Rates shown are for qualified borrowers and subject to change without notice. 
-            Actual rates may vary based on credit score, loan-to-value ratio, and other factors.
+            APR (Annual Percentage Rate) may vary based on loan amount, credit score, loan-to-value ratio, 
+            property type, loan purpose, and other factors. Contact us for personalized rate quotes and APR calculations.
           </p>
           
           <Link href="/calculator">

@@ -68,22 +68,137 @@ export default function ProgramsPage() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
-            Mortgage Loan Programs
+            Mortgage <span className="text-blue-600">Loan Programs</span> – FHA, VA, Jumbo & More
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            With access to over 200 wholesale lenders, I can find the perfect loan program 
-            for your unique situation and financial goals.
+            As a licensed broker with NEXA Mortgage - the nation's largest wholesale brokerage - 
+            I have access to over 200 lenders offering competitive rates and flexible programs 
+            for every Orange County homeowner and buyer.
           </p>
         </div>
 
-        {/* Refinancing Programs - Prominent Call-out Boxes */}
+        {/* HELOC/HELOAN - Top Priority */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              <span className="text-blue-600">HELOC & Cash-Out Refinance Options</span>
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Unlock your Orange County home's equity with flexible credit lines and loans
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {/* HELOC */}
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-2 border-blue-300 relative">
+              <div className="absolute -top-4 left-6">
+                <span className="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  #1 MOST POPULAR
+                </span>
+              </div>
+              
+              <div className="flex items-center mb-6 mt-4">
+                <div className="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mr-4">
+                  <TrendingUp className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900">HELOC (Home Equity Line of Credit)</h3>
+                  <p className="text-slate-700">Flexible credit line up to $2M+</p>
+                </div>
+              </div>
+
+              <div className="bg-blue-200 rounded-lg p-4 mb-6">
+                <p className="text-blue-900 font-bold text-center text-lg">
+                  Access $50K - $2M+ • Prime + 0% intro rates available
+                </p>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center">
+                  <span className="text-blue-600 mr-3 text-xl">✓</span>
+                  <span className="text-slate-700"><strong>Draw as needed</strong> - only pay interest on what you use</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-blue-600 mr-3 text-xl">✓</span>
+                  <span className="text-slate-700"><strong>Interest-only payments</strong> for first 10 years</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-blue-600 mr-3 text-xl">✓</span>
+                  <span className="text-slate-700"><strong>Tax-deductible interest</strong> on home improvements*</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-blue-600 mr-3 text-xl">✓</span>
+                  <span className="text-slate-700"><strong>No closing costs</strong> on most programs</span>
+                </div>
+              </div>
+              
+              <Link href="/programs/heloc">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold">
+                  Get HELOC Details & Rates
+                </Button>
+              </Link>
+            </div>
+
+            {/* HELOAN */}
+            <div className="bg-gradient-to-br from-green-50 to-green-100 rounded-2xl p-8 border-2 border-green-300 relative">
+              <div className="absolute -top-4 left-6">
+                <span className="bg-green-600 text-white px-4 py-2 rounded-full text-sm font-bold">
+                  FIXED PAYMENT
+                </span>
+              </div>
+              
+              <div className="flex items-center mb-6 mt-4">
+                <div className="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mr-4">
+                  <DollarSign className="w-8 h-8 text-white" />
+                </div>
+                <div>
+                  <h3 className="text-2xl font-bold text-slate-900">HELOAN (Home Equity Loan)</h3>
+                  <p className="text-slate-700">Fixed rate lump sum loan</p>
+                </div>
+              </div>
+
+              <div className="bg-green-200 rounded-lg p-4 mb-6">
+                <p className="text-green-900 font-bold text-center text-lg">
+                  Lump sum up to $500K • Fixed rates from 7.25%*
+                </p>
+              </div>
+
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center">
+                  <span className="text-green-600 mr-3 text-xl">✓</span>
+                  <span className="text-slate-700"><strong>Fixed interest rate</strong> - payment never changes</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-green-600 mr-3 text-xl">✓</span>
+                  <span className="text-slate-700"><strong>Lump sum at closing</strong> - get all cash upfront</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-green-600 mr-3 text-xl">✓</span>
+                  <span className="text-slate-700"><strong>Predictable payments</strong> - budget with confidence</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="text-green-600 mr-3 text-xl">✓</span>
+                  <span className="text-slate-700"><strong>Lower rates</strong> than personal loans or credit cards</span>
+                </div>
+              </div>
+              
+              <Link href="/programs/heloan">
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg font-semibold">
+                  Get HELOAN Rates & Terms
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Refinancing Programs */}
         <div className="mb-16">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
               Refinancing Options
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Already own a home? Unlock your home's potential with our specialized refinancing programs.
+              Already have a mortgage? Optimize it with our specialized refinancing programs.
             </p>
           </div>
 
@@ -235,28 +350,123 @@ export default function ProgramsPage() {
           ))}
         </div>
 
-        {/* Additional Programs */}
-        <div className="bg-slate-50 rounded-lg p-8 mb-16">
-          <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">
-            Additional Specialty Programs
+        {/* Non-QM & Specialty Programs */}
+        <div className="bg-slate-50 rounded-xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-slate-900 mb-2 text-center">
+            Non-QM & Specialty Programs
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg text-center">
-              <h3 className="font-semibold text-slate-900 mb-2">USDA Rural</h3>
-              <p className="text-sm text-slate-600">Zero down payment for eligible rural areas</p>
+          <p className="text-slate-600 text-center mb-8">
+            Alternative financing solutions for unique situations and non-traditional borrowers
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
+              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">📊</span>
+              </div>
+              <h3 className="font-bold text-slate-900 mb-2 text-lg">Bank Statement Loans</h3>
+              <p className="text-sm text-slate-600 mb-3">Perfect for self-employed borrowers who can't document traditional income</p>
+              <div className="text-xs text-slate-500">
+                • 12-24 month bank statements<br/>
+                • Up to $3M loan amounts<br/>
+                • Investment properties OK
+              </div>
+              <Link href="/programs/non-qm-bank-statement" className="text-blue-600 text-sm font-medium hover:underline">
+                Learn More →
+              </Link>
             </div>
-            <div className="bg-white p-6 rounded-lg text-center">
-              <h3 className="font-semibold text-slate-900 mb-2">Bank Statement</h3>
-              <p className="text-sm text-slate-600">For self-employed borrowers</p>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">💼</span>
+              </div>
+              <h3 className="font-bold text-slate-900 mb-2 text-lg">Asset Depletion</h3>
+              <p className="text-sm text-slate-600 mb-3">Qualify using your assets instead of traditional income</p>
+              <div className="text-xs text-slate-500">
+                • Retirement accounts<br/>
+                • Investment portfolios<br/>
+                • High net worth borrowers
+              </div>
+              <Link href="/programs/non-qm-asset-depletion" className="text-blue-600 text-sm font-medium hover:underline">
+                Learn More →
+              </Link>
             </div>
-            <div className="bg-white p-6 rounded-lg text-center">
-              <h3 className="font-semibold text-slate-900 mb-2">Asset Depletion</h3>
-              <p className="text-sm text-slate-600">Qualify using assets instead of income</p>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
+              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">🏗️</span>
+              </div>
+              <h3 className="font-bold text-slate-900 mb-2 text-lg">Fix & Flip Loans</h3>
+              <p className="text-sm text-slate-600 mb-3">Short-term financing for real estate investors and flippers</p>
+              <div className="text-xs text-slate-500">
+                • 6-24 month terms<br/>
+                • Quick closings (7-10 days)<br/>
+                • Up to 90% ARV
+              </div>
+              <Link href="/programs/fix-flip-loans" className="text-blue-600 text-sm font-medium hover:underline">
+                Learn More →
+              </Link>
             </div>
-            <div className="bg-white p-6 rounded-lg text-center">
-              <h3 className="font-semibold text-slate-900 mb-2">Fix & Flip</h3>
-              <p className="text-sm text-slate-600">Short-term loans for investors</p>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">🎯</span>
+              </div>
+              <h3 className="font-bold text-slate-900 mb-2 text-lg">DSCR Investment Loans</h3>
+              <p className="text-sm text-slate-600 mb-3">Qualify based on rental income, not personal income</p>
+              <div className="text-xs text-slate-500">
+                • No income documentation<br/>
+                • Portfolio lenders<br/>
+                • 1.0+ DSCR required
+              </div>
+              <Link href="/programs/dscr-investment-loans" className="text-blue-600 text-sm font-medium hover:underline">
+                Learn More →
+              </Link>
             </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">📈</span>
+              </div>
+              <h3 className="font-bold text-slate-900 mb-2 text-lg">Foreign National Loans</h3>
+              <p className="text-sm text-slate-600 mb-3">Mortgages for non-US citizens investing in US real estate</p>
+              <div className="text-xs text-slate-500">
+                • No US credit required<br/>
+                • 25-40% down payment<br/>
+                • Purchase or refinance
+              </div>
+              <Link href="/programs/foreign-national-loans" className="text-blue-600 text-sm font-medium hover:underline">
+                Learn More →
+              </Link>
+            </div>
+
+            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
+              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-2xl">🌾</span>
+              </div>
+              <h3 className="font-bold text-slate-900 mb-2 text-lg">USDA Rural Loans</h3>
+              <p className="text-sm text-slate-600 mb-3">Zero down payment for eligible rural and suburban areas</p>
+              <div className="text-xs text-slate-500">
+                • 0% down payment<br/>
+                • Income limits apply<br/>
+                • Rural area requirement
+              </div>
+              <Link href="/programs/usda-rural-loans" className="text-blue-600 text-sm font-medium hover:underline">
+                Learn More →
+              </Link>
+            </div>
+          </div>
+
+          <div className="text-center bg-white rounded-lg p-6">
+            <h3 className="text-xl font-bold text-slate-900 mb-2">Don't See What You Need?</h3>
+            <p className="text-slate-600 mb-4">
+              With access to 200+ wholesale lenders, we have solutions for almost every situation.
+            </p>
+            <Link href="/contact">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2">
+                Discuss Your Unique Situation
+              </Button>
+            </Link>
           </div>
         </div>
 

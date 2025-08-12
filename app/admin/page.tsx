@@ -8,7 +8,8 @@ import { Label } from "@/components/ui/Label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/Select";
 import { Textarea } from "@/components/ui/Textarea";
 import { Badge } from "@/components/ui/Badge";
-import { Settings, Plus, Edit3, Trash2, TrendingUp, TrendingDown, Save } from "lucide-react";
+import { Settings, Plus, Edit3, Trash2, TrendingUp, TrendingDown, Save, RefreshCw, Download, Calendar } from "lucide-react";
+import Link from "next/link";
 import { MortgageRate, MarketInsight, RateQuote } from "@/lib/entities";
 
 export default function AdminPage() {
@@ -20,6 +21,8 @@ export default function AdminPage() {
   const [quotes, setQuotes] = useState<any[]>([]);
   const [editingRate, setEditingRate] = useState<any>(null);
   const [editingInsight, setEditingInsight] = useState<any>(null);
+  const [isScrapingRates, setIsScrapingRates] = useState(false);
+  const [isScrapingInsights, setIsScrapingInsights] = useState(false);
   const [newRate, setNewRate] = useState({
     loan_type: '',
     rate: '',
@@ -100,6 +103,25 @@ RateQuote.list('-created_at')
     }
   };
 
+  const handleUpdateRate = async () => {
+    if (!editingRate) return;
+    try {
+      await MortgageRate.update(editingRate.id, {
+        ...editingRate,
+        rate: parseFloat(editingRate.rate),
+        apr: parseFloat(editingRate.apr),
+        points: parseFloat(editingRate.points || '0'),
+        loan_term: parseInt(editingRate.loan_term),
+        min_credit_score: parseInt(editingRate.min_credit_score),
+        max_ltv: parseFloat(editingRate.max_ltv)
+      });
+      setEditingRate(null);
+      loadData();
+    } catch (error) {
+      console.error('Error updating rate:', error);
+    }
+  };
+
   const handleCreateInsight = async () => {
     try {
       await MarketInsight.create({
@@ -117,6 +139,20 @@ RateQuote.list('-created_at')
       loadData();
     } catch (error) {
       console.error('Error creating insight:', error);
+    }
+  };
+
+  const handleUpdateInsight = async () => {
+    if (!editingInsight) return;
+    try {
+      await MarketInsight.update(editingInsight.id, {
+        ...editingInsight,
+        display_order: parseInt(editingInsight.display_order)
+      });
+      setEditingInsight(null);
+      loadData();
+    } catch (error) {
+      console.error('Error updating insight:', error);
     }
   };
 
@@ -151,6 +187,66 @@ RateQuote.list('-created_at')
       }
     } catch (error) {
       console.error('Error updating quote status:', error);
+    }
+  };
+
+  const scrapeRates = async () => {
+    setIsScrapingRates(true);
+    try {
+      const response = await fetch('/api/scrape/rates');
+      const result = await response.json();
+      
+      if (result.success && result.data) {
+        // Clear existing rates
+        for (const rate of rates) {
+          await MortgageRate.delete(rate.id);
+        }
+        
+        // Add new scraped rates
+        for (const rateData of result.data) {
+          await MortgageRate.create(rateData);
+        }
+        
+        loadData();
+        alert(`Successfully imported ${result.data.length} rates from market data!`);
+      } else {
+        alert('Failed to scrape rates. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error scraping rates:', error);
+      alert('Error scraping rates. Please check your connection.');
+    } finally {
+      setIsScrapingRates(false);
+    }
+  };
+
+  const scrapeInsights = async () => {
+    setIsScrapingInsights(true);
+    try {
+      const response = await fetch('/api/scrape/insights');
+      const result = await response.json();
+      
+      if (result.success && result.data) {
+        // Clear existing insights
+        for (const insight of insights) {
+          await MarketInsight.delete(insight.id);
+        }
+        
+        // Add new scraped insights
+        for (const insightData of result.data) {
+          await MarketInsight.create(insightData);
+        }
+        
+        loadData();
+        alert(`Successfully imported ${result.data.length} market insights!`);
+      } else {
+        alert('Failed to scrape insights. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error scraping insights:', error);
+      alert('Error scraping insights. Please check your connection.');
+    } finally {
+      setIsScrapingInsights(false);
     }
   };
 
@@ -198,14 +294,24 @@ RateQuote.list('-created_at')
     <div className="min-h-screen bg-slate-50 py-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-8">
-          <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 flex items-center justify-center">
-            <Settings className="w-8 h-8 mr-3 text-blue-600" />
-            Admin Dashboard
-          </h1>
-          <p className="text-xl text-slate-600">
-            Manage mortgage rates, market insights, and customer inquiries
-          </p>
+        <div className="mb-8">
+          <div className="flex items-center justify-between">
+            <div className="text-center flex-1">
+              <h1 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4 flex items-center justify-center">
+                <Settings className="w-8 h-8 mr-3 text-blue-600" />
+                Admin Dashboard
+              </h1>
+              <p className="text-xl text-slate-600">
+                Manage mortgage rates, market insights, and customer inquiries
+              </p>
+            </div>
+            <Link href="/admin/weekly-update">
+              <Button className="bg-green-600 hover:bg-green-700 text-white">
+                <Calendar className="w-5 h-5 mr-2" />
+                Weekly Update Hub
+              </Button>
+            </Link>
+          </div>
         </div>
 
         {/* Tab Navigation */}
@@ -249,13 +355,33 @@ RateQuote.list('-created_at')
         {/* Rates Tab */}
         {activeTab === 'rates' && (
           <div className="space-y-8">
-            {/* Add New Rate */}
+            {/* Scraping and Add New Rate */}
             <Card className="shadow-lg border-slate-200">
               <CardHeader className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-t-lg">
-                <CardTitle className="flex items-center text-xl">
-                  <Plus className="w-5 h-5 mr-2" />
-                  Add New Rate
-                </CardTitle>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="flex items-center text-xl">
+                    <Plus className="w-5 h-5 mr-2" />
+                    Manage Rates
+                  </CardTitle>
+                  <Button 
+                    onClick={scrapeRates}
+                    disabled={isScrapingRates}
+                    className="bg-white text-blue-600 hover:bg-blue-50"
+                    size="sm"
+                  >
+                    {isScrapingRates ? (
+                      <>
+                        <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
+                        Scraping...
+                      </>
+                    ) : (
+                      <>
+                        <Download className="w-4 h-4 mr-2" />
+                        Fetch Live Rates
+                      </>
+                    )}
+                  </Button>
+                </div>
               </CardHeader>
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -305,33 +431,68 @@ RateQuote.list('-created_at')
               {rates.map((rate) => (
                 <Card key={rate.id} className="shadow-sm border-slate-200">
                   <CardContent className="p-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <h3 className="font-semibold text-slate-900">{rate.loan_type}</h3>
-                        <div className="flex items-center space-x-4 mt-1 text-sm text-slate-600">
-                          <span>Rate: {rate.rate}%</span>
-                          <span>APR: {rate.apr}%</span>
-                          {rate.is_featured && <Badge className="bg-green-100 text-green-800">Featured</Badge>}
+                    {editingRate?.id === rate.id ? (
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                          <Input
+                            value={editingRate.loan_type}
+                            onChange={(e) => setEditingRate({...editingRate, loan_type: e.target.value})}
+                            placeholder="Loan Type"
+                          />
+                          <Input
+                            type="number"
+                            step="0.125"
+                            value={editingRate.rate}
+                            onChange={(e) => setEditingRate({...editingRate, rate: e.target.value})}
+                            placeholder="Rate"
+                          />
+                          <Input
+                            type="number"
+                            step="0.125"
+                            value={editingRate.apr}
+                            onChange={(e) => setEditingRate({...editingRate, apr: e.target.value})}
+                            placeholder="APR"
+                          />
+                        </div>
+                        <div className="flex gap-2">
+                          <Button onClick={handleUpdateRate} className="bg-green-600 hover:bg-green-700">
+                            <Save className="w-4 h-4 mr-2" />
+                            Save
+                          </Button>
+                          <Button onClick={() => setEditingRate(null)} variant="ghost">
+                            Cancel
+                          </Button>
                         </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => setEditingRate(rate)}
-                        >
-                          <Edit3 className="w-4 h-4" />
-                        </Button>
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => handleDeleteRate(rate.id)}
-                          className="text-red-600 hover:text-red-700"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </Button>
+                    ) : (
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <h3 className="font-semibold text-slate-900">{rate.loan_type}</h3>
+                          <div className="flex items-center space-x-4 mt-1 text-sm text-slate-600">
+                            <span>Rate: {rate.rate}%</span>
+                            <span>APR: {rate.apr}%</span>
+                            {rate.is_featured && <Badge className="bg-green-100 text-green-800">Featured</Badge>}
+                          </div>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => setEditingRate(rate)}
+                          >
+                            <Edit3 className="w-4 h-4" />
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => handleDeleteRate(rate.id)}
+                            className="text-red-600 hover:text-red-700"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </Button>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </CardContent>
                 </Card>
               ))}
@@ -342,13 +503,33 @@ RateQuote.list('-created_at')
         {/* Insights Tab */}
         {activeTab === 'insights' && (
           <div className="space-y-8">
-            {/* Add New Insight */}
+            {/* Scraping and Add New Insight */}
             <Card className="shadow-lg border-slate-200">
               <CardHeader className="bg-gradient-to-r from-green-600 to-green-700 text-white rounded-t-lg">
-                <CardTitle className="flex items-center text-xl">
-                  <Plus className="w-5 h-5 mr-2" />
-                  Add New Market Insight
-                </CardTitle>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="flex items-center text-xl">
+                    <Plus className="w-5 h-5 mr-2" />
+                    Manage Market Insights
+                  </CardTitle>
+                  <Button 
+                    onClick={scrapeInsights}
+                    disabled={isScrapingInsights}
+                    className="bg-white text-green-600 hover:bg-green-50"
+                    size="sm"
+                  >
+                    {isScrapingInsights ? (
+                      <>
+                        <RefreshCw className="w-4 h-4 mr-2 animate-spin" />
+                        Scraping...
+                      </>
+                    ) : (
+                      <>
+                        <Download className="w-4 h-4 mr-2" />
+                        Fetch Market Data
+                      </>
+                    )}
+                  </Button>
+                </div>
               </CardHeader>
               <CardContent className="p-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
@@ -415,40 +596,87 @@ RateQuote.list('-created_at')
               {insights.map((insight) => (
                 <Card key={insight.id} className="shadow-sm border-slate-200">
                   <CardContent className="p-4">
-                    <div className="flex items-center justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center space-x-3">
-                          <h3 className="font-semibold text-slate-900">{insight.metric}</h3>
-                          <span className="text-2xl font-bold text-blue-600">{insight.value}</span>
-                          <div className={`flex items-center space-x-1 text-sm font-medium ${
-                            insight.trend === 'up' ? 'text-green-600' : 
-                            insight.trend === 'down' ? 'text-red-500' : 'text-slate-600'
-                          }`}>
-                            {insight.trend === 'up' && <TrendingUp className="w-4 h-4" />}
-                            {insight.trend === 'down' && <TrendingDown className="w-4 h-4" />}
-                            <span>{insight.change}</span>
-                          </div>
+                    {editingInsight?.id === insight.id ? (
+                      <div className="space-y-4">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                          <Input
+                            value={editingInsight.metric}
+                            onChange={(e) => setEditingInsight({...editingInsight, metric: e.target.value})}
+                            placeholder="Metric Name"
+                          />
+                          <Input
+                            value={editingInsight.value}
+                            onChange={(e) => setEditingInsight({...editingInsight, value: e.target.value})}
+                            placeholder="Value"
+                          />
+                          <Input
+                            value={editingInsight.change}
+                            onChange={(e) => setEditingInsight({...editingInsight, change: e.target.value})}
+                            placeholder="Change"
+                          />
+                          <Select value={editingInsight.trend} onValueChange={(value) => setEditingInsight({...editingInsight, trend: value})}>
+                            <SelectTrigger>
+                              <SelectValue />
+                            </SelectTrigger>
+                            <SelectContent>
+                              <SelectItem value="up">Up</SelectItem>
+                              <SelectItem value="down">Down</SelectItem>
+                              <SelectItem value="stable">Stable</SelectItem>
+                            </SelectContent>
+                          </Select>
                         </div>
-                        <p className="text-sm text-slate-600 mt-1">{insight.description}</p>
+                        <Textarea
+                          value={editingInsight.description}
+                          onChange={(e) => setEditingInsight({...editingInsight, description: e.target.value})}
+                          placeholder="Description"
+                          rows={2}
+                        />
+                        <div className="flex gap-2">
+                          <Button onClick={handleUpdateInsight} className="bg-green-600 hover:bg-green-700">
+                            <Save className="w-4 h-4 mr-2" />
+                            Save
+                          </Button>
+                          <Button onClick={() => setEditingInsight(null)} variant="ghost">
+                            Cancel
+                          </Button>
+                        </div>
                       </div>
-                      <div className="flex items-center space-x-2">
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => setEditingInsight(insight)}
-                        >
-                          <Edit3 className="w-4 h-4" />
-                        </Button>
-                        <Button
-                          size="sm"
-                          variant="ghost"
-                          onClick={() => handleDeleteInsight(insight.id)}
-                          className="text-red-600 hover:text-red-700"
-                        >
-                          <Trash2 className="w-4 h-4" />
-                        </Button>
+                    ) : (
+                      <div className="flex items-center justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center space-x-3">
+                            <h3 className="font-semibold text-slate-900">{insight.metric}</h3>
+                            <span className="text-2xl font-bold text-blue-600">{insight.value}</span>
+                            <div className={`flex items-center space-x-1 text-sm font-medium ${
+                              insight.trend === 'up' ? 'text-green-600' : 
+                              insight.trend === 'down' ? 'text-red-500' : 'text-slate-600'
+                            }`}>
+                              {insight.trend === 'up' && <TrendingUp className="w-4 h-4" />}
+                              {insight.trend === 'down' && <TrendingDown className="w-4 h-4" />}
+                              <span>{insight.change}</span>
+                            </div>
+                          </div>
+                          <p className="text-sm text-slate-600 mt-1">{insight.description}</p>
+                        </div>
+                        <div className="flex items-center space-x-2">
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => setEditingInsight(insight)}
+                          >
+                            <Edit3 className="w-4 h-4" />
+                          </Button>
+                          <Button
+                            size="sm"
+                            variant="ghost"
+                            onClick={() => handleDeleteInsight(insight.id)}
+                            className="text-red-600 hover:text-red-700"
+                          >
+                            <Trash2 className="w-4 h-4" />
+                          </Button>
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </CardContent>
                 </Card>
               ))}

@@ -2,21 +2,21 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { structuredData } from '@/lib/seo';
+import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
 
 export const metadata: Metadata = {
-  title: 'Mo Abdel | Mortgage Broker in Orange County, CA | NMLS #1426884',
-  description: 'Looking for competitive mortgage rates in Orange County? Mo Abdel offers personalized home loan solutions with expert guidance. Get pre-approved today!',
+  title: 'Mo The Broker | Wholesale Mortgage Broker in Orange County, CA',
+  description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
   icons: {
     icon: '/favicon.ico',
   },
   openGraph: {
-    title: 'Mo Abdel | Mortgage Broker in Orange County, CA',
-    description: 'Looking for competitive mortgage rates in Orange County? Mo Abdel offers personalized home loan solutions with expert guidance.',
+    title: 'Mo The Broker | Wholesale Mortgage Broker in Orange County, CA',
+    description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Mo The Broker',
+    siteName: 'Mo The Broker - Wholesale Mortgage',
   },
 };
 
@@ -32,7 +32,12 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(mortgageLoanSchema) }}
+        />
         <meta name="build-timestamp" content={new Date().toISOString()} />
+        <meta name="deployment-id" content="BGDyiFiyb-rollback" />
       </head>
       <body className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <Header />

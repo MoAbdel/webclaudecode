@@ -18,10 +18,10 @@ export default function AboutPage() {
         <div className="text-center mb-12">
           <div className="relative w-48 h-48 mx-auto mb-8 rounded-full overflow-hidden shadow-lg">
             <Image
-              src="/images/mo-headshot.webp"
+              src="/images/mo-headshot-latest.webp"
               alt="Mo Abdel - Orange County Mortgage Broker"
               fill
-              className="object-cover"
+              className="object-cover scale-125"
               priority
             />
           </div>
@@ -64,6 +64,9 @@ export default function AboutPage() {
                 <ul className="space-y-2 text-slate-700">
                   <li>• NMLS #1426884</li>
                   <li>• California Licensed Mortgage Broker</li>
+                  <li>• Washington Licensed Mortgage Broker</li>
+                  <li>• Virginia Licensed Mortgage Broker</li>
+                  <li>• Colorado Licensed Mortgage Broker</li>
                   <li>• Continuing Education Current</li>
                 </ul>
               </div>

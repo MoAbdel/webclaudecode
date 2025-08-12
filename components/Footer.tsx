@@ -21,7 +21,7 @@ export default function Footer() {
               <div className="relative h-32 w-auto">
                 <Image 
                   src="/images/mo-logo-white.webp"
-                  alt="Mo The Broker" 
+                  alt="Mo The Broker - Orange County Wholesale Mortgage Broker" 
                   width={128}
                   height={128}
                   className="filter invert"
@@ -37,7 +37,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-slate-400 mb-4">
-              Your trusted local mortgage broker serving all of Orange County. 
+              Your trusted local wholesale mortgage broker serving all of Orange County. 
               I'm committed to finding you the best rates and loan programs available. NMLS #1426884.
             </p>
           </div>

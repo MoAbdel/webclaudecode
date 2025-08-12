@@ -6,22 +6,33 @@ import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { TrendingUp, Home, DollarSign, Calendar, ArrowRight } from "lucide-react";
 import Link from "next/link";
-import { MarketInsight } from "@/lib/entities";
 
 export default function LocalMarketInsights() {
-  const [marketData, setMarketData] = useState<any[]>([]);
+  const [marketData, setMarketData] = useState<any[]>([
+    {
+      metric: "Median Home Price",
+      value: "$1.25M",
+      change: "+3.3%",
+      trend: "up",
+      description: "Orange County median sale price"
+    },
+    {
+      metric: "Days on Market",
+      value: "32 days",
+      change: "+5 days",
+      trend: "up",
+      description: "Homes taking longer to sell"
+    },
+    {
+      metric: "Inventory",
+      value: "2.4 months",
+      change: "+0.3",
+      trend: "up",
+      description: "Supply slightly improving"
+    }
+  ]);
 
-  useEffect(() => {
-    const fetchInsights = async () => {
-      try {
-        const insights = await MarketInsight.list('display_order');
-        setMarketData(insights);
-      } catch (error) {
-        console.error("Failed to fetch market insights:", error);
-      }
-    };
-    fetchInsights();
-  }, []);
+  // Removed useEffect - using only hardcoded data
 
   return (
     <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50 relative overflow-hidden">
@@ -42,7 +53,7 @@ export default function LocalMarketInsights() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
           {marketData.map((data, index) => (
             <Card key={index} className="card-hover shadow-base44 border-slate-200 transform hover:scale-105 transition-all duration-300 fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
               <CardContent className="p-6 text-center">
@@ -143,7 +154,7 @@ export default function LocalMarketInsights() {
             Market data updated periodically. Sources may include: MLS, Orange County Association of Realtors, CoreLogic
           </p>
           
-          <Link href="/programs">
+          <Link href="/loan-programs">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
               Explore Loan Programs
               <ArrowRight className="w-5 h-5 ml-2" />

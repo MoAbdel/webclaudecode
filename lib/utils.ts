@@ -7,5 +7,6 @@ export function cn(...inputs: ClassValue[]) {
 
 export function createPageUrl(page: string): string {
   if (page === 'Home') return '/';
+  if (page === 'Programs') return '/loan-programs';
   return `/${page.toLowerCase()}`;
 }

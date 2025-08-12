@@ -1,6 +1,8 @@
 import React from "react";
+import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
+import { Button } from "@/components/ui/Button";
 import { GitCompareArrows, Zap, Shield, Star, Award, TrendingUp } from "lucide-react";
 
 const features = [
@@ -49,7 +51,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-12">
           <Badge className="bg-blue-100 text-blue-800 mb-4">The Mortgage Hacker Advantage</Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Why I&apos;m Different Than a Bank
+            Why Choose a Wholesale Mortgage Broker?
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Unlike big banks with a one-size-fits-all approach, I leverage technology and a vast lender network
@@ -72,6 +74,48 @@ export default function WhyChooseUs() {
               </CardContent>
             </Card>
           ))}
+        </div>
+
+        {/* Internal Linking to Service Pages */}
+        <div className="text-center mt-12">
+          <h3 className="text-2xl font-bold text-slate-900 mb-6">Popular Orange County Loan Programs</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/fha-loans-orange-county" className="inline-block">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+                FHA Loans in Orange County
+              </Button>
+            </Link>
+            <Link href="/va-loans-orange-county" className="inline-block">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+                VA Loans for Veterans
+              </Button>
+            </Link>
+            <Link href="/heloc-orange-county" className="inline-block">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+                HELOC in Orange County
+              </Button>
+            </Link>
+            <Link href="/conventional-loans-orange-county" className="inline-block">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+                Conventional Loans
+              </Button>
+            </Link>
+            <Link href="/non-qm-loans-orange-county" className="inline-block">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+                Non-QM Loans
+              </Button>
+            </Link>
+            <Link href="/heloan-orange-county" className="inline-block">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+                HELOAN
+              </Button>
+            </Link>
+            <Link href="/rate-term-refinance-orange-county" className="inline-block">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+                Rate & Term Refinance
+              </Button>
+            </Link>
+          </div>
         </div>
 
       </div>

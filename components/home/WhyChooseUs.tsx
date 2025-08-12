@@ -82,37 +82,37 @@ export default function WhyChooseUs() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/fha-loans-orange-county" className="inline-block">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
-                FHA Loans in Orange County
+                Explore FHA Programs
               </Button>
             </Link>
             <Link href="/va-loans-orange-county" className="inline-block">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
-                VA Loans for Veterans
+                VA Benefits & Rates
               </Button>
             </Link>
             <Link href="/heloc-orange-county" className="inline-block">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
-                HELOC in Orange County
+                HELOC Calculator
               </Button>
             </Link>
             <Link href="/conventional-loans-orange-county" className="inline-block">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
-                Conventional Loans
+                Conventional Options
               </Button>
             </Link>
             <Link href="/non-qm-loans-orange-county" className="inline-block">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
-                Non-QM Loans
+                Self-Employed Programs
               </Button>
             </Link>
             <Link href="/heloan-orange-county" className="inline-block">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
-                HELOAN
+                Fixed-Rate HELOAN
               </Button>
             </Link>
             <Link href="/rate-term-refinance-orange-county" className="inline-block">
               <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
-                Rate & Term Refinance
+                Refinance Calculator
               </Button>
             </Link>
           </div>

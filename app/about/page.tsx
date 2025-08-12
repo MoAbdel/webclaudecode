@@ -117,12 +117,12 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
-                Get Free Consultation
+                Start My Application
               </Button>
             </Link>
             <a href="tel:(949) 579-2057">
               <Button variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
-                Call (949) 579-2057
+                Schedule Consultation
               </Button>
             </a>
           </div>

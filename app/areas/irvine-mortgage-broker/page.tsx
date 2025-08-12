@@ -203,7 +203,7 @@ export default function IrvineMortgageBrokerPage() {
                   <TrendingUp className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Wholesale Rates for High-Value Homes</h3>
+                  <div className="text-xl font-bold text-slate-900 mb-2">Wholesale Rates for High-Value Homes</div>
                   <p className="text-slate-600">
                     Access to 200+ lenders through NEXA Mortgage means competitive rates 
                     on Irvine's higher-priced homes and jumbo loan amounts.
@@ -216,7 +216,7 @@ export default function IrvineMortgageBrokerPage() {
                   <GraduationCap className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Education-Focused Lending</h3>
+                  <div className="text-xl font-bold text-slate-900 mb-2">Education-Focused Lending</div>
                   <p className="text-slate-600">
                     Understanding of UCI families and professionals who value education. 
                     HELOC options for private school tuition and college expenses.
@@ -229,7 +229,7 @@ export default function IrvineMortgageBrokerPage() {
                   <Shield className="w-6 h-6 text-purple-600" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 mb-2">Master-Planned Community Expertise</h3>
+                  <div className="text-xl font-bold text-slate-900 mb-2">Master-Planned Community Expertise</div>
                   <p className="text-slate-600">
                     Specialized expertise with Irvine Company properties, HOA requirements, 
                     and the unique aspects of master-planned communities.

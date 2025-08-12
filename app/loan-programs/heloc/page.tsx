@@ -36,7 +36,7 @@ export default function HELOCPage() {
             </Link>
             <a href="tel:(949) 579-2057">
               <Button variant="ghost" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
-                Call (949) 579-2057
+                Call for HELOC Info
               </Button>
             </a>
           </div>
@@ -329,7 +329,7 @@ export default function HELOCPage() {
             </Link>
             <a href="tel:(949) 579-2057">
               <Button variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
-                Call (949) 579-2057
+                Speak with Mo Today
               </Button>
             </a>
           </div>

@@ -36,7 +36,7 @@ export default function VALoansOrangeCountyPage() {
             </Link>
             <a href="tel:(949) 579-2057">
               <Button variant="ghost" className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg">
-                Call (949) 579-2057
+                VA Loan Specialist
               </Button>
             </a>
           </div>
@@ -136,28 +136,28 @@ export default function VALoansOrangeCountyPage() {
               <div className="flex items-start">
                 <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-bold text-slate-900">Active Duty Military</h3>
+                  <div className="font-bold text-slate-900">Active Duty Military</div>
                   <p className="text-slate-600">Currently serving members of Army, Navy, Air Force, Marines, Space Force, or Coast Guard</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-bold text-slate-900">Veterans</h3>
+                  <div className="font-bold text-slate-900">Veterans</div>
                   <p className="text-slate-600">Honorably discharged veterans who served minimum required time</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-bold text-slate-900">National Guard & Reserves</h3>
+                  <div className="font-bold text-slate-900">National Guard & Reserves</div>
                   <p className="text-slate-600">Members with 6+ years of service or activated for federal service</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <CheckCircle className="w-6 h-6 text-green-600 mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h3 className="font-bold text-slate-900">Surviving Spouses</h3>
+                  <div className="font-bold text-slate-900">Surviving Spouses</div>
                   <p className="text-slate-600">Un-remarried surviving spouses of service members who died in service or from service-connected disabilities</p>
                 </div>
               </div>
@@ -351,7 +351,7 @@ export default function VALoansOrangeCountyPage() {
             </Link>
             <a href="tel:(949) 579-2057">
               <Button variant="ghost" className="border-2 border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3 text-lg">
-                Call (949) 579-2057
+                Call VA Expert
               </Button>
             </a>
           </div>

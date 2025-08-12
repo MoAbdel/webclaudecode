@@ -1,6 +1,6 @@
 export const seoData = {
   Home: { 
-    title: "Mo Abdel | Wholesale Mortgage Broker in Orange County, CA | NMLS #1426884", 
+    title: "Mo Abdel | Wholesale Mortgage Broker Orange County | NMLS #1426884", 
     description: "Looking for competitive wholesale mortgage rates in Orange County? Mo Abdel offers personalized home loan solutions with expert wholesale mortgage guidance. Get pre-approved today!" 
   },
   About: { 

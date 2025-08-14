@@ -7,17 +7,19 @@ import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
 
 export const metadata: Metadata = {
-  title: 'Mo The Broker | Wholesale Mortgage Broker in Orange County, CA',
+  title: 'Mo Abdel | Wholesale Mortgage Broker in Orange County, CA',
   description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
   icons: {
-    icon: '/favicon.ico',
+    icon: '/images/moabdel-headshot-final.png',
+    shortcut: '/images/moabdel-headshot-final.png',
+    apple: '/images/moabdel-headshot-final.png',
   },
   openGraph: {
-    title: 'Mo The Broker | Wholesale Mortgage Broker in Orange County, CA',
+    title: 'Mo Abdel | Wholesale Mortgage Broker in Orange County, CA',
     description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Mo The Broker - Wholesale Mortgage',
+    siteName: 'Mo Abdel - Wholesale Mortgage',
   },
 };
 
@@ -42,7 +44,7 @@ export default function RootLayout({
         <meta property="og:title" content="Mo Abdel | Wholesale Mortgage Broker Orange County | NMLS #1426884" />
         <meta property="og:description" content="Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs. Expert guidance on FHA, VA, jumbo loans, and HELOC options." />
         <meta property="og:image" content="https://mothebroker.com/images/moabdel-headshot-final.png" />
-        <meta property="og:site_name" content="Mo The Broker" />
+        <meta property="og:site_name" content="Mo Abdel" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter Card Meta Tags */}

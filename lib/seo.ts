@@ -4,27 +4,27 @@ export const seoData = {
     description: "Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs. Expert guidance on FHA, VA, jumbo loans, and HELOC options." 
   },
   About: { 
-    title: "About Mo The Broker | NEXA Wholesale Mortgage Broker", 
-    description: "Meet Mo The Broker – licensed wholesale mortgage broker helping clients in CA, WA, VA & CO get better rates, faster approvals, and more loan options. Specializing in Orange County home loans with access to 200+ lenders." 
+    title: "About Mo Abdel | NEXA Wholesale Mortgage Broker", 
+    description: "Meet Mo Abdel – licensed wholesale mortgage broker helping clients in CA, WA, VA & CO get better rates, faster approvals, and more loan options. Specializing in Orange County home loans with access to 200+ lenders." 
   },
   Programs: { 
     title: "Loan Programs | FHA, VA, Jumbo & HELOC – Orange County Mortgage Broker", 
-    description: "Explore FHA, VA, Jumbo, and HELOC options. Mo The Broker finds the right mortgage for your goals with wholesale rates & flexible terms." 
+    description: "Explore FHA, VA, Jumbo, and HELOC options. Mo Abdel finds the right mortgage for your goals with wholesale rates & flexible terms." 
   },
   Calculator: { 
     title: "Mortgage Rate Calculator | Compare Loan Options in Orange County", 
     description: "Use our free mortgage rate calculator to estimate your monthly payments, compare loan types, and explore refinancing options." 
   },
   Contact: { 
-    title: "Contact Mo The Broker | Apply for a Home Loan in Orange County", 
-    description: "Start your mortgage application with Mo The Broker. Serving Orange County & beyond with personalized loan solutions and competitive wholesale rates." 
+    title: "Contact Mo Abdel | Apply for a Home Loan in Orange County", 
+    description: "Start your mortgage application with Mo Abdel. Serving Orange County & beyond with personalized loan solutions and competitive wholesale rates." 
   }
 };
 
 export const structuredData = {
   "@context": "https://schema.org",
   "@type": ["FinancialService", "LocalBusiness"],
-  "name": "Mo The Broker - Wholesale Mortgage",
+  "name": "Mo Abdel - Wholesale Mortgage",
   "serviceType": "Wholesale Mortgage Broker",
   "provider": {
     "@type": "Person",
@@ -80,7 +80,7 @@ export const mortgageLoanSchema = {
   "description": "FHA, VA, Conventional, Jumbo, and HELOC loans with wholesale rates in Orange County, CA",
   "provider": {
     "@type": "FinancialService",
-    "name": "Mo The Broker - Wholesale Mortgage",
+    "name": "Mo Abdel - Wholesale Mortgage",
     "serviceType": "Wholesale Mortgage Broker"
   },
   "offers": [

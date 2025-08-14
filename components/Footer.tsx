@@ -21,7 +21,7 @@ export default function Footer() {
               <div className="relative h-32 w-auto">
                 <Image 
                   src="/images/mo-logo-white.webp"
-                  alt="Mo The Broker - Orange County Wholesale Mortgage Broker" 
+                  alt="Mo Abdel - Orange County Wholesale Mortgage Broker NMLS 1426884" 
                   width={128}
                   height={128}
                   className="filter invert"
@@ -67,7 +67,7 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-          <p>&copy; {new Date().getFullYear()} Mo The Broker. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Mo Abdel. All rights reserved.</p>
           <p>NMLS# 1426884</p>
         </div>
       </div>

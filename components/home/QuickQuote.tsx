@@ -8,7 +8,30 @@ import { Label } from "@/components/ui/Label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/Select";
 import { Calculator, ArrowRight, Shield } from "lucide-react";
 
+// Google Ads conversion tracking
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 export default function QuickQuote() {
+  // Google Ads conversion tracking function
+  const gtagSendEvent = (url?: string) => {
+    const callback = function () {
+      if (typeof url === 'string') {
+        window.location.href = url;
+      }
+    };
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'ads_conversion_Contact_Us_1', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+      });
+    }
+    return false;
+  };
+
   const [formData, setFormData] = useState({
     full_name: "",
     email: "",
@@ -42,6 +65,10 @@ export default function QuickQuote() {
       if (!response.ok) {
         throw new Error('Failed to submit quote');
       }
+      
+      // Track Google Ads conversion
+      gtagSendEvent();
+      
       setShowSuccess(true);
       setFormData({
         full_name: "",

@@ -4,7 +4,30 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Shield } from 'lucide-react';
 
+// Google Ads conversion tracking
+declare global {
+  interface Window {
+    gtag: (...args: any[]) => void;
+  }
+}
+
 export default function ContactForm() {
+  // Google Ads conversion tracking function
+  const gtagSendEvent = (url?: string) => {
+    const callback = function () {
+      if (typeof url === 'string') {
+        window.location.href = url;
+      }
+    };
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'ads_conversion_Contact_Us_1', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+      });
+    }
+    return false;
+  };
+
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -45,6 +68,10 @@ export default function ContactForm() {
       if (!response.ok) {
         throw new Error('Failed to submit contact form');
       }
+      
+      // Track Google Ads conversion
+      gtagSendEvent();
+      
       setShowSuccess(true);
       setFormData({
         firstName: '',

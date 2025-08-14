@@ -185,4 +185,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Neighborhood Comparison Guides -->
+  <url>
+    <loc>https://mothebroker.com/areas/irvine-vs-newport-beach-home-buying-guide</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/areas/orange-county-neighborhoods-comparison-guide</loc>
+    <lastmod>2025-08-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

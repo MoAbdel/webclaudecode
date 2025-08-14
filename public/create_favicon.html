@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Favicon</title>
+</head>
+<body>
+    <h2>Favicon Options for Mo Abdel</h2>
+    <p>Since the headshot is too detailed for small sizes, here are better options:</p>
+    
+    <canvas id="canvas" width="64" height="64" style="border: 1px solid #ccc;"></canvas>
+    
+    <script>
+        const canvas = document.getElementById('canvas');
+        const ctx = canvas.getContext('2d');
+        
+        // Option 1: Simple "MA" initials on blue background
+        ctx.fillStyle = '#1e40af'; // Professional blue
+        ctx.fillRect(0, 0, 64, 64);
+        
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 28px Arial';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('MA', 32, 32);
+        
+        // Convert to favicon
+        canvas.toBlob(function(blob) {
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'favicon-ma.png';
+            document.body.appendChild(a);
+            
+            // Create link to show as favicon
+            const link = document.createElement('link');
+            link.type = 'image/png';
+            link.rel = 'icon';
+            link.href = url;
+            document.head.appendChild(link);
+        });
+    </script>
+    
+    <p>Better favicon options:</p>
+    <ol>
+        <li><strong>MA initials</strong> - Clear and professional at all sizes</li>
+        <li><strong>M only</strong> - Even simpler, very bold</li>
+        <li><strong>House icon with M</strong> - Shows it's mortgage-related</li>
+    </ol>
+    
+    <p>The headshot works great for social media (OpenGraph) but not for tiny favicon sizes in search results.</p>
+</body>
+</html>

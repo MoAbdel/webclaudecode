@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Simple Favicon</title>
+</head>
+<body>
+    <h2>Creating Simple MA Favicon</h2>
+    <canvas id="favicon" width="64" height="64" style="border: 1px solid black;"></canvas>
+    <br><br>
+    <button onclick="downloadFavicon()">Download Favicon</button>
+    <br><br>
+    <p>This creates a simple, bold "MA" favicon that will be clearly visible in Google search results at any size.</p>
+    
+    <script>
+        const canvas = document.getElementById('favicon');
+        const ctx = canvas.getContext('2d');
+        
+        // Fill with professional blue background
+        ctx.fillStyle = '#1e40af';
+        ctx.fillRect(0, 0, 64, 64);
+        
+        // Draw white "MA" text
+        ctx.fillStyle = 'white';
+        ctx.font = 'bold 36px Arial, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText('MA', 32, 32);
+        
+        function downloadFavicon() {
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'favicon.png';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+            });
+        }
+        
+        // Also create an ICO version
+        function createICO() {
+            // For now, we'll use the PNG version
+            // You can convert PNG to ICO using online tools or save this as favicon.ico
+        }
+    </script>
+</body>
+</html>

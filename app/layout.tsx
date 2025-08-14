@@ -7,11 +7,11 @@ import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
 
 export const metadata: Metadata = {
-  title: 'Mo Abdel | Wholesale Mortgage Broker in Orange County, CA',
+  title: 'Mo Abdel | Wholesale Mortgage Broker',
   description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
   icons: {
-    icon: '/images/moabdel-headshot-final.png',
-    shortcut: '/images/moabdel-headshot-final.png',
+    icon: '/simple-favicon.svg',
+    shortcut: '/simple-favicon.svg',
     apple: '/images/moabdel-headshot-final.png',
   },
   openGraph: {

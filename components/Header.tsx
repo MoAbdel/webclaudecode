@@ -21,15 +21,17 @@ const loanProgramsDropdown = [
   { title: 'Non-QM Loans', url: '/loan-programs/non-qm-loans' }
 ];
 
-const serviceAreasDropdown = [
-  { title: 'All Service Areas', url: '/areas' },
-  { title: 'Irvine', url: '/areas/irvine-mortgage-broker' },
-  { title: 'Mission Viejo', url: '/areas/mission-viejo-mortgage-broker' },
-  { title: 'Anaheim', url: '/areas/anaheim-mortgage-broker' },
-  { title: 'Newport Beach', url: '/areas/newport-beach-mortgage-broker' },
-  { title: 'Costa Mesa', url: '/areas/costa-mesa-mortgage-broker' },
-  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' },
-  { title: 'Santa Ana', url: '/areas/santa-ana-mortgage-broker' }
+const neighborhoodGuideDropdown = [
+  { title: 'All Neighborhoods', url: '/neighborhood-guide' },
+  { title: 'Irvine vs Newport Beach', url: '/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide' },
+  { title: 'OC Neighborhoods Comparison', url: '/neighborhood-guide/orange-county-neighborhoods-comparison-guide' },
+  { title: 'Irvine', url: '/neighborhood-guide/irvine-mortgage-broker' },
+  { title: 'Newport Beach', url: '/neighborhood-guide/newport-beach-mortgage-broker' },
+  { title: 'Mission Viejo', url: '/neighborhood-guide/mission-viejo-mortgage-broker' },
+  { title: 'Costa Mesa', url: '/neighborhood-guide/costa-mesa-mortgage-broker' },
+  { title: 'Huntington Beach', url: '/neighborhood-guide/huntington-beach-mortgage-broker' },
+  { title: 'Anaheim', url: '/neighborhood-guide/anaheim-mortgage-broker' },
+  { title: 'Santa Ana', url: '/neighborhood-guide/santa-ana-mortgage-broker' }
 ];
 
 const navigationItems = [
@@ -54,12 +56,12 @@ const navigationItems = [
     dropdownItems: loanProgramsDropdown
   },
   {
-    title: 'Service Areas',
-    page: 'Areas',
-    url: createPageUrl('Areas'),
+    title: 'Neighborhood Guide',
+    page: 'NeighborhoodGuide', 
+    url: '/neighborhood-guide',
     icon: Home,
     hasDropdown: true,
-    dropdownItems: serviceAreasDropdown
+    dropdownItems: neighborhoodGuideDropdown
   },
   {
     title: 'About',
@@ -79,7 +81,7 @@ export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
-  const [areasDropdownOpen, setAreasDropdownOpen] = useState(false);
+  const [neighborhoodDropdownOpen, setNeighborhoodDropdownOpen] = useState(false);
 
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
@@ -107,22 +109,22 @@ export default function Header() {
                     onMouseEnter={() => {
                       if (item.page === 'Programs') {
                         setProgramsDropdownOpen(true);
-                      } else if (item.page === 'Areas') {
-                        setAreasDropdownOpen(true);
+                      } else if (item.page === 'NeighborhoodGuide') {
+                        setNeighborhoodDropdownOpen(true);
                       }
                     }}
                     onMouseLeave={() => {
                       if (item.page === 'Programs') {
                         setProgramsDropdownOpen(false);
-                      } else if (item.page === 'Areas') {
-                        setAreasDropdownOpen(false);
+                      } else if (item.page === 'NeighborhoodGuide') {
+                        setNeighborhoodDropdownOpen(false);
                       }
                     }}
                   >
                     <button
                       className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
-                        (item.page === 'Areas' && pathname.startsWith('/areas'))
+                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}
@@ -130,13 +132,13 @@ export default function Header() {
                       {item.title}
                       <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${
                         (item.page === 'Programs' && programsDropdownOpen) ||
-                        (item.page === 'Areas' && areasDropdownOpen) ? 'rotate-180' : ''
+                        (item.page === 'NeighborhoodGuide' && neighborhoodDropdownOpen) ? 'rotate-180' : ''
                       }`} />
                     </button>
                     
                     {/* Dropdown Menu */}
                     {((item.page === 'Programs' && programsDropdownOpen) ||
-                      (item.page === 'Areas' && areasDropdownOpen)) && (
+                      (item.page === 'NeighborhoodGuide' && neighborhoodDropdownOpen)) && (
                       <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           <Link
@@ -207,7 +209,7 @@ export default function Header() {
                       href={item.url}
                       className={`block px-3 py-2 rounded-md text-base font-medium ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
-                        (item.page === 'Areas' && pathname.startsWith('/areas'))
+                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}

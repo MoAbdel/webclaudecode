@@ -17,7 +17,7 @@ const neighborhoods = [
     pricePerSqFt: '$650-$850',
     schoolRating: '9-10/10',
     commuteLA: '45-60 min',
-    crimeRating: 'Very Low',
+    crimeRating: 'Very High',
     familyFriendly: 5,
     nightlife: 2,
     beachAccess: 3,
@@ -31,7 +31,7 @@ const neighborhoods = [
     pricePerSqFt: '$1,200-$2,500',
     schoolRating: '8-9/10',
     commuteLA: '50-70 min',
-    crimeRating: 'Low',
+    crimeRating: 'High',
     familyFriendly: 4,
     nightlife: 4,
     beachAccess: 5,
@@ -45,7 +45,7 @@ const neighborhoods = [
     pricePerSqFt: '$1,100-$2,000',
     schoolRating: '7-8/10',
     commuteLA: '60-75 min',
-    crimeRating: 'Low',
+    crimeRating: 'High',
     familyFriendly: 3,
     nightlife: 3,
     beachAccess: 5,
@@ -59,7 +59,7 @@ const neighborhoods = [
     pricePerSqFt: '$500-$650',
     schoolRating: '8-9/10',
     commuteLA: '50-65 min',
-    crimeRating: 'Very Low',
+    crimeRating: 'Very High',
     familyFriendly: 5,
     nightlife: 2,
     beachAccess: 3,
@@ -73,7 +73,7 @@ const neighborhoods = [
     pricePerSqFt: '$650-$800',
     schoolRating: '6-8/10',
     commuteLA: '45-60 min',
-    crimeRating: 'Very Low',
+    crimeRating: 'Very High',
     familyFriendly: 3,
     nightlife: 4,
     beachAccess: 4,
@@ -87,7 +87,7 @@ const neighborhoods = [
     pricePerSqFt: '$600-$900',
     schoolRating: '7-8/10',
     commuteLA: '45-65 min',
-    crimeRating: 'Very Low',
+    crimeRating: 'Very High',
     familyFriendly: 4,
     nightlife: 4,
     beachAccess: 5,
@@ -234,8 +234,8 @@ export default function OCNeighborhoodsGuide() {
                   <td className="py-3 px-2 text-center text-green-600 font-semibold">{neighborhood.schoolRating}</td>
                   <td className="py-3 px-2 text-center">{neighborhood.commuteLA}</td>
                   <td className="py-3 px-2 text-center">
-                    <Badge className={neighborhood.crimeRating === 'Very Low' ? 'bg-green-100 text-green-600' : 
-                                   neighborhood.crimeRating === 'Low' ? 'bg-yellow-100 text-yellow-600' : 'bg-orange-100 text-orange-600'}>
+                    <Badge className={neighborhood.crimeRating === 'Very High' ? 'bg-green-100 text-green-600' : 
+                                   neighborhood.crimeRating === 'High' ? 'bg-yellow-100 text-yellow-600' : 'bg-orange-100 text-orange-600'}>
                       {neighborhood.crimeRating}
                     </Badge>
                   </td>

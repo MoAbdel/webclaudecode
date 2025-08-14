@@ -10,8 +10,11 @@ export const metadata: Metadata = {
   title: 'Mo Abdel | Wholesale Mortgage Broker',
   description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
   icons: {
-    icon: '/simple-favicon.svg',
-    shortcut: '/simple-favicon.svg',
+    icon: [
+      { url: '/images/moabdel-headshot-final.png', sizes: '32x32', type: 'image/png' },
+      { url: '/images/moabdel-headshot-final.png', sizes: '16x16', type: 'image/png' },
+    ],
+    shortcut: '/images/moabdel-headshot-final.png',
     apple: '/images/moabdel-headshot-final.png',
   },
   openGraph: {

@@ -73,11 +73,11 @@ const neighborhoods = [
     pricePerSqFt: '$650-$800',
     schoolRating: '6-8/10',
     commuteLA: '45-60 min',
-    crimeRating: 'Moderate',
+    crimeRating: 'Very Low',
     familyFriendly: 3,
     nightlife: 4,
     beachAccess: 4,
-    color: 'teal',
+    color: 'blue',
     highlights: ['Urban vibe', 'Arts district', 'Dining scene', 'Central location'],
     bestFor: 'Young professionals and urban lifestyle seekers'
   },
@@ -87,11 +87,11 @@ const neighborhoods = [
     pricePerSqFt: '$600-$900',
     schoolRating: '7-8/10',
     commuteLA: '45-65 min',
-    crimeRating: 'Low',
+    crimeRating: 'Very Low',
     familyFriendly: 4,
     nightlife: 4,
     beachAccess: 5,
-    color: 'cyan',
+    color: 'green',
     highlights: ['Surf City USA', 'Beach lifestyle', 'Family beaches', 'Pier'],
     bestFor: 'Surfers and beach lifestyle enthusiasts'
   }

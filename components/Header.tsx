@@ -46,13 +46,13 @@ const navigationItems = [
     icon: Home,
   },
   {
-    title: 'Rate Calculator',
+    title: 'Calculator',
     page: 'Calculator',
     url: createPageUrl('Calculator'),
     icon: Calculator,
   },
   {
-    title: 'Loan Programs',
+    title: 'Programs',
     page: 'Programs',
     url: createPageUrl('Programs'),
     icon: FileText,
@@ -60,7 +60,7 @@ const navigationItems = [
     dropdownItems: loanProgramsDropdown
   },
   {
-    title: 'Service Areas',
+    title: 'Areas',
     page: 'ServiceAreas',
     url: '/areas',
     icon: Home,
@@ -68,7 +68,7 @@ const navigationItems = [
     dropdownItems: serviceAreasDropdown
   },
   {
-    title: 'Neighborhood Guide',
+    title: 'Guide',
     page: 'NeighborhoodGuide', 
     url: '/neighborhood-guide',
     icon: Home,
@@ -113,7 +113,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-4 lg:space-x-6">
             {navigationItems.map((item) => (
               <div key={item.title} className="relative">
                 {item.hasDropdown ? (
@@ -139,7 +139,7 @@ export default function Header() {
                     }}
                   >
                     <button
-                      className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                      className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
                         (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide'))
@@ -175,7 +175,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.url}
-                    className={`inline-flex items-center px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
+                    className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                       pathname === item.url
                         ? 'text-blue-600 bg-blue-50'
                         : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'

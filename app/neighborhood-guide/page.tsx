@@ -3,77 +3,30 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, TrendingUp, Phone } from 'lucide-react';
+import { MapPin, Home, TrendingUp, Phone, BookOpen, BarChart3 } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Orange County Neighborhood Guide | Home Buying Guide by Area | Local Mortgage Expert',
-  description: 'Complete Orange County neighborhood buying guides: Irvine, Newport Beach, Mission Viejo, Costa Mesa. Home prices, schools, market trends, and mortgage advice by area.',
-  keywords: 'Orange County neighborhood guide, home buying guide OC, Irvine vs Newport Beach, best neighborhoods Orange County'
+  title: 'Orange County Neighborhood Buying Guides | Home Comparison & Market Analysis',
+  description: 'Expert neighborhood buying guides for Orange County home buyers. Compare Irvine vs Newport Beach, analyze market trends, schools, prices and mortgage options by area.',
+  keywords: 'Orange County neighborhood guide, home buying guide OC, Irvine vs Newport Beach comparison, OC market analysis, neighborhood comparison'
 };
 
-const serviceAreas = [
+const comparisonGuides = [
   {
-    city: 'Irvine',
-    description: 'Master-planned community with top schools and family-friendly neighborhoods',
-    medianHome: '$1.2M',
-    slug: 'irvine-mortgage-broker',
-    highlights: ['Great Pacific Elementary', 'Irvine Spectrum', 'UCI proximity', 'Safe neighborhoods']
+    title: 'Irvine vs Newport Beach',
+    description: 'Complete comparison of Orange County\'s top family-friendly city against luxury coastal living',
+    features: ['Home Prices & Market Data', 'School Ratings Comparison', 'Lifestyle & Amenities', 'Mortgage Considerations'],
+    url: '/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide',
+    color: 'blue',
+    highlight: 'Most Popular'
   },
   {
-    city: 'Mission Viejo',
-    description: 'Master-planned city with excellent schools and resort-style amenities',
-    medianHome: '$950K',
-    slug: 'mission-viejo-mortgage-broker',
-    highlights: ['Saddleback Valley', 'Lake Mission Viejo', 'Top schools', 'Family community']
-  },
-  {
-    city: 'Anaheim',
-    description: 'Home to Disneyland with diverse neighborhoods and growing downtown',
-    medianHome: '$750K',
-    slug: 'anaheim-mortgage-broker',
-    highlights: ['Disneyland Resort', 'Angel Stadium', 'Downtown growth', 'Family areas']
-  },
-  {
-    city: 'Newport Beach',
-    description: 'Luxury coastal living with world-class beaches and upscale amenities',
-    medianHome: '$2.8M',
-    slug: 'newport-beach-mortgage-broker', 
-    highlights: ['Balboa Island', 'Fashion Island', 'Harbor views', 'Luxury properties']
-  },
-  {
-    city: 'Costa Mesa',
-    description: 'Arts district with shopping, dining, and convenient freeway access',
-    medianHome: '$950K',
-    slug: 'costa-mesa-mortgage-broker',
-    highlights: ['South Coast Plaza', 'OC Fair', 'Arts scene', 'Central location']
-  },
-  {
-    city: 'Huntington Beach',
-    description: 'Surf City USA with beach lifestyle and family communities',
-    medianHome: '$1.1M',
-    slug: 'huntington-beach-mortgage-broker',
-    highlights: ['Beach proximity', 'Main Street', 'Surf culture', 'Pier area']
-  },
-  {
-    city: 'Laguna Beach',
-    description: 'Artist community with stunning coastal scenery and unique architecture',
-    medianHome: '$2.2M',
-    slug: 'laguna-beach-mortgage-broker',
-    highlights: ['Art galleries', 'Pageant of Masters', 'Coastal views', 'Unique homes']
-  },
-  {
-    city: 'Santa Ana',
-    description: 'Orange County seat with diverse neighborhoods and growing downtown',
-    medianHome: '$650K',
-    slug: 'santa-ana-mortgage-broker',
-    highlights: ['Downtown arts district', 'Floral Park', 'French Park', 'Affordable housing']
-  },
-  {
-    city: 'Tustin',
-    description: 'Historic charm meets modern development in this central OC location',
-    medianHome: '$900K',
-    slug: 'tustin-mortgage-broker',
-    highlights: ['The District', 'Tustin Legacy', 'Historic Old Town', 'Great schools']
+    title: 'Complete OC Neighborhoods Analysis',
+    description: 'Side-by-side comparison of 6+ Orange County neighborhoods with ratings and market insights',
+    features: ['Multiple Neighborhood Ratings', 'Market Trends Analysis', 'Commute Comparisons', 'Investment Potential'],
+    url: '/neighborhood-guide/orange-county-neighborhoods-comparison-guide',
+    color: 'purple',
+    highlight: 'Comprehensive'
   }
 ];
 
@@ -83,115 +36,116 @@ export default function NeighborhoodGuidePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Orange County <span className="text-blue-600">Neighborhood Guide</span>
+            Orange County <span className="text-blue-600">Neighborhood Guides</span>
           </h1>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Your complete guide to buying homes in Orange County. Compare neighborhoods, 
-            understand market trends, and get expert mortgage advice for each area.
+          <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
+            Expert buying guides and market analysis to help you choose the perfect Orange County neighborhood. 
+            Compare home prices, schools, lifestyle factors, and mortgage options with data-driven insights.
           </p>
           <div className="flex items-center justify-center text-slate-700 mb-8">
-            <MapPin className="w-6 h-6 text-blue-600 mr-2" />
-            <span className="text-lg">Licensed to serve all Orange County cities</span>
+            <BookOpen className="w-6 h-6 text-blue-600 mr-2" />
+            <span className="text-lg">Data-driven neighborhood analysis by local mortgage expert</span>
           </div>
         </div>
 
         {/* Featured Comparison Guides */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">
-            Featured Neighborhood Comparisons
+            Featured Neighborhood Comparison Guides
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-            <div className="bg-gradient-to-br from-blue-50 to-green-50 p-8 rounded-2xl border border-blue-200">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                Irvine vs Newport Beach
-              </h3>
-              <p className="text-slate-600 mb-6">
-                Compare Orange County's top family-friendly city against luxury coastal living. 
-                Home prices, schools, lifestyle, and mortgage considerations.
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
+            {comparisonGuides.map((guide, index) => (
+              <Card key={index} className="relative overflow-hidden hover:shadow-xl transition-all duration-300 border-2 hover:border-blue-200">
+                {guide.highlight && (
+                  <div className={`absolute top-4 right-4 bg-${guide.color}-600 text-white px-3 py-1 rounded-full text-sm font-medium`}>
+                    {guide.highlight}
+                  </div>
+                )}
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-2xl font-bold text-slate-900 mb-3">
+                    {guide.title}
+                  </CardTitle>
+                  <p className="text-slate-600 text-lg">
+                    {guide.description}
+                  </p>
+                </CardHeader>
+                <CardContent>
+                  <div className="mb-6">
+                    <h4 className="font-semibold text-slate-900 mb-3">What's Included:</h4>
+                    <div className="space-y-2">
+                      {guide.features.map((feature, i) => (
+                        <div key={i} className="flex items-center">
+                          <BarChart3 className="w-4 h-4 text-blue-600 mr-2" />
+                          <span className="text-slate-700">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <Link href={guide.url}>
+                    <Button className={`w-full bg-${guide.color}-600 hover:bg-${guide.color}-700 text-white py-3 text-lg`}>
+                      Read Full Guide
+                    </Button>
+                  </Link>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+
+        {/* What Makes Our Guides Different */}
+        <div className="bg-blue-50 rounded-2xl p-8 mb-16">
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">
+            Why Our Neighborhood Guides Are Different
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <BarChart3 className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Real Market Data</h3>
+              <p className="text-slate-600">
+                Current home prices, market trends, and neighborhood statistics from reliable sources.
               </p>
-              <Link href="/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-                  Read Full Comparison
-                </Button>
-              </Link>
             </div>
-            
-            <div className="bg-gradient-to-br from-purple-50 to-orange-50 p-8 rounded-2xl border border-purple-200">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">
-                Complete OC Neighborhoods Guide
-              </h3>
-              <p className="text-slate-600 mb-6">
-                Side-by-side comparison of 6+ Orange County neighborhoods including 
-                home prices, schools, commutes, and lifestyle ratings.
+            <div className="text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Home className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Mortgage Insights</h3>
+              <p className="text-slate-600">
+                Financing considerations, loan programs, and down payment requirements for each area.
               </p>
-              <Link href="/neighborhood-guide/orange-county-neighborhoods-comparison-guide">
-                <Button className="bg-purple-600 hover:bg-purple-700 text-white">
-                  Compare All Areas
-                </Button>
-              </Link>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <MapPin className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-2">Local Expertise</h3>
+              <p className="text-slate-600">
+                Written by a local mortgage broker who understands Orange County market nuances.
+              </p>
             </div>
           </div>
         </div>
 
-        {/* Individual Neighborhood Guides */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-          {serviceAreas.map((area, index) => (
-            <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:border-blue-200">
-              <CardHeader>
-                <CardTitle className="flex items-center text-xl">
-                  <Home className="w-5 h-5 text-blue-600 mr-2" />
-                  {area.city}
-                </CardTitle>
-                <p className="text-slate-600">{area.description}</p>
-              </CardHeader>
-              <CardContent>
-                <div className="mb-4">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-sm text-slate-600">Median Home Price:</span>
-                    <span className="font-bold text-green-600">{area.medianHome}</span>
-                  </div>
-                </div>
-                
-                <div className="mb-6">
-                  <h4 className="font-semibold text-slate-900 mb-2">Area Highlights:</h4>
-                  <div className="grid grid-cols-2 gap-1 text-sm text-slate-600">
-                    {area.highlights.map((highlight, i) => (
-                      <div key={i} className="flex items-center">
-                        <div className="w-1 h-1 bg-blue-600 rounded-full mr-2"></div>
-                        {highlight}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-                
-                <Link href={`/neighborhood-guide/${area.slug}`}>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">
-                    {area.city} Mortgage Info
-                  </Button>
-                </Link>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-
-        {/* Additional Cities */}
-        <div className="bg-slate-50 rounded-2xl p-8 mb-16">
+        {/* Individual Area Information */}
+        <div className="bg-slate-100 rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-6">
-            Additional Orange County Cities We Serve
+            Need Information on Specific Areas?
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
-            {[
-              'Aliso Viejo', 'Brea', 'Buena Park', 'Cypress', 'Dana Point', 'Fountain Valley',
-              'Fullerton', 'Garden Grove', 'La Habra', 'La Palma', 'Lake Forest', 'Los Alamitos',
-              'Newport Coast', 'Orange', 'Placentia', 'Rancho Santa Margarita', 'San Clemente',
-              'San Juan Capistrano', 'Santa Ana', 'Seal Beach', 'Stanton', 'Villa Park', 'Westminster', 'Yorba Linda'
-            ].map((city, index) => (
-              <div key={index} className="bg-white p-3 rounded-lg shadow-sm">
-                <span className="text-slate-700 font-medium">{city}</span>
-              </div>
-            ))}
+          <p className="text-xl text-slate-600 text-center mb-8 max-w-3xl mx-auto">
+            Looking for detailed mortgage and market information for a specific Orange County city? 
+            Check out our individual service area pages with local lending programs and market insights.
+          </p>
+          <div className="text-center">
+            <Link href="/areas">
+              <Button className="bg-slate-700 hover:bg-slate-800 text-white px-8 py-3 text-lg">
+                Browse All Service Areas
+              </Button>
+            </Link>
           </div>
         </div>
 
@@ -199,73 +153,68 @@ export default function NeighborhoodGuidePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-6">
-              Why Choose Mo for Your Orange County Mortgage?
+              Get Expert Mortgage Advice for Any OC Neighborhood
             </h2>
             <div className="space-y-4">
               <div className="flex items-start">
                 <TrendingUp className="w-6 h-6 text-blue-600 mr-3 mt-1" />
                 <div>
-                  <h3 className="font-bold text-slate-900">NEXA Mortgage Wholesale Access</h3>
-                  <p className="text-slate-600">Access to 200+ lenders means better rates and terms than retail banks</p>
+                  <h3 className="font-bold text-slate-900">Market Analysis Expertise</h3>
+                  <p className="text-slate-600">Deep understanding of Orange County market trends and neighborhood dynamics</p>
                 </div>
               </div>
               <div className="flex items-start">
-                <MapPin className="w-6 h-6 text-blue-600 mr-3 mt-1" />
+                <Home className="w-6 h-6 text-blue-600 mr-3 mt-1" />
                 <div>
-                  <h3 className="font-bold text-slate-900">Local Market Expertise</h3>
-                  <p className="text-slate-600">Deep knowledge of Orange County neighborhoods and wholesale mortgage market</p>
+                  <h3 className="font-bold text-slate-900">Neighborhood-Specific Programs</h3>
+                  <p className="text-slate-600">Access to loan programs and lenders that specialize in different OC areas</p>
                 </div>
               </div>
               <div className="flex items-start">
                 <Phone className="w-6 h-6 text-blue-600 mr-3 mt-1" />
                 <div>
-                  <h3 className="font-bold text-slate-900">Remote Convenience</h3>
-                  <p className="text-slate-600">Complete your mortgage process remotely with digital tools and personal service</p>
+                  <h3 className="font-bold text-slate-900">Personal Consultation</h3>
+                  <p className="text-slate-600">One-on-one guidance to match your budget with the right neighborhood</p>
                 </div>
               </div>
             </div>
           </div>
           
           <div className="bg-blue-50 p-8 rounded-2xl">
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">Serving Orange County Remotely</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-4">Free Neighborhood Consultation</h3>
             <p className="text-slate-700 mb-6">
-              While my brokerage office is located in Mesa, Arizona, I work remotely to serve 
-              Orange County clients with the same personalized attention and competitive rates. 
-              Modern technology allows us to complete your entire mortgage process efficiently and securely.
+              Not sure which Orange County neighborhood fits your budget and lifestyle? 
+              Schedule a free consultation to discuss your goals and get personalized recommendations.
             </p>
-            <div className="space-y-2 text-sm">
+            <div className="space-y-3">
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                <span>Digital document upload and e-signatures</span>
+                <span className="text-sm">Budget analysis and pre-approval</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                <span>Video consultations and phone support</span>
+                <span className="text-sm">Neighborhood recommendations based on your needs</span>
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                <span>Local Orange County market knowledge</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                <span>Competitive wholesale rates and terms</span>
+                <span className="text-sm">Market timing and strategy advice</span>
               </div>
             </div>
           </div>
         </div>
 
         {/* CTA Section */}
-        <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
+        <div className="text-center bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
           <h2 className="text-3xl font-bold mb-4">
-            Ready to Get Started in Your Orange County City?
+            Ready to Find Your Perfect Orange County Neighborhood?
           </h2>
           <p className="text-xl mb-6 text-blue-100">
-            Get personalized rates and programs for your specific area
+            Get personalized neighborhood recommendations and mortgage pre-approval
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
               <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold">
-                Get Area-Specific Rates
+                Start Your Neighborhood Analysis
               </Button>
             </Link>
             <a href="tel:(949) 579-2057">

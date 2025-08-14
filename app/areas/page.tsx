@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, TrendingUp, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Orange County Wholesale Mortgage Broker Service Areas | Mo The Broker',
-  description: 'Serving all Orange County cities with wholesale mortgage rates. HELOC, refinancing, and purchase loans in Irvine, Newport Beach, Costa Mesa, and more. Licensed wholesale mortgage broker.',
-  keywords: 'Orange County wholesale mortgage broker, Irvine wholesale mortgage broker, Newport Beach loans, Costa Mesa wholesale mortgage'
+  title: 'Orange County Service Areas | Local Mortgage Broker by City | NEXA Mortgage',
+  description: 'Mo Abdel serves all Orange County cities as your local mortgage broker. Find lending programs, rates and market insights for your specific OC area.',
+  keywords: 'Orange County mortgage broker, OC service areas, local mortgage lender, Irvine Newport Beach Mission Viejo mortgage'
 };
 
 const serviceAreas = [
@@ -77,7 +77,7 @@ const serviceAreas = [
   }
 ];
 
-export default function ServiceAreasPage() {
+export default function NeighborhoodGuidePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -88,9 +88,8 @@ export default function ServiceAreasPage() {
             Orange County <span className="text-blue-600">Service Areas</span>
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            As a licensed broker with NEXA Mortgage serving all of Orange County remotely, 
-            I provide wholesale mortgage rates and personalized service to every community 
-            from the coast to the inland areas.
+            Mo Abdel provides wholesale mortgage services throughout Orange County. 
+            Find local market insights, lending programs, and competitive rates for your specific area.
           </p>
           <div className="flex items-center justify-center text-slate-700 mb-8">
             <MapPin className="w-6 h-6 text-blue-600 mr-2" />
@@ -98,7 +97,25 @@ export default function ServiceAreasPage() {
           </div>
         </div>
 
-        {/* Service Areas Grid */}
+        {/* Neighborhood Comparison Guides */}
+        <div className="mb-16">
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 p-8 rounded-2xl border border-blue-200 text-center">
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">
+              Need Help Choosing Between Neighborhoods?
+            </h2>
+            <p className="text-slate-600 mb-6 max-w-3xl mx-auto">
+              Check out our detailed neighborhood comparison guides with market analysis, 
+              home prices, schools, and lifestyle factors to help you make the best decision.
+            </p>
+            <Link href="/neighborhood-guide">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                View Neighborhood Guides
+              </Button>
+            </Link>
+          </div>
+        </div>
+
+        {/* Service Area Cities */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {serviceAreas.map((area, index) => (
             <Card key={index} className="hover:shadow-lg transition-all duration-300 hover:border-blue-200">
@@ -162,7 +179,7 @@ export default function ServiceAreasPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-6">
-              Why Choose Mo for Your Orange County Mortgage?
+              Your Local Orange County Mortgage Broker
             </h2>
             <div className="space-y-4">
               <div className="flex items-start">
@@ -220,10 +237,10 @@ export default function ServiceAreasPage() {
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
           <h2 className="text-3xl font-bold mb-4">
-            Ready to Get Started in Your Orange County City?
+            Ready to Get Started in Your Orange County Area?
           </h2>
           <p className="text-xl mb-6 text-blue-100">
-            Get personalized rates and programs for your specific area
+            Get area-specific mortgage rates and lending programs
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

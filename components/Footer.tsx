@@ -66,9 +66,63 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="border-t border-slate-700 mt-8 pt-8 text-center text-slate-400">
-          <p>&copy; {new Date().getFullYear()} Mo Abdel. All rights reserved.</p>
-          <p>NMLS# 1426884</p>
+        <div className="border-t border-slate-700 mt-8 pt-8">
+          {/* Enhanced NMLS Disclosures */}
+          <div className="text-center mb-6">
+            <div className="bg-slate-800 p-4 rounded-lg inline-block">
+              <p className="text-white font-semibold mb-2">Mo Abdel - NMLS #1426884</p>
+              <p className="text-slate-300 text-sm mb-2">Licensed Mortgage Loan Originator</p>
+              <p className="text-slate-300 text-sm mb-2">NEXA Mortgage • Equal Housing Lender</p>
+              <p className="text-slate-400 text-xs">
+                Verify license at{' '}
+                <a 
+                  href="https://www.nmlsconsumeraccess.org" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-400 hover:text-blue-300 underline"
+                >
+                  www.nmlsconsumeraccess.org
+                </a>
+              </p>
+            </div>
+          </div>
+
+          {/* Required Disclaimers */}
+          <div className="max-w-4xl mx-auto mb-6">
+            <div className="bg-slate-800 p-4 rounded-lg">
+              <p className="text-slate-300 text-xs mb-2">
+                <strong>Important:</strong> This is not a commitment to lend. All information contained herein is subject to change without notice. 
+                All loans are subject to credit approval. Equal Housing Lender.
+              </p>
+              <p className="text-slate-400 text-xs">
+                This material is not from HUD or FHA and has not been approved by HUD or any government agency. 
+                The information provided is for informational purposes only and is not an advertisement for products or services.
+              </p>
+            </div>
+          </div>
+
+          {/* Legal Links */}
+          <div className="text-center mb-4">
+            <div className="flex flex-wrap justify-center space-x-6 text-sm">
+              <Link href="/privacy-policy" className="text-slate-400 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-of-service" className="text-slate-400 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <Link href="/contact" className="text-slate-400 hover:text-white transition-colors">
+                Contact
+              </Link>
+              <Link href="/areas" className="text-slate-400 hover:text-white transition-colors">
+                Service Areas
+              </Link>
+            </div>
+          </div>
+
+          {/* Copyright */}
+          <div className="text-center text-slate-400 text-sm">
+            <p>&copy; {new Date().getFullYear()} Mo Abdel. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>

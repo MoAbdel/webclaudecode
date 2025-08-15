@@ -232,6 +232,22 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Guides Main -->
+  <url>
+    <loc>https://mothebroker.com/guides</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Guides -->
+  <url>
+    <loc>https://mothebroker.com/guides/why-choose-local-mortgage-broker</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
   <!-- Neighborhood Comparison Guides -->
   <url>
     <loc>https://mothebroker.com/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide</loc>

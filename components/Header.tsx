@@ -33,7 +33,6 @@ const loanProgramsDropdown: DropdownItem[] = [
   { title: 'VA Loans', url: '/loan-programs/va-loans' },
   { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
   { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
-  { title: '── Non-QM Specialty ──', url: '#', isHeader: true },
   { title: 'Non-QM Overview', url: '/loan-programs/non-qm-loans' },
   { title: 'Bank Statement Loans', url: '/loan-programs/bank-statement-loans' },
   { title: 'Asset Depletion Loans', url: '/loan-programs/asset-depletion-loans' },

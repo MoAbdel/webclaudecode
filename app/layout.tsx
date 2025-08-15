@@ -7,14 +7,15 @@ import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
 
 export const metadata: Metadata = {
-  title: 'Mo Abdel | Wholesale Mortgage Broker',
+  title: 'Mo Abdel - Mortgage Broker | Orange County Wholesale Mortgage NMLS #1426884',
   description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
   icons: {
     icon: [
-      { url: '/images/moabdel-headshot-final.png', sizes: '32x32', type: 'image/png' },
-      { url: '/images/moabdel-headshot-final.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
+      { url: '/favicon.ico', sizes: '16x16', type: 'image/x-icon' },
+      { url: '/images/moabdel-headshot-final.png', sizes: '180x180', type: 'image/png' },
     ],
-    shortcut: '/images/moabdel-headshot-final.png',
+    shortcut: '/favicon.ico',
     apple: '/images/moabdel-headshot-final.png',
   },
   openGraph: {
@@ -44,7 +45,7 @@ export default function RootLayout({
         {/* OpenGraph Meta Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://mothebroker.com" />
-        <meta property="og:title" content="Mo Abdel | Wholesale Mortgage Broker Orange County | NMLS #1426884" />
+        <meta property="og:title" content="Mo Abdel - Mortgage Broker | Orange County Wholesale Mortgage NMLS #1426884" />
         <meta property="og:description" content="Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs. Expert guidance on FHA, VA, jumbo loans, and HELOC options." />
         <meta property="og:image" content="https://mothebroker.com/images/moabdel-headshot-final.png" />
         <meta property="og:site_name" content="Mo Abdel" />

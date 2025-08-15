@@ -371,7 +371,7 @@ export default function ProgramsPage() {
                 • Up to $3M loan amounts<br/>
                 • Investment properties OK
               </div>
-              <Link href="/programs/non-qm-bank-statement" className="text-blue-600 text-sm font-medium hover:underline">
+              <Link href="/loan-programs/bank-statement-loans" className="text-blue-600 text-sm font-medium hover:underline">
                 Learn More →
               </Link>
             </div>
@@ -387,7 +387,7 @@ export default function ProgramsPage() {
                 • Investment portfolios<br/>
                 • High net worth borrowers
               </div>
-              <Link href="/programs/non-qm-asset-depletion" className="text-blue-600 text-sm font-medium hover:underline">
+              <Link href="/loan-programs/asset-depletion-loans" className="text-blue-600 text-sm font-medium hover:underline">
                 Learn More →
               </Link>
             </div>
@@ -403,7 +403,7 @@ export default function ProgramsPage() {
                 • Quick closings (7-10 days)<br/>
                 • Up to 90% ARV
               </div>
-              <Link href="/programs/fix-flip-loans" className="text-blue-600 text-sm font-medium hover:underline">
+              <Link href="/loan-programs/fix-flip-loans" className="text-blue-600 text-sm font-medium hover:underline">
                 Learn More →
               </Link>
             </div>
@@ -419,7 +419,7 @@ export default function ProgramsPage() {
                 • Portfolio lenders<br/>
                 • 1.0+ DSCR required
               </div>
-              <Link href="/programs/dscr-investment-loans" className="text-blue-600 text-sm font-medium hover:underline">
+              <Link href="/loan-programs/dscr-investment-loans" className="text-blue-600 text-sm font-medium hover:underline">
                 Learn More →
               </Link>
             </div>
@@ -435,7 +435,7 @@ export default function ProgramsPage() {
                 • 25-40% down payment<br/>
                 • Purchase or refinance
               </div>
-              <Link href="/programs/foreign-national-loans" className="text-blue-600 text-sm font-medium hover:underline">
+              <Link href="/loan-programs/foreign-national-loans" className="text-blue-600 text-sm font-medium hover:underline">
                 Learn More →
               </Link>
             </div>
@@ -451,7 +451,7 @@ export default function ProgramsPage() {
                 • Income limits apply<br/>
                 • Rural area requirement
               </div>
-              <Link href="/programs/usda-rural-loans" className="text-blue-600 text-sm font-medium hover:underline">
+              <Link href="/loan-programs/usda-rural-loans" className="text-blue-600 text-sm font-medium hover:underline">
                 Learn More →
               </Link>
             </div>

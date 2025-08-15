@@ -91,7 +91,7 @@ export default function USDARuggralLoansPage() {
           </p>
         </div>
 
-        <div className="bg-gradient-to-r from-yellow-600 to-orange-600 text-white rounded-lg p-8 text-center">
+        <div className="bg-yellow-600 text-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Check Your USDA Eligibility</h2>
           <p className="text-xl mb-6 text-yellow-100">
             Find out if your desired Orange County area qualifies for USDA rural loans

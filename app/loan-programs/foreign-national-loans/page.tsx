@@ -78,7 +78,7 @@ export default function ForeignNationalLoansPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-red-600 to-orange-600 text-white rounded-lg p-8 text-center">
+        <div className="bg-red-600 text-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Invest in Orange County Real Estate</h2>
           <p className="text-xl mb-6 text-red-100">
             Specialized lending for international buyers and foreign nationals

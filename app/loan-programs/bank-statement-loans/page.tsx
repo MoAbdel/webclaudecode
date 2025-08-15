@@ -100,14 +100,14 @@ export default function BankStatementLoansPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <FileText className="w-8 h-8 text-orange-600" />
                 </div>
-                <CardTitle>1. Provide Bank Statements</CardTitle>
+                <CardTitle className="text-center">1. Provide Bank Statements</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   Submit 12-24 months of personal or business bank statements showing 
                   consistent deposits and cash flow.
                 </p>
@@ -115,14 +115,14 @@ export default function BankStatementLoansPage() {
             </Card>
 
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Calculator className="w-8 h-8 text-orange-600" />
                 </div>
-                <CardTitle>2. Income Calculation</CardTitle>
+                <CardTitle className="text-center">2. Income Calculation</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   Lender analyzes your deposits to calculate qualifying income, 
                   typically using 50-75% of gross deposits.
                 </p>
@@ -130,14 +130,14 @@ export default function BankStatementLoansPage() {
             </Card>
 
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-orange-600" />
                 </div>
-                <CardTitle>3. Loan Approval</CardTitle>
+                <CardTitle className="text-center">3. Loan Approval</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   Get approved based on bank statement income, credit score, 
                   and debt-to-income ratio without traditional documentation.
                 </p>
@@ -376,7 +376,7 @@ export default function BankStatementLoansPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-orange-600 to-red-600 text-white rounded-lg p-8 text-center">
+        <div className="bg-orange-600 text-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Get Pre-Approved?</h2>
           <p className="text-xl mb-6 text-orange-100">
             Get your bank statement loan pre-approval with an experienced Non-QM specialist

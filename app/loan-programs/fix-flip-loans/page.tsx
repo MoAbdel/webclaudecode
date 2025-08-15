@@ -100,14 +100,14 @@ export default function FixFlipLoansPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Clock className="w-8 h-8 text-purple-600" />
                 </div>
-                <CardTitle>Quick Closings</CardTitle>
+                <CardTitle className="text-center">Quick Closings</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   Close in as little as 7-10 days with streamlined 
                   underwriting and fast approvals.
                 </p>
@@ -115,14 +115,14 @@ export default function FixFlipLoansPage() {
             </Card>
 
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="w-8 h-8 text-purple-600" />
                 </div>
-                <CardTitle>High LTC</CardTitle>
+                <CardTitle className="text-center">High LTC</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   Up to 90% loan-to-cost including purchase 
                   price and renovation expenses.
                 </p>
@@ -130,14 +130,14 @@ export default function FixFlipLoansPage() {
             </Card>
 
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Hammer className="w-8 h-8 text-purple-600" />
                 </div>
-                <CardTitle>Rehab Funding</CardTitle>
+                <CardTitle className="text-center">Rehab Funding</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   100% of rehab costs funded in draws 
                   as work is completed and inspected.
                 </p>
@@ -145,14 +145,14 @@ export default function FixFlipLoansPage() {
             </Card>
 
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-purple-600" />
                 </div>
-                <CardTitle>High ARV</CardTitle>
+                <CardTitle className="text-center">High ARV</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   Loan amounts up to 70-75% of After 
                   Repair Value (ARV) on most properties.
                 </p>
@@ -407,7 +407,7 @@ export default function FixFlipLoansPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white rounded-lg p-8 text-center">
+        <div className="bg-purple-600 text-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Fund Your Next Flip?</h2>
           <p className="text-xl mb-6 text-purple-100">
             Get fast approval and quick closing for your Orange County investment property

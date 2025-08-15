@@ -100,14 +100,14 @@ export default function AssetDepletionLoansPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <PieChart className="w-8 h-8 text-green-600" />
                 </div>
-                <CardTitle>1. Asset Documentation</CardTitle>
+                <CardTitle className="text-center">1. Asset Documentation</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   Provide statements for all qualifying liquid assets including 
                   retirement accounts, investment portfolios, and savings.
                 </p>
@@ -115,14 +115,14 @@ export default function AssetDepletionLoansPage() {
             </Card>
 
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Calculator className="w-8 h-8 text-green-600" />
                 </div>
-                <CardTitle>2. Income Calculation</CardTitle>
+                <CardTitle className="text-center">2. Income Calculation</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   Lender divides total qualifying assets by loan term (typically 360 months) 
                   to create a monthly "income" for qualification.
                 </p>
@@ -130,14 +130,14 @@ export default function AssetDepletionLoansPage() {
             </Card>
 
             <Card className="text-center">
-              <CardHeader>
+              <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <TrendingUp className="w-8 h-8 text-green-600" />
                 </div>
-                <CardTitle>3. Loan Approval</CardTitle>
+                <CardTitle className="text-center">3. Loan Approval</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-slate-600">
+              <CardContent className="text-center">
+                <p className="text-slate-600 text-center">
                   Get approved based on asset-derived income, credit score, 
                   and debt-to-income ratio without employment verification.
                 </p>
@@ -428,7 +428,7 @@ export default function AssetDepletionLoansPage() {
         </div>
 
         {/* CTA Section */}
-        <div className="bg-gradient-to-r from-green-600 to-blue-600 text-white rounded-lg p-8 text-center">
+        <div className="bg-green-600 text-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Leverage Your Assets for Your Dream Home</h2>
           <p className="text-xl mb-6 text-green-100">
             Get pre-approved using your investment portfolio and liquid assets

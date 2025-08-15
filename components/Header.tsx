@@ -18,7 +18,14 @@ const loanProgramsDropdown = [
   { title: 'VA Loans', url: '/loan-programs/va-loans' },
   { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
   { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
-  { title: 'Non-QM Loans', url: '/loan-programs/non-qm-loans' }
+  { title: '── Non-QM Specialty ──', url: '#', isHeader: true },
+  { title: 'Non-QM Overview', url: '/loan-programs/non-qm-loans' },
+  { title: 'Bank Statement Loans', url: '/loan-programs/bank-statement-loans' },
+  { title: 'Asset Depletion Loans', url: '/loan-programs/asset-depletion-loans' },
+  { title: 'Fix & Flip Loans', url: '/loan-programs/fix-flip-loans' },
+  { title: 'DSCR Investment Loans', url: '/loan-programs/dscr-investment-loans' },
+  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' },
+  { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' }
 ];
 
 const serviceAreasDropdown = [
@@ -164,13 +171,22 @@ export default function Header() {
                       (item.page === 'NeighborhoodGuide' && neighborhoodDropdownOpen)) && (
                       <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
                         {item.dropdownItems?.map((dropdownItem, index) => (
-                          <Link
-                            key={index}
-                            href={dropdownItem.url}
-                            className="block px-4 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150"
-                          >
-                            {dropdownItem.title}
-                          </Link>
+                          dropdownItem.isHeader ? (
+                            <div
+                              key={index}
+                              className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider border-t border-slate-100 mt-1 pt-3"
+                            >
+                              {dropdownItem.title}
+                            </div>
+                          ) : (
+                            <Link
+                              key={index}
+                              href={dropdownItem.url}
+                              className="block px-4 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150"
+                            >
+                              {dropdownItem.title}
+                            </Link>
+                          )
                         ))}
                       </div>
                     )}
@@ -244,14 +260,23 @@ export default function Header() {
                     {/* Mobile dropdown items */}
                     <div className="pl-4 space-y-1">
                       {item.dropdownItems?.map((dropdownItem, index) => (
-                        <Link
-                          key={index}
-                          href={dropdownItem.url}
-                          className="block px-3 py-1 text-sm text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md"
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          {dropdownItem.title}
-                        </Link>
+                        dropdownItem.isHeader ? (
+                          <div
+                            key={index}
+                            className="px-3 py-1 text-xs font-semibold text-slate-500 uppercase tracking-wider border-t border-slate-100 mt-2 pt-2"
+                          >
+                            {dropdownItem.title}
+                          </div>
+                        ) : (
+                          <Link
+                            key={index}
+                            href={dropdownItem.url}
+                            className="block px-3 py-1 text-sm text-slate-600 hover:text-blue-600 hover:bg-blue-50 rounded-md"
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {dropdownItem.title}
+                          </Link>
+                        )
                       ))}
                     </div>
                   </div>

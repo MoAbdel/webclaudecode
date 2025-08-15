@@ -86,7 +86,7 @@ export default function DSCRInvestmentLoansPage() {
           </div>
         </div>
 
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg p-8 text-center">
+        <div className="bg-blue-600 text-white rounded-lg p-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Ready to Expand Your Investment Portfolio?</h2>
           <p className="text-xl mb-6 text-blue-100">
             Get pre-approved for DSCR investment loans with no income documentation hassles

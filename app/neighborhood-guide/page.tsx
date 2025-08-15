@@ -131,6 +131,72 @@ export default function NeighborhoodGuidePage() {
           </div>
         </div>
 
+        {/* All Neighborhood Guides */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">
+            All Neighborhood Comparison Guides
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Link href="/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide" className="block">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border hover:border-blue-300">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Irvine vs Newport Beach</h3>
+                  <p className="text-slate-600 text-sm mb-3">Family-friendly planned community vs luxury coastal living comparison</p>
+                  <div className="text-xs text-blue-600 font-medium">Most Popular Guide →</div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/neighborhood-guide/mission-viejo-vs-irvine-home-buying-guide" className="block">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border hover:border-blue-300">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Mission Viejo vs Irvine</h3>
+                  <p className="text-slate-600 text-sm mb-3">Compare two top-rated Orange County family communities</p>
+                  <div className="text-xs text-blue-600 font-medium">Read Comparison →</div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/neighborhood-guide/newport-beach-vs-laguna-beach-home-buying-guide" className="block">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border hover:border-blue-300">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Newport Beach vs Laguna Beach</h3>
+                  <p className="text-slate-600 text-sm mb-3">Luxury coastal living and investment potential analysis</p>
+                  <div className="text-xs text-blue-600 font-medium">Read Comparison →</div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/neighborhood-guide/huntington-beach-vs-costa-mesa-home-buying-guide" className="block">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border hover:border-blue-300">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Huntington Beach vs Costa Mesa</h3>
+                  <p className="text-slate-600 text-sm mb-3">Beach access, schools, and community amenities compared</p>
+                  <div className="text-xs text-blue-600 font-medium">Read Comparison →</div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/neighborhood-guide/orange-county-neighborhoods-comparison-guide" className="block">
+              <Card className="h-full hover:shadow-lg transition-shadow duration-300 border hover:border-blue-300">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-slate-900 mb-2">Complete OC Neighborhoods</h3>
+                  <p className="text-slate-600 text-sm mb-3">Comprehensive analysis of 6+ Orange County areas</p>
+                  <div className="text-xs text-purple-600 font-medium">Most Comprehensive →</div>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-lg p-6 flex flex-col justify-center items-center text-center border-2 border-dashed border-blue-300">
+              <h3 className="text-lg font-bold text-slate-900 mb-2">More Guides Coming Soon</h3>
+              <p className="text-slate-600 text-sm mb-3">Additional neighborhood comparisons in development</p>
+              <Link href="/contact" className="text-xs text-blue-600 font-medium hover:underline">
+                Request Specific Comparison →
+              </Link>
+            </div>
+          </div>
+        </div>
+
         {/* Individual Area Information */}
         <div className="bg-slate-100 rounded-2xl p-8 mb-16">
           <h2 className="text-3xl font-bold text-center text-slate-900 mb-6">

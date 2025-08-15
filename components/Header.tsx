@@ -36,6 +36,7 @@ const loanProgramsDropdown: DropdownItem[] = [
   { title: 'Non-QM Overview', url: '/loan-programs/non-qm-loans' },
   { title: 'Bank Statement Loans', url: '/loan-programs/bank-statement-loans' },
   { title: 'Asset Depletion Loans', url: '/loan-programs/asset-depletion-loans' },
+  { title: 'P&L Statement Loans', url: '/loan-programs/profit-loss-statement-loans' },
   { title: 'Fix & Flip Loans', url: '/loan-programs/fix-flip-loans' },
   { title: 'DSCR Investment Loans', url: '/loan-programs/dscr-investment-loans' },
   { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' },

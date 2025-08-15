@@ -155,24 +155,6 @@ export default function NonQMLoansPage() {
               </Card>
             </Link>
 
-            <div className="block">
-              <Card className="border-l-4 border-l-red-500 opacity-75 h-full">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-slate-900 mb-3">⚡ Interest-Only Options</h3>
-                  <div className="space-y-2 text-sm text-slate-600 mb-4">
-                    <div>• Interest-only payments</div>
-                    <div>• 5-10 year IO periods</div>
-                    <div>• Lower initial payments</div>
-                    <div>• Jumbo and standard amounts</div>
-                    <div>• 20-30% down payment</div>
-                  </div>
-                  <p className="text-sm font-semibold text-red-600 mb-4">Best for: Cash flow optimization</p>
-                  <Button disabled className="w-full bg-slate-400 text-white py-2 text-sm cursor-not-allowed">
-                    Coming Soon
-                  </Button>
-                </CardContent>
-              </Card>
-            </div>
 
             <Link href="/loan-programs/foreign-national-loans" className="block">
               <Card className="border-l-4 border-l-yellow-500 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full cursor-pointer">

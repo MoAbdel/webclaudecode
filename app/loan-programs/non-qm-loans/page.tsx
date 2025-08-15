@@ -79,89 +79,157 @@ export default function NonQMLoansPage() {
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">Non-QM Loan Program Options</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="border-l-4 border-l-blue-500">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">🏦 Bank Statement Loans</h3>
-                <div className="space-y-2 text-sm text-slate-600 mb-4">
-                  <div>• 12-24 months bank statements</div>
-                  <div>• No tax returns required</div>
-                  <div>• Personal & business accounts</div>
-                  <div>• Cash flow analysis</div>
-                  <div>• 10-20% down payment</div>
-                </div>
-                <p className="text-sm font-semibold text-blue-600">Best for: Self-employed, 1099 contractors</p>
-              </CardContent>
-            </Card>
+            <Link href="/loan-programs/bank-statement-loans" className="block">
+              <Card className="border-l-4 border-l-blue-500 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full cursor-pointer">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">🏦 Bank Statement Loans</h3>
+                  <div className="space-y-2 text-sm text-slate-600 mb-4">
+                    <div>• 12-24 months bank statements</div>
+                    <div>• No tax returns required</div>
+                    <div>• Personal & business accounts</div>
+                    <div>• Cash flow analysis</div>
+                    <div>• 10-20% down payment</div>
+                  </div>
+                  <p className="text-sm font-semibold text-blue-600 mb-4">Best for: Self-employed, 1099 contractors</p>
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 text-sm">
+                    Learn More →
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="border-l-4 border-l-green-500">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">💰 Asset-Based Loans</h3>
-                <div className="space-y-2 text-sm text-slate-600 mb-4">
-                  <div>• Income based on liquid assets</div>
-                  <div>• Stocks, bonds, retirement accounts</div>
-                  <div>• Asset depletion calculation</div>
-                  <div>• No employment verification</div>
-                  <div>• 20-30% down payment</div>
-                </div>
-                <p className="text-sm font-semibold text-green-600">Best for: Retirees, high-net-worth individuals</p>
-              </CardContent>
-            </Card>
+            <Link href="/loan-programs/asset-depletion-loans" className="block">
+              <Card className="border-l-4 border-l-green-500 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full cursor-pointer">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">💰 Asset-Based Loans</h3>
+                  <div className="space-y-2 text-sm text-slate-600 mb-4">
+                    <div>• Income based on liquid assets</div>
+                    <div>• Stocks, bonds, retirement accounts</div>
+                    <div>• Asset depletion calculation</div>
+                    <div>• No employment verification</div>
+                    <div>• 20-30% down payment</div>
+                  </div>
+                  <p className="text-sm font-semibold text-green-600 mb-4">Best for: Retirees, high-net-worth individuals</p>
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 text-sm">
+                    Learn More →
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="border-l-4 border-l-purple-500">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">📊 P&L Statement Loans</h3>
-                <div className="space-y-2 text-sm text-slate-600 mb-4">
-                  <div>• CPA-prepared P&L statements</div>
-                  <div>• Business financial statements</div>
-                  <div>• No personal tax returns</div>
-                  <div>• Business income qualification</div>
-                  <div>• 10-25% down payment</div>
-                </div>
-                <p className="text-sm font-semibold text-purple-600">Best for: Business owners, partnerships</p>
-              </CardContent>
-            </Card>
+            <div className="block">
+              <Card className="border-l-4 border-l-purple-500 opacity-75 h-full">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">📊 P&L Statement Loans</h3>
+                  <div className="space-y-2 text-sm text-slate-600 mb-4">
+                    <div>• CPA-prepared P&L statements</div>
+                    <div>• Business financial statements</div>
+                    <div>• No personal tax returns</div>
+                    <div>• Business income qualification</div>
+                    <div>• 10-25% down payment</div>
+                  </div>
+                  <p className="text-sm font-semibold text-purple-600 mb-4">Best for: Business owners, partnerships</p>
+                  <Button disabled className="w-full bg-slate-400 text-white py-2 text-sm cursor-not-allowed">
+                    Coming Soon
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
 
-            <Card className="border-l-4 border-l-orange-500">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">🏠 DSCR Loans</h3>
-                <div className="space-y-2 text-sm text-slate-600 mb-4">
-                  <div>• Debt Service Coverage Ratio</div>
-                  <div>• Property cash flow based</div>
-                  <div>• No personal income verification</div>
-                  <div>• Investment properties only</div>
-                  <div>• 20-25% down payment</div>
-                </div>
-                <p className="text-sm font-semibold text-orange-600">Best for: Real estate investors</p>
-              </CardContent>
-            </Card>
+            <Link href="/loan-programs/dscr-investment-loans" className="block">
+              <Card className="border-l-4 border-l-orange-500 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full cursor-pointer">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">🏠 DSCR Loans</h3>
+                  <div className="space-y-2 text-sm text-slate-600 mb-4">
+                    <div>• Debt Service Coverage Ratio</div>
+                    <div>• Property cash flow based</div>
+                    <div>• No personal income verification</div>
+                    <div>• Investment properties only</div>
+                    <div>• 20-25% down payment</div>
+                  </div>
+                  <p className="text-sm font-semibold text-orange-600 mb-4">Best for: Real estate investors</p>
+                  <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 text-sm">
+                    Learn More →
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
 
-            <Card className="border-l-4 border-l-red-500">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">⚡ Interest-Only Options</h3>
-                <div className="space-y-2 text-sm text-slate-600 mb-4">
-                  <div>• Interest-only payments</div>
-                  <div>• 5-10 year IO periods</div>
-                  <div>• Lower initial payments</div>
-                  <div>• Jumbo and standard amounts</div>
-                  <div>• 20-30% down payment</div>
-                </div>
-                <p className="text-sm font-semibold text-red-600">Best for: Cash flow optimization</p>
-              </CardContent>
-            </Card>
+            <div className="block">
+              <Card className="border-l-4 border-l-red-500 opacity-75 h-full">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">⚡ Interest-Only Options</h3>
+                  <div className="space-y-2 text-sm text-slate-600 mb-4">
+                    <div>• Interest-only payments</div>
+                    <div>• 5-10 year IO periods</div>
+                    <div>• Lower initial payments</div>
+                    <div>• Jumbo and standard amounts</div>
+                    <div>• 20-30% down payment</div>
+                  </div>
+                  <p className="text-sm font-semibold text-red-600 mb-4">Best for: Cash flow optimization</p>
+                  <Button disabled className="w-full bg-slate-400 text-white py-2 text-sm cursor-not-allowed">
+                    Coming Soon
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
 
-            <Card className="border-l-4 border-l-yellow-500">
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold text-slate-900 mb-3">🌍 Foreign National</h3>
-                <div className="space-y-2 text-sm text-slate-600 mb-4">
-                  <div>• No US credit required</div>
-                  <div>• Foreign income acceptable</div>
-                  <div>• ITIN or passport acceptable</div>
-                  <div>• International asset verification</div>
-                  <div>• 30-40% down payment</div>
-                </div>
-                <p className="text-sm font-semibold text-yellow-600">Best for: International buyers</p>
-              </CardContent>
-            </Card>
+            <Link href="/loan-programs/foreign-national-loans" className="block">
+              <Card className="border-l-4 border-l-yellow-500 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full cursor-pointer">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">🌍 Foreign National</h3>
+                  <div className="space-y-2 text-sm text-slate-600 mb-4">
+                    <div>• No US credit required</div>
+                    <div>• Foreign income acceptable</div>
+                    <div>• ITIN or passport acceptable</div>
+                    <div>• International asset verification</div>
+                    <div>• 30-40% down payment</div>
+                  </div>
+                  <p className="text-sm font-semibold text-yellow-600 mb-4">Best for: International buyers</p>
+                  <Button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 text-sm">
+                    Learn More →
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/loan-programs/fix-flip-loans" className="block">
+              <Card className="border-l-4 border-l-purple-600 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full cursor-pointer">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">🏗️ Fix & Flip Loans</h3>
+                  <div className="space-y-2 text-sm text-slate-600 mb-4">
+                    <div>• Short-term financing (6-24 months)</div>
+                    <div>• Quick closing (7-10 days)</div>
+                    <div>• Up to 90% of purchase price</div>
+                    <div>• Interest-only payments</div>
+                    <div>• Rehab funds available</div>
+                  </div>
+                  <p className="text-sm font-semibold text-purple-600 mb-4">Best for: Real estate investors, flippers</p>
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 text-sm">
+                    Learn More →
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
+
+            <Link href="/loan-programs/usda-rural-loans" className="block">
+              <Card className="border-l-4 border-l-green-600 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full cursor-pointer">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900 mb-3">🌾 USDA Rural Loans</h3>
+                  <div className="space-y-2 text-sm text-slate-600 mb-4">
+                    <div>• 0% down payment required</div>
+                    <div>• No PMI required</div>
+                    <div>• Income limits apply</div>
+                    <div>• Rural area requirement</div>
+                    <div>• Primary residence only</div>
+                  </div>
+                  <p className="text-sm font-semibold text-green-600 mb-4">Best for: Rural/suburban homebuyers</p>
+                  <Button className="w-full bg-green-700 hover:bg-green-800 text-white py-2 text-sm">
+                    Learn More →
+                  </Button>
+                </CardContent>
+              </Card>
+            </Link>
           </div>
         </div>
 

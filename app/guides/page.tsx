@@ -17,6 +17,46 @@ const guides = [
     category: 'Local Expertise',
     readTime: '5 min read',
     featured: true
+  },
+  {
+    title: 'Irvine vs Newport Beach: Home Buying Guide',
+    description: 'Compare two of Orange County\'s most desirable cities. Learn about home prices, schools, lifestyle, and which area fits your homebuying goals.',
+    url: '/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide',
+    category: 'Neighborhood Guide',
+    readTime: '8 min read',
+    featured: false
+  },
+  {
+    title: 'Mission Viejo vs Irvine: Complete Comparison',
+    description: 'Detailed comparison of Mission Viejo and Irvine for homebuyers. Explore housing costs, amenities, schools, and community features.',
+    url: '/neighborhood-guide/mission-viejo-vs-irvine-home-buying-guide',
+    category: 'Neighborhood Guide',
+    readTime: '7 min read',
+    featured: false
+  },
+  {
+    title: 'Newport Beach vs Laguna Beach Guide',
+    description: 'Coastal living comparison between Newport Beach and Laguna Beach. Learn about luxury real estate, lifestyle, and investment potential.',
+    url: '/neighborhood-guide/newport-beach-vs-laguna-beach-home-buying-guide',
+    category: 'Neighborhood Guide',
+    readTime: '6 min read',
+    featured: false
+  },
+  {
+    title: 'Huntington Beach vs Costa Mesa Comparison',
+    description: 'Compare these two popular Orange County cities for homebuyers. Analyze home prices, beach access, schools, and community amenities.',
+    url: '/neighborhood-guide/huntington-beach-vs-costa-mesa-home-buying-guide',
+    category: 'Neighborhood Guide',
+    readTime: '7 min read',
+    featured: false
+  },
+  {
+    title: 'Orange County Neighborhoods: Complete Guide',
+    description: 'Comprehensive guide to Orange County\'s best neighborhoods for homebuyers. Compare cities, prices, schools, and find your perfect match.',
+    url: '/neighborhood-guide/orange-county-neighborhoods-comparison-guide',
+    category: 'Neighborhood Guide',
+    readTime: '12 min read',
+    featured: false
   }
 ];
 
@@ -77,20 +117,28 @@ export default function GuidesPage() {
           ))}
         </div>
 
-        {/* Coming Soon */}
+        {/* Additional Resources */}
         <div className="mt-16 text-center">
           <div className="bg-blue-50 rounded-lg p-8">
-            <h2 className="text-2xl font-bold text-slate-900 mb-4">More Guides Coming Soon</h2>
+            <h2 className="text-2xl font-bold text-slate-900 mb-4">Need More Specific Guidance?</h2>
             <p className="text-slate-600 mb-6">
-              I'm working on more comprehensive guides covering FHA loans, VA loans, 
-              first-time homebuyer tips, and Orange County market insights.
+              Have questions about Orange County neighborhoods, loan programs, or market conditions? 
+              Get personalized advice tailored to your specific situation and goals.
             </p>
-            <Link 
-              href="/contact"
-              className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
-            >
-              Get Personalized Advice
-            </Link>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact"
+                className="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors"
+              >
+                Get Personalized Advice
+              </Link>
+              <Link 
+                href="/neighborhood-guide"
+                className="inline-flex items-center bg-white text-blue-600 border-2 border-blue-600 px-6 py-3 rounded-lg font-medium hover:bg-blue-50 transition-colors"
+              >
+                Explore All Neighborhood Guides
+              </Link>
+            </div>
           </div>
         </div>
       </div>

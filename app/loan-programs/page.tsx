@@ -467,6 +467,24 @@ export default function ProgramsPage() {
                 </Button>
               </div>
             </Link>
+
+            <Link href="/loan-programs/profit-loss-statement-loans" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">📊</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2 text-lg">P&L Statement Loans</h3>
+                <p className="text-sm text-slate-600 mb-3">CPA-prepared profit & loss statements for income verification</p>
+                <div className="text-xs text-slate-500 mb-4">
+                  • No personal tax returns<br/>
+                  • CPA-prepared statements<br/>
+                  • Business income focus
+                </div>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 text-sm">
+                  Get Details →
+                </Button>
+              </div>
+            </Link>
           </div>
 
           <div className="text-center bg-white rounded-lg p-6">

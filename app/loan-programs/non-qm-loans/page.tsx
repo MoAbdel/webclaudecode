@@ -117,8 +117,8 @@ export default function NonQMLoansPage() {
               </Card>
             </Link>
 
-            <div className="block">
-              <Card className="border-l-4 border-l-purple-500 opacity-75 h-full">
+            <Link href="/loan-programs/profit-loss-statement-loans" className="block">
+              <Card className="border-l-4 border-l-purple-500 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full cursor-pointer">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-slate-900 mb-3">📊 P&L Statement Loans</h3>
                   <div className="space-y-2 text-sm text-slate-600 mb-4">
@@ -129,12 +129,12 @@ export default function NonQMLoansPage() {
                     <div>• 10-25% down payment</div>
                   </div>
                   <p className="text-sm font-semibold text-purple-600 mb-4">Best for: Business owners, partnerships</p>
-                  <Button disabled className="w-full bg-slate-400 text-white py-2 text-sm cursor-not-allowed">
-                    Coming Soon
+                  <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 text-sm">
+                    Learn More →
                   </Button>
                 </CardContent>
               </Card>
-            </div>
+            </Link>
 
             <Link href="/loan-programs/dscr-investment-loans" className="block">
               <Card className="border-l-4 border-l-orange-500 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full cursor-pointer">

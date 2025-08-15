@@ -360,101 +360,113 @@ export default function ProgramsPage() {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">📊</span>
+            <Link href="/loan-programs/bank-statement-loans" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">📊</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2 text-lg">Bank Statement Loans</h3>
+                <p className="text-sm text-slate-600 mb-3">Perfect for self-employed borrowers who can't document traditional income</p>
+                <div className="text-xs text-slate-500 mb-4">
+                  • 12-24 month bank statements<br/>
+                  • Up to $3M loan amounts<br/>
+                  • Investment properties OK
+                </div>
+                <Button className="w-full bg-orange-600 hover:bg-orange-700 text-white py-2 text-sm">
+                  Get Details →
+                </Button>
               </div>
-              <h3 className="font-bold text-slate-900 mb-2 text-lg">Bank Statement Loans</h3>
-              <p className="text-sm text-slate-600 mb-3">Perfect for self-employed borrowers who can't document traditional income</p>
-              <div className="text-xs text-slate-500">
-                • 12-24 month bank statements<br/>
-                • Up to $3M loan amounts<br/>
-                • Investment properties OK
-              </div>
-              <Link href="/loan-programs/bank-statement-loans" className="text-blue-600 text-sm font-medium hover:underline">
-                Learn More →
-              </Link>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
-              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">💼</span>
+            <Link href="/loan-programs/asset-depletion-loans" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">💼</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2 text-lg">Asset Depletion</h3>
+                <p className="text-sm text-slate-600 mb-3">Qualify using your assets instead of traditional income</p>
+                <div className="text-xs text-slate-500 mb-4">
+                  • Retirement accounts<br/>
+                  • Investment portfolios<br/>
+                  • High net worth borrowers
+                </div>
+                <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-2 text-sm">
+                  Get Details →
+                </Button>
               </div>
-              <h3 className="font-bold text-slate-900 mb-2 text-lg">Asset Depletion</h3>
-              <p className="text-sm text-slate-600 mb-3">Qualify using your assets instead of traditional income</p>
-              <div className="text-xs text-slate-500">
-                • Retirement accounts<br/>
-                • Investment portfolios<br/>
-                • High net worth borrowers
-              </div>
-              <Link href="/loan-programs/asset-depletion-loans" className="text-blue-600 text-sm font-medium hover:underline">
-                Learn More →
-              </Link>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
-              <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">🏗️</span>
+            <Link href="/loan-programs/fix-flip-loans" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">🏗️</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2 text-lg">Fix & Flip Loans</h3>
+                <p className="text-sm text-slate-600 mb-3">Short-term financing for real estate investors and flippers</p>
+                <div className="text-xs text-slate-500 mb-4">
+                  • 6-24 month terms<br/>
+                  • Quick closings (7-10 days)<br/>
+                  • Up to 90% ARV
+                </div>
+                <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 text-sm">
+                  Get Details →
+                </Button>
               </div>
-              <h3 className="font-bold text-slate-900 mb-2 text-lg">Fix & Flip Loans</h3>
-              <p className="text-sm text-slate-600 mb-3">Short-term financing for real estate investors and flippers</p>
-              <div className="text-xs text-slate-500">
-                • 6-24 month terms<br/>
-                • Quick closings (7-10 days)<br/>
-                • Up to 90% ARV
-              </div>
-              <Link href="/loan-programs/fix-flip-loans" className="text-blue-600 text-sm font-medium hover:underline">
-                Learn More →
-              </Link>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
-              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">🎯</span>
+            <Link href="/loan-programs/dscr-investment-loans" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">🎯</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2 text-lg">DSCR Investment Loans</h3>
+                <p className="text-sm text-slate-600 mb-3">Qualify based on rental income, not personal income</p>
+                <div className="text-xs text-slate-500 mb-4">
+                  • No income documentation<br/>
+                  • Portfolio lenders<br/>
+                  • 1.0+ DSCR required
+                </div>
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-2 text-sm">
+                  Get Details →
+                </Button>
               </div>
-              <h3 className="font-bold text-slate-900 mb-2 text-lg">DSCR Investment Loans</h3>
-              <p className="text-sm text-slate-600 mb-3">Qualify based on rental income, not personal income</p>
-              <div className="text-xs text-slate-500">
-                • No income documentation<br/>
-                • Portfolio lenders<br/>
-                • 1.0+ DSCR required
-              </div>
-              <Link href="/loan-programs/dscr-investment-loans" className="text-blue-600 text-sm font-medium hover:underline">
-                Learn More →
-              </Link>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
-              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">📈</span>
+            <Link href="/loan-programs/foreign-national-loans" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full">
+                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">📈</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2 text-lg">Foreign National Loans</h3>
+                <p className="text-sm text-slate-600 mb-3">Mortgages for non-US citizens investing in US real estate</p>
+                <div className="text-xs text-slate-500 mb-4">
+                  • No US credit required<br/>
+                  • 25-40% down payment<br/>
+                  • Purchase or refinance
+                </div>
+                <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-2 text-sm">
+                  Get Details →
+                </Button>
               </div>
-              <h3 className="font-bold text-slate-900 mb-2 text-lg">Foreign National Loans</h3>
-              <p className="text-sm text-slate-600 mb-3">Mortgages for non-US citizens investing in US real estate</p>
-              <div className="text-xs text-slate-500">
-                • No US credit required<br/>
-                • 25-40% down payment<br/>
-                • Purchase or refinance
-              </div>
-              <Link href="/loan-programs/foreign-national-loans" className="text-blue-600 text-sm font-medium hover:underline">
-                Learn More →
-              </Link>
-            </div>
+            </Link>
 
-            <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200">
-              <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-2xl">🌾</span>
+            <Link href="/loan-programs/usda-rural-loans" className="block">
+              <div className="bg-white p-6 rounded-lg shadow-lg border border-slate-200 hover:shadow-xl transition-all duration-300 hover:scale-105 h-full">
+                <div className="w-12 h-12 bg-yellow-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-2xl">🌾</span>
+                </div>
+                <h3 className="font-bold text-slate-900 mb-2 text-lg">USDA Rural Loans</h3>
+                <p className="text-sm text-slate-600 mb-3">Zero down payment for eligible rural and suburban areas</p>
+                <div className="text-xs text-slate-500 mb-4">
+                  • 0% down payment<br/>
+                  • Income limits apply<br/>
+                  • Rural area requirement
+                </div>
+                <Button className="w-full bg-yellow-600 hover:bg-yellow-700 text-white py-2 text-sm">
+                  Get Details →
+                </Button>
               </div>
-              <h3 className="font-bold text-slate-900 mb-2 text-lg">USDA Rural Loans</h3>
-              <p className="text-sm text-slate-600 mb-3">Zero down payment for eligible rural and suburban areas</p>
-              <div className="text-xs text-slate-500">
-                • 0% down payment<br/>
-                • Income limits apply<br/>
-                • Rural area requirement
-              </div>
-              <Link href="/loan-programs/usda-rural-loans" className="text-blue-600 text-sm font-medium hover:underline">
-                Learn More →
-              </Link>
-            </div>
+            </Link>
           </div>
 
           <div className="text-center bg-white rounded-lg p-6">

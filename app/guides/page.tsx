@@ -5,8 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { BookOpen, Clock, TrendingUp, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Mortgage Guides | Home Buying Tips & Loan Advice - Orange County',
-  description: 'Expert mortgage guides and home buying tips from Mo Abdel. Learn about loan programs, market insights, and get professional advice for Orange County homebuyers.',
+  title: 'Mortgage Blog | Home Buying Tips & Loan Advice - Orange County',
+  description: 'Expert mortgage blog and home buying tips from Mo Abdel. Learn about loan programs, market insights, and get professional advice for Orange County homebuyers.',
 };
 
 const guides = [
@@ -28,7 +28,7 @@ export default function GuidesPage() {
         {/* Header */}
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Mortgage <span className="text-blue-600">Guides</span>
+            Mortgage <span className="text-blue-600">Blog</span>
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Expert insights and practical advice for Orange County homebuyers, 

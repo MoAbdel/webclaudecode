@@ -63,7 +63,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
           {/* Introduction */}
           <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
             <p className="text-slate-700 mb-0">
-              <strong>As a licensed wholesale mortgage broker serving Orange County for years, 
+              <strong>As a licensed wholesale mortgage broker serving Orange County, 
               I've seen firsthand how local expertise can save homebuyers time, money, and stress. 
               Here's why choosing a local mortgage broker matters for your Orange County home purchase.</strong>
             </p>
@@ -283,20 +283,6 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
             </div>
           </div>
 
-          {/* Testimonial/Quote */}
-          <div className="bg-blue-600 text-white rounded-lg p-8 mb-12">
-            <div className="flex items-start">
-              <MessageCircle className="w-8 h-8 text-blue-200 mr-4 flex-shrink-0 mt-1" />
-              <div>
-                <blockquote className="text-lg mb-4">
-                  "Working with Mo was like having a knowledgeable friend guide us through the process. 
-                  He knew exactly which lenders would work best for our Irvine condo purchase and 
-                  helped us close in 18 days during a competitive market."
-                </blockquote>
-                <cite className="text-blue-200">- Sarah M., Irvine Homebuyer</cite>
-              </div>
-            </div>
-          </div>
 
           {/* Call to Action */}
           <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-8 text-center">

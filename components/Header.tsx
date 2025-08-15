@@ -100,8 +100,8 @@ const navigationItems: NavigationItem[] = [
     dropdownItems: neighborhoodGuideDropdown
   },
   {
-    title: 'Guides',
-    page: 'Guides',
+    title: 'Blog',
+    page: 'Blog',
     url: '/guides',
     icon: Home,
   },

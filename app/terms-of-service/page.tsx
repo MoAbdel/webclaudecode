@@ -269,7 +269,7 @@ export default function TermsOfServicePage() {
                 </div>
                 <div className="flex items-center">
                   <FileText className="w-4 h-4 mr-2" />
-                  <span>Email: info@mothebroker.com</span>
+                  <span>Email: mabdelfattah@nexamortgage.com</span>
                 </div>
                 <div>
                   <strong>Mohammad Abdelfattah, NMLS #1426884</strong><br />

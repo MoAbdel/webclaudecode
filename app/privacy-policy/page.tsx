@@ -133,7 +133,7 @@ export default function PrivacyPolicyPage() {
             <h3 className="text-xl font-semibold text-slate-900 mb-3">How to Exercise Your Rights</h3>
             <p className="text-slate-700 mb-4">To exercise your California privacy rights, contact us:</p>
             <ul className="list-disc pl-6 text-slate-700 mb-6">
-              <li>Email: privacy@mothebroker.com</li>
+              <li>Email: mabdelfattah@nexamortgage.com</li>
               <li>Phone: (949) 579-2057</li>
               <li>Mail: [NEXA Mortgage Address - To be provided by attorney]</li>
             </ul>
@@ -214,7 +214,7 @@ export default function PrivacyPolicyPage() {
                 </div>
                 <div className="flex items-center">
                   <FileText className="w-4 h-4 mr-2" />
-                  <span>Email: privacy@mothebroker.com</span>
+                  <span>Email: mabdelfattah@nexamortgage.com</span>
                 </div>
                 <div>
                   <strong>Mohammad Abdelfattah, NMLS #1426884</strong><br />

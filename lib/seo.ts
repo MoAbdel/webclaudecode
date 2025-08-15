@@ -23,19 +23,51 @@ export const seoData = {
 
 export const structuredData = {
   "@context": "https://schema.org",
-  "@type": ["FinancialService", "LocalBusiness"],
-  "name": "Mo Abdel - Wholesale Mortgage",
-  "serviceType": "Wholesale Mortgage Broker",
+  "@type": ["FinancialService", "LocalBusiness", "MortgageBroker"],
+  "name": "Mo Abdel - Wholesale Mortgage Broker",
+  "alternateName": "Mo The Broker",
+  "serviceType": ["Wholesale Mortgage Broker", "Home Loan Specialist", "Mortgage Consultant"],
+  "hasCredential": "NMLS #1426884",
   "provider": {
     "@type": "Person",
     "name": "Mo Abdel",
-    "jobTitle": "Wholesale Mortgage Broker",
+    "jobTitle": "Licensed Wholesale Mortgage Broker",
+    "hasCredential": "NMLS #1426884",
     "worksFor": {
       "@type": "Organization",
-      "name": "NEXA Mortgage"
+      "name": "NEXA Mortgage",
+      "hasCredential": "Licensed Mortgage Company"
     }
   },
   "areaServed": [
+    {
+      "@type": "City", 
+      "name": "Irvine, CA"
+    },
+    {
+      "@type": "City", 
+      "name": "Newport Beach, CA"
+    },
+    {
+      "@type": "City", 
+      "name": "Costa Mesa, CA"
+    },
+    {
+      "@type": "City", 
+      "name": "Huntington Beach, CA"
+    },
+    {
+      "@type": "City", 
+      "name": "Mission Viejo, CA"
+    },
+    {
+      "@type": "City", 
+      "name": "Anaheim, CA"
+    },
+    {
+      "@type": "City", 
+      "name": "Santa Ana, CA"
+    },
     {
       "@type": "AdministrativeArea", 
       "name": "Orange County, CA"
@@ -43,34 +75,34 @@ export const structuredData = {
     {
       "@type": "AdministrativeArea",
       "name": "California"
-    },
-    {
-      "@type": "AdministrativeArea", 
-      "name": "Washington"
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Virginia" 
-    },
-    {
-      "@type": "AdministrativeArea",
-      "name": "Colorado"
     }
   ],
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Orange County",
     "addressRegion": "CA",
-    "addressCountry": "US"
+    "addressCountry": "US",
+    "postalCode": "92602"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "33.6846",
+    "longitude": "-117.8265"
   },
   "telephone": "+1-949-579-2057",
   "url": "https://mothebroker.com",
+  "sameAs": [
+    "https://www.linkedin.com/in/moabdel",
+    "https://mothebroker.com"
+  ],
   "priceRange": "$$",
-  "description": "Licensed wholesale mortgage broker serving Orange County, CA and beyond, providing access to over 200 lenders for competitive wholesale mortgage rates on home loans and refinancing. NMLS #1426884.",
-  "image": "/images/moabdel-headshot-final.png",
-  "openingHours": "Mo-Su 08:00-20:00",
-  "paymentAccepted": ["Cash", "Check", "Wire Transfer"],
-  "currenciesAccepted": "USD"
+  "description": "Licensed wholesale mortgage broker near me in Orange County, CA. Serving local homebuyers with access to over 200 lenders for competitive wholesale mortgage rates on home loans and refinancing. NMLS #1426884. Call (949) 579-2057 for local mortgage expertise.",
+  "image": "https://mothebroker.com/images/moabdel-headshot-final.png",
+  "logo": "https://mothebroker.com/images/mo-logo-white.webp",
+  "openingHours": ["Mo 08:00-20:00", "Tu 08:00-20:00", "We 08:00-20:00", "Th 08:00-20:00", "Fr 08:00-20:00", "Sa 09:00-18:00", "Su 10:00-16:00"],
+  "paymentAccepted": ["Cash", "Check", "Wire Transfer", "ACH"],
+  "currenciesAccepted": "USD",
+  "keywords": "mortgage broker near me, Orange County mortgage broker, home loans, refinancing, FHA loans, VA loans, wholesale mortgage rates"
 };
 
 export const mortgageLoanSchema = {

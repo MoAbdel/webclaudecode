@@ -7,8 +7,8 @@ import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
 
 export const metadata: Metadata = {
-  title: 'Mo Abdel - Mortgage Broker | Orange County Wholesale Mortgage NMLS #1426884',
-  description: 'Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
+  title: 'Mo Abdel - Mortgage Broker Near Me | Orange County CA Wholesale Mortgage NMLS #1426884',
+  description: 'Local mortgage broker near me in Orange County, CA. Get wholesale mortgage rates from 200+ lenders with fast closings, unbiased advice, and flexible home loan programs. Call (949) 579-2057.',
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },

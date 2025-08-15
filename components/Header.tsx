@@ -8,7 +8,22 @@ import { Button } from '@/components/ui/Button';
 import { createPageUrl } from '@/lib/utils';
 import Image from 'next/image';
 
-const loanProgramsDropdown = [
+interface DropdownItem {
+  title: string;
+  url: string;
+  isHeader?: boolean;
+}
+
+interface NavigationItem {
+  title: string;
+  page: string;
+  url: string;
+  icon: any;
+  hasDropdown?: boolean;
+  dropdownItems?: DropdownItem[];
+}
+
+const loanProgramsDropdown: DropdownItem[] = [
   { title: 'All Programs', url: '/loan-programs' },
   { title: 'HELOC', url: '/loan-programs/heloc' },
   { title: 'HELOAN', url: '/loan-programs/heloan' },
@@ -28,7 +43,7 @@ const loanProgramsDropdown = [
   { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' }
 ];
 
-const serviceAreasDropdown = [
+const serviceAreasDropdown: DropdownItem[] = [
   { title: 'All Service Areas', url: '/areas' },
   { title: 'Irvine', url: '/areas/irvine-mortgage-broker' },
   { title: 'Newport Beach', url: '/areas/newport-beach-mortgage-broker' },
@@ -39,7 +54,7 @@ const serviceAreasDropdown = [
   { title: 'Santa Ana', url: '/areas/santa-ana-mortgage-broker' }
 ];
 
-const neighborhoodGuideDropdown = [
+const neighborhoodGuideDropdown: DropdownItem[] = [
   { title: 'All Neighborhood Guides', url: '/neighborhood-guide' },
   { title: 'Irvine vs Newport Beach', url: '/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide' },
   { title: 'Mission Viejo vs Irvine', url: '/neighborhood-guide/mission-viejo-vs-irvine-home-buying-guide' },
@@ -48,7 +63,7 @@ const neighborhoodGuideDropdown = [
   { title: 'OC Neighborhoods Comparison', url: '/neighborhood-guide/orange-county-neighborhoods-comparison-guide' }
 ];
 
-const navigationItems = [
+const navigationItems: NavigationItem[] = [
   {
     title: 'Home',
     page: 'Home',

@@ -85,7 +85,45 @@
   </url>
   <url>
     <loc>https://mothebroker.com/loan-programs/cash-out-refinance</loc>
-    <lastmod>2025-08-14</lastmod>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Non-QM Specialty Loan Program Pages -->
+  <url>
+    <loc>https://mothebroker.com/loan-programs/bank-statement-loans</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/loan-programs/asset-depletion-loans</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/loan-programs/fix-flip-loans</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/loan-programs/dscr-investment-loans</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/loan-programs/foreign-national-loans</loc>
+    <lastmod>2025-08-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/loan-programs/usda-rural-loans</loc>
+    <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>

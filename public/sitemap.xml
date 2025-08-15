@@ -232,7 +232,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Guides Main -->
+  <!-- Blog Main -->
   <url>
     <loc>https://mothebroker.com/guides</loc>
     <lastmod>2025-08-15</lastmod>
@@ -240,7 +240,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Individual Guides -->
+  <!-- Individual Blog Posts -->
   <url>
     <loc>https://mothebroker.com/guides/why-choose-local-mortgage-broker</loc>
     <lastmod>2025-08-15</lastmod>

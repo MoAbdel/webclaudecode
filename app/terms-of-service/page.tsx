@@ -54,7 +54,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Agreement to Terms</h2>
             <p className="text-slate-700 mb-4">
               These Terms of Service ("Terms") govern your use of the website and services provided by 
-              Mo Abdel, NMLS #1426884, operating as a licensed mortgage loan originator with NEXA Mortgage 
+              Mohammad Abdelfattah, NMLS #1426884, operating as a licensed mortgage loan originator with NEXA Mortgage 
               ("we," "us," or "our"). By accessing our website or using our services, you agree to be bound by these Terms.
             </p>
             <p className="text-slate-700">
@@ -67,7 +67,7 @@ export default function TermsOfServicePage() {
             <div className="bg-blue-50 p-6 rounded-lg mb-4">
               <h3 className="text-xl font-semibold text-slate-900 mb-3">Licensing Information</h3>
               <ul className="list-disc pl-6 text-slate-700">
-                <li><strong>Mortgage Loan Originator:</strong> Mo Abdel, NMLS #1426884</li>
+                <li><strong>Mortgage Loan Originator:</strong> Mohammad Abdelfattah, NMLS #1426884</li>
                 <li><strong>Licensed Company:</strong> NEXA Mortgage</li>
                 <li><strong>Equal Housing Lender</strong></li>
                 <li><strong>License Verification:</strong> <a href="https://www.nmlsconsumeraccess.org" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">www.nmlsconsumeraccess.org</a></li>
@@ -159,7 +159,7 @@ export default function TermsOfServicePage() {
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Intellectual Property Rights</h2>
             <p className="text-slate-700 mb-4">
               All content on this website, including but not limited to text, graphics, logos, images, and software, 
-              is the property of Mo Abdel or our licensors and is protected by copyright and other intellectual property laws.
+              is the property of Mohammad Abdelfattah or our licensors and is protected by copyright and other intellectual property laws.
             </p>
             <p className="text-slate-700">
               You may not reproduce, distribute, modify, or create derivative works from our content without written permission.
@@ -272,7 +272,7 @@ export default function TermsOfServicePage() {
                   <span>Email: info@mothebroker.com</span>
                 </div>
                 <div>
-                  <strong>Mo Abdel, NMLS #1426884</strong><br />
+                  <strong>Mohammad Abdelfattah, NMLS #1426884</strong><br />
                   Licensed Mortgage Loan Originator<br />
                   NEXA Mortgage<br />
                   [Physical Address - To be provided]

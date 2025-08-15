@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Overview</h2>
             <p className="text-slate-700 mb-4">
-              Mo Abdel, NMLS #1426884, operating as a wholesale mortgage broker with NEXA Mortgage, 
+              Mohammad Abdelfattah, NMLS #1426884, operating as a wholesale mortgage broker with NEXA Mortgage, 
               is committed to protecting your privacy and personal information. This Privacy Policy 
               explains how we collect, use, share, and protect your information when you use our website 
               and mortgage services.
@@ -217,7 +217,7 @@ export default function PrivacyPolicyPage() {
                   <span>Email: privacy@mothebroker.com</span>
                 </div>
                 <div>
-                  <strong>Mo Abdel, NMLS #1426884</strong><br />
+                  <strong>Mohammad Abdelfattah, NMLS #1426884</strong><br />
                   Licensed Mortgage Loan Originator<br />
                   NEXA Mortgage<br />
                   [Physical Address - To be provided]

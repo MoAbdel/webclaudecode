@@ -15,27 +15,9 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <div className="flex items-center space-x-4 mb-4">
-              <div className="relative h-32 w-auto">
-                <Image 
-                  src="/images/mo-logo-white.webp"
-                  alt="Mo Abdel - Orange County Wholesale Mortgage Broker NMLS 1426884" 
-                  width={128}
-                  height={128}
-                  className="filter invert"
-                />
-              </div>
-              <div className="relative h-20 w-auto">
-                <Image 
-                  src="/images/equal-housing.webp"
-                  alt="Equal Housing Opportunity" 
-                  width={80}
-                  height={80}
-                />
-              </div>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="col-span-1 md:col-span-1">
+            <h3 className="text-lg font-semibold mb-4">About Mo Abdel</h3>
             <p className="text-slate-400 mb-4">
               Your trusted local wholesale mortgage broker serving all of Orange County. 
               I'm committed to finding you the best rates and loan programs available. NMLS #1426884.

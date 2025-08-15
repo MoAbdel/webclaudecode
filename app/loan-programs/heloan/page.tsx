@@ -339,6 +339,25 @@ export default function HELOANPage() {
             Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
           </p>
         </div>
+
+        {/* Required Disclaimers */}
+        <div className="bg-slate-100 rounded-lg p-6 mt-8">
+          <h3 className="text-lg font-semibold text-slate-900 mb-3">Important Disclaimers</h3>
+          <div className="text-sm text-slate-700 space-y-2">
+            <p>
+              <strong>This is not a commitment to lend.</strong> All information contained herein is subject to change without notice. 
+              All loans are subject to credit approval, income verification, and property appraisal. Equal Housing Lender.
+            </p>
+            <p>
+              This material is not from HUD or FHA and has not been approved by HUD or any government agency. 
+              The information provided is for informational purposes only and is not an advertisement for products or services.
+            </p>
+            <p>
+              Interest rates and loan terms are subject to change without notice. All information must be verified prior to loan approval. 
+              Mo Abdel - NMLS #1426884, Licensed Mortgage Loan Originator with NEXA Mortgage.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

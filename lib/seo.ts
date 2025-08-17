@@ -93,6 +93,8 @@ export const structuredData = {
   "url": "https://mothebroker.com",
   "sameAs": [
     "https://www.linkedin.com/in/moabdel",
+    "https://www.facebook.com/profile.php?id=61573517340174",
+    "https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest",
     "https://mothebroker.com"
   ],
   "priceRange": "$$",

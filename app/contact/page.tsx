@@ -78,6 +78,24 @@ export default function ContactPage() {
                   <p className="text-sm text-slate-600">I'm here when you need me</p>
                 </div>
               </div>
+              
+              {/* Social Media Links */}
+              <div className="flex items-start space-x-4">
+                <div className="bg-blue-100 p-3 rounded-lg">
+                  <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-semibold text-slate-900">Connect on Social Media</h3>
+                  <div className="flex space-x-4 mt-2">
+                    <a href="https://www.facebook.com/profile.php?id=61573517340174" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Facebook</a>
+                    <a href="https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Yelp Reviews</a>
+                    <a href="https://www.linkedin.com/in/moabdel" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">LinkedIn</a>
+                  </div>
+                  <p className="text-sm text-slate-600">Follow for market updates and tips</p>
+                </div>
+              </div>
             </div>
 
             <div className="bg-blue-50 rounded-lg p-6">

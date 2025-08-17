@@ -193,7 +193,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-[60]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
@@ -216,13 +216,16 @@ export default function Header() {
                   <div className="relative">
                     <button
                       type="button"
-                      onClick={(e) => {
-                        const dropdownType = getDropdownType(item.page);
+                      onClick={() => {
+                        alert(`Clicked ${item.title}!`);
+                        const dropdownType = item.page === 'Programs' ? 'programs' : 
+                                           item.page === 'ServiceAreas' ? 'areas' : 
+                                           item.page === 'NeighborhoodGuide' ? 'neighborhood' : null;
                         if (dropdownType) {
-                          toggleDropdown(dropdownType, e);
+                          setActiveDropdown(prev => prev === dropdownType ? null : dropdownType);
                         }
                       }}
-                      className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
+                      className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
                         (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide')) ||
@@ -230,6 +233,7 @@ export default function Header() {
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}
+                      style={{ pointerEvents: 'auto', cursor: 'pointer' }}
                     >
                       {item.title}
                       <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${

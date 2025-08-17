@@ -95,13 +95,21 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' }
 ];
 
-const neighborhoodGuideDropdown: DropdownItem[] = [
+const guidesAndBlogDropdown: DropdownItem[] = [
+  { title: 'All Guides & Articles', url: '/guides' },
+  
+  // Neighborhood Guides
+  { title: '🏘️ NEIGHBORHOOD GUIDES', url: '#', isHeader: true },
   { title: 'All Neighborhood Guides', url: '/neighborhood-guide' },
   { title: 'Irvine vs Newport Beach', url: '/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide' },
   { title: 'Mission Viejo vs Irvine', url: '/neighborhood-guide/mission-viejo-vs-irvine-home-buying-guide' },
   { title: 'Newport Beach vs Laguna Beach', url: '/neighborhood-guide/newport-beach-vs-laguna-beach-home-buying-guide' },
   { title: 'Huntington Beach vs Costa Mesa', url: '/neighborhood-guide/huntington-beach-vs-costa-mesa-home-buying-guide' },
-  { title: 'OC Neighborhoods Comparison', url: '/neighborhood-guide/orange-county-neighborhoods-comparison-guide' }
+  { title: 'OC Neighborhoods Comparison', url: '/neighborhood-guide/orange-county-neighborhoods-comparison-guide' },
+  
+  // Blog Articles
+  { title: '📝 ARTICLES', url: '#', isHeader: true },
+  { title: 'Why Choose Local Mortgage Broker', url: '/guides/why-choose-local-mortgage-broker' }
 ];
 
 const navigationItems: NavigationItem[] = [
@@ -134,18 +142,12 @@ const navigationItems: NavigationItem[] = [
     dropdownItems: serviceAreasDropdown
   },
   {
-    title: 'Guide',
-    page: 'NeighborhoodGuide', 
-    url: '/neighborhood-guide',
-    icon: Home,
-    hasDropdown: true,
-    dropdownItems: neighborhoodGuideDropdown
-  },
-  {
-    title: 'Blog',
-    page: 'Blog',
+    title: 'Guides',
+    page: 'Guides', 
     url: '/guides',
     icon: Home,
+    hasDropdown: true,
+    dropdownItems: guidesAndBlogDropdown
   },
   {
     title: 'About',
@@ -192,7 +194,7 @@ export default function Header() {
                       className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide'))
+                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides')))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}
@@ -202,7 +204,7 @@ export default function Header() {
                     </Link>
                     
                     {/* Simple hover dropdown */}
-                    <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-lg shadow-2xl border border-slate-200 py-3 z-[9999] max-h-[70vh] overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 scrollbar-thin scrollbar-thumb-slate-300">
+                    <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-lg shadow-2xl border border-slate-200 py-3 z-[9999] max-h-[80vh] overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                       {item.dropdownItems?.map((dropdownItem, index) => (
                         dropdownItem.isHeader ? (
                           <div

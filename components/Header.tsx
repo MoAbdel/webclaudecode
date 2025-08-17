@@ -200,14 +200,19 @@ export default function Header() {
                         setNeighborhoodDropdownOpen(true);
                       }
                     }}
-                    onMouseLeave={() => {
-                      if (item.page === 'Programs') {
-                        setProgramsDropdownOpen(false);
-                      } else if (item.page === 'ServiceAreas') {
-                        setServiceAreasDropdownOpen(false);
-                      } else if (item.page === 'NeighborhoodGuide') {
-                        setNeighborhoodDropdownOpen(false);
-                      }
+                    onMouseLeave={(e) => {
+                      // Add delay to prevent dropdown from closing when moving to dropdown content
+                      setTimeout(() => {
+                        if (!e.currentTarget.matches(':hover')) {
+                          if (item.page === 'Programs') {
+                            setProgramsDropdownOpen(false);
+                          } else if (item.page === 'ServiceAreas') {
+                            setServiceAreasDropdownOpen(false);
+                          } else if (item.page === 'NeighborhoodGuide') {
+                            setNeighborhoodDropdownOpen(false);
+                          }
+                        }
+                      }, 150);
                     }}
                   >
                     <button
@@ -231,7 +236,7 @@ export default function Header() {
                     {((item.page === 'Programs' && programsDropdownOpen) ||
                       (item.page === 'ServiceAreas' && serviceAreasDropdownOpen) ||
                       (item.page === 'NeighborhoodGuide' && neighborhoodDropdownOpen)) && (
-                      <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50">
+                      <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50 max-h-96 overflow-y-auto">
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           dropdownItem.isHeader ? (
                             <div

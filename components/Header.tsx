@@ -164,41 +164,37 @@ const navigationItems: NavigationItem[] = [
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [programsDropdownOpen, setProgramsDropdownOpen] = useState(false);
-  const [serviceAreasDropdownOpen, setServiceAreasDropdownOpen] = useState(false);
-  const [neighborhoodDropdownOpen, setNeighborhoodDropdownOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   // Close dropdowns when clicking outside
   React.useEffect(() => {
     const handleClickOutside = () => {
-      setProgramsDropdownOpen(false);
-      setServiceAreasDropdownOpen(false);
-      setNeighborhoodDropdownOpen(false);
+      setActiveDropdown(null);
     };
 
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
 
-  const handleDropdownClick = (dropdownType: string, event: React.MouseEvent) => {
+  const getDropdownType = (itemPage: string) => {
+    switch (itemPage) {
+      case 'Programs': return 'programs';
+      case 'ServiceAreas': return 'areas';
+      case 'NeighborhoodGuide': return 'neighborhood';
+      default: return null;
+    }
+  };
+
+  const toggleDropdown = (dropdownType: string, event: React.MouseEvent) => {
+    event.preventDefault();
     event.stopPropagation();
     
-    // Close all other dropdowns first
-    setProgramsDropdownOpen(false);
-    setServiceAreasDropdownOpen(false);
-    setNeighborhoodDropdownOpen(false);
+    console.log('Dropdown clicked:', dropdownType, 'Current active:', activeDropdown);
     
-    // Open the clicked dropdown
-    switch (dropdownType) {
-      case 'programs':
-        setProgramsDropdownOpen(prev => !prev);
-        break;
-      case 'areas':
-        setServiceAreasDropdownOpen(prev => !prev);
-        break;
-      case 'neighborhood':
-        setNeighborhoodDropdownOpen(prev => !prev);
-        break;
+    if (activeDropdown === dropdownType) {
+      setActiveDropdown(null);
+    } else {
+      setActiveDropdown(dropdownType);
     }
   };
 
@@ -225,32 +221,30 @@ export default function Header() {
                 {item.hasDropdown ? (
                   <div className="relative">
                     <button
-                      onClick={(e) => handleDropdownClick(
-                        item.page === 'Programs' ? 'programs' : 
-                        item.page === 'ServiceAreas' ? 'areas' : 
-                        'neighborhood', 
-                        e
-                      )}
+                      type="button"
+                      onClick={(e) => {
+                        const dropdownType = getDropdownType(item.page);
+                        if (dropdownType) {
+                          toggleDropdown(dropdownType, e);
+                        }
+                      }}
                       className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide'))
+                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide')) ||
+                        activeDropdown === getDropdownType(item.page)
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}
                     >
                       {item.title}
                       <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                        (item.page === 'Programs' && programsDropdownOpen) ||
-                        (item.page === 'ServiceAreas' && serviceAreasDropdownOpen) ||
-                        (item.page === 'NeighborhoodGuide' && neighborhoodDropdownOpen) ? 'rotate-180' : ''
+                        activeDropdown === getDropdownType(item.page) ? 'rotate-180' : ''
                       }`} />
                     </button>
                     
                     {/* Dropdown Menu */}
-                    {((item.page === 'Programs' && programsDropdownOpen) ||
-                      (item.page === 'ServiceAreas' && serviceAreasDropdownOpen) ||
-                      (item.page === 'NeighborhoodGuide' && neighborhoodDropdownOpen)) && (
+                    {activeDropdown === getDropdownType(item.page) && (
                       <div 
                         className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-2xl border border-slate-200 py-2 z-[100] max-h-96 overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
@@ -268,11 +262,7 @@ export default function Header() {
                               key={index}
                               href={dropdownItem.url}
                               className="block px-4 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150 whitespace-nowrap"
-                              onClick={() => {
-                                setProgramsDropdownOpen(false);
-                                setServiceAreasDropdownOpen(false);
-                                setNeighborhoodDropdownOpen(false);
-                              }}
+                              onClick={() => setActiveDropdown(null)}
                             >
                               {dropdownItem.title}
                             </Link>

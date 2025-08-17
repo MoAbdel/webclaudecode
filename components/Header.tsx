@@ -217,16 +217,15 @@ export default function Header() {
                     <button
                       type="button"
                       onClick={() => {
-                        const dropdownType = item.page === 'Programs' ? 'programs' : 
-                                           item.page === 'ServiceAreas' ? 'areas' : 
-                                           item.page === 'NeighborhoodGuide' ? 'neighborhood' : null;
-                        console.log('Clicked:', item.title, 'Page:', item.page, 'DropdownType:', dropdownType);
-                        if (dropdownType) {
-                          setActiveDropdown(prev => {
-                            const newValue = prev === dropdownType ? null : dropdownType;
-                            console.log('ActiveDropdown changing from', prev, 'to', newValue);
-                            return newValue;
-                          });
+                        console.log('Button clicked!', item.page);
+                        
+                        // Simple direct mapping
+                        if (item.page === 'Programs') {
+                          setActiveDropdown(prev => prev === 'programs' ? null : 'programs');
+                        } else if (item.page === 'ServiceAreas') {
+                          setActiveDropdown(prev => prev === 'areas' ? null : 'areas');
+                        } else if (item.page === 'NeighborhoodGuide') {
+                          setActiveDropdown(prev => prev === 'neighborhood' ? null : 'neighborhood');
                         }
                       }}
                       className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
@@ -248,12 +247,16 @@ export default function Header() {
                     {/* Debug info */}
                     <div className="absolute top-0 right-0 bg-yellow-300 text-black text-xs p-1 rounded z-[999]">
                       Page: {item.page}<br/>
-                      Active: {activeDropdown}<br/>
-                      Match: {activeDropdown === getDropdownType(item.page) ? 'YES' : 'NO'}
+                      Active: {activeDropdown || 'none'}<br/>
+                      Match: {((item.page === 'Programs' && activeDropdown === 'programs') ||
+                               (item.page === 'ServiceAreas' && activeDropdown === 'areas') ||
+                               (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood')) ? 'YES' : 'NO'}
                     </div>
                     
                     {/* Dropdown Menu */}
-                    {activeDropdown === getDropdownType(item.page) && (
+                    {((item.page === 'Programs' && activeDropdown === 'programs') ||
+                      (item.page === 'ServiceAreas' && activeDropdown === 'areas') ||
+                      (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood')) && (
                       <div 
                         className="absolute top-full left-0 mt-2 w-80 bg-red-100 rounded-lg shadow-2xl border-2 border-blue-200 py-3 z-[9999] max-h-96 overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}

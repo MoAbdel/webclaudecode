@@ -24,6 +24,9 @@ export const metadata: Metadata = {
   description: 'Discover why working with a local Orange County mortgage broker like Mo Abdel provides better rates, personalized service, and market expertise for your home loan.',
   keywords: 'local mortgage broker Orange County, mortgage broker near me, Orange County home loans, local lending expert, Mo Abdel mortgage broker',
   openGraph: {
+    title: 'Why Choose a Local Orange County Mortgage Broker | Mo Abdel Guide',
+    description: 'Discover why working with a local Orange County mortgage broker like Mo Abdel provides better rates, personalized service, and market expertise for your home loan.',
+    type: 'article',
     publishedTime: '2025-07-18T08:30:00Z',
   },
 };

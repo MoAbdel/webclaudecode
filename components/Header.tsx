@@ -216,8 +216,11 @@ export default function Header() {
                   <div className="relative">
                     <button
                       type="button"
-                      onClick={() => {
+                      onClick={(e) => {
+                        e.preventDefault();
+                        e.stopPropagation();
                         console.log('Button clicked!', item.page);
+                        alert(`Clicked ${item.page}!`);
                         
                         // Simple direct mapping
                         if (item.page === 'Programs') {
@@ -228,15 +231,15 @@ export default function Header() {
                           setActiveDropdown(prev => prev === 'neighborhood' ? null : 'neighborhood');
                         }
                       }}
-                      className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
-                        (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
-                        (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide')) ||
-                        activeDropdown === getDropdownType(item.page)
-                          ? 'text-blue-600 bg-blue-50'
-                          : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
-                      }`}
-                      style={{ pointerEvents: 'auto', cursor: 'pointer' }}
+                      className="relative z-[70] inline-flex items-center px-4 py-3 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer bg-red-200 border-2 border-red-500 text-black hover:bg-red-300"
+                      style={{ 
+                        pointerEvents: 'auto', 
+                        cursor: 'pointer',
+                        position: 'relative',
+                        zIndex: 70,
+                        minHeight: '40px',
+                        display: 'inline-flex'
+                      }}
                     >
                       {item.title}
                       <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${
@@ -244,8 +247,8 @@ export default function Header() {
                       }`} />
                     </button>
                     
-                    {/* Debug info */}
-                    <div className="absolute top-0 right-0 bg-yellow-300 text-black text-xs p-1 rounded z-[999]">
+                    {/* Debug info - moved below button */}
+                    <div className="absolute top-12 left-0 bg-yellow-300 text-black text-xs p-1 rounded z-[60]">
                       Page: {item.page}<br/>
                       Active: {activeDropdown || 'none'}<br/>
                       Match: {((item.page === 'Programs' && activeDropdown === 'programs') ||

@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Mission Viejo vs Irvine Home Buying Guide 2025 | Best Family Neighborhoods Orange County',
   description: 'Complete comparison of buying homes in Mission Viejo vs Irvine. Both top family communities - compare home prices, schools, amenities, and mortgage options.',
   openGraph: {
+    title: 'Mission Viejo vs Irvine Home Buying Guide 2025 | Best Family Neighborhoods Orange County',
+    description: 'Complete comparison of buying homes in Mission Viejo vs Irvine. Both top family communities - compare home prices, schools, amenities, and mortgage options.',
+    type: 'article',
     publishedTime: '2025-02-28T14:30:00Z',
   },
 };

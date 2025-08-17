@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Orange County Neighborhoods Comparison Guide 2025 | Best Places to Buy Homes OC',
   description: 'Complete guide to Orange County neighborhoods: Irvine, Newport Beach, Laguna Beach, Mission Viejo, Costa Mesa. Home prices, schools, commutes, and mortgage options compared.',
   openGraph: {
+    title: 'Orange County Neighborhoods Comparison Guide 2025 | Best Places to Buy Homes OC',
+    description: 'Complete guide to Orange County neighborhoods: Irvine, Newport Beach, Laguna Beach, Mission Viejo, Costa Mesa. Home prices, schools, commutes, and mortgage options compared.',
+    type: 'article',
     publishedTime: '2025-06-05T16:20:00Z',
   },
 };

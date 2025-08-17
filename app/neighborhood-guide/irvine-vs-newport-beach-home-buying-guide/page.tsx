@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Irvine vs Newport Beach Home Buying Guide 2025 | Best Neighborhoods Orange County',
   description: 'Complete comparison of buying homes in Irvine vs Newport Beach. Mortgage rates, home prices, schools, lifestyle, and market trends. Expert Orange County mortgage broker insights.',
   openGraph: {
+    title: 'Irvine vs Newport Beach Home Buying Guide 2025 | Best Neighborhoods Orange County',
+    description: 'Complete comparison of buying homes in Irvine vs Newport Beach. Mortgage rates, home prices, schools, lifestyle, and market trends. Expert Orange County mortgage broker insights.',
+    type: 'article',
     publishedTime: '2025-03-15T10:00:00Z',
   },
 };

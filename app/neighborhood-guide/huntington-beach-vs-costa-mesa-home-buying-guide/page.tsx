@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Huntington Beach vs Costa Mesa Home Buying Guide 2025 | Surf City vs Arts District OC',
   description: 'Compare Huntington Beach vs Costa Mesa home buying: beach lifestyle vs urban arts culture. Home prices, commutes, amenities, and mortgage options compared.',
   openGraph: {
+    title: 'Huntington Beach vs Costa Mesa Home Buying Guide 2025 | Surf City vs Arts District OC',
+    description: 'Compare Huntington Beach vs Costa Mesa home buying: beach lifestyle vs urban arts culture. Home prices, commutes, amenities, and mortgage options compared.',
+    type: 'article',
     publishedTime: '2025-04-10T09:15:00Z',
   },
 };

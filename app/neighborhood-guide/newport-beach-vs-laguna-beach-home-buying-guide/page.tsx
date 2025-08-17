@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Newport Beach vs Laguna Beach Home Buying Guide 2025 | Luxury Coastal Living Orange County',
   description: 'Complete comparison of luxury coastal communities: Newport Beach vs Laguna Beach. Compare home prices, lifestyle, amenities, and mortgage options for OC beach living.',
   openGraph: {
+    title: 'Newport Beach vs Laguna Beach Home Buying Guide 2025 | Luxury Coastal Living Orange County',
+    description: 'Complete comparison of luxury coastal communities: Newport Beach vs Laguna Beach. Compare home prices, lifestyle, amenities, and mortgage options for OC beach living.',
+    type: 'article',
     publishedTime: '2025-01-22T11:45:00Z',
   },
 };

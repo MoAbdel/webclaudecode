@@ -164,41 +164,9 @@ const navigationItems: NavigationItem[] = [
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-
-  // Close dropdowns when clicking outside
-  React.useEffect(() => {
-    const handleClickOutside = () => {
-      setActiveDropdown(null);
-    };
-
-    document.addEventListener('click', handleClickOutside);
-    return () => document.removeEventListener('click', handleClickOutside);
-  }, []);
-
-  const getDropdownType = (itemPage: string) => {
-    switch (itemPage) {
-      case 'Programs': return 'programs';
-      case 'ServiceAreas': return 'areas';
-      case 'NeighborhoodGuide': return 'neighborhood';
-      default: return null;
-    }
-  };
-
-  const toggleDropdown = (dropdownType: string, event: React.MouseEvent) => {
-    event.preventDefault();
-    event.stopPropagation();
-    
-    setActiveDropdown(prev => prev === dropdownType ? null : dropdownType);
-  };
 
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-[60]">
-      {/* Temporary state indicator */}
-      <div className="fixed top-0 right-0 bg-green-500 text-white p-2 z-[999]">
-        State: {activeDropdown || 'none'}
-      </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
@@ -218,71 +186,42 @@ export default function Header() {
             {navigationItems.map((item) => (
               <div key={item.title} className="relative">
                 {item.hasDropdown ? (
-                  <div className="relative">
-                    <button
-                      type="button"
-                      onClick={() => {
-                        console.log('Click detected!', item.page);
-                        alert(`Clicked ${item.page}!`);
-                        setActiveDropdown('test-state');
-                      }}
-                      className={`relative z-[70] inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
+                  <div className="relative group">
+                    <Link
+                      href={item.url}
+                      className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide')) ||
-                        ((item.page === 'Programs' && activeDropdown === 'programs') ||
-                         (item.page === 'ServiceAreas' && activeDropdown === 'areas') ||
-                         (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood'))
+                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}
                     >
                       {item.title}
-                      <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                        ((item.page === 'Programs' && activeDropdown === 'programs') ||
-                         (item.page === 'ServiceAreas' && activeDropdown === 'areas') ||
-                         (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood')) ? 'rotate-180' : ''
-                      }`} />
-                    </button>
+                      <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-200 group-hover:rotate-180" />
+                    </Link>
                     
-                    {/* Test dropdown - should always show if any dropdown is active */}
-                    {activeDropdown && (
-                      <div className="absolute top-full left-0 mt-1 w-48 bg-red-300 border-2 border-black p-4 z-[9999]">
-                        <div className="text-black font-bold">DROPDOWN ACTIVE!</div>
-                        <div>State: {activeDropdown}</div>
-                        <div>Page: {item.page}</div>
-                      </div>
-                    )}
-                    
-                    {/* Dropdown Menu */}
-                    {((item.page === 'Programs' && activeDropdown === 'programs') ||
-                      (item.page === 'ServiceAreas' && activeDropdown === 'areas') ||
-                      (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood')) && (
-                      <div 
-                        className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-2xl border border-slate-200 py-2 z-[9999] max-h-96 overflow-y-auto"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        {item.dropdownItems?.map((dropdownItem, index) => (
-                          dropdownItem.isHeader ? (
-                            <div
-                              key={index}
-                              className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider border-t border-slate-100 mt-1 pt-3 whitespace-nowrap"
-                            >
-                              {dropdownItem.title}
-                            </div>
-                          ) : (
-                            <Link
-                              key={index}
-                              href={dropdownItem.url}
-                              className="block px-4 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150 whitespace-nowrap"
-                              onClick={() => setActiveDropdown(null)}
-                            >
-                              {dropdownItem.title}
-                            </Link>
-                          )
-                        ))}
-                      </div>
-                    )}
+                    {/* Simple hover dropdown */}
+                    <div className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-2xl border border-slate-200 py-2 z-[9999] max-h-96 overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                      {item.dropdownItems?.map((dropdownItem, index) => (
+                        dropdownItem.isHeader ? (
+                          <div
+                            key={index}
+                            className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider border-t border-slate-100 mt-1 pt-3 whitespace-nowrap"
+                          >
+                            {dropdownItem.title}
+                          </div>
+                        ) : (
+                          <Link
+                            key={index}
+                            href={dropdownItem.url}
+                            className="block px-4 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150 whitespace-nowrap"
+                          >
+                            {dropdownItem.title}
+                          </Link>
+                        )
+                      ))}
+                    </div>
                   </div>
                 ) : (
                   <Link

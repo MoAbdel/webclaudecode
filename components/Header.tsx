@@ -190,16 +190,22 @@ export default function Header() {
     event.stopPropagation();
     
     console.log('Dropdown clicked:', dropdownType, 'Current active:', activeDropdown);
+    console.log('Event target:', event.target);
     
-    if (activeDropdown === dropdownType) {
-      setActiveDropdown(null);
-    } else {
-      setActiveDropdown(dropdownType);
-    }
+    setActiveDropdown(prev => {
+      const newValue = prev === dropdownType ? null : dropdownType;
+      console.log('Setting activeDropdown from', prev, 'to', newValue);
+      return newValue;
+    });
   };
 
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
+      {/* Global debug indicator */}
+      <div className="fixed top-0 left-0 bg-black text-white text-xs p-2 z-[999]">
+        Active: {activeDropdown || 'none'}
+      </div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
@@ -242,6 +248,13 @@ export default function Header() {
                         activeDropdown === getDropdownType(item.page) ? 'rotate-180' : ''
                       }`} />
                     </button>
+                    
+                    {/* Debug indicator */}
+                    {activeDropdown === getDropdownType(item.page) && (
+                      <div className="absolute top-0 right-0 bg-red-500 text-white text-xs px-1 rounded">
+                        OPEN
+                      </div>
+                    )}
                     
                     {/* Dropdown Menu */}
                     {activeDropdown === getDropdownType(item.page) && (

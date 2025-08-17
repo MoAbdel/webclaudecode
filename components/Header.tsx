@@ -98,6 +98,11 @@ const serviceAreasDropdown: DropdownItem[] = [
 const guidesAndBlogDropdown: DropdownItem[] = [
   { title: 'All Guides & Articles', url: '/guides' },
   
+  // Complete Guides
+  { title: '📚 COMPLETE GUIDES', url: '#', isHeader: true },
+  { title: 'Orange County Home Buyer Guide', url: '/guides/orange-county-home-buyer-guide' },
+  { title: 'Orange County Refinancing Guide', url: '/guides/orange-county-refinancing-guide' },
+  
   // Neighborhood Guides
   { title: '🏘️ NEIGHBORHOOD GUIDES', url: '#', isHeader: true },
   { title: 'All Neighborhood Guides', url: '/neighborhood-guide' },

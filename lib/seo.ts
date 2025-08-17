@@ -1,15 +1,15 @@
 export const seoData = {
   Home: { 
-    title: "Mo Abdel | Wholesale Mortgage Broker Orange County | NMLS #1426884", 
-    description: "Get wholesale mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs. Expert guidance on FHA, VA, jumbo loans, and HELOC options." 
+    title: "Mo Abdel | Mortgage Broker Orange County | NMLS #1426884", 
+    description: "Get competitive mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs. Expert guidance on FHA, VA, jumbo loans, and HELOC options." 
   },
   About: { 
-    title: "About Mo Abdel | NEXA Wholesale Mortgage Broker", 
-    description: "Meet Mo Abdel – licensed wholesale mortgage broker helping clients in CA, WA, VA & CO get better rates, faster approvals, and more loan options. Specializing in Orange County home loans with access to 200+ lenders." 
+    title: "About Mo Abdel | NEXA Mortgage Broker", 
+    description: "Meet Mo Abdel – licensed mortgage broker helping clients in CA, WA, VA & CO get better rates, faster approvals, and more loan options. Specializing in Orange County home loans with access to 200+ lenders." 
   },
   Programs: { 
     title: "Loan Programs | FHA, VA, Jumbo & HELOC – Orange County Mortgage Broker", 
-    description: "Explore FHA, VA, Jumbo, and HELOC options. Mo Abdel finds the right mortgage for your goals with wholesale rates & flexible terms." 
+    description: "Explore FHA, VA, Jumbo, and HELOC options. Mo Abdel finds the right mortgage for your goals with competitive rates & flexible terms." 
   },
   Calculator: { 
     title: "Mortgage Rate Calculator | Compare Loan Options in Orange County", 
@@ -17,21 +17,21 @@ export const seoData = {
   },
   Contact: { 
     title: "Contact Mo Abdel | Apply for a Home Loan in Orange County", 
-    description: "Start your mortgage application with Mo Abdel. Serving Orange County & beyond with personalized loan solutions and competitive wholesale rates." 
+    description: "Start your mortgage application with Mo Abdel. Serving Orange County & beyond with personalized loan solutions and competitive rates." 
   }
 };
 
 export const structuredData = {
   "@context": "https://schema.org",
   "@type": ["FinancialService", "LocalBusiness", "MortgageBroker"],
-  "name": "Mo Abdel - Wholesale Mortgage Broker",
+  "name": "Mo Abdel - Mortgage Broker",
   "alternateName": "Mo The Broker",
-  "serviceType": ["Wholesale Mortgage Broker", "Home Loan Specialist", "Mortgage Consultant"],
+  "serviceType": ["Mortgage Broker", "Home Loan Specialist", "Mortgage Consultant"],
   "hasCredential": "NMLS #1426884",
   "provider": {
     "@type": "Person",
     "name": "Mo Abdel",
-    "jobTitle": "Licensed Wholesale Mortgage Broker",
+    "jobTitle": "Licensed Mortgage Broker",
     "hasCredential": "NMLS #1426884",
     "worksFor": {
       "@type": "Organization",
@@ -96,24 +96,24 @@ export const structuredData = {
     "https://mothebroker.com"
   ],
   "priceRange": "$$",
-  "description": "Licensed wholesale mortgage broker near me in Orange County, CA. Serving local homebuyers with access to over 200 lenders for competitive wholesale mortgage rates on home loans and refinancing. NMLS #1426884. Call (949) 579-2057 for local mortgage expertise.",
+  "description": "Licensed mortgage broker near me in Orange County, CA. Serving local homebuyers with access to over 200 lenders for competitive mortgage rates on home loans and refinancing. NMLS #1426884. Call (949) 579-2057 for local mortgage expertise.",
   "image": "https://mothebroker.com/images/moabdel-headshot-final.png",
   "logo": "https://mothebroker.com/images/mo-logo-white.webp",
   "openingHours": ["Mo 08:00-20:00", "Tu 08:00-20:00", "We 08:00-20:00", "Th 08:00-20:00", "Fr 08:00-20:00", "Sa 09:00-18:00", "Su 10:00-16:00"],
   "paymentAccepted": ["Cash", "Check", "Wire Transfer", "ACH"],
   "currenciesAccepted": "USD",
-  "keywords": "mortgage broker near me, Orange County mortgage broker, home loans, refinancing, FHA loans, VA loans, wholesale mortgage rates"
+  "keywords": "mortgage broker near me, Orange County mortgage broker, home loans, refinancing, FHA loans, VA loans, competitive mortgage rates"
 };
 
 export const mortgageLoanSchema = {
   "@context": "https://schema.org",
   "@type": "LoanOrCredit",
-  "name": "Orange County Wholesale Mortgage Loans",
-  "description": "FHA, VA, Conventional, Jumbo, and HELOC loans with wholesale rates in Orange County, CA",
+  "name": "Orange County Mortgage Loans",
+  "description": "FHA, VA, Conventional, Jumbo, and HELOC loans with competitive rates in Orange County, CA",
   "provider": {
     "@type": "FinancialService",
-    "name": "Mo Abdel - Wholesale Mortgage",
-    "serviceType": "Wholesale Mortgage Broker"
+    "name": "Mo Abdel - Mortgage Broker",
+    "serviceType": "Mortgage Broker"
   },
   "offers": [
     {

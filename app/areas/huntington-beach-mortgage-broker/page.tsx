@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, Waves, Sun, TrendingUp, Users, Building } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Huntington Beach Wholesale Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
-  description: 'Huntington Beach wholesale mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving Surf City, Main Street, Bella Terra area. Call (949) 579-2057.',
-  keywords: 'Huntington Beach wholesale mortgage broker, Huntington Beach home loans, Huntington Beach HELOC, Surf City mortgage, Main Street loans, Bella Terra wholesale mortgage broker'
+  title: 'Huntington Beach Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
+  description: 'Huntington Beach mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving Surf City, Main Street, Bella Terra area. Call (949) 579-2057.',
+  keywords: 'Huntington Beach mortgage broker, Huntington Beach home loans, Huntington Beach HELOC, Surf City mortgage, Main Street loans, Bella Terra mortgage broker'
 };
 
 export default function HuntingtonBeachMortgageBrokerPage() {
@@ -77,10 +77,10 @@ export default function HuntingtonBeachMortgageBrokerPage() {
             Serving All Huntington Beach Areas
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Huntington Beach</span> Wholesale Mortgage Broker
+            <span className="text-blue-600">Huntington Beach</span> Mortgage Broker
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Wholesale mortgage rates for Huntington Beach homebuyers and homeowners. Specializing in 
+            Competitive mortgage rates for Huntington Beach homebuyers and homeowners. Specializing in 
             HELOC, jumbo loans, and refinancing for Main Street, Surf City, Bella Terra, 
             and all Huntington Beach communities.
           </p>
@@ -353,7 +353,7 @@ export default function HuntingtonBeachMortgageBrokerPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Huntington Beach neighborhoods
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Huntington Beach neighborhoods
           </p>
         </div>
       </div>

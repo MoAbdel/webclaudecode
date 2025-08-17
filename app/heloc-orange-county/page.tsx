@@ -7,8 +7,8 @@ import { TrendingUp, DollarSign, Home, Zap, Users, CheckCircle, Calculator } fro
 
 export const metadata: Metadata = {
   title: 'HELOC in Orange County, CA | Access Your Home Equity',
-  description: 'Get a Home Equity Line of Credit with competitive wholesale rates. Mo The Broker helps homeowners in Orange County access equity for projects or debt consolidation.',
-  keywords: 'HELOC Orange County, home equity line of credit California, Orange County home equity loans, wholesale HELOC rates'
+  description: 'Get a Home Equity Line of Credit with competitive rates. Mo The Broker helps homeowners in Orange County access equity for projects or debt consolidation.',
+  keywords: 'HELOC Orange County, home equity line of credit California, Orange County home equity loans, competitive HELOC rates'
 };
 
 export default function HELOCOrangeCountyPage() {
@@ -26,7 +26,7 @@ export default function HELOCOrangeCountyPage() {
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Turn your Orange County home's equity into opportunity. Mo The Broker offers competitive 
-            wholesale HELOC rates with flexible access to funds when you need them most.
+            competitive HELOC rates with flexible access to funds when you need them most.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -419,7 +419,7 @@ export default function HELOCOrangeCountyPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving Orange County homeowners
+            Licensed competitive mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving Orange County homeowners
           </p>
         </div>
       </div>

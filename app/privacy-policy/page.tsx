@@ -5,7 +5,7 @@ import { Shield, Eye, FileText, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Mo Abdel Mortgage Broker - NMLS #1426884',
-  description: 'Privacy Policy for Mo Abdel Wholesale Mortgage Services. Learn how we protect your personal and financial information in compliance with CCPA, GDPR, and Gramm-Leach-Bliley Act.',
+  description: 'Privacy Policy for Mo Abdel Mortgage Services. Learn how we protect your personal and financial information in compliance with CCPA, GDPR, and Gramm-Leach-Bliley Act.',
   robots: 'noindex, nofollow' // Typical for legal pages
 };
 
@@ -53,7 +53,7 @@ export default function PrivacyPolicyPage() {
           <section className="mb-8">
             <h2 className="text-2xl font-bold text-slate-900 mb-4">Overview</h2>
             <p className="text-slate-700 mb-4">
-              Mohammad Abdelfattah, NMLS #1426884, operating as a wholesale mortgage broker with NEXA Mortgage, 
+              Mohammad Abdelfattah, NMLS #1426884, operating as a competitive mortgage broker with NEXA Mortgage, 
               is committed to protecting your privacy and personal information. This Privacy Policy 
               explains how we collect, use, share, and protect your information when you use our website 
               and mortgage services.

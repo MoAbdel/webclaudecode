@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, TrendingUp, Users, Star, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Newport Beach Wholesale Mortgage Broker | Luxury Home Loans | Mo The Broker NMLS #1426884',
-  description: 'Newport Beach wholesale mortgage broker specializing in luxury home financing. Jumbo loans, conventional mortgages, and investment property financing. Licensed wholesale mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'Newport Beach wholesale mortgage broker, Newport Beach home loans, luxury wholesale mortgage lender Newport Beach, jumbo loans Newport Beach'
+  title: 'Newport Beach Mortgage Broker | Luxury Home Loans | Mo The Broker NMLS #1426884',
+  description: 'Newport Beach mortgage broker specializing in luxury home financing. Jumbo loans, conventional mortgages, and investment property financing. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
+  keywords: 'Newport Beach mortgage broker, Newport Beach home loans, luxury mortgage lender Newport Beach, jumbo loans Newport Beach'
 };
 
 export default function NewportBeachMortgageBrokerPage() {
@@ -423,7 +423,7 @@ export default function NewportBeachMortgageBrokerPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Newport Beach luxury home specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Newport Beach luxury home specialist
           </p>
         </div>
       </div>

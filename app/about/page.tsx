@@ -39,7 +39,7 @@ export default function AboutPage() {
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
             <h2 className="text-3xl font-bold text-slate-900 mb-6 text-center">Your Equity. Your Goals. Your Success.</h2>
             <p className="text-slate-700 mb-4">
-              As a wholesale mortgage broker serving Orange County, I specialize in helping homeowners unlock the power of their home's equity and secure better mortgage terms through strategic refinancing. With access to over 200 wholesale lenders, I can offer you rates and equity programs that traditional banks simply cannot match.
+              As a mortgage broker serving Orange County, I specialize in helping homeowners unlock the power of their home's equity and secure better mortgage terms through strategic refinancing. With access to over 200 lenders, I can offer you rates and equity programs that traditional banks simply cannot match.
             </p>
             <p className="text-slate-700 mb-4">
               Your home is likely your largest asset—let's make it work harder for you.
@@ -83,18 +83,18 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Why Wholesale */}
+          {/* Why Choose a Brokerage */}
           <div className="bg-white rounded-lg shadow-lg p-8 mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Wholesale Mortgage Brokerage?</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-6">Why Choose a Mortgage Brokerage?</h2>
             <p className="text-slate-700 mb-4">
               Unlike retail banks that can only offer their own loan products, I work with a network 
-              of wholesale lenders. This means I can shop your loan to multiple sources and find the 
+              of lenders. This means I can shop your loan to multiple sources and find the 
               best possible rate and terms for your specific situation.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
               <div className="text-center p-4 bg-slate-50 rounded-lg">
                 <div className="text-2xl font-bold text-blue-600 mb-2">200+</div>
-                <div className="text-sm text-slate-600">Wholesale Lenders</div>
+                <div className="text-sm text-slate-600">Lenders</div>
               </div>
               <div className="text-center p-4 bg-slate-50 rounded-lg">
                 <div className="text-2xl font-bold text-blue-600 mb-2">24/7</div>

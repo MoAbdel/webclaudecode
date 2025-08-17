@@ -7,8 +7,8 @@ import { Star, Shield, DollarSign, TrendingUp, Users, CheckCircle } from 'lucide
 
 export const metadata: Metadata = {
   title: 'VA Loans in Orange County, CA | Zero Down for Veterans',
-  description: 'Buy your dream home with zero down and no PMI. Mo The Broker helps veterans in Orange County secure VA loans at competitive wholesale rates.',
-  keywords: 'VA loans Orange County, zero down VA loan California, veteran home loans Orange County, wholesale VA mortgage broker'
+  description: 'Buy your dream home with zero down and no PMI. Mo The Broker helps veterans in Orange County secure VA loans at competitive rates.',
+  keywords: 'VA loans Orange County, zero down VA loan California, veteran home loans Orange County, competitive VA mortgage broker'
 };
 
 export default function VALoansOrangeCountyPage() {
@@ -26,7 +26,7 @@ export default function VALoansOrangeCountyPage() {
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Thank you for your service. Now let us serve you with zero down payment VA loans 
-            in Orange County. Mo The Broker specializes in VA lending with wholesale rates and expert guidance.
+            in Orange County. Mo The Broker specializes in VA lending with competitive rates and expert guidance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -249,7 +249,7 @@ export default function VALoansOrangeCountyPage() {
                 <CardTitle>Get Pre-Approved</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600">Contact Mo for VA loan pre-approval with competitive wholesale rates</p>
+                <p className="text-slate-600">Contact Mo for VA loan pre-approval with competitive rates</p>
               </CardContent>
             </Card>
 
@@ -327,7 +327,7 @@ export default function VALoansOrangeCountyPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
-                  With Mo's wholesale lender network, most VA loans close within 2-3 weeks. 
+                  With Mo's competitive lender network, most VA loans close within 2-3 weeks. 
                   The VA appraisal is typically completed within this timeframe.
                 </p>
               </CardContent>
@@ -356,7 +356,7 @@ export default function VALoansOrangeCountyPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Proudly serving our veterans
+            Licensed competitive mortgage broker with NEXA Mortgage • NMLS #1426884 • Proudly serving our veterans
           </p>
         </div>
       </div>

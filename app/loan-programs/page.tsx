@@ -71,7 +71,7 @@ export default function ProgramsPage() {
             Mortgage <span className="text-blue-600">Loan Programs</span> – FHA, VA, Jumbo & More
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            As a licensed broker with NEXA Mortgage - the nation's largest wholesale brokerage - 
+            As a licensed broker with NEXA Mortgage - the nation's largest brokerage - 
             I have access to over 200 lenders offering competitive rates and flexible programs 
             for every Orange County homeowner and buyer.
           </p>
@@ -490,7 +490,7 @@ export default function ProgramsPage() {
           <div className="text-center bg-white rounded-lg p-6">
             <h3 className="text-xl font-bold text-slate-900 mb-2">Don't See What You Need?</h3>
             <p className="text-slate-600 mb-4">
-              With access to 200+ wholesale lenders, we have solutions for almost every situation.
+              With access to 200+ lenders, we have solutions for almost every situation.
             </p>
             <Link href="/contact">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2">

@@ -425,7 +425,7 @@ export default function FixFlipLoansPage() {
             </a>
           </div>
           <p className="text-purple-100 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Investor Specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Investor Specialist
           </p>
         </div>
 

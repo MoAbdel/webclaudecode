@@ -89,7 +89,7 @@ export default function ContactPage() {
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">•</span>
-                  <span>Access to exclusive wholesale rates</span>
+                  <span>Access to exclusive competitive rates</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-blue-600 mr-2">•</span>

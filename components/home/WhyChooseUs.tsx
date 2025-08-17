@@ -51,7 +51,7 @@ export default function WhyChooseUs() {
         <div className="text-center mb-12">
           <Badge className="bg-blue-100 text-blue-800 mb-4">The Mortgage Hacker Advantage</Badge>
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Why Choose a Wholesale Mortgage Broker?
+            Why Choose a Mortgage Broker?
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
             Unlike big banks with a one-size-fits-all approach, I leverage technology and a vast lender network

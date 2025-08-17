@@ -30,7 +30,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'Competitive Rates',
-    description: 'Access wholesale rates that are typically lower than credit cards or personal loans.'
+    description: 'Access competitive rates that are typically lower than credit cards or personal loans.'
   },
   {
     icon: Shield,

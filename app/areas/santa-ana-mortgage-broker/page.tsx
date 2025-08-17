@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, Building2, Users, TrendingUp, Heart, Briefcase } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Santa Ana Wholesale Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
-  description: 'Santa Ana wholesale mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Downtown, Floral Park, French Park. Call (949) 579-2057.',
-  keywords: 'Santa Ana wholesale mortgage broker, Santa Ana home loans, Santa Ana HELOC, Downtown Santa Ana mortgage, Floral Park loans, French Park wholesale mortgage broker'
+  title: 'Santa Ana Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
+  description: 'Santa Ana mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Downtown, Floral Park, French Park. Call (949) 579-2057.',
+  keywords: 'Santa Ana mortgage broker, Santa Ana home loans, Santa Ana HELOC, Downtown Santa Ana mortgage, Floral Park loans, French Park mortgage broker'
 };
 
 export default function SantaAnaMortgageBrokerPage() {
@@ -77,10 +77,10 @@ export default function SantaAnaMortgageBrokerPage() {
             Serving All Santa Ana Communities
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Santa Ana</span> Wholesale Mortgage Broker
+            <span className="text-blue-600">Santa Ana</span> Mortgage Broker
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Wholesale mortgage rates for Santa Ana homebuyers and homeowners. Specializing in 
+            Competitive mortgage rates for Santa Ana homebuyers and homeowners. Specializing in 
             FHA loans, first-time buyer programs, and HELOC for Downtown, Floral Park, 
             French Park, and all Santa Ana communities.
           </p>
@@ -353,7 +353,7 @@ export default function SantaAnaMortgageBrokerPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Santa Ana neighborhoods
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Santa Ana neighborhoods
           </p>
         </div>
       </div>

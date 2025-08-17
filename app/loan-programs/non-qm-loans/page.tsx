@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Zap, TrendingUp, Users, CheckCircle, AlertCircle, Briefcase } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Non-QM Loans Orange County | Alternative Income Documentation | Mo The Wholesale Mortgage Broker',
-  description: 'Non-QM loans in Orange County for self-employed, investors, and unique income situations. Bank statements, asset-based, and alternative documentation programs through wholesale mortgage broker. Call (949) 579-2057.',
+  title: 'Non-QM Loans Orange County | Alternative Income Documentation | Mo The Mortgage Broker',
+  description: 'Non-QM loans in Orange County for self-employed, investors, and unique income situations. Bank statements, asset-based, and alternative documentation programs through mortgage broker. Call (949) 579-2057.',
   keywords: 'Non-QM loans Orange County, bank statement loans, self-employed mortgage, asset based loans, alternative documentation'
 };
 
@@ -587,7 +587,7 @@ export default function NonQMLoansPage() {
             </a>
           </div>
           <p className="text-sm text-orange-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Non-QM lending specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Non-QM lending specialist
           </p>
         </div>
 

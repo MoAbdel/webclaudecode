@@ -7,8 +7,8 @@ import { Home, Shield, DollarSign, TrendingUp, Users, CheckCircle } from 'lucide
 
 export const metadata: Metadata = {
   title: 'FHA Loans in Orange County, CA | Low Down Payment Home Loans',
-  description: 'Qualify for a home with as little as 3.5% down. Mo The Broker helps Orange County buyers secure FHA loans with competitive wholesale rates.',
-  keywords: 'FHA loans Orange County, low down payment home loans Orange County, first time buyer FHA loan California, wholesale FHA mortgage broker'
+  description: 'Qualify for a home with as little as 3.5% down. Mo The Broker helps Orange County buyers secure FHA loans with competitive rates.',
+  keywords: 'FHA loans Orange County, low down payment home loans Orange County, first time buyer FHA loan California, competitive FHA mortgage broker'
 };
 
 export default function FHALoansOrangeCountyPage() {
@@ -26,7 +26,7 @@ export default function FHALoansOrangeCountyPage() {
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Make homeownership a reality in Orange County with FHA loans requiring as little as 3.5% down. 
-            Mo The Broker connects you with wholesale FHA lenders for the best rates and terms.
+            Mo The Broker connects you with competitive FHA lenders for the best rates and terms.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -246,7 +246,7 @@ export default function FHALoansOrangeCountyPage() {
                 <CardTitle>Close on Your Home</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600">Complete the loan process with wholesale FHA rates and move into your new home</p>
+                <p className="text-slate-600">Complete the loan process with competitive FHA rates and move into your new home</p>
               </CardContent>
             </Card>
           </div>
@@ -258,7 +258,7 @@ export default function FHALoansOrangeCountyPage() {
             Ready for Your Orange County FHA Loan?
           </h2>
           <p className="text-xl mb-6 text-blue-100">
-            Start your FHA loan application today with competitive wholesale rates
+            Start your FHA loan application today with competitive rates
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -273,7 +273,7 @@ export default function FHALoansOrangeCountyPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving Orange County, CA
+            Licensed competitive mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving Orange County, CA
           </p>
         </div>
       </div>

@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, ShoppingBag, Palette, TrendingUp, Users, Building } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Costa Mesa Wholesale Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
-  description: 'Costa Mesa wholesale mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving South Coast Plaza area, Mesa Verde, Eastside. Call (949) 579-2057.',
-  keywords: 'Costa Mesa wholesale mortgage broker, Costa Mesa home loans, Costa Mesa HELOC, South Coast Plaza mortgage, Mesa Verde loans, Eastside Costa Mesa wholesale mortgage broker'
+  title: 'Costa Mesa Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
+  description: 'Costa Mesa mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving South Coast Plaza area, Mesa Verde, Eastside. Call (949) 579-2057.',
+  keywords: 'Costa Mesa mortgage broker, Costa Mesa home loans, Costa Mesa HELOC, South Coast Plaza mortgage, Mesa Verde loans, Eastside Costa Mesa mortgage broker'
 };
 
 export default function CostaMesaMortgageBrokerPage() {
@@ -77,10 +77,10 @@ export default function CostaMesaMortgageBrokerPage() {
             Serving All Costa Mesa Neighborhoods
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Costa Mesa</span> Wholesale Mortgage Broker
+            <span className="text-blue-600">Costa Mesa</span> Mortgage Broker
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Wholesale mortgage rates for Costa Mesa homebuyers and homeowners. Specializing in 
+            Competitive mortgage rates for Costa Mesa homebuyers and homeowners. Specializing in 
             HELOC, conventional loans, and refinancing for South Coast Plaza, Mesa Verde, 
             Eastside, and all Costa Mesa communities.
           </p>
@@ -353,7 +353,7 @@ export default function CostaMesaMortgageBrokerPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Costa Mesa neighborhoods
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Costa Mesa neighborhoods
           </p>
         </div>
       </div>

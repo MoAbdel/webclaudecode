@@ -63,7 +63,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
           {/* Introduction */}
           <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
             <p className="text-slate-700 mb-0">
-              <strong>As a licensed wholesale mortgage broker serving Orange County, 
+              <strong>As a licensed mortgage broker serving Orange County, 
               I've seen firsthand how local expertise can save homebuyers time, money, and stress. 
               Here's why choosing a local mortgage broker matters for your Orange County home purchase.</strong>
             </p>
@@ -147,7 +147,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
               <div className="flex items-start">
                 <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">Wholesale Access to 200+ Lenders</strong>
+                  <strong className="text-slate-900">Competitive Access to 200+ Lenders</strong>
                   <p className="text-slate-600 text-sm mt-1">
                     I shop your loan with hundreds of lenders to find the best rates and terms
                   </p>
@@ -231,7 +231,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
                 </tr>
                 <tr>
                   <td className="border border-slate-300 px-4 py-3 font-medium">Lender Options</td>
-                  <td className="border border-slate-300 px-4 py-3 text-green-700">200+ wholesale lenders</td>
+                  <td className="border border-slate-300 px-4 py-3 text-green-700">200+ lenders</td>
                   <td className="border border-slate-300 px-4 py-3 text-slate-600">Limited to their products</td>
                 </tr>
                 <tr className="bg-slate-25">
@@ -303,7 +303,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
               </a>
             </div>
             <p className="text-blue-200 mt-4">
-              Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884
+              Licensed mortgage broker with NEXA Mortgage • NMLS #1426884
             </p>
           </div>
         </div>

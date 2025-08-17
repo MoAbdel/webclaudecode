@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building, TreePine } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Mission Viejo Wholesale Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
-  description: 'Mission Viejo wholesale mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Saddleback Valley, Lake Mission Viejo area. Call (949) 579-2057.',
-  keywords: 'Mission Viejo wholesale mortgage broker, Mission Viejo home loans, Mission Viejo HELOC, Saddleback Valley mortgage, Lake Mission Viejo loans, wholesale mortgage broker'
+  title: 'Mission Viejo Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
+  description: 'Mission Viejo mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Saddleback Valley, Lake Mission Viejo area. Call (949) 579-2057.',
+  keywords: 'Mission Viejo mortgage broker, Mission Viejo home loans, Mission Viejo HELOC, Saddleback Valley mortgage, Lake Mission Viejo loans, mortgage broker'
 };
 
 export default function MissionViejoMortgageBrokerPage() {
@@ -77,10 +77,10 @@ export default function MissionViejoMortgageBrokerPage() {
             Serving All Mission Viejo Areas
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Mission Viejo</span> Wholesale Mortgage Broker
+            <span className="text-blue-600">Mission Viejo</span> Mortgage Broker
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Wholesale mortgage rates for Mission Viejo homebuyers and homeowners. Specializing in 
+            Competitive mortgage rates for Mission Viejo homebuyers and homeowners. Specializing in 
             HELOC, conventional loans, and refinancing for Lake Mission Viejo, Saddleback Valley, 
             and all Mission Viejo master-planned communities.
           </p>
@@ -353,7 +353,7 @@ export default function MissionViejoMortgageBrokerPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Mission Viejo neighborhoods
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Mission Viejo neighborhoods
           </p>
         </div>
       </div>

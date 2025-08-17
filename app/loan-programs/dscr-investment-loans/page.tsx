@@ -104,7 +104,7 @@ export default function DSCRInvestmentLoansPage() {
             </a>
           </div>
           <p className="text-blue-100 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Investment Specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Investment Specialist
           </p>
         </div>
 

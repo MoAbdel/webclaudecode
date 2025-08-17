@@ -66,7 +66,7 @@ export default function SuccessPopup({
             </div>
             <ul className="text-sm text-slate-700 space-y-1">
               <li>• Weekly Orange County market insights</li>
-              <li>• Exclusive wholesale rate updates</li>
+              <li>• Exclusive competitive rate updates</li>
               <li>• First-time buyer tips and programs</li>
               <li>• Mo's personal market predictions</li>
             </ul>

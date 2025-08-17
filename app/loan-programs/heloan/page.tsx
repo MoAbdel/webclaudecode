@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { DollarSign, Calendar, Shield, CheckCircle, AlertCircle, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'HELOAN (Home Equity Loan) - Orange County | Mo The Wholesale Mortgage Broker',
-  description: 'Get a fixed-rate Home Equity Loan in Orange County. Lump sum up to $500K with predictable payments. Licensed wholesale mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
+  title: 'HELOAN (Home Equity Loan) - Orange County | Mo The Mortgage Broker',
+  description: 'Get a fixed-rate Home Equity Loan in Orange County. Lump sum up to $500K with predictable payments. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
   keywords: 'HELOAN Orange County, home equity loan California, fixed rate home equity, second mortgage Orange County'
 };
 
@@ -336,7 +336,7 @@ export default function HELOANPage() {
             </a>
           </div>
           <p className="text-sm text-green-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
           </p>
         </div>
 

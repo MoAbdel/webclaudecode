@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Irvine Wholesale Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
-  description: 'Irvine wholesale mortgage broker with wholesale rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving University Park, Woodbridge, Northwood. Call (949) 579-2057.',
-  keywords: 'Irvine wholesale mortgage broker, Irvine home loans, Irvine HELOC, University Park mortgage, Woodbridge loans, Northwood wholesale mortgage broker'
+  title: 'Irvine Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
+  description: 'Irvine mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving University Park, Woodbridge, Northwood. Call (949) 579-2057.',
+  keywords: 'Irvine mortgage broker, Irvine home loans, Irvine HELOC, University Park mortgage, Woodbridge loans, Northwood mortgage broker'
 };
 
 export default function IrvineMortgageBrokerPage() {
@@ -80,7 +80,7 @@ export default function IrvineMortgageBrokerPage() {
             <span className="text-blue-600">Irvine</span> Mortgage Broker
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Wholesale mortgage rates for Irvine homebuyers and homeowners. Specializing in 
+            Competitive mortgage rates for Irvine homebuyers and homeowners. Specializing in 
             HELOC, jumbo loans, and refinancing for University Park, Woodbridge, Northwood, 
             and all Irvine communities.
           </p>
@@ -203,7 +203,7 @@ export default function IrvineMortgageBrokerPage() {
                   <TrendingUp className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <div className="text-xl font-bold text-slate-900 mb-2">Wholesale Rates for High-Value Homes</div>
+                  <div className="text-xl font-bold text-slate-900 mb-2">Competitive Rates for High-Value Homes</div>
                   <p className="text-slate-600">
                     Access to 200+ lenders through NEXA Mortgage means competitive rates 
                     on Irvine's higher-priced homes and jumbo loan amounts.
@@ -299,7 +299,7 @@ export default function IrvineMortgageBrokerPage() {
                 <p className="text-slate-600">
                   Yes, many Irvine homes exceed the 2024 conforming loan limit of $766,550, 
                   requiring jumbo financing. We specialize in competitive jumbo loan rates 
-                  through our wholesale lender network.
+                  through our lender network.
                 </p>
               </CardContent>
             </Card>
@@ -353,7 +353,7 @@ export default function IrvineMortgageBrokerPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Irvine neighborhoods
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Irvine neighborhoods
           </p>
         </div>
       </div>

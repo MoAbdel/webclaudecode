@@ -32,7 +32,7 @@ export const SECONDARY_KEYWORDS = [
   'rate and term refinance',
   
   // Competitive advantage
-  'wholesale lender access',
+  'competitive lender access',
   'competitive mortgage rates',
   'fast closing',
   'no lender fees',

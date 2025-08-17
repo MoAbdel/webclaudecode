@@ -19,7 +19,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">About Mo Abdel</h3>
             <p className="text-slate-400 mb-4">
-              Your trusted local wholesale mortgage broker serving all of Orange County. 
+              Your trusted local mortgage broker serving all of Orange County. 
               I'm committed to finding you the best rates and loan programs available. NMLS #1426884.
             </p>
           </div>

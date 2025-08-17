@@ -114,7 +114,7 @@ Subject: Partnership Opportunity - Competitive Rates for Your Clients
 
 Hi [Agent Name],
 
-I'm Mo Abdel, a licensed mortgage broker (NMLS #1426884) specializing in Orange County home loans. I work with 200+ wholesale lenders to secure competitive rates often better than traditional banks.
+I'm Mo Abdel, a licensed mortgage broker (NMLS #1426884) specializing in Orange County home loans. I work with 200+ lenders to secure competitive rates often better than traditional banks.
 
 I'd love to become a trusted lending partner for your clients. Benefits include:
 - Same-day pre-approval letters

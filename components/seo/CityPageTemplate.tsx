@@ -68,7 +68,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
   const structuredFAQ = [
     {
       question: `What makes Mo The Broker the best mortgage broker in ${cityData.name}?`,
-      answer: `Mo The Broker offers access to 200+ wholesale lenders, ensuring ${cityData.name} residents get the most competitive rates. With NMLS #1426884 licensing and average 18-day closings, we provide expert service tailored to the local market.`
+      answer: `Mo The Broker offers access to 200+ lenders, ensuring ${cityData.name} residents get the most competitive rates. With NMLS #1426884 licensing and average 18-day closings, we provide expert service tailored to the local market.`
     },
     {
       question: `What are current mortgage rates in ${cityData.name}?`,
@@ -95,7 +95,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
     'competitive mortgage rates',
     'NMLS licensed broker',
     'fast mortgage closing',
-    'wholesale lender access',
+    'competitive lender access',
     'first time buyer programs'
   ];
 
@@ -113,7 +113,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
       <AdvancedSchemaMarkup 
         type="LocalBusiness"
         name={`Mo The Broker - ${cityData.name} Mortgage Expert`}
-        description={`Professional mortgage broker serving ${cityData.name}, California with access to 200+ wholesale lenders.`}
+        description={`Professional mortgage broker serving ${cityData.name}, California with access to 200+ lenders.`}
         url={canonicalUrl}
         areaServed={[`${cityData.name}, CA`]}
       />
@@ -228,7 +228,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
                     <span className="text-blue-600 font-bold">2</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-900 mb-2">200+ Wholesale Lenders</h3>
+                    <h3 className="font-semibold text-slate-900 mb-2">200+ Lenders</h3>
                     <p className="text-slate-600">
                       Access to more loan programs and better rates than any single bank can offer {cityData.name} borrowers.
                     </p>

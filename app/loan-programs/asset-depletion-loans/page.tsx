@@ -446,7 +446,7 @@ export default function AssetDepletionLoansPage() {
             </a>
           </div>
           <p className="text-green-100 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • High Net Worth Specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • High Net Worth Specialist
           </p>
         </div>
 

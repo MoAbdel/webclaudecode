@@ -8,10 +8,10 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Conventional Loans in Orange County, CA | Traditional Home Financing',
-  description: 'Get conventional loans in Orange County with competitive wholesale rates. Flexible down payments from 3% and loan amounts up to $1,089,300. Apply today with Mo The Broker.',
+  description: 'Get conventional loans in Orange County with competitive rates. Flexible down payments from 3% and loan amounts up to $1,089,300. Apply today with Mo The Broker.',
   openGraph: {
     title: 'Conventional Loans in Orange County, CA | Traditional Home Financing',
-    description: 'Get conventional loans in Orange County with competitive wholesale rates. Flexible down payments from 3% and loan amounts up to $1,089,300. Apply today with Mo The Broker.',
+    description: 'Get conventional loans in Orange County with competitive rates. Flexible down payments from 3% and loan amounts up to $1,089,300. Apply today with Mo The Broker.',
     type: 'website',
   },
 };
@@ -25,7 +25,7 @@ const benefits = [
   {
     icon: TrendingUp,
     title: 'Competitive Interest Rates',
-    description: 'Access wholesale rates from 200+ lenders to secure the most competitive conventional loan rates.'
+    description: 'Access competitive rates from 200+ lenders to secure the most competitive conventional loan rates.'
   },
   {
     icon: Shield,
@@ -105,7 +105,7 @@ export default function ConventionalLoansOrangeCounty() {
               Conventional Loans in Orange County – Flexible Home Financing
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto leading-relaxed">
-              Get traditional home financing with down payments as low as 3%. Access wholesale rates from 200+ lenders with flexible terms for your Orange County home purchase.
+              Get traditional home financing with down payments as low as 3%. Access competitive rates from 200+ lenders with flexible terms for your Orange County home purchase.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
@@ -324,7 +324,7 @@ export default function ConventionalLoansOrangeCounty() {
               },
               {
                 question: 'How long does it take to close on a conventional loan?',
-                answer: 'Most conventional loans close within 2-3 weeks from start to finish with our streamlined process and wholesale lender network.'
+                answer: 'Most conventional loans close within 2-3 weeks from start to finish with our streamlined process and lender network.'
               }
             ].map((faq, index) => (
               <Card key={index} className="shadow-lg border-0">
@@ -345,7 +345,7 @@ export default function ConventionalLoansOrangeCounty() {
             Ready to Get Your Conventional Loan in Orange County?
           </h2>
           <p className="text-xl mb-8 text-blue-100">
-            Access wholesale rates from 200+ lenders and get pre-approved in minutes. 
+            Access competitive rates from 200+ lenders and get pre-approved in minutes. 
             Mo The Broker makes conventional loans simple and affordable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

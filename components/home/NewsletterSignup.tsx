@@ -152,7 +152,7 @@ export default function NewsletterSignup() {
               <div className="flex flex-col items-center">
                 <Shield className="w-8 h-8 text-blue-200 mb-2" />
                 <h4 className="font-semibold text-white mb-1">Insider Tips</h4>
-                <p className="text-sm text-blue-100">Wholesale pricing insights you won't find elsewhere</p>
+                <p className="text-sm text-blue-100">Competitive pricing insights you won't find elsewhere</p>
               </div>
               <div className="flex flex-col items-center">
                 <CheckCircle className="w-8 h-8 text-blue-200 mb-2" />

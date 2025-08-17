@@ -88,7 +88,7 @@ export default function NeighborhoodGuidePage() {
             Orange County <span className="text-blue-600">Service Areas</span>
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Mo Abdel provides wholesale mortgage services throughout Orange County. 
+            Mo Abdel provides mortgage services throughout Orange County. 
             Find local market insights, lending programs, and competitive rates for your specific area.
           </p>
           <div className="flex items-center justify-center text-slate-700 mb-8">
@@ -185,7 +185,7 @@ export default function NeighborhoodGuidePage() {
               <div className="flex items-start">
                 <TrendingUp className="w-6 h-6 text-blue-600 mr-3 mt-1" />
                 <div>
-                  <h3 className="font-bold text-slate-900">NEXA Mortgage Wholesale Access</h3>
+                  <h3 className="font-bold text-slate-900">NEXA Mortgage Access</h3>
                   <p className="text-slate-600">Access to 200+ lenders means better rates and terms than retail banks</p>
                 </div>
               </div>
@@ -193,7 +193,7 @@ export default function NeighborhoodGuidePage() {
                 <MapPin className="w-6 h-6 text-blue-600 mr-3 mt-1" />
                 <div>
                   <h3 className="font-bold text-slate-900">Local Market Expertise</h3>
-                  <p className="text-slate-600">Deep knowledge of Orange County neighborhoods and wholesale mortgage market</p>
+                  <p className="text-slate-600">Deep knowledge of Orange County neighborhoods and mortgage market</p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -228,7 +228,7 @@ export default function NeighborhoodGuidePage() {
               </div>
               <div className="flex items-center">
                 <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                <span>Competitive wholesale rates and terms</span>
+                <span>Competitive rates and terms</span>
               </div>
             </div>
           </div>
@@ -255,7 +255,7 @@ export default function NeighborhoodGuidePage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884
           </p>
         </div>
       </div>

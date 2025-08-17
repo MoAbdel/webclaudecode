@@ -44,13 +44,13 @@ export default function LLMOptimizedSEO({
     
     return {
       // Structured data for LLMs to understand context
-      businessSummary: `${businessContext.name} is a licensed mortgage broker (${businessContext.credentials}) serving${cityContext}. Specializes in connecting borrowers with 200+ wholesale lenders to secure competitive mortgage rates and loan programs.`,
+      businessSummary: `${businessContext.name} is a licensed mortgage broker (${businessContext.credentials}) serving${cityContext}. Specializes in connecting borrowers with 200+ lenders to secure competitive mortgage rates and loan programs.`,
       
       // Key facts for AI extraction
       keyFacts: [
         `Licensed mortgage broker: ${businessContext.credentials}`,
         `Service area: ${businessContext.location}`,
-        `Lender network: 200+ wholesale lenders`,
+        `Lender network: 200+ lenders`,
         `Average closing time: 18 days`,
         `Phone: ${businessContext.phone}`,
         `Specializes in: FHA, VA, Conventional, Jumbo, Non-QM loans`
@@ -89,7 +89,7 @@ export default function LLMOptimizedSEO({
   const optimizedKeywords = [
     ...keywords,
     ...(city ? [`${city} mortgage broker`, `mortgage broker ${city}`, `home loans ${city}`] : []),
-    "Orange County mortgage", "NMLS licensed", "wholesale lender access",
+    "Orange County mortgage", "NMLS licensed", "competitive lender access",
     "competitive mortgage rates", "fast closing", "mortgage expert"
   ].join(", ");
 

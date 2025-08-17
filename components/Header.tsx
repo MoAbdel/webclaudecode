@@ -27,7 +27,7 @@ const loanProgramsDropdown: DropdownItem[] = [
   { title: 'All Programs', url: '/loan-programs' },
   
   // Home Purchase Loans
-  { title: '🏠 HOME PURCHASE', url: '#', isHeader: true },
+  { title: '🏠 PURCHASE', url: '#', isHeader: true },
   { title: 'FHA Loans', url: '/loan-programs/fha-loans' },
   { title: 'VA Loans', url: '/loan-programs/va-loans' },
   { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
@@ -40,7 +40,7 @@ const loanProgramsDropdown: DropdownItem[] = [
   { title: 'Cash-Out Refinance', url: '/loan-programs/cash-out-refinance' },
   
   // Home Equity Solutions
-  { title: '💰 HOME EQUITY', url: '#', isHeader: true },
+  { title: '💰 EQUITY', url: '#', isHeader: true },
   { title: 'HELOC', url: '/loan-programs/heloc' },
   { title: 'HELOAN', url: '/loan-programs/heloan' },
   
@@ -62,14 +62,14 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: 'All Service Areas', url: '/areas' },
   
   // Premium Coastal Communities
-  { title: '🏖️ COASTAL PREMIUM', url: '#', isHeader: true },
+  { title: '🏖️ COASTAL', url: '#', isHeader: true },
   { title: 'Newport Beach', url: '/areas/newport-beach-mortgage-broker' },
   { title: 'Laguna Beach', url: '/areas/laguna-beach-mortgage-broker' },
   { title: 'Dana Point', url: '/areas/dana-point-mortgage-broker' },
   { title: 'Seal Beach', url: '/areas/seal-beach-mortgage-broker' },
   
   // Central Orange County
-  { title: '🏢 CENTRAL OC', url: '#', isHeader: true },
+  { title: '🏢 CENTRAL', url: '#', isHeader: true },
   { title: 'Irvine', url: '/areas/irvine-mortgage-broker' },
   { title: 'Costa Mesa', url: '/areas/costa-mesa-mortgage-broker' },
   { title: 'Orange', url: '/areas/orange-mortgage-broker' },
@@ -77,7 +77,7 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: 'Fountain Valley', url: '/areas/fountain-valley-mortgage-broker' },
   
   // North Orange County
-  { title: '🏘️ NORTH OC', url: '#', isHeader: true },
+  { title: '🏘️ NORTH', url: '#', isHeader: true },
   { title: 'Anaheim', url: '/areas/anaheim-mortgage-broker' },
   { title: 'Fullerton', url: '/areas/fullerton-mortgage-broker' },
   { title: 'Yorba Linda', url: '/areas/yorba-linda-mortgage-broker' },
@@ -85,13 +85,13 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: 'Westminster', url: '/areas/westminster-mortgage-broker' },
   
   // South Orange County
-  { title: '🏡 SOUTH OC', url: '#', isHeader: true },
+  { title: '🏡 SOUTH', url: '#', isHeader: true },
   { title: 'Mission Viejo', url: '/areas/mission-viejo-mortgage-broker' },
   { title: 'Laguna Niguel', url: '/areas/laguna-niguel-mortgage-broker' },
   { title: 'Laguna Woods', url: '/areas/laguna-woods-mortgage-broker' },
   
   // Beach Cities
-  { title: '🌊 BEACH CITIES', url: '#', isHeader: true },
+  { title: '🌊 BEACH', url: '#', isHeader: true },
   { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' }
 ];
 
@@ -236,12 +236,12 @@ export default function Header() {
                     {((item.page === 'Programs' && programsDropdownOpen) ||
                       (item.page === 'ServiceAreas' && serviceAreasDropdownOpen) ||
                       (item.page === 'NeighborhoodGuide' && neighborhoodDropdownOpen)) && (
-                      <div className="absolute top-full left-0 mt-2 w-72 bg-white rounded-lg shadow-lg border border-slate-200 py-2 z-50 max-h-96 overflow-y-auto">
+                      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-[100] max-h-80 overflow-y-auto">
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           dropdownItem.isHeader ? (
                             <div
                               key={index}
-                              className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider border-t border-slate-100 mt-1 pt-3"
+                              className="px-4 py-2 text-xs font-semibold text-slate-500 uppercase tracking-wider border-t border-slate-100 mt-1 pt-3 whitespace-nowrap"
                             >
                               {dropdownItem.title}
                             </div>
@@ -249,7 +249,7 @@ export default function Header() {
                             <Link
                               key={index}
                               href={dropdownItem.url}
-                              className="block px-4 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150"
+                              className="block px-4 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150 whitespace-nowrap"
                             >
                               {dropdownItem.title}
                             </Link>
@@ -330,7 +330,7 @@ export default function Header() {
                         dropdownItem.isHeader ? (
                           <div
                             key={index}
-                            className="px-3 py-1 text-xs font-semibold text-slate-500 uppercase tracking-wider border-t border-slate-100 mt-2 pt-2"
+                            className="px-3 py-1 text-xs font-semibold text-slate-500 uppercase tracking-wider border-t border-slate-100 mt-2 pt-2 whitespace-nowrap"
                           >
                             {dropdownItem.title}
                           </div>

@@ -202,7 +202,7 @@ export default function Header() {
                     </Link>
                     
                     {/* Simple hover dropdown */}
-                    <div className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-2xl border border-slate-200 py-2 z-[9999] max-h-96 overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                    <div className="absolute top-full left-0 mt-1 w-80 bg-white rounded-lg shadow-2xl border border-slate-200 py-3 z-[9999] max-h-[70vh] overflow-y-auto opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 scrollbar-thin scrollbar-thumb-slate-300">
                       {item.dropdownItems?.map((dropdownItem, index) => (
                         dropdownItem.isHeader ? (
                           <div

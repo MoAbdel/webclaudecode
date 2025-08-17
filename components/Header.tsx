@@ -25,33 +25,74 @@ interface NavigationItem {
 
 const loanProgramsDropdown: DropdownItem[] = [
   { title: 'All Programs', url: '/loan-programs' },
-  { title: 'HELOC', url: '/loan-programs/heloc' },
-  { title: 'HELOAN', url: '/loan-programs/heloan' },
-  { title: 'Cash-Out Refinance', url: '/loan-programs/cash-out-refinance' },
-  { title: 'Rate & Term Refinance', url: '/loan-programs/rate-term-refinance' },
+  
+  // Home Purchase Loans
+  { title: '🏠 HOME PURCHASE', url: '#', isHeader: true },
   { title: 'FHA Loans', url: '/loan-programs/fha-loans' },
   { title: 'VA Loans', url: '/loan-programs/va-loans' },
   { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
   { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
+  { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' },
+  
+  // Refinancing Options
+  { title: '🔄 REFINANCING', url: '#', isHeader: true },
+  { title: 'Rate & Term Refinance', url: '/loan-programs/rate-term-refinance' },
+  { title: 'Cash-Out Refinance', url: '/loan-programs/cash-out-refinance' },
+  
+  // Home Equity Solutions
+  { title: '💰 HOME EQUITY', url: '#', isHeader: true },
+  { title: 'HELOC', url: '/loan-programs/heloc' },
+  { title: 'HELOAN', url: '/loan-programs/heloan' },
+  
+  // Self-Employed & Non-QM
+  { title: '💼 SELF-EMPLOYED', url: '#', isHeader: true },
   { title: 'Non-QM Overview', url: '/loan-programs/non-qm-loans' },
   { title: 'Bank Statement Loans', url: '/loan-programs/bank-statement-loans' },
-  { title: 'Asset Depletion Loans', url: '/loan-programs/asset-depletion-loans' },
   { title: 'P&L Statement Loans', url: '/loan-programs/profit-loss-statement-loans' },
-  { title: 'Fix & Flip Loans', url: '/loan-programs/fix-flip-loans' },
+  { title: 'Asset Depletion Loans', url: '/loan-programs/asset-depletion-loans' },
+  
+  // Investment & Specialty
+  { title: '🏢 INVESTMENT', url: '#', isHeader: true },
   { title: 'DSCR Investment Loans', url: '/loan-programs/dscr-investment-loans' },
-  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' },
-  { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' }
+  { title: 'Fix & Flip Loans', url: '/loan-programs/fix-flip-loans' },
+  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' }
 ];
 
 const serviceAreasDropdown: DropdownItem[] = [
   { title: 'All Service Areas', url: '/areas' },
-  { title: 'Irvine', url: '/areas/irvine-mortgage-broker' },
+  
+  // Premium Coastal Communities
+  { title: '🏖️ COASTAL PREMIUM', url: '#', isHeader: true },
   { title: 'Newport Beach', url: '/areas/newport-beach-mortgage-broker' },
-  { title: 'Mission Viejo', url: '/areas/mission-viejo-mortgage-broker' },
+  { title: 'Laguna Beach', url: '/areas/laguna-beach-mortgage-broker' },
+  { title: 'Dana Point', url: '/areas/dana-point-mortgage-broker' },
+  { title: 'Seal Beach', url: '/areas/seal-beach-mortgage-broker' },
+  
+  // Central Orange County
+  { title: '🏢 CENTRAL OC', url: '#', isHeader: true },
+  { title: 'Irvine', url: '/areas/irvine-mortgage-broker' },
   { title: 'Costa Mesa', url: '/areas/costa-mesa-mortgage-broker' },
-  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' },
+  { title: 'Orange', url: '/areas/orange-mortgage-broker' },
+  { title: 'Santa Ana', url: '/areas/santa-ana-mortgage-broker' },
+  { title: 'Fountain Valley', url: '/areas/fountain-valley-mortgage-broker' },
+  
+  // North Orange County
+  { title: '🏘️ NORTH OC', url: '#', isHeader: true },
   { title: 'Anaheim', url: '/areas/anaheim-mortgage-broker' },
-  { title: 'Santa Ana', url: '/areas/santa-ana-mortgage-broker' }
+  { title: 'Fullerton', url: '/areas/fullerton-mortgage-broker' },
+  { title: 'Yorba Linda', url: '/areas/yorba-linda-mortgage-broker' },
+  { title: 'Garden Grove', url: '/areas/garden-grove-mortgage-broker' },
+  { title: 'Westminster', url: '/areas/westminster-mortgage-broker' },
+  
+  // South Orange County
+  { title: '🏡 SOUTH OC', url: '#', isHeader: true },
+  { title: 'Mission Viejo', url: '/areas/mission-viejo-mortgage-broker' },
+  { title: 'Laguna Niguel', url: '/areas/laguna-niguel-mortgage-broker' },
+  { title: 'Laguna Woods', url: '/areas/laguna-woods-mortgage-broker' },
+  
+  // Beach Cities
+  { title: '🌊 BEACH CITIES', url: '#', isHeader: true },
+  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' }
 ];
 
 const neighborhoodGuideDropdown: DropdownItem[] = [

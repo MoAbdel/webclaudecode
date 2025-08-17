@@ -194,6 +194,11 @@ export default function Header() {
 
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-[60]">
+      {/* Temporary state indicator */}
+      <div className="fixed top-0 right-0 bg-green-500 text-white p-2 z-[999]">
+        State: {activeDropdown || 'none'}
+      </div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
@@ -247,6 +252,15 @@ export default function Header() {
                          (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood')) ? 'rotate-180' : ''
                       }`} />
                     </button>
+                    
+                    {/* Test dropdown - should always show if any dropdown is active */}
+                    {activeDropdown && (
+                      <div className="absolute top-full left-0 mt-1 w-48 bg-red-300 border-2 border-black p-4 z-[9999]">
+                        <div className="text-black font-bold">DROPDOWN ACTIVE!</div>
+                        <div>State: {activeDropdown}</div>
+                        <div>Page: {item.page}</div>
+                      </div>
+                    )}
                     
                     {/* Dropdown Menu */}
                     {((item.page === 'Programs' && activeDropdown === 'programs') ||

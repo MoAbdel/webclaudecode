@@ -8,18 +8,18 @@ import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
 
 export const metadata: Metadata = {
-  title: 'Orange County Mortgage Broker | Mo The Broker NMLS #1426884',
+  title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
   description: 'Expert mortgage broker serving Orange County. Access 200+ lenders for competitive rates, fast closings. FHA, VA, conventional, jumbo loans. Licensed NMLS #1426884.',
   keywords: 'Orange County mortgage broker, home loans, refinancing, FHA loans, VA loans, mortgage rates, NMLS licensed, lender access, competitive rates',
   icons: {
     icon: [
-      { url: '/favicon.ico?v=3', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
-      { url: '/favicon-32x32.png?v=3', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16x16.png?v=3', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon.ico?v=5', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
+      { url: '/favicon-32x32.png?v=5', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png?v=5', sizes: '16x16', type: 'image/png' },
       { url: '/android-chrome-192x192.png?v=3', sizes: '192x192', type: 'image/png' },
       { url: '/android-chrome-512x512.png?v=3', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico?v=3',
+    shortcut: '/favicon.ico?v=5',
     apple: [
       { url: '/apple-touch-icon-180x180.png?v=3', sizes: '180x180', type: 'image/png' },
     ],
@@ -28,11 +28,11 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'Mo Abdel | Mortgage Broker in Orange County, CA',
+    title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
     description: 'Get competitive mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
     type: 'website',
     locale: 'en_US',
-    siteName: 'Mo Abdel - Mortgage Broker',
+    siteName: 'Mo Abdel | Mortgage Broker',
   },
 };
 
@@ -47,6 +47,9 @@ export default function RootLayout({
         <meta name="google-site-verification" content="gje53lhRpuQPVaMLhtYAUYdO8ciKzx8APLNwNVhcT1A" />
         <link rel="canonical" href="https://mothebroker.com" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=5" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=5" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=5" />
         
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />

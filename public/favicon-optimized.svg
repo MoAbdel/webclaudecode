@@ -2,7 +2,7 @@
   <!-- Blue background representing trust and professionalism -->
   <rect width="32" height="32" fill="#1e40af" rx="4"/>
   
-  <!-- White "M" for Mo The Broker -->
+  <!-- White "M" for Mo Abdel -->
   <text x="16" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">M</text>
   
   <!-- Small house icon to represent real estate/mortgage -->

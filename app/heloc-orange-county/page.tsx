@@ -7,7 +7,7 @@ import { TrendingUp, DollarSign, Home, Zap, Users, CheckCircle, Calculator } fro
 
 export const metadata: Metadata = {
   title: 'HELOC in Orange County, CA | Access Your Home Equity',
-  description: 'Get a Home Equity Line of Credit with competitive rates. Mo The Broker helps homeowners in Orange County access equity for projects or debt consolidation.',
+  description: 'Get a Home Equity Line of Credit with competitive rates. Mo Abdel helps homeowners in Orange County access equity for projects or debt consolidation.',
   keywords: 'HELOC Orange County, home equity line of credit California, Orange County home equity loans, competitive HELOC rates'
 };
 
@@ -25,7 +25,7 @@ export default function HELOCOrangeCountyPage() {
             HELOC in Orange County – <span className="text-blue-600">Flexible Access to Your Home Equity</span>
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Turn your Orange County home's equity into opportunity. Mo The Broker offers competitive 
+            Turn your Orange County home's equity into opportunity. Mo Abdel offers competitive 
             competitive HELOC rates with flexible access to funds when you need them most.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -44,7 +44,7 @@ export default function HELOCOrangeCountyPage() {
 
         {/* How a HELOC Works */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">How a HELOC Works</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">How Orange County HELOC Home Equity Lines Work</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="space-y-6">
@@ -106,7 +106,7 @@ export default function HELOCOrangeCountyPage() {
 
         {/* Benefits of a HELOC in California */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Benefits of a HELOC in California</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Orange County HELOC Benefits & Advantages</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-2 hover:border-blue-300 transition-all duration-300">
               <CardHeader>
@@ -190,7 +190,7 @@ export default function HELOCOrangeCountyPage() {
 
         {/* HELOC vs Cash-Out Refinance */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">HELOC vs Cash-Out Refinance</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Orange County HELOC vs Cash-Out Refinance Comparison</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
               <thead className="bg-blue-600 text-white">
@@ -234,7 +234,7 @@ export default function HELOCOrangeCountyPage() {
         {/* Popular HELOC Uses in Orange County */}
         <div className="mb-16">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold text-slate-900 mb-4">Popular HELOC Uses in Orange County</h2>
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">Top Orange County HELOC Uses & Applications</h2>
             <p className="text-xl text-slate-600">How Orange County homeowners are using their home equity</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -282,7 +282,7 @@ export default function HELOCOrangeCountyPage() {
 
         {/* How to Apply for a HELOC */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">How to Apply for a HELOC</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Orange County HELOC Application Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="text-center">
               <CardHeader>

@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Irvine Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
+  title: 'Irvine Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
   description: 'Irvine mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving University Park, Woodbridge, Northwood. Call (949) 579-2057.',
   keywords: 'Irvine mortgage broker, Irvine home loans, Irvine HELOC, University Park mortgage, Woodbridge loans, Northwood mortgage broker'
 };
@@ -82,7 +82,9 @@ export default function IrvineMortgageBrokerPage() {
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Competitive mortgage rates for Irvine homebuyers and homeowners. Specializing in 
             HELOC, jumbo loans, and refinancing for University Park, Woodbridge, Northwood, 
-            and all Irvine communities.
+            and all Irvine communities. See how Irvine compares to other top Orange County cities in our 
+            <Link href="/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide" className="text-blue-600 hover:text-blue-700 font-medium">Irvine vs Newport Beach guide</Link> 
+            and <Link href="/neighborhood-guide/mission-viejo-vs-irvine-home-buying-guide" className="text-blue-600 hover:text-blue-700 font-medium">Mission Viejo vs Irvine comparison</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -133,7 +135,7 @@ export default function IrvineMortgageBrokerPage() {
         {/* Specialized Loan Programs */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">
-            Mortgage Solutions for Irvine Homeowners
+            Irvine Mortgage Lending Programs: HELOC, Refinancing & VA Loans
           </h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {loanPrograms.map((program, index) => (
@@ -168,7 +170,7 @@ export default function IrvineMortgageBrokerPage() {
         {/* Irvine Neighborhoods */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">
-            Irvine Neighborhoods We Serve
+            Irvine Home Financing by Neighborhood & Community
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {irvineNeighborhoods.map((neighborhood, index) => (
@@ -195,7 +197,7 @@ export default function IrvineMortgageBrokerPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-6">
-              Why Irvine Homeowners Choose Mo The Broker
+              Why Irvine Residents Choose Mo Abdel for Home Financing
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">
@@ -275,7 +277,7 @@ export default function IrvineMortgageBrokerPage() {
         {/* FAQ Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">
-            Frequently Asked Questions - Irvine Mortgages
+            Irvine Mortgage Questions & Expert Answers
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card>
@@ -297,7 +299,7 @@ export default function IrvineMortgageBrokerPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
-                  Yes, many Irvine homes exceed the 2024 conforming loan limit of $766,550, 
+                  Yes, many Irvine homes exceed the 2025 conforming loan limit of $1,089,300, 
                   requiring jumbo financing. We specialize in competitive jumbo loan rates 
                   through our lender network.
                 </p>

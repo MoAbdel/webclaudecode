@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Updated: Blog section deployment verification -->
+  <!-- Updated: 2025-01-17 - Added new guide pages and updated key page dates -->
   <!-- Main Pages -->
   <url>
     <loc>https://mothebroker.com/</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -152,7 +152,7 @@
   <!-- Individual Loan Program Pages -->
   <url>
     <loc>https://mothebroker.com/fha-loans-orange-county</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -164,13 +164,13 @@
   </url>
   <url>
     <loc>https://mothebroker.com/conventional-loans-orange-county</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mothebroker.com/heloc-orange-county</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -204,13 +204,13 @@
   <!-- Individual Service Area Pages -->
   <url>
     <loc>https://mothebroker.com/areas/irvine-mortgage-broker</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://mothebroker.com/areas/newport-beach-mortgage-broker</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -332,7 +332,19 @@
   <!-- Individual Blog Posts -->
   <url>
     <loc>https://mothebroker.com/guides/why-choose-local-mortgage-broker</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/guides/orange-county-home-buyer-guide</loc>
+    <lastmod>2025-01-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/guides/orange-county-refinancing-guide</loc>
+    <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

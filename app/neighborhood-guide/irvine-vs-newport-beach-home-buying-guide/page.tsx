@@ -8,6 +8,9 @@ import { Home, DollarSign, GraduationCap, Shield, Car, MapPin, TrendingUp, Users
 export const metadata: Metadata = {
   title: 'Irvine vs Newport Beach Home Buying Guide 2025 | Best Neighborhoods Orange County',
   description: 'Complete comparison of buying homes in Irvine vs Newport Beach. Mortgage rates, home prices, schools, lifestyle, and market trends. Expert Orange County mortgage broker insights.',
+  openGraph: {
+    publishedTime: '2025-03-15T10:00:00Z',
+  },
 };
 
 export default function IrvineVsNewportBeachGuide() {
@@ -19,10 +22,13 @@ export default function IrvineVsNewportBeachGuide() {
         <div className="text-center mb-16">
           <Badge className="bg-blue-100 text-blue-600 mb-4">Local Market Expert Guide</Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Irvine vs Newport Beach: Complete Home Buying Comparison 2025
+            Irvine vs Newport Beach Mortgage Broker Guide: Home Loans and Market Comparison 2025
           </h1>
+          <div className="flex items-center justify-center text-sm text-slate-500 mb-4">
+            <span>Published March 15, 2025 • By Mo Abdel, Orange County Mortgage Broker</span>
+          </div>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
-            Thinking about buying a home in Orange County? Get expert insights comparing Irvine's family-friendly master planning vs Newport Beach's coastal luxury lifestyle. Complete mortgage guide included.
+            Thinking about buying a home in Orange County? Get expert insights comparing Irvine's family-friendly master planning vs Newport Beach's coastal luxury lifestyle. Complete mortgage guide included. See our specialized <Link href="/areas/irvine-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Irvine mortgage broker services</Link> and <Link href="/areas/newport-beach-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Newport Beach home loans</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -78,7 +84,7 @@ export default function IrvineVsNewportBeachGuide() {
               <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
                 <GraduationCap className="w-6 h-6 text-green-600" />
               </div>
-              <h2 className="text-3xl font-bold text-slate-900">Buying in Irvine</h2>
+              <h2 className="text-3xl font-bold text-slate-900">Irvine Home Loans and Mortgage Rates</h2>
             </div>
 
             <div className="space-y-6">
@@ -123,7 +129,7 @@ export default function IrvineVsNewportBeachGuide() {
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
                 <MapPin className="w-6 h-6 text-blue-600" />
               </div>
-              <h2 className="text-3xl font-bold text-slate-900">Buying in Newport Beach</h2>
+              <h2 className="text-3xl font-bold text-slate-900">Newport Beach Mortgage Specialist Services</h2>
             </div>
 
             <div className="space-y-6">
@@ -165,7 +171,7 @@ export default function IrvineVsNewportBeachGuide() {
 
         {/* Mortgage Considerations */}
         <div className="bg-blue-600 text-white rounded-lg p-8 mb-12">
-          <h2 className="text-3xl font-bold text-center mb-8">Mortgage Considerations for Both Cities</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Orange County Mortgage Broker: Financing Solutions for Irvine and Newport Beach</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <h3 className="text-xl font-semibold mb-4">Irvine Home Financing</h3>

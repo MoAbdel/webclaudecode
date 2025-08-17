@@ -8,10 +8,10 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Rate & Term Refinance in Orange County, CA | Lower Your Mortgage Payment',
-  description: 'Refinance your Orange County home to lower your rate, reduce payments, or eliminate PMI. Get competitive refinance rates from 200+ lenders with Mo The Broker.',
+  description: 'Refinance your Orange County home to lower your rate, reduce payments, or eliminate PMI. Get competitive refinance rates from 200+ lenders with Mo Abdel.',
   openGraph: {
     title: 'Rate & Term Refinance in Orange County, CA | Lower Your Mortgage Payment',
-    description: 'Refinance your Orange County home to lower your rate, reduce payments, or eliminate PMI. Get competitive refinance rates from 200+ lenders with Mo The Broker.',
+    description: 'Refinance your Orange County home to lower your rate, reduce payments, or eliminate PMI. Get competitive refinance rates from 200+ lenders with Mo Abdel.',
     type: 'website',
   },
 };
@@ -389,7 +389,7 @@ export default function RateTermRefinanceOrangeCounty() {
           </h2>
           <p className="text-xl mb-8 text-indigo-100">
             Access competitive refinance rates from 200+ lenders and start saving money every month. 
-            Mo The Broker makes refinancing simple and profitable.
+            Mo Abdel makes refinancing simple and profitable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

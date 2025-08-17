@@ -8,6 +8,9 @@ import { Home, DollarSign, GraduationCap, Shield, Car, MapPin, TrendingUp, Users
 export const metadata: Metadata = {
   title: 'Mission Viejo vs Irvine Home Buying Guide 2025 | Best Family Neighborhoods Orange County',
   description: 'Complete comparison of buying homes in Mission Viejo vs Irvine. Both top family communities - compare home prices, schools, amenities, and mortgage options.',
+  openGraph: {
+    publishedTime: '2025-02-28T14:30:00Z',
+  },
 };
 
 export default function MissionViejoVsIrvineGuide() {
@@ -19,11 +22,15 @@ export default function MissionViejoVsIrvineGuide() {
         <div className="text-center mb-16">
           <Badge className="bg-blue-100 text-blue-600 mb-4">Family Community Comparison</Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Mission Viejo vs Irvine: Top Family Communities Compared
+            Mission Viejo vs Irvine Mortgage Broker: Home Loans for Family Communities
           </h1>
+          <div className="flex items-center justify-center text-sm text-slate-500 mb-4">
+            <span>Published February 28, 2025 • By Mo Abdel, Orange County Mortgage Broker</span>
+          </div>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
             Choosing between Orange County's two premier family-oriented master-planned communities? 
-            Compare home prices, schools, amenities, and mortgage considerations for Mission Viejo vs Irvine.
+            Compare home prices, schools, amenities, and mortgage considerations for Mission Viejo vs Irvine. 
+            Our specialized <Link href="/areas/mission-viejo-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Mission Viejo mortgage broker</Link> and <Link href="/areas/irvine-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Irvine home loans</Link> services can help with your financing needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

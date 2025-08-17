@@ -7,7 +7,7 @@ import { Home, Shield, DollarSign, TrendingUp, Users, CheckCircle } from 'lucide
 
 export const metadata: Metadata = {
   title: 'FHA Loans in Orange County, CA | Low Down Payment Home Loans',
-  description: 'Qualify for a home with as little as 3.5% down. Mo The Broker helps Orange County buyers secure FHA loans with competitive rates.',
+  description: 'Qualify for a home with as little as 3.5% down. Mo Abdel helps Orange County buyers secure FHA loans with competitive rates.',
   keywords: 'FHA loans Orange County, low down payment home loans Orange County, first time buyer FHA loan California, competitive FHA mortgage broker'
 };
 
@@ -26,7 +26,9 @@ export default function FHALoansOrangeCountyPage() {
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Make homeownership a reality in Orange County with FHA loans requiring as little as 3.5% down. 
-            Mo The Broker connects you with competitive FHA lenders for the best rates and terms.
+            Mo Abdel connects you with competitive FHA lenders for the best rates and terms. Compare with 
+            <Link href="/conventional-loans-orange-county" className="text-blue-600 hover:text-blue-700 underline">conventional loan options</Link> or 
+            check out our <Link href="/calculator" className="text-blue-600 hover:text-blue-700 underline">mortgage calculator</Link> to estimate payments.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -44,7 +46,7 @@ export default function FHALoansOrangeCountyPage() {
 
         {/* Benefits of an FHA Loan */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Benefits of an FHA Loan</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Orange County FHA Mortgage Benefits & Advantages</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-2 hover:border-blue-300 transition-all duration-300">
               <CardHeader>
@@ -157,7 +159,7 @@ export default function FHALoansOrangeCountyPage() {
 
         {/* FHA vs Conventional Loans */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">FHA vs Conventional Loans</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Orange County FHA vs Conventional Mortgage Comparison</h2>
           <div className="overflow-x-auto">
             <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
               <thead className="bg-blue-600 text-white">
@@ -200,7 +202,7 @@ export default function FHALoansOrangeCountyPage() {
 
         {/* How to Apply for an FHA Loan */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">How to Apply for an FHA Loan</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Orange County FHA Mortgage Application Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="text-center">
               <CardHeader>
@@ -210,7 +212,7 @@ export default function FHALoansOrangeCountyPage() {
                 <CardTitle>Get Pre-Qualified</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-slate-600">Contact Mo The Broker for a free FHA pre-qualification to understand your budget</p>
+                <p className="text-slate-600">Contact Mo Abdel for a free FHA pre-qualification to understand your budget</p>
               </CardContent>
             </Card>
 
@@ -252,10 +254,20 @@ export default function FHALoansOrangeCountyPage() {
           </div>
         </div>
 
+        {/* Additional Resources */}
+        <div className="mb-16 text-center">
+          <h3 className="text-2xl font-bold text-slate-900 mb-4">Additional FHA Loan Resources</h3>
+          <p className="text-slate-600 mb-6">
+            Learn more about FHA loans from official sources: 
+            <a href="https://www.hud.gov/buying/loans" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline ml-1">HUD Official FHA Information</a> | 
+            <a href="https://www.fha.com/fha_loan_requirements" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline ml-1">FHA Loan Requirements</a>
+          </p>
+        </div>
+
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
           <h2 className="text-3xl font-bold mb-4">
-            Ready for Your Orange County FHA Loan?
+            Ready for Your Orange County FHA Mortgage?
           </h2>
           <p className="text-xl mb-6 text-blue-100">
             Start your FHA loan application today with competitive rates

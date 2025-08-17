@@ -70,7 +70,7 @@ export const LONG_TAIL_KEYWORDS = [
 ];
 
 export const BRAND_KEYWORDS = [
-  'Mo The Broker',
+  'Mo Abdel',
   'Mo Abdel mortgage',
   'NEXA Mortgage Orange County',
   'NMLS 1426884',

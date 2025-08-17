@@ -8,10 +8,10 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Non-QM Loans in Orange County, CA | Alternative Documentation Loans',
-  description: 'Get Non-QM loans in Orange County with flexible income verification. Perfect for self-employed, investors, and non-traditional borrowers. Apply today with Mo The Broker.',
+  description: 'Get Non-QM loans in Orange County with flexible income verification. Perfect for self-employed, investors, and non-traditional borrowers. Apply today with Mo Abdel.',
   openGraph: {
     title: 'Non-QM Loans in Orange County, CA | Alternative Documentation Loans',
-    description: 'Get Non-QM loans in Orange County with flexible income verification. Perfect for self-employed, investors, and non-traditional borrowers. Apply today with Mo The Broker.',
+    description: 'Get Non-QM loans in Orange County with flexible income verification. Perfect for self-employed, investors, and non-traditional borrowers. Apply today with Mo Abdel.',
     type: 'website',
   },
 };

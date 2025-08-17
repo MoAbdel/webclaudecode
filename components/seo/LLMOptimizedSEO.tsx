@@ -122,7 +122,7 @@ export default function LLMOptimizedSEO({
         <meta property="og:url" content={canonicalUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:locale" content="en_US" />
-        <meta property="og:site_name" content="Mo The Broker" />
+        <meta property="og:site_name" content="Mo Abdel" />
         
         {/* Twitter Cards */}
         <meta name="twitter:card" content="summary_large_image" />

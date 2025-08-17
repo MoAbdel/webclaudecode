@@ -25,7 +25,7 @@ export const structuredData = {
   "@context": "https://schema.org",
   "@type": ["FinancialService", "LocalBusiness", "MortgageBroker"],
   "name": "Mo Abdel - Mortgage Broker",
-  "alternateName": "Mo The Broker",
+  "alternateName": "Mo Abdel",
   "serviceType": ["Mortgage Broker", "Home Loan Specialist", "Mortgage Consultant"],
   "hasCredential": "NMLS #1426884",
   "provider": {
@@ -92,9 +92,10 @@ export const structuredData = {
   "telephone": "+1-949-579-2057",
   "url": "https://mothebroker.com",
   "sameAs": [
-    "https://www.linkedin.com/in/moabdel",
     "https://www.facebook.com/profile.php?id=61573517340174",
     "https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest",
+    "https://maps.google.com/?cid=11756575614226532751",
+    "https://www.instagram.com/mo_thebroker",
     "https://mothebroker.com"
   ],
   "priceRange": "$$",

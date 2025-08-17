@@ -91,7 +91,8 @@ export default function ContactPage() {
                   <div className="flex space-x-4 mt-2">
                     <a href="https://www.facebook.com/profile.php?id=61573517340174" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Facebook</a>
                     <a href="https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Yelp Reviews</a>
-                    <a href="https://www.linkedin.com/in/moabdel" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">LinkedIn</a>
+                    <a href="https://maps.google.com/?cid=11756575614226532751" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Google Business</a>
+                    <a href="https://www.instagram.com/mo_thebroker" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Instagram</a>
                   </div>
                   <p className="text-sm text-slate-600">Follow for market updates and tips</p>
                 </div>

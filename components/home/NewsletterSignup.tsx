@@ -162,7 +162,7 @@ export default function NewsletterSignup() {
             </div>
 
             <p className="text-xs text-blue-200 mt-6">
-              By subscribing, you agree to receive email updates from Mo The Broker. 
+              By subscribing, you agree to receive email updates from Mo Abdel. 
               Your information will never be shared with third parties.
             </p>
           </div>

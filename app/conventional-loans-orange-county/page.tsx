@@ -8,10 +8,10 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Conventional Loans in Orange County, CA | Traditional Home Financing',
-  description: 'Get conventional loans in Orange County with competitive rates. Flexible down payments from 3% and loan amounts up to $1,089,300. Apply today with Mo The Broker.',
+  description: 'Get conventional loans in Orange County with competitive rates. Flexible down payments from 3% and loan amounts up to $1,089,300. Apply today with Mo Abdel.',
   openGraph: {
     title: 'Conventional Loans in Orange County, CA | Traditional Home Financing',
-    description: 'Get conventional loans in Orange County with competitive rates. Flexible down payments from 3% and loan amounts up to $1,089,300. Apply today with Mo The Broker.',
+    description: 'Get conventional loans in Orange County with competitive rates. Flexible down payments from 3% and loan amounts up to $1,089,300. Apply today with Mo Abdel.',
     type: 'website',
   },
 };
@@ -128,7 +128,7 @@ export default function ConventionalLoansOrangeCounty() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Benefits of a Conventional Loan
+              Orange County Conventional Mortgage Benefits & Advantages
             </h2>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
               Conventional loans offer the most flexibility and competitive rates for qualified borrowers in Orange County.
@@ -157,10 +157,12 @@ export default function ConventionalLoansOrangeCounty() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                Conventional Loan Requirements in California
+                Orange County Conventional Mortgage Qualification Requirements
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                Conventional loans have flexible qualification requirements that can accommodate a wide range of borrowers in Orange County.
+                Conventional loans have flexible qualification requirements that can accommodate a wide range of borrowers in Orange County. 
+                Compare with <Link href="/fha-loans-orange-county" className="text-blue-600 hover:text-blue-700 underline">FHA loan requirements</Link> or 
+                explore <Link href="/va-loans-orange-county" className="text-blue-600 hover:text-blue-700 underline">VA loan options for veterans</Link>.
               </p>
               <div className="space-y-4">
                 {requirements.map((requirement, index) => (
@@ -204,10 +206,12 @@ export default function ConventionalLoansOrangeCounty() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Conventional vs FHA Loans
+              Orange County Conventional vs FHA Mortgage Comparison
             </h2>
             <p className="text-xl text-slate-600">
-              Understanding the key differences can help you choose the right loan program.
+              Understanding the key differences can help you choose the right loan program. Learn more about 
+              <Link href="/fha-loans-orange-county" className="text-blue-600 hover:text-blue-700 underline">FHA loan details</Link> or 
+              explore our <Link href="/guides/orange-county-home-buyer-guide" className="text-blue-600 hover:text-blue-700 underline">complete home buying guide</Link>.
             </p>
           </div>
 
@@ -241,7 +245,7 @@ export default function ConventionalLoansOrangeCounty() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              How to Apply for a Conventional Loan
+              Orange County Conventional Mortgage Application Process
             </h2>
             <p className="text-xl text-slate-600">
               Our streamlined process makes getting your conventional loan faster and easier.
@@ -274,7 +278,7 @@ export default function ConventionalLoansOrangeCounty() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Conventional Loans Throughout Orange County
+              Conventional Home Loans in Orange County Cities & Neighborhoods
             </h2>
             <p className="text-xl text-slate-600">
               Serving homebuyers across all major Orange County cities with competitive conventional loan rates.
@@ -296,7 +300,7 @@ export default function ConventionalLoansOrangeCounty() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Conventional Loan FAQ
+              Orange County Conventional Mortgage Questions & Answers
             </h2>
           </div>
 
@@ -316,7 +320,7 @@ export default function ConventionalLoansOrangeCounty() {
               },
               {
                 question: 'What is the 2025 conventional loan limit in Orange County?',
-                answer: 'The conforming loan limit for Orange County in 2025 is $1,089,300. Loans above this amount are considered jumbo loans and have different requirements and rates.'
+                answer: 'The conforming loan limit for Orange County in 2025 is $1,089,300, as set by the Federal Housing Finance Agency. Loans above this amount are considered jumbo loans and have different requirements and rates. Learn more about our <a href="/loan-programs/jumbo-loans" className="text-blue-600 hover:text-blue-700 underline">jumbo loan options</a>.'
               },
               {
                 question: 'Can I use a conventional loan for investment property?',
@@ -346,7 +350,7 @@ export default function ConventionalLoansOrangeCounty() {
           </h2>
           <p className="text-xl mb-8 text-blue-100">
             Access competitive rates from 200+ lenders and get pre-approved in minutes. 
-            Mo The Broker makes conventional loans simple and affordable.
+            Mo Abdel makes conventional loans simple and affordable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

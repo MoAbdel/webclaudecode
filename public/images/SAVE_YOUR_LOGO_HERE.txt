@@ -3,7 +3,7 @@ IMPORTANT: Save your logo image as "mo-logo.png" in this folder.
 The logo should be:
 - PNG format with transparent background preferred
 - Approximately 280px width x 80px height (or similar aspect ratio)
-- The image you showed with "MO THE BROKER" text and house icon
+- The image you showed with "MO ABDEL" text and house icon
 - File name: mo-logo.png
 
 Once you save the image here, the website will automatically use it.

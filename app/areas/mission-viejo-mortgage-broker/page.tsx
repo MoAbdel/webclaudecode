@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building, TreePine } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Mission Viejo Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
+  title: 'Mission Viejo Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
   description: 'Mission Viejo mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Saddleback Valley, Lake Mission Viejo area. Call (949) 579-2057.',
   keywords: 'Mission Viejo mortgage broker, Mission Viejo home loans, Mission Viejo HELOC, Saddleback Valley mortgage, Lake Mission Viejo loans, mortgage broker'
 };
@@ -77,12 +77,13 @@ export default function MissionViejoMortgageBrokerPage() {
             Serving All Mission Viejo Areas
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Mission Viejo</span> Mortgage Broker
+            <span className="text-blue-600">Mission Viejo</span> Mortgage Broker: FHA Loans and Refinancing
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Competitive mortgage rates for Mission Viejo homebuyers and homeowners. Specializing in 
             HELOC, conventional loans, and refinancing for Lake Mission Viejo, Saddleback Valley, 
-            and all Mission Viejo master-planned communities.
+            and all Mission Viejo master-planned communities. Compare with other family-friendly areas in our 
+            <Link href="/neighborhood-guide/mission-viejo-vs-irvine-home-buying-guide" className="text-blue-600 hover:text-blue-700 font-medium">Mission Viejo vs Irvine comparison guide</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -195,7 +196,7 @@ export default function MissionViejoMortgageBrokerPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-6">
-              Why Mission Viejo Homeowners Choose Mo The Broker
+              Why Mission Viejo Homeowners Choose Mo Abdel
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">

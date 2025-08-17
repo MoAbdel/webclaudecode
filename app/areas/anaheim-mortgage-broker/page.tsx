@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, Castle, Users, TrendingUp, Building, Heart } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Anaheim Mortgage Broker | Home Loans & HELOC | Mo The Broker NMLS #1426884',
+  title: 'Anaheim Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
   description: 'Anaheim mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Disneyland area, Anaheim Hills, Downtown. Call (949) 579-2057.',
   keywords: 'Anaheim mortgage broker, Anaheim home loans, Anaheim HELOC, Disneyland area mortgage, Anaheim Hills loans, Downtown Anaheim mortgage broker'
 };
@@ -77,7 +77,7 @@ export default function AnaheimMortgageBrokerPage() {
             Serving All Anaheim Communities
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Anaheim</span> Mortgage Broker
+            <span className="text-blue-600">Anaheim</span> Mortgage Broker: FHA Loans and Home Loans
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Competitive mortgage rates for Anaheim homebuyers and homeowners. Specializing in 
@@ -195,7 +195,7 @@ export default function AnaheimMortgageBrokerPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h2 className="text-3xl font-bold text-slate-900 mb-6">
-              Why Anaheim Homeowners Choose Mo The Broker
+              Why Anaheim Homeowners Choose Mo Abdel
             </h2>
             <div className="space-y-6">
               <div className="flex items-start">

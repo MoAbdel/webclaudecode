@@ -392,7 +392,7 @@ export default function HELOANOrangeCounty() {
           </h2>
           <p className="text-xl mb-8 text-green-100">
             Get predictable payments and access to cash for your major expenses. 
-            Mo The Broker makes HELOANs simple with competitive fixed rates.
+            Mo Abdel makes HELOANs simple with competitive fixed rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

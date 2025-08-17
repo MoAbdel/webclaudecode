@@ -22,7 +22,10 @@ import {
 export const metadata: Metadata = {
   title: 'Why Choose a Local Orange County Mortgage Broker | Mo Abdel Guide',
   description: 'Discover why working with a local Orange County mortgage broker like Mo Abdel provides better rates, personalized service, and market expertise for your home loan.',
-  keywords: 'local mortgage broker Orange County, mortgage broker near me, Orange County home loans, local lending expert, Mo Abdel mortgage broker'
+  keywords: 'local mortgage broker Orange County, mortgage broker near me, Orange County home loans, local lending expert, Mo Abdel mortgage broker',
+  openGraph: {
+    publishedTime: '2025-07-18T08:30:00Z',
+  },
 };
 
 export default function WhyChooseLocalMortgageBrokerGuide() {
@@ -45,15 +48,22 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
         <div className="mb-12">
           <Badge className="bg-blue-100 text-blue-600 mb-4">Local Expertise</Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Why Choose a Local Orange County Mortgage Broker
+            Why Choose a Local Orange County Mortgage Broker: Home Loans and Refinancing Guide
           </h1>
+          <div className="flex items-center justify-center text-sm text-slate-500 mb-4">
+            <span>Published July 18, 2025 • By Mo Abdel, Orange County Mortgage Broker</span>
+          </div>
           <p className="text-xl text-slate-600 mb-6">
             When you're buying a home in Orange County, working with a local mortgage broker 
-            who understands the market can make all the difference in your loan experience.
+            who understands the market can make all the difference in your loan experience. 
+            Whether you're looking at <Link href="/areas/irvine-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Irvine home loans</Link>, 
+            <Link href="/areas/newport-beach-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Newport Beach mortgage rates</Link>, 
+            or <Link href="/areas/costa-mesa-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Costa Mesa refinancing</Link>, 
+            local expertise makes the difference.
           </p>
           <div className="flex items-center text-sm text-slate-500">
             <Clock className="w-4 h-4 mr-1" />
-            5 min read • By Mo Abdel, NMLS #1426884
+            5 min read • Updated July 18, 2025 • NMLS #1426884
           </div>
         </div>
 

@@ -8,6 +8,9 @@ import { Home, DollarSign, GraduationCap, MapPin, Clock, Star, TrendingUp, Users
 export const metadata: Metadata = {
   title: 'Orange County Neighborhoods Comparison Guide 2025 | Best Places to Buy Homes OC',
   description: 'Complete guide to Orange County neighborhoods: Irvine, Newport Beach, Laguna Beach, Mission Viejo, Costa Mesa. Home prices, schools, commutes, and mortgage options compared.',
+  openGraph: {
+    publishedTime: '2025-06-05T16:20:00Z',
+  },
 };
 
 const neighborhoods = [
@@ -106,10 +109,13 @@ export default function OCNeighborhoodsGuide() {
         <div className="text-center mb-16">
           <Badge className="bg-blue-100 text-blue-600 mb-4">Complete Neighborhood Analysis</Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Orange County Neighborhoods: Complete Home Buyer's Guide 2025
+            Orange County Mortgage Broker Guide: Best Neighborhoods for Home Loans 2025
           </h1>
+          <div className="flex items-center justify-center text-sm text-slate-500 mb-4">
+            <span>Published June 5, 2025 • By Mo Abdel, Orange County Mortgage Broker</span>
+          </div>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
-            Compare home prices, schools, commutes, and lifestyle factors across Orange County's top neighborhoods. Get personalized mortgage advice for each area from your local OC broker.
+            Compare home prices, schools, commutes, and lifestyle factors across Orange County's top neighborhoods. Get personalized mortgage advice for each area from your local OC broker. Explore our city-specific services including <Link href="/areas/irvine-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Irvine mortgage broker</Link> and <Link href="/areas/newport-beach-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Newport Beach home loans</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

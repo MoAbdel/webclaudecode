@@ -2,7 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
-import { Card, CardContent } from '@/components/ui/Card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Badge } from '@/components/ui/Badge';
 import { Phone, MapPin, Calculator, TrendingUp, Home, DollarSign } from 'lucide-react';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
@@ -30,7 +30,7 @@ interface CityPageProps {
 }
 
 export function generateCityMetadata(cityData: CityData): Metadata {
-  const title = `${cityData.name} Mortgage Broker | Mo The Broker NMLS #1426884`;
+  const title = `${cityData.name} Mortgage Broker | Mo Abdel NMLS #1426884`;
   const description = `Expert mortgage broker serving ${cityData.name}, CA. Access to 200+ lenders, competitive rates, and fast closings. Free consultation. Licensed & bonded.`;
 
   return {
@@ -52,7 +52,7 @@ export function generateCityMetadata(cityData: CityData): Metadata {
       url: `https://mothebroker.com/areas/${cityData.slug}`,
       type: 'website',
       locale: 'en_US',
-      siteName: 'Mo The Broker'
+      siteName: 'Mo Abdel'
     },
     twitter: {
       card: 'summary_large_image',
@@ -67,8 +67,8 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
   
   const structuredFAQ = [
     {
-      question: `What makes Mo The Broker the best mortgage broker in ${cityData.name}?`,
-      answer: `Mo The Broker offers access to 200+ lenders, ensuring ${cityData.name} residents get the most competitive rates. With NMLS #1426884 licensing and average 18-day closings, we provide expert service tailored to the local market.`
+      question: `What makes Mo Abdel the best mortgage broker in ${cityData.name}?`,
+      answer: `Mo Abdel offers access to 200+ lenders, ensuring ${cityData.name} residents get the most competitive rates. With NMLS #1426884 licensing and average 18-day closings, we provide expert service tailored to the local market.`
     },
     {
       question: `What are current mortgage rates in ${cityData.name}?`,
@@ -80,7 +80,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
     },
     {
       question: `What loan programs are available for ${cityData.name} home buyers?`,
-      answer: `${cityData.name} residents have access to FHA loans (3.5% down), VA loans (0% down for veterans), conventional loans, jumbo loans, and first-time buyer programs. Mo The Broker can help determine the best option for your situation.`
+      answer: `${cityData.name} residents have access to FHA loans (3.5% down), VA loans (0% down for veterans), conventional loans, jumbo loans, and first-time buyer programs. Mo Abdel can help determine the best option for your situation.`
     }
   ];
 
@@ -102,7 +102,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
   return (
     <>
       <LLMOptimizedSEO 
-        title={`${cityData.name} Mortgage Broker | Mo The Broker NMLS #1426884`}
+        title={`${cityData.name} Mortgage Broker | Mo Abdel NMLS #1426884`}
         description={`Expert mortgage broker serving ${cityData.name}, CA. Access to 200+ lenders, competitive rates, and fast closings. Free consultation. Licensed & bonded.`}
         keywords={keywordsList}
         city={cityData.name}
@@ -112,7 +112,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
       
       <AdvancedSchemaMarkup 
         type="LocalBusiness"
-        name={`Mo The Broker - ${cityData.name} Mortgage Expert`}
+        name={`Mo Abdel - ${cityData.name} Mortgage Expert`}
         description={`Professional mortgage broker serving ${cityData.name}, California with access to 200+ lenders.`}
         url={canonicalUrl}
         areaServed={[`${cityData.name}, CA`]}
@@ -128,7 +128,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
             </Badge>
             
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-              {cityData.name} <span className="text-blue-600">Mortgage Broker</span>
+              {cityData.name} <span className="text-blue-600">Mortgage Broker</span>: Home Loans and Refinancing
             </h1>
             
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto">
@@ -155,7 +155,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
         <section className="py-12 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">
-              {cityData.name} Housing Market Overview
+              {cityData.name} Mortgage Rates and Housing Market Overview
             </h2>
             
             <div className="grid md:grid-cols-4 gap-6">
@@ -206,7 +206,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">
-              Why {cityData.name} Residents Choose Mo The Broker
+              Why Choose {cityData.name} Mortgage Specialist Mo Abdel
             </h2>
             
             <div className="grid md:grid-cols-2 gap-8">
@@ -293,7 +293,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
         <section className="py-12 px-4 bg-slate-50">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">
-              Popular {cityData.name} Neighborhoods We Serve
+              {cityData.name} Home Loans by Neighborhood
             </h2>
             
             <div className="grid md:grid-cols-3 gap-4">
@@ -301,6 +301,28 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
                 <Card key={index}>
                   <CardContent className="p-4 text-center">
                     <div className="font-semibold text-slate-900">{neighborhood}</div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-16 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">
+              {cityData.name} Mortgage Questions & Answers
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-6">
+              {structuredFAQ.map((faq, index) => (
+                <Card key={index} className="shadow-lg border-0">
+                  <CardHeader>
+                    <CardTitle className="text-lg">{faq.question}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-600">{faq.answer}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -318,10 +340,12 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
               Get a personalized rate quote and pre-approval in minutes. No obligation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="default" className="bg-white text-blue-600 hover:bg-blue-50">
-                <Phone className="w-5 h-5 mr-2" />
-                Call: (714) 555-0123
-              </Button>
+              <a href="tel:(949) 579-2057">
+                <Button size="lg" variant="default" className="bg-white text-blue-600 hover:bg-blue-50">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call: (949) 579-2057
+                </Button>
+              </a>
               <Link href="/contact">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600">
                   Get Free Quote

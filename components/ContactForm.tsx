@@ -271,7 +271,7 @@ export default function ContactForm() {
       </form>
       
       <p className="text-xs text-slate-500 mt-4 text-center">
-        By submitting this form, you consent to be contacted by Mo The Broker regarding mortgage services. 
+        By submitting this form, you consent to be contacted by Mo Abdel regarding mortgage services. 
         Your information will never be shared with third parties.
       </p>
     </div>

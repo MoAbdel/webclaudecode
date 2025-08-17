@@ -8,6 +8,9 @@ import { Home, DollarSign, GraduationCap, Shield, Car, MapPin, TrendingUp, Users
 export const metadata: Metadata = {
   title: 'Newport Beach vs Laguna Beach Home Buying Guide 2025 | Luxury Coastal Living Orange County',
   description: 'Complete comparison of luxury coastal communities: Newport Beach vs Laguna Beach. Compare home prices, lifestyle, amenities, and mortgage options for OC beach living.',
+  openGraph: {
+    publishedTime: '2025-01-22T11:45:00Z',
+  },
 };
 
 export default function NewportBeachVsLagunaBeachGuide() {
@@ -19,11 +22,15 @@ export default function NewportBeachVsLagunaBeachGuide() {
         <div className="text-center mb-16">
           <Badge className="bg-blue-100 text-blue-600 mb-4">Luxury Coastal Comparison</Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Newport Beach vs Laguna Beach: Coastal Luxury Compared
+            Newport Beach vs Laguna Beach Mortgage Specialist: Luxury Coastal Home Loans
           </h1>
+          <div className="flex items-center justify-center text-sm text-slate-500 mb-4">
+            <span>Published January 22, 2025 • By Mo Abdel, Orange County Mortgage Broker</span>
+          </div>
           <p className="text-xl text-slate-600 max-w-4xl mx-auto mb-8">
             Choosing between Orange County's two most prestigious coastal communities? 
-            Compare luxury amenities, artistic culture, home prices, and mortgage considerations.
+            Compare luxury amenities, artistic culture, home prices, and mortgage considerations. 
+            Get expert assistance with our <Link href="/areas/newport-beach-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Newport Beach mortgage specialist</Link> and <Link href="/areas/laguna-beach-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Laguna Beach home loans</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

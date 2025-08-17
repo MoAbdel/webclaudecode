@@ -7,7 +7,7 @@ import { Star, Shield, DollarSign, TrendingUp, Users, CheckCircle } from 'lucide
 
 export const metadata: Metadata = {
   title: 'VA Loans in Orange County, CA | Zero Down for Veterans',
-  description: 'Buy your dream home with zero down and no PMI. Mo The Broker helps veterans in Orange County secure VA loans at competitive rates.',
+  description: 'Buy your dream home with zero down and no PMI. Mo Abdel helps veterans in Orange County secure VA loans at competitive rates.',
   keywords: 'VA loans Orange County, zero down VA loan California, veteran home loans Orange County, competitive VA mortgage broker'
 };
 
@@ -26,7 +26,7 @@ export default function VALoansOrangeCountyPage() {
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Thank you for your service. Now let us serve you with zero down payment VA loans 
-            in Orange County. Mo The Broker specializes in VA lending with competitive rates and expert guidance.
+            in Orange County. Mo Abdel specializes in VA lending with competitive rates and expert guidance.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

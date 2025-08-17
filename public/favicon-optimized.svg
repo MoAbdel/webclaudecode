@@ -1,0 +1,11 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- Blue background representing trust and professionalism -->
+  <rect width="32" height="32" fill="#1e40af" rx="4"/>
+  
+  <!-- White "M" for Mo The Broker -->
+  <text x="16" y="22" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">M</text>
+  
+  <!-- Small house icon to represent real estate/mortgage -->
+  <path d="M6 12l10-8 10 8v16H6z" stroke="white" stroke-width="1.5" fill="none" opacity="0.8"/>
+  <rect x="14" y="20" width="4" height="8" fill="white" opacity="0.8"/>
+</svg>

@@ -3,20 +3,30 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
 
 export const metadata: Metadata = {
-  title: 'Mo Abdel | Wholesale Mortgage Broker in Orange County',
-  description: 'Local mortgage broker near me in Orange County, CA. Get wholesale mortgage rates from 200+ lenders with fast closings, unbiased advice, and flexible home loan programs. Call (949) 579-2057.',
+  title: 'Orange County Mortgage Broker | Mo The Broker NMLS #1426884',
+  description: 'Expert mortgage broker serving Orange County. Access 200+ lenders for competitive rates, fast closings. FHA, VA, conventional, jumbo loans. Licensed NMLS #1426884.',
+  keywords: 'Orange County mortgage broker, home loans, refinancing, FHA loans, VA loans, mortgage rates, NMLS licensed, wholesale lender access, competitive rates',
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: '32x32', type: 'image/x-icon' },
-      { url: '/favicon.ico', sizes: '16x16', type: 'image/x-icon' },
-      { url: '/images/moabdel-headshot-final.png', sizes: '180x180', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
     shortcut: '/favicon.ico',
-    apple: '/images/moabdel-headshot-final.png',
+    apple: [
+      { url: '/apple-touch-icon-180x180.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon-192x192.png', sizes: '192x192', type: 'image/png' },
+    ],
+    other: [
+      { rel: 'mask-icon', url: '/favicon-optimized.svg', color: '#1e40af' },
+    ],
   },
   openGraph: {
     title: 'Mo Abdel | Wholesale Mortgage Broker in Orange County, CA',
@@ -37,6 +47,7 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="gje53lhRpuQPVaMLhtYAUYdO8ciKzx8APLNwNVhcT1A" />
         <link rel="canonical" href="https://mothebroker.com" />
+        <link rel="manifest" href="/manifest.json" />
         
         {/* Preconnect to external domains for performance */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
@@ -65,6 +76,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(mortgageLoanSchema) }}
         />
+        <AdvancedSchemaMarkup type="Organization" />
         <meta name="build-timestamp" content={new Date().toISOString()} />
         <meta name="deployment-id" content="BGDyiFiyb-rollback" />
       </head>

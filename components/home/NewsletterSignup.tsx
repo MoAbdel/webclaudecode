@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
+import SuccessPopup from '@/components/ui/SuccessPopup';
 import { Mail, TrendingUp, Shield, CheckCircle } from 'lucide-react';
 
 export default function NewsletterSignup() {
@@ -19,25 +20,27 @@ export default function NewsletterSignup() {
     setIsSubmitting(true);
     
     try {
-      // TODO: Replace with actual API call to save to database
-      const response = await fetch('/api/newsletter', {
+      // Formspree integration for email collection
+      const formData = new FormData();
+      formData.append('email', email.trim());
+      formData.append('firstName', firstName.trim());
+      formData.append('source', 'MoTheBroker Newsletter');
+      formData.append('subscribedAt', new Date().toISOString());
+      formData.append('_subject', `New Newsletter Subscription: ${firstName}`);
+      
+      const response = await fetch('https://formspree.io/f/xrbzgdyp', {
         method: 'POST',
+        body: formData,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email.trim(),
-          firstName: firstName.trim(),
-          subscribedAt: new Date().toISOString(),
-          source: 'homepage_newsletter'
-        }),
+          'Accept': 'application/json'
+        }
       });
 
       if (response.ok) {
         setShowSuccess(true);
         setEmail('');
         setFirstName('');
-        setTimeout(() => setShowSuccess(false), 5000);
+        // Keep popup open until user closes it
       } else {
         throw new Error('Subscription failed');
       }
@@ -51,8 +54,16 @@ export default function NewsletterSignup() {
   };
 
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <>
+      <SuccessPopup 
+        isVisible={showSuccess}
+        onClose={() => setShowSuccess(false)}
+        title="Welcome to Mo's Insider Network!"
+        message="You've successfully subscribed to exclusive Orange County mortgage market insights. Check your email for a welcome message and your first market update!"
+      />
+      
+      <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-blue-600 text-white rounded-2xl p-8 shadow-lg">
           <div className="max-w-4xl mx-auto text-center">
             <div className="flex justify-center mb-4">
@@ -158,5 +169,6 @@ export default function NewsletterSignup() {
         </div>
       </div>
     </section>
+    </>
   );
 }

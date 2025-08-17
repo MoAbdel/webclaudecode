@@ -221,18 +221,10 @@ export default function Header() {
                   <div className="relative">
                     <button
                       type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        // Toggle dropdown functionality
-                        const targetDropdown = item.page === 'Programs' ? 'programs' : 
-                                             item.page === 'ServiceAreas' ? 'areas' : 
-                                             item.page === 'NeighborhoodGuide' ? 'neighborhood' : null;
-                        
-                        if (targetDropdown) {
-                          setActiveDropdown(prev => prev === targetDropdown ? null : targetDropdown);
-                        }
+                      onClick={() => {
+                        console.log('Click detected!', item.page);
+                        alert(`Clicked ${item.page}!`);
+                        setActiveDropdown('test-state');
                       }}
                       className={`relative z-[70] inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||

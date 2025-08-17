@@ -168,6 +168,40 @@ export default function Header() {
   const [serviceAreasDropdownOpen, setServiceAreasDropdownOpen] = useState(false);
   const [neighborhoodDropdownOpen, setNeighborhoodDropdownOpen] = useState(false);
 
+  // Close dropdowns when clicking outside
+  React.useEffect(() => {
+    const handleClickOutside = () => {
+      setProgramsDropdownOpen(false);
+      setServiceAreasDropdownOpen(false);
+      setNeighborhoodDropdownOpen(false);
+    };
+
+    document.addEventListener('click', handleClickOutside);
+    return () => document.removeEventListener('click', handleClickOutside);
+  }, []);
+
+  const handleDropdownClick = (dropdownType: string, event: React.MouseEvent) => {
+    event.stopPropagation();
+    
+    // Close all other dropdowns first
+    setProgramsDropdownOpen(false);
+    setServiceAreasDropdownOpen(false);
+    setNeighborhoodDropdownOpen(false);
+    
+    // Open the clicked dropdown
+    switch (dropdownType) {
+      case 'programs':
+        setProgramsDropdownOpen(prev => !prev);
+        break;
+      case 'areas':
+        setServiceAreasDropdownOpen(prev => !prev);
+        break;
+      case 'neighborhood':
+        setNeighborhoodDropdownOpen(prev => !prev);
+        break;
+    }
+  };
+
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -189,33 +223,14 @@ export default function Header() {
             {navigationItems.map((item) => (
               <div key={item.title} className="relative">
                 {item.hasDropdown ? (
-                  <div 
-                    className="relative"
-                    onMouseEnter={() => {
-                      if (item.page === 'Programs') {
-                        setProgramsDropdownOpen(true);
-                      } else if (item.page === 'ServiceAreas') {
-                        setServiceAreasDropdownOpen(true);
-                      } else if (item.page === 'NeighborhoodGuide') {
-                        setNeighborhoodDropdownOpen(true);
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      // Add delay to prevent dropdown from closing when moving to dropdown content
-                      setTimeout(() => {
-                        if (!e.currentTarget.matches(':hover')) {
-                          if (item.page === 'Programs') {
-                            setProgramsDropdownOpen(false);
-                          } else if (item.page === 'ServiceAreas') {
-                            setServiceAreasDropdownOpen(false);
-                          } else if (item.page === 'NeighborhoodGuide') {
-                            setNeighborhoodDropdownOpen(false);
-                          }
-                        }
-                      }, 150);
-                    }}
-                  >
+                  <div className="relative">
                     <button
+                      onClick={(e) => handleDropdownClick(
+                        item.page === 'Programs' ? 'programs' : 
+                        item.page === 'ServiceAreas' ? 'areas' : 
+                        'neighborhood', 
+                        e
+                      )}
                       className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
@@ -236,7 +251,10 @@ export default function Header() {
                     {((item.page === 'Programs' && programsDropdownOpen) ||
                       (item.page === 'ServiceAreas' && serviceAreasDropdownOpen) ||
                       (item.page === 'NeighborhoodGuide' && neighborhoodDropdownOpen)) && (
-                      <div className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-slate-200 py-2 z-[100] max-h-80 overflow-y-auto">
+                      <div 
+                        className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-2xl border border-slate-200 py-2 z-[100] max-h-96 overflow-y-auto"
+                        onClick={(e) => e.stopPropagation()}
+                      >
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           dropdownItem.isHeader ? (
                             <div
@@ -250,6 +268,11 @@ export default function Header() {
                               key={index}
                               href={dropdownItem.url}
                               className="block px-4 py-2 text-sm text-slate-700 hover:text-blue-600 hover:bg-blue-50 transition-colors duration-150 whitespace-nowrap"
+                              onClick={() => {
+                                setProgramsDropdownOpen(false);
+                                setServiceAreasDropdownOpen(false);
+                                setNeighborhoodDropdownOpen(false);
+                              }}
                             >
                               {dropdownItem.title}
                             </Link>

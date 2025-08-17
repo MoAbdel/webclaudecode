@@ -189,23 +189,11 @@ export default function Header() {
     event.preventDefault();
     event.stopPropagation();
     
-    console.log('Dropdown clicked:', dropdownType, 'Current active:', activeDropdown);
-    console.log('Event target:', event.target);
-    
-    setActiveDropdown(prev => {
-      const newValue = prev === dropdownType ? null : dropdownType;
-      console.log('Setting activeDropdown from', prev, 'to', newValue);
-      return newValue;
-    });
+    setActiveDropdown(prev => prev === dropdownType ? null : dropdownType);
   };
 
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-50">
-      {/* Global debug indicator */}
-      <div className="fixed top-0 left-0 bg-black text-white text-xs p-2 z-[999]">
-        Active: {activeDropdown || 'none'}
-      </div>
-      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-28 md:h-40 py-2 md:py-4">
           {/* Logo/Brand */}
@@ -249,19 +237,14 @@ export default function Header() {
                       }`} />
                     </button>
                     
-                    {/* Debug indicator */}
-                    {activeDropdown === getDropdownType(item.page) && (
-                      <div className="absolute top-0 right-0 bg-red-500 text-white text-xs px-1 rounded">
-                        OPEN
-                      </div>
-                    )}
-                    
                     {/* Dropdown Menu */}
                     {activeDropdown === getDropdownType(item.page) && (
                       <div 
-                        className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-2xl border border-slate-200 py-2 z-[100] max-h-96 overflow-y-auto"
+                        className="absolute top-full left-0 mt-2 w-80 bg-red-100 rounded-lg shadow-2xl border-2 border-blue-200 py-3 z-[9999] max-h-96 overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
+                        style={{ position: 'absolute', top: '100%', left: 0, zIndex: 9999 }}
                       >
+                        <div className="p-4 text-black font-bold">DROPDOWN IS WORKING!</div>
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           dropdownItem.isHeader ? (
                             <div

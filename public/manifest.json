@@ -49,9 +49,9 @@
   "categories": ["finance", "business"],
   "screenshots": [
     {
-      "src": "/images/moabdel-headshot-final.webp",
-      "sizes": "1280x720",
-      "type": "image/webp",
+      "src": "/images/moabdel-headshot-final.png",
+      "sizes": "800x800",
+      "type": "image/png",
       "form_factor": "wide"
     }
   ],

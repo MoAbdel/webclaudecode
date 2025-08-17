@@ -219,53 +219,43 @@ export default function Header() {
                       onClick={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
-                        console.log('Button clicked!', item.page);
-                        alert(`Clicked ${item.page}!`);
                         
-                        // Simple direct mapping
-                        if (item.page === 'Programs') {
-                          setActiveDropdown(prev => prev === 'programs' ? null : 'programs');
-                        } else if (item.page === 'ServiceAreas') {
-                          setActiveDropdown(prev => prev === 'areas' ? null : 'areas');
-                        } else if (item.page === 'NeighborhoodGuide') {
-                          setActiveDropdown(prev => prev === 'neighborhood' ? null : 'neighborhood');
+                        // Toggle dropdown functionality
+                        const targetDropdown = item.page === 'Programs' ? 'programs' : 
+                                             item.page === 'ServiceAreas' ? 'areas' : 
+                                             item.page === 'NeighborhoodGuide' ? 'neighborhood' : null;
+                        
+                        if (targetDropdown) {
+                          setActiveDropdown(prev => prev === targetDropdown ? null : targetDropdown);
                         }
                       }}
-                      className="relative z-[70] inline-flex items-center px-4 py-3 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer bg-red-200 border-2 border-red-500 text-black hover:bg-red-300"
-                      style={{ 
-                        pointerEvents: 'auto', 
-                        cursor: 'pointer',
-                        position: 'relative',
-                        zIndex: 70,
-                        minHeight: '40px',
-                        display: 'inline-flex'
-                      }}
+                      className={`relative z-[70] inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap cursor-pointer ${
+                        (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
+                        (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
+                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide')) ||
+                        ((item.page === 'Programs' && activeDropdown === 'programs') ||
+                         (item.page === 'ServiceAreas' && activeDropdown === 'areas') ||
+                         (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood'))
+                          ? 'text-blue-600 bg-blue-50'
+                          : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
+                      }`}
                     >
                       {item.title}
                       <ChevronDown className={`ml-1 h-4 w-4 transition-transform duration-200 ${
-                        activeDropdown === getDropdownType(item.page) ? 'rotate-180' : ''
+                        ((item.page === 'Programs' && activeDropdown === 'programs') ||
+                         (item.page === 'ServiceAreas' && activeDropdown === 'areas') ||
+                         (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood')) ? 'rotate-180' : ''
                       }`} />
                     </button>
-                    
-                    {/* Debug info - moved below button */}
-                    <div className="absolute top-12 left-0 bg-yellow-300 text-black text-xs p-1 rounded z-[60]">
-                      Page: {item.page}<br/>
-                      Active: {activeDropdown || 'none'}<br/>
-                      Match: {((item.page === 'Programs' && activeDropdown === 'programs') ||
-                               (item.page === 'ServiceAreas' && activeDropdown === 'areas') ||
-                               (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood')) ? 'YES' : 'NO'}
-                    </div>
                     
                     {/* Dropdown Menu */}
                     {((item.page === 'Programs' && activeDropdown === 'programs') ||
                       (item.page === 'ServiceAreas' && activeDropdown === 'areas') ||
                       (item.page === 'NeighborhoodGuide' && activeDropdown === 'neighborhood')) && (
                       <div 
-                        className="absolute top-full left-0 mt-2 w-80 bg-red-100 rounded-lg shadow-2xl border-2 border-blue-200 py-3 z-[9999] max-h-96 overflow-y-auto"
+                        className="absolute top-full left-0 mt-1 w-72 bg-white rounded-lg shadow-2xl border border-slate-200 py-2 z-[9999] max-h-96 overflow-y-auto"
                         onClick={(e) => e.stopPropagation()}
-                        style={{ position: 'absolute', top: '100%', left: 0, zIndex: 9999 }}
                       >
-                        <div className="p-4 text-black font-bold">DROPDOWN IS WORKING!</div>
                         {item.dropdownItems?.map((dropdownItem, index) => (
                           dropdownItem.isHeader ? (
                             <div

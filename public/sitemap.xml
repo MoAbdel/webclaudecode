@@ -27,19 +27,7 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Legal Pages -->
-  <url>
-    <loc>https://mothebroker.com/privacy-policy</loc>
-    <lastmod>2025-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://mothebroker.com/terms-of-service</loc>
-    <lastmod>2025-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.3</priority>
-  </url>
+  <!-- Legal Pages removed - have noindex tags -->
 
   <!-- Loan Programs Main -->
   <url>

@@ -22,5 +22,48 @@
         }
       ]
     }
-  ]
+  ],
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/services",
+      "destination": "/loan-programs",
+      "permanent": true
+    },
+    {
+      "source": "/programs",
+      "destination": "/loan-programs",
+      "permanent": true
+    },
+    {
+      "source": "/locations",
+      "destination": "/areas",
+      "permanent": true
+    },
+    {
+      "source": "/service-areas",
+      "destination": "/areas",
+      "permanent": true
+    },
+    {
+      "source": "/blog",
+      "destination": "/guides",
+      "permanent": true
+    },
+    {
+      "source": "/neighborhoods",
+      "destination": "/neighborhood-guide",
+      "permanent": true
+    }
+  ],
+  "trailingSlash": false
 }

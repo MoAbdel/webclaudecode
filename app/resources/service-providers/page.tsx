@@ -1,0 +1,589 @@
+import React from 'react';
+import type { Metadata } from 'next';
+import Link from 'next/link';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { Badge } from '@/components/ui/Badge';
+import { 
+  Users,
+  Home,
+  Wrench,
+  Shield,
+  Scale,
+  MapPin,
+  Phone,
+  Star,
+  CheckCircle,
+  Award,
+  Building,
+  Hammer,
+  PaintBucket,
+  Zap,
+  Droplets,
+  TreePine,
+  Camera,
+  FileText,
+  ArrowRight,
+  ExternalLink,
+  Clock,
+  DollarSign
+} from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'Local Service Providers Directory | Orange County Real Estate Professionals',
+  description: 'Trusted Orange County real estate professionals directory. Find vetted realtors, home inspectors, contractors, attorneys, and other home buying professionals.',
+  keywords: 'Orange County real estate agents, home inspectors, contractors, real estate attorney, mortgage professionals, home services, Orange County home buying team',
+};
+
+export default function ServiceProvidersPage() {
+  const serviceCategories = [
+    {
+      category: 'Real Estate Agents',
+      icon: Home,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
+      description: 'Licensed Orange County real estate professionals',
+      providers: [
+        {
+          name: 'Jennifer Martinez',
+          company: 'Coldwell Banker Realty',
+          specialties: ['Luxury Homes', 'Newport Beach', 'Irvine'],
+          phone: '(949) 555-0101',
+          email: 'jennifer@example.com',
+          rating: 4.9,
+          experience: '12 years',
+          areas: ['Newport Beach', 'Irvine', 'Costa Mesa']
+        },
+        {
+          name: 'Michael Chen',
+          company: 'Compass Real Estate',
+          specialties: ['First-Time Buyers', 'Anaheim', 'Santa Ana'],
+          phone: '(714) 555-0102',
+          email: 'michael@example.com',
+          rating: 4.8,
+          experience: '8 years',
+          areas: ['Anaheim', 'Santa Ana', 'Garden Grove']
+        },
+        {
+          name: 'Sarah Johnson',
+          company: 'Keller Williams',
+          specialties: ['Investment Properties', 'Huntington Beach'],
+          phone: '(714) 555-0103',
+          email: 'sarah@example.com',
+          rating: 4.9,
+          experience: '15 years',
+          areas: ['Huntington Beach', 'Westminster', 'Fountain Valley']
+        }
+      ]
+    },
+    {
+      category: 'Home Inspectors',
+      icon: Shield,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
+      description: 'Certified home inspection professionals',
+      providers: [
+        {
+          name: 'Orange County Home Inspections',
+          company: 'Independent',
+          specialties: ['General Inspections', 'Termite', 'Pool/Spa'],
+          phone: '(949) 555-0201',
+          email: 'info@ochomeinspections.com',
+          rating: 4.9,
+          experience: '20 years',
+          certifications: ['ASHI Certified', 'Licensed Contractor']
+        },
+        {
+          name: 'David Rodriguez',
+          company: 'Pillar To Post',
+          specialties: ['Residential', 'Commercial', 'New Construction'],
+          phone: '(714) 555-0202',
+          email: 'david@pillartopost.com',
+          rating: 4.8,
+          experience: '10 years',
+          certifications: ['InterNACHI Certified', 'Thermal Imaging']
+        }
+      ]
+    },
+    {
+      category: 'Contractors & Repair',
+      icon: Hammer,
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
+      description: 'Licensed contractors for repairs and improvements',
+      providers: [
+        {
+          name: 'OC General Contractors',
+          company: 'Independent',
+          specialties: ['Kitchen Remodel', 'Bathroom Remodel', 'Additions'],
+          phone: '(949) 555-0301',
+          email: 'info@ocgeneralcontractors.com',
+          rating: 4.7,
+          experience: '25 years',
+          license: 'CA License #123456'
+        },
+        {
+          name: 'Precision Plumbing',
+          company: 'Independent',
+          specialties: ['Plumbing Repair', 'Water Heaters', 'Pipe Replacement'],
+          phone: '(714) 555-0302',
+          email: 'service@precisionplumbing.com',
+          rating: 4.8,
+          experience: '18 years',
+          license: 'CA License #789012'
+        },
+        {
+          name: 'Elite Electric',
+          company: 'Independent',
+          specialties: ['Electrical Repair', 'Panel Upgrades', 'EV Chargers'],
+          phone: '(949) 555-0303',
+          email: 'info@eliteelectric.com',
+          rating: 4.9,
+          experience: '22 years',
+          license: 'CA License #345678'
+        }
+      ]
+    },
+    {
+      category: 'Legal & Title',
+      icon: Scale,
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
+      description: 'Real estate attorneys and title companies',
+      providers: [
+        {
+          name: 'Orange County Title Company',
+          company: 'Independent',
+          specialties: ['Title Insurance', 'Escrow Services', 'Commercial'],
+          phone: '(949) 555-0401',
+          email: 'info@octitle.com',
+          rating: 4.8,
+          experience: '30 years',
+          services: ['Title Search', 'Escrow', 'Notary Services']
+        },
+        {
+          name: 'Robert Kim, Esq.',
+          company: 'Kim & Associates',
+          specialties: ['Real Estate Law', 'Contract Review', 'Closings'],
+          phone: '(714) 555-0402',
+          email: 'robert@kimlaw.com',
+          rating: 4.9,
+          experience: '16 years',
+          barNumber: 'State Bar #234567'
+        }
+      ]
+    },
+    {
+      category: 'Insurance Providers',
+      icon: Shield,
+      color: 'text-teal-600',
+      bgColor: 'bg-teal-50',
+      description: 'Homeowners and mortgage insurance providers',
+      providers: [
+        {
+          name: 'Pacific Insurance Group',
+          company: 'Independent Agency',
+          specialties: ['Homeowners', 'Flood', 'Earthquake'],
+          phone: '(949) 555-0501',
+          email: 'quotes@pacificinsurance.com',
+          rating: 4.7,
+          experience: '14 years',
+          carriers: ['State Farm', 'Allstate', 'Farmers']
+        },
+        {
+          name: 'Coastal Insurance Solutions',
+          company: 'Independent Agency',
+          specialties: ['Luxury Homes', 'High-Value', 'Coastal Properties'],
+          phone: '(714) 555-0502',
+          email: 'info@coastalinsurance.com',
+          rating: 4.8,
+          experience: '20 years',
+          carriers: ['Chubb', 'AIG', 'PURE']
+        }
+      ]
+    },
+    {
+      category: 'Home Services',
+      icon: Wrench,
+      color: 'text-red-600',
+      bgColor: 'bg-red-50',
+      description: 'Moving, cleaning, and home service professionals',
+      providers: [
+        {
+          name: 'OC Premier Moving',
+          company: 'Independent',
+          specialties: ['Local Moving', 'Long Distance', 'Storage'],
+          phone: '(949) 555-0601',
+          email: 'booking@ocpremiermov.com',
+          rating: 4.6,
+          experience: '12 years',
+          license: 'CAL-T License #654321'
+        },
+        {
+          name: 'Spotless Home Cleaning',
+          company: 'Independent',
+          specialties: ['Move-in Cleaning', 'Deep Clean', 'Regular Service'],
+          phone: '(714) 555-0602',
+          email: 'service@spotlesshome.com',
+          rating: 4.8,
+          experience: '8 years',
+          bonded: 'Bonded & Insured'
+        },
+        {
+          name: 'Green Thumb Landscaping',
+          company: 'Independent',
+          specialties: ['Landscape Design', 'Maintenance', 'Irrigation'],
+          phone: '(949) 555-0603',
+          email: 'info@greenthumboc.com',
+          rating: 4.7,
+          experience: '15 years',
+          license: 'CA License #987654'
+        }
+      ]
+    }
+  ];
+
+  const [selectedCategory, setSelectedCategory] = React.useState('Real Estate Agents');
+
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* Hero Section */}
+      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <Badge className="bg-white/20 text-white mb-4">Trusted Professionals</Badge>
+            <h1 className="text-4xl md:text-5xl font-bold mb-6">
+              Orange County Service Providers Directory
+            </h1>
+            <p className="text-xl mb-8 max-w-3xl mx-auto">
+              Connect with vetted, experienced professionals for your Orange County home buying journey. 
+              From real estate agents to contractors, find trusted experts who deliver quality results.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link href="/contact">
+                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                  <Users className="w-5 h-5 mr-2" />
+                  Get Referrals
+                </Button>
+              </Link>
+              <Button size="lg" variant="ghost" className="text-white border-white hover:bg-white/10">
+                <Phone className="w-5 h-5 mr-2" />
+                Request Introductions
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats */}
+      <section className="py-8 border-b">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div>
+              <div className="text-3xl font-bold text-blue-600">50+</div>
+              <div className="text-sm text-slate-600">Vetted Professionals</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">6</div>
+              <div className="text-sm text-slate-600">Service Categories</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">100%</div>
+              <div className="text-sm text-slate-600">Licensed & Insured</div>
+            </div>
+            <div>
+              <div className="text-3xl font-bold text-blue-600">4.8+</div>
+              <div className="text-sm text-slate-600">Average Rating</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Category Navigation */}
+      <section className="py-8 bg-slate-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-slate-900 mb-2">
+              Professional Service Categories
+            </h2>
+            <p className="text-slate-600">Select a category to view providers</p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            {serviceCategories.map((category, index) => (
+              <Button
+                key={index}
+                variant={selectedCategory === category.category ? 'default' : 'ghost'}
+                className="p-4 h-auto flex-col justify-center"
+                onClick={() => setSelectedCategory(category.category)}
+              >
+                <category.icon className="w-6 h-6 mb-2" />
+                <span className="text-xs text-center leading-tight">{category.category}</span>
+              </Button>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Service Providers */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {serviceCategories
+            .filter(category => category.category === selectedCategory)
+            .map((category, categoryIndex) => (
+              <div key={categoryIndex}>
+                <div className="text-center mb-12">
+                  <div className={`inline-flex p-4 rounded-full ${category.bgColor} mb-4`}>
+                    <category.icon className={`w-10 h-10 ${category.color}`} />
+                  </div>
+                  <h2 className="text-3xl font-bold text-slate-900 mb-4">
+                    {category.category}
+                  </h2>
+                  <p className="text-xl text-slate-600">
+                    {category.description}
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {category.providers.map((provider, providerIndex) => (
+                    <Card key={providerIndex} className="hover:shadow-xl transition-shadow">
+                      <CardHeader>
+                        <div className="flex justify-between items-start mb-2">
+                          <div>
+                            <CardTitle className="text-lg">{provider.name}</CardTitle>
+                            <p className="text-sm text-slate-600">{provider.company}</p>
+                          </div>
+                          <div className="flex items-center">
+                            <Star className="w-4 h-4 text-yellow-500 mr-1" />
+                            <span className="text-sm font-semibold">{provider.rating}</span>
+                          </div>
+                        </div>
+                        
+                        <div className="flex items-center text-sm text-slate-600 mb-2">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {provider.experience}
+                        </div>
+
+                        <div className="flex flex-wrap gap-1 mb-3">
+                          {provider.specialties.map((specialty, idx) => (
+                            <Badge key={idx} variant="secondary" className="text-xs">
+                              {specialty}
+                            </Badge>
+                          ))}
+                        </div>
+                      </CardHeader>
+
+                      <CardContent>
+                        <div className="space-y-3">
+                          <div className="flex items-center">
+                            <Phone className="w-4 h-4 mr-2 text-slate-400" />
+                            <a 
+                              href={`tel:${provider.phone}`}
+                              className="text-sm text-blue-600 hover:text-blue-700"
+                            >
+                              {provider.phone}
+                            </a>
+                          </div>
+
+                          {provider.email && (
+                            <div className="flex items-center">
+                              <FileText className="w-4 h-4 mr-2 text-slate-400" />
+                              <a 
+                                href={`mailto:${provider.email}`}
+                                className="text-sm text-blue-600 hover:text-blue-700"
+                              >
+                                {provider.email}
+                              </a>
+                            </div>
+                          )}
+
+                          {provider.areas && (
+                            <div>
+                              <p className="text-xs font-semibold text-slate-700 mb-1">Service Areas:</p>
+                              <div className="flex flex-wrap gap-1">
+                                {provider.areas.map((area, idx) => (
+                                  <span key={idx} className="text-xs text-slate-600 bg-slate-100 px-2 py-1 rounded">
+                                    {area}
+                                  </span>
+                                ))}
+                              </div>
+                            </div>
+                          )}
+
+                          {(provider.license || provider.certifications || provider.bonded || provider.barNumber) && (
+                            <div className="border-t pt-3">
+                              <p className="text-xs font-semibold text-slate-700 mb-1">Credentials:</p>
+                              <div className="space-y-1">
+                                {provider.license && (
+                                  <div className="flex items-center text-xs text-green-700">
+                                    <CheckCircle className="w-3 h-3 mr-1" />
+                                    {provider.license}
+                                  </div>
+                                )}
+                                {provider.certifications && provider.certifications.map((cert, idx) => (
+                                  <div key={idx} className="flex items-center text-xs text-green-700">
+                                    <CheckCircle className="w-3 h-3 mr-1" />
+                                    {cert}
+                                  </div>
+                                ))}
+                                {provider.bonded && (
+                                  <div className="flex items-center text-xs text-green-700">
+                                    <CheckCircle className="w-3 h-3 mr-1" />
+                                    {provider.bonded}
+                                  </div>
+                                )}
+                                {provider.barNumber && (
+                                  <div className="flex items-center text-xs text-green-700">
+                                    <CheckCircle className="w-3 h-3 mr-1" />
+                                    {provider.barNumber}
+                                  </div>
+                                )}
+                              </div>
+                            </div>
+                          )}
+
+                          <div className="pt-3">
+                            <Button size="sm" className="w-full">
+                              Request Introduction
+                              <ArrowRight className="w-4 h-4 ml-1" />
+                            </Button>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            ))}
+        </div>
+      </section>
+
+      {/* Why These Providers */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Why I Recommend These Professionals
+            </h2>
+            <p className="text-xl text-slate-600">
+              Every provider in this directory has been personally vetted
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <Award className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                <h3 className="font-semibold mb-2">Proven Track Record</h3>
+                <p className="text-sm text-slate-600">Established professionals with years of experience</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <Shield className="w-8 h-8 text-green-600 mx-auto mb-3" />
+                <h3 className="font-semibold mb-2">Licensed & Insured</h3>
+                <p className="text-sm text-slate-600">All providers are properly licensed and carry insurance</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <Star className="w-8 h-8 text-yellow-600 mx-auto mb-3" />
+                <h3 className="font-semibold mb-2">Client Approved</h3>
+                <p className="text-sm text-slate-600">High ratings and positive feedback from past clients</p>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardContent className="p-6">
+                <CheckCircle className="w-8 h-8 text-purple-600 mx-auto mb-3" />
+                <h3 className="font-semibold mb-2">Personally Vetted</h3>
+                <p className="text-sm text-slate-600">I work with these professionals regularly</p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Coverage Areas */}
+      <section className="py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Orange County Coverage Areas
+            </h2>
+            <p className="text-xl text-slate-600">
+              Professional services available throughout Orange County
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4 text-center">
+            {[
+              'Anaheim', 'Brea', 'Buena Park', 'Costa Mesa', 'Cypress', 'Dana Point',
+              'Fountain Valley', 'Fullerton', 'Garden Grove', 'Huntington Beach',
+              'Irvine', 'La Habra', 'Laguna Beach', 'Lake Forest', 'Mission Viejo',
+              'Newport Beach', 'Orange', 'Placentia', 'San Clemente', 'Santa Ana',
+              'Seal Beach', 'Stanton', 'Tustin', 'Westminster', 'Yorba Linda'
+            ].map((city, index) => (
+              <div key={index} className="flex items-center justify-center p-3 bg-white rounded-lg shadow-sm">
+                <MapPin className="w-4 h-4 mr-2 text-blue-600" />
+                <span className="text-sm font-medium">{city}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Disclaimer */}
+      <section className="py-8 bg-yellow-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="border-yellow-200">
+            <CardContent className="p-6">
+              <div className="flex items-start">
+                <Shield className="w-5 h-5 text-yellow-600 mr-3 mt-0.5" />
+                <div className="text-sm text-yellow-800">
+                  <strong>Referral Disclaimer:</strong> While I personally recommend these professionals based on 
+                  past experience and client feedback, I cannot guarantee their services. I encourage you to verify 
+                  credentials, get multiple quotes, and choose providers that best fit your specific needs. Some 
+                  providers may pay referral fees, but this does not influence my recommendations, which are based 
+                  solely on quality and reliability.
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl font-bold mb-6">
+            Need an Introduction to Any of These Professionals?
+          </h2>
+          <p className="text-xl mb-8">
+            I'm happy to make personal introductions and help coordinate your home buying team. 
+            Let's connect you with the right professionals for your specific needs and situation.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Link href="/contact">
+              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+                <Users className="w-5 h-5 mr-2" />
+                Request Introductions
+              </Button>
+            </Link>
+            <a href="tel:(949) 579-2057">
+              <Button size="lg" variant="ghost" className="text-white border-white hover:bg-white/10">
+                <Phone className="w-5 h-5 mr-2" />
+                Call (949) 579-2057
+              </Button>
+            </a>
+          </div>
+          <p className="text-sm mt-6 opacity-90">
+            Mo Abdel, NMLS #1426884 | Connecting Orange County Home Buyers with Trusted Professionals
+          </p>
+        </div>
+      </section>
+    </div>
+  );
+}

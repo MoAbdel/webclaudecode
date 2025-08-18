@@ -244,17 +244,13 @@ export default function CreditRepairPage() {
               Improve your credit score to qualify for better mortgage rates and save thousands. 
               Expert strategies, dispute templates, and step-by-step guidance for Orange County home buyers.
             </p>
-            <div className="flex flex-wrap justify-center gap-4">
+            <div className="flex justify-center">
               <Link href="/contact">
                 <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
                   <CreditCard className="w-5 h-5 mr-2" />
                   Credit Analysis
                 </Button>
               </Link>
-              <Button size="lg" variant="ghost" className="text-white border-white hover:bg-white/10">
-                <Download className="w-5 h-5 mr-2" />
-                Download Templates
-              </Button>
             </div>
           </div>
         </div>
@@ -311,6 +307,13 @@ export default function CreditRepairPage() {
               </div>
             </CardContent>
           </Card>
+
+          {/* Rate Compliance Disclaimer */}
+          <div className="mt-6 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
+            <p className="text-sm text-yellow-800">
+              <strong>Rate Disclaimer:</strong> Rates shown are estimates for illustration purposes only and may vary based on current market conditions, loan amount, loan-to-value ratio, debt-to-income ratio, property type, occupancy, and other factors. Actual rates may be higher or lower. All loans subject to credit approval. Contact Mo Abdel, NMLS #1426884, for current rates and terms. Licensed by the Department of Financial Protection and Innovation under the California Residential Mortgage Lending Act.
+            </p>
+          </div>
         </div>
       </section>
 

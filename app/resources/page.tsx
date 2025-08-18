@@ -210,7 +210,7 @@ export default function ResourcesPage() {
             {resources.map((resource, index) => (
               <Card 
                 key={index} 
-                className={`hover:shadow-xl transition-all duration-300 ${resource.comingSoon ? 'opacity-75' : ''}`}
+                className="hover:shadow-xl transition-all duration-300"
               >
                 <CardHeader>
                   <div className="flex justify-between items-start mb-4">
@@ -220,9 +220,6 @@ export default function ResourcesPage() {
                     <Badge variant="secondary">{resource.badge}</Badge>
                   </div>
                   <CardTitle className="text-xl mb-2">{resource.title}</CardTitle>
-                  {resource.comingSoon && (
-                    <Badge className="bg-yellow-100 text-yellow-800">Coming Soon</Badge>
-                  )}
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600 mb-4">{resource.description}</p>
@@ -234,18 +231,12 @@ export default function ResourcesPage() {
                       </div>
                     ))}
                   </div>
-                  {!resource.comingSoon ? (
-                    <Link href={resource.link}>
-                      <Button className="w-full">
-                        Access Resource
-                        <ArrowRight className="w-4 h-4 ml-2" />
-                      </Button>
-                    </Link>
-                  ) : (
-                    <Button className="w-full" disabled>
-                      Coming Soon
+                  <Link href={resource.link}>
+                    <Button className="w-full">
+                      Access Resource
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Button>
-                  )}
+                  </Link>
                 </CardContent>
               </Card>
             ))}

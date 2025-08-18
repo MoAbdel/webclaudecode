@@ -284,7 +284,7 @@ export default function DocumentChecklistPage() {
     }
   ];
 
-  const [expandedCategory, setExpandedCategory] = React.useState<string | null>(null);
+  // Remove useState for server-side rendering compatibility
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -355,10 +355,7 @@ export default function DocumentChecklistPage() {
           <div className="space-y-6">
             {documentCategories.map((category, index) => (
               <Card key={index} className="hover:shadow-lg transition-shadow">
-                <CardHeader 
-                  className="cursor-pointer"
-                  onClick={() => setExpandedCategory(expandedCategory === category.category ? null : category.category)}
-                >
+                <CardHeader>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center">
                       <div className={`p-3 rounded-lg ${category.bgColor} mr-4`}>
@@ -373,46 +370,40 @@ export default function DocumentChecklistPage() {
                       <Badge variant="secondary" className="mr-3">
                         {category.documents.length} documents
                       </Badge>
-                      {expandedCategory === category.category ? (
-                        <MinusCircle className="w-6 h-6 text-slate-400" />
-                      ) : (
-                        <PlusCircle className="w-6 h-6 text-slate-400" />
-                      )}
+                      <MinusCircle className="w-6 h-6 text-slate-400" />
                     </div>
                   </div>
                 </CardHeader>
                 
-                {expandedCategory === category.category && (
-                  <CardContent>
-                    <div className="space-y-4">
-                      {category.documents.map((doc, docIndex) => (
-                        <div key={docIndex} className="border-l-4 border-blue-200 pl-4">
-                          <div className="flex items-start justify-between mb-2">
-                            <div className="flex items-center">
-                              <h4 className="font-semibold text-slate-900">{doc.name}</h4>
-                              {doc.required && (
-                                <Badge className="ml-2 bg-red-100 text-red-800">Required</Badge>
-                              )}
-                            </div>
-                            <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
+                <CardContent>
+                  <div className="space-y-4">
+                    {category.documents.map((doc, docIndex) => (
+                      <div key={docIndex} className="border-l-4 border-blue-200 pl-4">
+                        <div className="flex items-start justify-between mb-2">
+                          <div className="flex items-center">
+                            <h4 className="font-semibold text-slate-900">{doc.name}</h4>
+                            {doc.required && (
+                              <Badge className="ml-2 bg-red-100 text-red-800">Required</Badge>
+                            )}
                           </div>
-                          <p className="text-slate-600 mb-2">{doc.description}</p>
-                          <div>
-                            <h5 className="font-semibold text-sm text-slate-700 mb-1">Tips:</h5>
-                            <ul className="space-y-1">
-                              {doc.tips.map((tip, tipIndex) => (
-                                <li key={tipIndex} className="text-sm text-slate-600 flex items-start">
-                                  <span className="text-blue-600 mr-2">•</span>
-                                  {tip}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
+                          <CheckCircle className="w-5 h-5 text-green-600 mt-0.5" />
                         </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                )}
+                        <p className="text-slate-600 mb-2">{doc.description}</p>
+                        <div>
+                          <h5 className="font-semibold text-sm text-slate-700 mb-1">Tips:</h5>
+                          <ul className="space-y-1">
+                            {doc.tips.map((tip, tipIndex) => (
+                              <li key={tipIndex} className="text-sm text-slate-600 flex items-start">
+                                <span className="text-blue-600 mr-2">•</span>
+                                {tip}
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
               </Card>
             ))}
           </div>

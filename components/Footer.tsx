@@ -132,16 +132,20 @@ export default function Footer() {
           </div>
 
           {/* Required Disclaimers */}
-          <div className="max-w-4xl mx-auto mb-6">
-            <div className="bg-slate-800 p-4 rounded-lg">
-              <p className="text-slate-300 text-xs mb-2">
-                <strong>Important:</strong> This is not a commitment to lend. All information contained herein is subject to change without notice. 
-                All loans are subject to credit approval. Equal Housing Lender.
-              </p>
-              <p className="text-slate-400 text-xs">
-                This material is not from HUD or FHA and has not been approved by HUD or any government agency. 
-                The information provided is for informational purposes only and is not an advertisement for products or services.
-              </p>
+          <div className="max-w-6xl mx-auto mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <p className="text-slate-300 text-xs">
+                  <strong>Important:</strong> This is not a commitment to lend. All information contained herein is subject to change without notice. 
+                  All loans are subject to credit approval. Equal Housing Lender.
+                </p>
+              </div>
+              <div className="bg-slate-800 p-4 rounded-lg">
+                <p className="text-slate-400 text-xs">
+                  This material is not from HUD or FHA and has not been approved by HUD or any government agency. 
+                  The information provided is for informational purposes only and is not an advertisement for products or services.
+                </p>
+              </div>
             </div>
           </div>
 

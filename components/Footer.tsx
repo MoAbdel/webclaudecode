@@ -108,7 +108,15 @@ export default function Footer() {
             <div className="bg-slate-800 p-4 rounded-lg inline-block">
               <p className="text-white font-semibold mb-2">Mo Abdel - NMLS #1426884</p>
               <p className="text-slate-300 text-sm mb-2">Licensed Mortgage Loan Originator</p>
-              <p className="text-slate-300 text-sm mb-2">NEXA Mortgage • Equal Housing Lender</p>
+              <p className="text-slate-300 text-sm mb-3">NEXA Mortgage LLC • Equal Housing Lender</p>
+              
+              {/* Brokerage License Information */}
+              <div className="border-t border-slate-600 pt-3 mb-3">
+                <p className="text-slate-300 text-sm font-medium mb-1">NEXA Mortgage LLC</p>
+                <p className="text-slate-400 text-xs mb-1">Company State License# AZMB - 0944059 | NMLS# 1660690</p>
+                <p className="text-slate-400 text-xs">5559 S Sossaman Rd, Bldg 1 Ste 101, Mesa, AZ 85212</p>
+              </div>
+              
               <p className="text-slate-400 text-xs">
                 Verify license at{' '}
                 <a 

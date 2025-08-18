@@ -61,7 +61,7 @@ export default function HeroSection() {
               </h1>
               
               <p className="text-lg text-slate-600 leading-relaxed max-w-lg">
-                I'm Mo, a Mortgage Broker with NEXA Mortgage—the nation's largest brokerage, and I'm proudly based in Orange County. Unlike big banks that push their own products, I give you direct access to over 200 lenders with competitive pricing. That means better rates, faster approvals, and more flexible options tailored to you—not the other way around.
+                I'm Mo, a Mortgage Broker with NEXA Mortgage—the nation's largest wholesale brokerage, and I'm proudly based in Orange County. Unlike big banks that push their own products, I give you direct access to over 200 lenders with competitive pricing. That means better rates, faster approvals, and more flexible options tailored to you—not the other way around.
               </p>
             </div>
 

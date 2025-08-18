@@ -73,7 +73,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a 
-                  href="https://maps.google.com/?cid=11756575614226532751" 
+                  href="https://share.google/wFT7ePRJSrCjZ6KAg" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-green-500 transition-colors"

@@ -317,6 +317,52 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Resources Main -->
+  <url>
+    <loc>https://mothebroker.com/resources</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Individual Resource Pages -->
+  <url>
+    <loc>https://mothebroker.com/resources/down-payment-assistance</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/resources/market-data</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/resources/credit-repair</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/resources/glossary</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/resources/document-checklist</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/resources/service-providers</loc>
+    <lastmod>2025-08-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Individual Blog Posts -->
   <url>
     <loc>https://mothebroker.com/guides/why-choose-local-mortgage-broker</loc>

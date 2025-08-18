@@ -118,6 +118,26 @@ const guidesAndBlogDropdown: DropdownItem[] = [
   { title: 'Why Choose Local Mortgage Broker', url: '/guides/why-choose-local-mortgage-broker' }
 ];
 
+const resourcesDropdown: DropdownItem[] = [
+  { title: 'All Resources', url: '/resources' },
+  
+  // Financial Resources
+  { title: '💰 ASSISTANCE & TOOLS', url: '#', isHeader: true },
+  { title: 'Down Payment Assistance', url: '/resources/down-payment-assistance' },
+  { title: 'Credit Repair Resources', url: '/resources/credit-repair' },
+  { title: 'Mortgage Calculators', url: '/calculator' },
+  
+  // Market & Reference  
+  { title: '📊 DATA & REFERENCE', url: '#', isHeader: true },
+  { title: 'Orange County Market Data', url: '/resources/market-data' },
+  { title: 'Mortgage Glossary', url: '/resources/glossary' },
+  
+  // Process & Support
+  { title: '📋 PROCESS & SUPPORT', url: '#', isHeader: true },
+  { title: 'Document Checklist', url: '/resources/document-checklist' },
+  { title: 'Service Providers Directory', url: '/resources/service-providers' }
+];
+
 const navigationItems: NavigationItem[] = [
   {
     title: 'Home',
@@ -154,6 +174,14 @@ const navigationItems: NavigationItem[] = [
     icon: Home,
     hasDropdown: true,
     dropdownItems: guidesAndBlogDropdown
+  },
+  {
+    title: 'Resources',
+    page: 'Resources',
+    url: '/resources',
+    icon: FileText,
+    hasDropdown: true,
+    dropdownItems: resourcesDropdown
   },
   {
     title: 'About',
@@ -201,7 +229,8 @@ export default function Header() {
                       className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides')))
+                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides'))) ||
+                        (item.page === 'Resources' && pathname.startsWith('/resources'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}
@@ -294,7 +323,8 @@ export default function Header() {
                       className={`block px-3 py-2 rounded-md text-base font-medium ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide'))
+                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides'))) ||
+                        (item.page === 'Resources' && pathname.startsWith('/resources'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}

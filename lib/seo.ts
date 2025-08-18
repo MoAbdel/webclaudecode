@@ -1,7 +1,7 @@
 export const seoData = {
   Home: { 
     title: "Mo Abdel | Mortgage Broker Orange County | NMLS #1426884", 
-    description: "Get competitive mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs. Expert guidance on FHA, VA, jumbo loans, and HELOC options." 
+    description: "Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884." 
   },
   About: { 
     title: "About Mo Abdel | NEXA Mortgage Broker", 

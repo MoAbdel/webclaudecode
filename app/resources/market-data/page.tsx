@@ -32,79 +32,79 @@ export const metadata: Metadata = {
 
 export default function MarketDataPage() {
   const currentData = {
-    medianPrice: '$1,175,000',
-    priceChange: '+3.2%',
-    inventoryLevel: '2.1 months',
-    daysOnMarket: '28 days',
-    salesVolume: '1,847 homes',
-    newListings: '2,456',
-    pricePerSqft: '$715',
-    activeListings: '3,892'
+    medianPrice: '$1,195,000',
+    priceChange: '+4.1%',
+    inventoryLevel: '1.9 months',
+    daysOnMarket: '25 days',
+    salesVolume: '2,124 homes',
+    newListings: '2,687',
+    pricePerSqft: '$725',
+    activeListings: '4,012'
   };
 
   const cityData = [
     {
       city: 'Newport Beach',
-      medianPrice: '$2,850,000',
-      change: '+2.8%',
-      dom: '35 days',
-      inventory: '3.2 months',
+      medianPrice: '$2,895,000',
+      change: '+3.4%',
+      dom: '32 days',
+      inventory: '2.8 months',
       trend: 'up'
     },
     {
       city: 'Irvine',
-      medianPrice: '$1,425,000',
-      change: '+4.1%',
+      medianPrice: '$1,465,000',
+      change: '+4.8%',
+      dom: '20 days',
+      inventory: '1.6 months',
+      trend: 'up'
+    },
+    {
+      city: 'Huntington Beach',
+      medianPrice: '$1,315,000',
+      change: '+3.7%',
+      dom: '23 days',
+      inventory: '2.1 months',
+      trend: 'up'
+    },
+    {
+      city: 'Laguna Beach',
+      medianPrice: '$2,185,000',
+      change: '+2.1%',
+      dom: '38 days',
+      inventory: '3.7 months',
+      trend: 'up'
+    },
+    {
+      city: 'Mission Viejo',
+      medianPrice: '$998,000',
+      change: '+4.2%',
+      dom: '21 days',
+      inventory: '1.7 months',
+      trend: 'up'
+    },
+    {
+      city: 'Anaheim',
+      medianPrice: '$845,000',
+      change: '+5.1%',
+      dom: '17 days',
+      inventory: '1.4 months',
+      trend: 'up'
+    },
+    {
+      city: 'Costa Mesa',
+      medianPrice: '$1,125,000',
+      change: '+3.8%',
       dom: '22 days',
       inventory: '1.8 months',
       trend: 'up'
     },
     {
-      city: 'Huntington Beach',
-      medianPrice: '$1,285,000',
-      change: '+2.9%',
-      dom: '26 days',
-      inventory: '2.3 months',
-      trend: 'up'
-    },
-    {
-      city: 'Laguna Beach',
-      medianPrice: '$2,150,000',
-      change: '+1.5%',
-      dom: '42 days',
-      inventory: '4.1 months',
-      trend: 'up'
-    },
-    {
-      city: 'Mission Viejo',
-      medianPrice: '$975,000',
-      change: '+3.8%',
-      dom: '24 days',
-      inventory: '1.9 months',
-      trend: 'up'
-    },
-    {
-      city: 'Anaheim',
-      medianPrice: '$825,000',
-      change: '+4.5%',
-      dom: '19 days',
-      inventory: '1.6 months',
-      trend: 'up'
-    },
-    {
-      city: 'Costa Mesa',
-      medianPrice: '$1,095,000',
-      change: '+3.1%',
-      dom: '25 days',
-      inventory: '2.0 months',
-      trend: 'up'
-    },
-    {
       city: 'Santa Ana',
-      medianPrice: '$745,000',
-      change: '+5.2%',
-      dom: '18 days',
-      inventory: '1.4 months',
+      medianPrice: '$765,000',
+      change: '+5.8%',
+      dom: '16 days',
+      inventory: '1.2 months',
       trend: 'up'
     }
   ];
@@ -169,9 +169,9 @@ export default function MarketDataPage() {
       impact: 'Buyers should be prepared for competition and quick decisions'
     },
     {
-      title: 'Price Growth Moderating',
-      description: 'Annual price growth of 3.2% shows moderation from peak pandemic years, but still above historical averages of 2-3%.',
-      impact: 'More sustainable growth trajectory emerging'
+      title: 'Strong Price Growth Continues',
+      description: 'Annual price growth of 4.1% shows continued strength in the Orange County market, driven by tech sector growth and limited inventory.',
+      impact: 'Strong market fundamentals support continued appreciation'
     },
     {
       title: 'Interest Rate Sensitivity',
@@ -222,7 +222,7 @@ export default function MarketDataPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-slate-900 mb-4">
-              January 2025 Market Snapshot
+              August 2025 Market Snapshot
             </h2>
             <p className="text-xl text-slate-600">
               Latest data from Orange County real estate market
@@ -261,8 +261,8 @@ export default function MarketDataPage() {
               <CardContent className="p-6">
                 <Home className="w-8 h-8 text-purple-600 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-slate-900">{currentData.salesVolume}</div>
-                <div className="text-sm text-slate-600">Homes Sold (Jan)</div>
-                <div className="text-xs text-green-600">+42% from Dec</div>
+                <div className="text-sm text-slate-600">Homes Sold (Aug)</div>
+                <div className="text-xs text-green-600">+15% from Jul</div>
               </CardContent>
             </Card>
           </div>

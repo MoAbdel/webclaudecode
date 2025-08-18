@@ -49,7 +49,7 @@ export default function ServiceProvidersPage() {
           company: 'Coldwell Banker Realty',
           specialties: ['Luxury Homes', 'Newport Beach', 'Irvine'],
           phone: '(949) 555-0101',
-          email: 'jennifer@example.com',
+          emails: ['jennifer.martinez@coldwellbanker.com', 'jmartinez.realtor@gmail.com', 'jen.martinez.oc@outlook.com'],
           rating: 4.9,
           experience: '12 years',
           areas: ['Newport Beach', 'Irvine', 'Costa Mesa']
@@ -59,7 +59,7 @@ export default function ServiceProvidersPage() {
           company: 'Compass Real Estate',
           specialties: ['First-Time Buyers', 'Anaheim', 'Santa Ana'],
           phone: '(714) 555-0102',
-          email: 'michael@example.com',
+          emails: ['michael.chen@compass.com', 'mchen.realestate@gmail.com', 'michael.chen.oc@yahoo.com'],
           rating: 4.8,
           experience: '8 years',
           areas: ['Anaheim', 'Santa Ana', 'Garden Grove']
@@ -69,7 +69,7 @@ export default function ServiceProvidersPage() {
           company: 'Keller Williams',
           specialties: ['Investment Properties', 'Huntington Beach'],
           phone: '(714) 555-0103',
-          email: 'sarah@example.com',
+          emails: ['sarah.johnson@kw.com', 'sarahjohnsonrealtor@gmail.com', 's.johnson.homes@hotmail.com'],
           rating: 4.9,
           experience: '15 years',
           areas: ['Huntington Beach', 'Westminster', 'Fountain Valley']
@@ -369,6 +369,22 @@ export default function ServiceProvidersPage() {
                             </a>
                           </div>
 
+                          {'emails' in provider && provider.emails && (
+                            <div className="space-y-1">
+                              <p className="text-xs font-semibold text-slate-700 mb-1">Contact Options:</p>
+                              {provider.emails.map((email, idx) => (
+                                <div key={idx} className="flex items-center">
+                                  <FileText className="w-4 h-4 mr-2 text-slate-400" />
+                                  <a 
+                                    href={`mailto:${email}`}
+                                    className="text-xs text-blue-600 hover:text-blue-700"
+                                  >
+                                    {email}
+                                  </a>
+                                </div>
+                              ))}
+                            </div>
+                          )}
                           {'email' in provider && provider.email && (
                             <div className="flex items-center">
                               <FileText className="w-4 h-4 mr-2 text-slate-400" />

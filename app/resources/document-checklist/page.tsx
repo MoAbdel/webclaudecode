@@ -539,14 +539,16 @@ export default function DocumentChecklistPage() {
               { name: 'Property Information Form', description: 'Organize property details' },
               { name: 'Document Submission Log', description: 'Track what you\'ve sent' }
             ].map((template, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow cursor-pointer">
+              <Card key={index} className="hover:shadow-lg transition-shadow">
                 <CardContent className="p-4 text-center">
                   <Download className="w-8 h-8 text-blue-600 mx-auto mb-2" />
                   <h3 className="font-semibold text-sm mb-1">{template.name}</h3>
                   <p className="text-xs text-slate-600 mb-3">{template.description}</p>
-                  <Button size="sm" variant="ghost" className="text-blue-600">
-                    Download PDF
-                  </Button>
+                  <Link href="/contact">
+                    <Button size="sm" variant="ghost" className="text-blue-600">
+                      Request Template
+                    </Button>
+                  </Link>
                 </CardContent>
               </Card>
             ))}

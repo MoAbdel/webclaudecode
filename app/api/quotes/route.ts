@@ -9,7 +9,7 @@ export async function POST(request: Request) {
     const body = await request.json();
     
     // Validate required fields
-    if (!body.full_name || !body.email || !body.phone || !body.loan_amount) {
+    if (!body.full_name || !body.email || !body.phone) {
       return NextResponse.json(
         { success: false, error: 'Required fields missing' },
         { status: 400 }
@@ -23,8 +23,8 @@ export async function POST(request: Request) {
         full_name: body.full_name,
         email: body.email.toLowerCase().trim(),
         phone: body.phone,
-        loan_amount: parseFloat(body.loan_amount),
-        property_value: body.property_value || (parseFloat(body.loan_amount) * 1.25),
+        loan_amount: body.loan_amount ? parseFloat(body.loan_amount) : 0,
+        property_value: body.property_value || (body.loan_amount ? parseFloat(body.loan_amount) * 1.25 : 0),
         credit_score: body.credit_score || null,
         loan_type: body.loan_type || 'conventional',
         down_payment: body.down_payment || null,

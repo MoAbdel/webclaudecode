@@ -60,7 +60,7 @@ export default function ContactForm() {
           phone: formData.phone,
           loan_type: formData.loanPurpose || 'inquiry',
           loan_amount: 0, // Will be determined during consultation
-          notes: `Loan Amount Range: ${formData.loanAmount}, Timeline: ${formData.timeline}, Additional Info: ${formData.additionalInfo}`,
+          notes: `Contact Form Inquiry - Loan Amount: ${formData.loanAmount || 'Not specified'}, Timeline: ${formData.timeline || 'Not specified'}, Purpose: ${formData.loanPurpose || 'General inquiry'}${formData.additionalInfo ? ', Additional Info: ' + formData.additionalInfo : ''}`,
           status: 'new'
         }),
       });

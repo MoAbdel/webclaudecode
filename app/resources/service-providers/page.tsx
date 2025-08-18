@@ -243,7 +243,7 @@ export default function ServiceProvidersPage() {
     }
   ];
 
-  const [selectedCategory, setSelectedCategory] = React.useState('Real Estate Agents');
+  // Show all categories by default for better SEO
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -299,28 +299,14 @@ export default function ServiceProvidersPage() {
         </div>
       </section>
 
-      {/* Category Navigation */}
+      {/* Service Categories Overview */}
       <section className="py-8 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <div className="text-center">
             <h2 className="text-2xl font-bold text-slate-900 mb-2">
-              Professional Service Categories
+              Complete Professional Directory
             </h2>
-            <p className="text-slate-600">Select a category to view providers</p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            {serviceCategories.map((category, index) => (
-              <Button
-                key={index}
-                variant={selectedCategory === category.category ? 'default' : 'ghost'}
-                className="p-4 h-auto flex-col justify-center"
-                onClick={() => setSelectedCategory(category.category)}
-              >
-                <category.icon className="w-6 h-6 mb-2" />
-                <span className="text-xs text-center leading-tight">{category.category}</span>
-              </Button>
-            ))}
+            <p className="text-slate-600">All service categories and providers shown below</p>
           </div>
         </div>
       </section>
@@ -328,9 +314,7 @@ export default function ServiceProvidersPage() {
       {/* Service Providers */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {serviceCategories
-            .filter(category => category.category === selectedCategory)
-            .map((category, categoryIndex) => (
+          {serviceCategories.map((category, categoryIndex) => (
               <div key={categoryIndex}>
                 <div className="text-center mb-12">
                   <div className={`inline-flex p-4 rounded-full ${category.bgColor} mb-4`}>

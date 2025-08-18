@@ -242,15 +242,8 @@ export default function GlossaryPage() {
     { name: 'Other', icon: BookOpen, count: glossaryTerms.filter(term => !['Loan Types', 'Process', 'Rates & Fees', 'Payments', 'Qualification', 'Insurance', 'Credit'].includes(term.category)).length }
   ];
 
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
-  const [searchTerm, setSearchTerm] = React.useState('');
-
-  const filteredTerms = glossaryTerms.filter(term => {
-    const matchesCategory = selectedCategory === 'All' || term.category === selectedCategory;
-    const matchesSearch = term.term.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                         term.definition.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesCategory && matchesSearch;
-  });
+  // Show all terms by default for better SEO - all content visible to search engines
+  const allTerms = glossaryTerms;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -284,123 +277,55 @@ export default function GlossaryPage() {
         </div>
       </section>
 
-      {/* Search and Categories */}
+      {/* Terms Introduction */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Search Bar */}
-          <div className="max-w-2xl mx-auto mb-12">
-            <Card>
-              <CardContent className="p-6">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400 w-5 h-5" />
-                  <input
-                    type="text"
-                    placeholder="Search mortgage terms..."
-                    className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                  />
-                </div>
-                <p className="text-sm text-slate-600 mt-2">
-                  Search through {glossaryTerms.length}+ mortgage and real estate terms
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          {/* Category Filters */}
-          <div className="mb-12">
-            <div className="text-center mb-6">
-              <h2 className="text-2xl font-bold text-slate-900 mb-2">
-                Browse by Category
-              </h2>
-              <p className="text-slate-600">Filter terms by topic to find what you need</p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-3 mb-6">
-              <Button
-                variant={selectedCategory === 'All' ? 'default' : 'ghost'}
-                className="justify-center"
-                onClick={() => setSelectedCategory('All')}
-              >
-                All ({glossaryTerms.length})
-              </Button>
-              {categories.map((category, index) => (
-                <Button
-                  key={index}
-                  variant={selectedCategory === category.name ? 'default' : 'ghost'}
-                  className="justify-center text-xs"
-                  onClick={() => setSelectedCategory(category.name)}
-                >
-                  <category.icon className="w-4 h-4 mr-1" />
-                  {category.name} ({category.count})
-                </Button>
-              ))}
-            </div>
-
-            {/* Results Count */}
-            <div className="text-center text-sm text-slate-600">
-              Showing {filteredTerms.length} of {glossaryTerms.length} terms
-              {searchTerm && ` for "${searchTerm}"`}
-              {selectedCategory !== 'All' && ` in ${selectedCategory}`}
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Complete Mortgage Glossary
+            </h2>
+            <p className="text-xl text-slate-600 mb-4">
+              {allTerms.length}+ essential mortgage and real estate terms with clear definitions
+            </p>
+            <p className="text-slate-600">
+              All terms are organized alphabetically below. Use your browser's search (Ctrl+F) to find specific terms quickly.
+            </p>
           </div>
 
           {/* Glossary Terms */}
           <div className="grid gap-6">
-            {filteredTerms.length > 0 ? (
-              filteredTerms.map((termData, index) => (
-                <Card key={index} className="hover:shadow-lg transition-shadow">
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
-                      <div>
-                        <CardTitle className="text-xl text-blue-600 mb-2">
-                          {termData.term}
-                        </CardTitle>
-                        <Badge variant="secondary">{termData.category}</Badge>
-                      </div>
-                      <BookOpen className="w-6 h-6 text-slate-400" />
+            {allTerms.map((termData, index) => (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex justify-between items-start">
+                    <div>
+                      <CardTitle className="text-xl text-blue-600 mb-2">
+                        {termData.term}
+                      </CardTitle>
+                      <Badge variant="secondary">{termData.category}</Badge>
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-slate-700 mb-4 leading-relaxed">
-                      {termData.definition}
-                    </p>
-                    {termData.related && termData.related.length > 0 && (
-                      <div>
-                        <h4 className="font-semibold text-sm text-slate-800 mb-2">Related Terms:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {termData.related.map((related, idx) => (
-                            <Badge key={idx} variant="outline" className="text-xs">
-                              {related}
-                            </Badge>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-                  </CardContent>
-                </Card>
-              ))
-            ) : (
-              <Card>
-                <CardContent className="p-12 text-center">
-                  <Search className="w-12 h-12 text-slate-400 mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-slate-700 mb-2">No terms found</h3>
-                  <p className="text-slate-600 mb-4">
-                    Try adjusting your search or browse a different category
+                    <BookOpen className="w-6 h-6 text-slate-400" />
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-slate-700 mb-4 leading-relaxed">
+                    {termData.definition}
                   </p>
-                  <Button
-                    variant="ghost"
-                    onClick={() => {
-                      setSearchTerm('');
-                      setSelectedCategory('All');
-                    }}
-                  >
-                    Clear filters
-                  </Button>
+                  {termData.related && termData.related.length > 0 && (
+                    <div>
+                      <h4 className="font-semibold text-sm text-slate-800 mb-2">Related Terms:</h4>
+                      <div className="flex flex-wrap gap-2">
+                        {termData.related.map((related, idx) => (
+                          <Badge key={idx} variant="outline" className="text-xs">
+                            {related}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  )}
                 </CardContent>
               </Card>
-            )}
+            ))}
           </div>
         </div>
       </section>

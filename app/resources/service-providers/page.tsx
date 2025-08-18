@@ -385,7 +385,7 @@ export default function ServiceProvidersPage() {
                             </a>
                           </div>
 
-                          {provider.email && (
+                          {'email' in provider && provider.email && (
                             <div className="flex items-center">
                               <FileText className="w-4 h-4 mr-2 text-slate-400" />
                               <a 
@@ -397,7 +397,7 @@ export default function ServiceProvidersPage() {
                             </div>
                           )}
 
-                          {provider.areas && (
+                          {'areas' in provider && provider.areas && (
                             <div>
                               <p className="text-xs font-semibold text-slate-700 mb-1">Service Areas:</p>
                               <div className="flex flex-wrap gap-1">
@@ -410,29 +410,32 @@ export default function ServiceProvidersPage() {
                             </div>
                           )}
 
-                          {(provider.license || provider.certifications || provider.bonded || provider.barNumber) && (
+                          {(('license' in provider && provider.license) || 
+                            ('certifications' in provider && provider.certifications) || 
+                            ('bonded' in provider && provider.bonded) || 
+                            ('barNumber' in provider && provider.barNumber)) && (
                             <div className="border-t pt-3">
                               <p className="text-xs font-semibold text-slate-700 mb-1">Credentials:</p>
                               <div className="space-y-1">
-                                {provider.license && (
+                                {'license' in provider && provider.license && (
                                   <div className="flex items-center text-xs text-green-700">
                                     <CheckCircle className="w-3 h-3 mr-1" />
                                     {provider.license}
                                   </div>
                                 )}
-                                {provider.certifications && provider.certifications.map((cert, idx) => (
+                                {'certifications' in provider && provider.certifications && provider.certifications.map((cert, idx) => (
                                   <div key={idx} className="flex items-center text-xs text-green-700">
                                     <CheckCircle className="w-3 h-3 mr-1" />
                                     {cert}
                                   </div>
                                 ))}
-                                {provider.bonded && (
+                                {'bonded' in provider && provider.bonded && (
                                   <div className="flex items-center text-xs text-green-700">
                                     <CheckCircle className="w-3 h-3 mr-1" />
                                     {provider.bonded}
                                   </div>
                                 )}
-                                {provider.barNumber && (
+                                {'barNumber' in provider && provider.barNumber && (
                                   <div className="flex items-center text-xs text-green-700">
                                     <CheckCircle className="w-3 h-3 mr-1" />
                                     {provider.barNumber}

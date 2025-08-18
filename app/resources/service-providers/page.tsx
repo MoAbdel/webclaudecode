@@ -403,8 +403,7 @@ export default function ServiceProvidersPage() {
 
                           {(('license' in provider && provider.license) || 
                             ('certifications' in provider && provider.certifications) || 
-                            ('bonded' in provider && provider.bonded) || 
-                            ('barNumber' in provider && provider.barNumber)) && (
+                            ('bonded' in provider && provider.bonded)) && (
                             <div className="border-t pt-3">
                               <p className="text-xs font-semibold text-slate-700 mb-1">Credentials:</p>
                               <div className="space-y-1">
@@ -424,12 +423,6 @@ export default function ServiceProvidersPage() {
                                   <div className="flex items-center text-xs text-green-700">
                                     <CheckCircle className="w-3 h-3 mr-1" />
                                     {provider.bonded}
-                                  </div>
-                                )}
-                                {'barNumber' in provider && provider.barNumber && (
-                                  <div className="flex items-center text-xs text-green-700">
-                                    <CheckCircle className="w-3 h-3 mr-1" />
-                                    {provider.barNumber}
                                   </div>
                                 )}
                               </div>

@@ -186,7 +186,7 @@ export default function LLMOptimizedSEO({
       </Head>
 
       {/* Hidden content for LLM context (invisible to users, valuable to AI) */}
-      <div style={{ display: 'none' }} aria-hidden="true">
+      <div className="hidden" aria-hidden="true">
         <div data-llm-context="business-summary">
           {llmContent.businessSummary}
         </div>

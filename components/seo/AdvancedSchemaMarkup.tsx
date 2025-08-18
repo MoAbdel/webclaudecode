@@ -37,12 +37,12 @@ export default function AdvancedSchemaMarkup({
   name = "Mo Abdel - Orange County Mortgage Expert",
   description = "Mortgage broker serving Orange County with access to 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.",
   url = "https://mothebroker.com",
-  telephone = "(714) 555-0123",
+  telephone = "(949) 579-2057",
   address = {
-    streetAddress: "400 Spectrum Center Drive, Suite 1000",
-    addressLocality: "Irvine",
+    streetAddress: "",
+    addressLocality: "Lake Forest",
     addressRegion: "CA",
-    postalCode: "92618",
+    postalCode: "92630",
     addressCountry: "US"
   },
   areaServed = [

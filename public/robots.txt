@@ -1,4 +1,82 @@
+# Robots.txt for mothebroker.com
+# Updated: 2025-08-18 - Allow AI search bots and crawlers
+
+# Allow all crawlers full access
 User-agent: *
 Allow: /
 
+# Specifically allow AI search bots
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# AI Training and Search Bots
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Search Engine AI Features
+User-agent: Applebot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: TwitterBot
+Allow: /
+
+# Crawl delay for heavy bots (optional)
+Crawl-delay: 1
+
+# Disallow admin and sensitive areas only
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.env
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow important pages explicitly
+Allow: /about
+Allow: /contact
+Allow: /calculator
+Allow: /loan-programs
+Allow: /areas
+Allow: /guides
+Allow: /neighborhood-guide
+
+# Sitemap location
 Sitemap: https://mothebroker.com/sitemap.xml

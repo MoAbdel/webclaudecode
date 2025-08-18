@@ -55,7 +55,7 @@ export default function LocalMarketInsights() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
           {marketData.map((data, index) => (
-            <Card key={index} className="card-hover shadow-base44 border-slate-200 transform hover:scale-105 transition-all duration-300 fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+            <Card key={index} className={`card-hover shadow-base44 border-slate-200 transform hover:scale-105 transition-all duration-300 fade-in-up ${index === 0 ? '' : index === 1 ? 'animate-delay-100' : index === 2 ? 'animate-delay-200' : 'animate-delay-300'}`}>
               <CardContent className="p-6 text-center">
                 <div className="mb-4">
                   <div className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent mb-1 animate-pulse">{data.value}</div>

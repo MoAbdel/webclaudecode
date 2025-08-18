@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
+import FacebookPixel from '@/components/FacebookPixel';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
@@ -89,6 +90,7 @@ export default function RootLayout({
         </main>
         <Footer />
         <GoogleAnalytics />
+        <FacebookPixel />
       </body>
     </html>
   );

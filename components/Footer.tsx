@@ -41,7 +41,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-slate-400">
               <li>📞 (949) 579-2057</li>
-              <li>📧 mabdelfattah@nexamortgage.com</li>
+              <li>📧 <Link href="/contact" className="hover:text-white transition-colors">Get a Quote</Link></li>
               <li>📍 Orange County, CA</li>
               <li>🕒 Available 24/7</li>
             </ul>

@@ -7,6 +7,7 @@ import { Home, Calculator, FileText, Phone, Menu, X, User, ChevronDown } from 'l
 import { Button } from '@/components/ui/Button';
 import { createPageUrl } from '@/lib/utils';
 import Image from 'next/image';
+import { useFacebookTracking } from '@/hooks/useFacebookTracking';
 
 interface DropdownItem {
   title: string;
@@ -171,6 +172,7 @@ const navigationItems: NavigationItem[] = [
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { trackPhoneCall } = useFacebookTracking();
 
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-[60]">
@@ -248,7 +250,11 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:(949) 579-2057" className="text-blue-600 font-medium hover:text-blue-700">
+            <a 
+              href="tel:(949) 579-2057" 
+              className="text-blue-600 font-medium hover:text-blue-700"
+              onClick={trackPhoneCall}
+            >
               (949) 579-2057
             </a>
             <Link href="/contact">
@@ -335,7 +341,11 @@ export default function Header() {
               </div>
             ))}
             <div className="pt-4 border-t border-slate-200 mt-4">
-              <a href="tel:(949) 579-2057" className="block px-3 py-2 text-blue-600 font-medium">
+              <a 
+                href="tel:(949) 579-2057" 
+                className="block px-3 py-2 text-blue-600 font-medium"
+                onClick={trackPhoneCall}
+              >
                 (949) 579-2057
               </a>
               <Link href="/contact" className="block px-3 py-2" onClick={() => setMobileMenuOpen(false)}>

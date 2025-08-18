@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/Input";
 import { Label } from "@/components/ui/Label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/Select";
 import { Calculator, ArrowRight, Shield } from "lucide-react";
+import { fbTrack } from '@/components/FacebookPixel';
 
 // Google Ads conversion tracking
 declare global {
@@ -68,6 +69,14 @@ export default function QuickQuote() {
       
       // Track Google Ads conversion
       gtagSendEvent();
+      
+      // Track Facebook Pixel conversion
+      fbTrack('Lead', {
+        content_name: 'Quick Quote Submission',
+        content_category: 'rate_quote',
+        value: parseFloat(formData.loan_amount) || 0,
+        currency: 'USD'
+      });
       
       setShowSuccess(true);
       setFormData({

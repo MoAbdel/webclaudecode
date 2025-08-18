@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Shield } from 'lucide-react';
+import { fbTrack } from '@/components/FacebookPixel';
 
 // Google Ads conversion tracking
 declare global {
@@ -71,6 +72,14 @@ export default function ContactForm() {
       
       // Track Google Ads conversion
       gtagSendEvent();
+      
+      // Track Facebook Pixel conversion
+      fbTrack('Lead', {
+        content_name: 'Contact Form Submission',
+        content_category: 'mortgage_inquiry',
+        value: 0,
+        currency: 'USD'
+      });
       
       setShowSuccess(true);
       setFormData({

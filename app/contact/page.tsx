@@ -49,10 +49,8 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900">Email</h3>
-                  <a href="mailto:mabdelfattah@nexamortgage.com" className="text-blue-600 hover:text-blue-700">
-                    mabdelfattah@nexamortgage.com
-                  </a>
+                  <h3 className="font-semibold text-slate-900">Email Contact</h3>
+                  <p className="text-blue-600">Use the form to the right →</p>
                   <p className="text-sm text-slate-600">I respond within 1 business day</p>
                 </div>
               </div>

@@ -1,6 +1,6 @@
 export const seoData = {
   Home: { 
-    title: "Mo Abdel | Mortgage Broker Orange County | NMLS #1426884", 
+    title: "Orange County Mortgage Broker | Mo Abdel NMLS #1426884", 
     description: "Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884." 
   },
   About: { 
@@ -8,38 +8,47 @@ export const seoData = {
     description: "Meet Mo Abdel – licensed mortgage broker helping clients in CA, WA, VA & CO get better rates, faster approvals, and more loan options. Specializing in Orange County home loans with access to 200+ lenders." 
   },
   Programs: { 
-    title: "Loan Programs | FHA, VA, Jumbo & HELOC – Orange County Mortgage Broker", 
+    title: "Loan Programs | FHA, VA, Jumbo & HELOC | Orange County", 
     description: "Explore FHA, VA, Jumbo, and HELOC options. Mo Abdel finds the right mortgage for your goals with competitive rates & flexible terms." 
   },
   Calculator: { 
-    title: "Mortgage Rate Calculator | Compare Loan Options in Orange County", 
+    title: "Mortgage Calculator | Orange County Rates & Payments", 
     description: "Use our free mortgage rate calculator to estimate your monthly payments, compare loan types, and explore refinancing options." 
   },
   Contact: { 
-    title: "Contact Mo Abdel | Apply for a Home Loan in Orange County", 
+    title: "Contact | Orange County Mortgage Broker | Mo Abdel", 
     description: "Start your mortgage application with Mo Abdel. Serving Orange County & beyond with personalized loan solutions and competitive rates." 
   }
 };
 
 export const structuredData = {
   "@context": "https://schema.org",
-  "@type": ["FinancialService", "LocalBusiness", "MortgageBroker"],
+  "@type": ["FinancialService", "LocalBusiness"],
   "name": "Mo Abdel - Mortgage Broker",
   "alternateName": "Mo Abdel",
-  "serviceType": ["Mortgage Broker", "Home Loan Specialist", "Mortgage Consultant"],
-  "hasCredential": "NMLS #1426884",
-  "provider": {
+  "serviceType": "Mortgage Broker",
+  "additionalType": "https://schema.org/FinancialService",
+  "employee": {
     "@type": "Person",
     "name": "Mo Abdel",
     "jobTitle": "Licensed Mortgage Broker",
-    "hasCredential": "NMLS #1426884",
+    "identifier": "NMLS #1426884",
     "worksFor": {
       "@type": "Organization",
       "name": "NEXA Mortgage",
-      "hasCredential": "Licensed Mortgage Company"
+      "url": "https://www.nexamortgage.com"
     }
   },
+  "founder": {
+    "@type": "Person",
+    "name": "Mo Abdel",
+    "identifier": "NMLS #1426884"
+  },
   "areaServed": [
+    {
+      "@type": "City", 
+      "name": "Lake Forest, CA"
+    },
     {
       "@type": "City", 
       "name": "Irvine, CA"
@@ -79,10 +88,10 @@ export const structuredData = {
   ],
   "address": {
     "@type": "PostalAddress",
-    "addressLocality": "Orange County",
+    "addressLocality": "Lake Forest",
     "addressRegion": "CA",
     "addressCountry": "US",
-    "postalCode": "92602"
+    "postalCode": "92630"
   },
   "geo": {
     "@type": "GeoCoordinates",
@@ -99,7 +108,7 @@ export const structuredData = {
     "https://mothebroker.com"
   ],
   "priceRange": "$$",
-  "description": "Licensed mortgage broker near me in Orange County, CA. Serving local homebuyers with access to over 200 lenders for competitive mortgage rates on home loans and refinancing. NMLS #1426884. Call (949) 579-2057 for local mortgage expertise.",
+  "description": "Licensed mortgage broker based in Lake Forest, serving Orange County, CA. Local homebuyers get access to over 200 lenders for competitive mortgage rates on home loans and refinancing. NMLS #1426884. Call (949) 579-2057 for local mortgage expertise.",
   "image": "https://mothebroker.com/images/moabdel-headshot-final.png",
   "logo": "https://mothebroker.com/images/mo-logo-white.webp",
   "openingHours": ["Mo 08:00-20:00", "Tu 08:00-20:00", "We 08:00-20:00", "Th 08:00-20:00", "Fr 08:00-20:00", "Sa 09:00-18:00", "Su 10:00-16:00"],

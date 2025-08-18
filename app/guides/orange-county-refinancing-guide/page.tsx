@@ -33,7 +33,7 @@ const refinancingOptions = [
     type: 'Cash-Out Refinance',
     purpose: 'Access home equity',
     cashOut: 'Yes',
-    timeframe: '3-4 weeks',
+    timeframe: '2-3 weeks',
     bestFor: 'Home improvements, debt consolidation, investments',
     description: 'Refinance for more than you owe and receive the difference in cash',
     link: '/loan-programs/cash-out-refinance',
@@ -187,7 +187,7 @@ const faqs = [
   },
   {
     question: 'How long does refinancing take in Orange County?',
-    answer: 'Rate-and-term refinances typically take 2-3 weeks, while cash-out refinances may take 3-4 weeks due to additional documentation requirements. HELOCs and HELOANs usually close in 2-3 weeks. Factors affecting timeline include appraisal scheduling, document submission speed, and lender processing times.'
+    answer: 'Rate-and-term refinances typically take 2-3 weeks, while cash-out refinances may take 2-3 weeks due to additional documentation requirements. HELOCs and HELOANs usually close in 2-3 weeks. Factors affecting timeline include appraisal scheduling, document submission speed, and lender processing times.'
   },
   {
     question: 'Can I refinance if I have poor credit?',

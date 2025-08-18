@@ -79,39 +79,39 @@ export default function WhyChooseUs() {
         {/* Internal Linking to Service Pages */}
         <div className="text-center mt-12">
           <h3 className="text-2xl font-bold text-slate-900 mb-6">Popular Orange County Loan Programs</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/fha-loans-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/fha-loans-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Explore FHA Programs
               </Button>
             </Link>
-            <Link href="/va-loans-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/va-loans-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 VA Benefits & Rates
               </Button>
             </Link>
-            <Link href="/heloc-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/heloc-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 HELOC Calculator
               </Button>
             </Link>
-            <Link href="/conventional-loans-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/conventional-loans-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Conventional Options
               </Button>
             </Link>
-            <Link href="/non-qm-loans-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/non-qm-loans-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Self-Employed Programs
               </Button>
             </Link>
-            <Link href="/heloan-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/heloan-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Fixed-Rate HELOAN
               </Button>
             </Link>
-            <Link href="/rate-term-refinance-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/rate-term-refinance-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Refinance Calculator
               </Button>
             </Link>

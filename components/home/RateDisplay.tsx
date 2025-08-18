@@ -10,28 +10,28 @@ import Link from "next/link";
 const defaultRateData = [
   {
     loanType: "30-Year Fixed Conventional",
-    rate: "6.57%",
+    rate: "6.59%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.305%",
+    change: "-0.28%",
     icon: Home,
     description: "Perfect for stable payments over 30 years"
   },
   {
     loanType: "15-Year Fixed Conventional",
-    rate: "5.93%",
+    rate: "5.97%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.32%",
+    change: "-0.28%",
     icon: TrendingDown,
     description: "Build equity faster with higher payments"
   },
   {
     loanType: "FHA 30-Year Fixed",
-    rate: "6.15%",
+    rate: "6.17%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.35%",
+    change: "-0.33%",
     icon: Users,
     description: "Low down payment option for first-time buyers"
   },
@@ -39,8 +39,8 @@ const defaultRateData = [
     loanType: "Jumbo 30-Year Fixed",
     rate: "6.70%",
     apr: "APR may vary",
-    trend: "down",
-    change: "-0.20%",
+    trend: "stable",
+    change: "Stable this week",
     icon: Building,
     description: "For loan amounts above conventional limits"
   }

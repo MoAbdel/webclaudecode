@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { TrendingUp, DollarSign, Calendar, Shield, CheckCircle, AlertCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'HELOC (Home Equity Line of Credit) - Orange County | Mo The Wholesale Mortgage Broker',
-  description: 'Get a HELOC in Orange County with rates from Prime + 0%. Access up to $500K from your home equity. Licensed wholesale mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
+  title: 'HELOC (Home Equity Line of Credit) - Orange County | Mo The Mortgage Broker',
+  description: 'Get a HELOC in Orange County with rates from Prime + 0%. Access up to $500K from your home equity. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
   keywords: 'HELOC Orange County, home equity line of credit California, HELOC rates, home equity credit line'
 };
 
@@ -334,7 +334,7 @@ export default function HELOCPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
           </p>
         </div>
 

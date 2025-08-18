@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Crown, TrendingUp, Shield, CheckCircle, AlertCircle, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Jumbo Loans Orange County | $1,089,300+ Mortgages | Mo The Wholesale Mortgage Broker NMLS #1426884',
-  description: 'Jumbo loans in Orange County for luxury homes over $1,089,300. Competitive rates on non-conforming mortgages. Licensed wholesale mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
+  title: 'Jumbo Loans Orange County | $1,089,300+ Mortgages | Mo The Mortgage Broker NMLS #1426884',
+  description: 'Jumbo loans in Orange County for luxury homes over $1,089,300. Competitive rates on non-conforming mortgages. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
   keywords: 'jumbo loans Orange County, jumbo mortgage California, luxury home loans, non-conforming loans Orange County'
 };
 
@@ -485,7 +485,7 @@ export default function JumboLoansPage() {
             </a>
           </div>
           <p className="text-sm text-purple-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Luxury home financing specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Luxury home financing specialist
           </p>
         </div>
 

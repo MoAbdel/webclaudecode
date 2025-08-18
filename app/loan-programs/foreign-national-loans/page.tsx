@@ -96,7 +96,7 @@ export default function ForeignNationalLoansPage() {
             </a>
           </div>
           <p className="text-red-100 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • International Specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • International Specialist
           </p>
         </div>
 

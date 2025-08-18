@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, TrendingUp, Users, Star, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Newport Beach Wholesale Mortgage Broker | Luxury Home Loans | Mo The Broker NMLS #1426884',
-  description: 'Newport Beach wholesale mortgage broker specializing in luxury home financing. Jumbo loans, conventional mortgages, and investment property financing. Licensed wholesale mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'Newport Beach wholesale mortgage broker, Newport Beach home loans, luxury wholesale mortgage lender Newport Beach, jumbo loans Newport Beach'
+  title: 'Newport Beach Mortgage Broker | Luxury Home Loans | Mo Abdel NMLS #1426884',
+  description: 'Newport Beach mortgage broker specializing in luxury home financing. Jumbo loans, conventional mortgages, and investment property financing. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
+  keywords: 'Newport Beach mortgage broker, Newport Beach home loans, luxury mortgage lender Newport Beach, jumbo loans Newport Beach'
 };
 
 export default function NewportBeachMortgageBrokerPage() {
@@ -22,12 +22,13 @@ export default function NewportBeachMortgageBrokerPage() {
             🏖️ Luxury Coastal Community
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Newport Beach</span> Mortgage Broker
+            <span className="text-blue-600">Newport Beach</span> Mortgage Broker: Luxury Home Loans and Refinancing
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Specializing in luxury home financing for Newport Beach's prestigious waterfront 
             properties, luxury condos, and investment opportunities. Expert knowledge of local 
-            market conditions and jumbo loan programs.
+            market conditions and jumbo loan programs. Compare Newport Beach with other coastal communities in our 
+            <Link href="/neighborhood-guide/newport-beach-vs-laguna-beach-home-buying-guide" className="text-blue-600 hover:text-blue-700 font-medium">Newport Beach vs Laguna Beach comparison guide</Link>.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -78,7 +79,7 @@ export default function NewportBeachMortgageBrokerPage() {
 
         {/* Newport Beach Market Overview */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Newport Beach Real Estate Market</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Newport Beach Mortgage Rates and Market Insights</h2>
           <div className="bg-blue-50 p-8 rounded-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               <div>
@@ -105,7 +106,11 @@ export default function NewportBeachMortgageBrokerPage() {
                     <span className="font-bold text-green-600">35-65 days</span>
                   </div>
                 </div>
-                <p className="text-xs text-slate-500 mt-4">*Market data as of 2024. Prices vary significantly by neighborhood and proximity to water.</p>
+                <p className="text-xs text-slate-500 mt-4">
+                  *Market data as of 2025. Prices vary significantly by neighborhood and proximity to water. 
+                  Compare with <Link href="/areas/irvine-mortgage-broker" className="text-blue-600 hover:text-blue-700 underline">Irvine market conditions</Link> or 
+                  explore <Link href="/loan-programs/jumbo-loans" className="text-blue-600 hover:text-blue-700 underline">jumbo loan options</Link> for luxury properties.
+                </p>
               </div>
               
               <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -139,7 +144,7 @@ export default function NewportBeachMortgageBrokerPage() {
 
         {/* Newport Beach Neighborhoods */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Newport Beach Neighborhoods We Serve</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Newport Beach Home Loans by Neighborhood</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Card>
               <CardContent className="p-6">
@@ -223,7 +228,7 @@ export default function NewportBeachMortgageBrokerPage() {
 
         {/* Why Choose Mo for Newport Beach */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Why Choose Mo The Broker for Newport Beach?</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Why Choose Mo Abdel for Newport Beach?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="border-l-4 border-l-blue-500">
               <CardContent className="p-6">
@@ -277,7 +282,7 @@ export default function NewportBeachMortgageBrokerPage() {
 
         {/* Loan Programs for Newport Beach */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Popular Loan Programs for Newport Beach</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Newport Beach Mortgage Specialist: Popular Loan Programs</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <Card className="border-l-4 border-l-purple-500">
               <CardContent className="p-6">
@@ -322,7 +327,7 @@ export default function NewportBeachMortgageBrokerPage() {
 
         {/* Investment Property Focus */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Newport Beach Investment Property Financing</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Newport Beach Investment Property Loans and DSCR Financing</h2>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div>
               <div className="space-y-6">
@@ -400,6 +405,65 @@ export default function NewportBeachMortgageBrokerPage() {
           </div>
         </div>
 
+        {/* FAQ Section */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-center mb-8">
+            Newport Beach Mortgage Questions & Answers
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">What's the average home price in Newport Beach?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600">
+                  Newport Beach median home prices range from $2.1M to $5M+ depending on location. 
+                  Waterfront properties and The Island command premium prices, while inland areas 
+                  like Newport Heights offer relatively more affordable luxury options.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Do I need a jumbo loan for Newport Beach homes?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600">
+                  Yes, virtually all Newport Beach homes require jumbo financing above $1,089,300. 
+                  We specialize in super jumbo loans up to $5M+ with competitive rates and 
+                  flexible terms for luxury properties.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">What down payment do I need for a Newport Beach home?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600">
+                  Jumbo loans typically require 10-20% down payment. For luxury properties over $3M, 
+                  expect 20-25% down. Asset-based programs and portfolio loans offer alternatives 
+                  for high-net-worth borrowers with unique financial profiles.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Can I get financing for Newport Beach investment properties?</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-600">
+                  Absolutely! Newport Beach rental properties are excellent investments. DSCR loans 
+                  qualify based on rental income, while portfolio lenders offer flexible terms for 
+                  vacation rentals and luxury investment properties.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
@@ -423,7 +487,7 @@ export default function NewportBeachMortgageBrokerPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Newport Beach luxury home specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Newport Beach luxury home specialist
           </p>
         </div>
       </div>

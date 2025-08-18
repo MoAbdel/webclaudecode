@@ -2,7 +2,7 @@
   "name": "mothebroker-clone",
   "version": "1.0.0",
   "private": true,
-  "description": "Mo The Broker - Orange County Mortgage Broker Website",
+  "description": "Mo Abdel - Orange County Mortgage Broker Website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

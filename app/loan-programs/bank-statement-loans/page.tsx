@@ -394,7 +394,7 @@ export default function BankStatementLoansPage() {
             </a>
           </div>
           <p className="text-orange-100 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Non-QM Specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Non-QM Specialist
           </p>
         </div>
 

@@ -1,5 +1,5 @@
 -- ========================================
--- SUPABASE DATABASE SETUP FOR MO THE BROKER
+-- SUPABASE DATABASE SETUP FOR MO ABDEL
 -- ========================================
 -- Run this SQL in your Supabase SQL Editor:
 -- https://app.supabase.com/project/YOUR_PROJECT/sql/new

@@ -109,7 +109,7 @@ export default function USDARuggralLoansPage() {
             </a>
           </div>
           <p className="text-yellow-100 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • USDA Approved Lender
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • USDA Approved Lender
           </p>
         </div>
 

@@ -8,10 +8,10 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Rate & Term Refinance in Orange County, CA | Lower Your Mortgage Payment',
-  description: 'Refinance your Orange County home to lower your rate, reduce payments, or eliminate PMI. Get wholesale refinance rates from 200+ lenders with Mo The Broker.',
+  description: 'Refinance your Orange County home to lower your rate, reduce payments, or eliminate PMI. Get competitive refinance rates from 200+ lenders with Mo Abdel.',
   openGraph: {
     title: 'Rate & Term Refinance in Orange County, CA | Lower Your Mortgage Payment',
-    description: 'Refinance your Orange County home to lower your rate, reduce payments, or eliminate PMI. Get wholesale refinance rates from 200+ lenders with Mo The Broker.',
+    description: 'Refinance your Orange County home to lower your rate, reduce payments, or eliminate PMI. Get competitive refinance rates from 200+ lenders with Mo Abdel.',
     type: 'website',
   },
 };
@@ -123,7 +123,7 @@ export default function RateTermRefinanceOrangeCounty() {
               Rate & Term Refinance in Orange County – Lower Your Payment
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-indigo-100 max-w-4xl mx-auto leading-relaxed">
-              Reduce your mortgage payment, eliminate PMI, or switch to better loan terms. Access wholesale refinance rates from 200+ lenders for your Orange County home.
+              Reduce your mortgage payment, eliminate PMI, or switch to better loan terms. Access competitive refinance rates from 200+ lenders for your Orange County home.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/contact">
@@ -293,7 +293,7 @@ export default function RateTermRefinanceOrangeCounty() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { step: 1, title: 'Rate Comparison', desc: 'Compare your current rate with available wholesale rates' },
+              { step: 1, title: 'Rate Comparison', desc: 'Compare your current rate with available competitive rates' },
               { step: 2, title: 'Application Submission', desc: 'Complete refinance application with income verification' },
               { step: 3, title: 'Home Appraisal', desc: 'Property appraisal confirms current value and equity' },
               { step: 4, title: 'Closing & Funding', desc: 'Sign new loan documents and enjoy lower payments' }
@@ -359,7 +359,7 @@ export default function RateTermRefinanceOrangeCounty() {
               },
               {
                 question: 'How long does the refinance process take?',
-                answer: 'Most refinances close within 2-3 weeks from start to finish. Our wholesale lender network and streamlined process allows for faster closings than traditional lenders.'
+                answer: 'Most refinances close within 2-3 weeks from start to finish. Our lender network and streamlined process allows for faster closings than traditional lenders.'
               },
               {
                 question: 'Should I refinance from a 30-year to a 15-year loan?',
@@ -388,8 +388,8 @@ export default function RateTermRefinanceOrangeCounty() {
             Ready to Lower Your Orange County Mortgage Payment?
           </h2>
           <p className="text-xl mb-8 text-indigo-100">
-            Access wholesale refinance rates from 200+ lenders and start saving money every month. 
-            Mo The Broker makes refinancing simple and profitable.
+            Access competitive refinance rates from 200+ lenders and start saving money every month. 
+            Mo Abdel makes refinancing simple and profitable.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">

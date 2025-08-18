@@ -529,7 +529,7 @@ export default function ProfitLossStatementLoansPage() {
             </a>
           </div>
           <p className="text-sm text-purple-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • P&L Statement loan specialist
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • P&L Statement loan specialist
           </p>
         </div>
 

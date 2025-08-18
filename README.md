@@ -109,7 +109,7 @@ mothebroker-clone/
 ## 📱 Pages
 
 - **Home (/)** - Hero section, services overview, testimonials
-- **About (/about)** - Mo's story, credentials, why wholesale
+- **About (/about)** - Mo's story, credentials, competitive advantage
 - **Programs (/programs)** - Loan programs (FHA, VA, Conventional, Jumbo)
 - **Calculator (/calculator)** - Interactive mortgage calculator
 - **Contact (/contact)** - Contact form and information

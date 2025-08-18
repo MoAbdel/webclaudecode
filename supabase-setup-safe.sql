@@ -1,5 +1,5 @@
 -- ========================================
--- SAFE SUPABASE DATABASE SETUP FOR MO THE BROKER
+-- SAFE SUPABASE DATABASE SETUP FOR MO ABDEL
 -- ========================================
 -- This script safely creates or updates all database elements
 

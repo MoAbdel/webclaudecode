@@ -6,8 +6,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { TrendingUp, Shield, Home, CheckCircle, AlertCircle, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Conventional Loans Orange County | 3% Down Payment | Mo The Wholesale Mortgage Broker NMLS #1426884',
-  description: 'Conventional loans in Orange County with competitive rates and flexible terms. 3% down payment options available. Licensed wholesale mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
+  title: 'Conventional Loans Orange County | 3% Down Payment | Mo The Mortgage Broker NMLS #1426884',
+  description: 'Conventional loans in Orange County with competitive rates and flexible terms. 3% down payment options available. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
   keywords: 'conventional loans Orange County, conventional mortgage California, 3% down payment, conforming loans Orange County'
 };
 
@@ -528,7 +528,7 @@ export default function ConventionalLoansPage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
+            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all of Orange County
           </p>
         </div>
 

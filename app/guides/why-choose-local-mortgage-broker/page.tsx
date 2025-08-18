@@ -22,7 +22,13 @@ import {
 export const metadata: Metadata = {
   title: 'Why Choose a Local Orange County Mortgage Broker | Mo Abdel Guide',
   description: 'Discover why working with a local Orange County mortgage broker like Mo Abdel provides better rates, personalized service, and market expertise for your home loan.',
-  keywords: 'local mortgage broker Orange County, mortgage broker near me, Orange County home loans, local lending expert, Mo Abdel mortgage broker'
+  keywords: 'local mortgage broker Orange County, mortgage broker near me, Orange County home loans, local lending expert, Mo Abdel mortgage broker',
+  openGraph: {
+    title: 'Why Choose a Local Orange County Mortgage Broker | Mo Abdel Guide',
+    description: 'Discover why working with a local Orange County mortgage broker like Mo Abdel provides better rates, personalized service, and market expertise for your home loan.',
+    type: 'article',
+    publishedTime: '2025-07-18T08:30:00Z',
+  },
 };
 
 export default function WhyChooseLocalMortgageBrokerGuide() {
@@ -45,15 +51,22 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
         <div className="mb-12">
           <Badge className="bg-blue-100 text-blue-600 mb-4">Local Expertise</Badge>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Why Choose a Local Orange County Mortgage Broker
+            Why Choose a Local Orange County Mortgage Broker: Home Loans and Refinancing Guide
           </h1>
+          <div className="flex items-center justify-center text-sm text-slate-500 mb-4">
+            <span>Published July 18, 2025 • By Mo Abdel, Orange County Mortgage Broker</span>
+          </div>
           <p className="text-xl text-slate-600 mb-6">
             When you're buying a home in Orange County, working with a local mortgage broker 
-            who understands the market can make all the difference in your loan experience.
+            who understands the market can make all the difference in your loan experience. 
+            Whether you're looking at <Link href="/areas/irvine-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Irvine home loans</Link>, 
+            <Link href="/areas/newport-beach-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Newport Beach mortgage rates</Link>, 
+            or <Link href="/areas/costa-mesa-mortgage-broker" className="text-blue-600 hover:text-blue-700 font-medium">Costa Mesa refinancing</Link>, 
+            local expertise makes the difference.
           </p>
           <div className="flex items-center text-sm text-slate-500">
             <Clock className="w-4 h-4 mr-1" />
-            5 min read • By Mo Abdel, NMLS #1426884
+            5 min read • Updated July 18, 2025 • NMLS #1426884
           </div>
         </div>
 
@@ -63,7 +76,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
           {/* Introduction */}
           <div className="bg-blue-50 border-l-4 border-blue-500 p-6 mb-8">
             <p className="text-slate-700 mb-0">
-              <strong>As a licensed wholesale mortgage broker serving Orange County, 
+              <strong>As a licensed mortgage broker serving Orange County, 
               I've seen firsthand how local expertise can save homebuyers time, money, and stress. 
               Here's why choosing a local mortgage broker matters for your Orange County home purchase.</strong>
             </p>
@@ -147,7 +160,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
               <div className="flex items-start">
                 <CheckCircle className="w-5 h-5 text-green-600 mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <strong className="text-slate-900">Wholesale Access to 200+ Lenders</strong>
+                  <strong className="text-slate-900">Competitive Access to 200+ Lenders</strong>
                   <p className="text-slate-600 text-sm mt-1">
                     I shop your loan with hundreds of lenders to find the best rates and terms
                   </p>
@@ -231,7 +244,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
                 </tr>
                 <tr>
                   <td className="border border-slate-300 px-4 py-3 font-medium">Lender Options</td>
-                  <td className="border border-slate-300 px-4 py-3 text-green-700">200+ wholesale lenders</td>
+                  <td className="border border-slate-300 px-4 py-3 text-green-700">200+ lenders</td>
                   <td className="border border-slate-300 px-4 py-3 text-slate-600">Limited to their products</td>
                 </tr>
                 <tr className="bg-slate-25">
@@ -303,7 +316,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
               </a>
             </div>
             <p className="text-blue-200 mt-4">
-              Licensed wholesale mortgage broker with NEXA Mortgage • NMLS #1426884
+              Licensed mortgage broker with NEXA Mortgage • NMLS #1426884
             </p>
           </div>
         </div>

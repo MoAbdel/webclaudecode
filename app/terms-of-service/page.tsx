@@ -5,7 +5,7 @@ import { FileText, AlertTriangle, Scale, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Mo Abdel Mortgage Broker - NMLS #1426884',
-  description: 'Terms of Service for Mo Abdel Wholesale Mortgage Services. Legal terms, conditions, and disclaimers for our mortgage broker services.',
+  description: 'Terms of Service for Mo Abdel Mortgage Services. Legal terms, conditions, and disclaimers for our mortgage broker services.',
   robots: 'noindex, nofollow' // Typical for legal pages
 };
 
@@ -81,7 +81,7 @@ export default function TermsOfServicePage() {
             <p className="text-slate-700 mb-4">We provide the following mortgage broker services:</p>
             <ul className="list-disc pl-6 text-slate-700 mb-6">
               <li>Mortgage loan consultation and application assistance</li>
-              <li>Access to wholesale lending network (200+ lenders)</li>
+              <li>Access to lending network (200+ lenders)</li>
               <li>Loan program comparison and recommendations</li>
               <li>Pre-approval and pre-qualification services</li>
               <li>Rate and term analysis</li>

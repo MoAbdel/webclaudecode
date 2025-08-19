@@ -354,13 +354,17 @@ export default function ZipCode92602MortgageBrokerPage() {
               Get specialized financing expertise for ZIP code 92602. Local knowledge, competitive rates, personalized service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="bg-white text-blue-600 hover:bg-gray-100">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (949) 579-2057
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-blue-600 hover:bg-gray-100">
-                Get Pre-Approved
-              </Button>
+              <a href="tel:(949) 579-2057">
+                <Button size="lg" variant="outline" className="bg-white text-blue-600 hover:bg-gray-100 w-full">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (949) 579-2057
+                </Button>
+              </a>
+              <a href="/contact">
+                <Button size="lg" variant="outline" className="bg-white text-blue-600 hover:bg-gray-100 w-full">
+                  Get Pre-Approved
+                </Button>
+              </a>
             </div>
             <p className="text-sm text-blue-200 mt-4">
               Licensed mortgage broker NMLS #1426884 • 92602 ZIP code specialist

@@ -257,14 +257,18 @@ export default function Summer2025MarketGuidePage() {
                 Navigate Orange County's peak real estate season with expert strategies for competing in the summer market's maximum activity and competition.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-orange-600 hover:bg-orange-700">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (949) 579-2057
-                </Button>
-                <Button variant="outline" size="lg">
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Get Competitive Pre-Approval
-                </Button>
+                <a href="tel:(949) 579-2057">
+                  <Button size="lg" className="bg-orange-600 hover:bg-orange-700 w-full">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call (949) 579-2057
+                  </Button>
+                </a>
+                <a href="/calculator">
+                  <Button variant="outline" size="lg" className="w-full">
+                    <Calculator className="w-5 h-5 mr-2" />
+                    Get Competitive Pre-Approval
+                  </Button>
+                </a>
               </div>
             </div>
           </div>

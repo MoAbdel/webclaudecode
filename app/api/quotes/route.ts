@@ -56,9 +56,9 @@ async function sendEmailNotification(quoteData: any) {
     });
 
     if (error) {
-      console.error('Email notification failed:', error);
+      console.error('❌ Email notification failed:', error);
     } else {
-      console.log('Email notification sent successfully:', data);
+      console.log('✅ Email notification sent successfully to moabdel94@gmail.com:', data);
     }
   } catch (error) {
     console.error('Email notification error:', error);
@@ -153,7 +153,17 @@ export async function POST(request: Request) {
     Promise.all([
       sendEmailNotification(data),
       sendSMSNotification(data)
-    ]).catch(console.error);
+    ]).catch(error => {
+      console.error('❌ Notification error:', error);
+      // Log to help debug notification issues
+      console.log('📧 Quote data for notifications:', {
+        id: data.id,
+        name: data.full_name,
+        email: data.email,
+        phone: data.phone,
+        loan_amount: data.loan_amount
+      });
+    });
 
     // Also trigger a webhook if configured (for Zapier, Make, etc.)
     if (process.env.WEBHOOK_URL) {

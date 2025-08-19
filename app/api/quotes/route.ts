@@ -1,47 +1,64 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
+import { Resend } from 'resend';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+// Initialize Resend with API key
+const resend = new Resend('re_e2RhAnsw_NNMvX2jngjETx5CHMWVsq9Pw');
 
 // Email notification function
 async function sendEmailNotification(quoteData: any) {
   try {
     // Send email notification to Mo
     const emailBody = `
-      <h2>New Quote Request Received!</h2>
-      <p><strong>Name:</strong> ${quoteData.full_name}</p>
-      <p><strong>Email:</strong> ${quoteData.email}</p>
-      <p><strong>Phone:</strong> ${quoteData.phone}</p>
-      <p><strong>Loan Amount:</strong> $${quoteData.loan_amount?.toLocaleString() || 'Not specified'}</p>
-      <p><strong>Property Value:</strong> $${quoteData.property_value?.toLocaleString() || 'Not specified'}</p>
-      <p><strong>Credit Score:</strong> ${quoteData.credit_score || 'Not specified'}</p>
-      <p><strong>Loan Type:</strong> ${quoteData.loan_type || 'Not specified'}</p>
-      <p><strong>Employment Status:</strong> ${quoteData.employment_status || 'Not specified'}</p>
-      <p><strong>Annual Income:</strong> ${quoteData.annual_income ? '$' + quoteData.annual_income.toLocaleString() : 'Not specified'}</p>
-      <p><strong>Notes:</strong> ${quoteData.notes || 'None'}</p>
-      <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
-      <hr>
-      <p>Please follow up with this lead as soon as possible!</p>
+      <h2>🎯 New Quote Request Received!</h2>
+      <div style="background: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h3 style="color: #1e40af; margin-top: 0;">Contact Information</h3>
+        <p><strong>Name:</strong> ${quoteData.full_name}</p>
+        <p><strong>Email:</strong> <a href="mailto:${quoteData.email}">${quoteData.email}</a></p>
+        <p><strong>Phone:</strong> <a href="tel:${quoteData.phone}">${quoteData.phone}</a></p>
+      </div>
+      
+      <div style="background: #f0f9ff; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h3 style="color: #1e40af; margin-top: 0;">Loan Details</h3>
+        <p><strong>Loan Amount:</strong> $${quoteData.loan_amount?.toLocaleString() || 'Not specified'}</p>
+        <p><strong>Property Value:</strong> $${quoteData.property_value?.toLocaleString() || 'Not specified'}</p>
+        <p><strong>Credit Score:</strong> ${quoteData.credit_score || 'Not specified'}</p>
+        <p><strong>Loan Type:</strong> ${quoteData.loan_type || 'Not specified'}</p>
+        <p><strong>Employment Status:</strong> ${quoteData.employment_status || 'Not specified'}</p>
+        <p><strong>Annual Income:</strong> ${quoteData.annual_income ? '$' + quoteData.annual_income.toLocaleString() : 'Not specified'}</p>
+      </div>
+      
+      ${quoteData.notes ? `
+      <div style="background: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <h3 style="color: #d97706; margin-top: 0;">Additional Notes</h3>
+        <p>${quoteData.notes}</p>
+      </div>
+      ` : ''}
+      
+      <div style="background: #dcfce7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+        <p><strong>📅 Submitted:</strong> ${new Date().toLocaleString()}</p>
+        <p><strong>🆔 Quote ID:</strong> ${quoteData.id}</p>
+      </div>
+      
+      <hr style="margin: 30px 0;">
+      <p style="color: #dc2626; font-weight: bold;">⚡ Please follow up with this lead within 1 hour for best conversion rates!</p>
     `;
 
-    // Using Resend API (you'll need to set up Resend or another email service)
-    const response = await fetch('https://api.resend.com/emails', {
-      method: 'POST',
-      headers: {
-        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        from: 'MoTheBroker.com <quotes@mothebroker.com>',
-        to: ['mo@mothebroker.com'], // Replace with your actual email
-        subject: `New Quote Request - ${quoteData.full_name}`,
-        html: emailBody,
-      }),
+    // Using Resend SDK
+    const { data, error } = await resend.emails.send({
+      from: 'MoTheBroker.com <onboarding@resend.dev>',
+      to: ['moabdel94@gmail.com'],
+      subject: `🎯 New Quote Request - ${quoteData.full_name} ($${quoteData.loan_amount?.toLocaleString() || 'N/A'})`,
+      html: emailBody,
     });
 
-    if (!response.ok) {
-      console.error('Email notification failed:', await response.text());
+    if (error) {
+      console.error('Email notification failed:', error);
+    } else {
+      console.log('Email notification sent successfully:', data);
     }
   } catch (error) {
     console.error('Email notification error:', error);

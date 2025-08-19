@@ -56,7 +56,11 @@ const loanProgramsDropdown: DropdownItem[] = [
   { title: '🏢 INVESTMENT', url: '#', isHeader: true },
   { title: 'DSCR Investment Loans', url: '/loan-programs/dscr-investment-loans' },
   { title: 'Fix & Flip Loans', url: '/loan-programs/fix-flip-loans' },
-  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' }
+  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' },
+  
+  // City Specific Programs
+  { title: '🏙️ CITY SPECIFIC', url: '#', isHeader: true },
+  { title: 'FHA Loans Irvine', url: '/loan-programs/fha-loans-irvine' }
 ];
 
 const serviceAreasDropdown: DropdownItem[] = [
@@ -93,7 +97,17 @@ const serviceAreasDropdown: DropdownItem[] = [
   
   // Beach Cities
   { title: '🌊 BEACH', url: '#', isHeader: true },
-  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' }
+  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' },
+  
+  // Luxury Markets
+  { title: '💎 LUXURY MARKETS', url: '#', isHeader: true },
+  { title: 'Waterfront Homes', url: '/luxury-markets/waterfront-homes-mortgage-broker' },
+  { title: 'Golf Course Homes', url: '/luxury-markets/golf-course-homes-mortgage-broker' },
+  { title: 'Ultra-Luxury Estates', url: '/luxury-markets/ultra-luxury-estates-mortgage-broker' },
+  
+  // School Districts  
+  { title: '🎓 SCHOOL DISTRICTS', url: '#', isHeader: true },
+  { title: 'Irvine Unified School District', url: '/areas/irvine-unified-school-district-mortgage-broker' }
 ];
 
 const guidesAndBlogDropdown: DropdownItem[] = [
@@ -103,6 +117,11 @@ const guidesAndBlogDropdown: DropdownItem[] = [
   { title: '📚 COMPLETE GUIDES', url: '#', isHeader: true },
   { title: 'Orange County Home Buyer Guide', url: '/guides/orange-county-home-buyer-guide' },
   { title: 'Orange County Refinancing Guide', url: '/guides/orange-county-refinancing-guide' },
+  
+  // Seasonal Market Guides
+  { title: '🌟 SEASONAL GUIDES', url: '#', isHeader: true },
+  { title: 'Spring 2025 Home Buying Guide', url: '/guides/spring-2025-home-buying-guide' },
+  { title: 'Summer 2025 Market Guide', url: '/guides/summer-2025-market-guide' },
   
   // Neighborhood Guides
   { title: '🏘️ NEIGHBORHOOD GUIDES', url: '#', isHeader: true },
@@ -146,6 +165,18 @@ const navigationItems: NavigationItem[] = [
     icon: Home,
   },
   {
+    title: 'About',
+    page: 'About',
+    url: createPageUrl('About'),
+    icon: User,
+  },
+  {
+    title: 'Contact',
+    page: 'Contact',
+    url: createPageUrl('Contact'),
+    icon: Phone,
+  },
+  {
     title: 'Calculator',
     page: 'Calculator',
     url: createPageUrl('Calculator'),
@@ -182,18 +213,6 @@ const navigationItems: NavigationItem[] = [
     icon: FileText,
     hasDropdown: true,
     dropdownItems: resourcesDropdown
-  },
-  {
-    title: 'About',
-    page: 'About',
-    url: createPageUrl('About'),
-    icon: User,
-  },
-  {
-    title: 'Contact',
-    page: 'Contact',
-    url: createPageUrl('Contact'),
-    icon: Phone,
   },
 ];
 

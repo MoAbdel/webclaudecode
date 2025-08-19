@@ -34,12 +34,14 @@ export default function QuickQuote() {
   };
 
   const [formData, setFormData] = useState({
-    full_name: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
-    loan_amount: "",
-    credit_score: "",
-    loan_type: "conventional"
+    loanPurpose: "",
+    loanAmount: "",
+    timeline: "",
+    additionalInfo: ""
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
@@ -56,9 +58,12 @@ export default function QuickQuote() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          ...formData,
-          loan_amount: parseFloat(formData.loan_amount),
-          property_value: parseFloat(formData.loan_amount) * 1.25, // Estimate
+          full_name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          loan_type: formData.loanPurpose || 'purchase',
+          loan_amount: 0, // Will be determined during consultation
+          notes: `Quick Quote - Loan Amount: ${formData.loanAmount || 'Not specified'}, Timeline: ${formData.timeline || 'Not specified'}, Purpose: ${formData.loanPurpose || 'General inquiry'}${formData.additionalInfo ? ', Additional Info: ' + formData.additionalInfo : ''}`,
           status: "new"
         }),
       });
@@ -74,18 +79,20 @@ export default function QuickQuote() {
       fbTrack('Lead', {
         content_name: 'Quick Quote Submission',
         content_category: 'rate_quote',
-        value: parseFloat(formData.loan_amount) || 0,
+        value: 0,
         currency: 'USD'
       });
       
       setShowSuccess(true);
       setFormData({
-        full_name: "",
+        firstName: "",
+        lastName: "",
         email: "",
         phone: "",
-        loan_amount: "",
-        credit_score: "",
-        loan_type: "conventional"
+        loanPurpose: "",
+        loanAmount: "",
+        timeline: "",
+        additionalInfo: ""
       });
     } catch (error) {
       console.error("Error submitting quote request:", error);
@@ -142,132 +149,164 @@ export default function QuickQuote() {
           </p>
         </div>
 
-        <Card className="shadow-xl border-slate-200">
-          <CardHeader className="bg-blue-600 text-white rounded-t-lg">
-            <CardTitle className="flex items-center text-2xl">
-              <Calculator className="w-6 h-6 mr-3" />
-              Quick Rate Calculator
-            </CardTitle>
-          </CardHeader>
+        <div className="bg-white rounded-lg shadow-lg p-8">
+          <h2 className="text-2xl font-bold text-slate-900 mb-6">Get Your Free Quote</h2>
+          <p className="text-slate-600 mb-6">
+            Fill out the form below and I'll get back to you within 1 business day with a personalized rate quote.
+          </p>
           
-          <CardContent className="p-8">
-            {showError && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-                <p className="text-red-600 text-sm">
-                  There was an error submitting your request. Please try again or call us directly at (949) 579-2057.
-                </p>
+          {showError && (
+            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+              <p className="text-red-600 text-sm">
+                There was an error submitting your request. Please try again or call us directly at (949) 579-2057.
+              </p>
+            </div>
+          )}
+          
+          <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  First Name *
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={formData.firstName}
+                  onChange={(e) => handleInputChange('firstName', e.target.value)}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="John"
+                />
               </div>
-            )}
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <Label htmlFor="full_name" className="text-slate-700 font-medium">Full Name</Label>
-                  <Input
-                    id="full_name"
-                    value={formData.full_name}
-                    onChange={(e) => handleInputChange("full_name", e.target.value)}
-                    placeholder="Enter your full name"
-                    className="border-slate-300"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="email" className="text-slate-700 font-medium">Email Address</Label>
-                  <Input
-                    id="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => handleInputChange("email", e.target.value)}
-                    placeholder="Enter your email"
-                    className="border-slate-300"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="phone" className="text-slate-700 font-medium">Phone Number</Label>
-                  <Input
-                    id="phone"
-                    type="tel"
-                    value={formData.phone}
-                    onChange={(e) => handleInputChange("phone", e.target.value)}
-                    placeholder="(949) 579-2057"
-                    className="border-slate-300"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="loan_amount" className="text-slate-700 font-medium">Loan Amount</Label>
-                  <Input
-                    id="loan_amount"
-                    type="number"
-                    value={formData.loan_amount}
-                    onChange={(e) => handleInputChange("loan_amount", e.target.value)}
-                    placeholder="500000"
-                    className="border-slate-300"
-                    required
-                  />
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="credit_score" className="text-slate-700 font-medium">Credit Score Range</Label>
-                  <Select value={formData.credit_score} onValueChange={(value) => handleInputChange("credit_score", value)}>
-                    <SelectTrigger className="border-slate-300">
-                      <SelectValue placeholder="Select your credit score range" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="excellent">Excellent (740+)</SelectItem>
-                      <SelectItem value="good">Good (680-739)</SelectItem>
-                      <SelectItem value="fair">Fair (620-679)</SelectItem>
-                      <SelectItem value="needs_improvement">Needs Improvement (Below 620)</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <div className="space-y-2">
-                  <Label htmlFor="loan_type" className="text-slate-700 font-medium">Loan Type</Label>
-                  <Select value={formData.loan_type} onValueChange={(value) => handleInputChange("loan_type", value)}>
-                    <SelectTrigger className="border-slate-300">
-                      <SelectValue placeholder="Select loan type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="conventional">Conventional</SelectItem>
-                      <SelectItem value="fha">FHA</SelectItem>
-                      <SelectItem value="va">VA</SelectItem>
-                      <SelectItem value="jumbo">Jumbo</SelectItem>
-                      <SelectItem value="refinance">Refinance</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-              </div>
-
-              <Button
-                type="submit"
-                size="lg"
-                disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                {isSubmitting ? (
-                  "Processing..."
-                ) : (
-                  <>
-                    Get My Rate Quote
-                    <ArrowRight className="w-5 h-5 ml-2" />
-                  </>
-                )}
-              </Button>
-            </form>
-
-            <div className="mt-6 p-4 bg-slate-50 rounded-lg">
-              <div className="flex items-center space-x-2 text-sm text-slate-600">
-                <Shield className="w-4 h-4 text-green-600" />
-                <span>Your information is secure and will never be shared with third parties.</span>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Last Name *
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={formData.lastName}
+                  onChange={(e) => handleInputChange('lastName', e.target.value)}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="Doe"
+                />
               </div>
             </div>
-          </CardContent>
-        </Card>
+            
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">
+                Email Address *
+              </label>
+              <input
+                type="email"
+                required
+                value={formData.email}
+                onChange={(e) => handleInputChange('email', e.target.value)}
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="john.doe@example.com"
+              />
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">
+                Phone Number *
+              </label>
+              <input
+                type="tel"
+                required
+                value={formData.phone}
+                onChange={(e) => handleInputChange('phone', e.target.value)}
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="(949) 555-0123"
+              />
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Loan Purpose
+                </label>
+                <select
+                  value={formData.loanPurpose}
+                  onChange={(e) => handleInputChange('loanPurpose', e.target.value)}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                >
+                  <option value="">Select purpose</option>
+                  <option value="purchase">Home Purchase</option>
+                  <option value="refinance">Refinance</option>
+                  <option value="cash-out">Cash-Out Refinance</option>
+                  <option value="heloc">HELOC</option>
+                  <option value="investment">Investment Property</option>
+                </select>
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-slate-700 mb-2">
+                  Estimated Loan Amount
+                </label>
+                <input
+                  type="text"
+                  value={formData.loanAmount}
+                  onChange={(e) => handleInputChange('loanAmount', e.target.value)}
+                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  placeholder="$500,000"
+                />
+              </div>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">
+                Timeline
+              </label>
+              <select
+                value={formData.timeline}
+                onChange={(e) => handleInputChange('timeline', e.target.value)}
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              >
+                <option value="">Select timeline</option>
+                <option value="asap">ASAP</option>
+                <option value="30-days">Within 30 days</option>
+                <option value="60-days">Within 60 days</option>
+                <option value="90-days">Within 90 days</option>
+                <option value="exploring">Just exploring options</option>
+              </select>
+            </div>
+            
+            <div>
+              <label className="block text-sm font-medium text-slate-700 mb-2">
+                Additional Information
+              </label>
+              <textarea
+                value={formData.additionalInfo}
+                onChange={(e) => handleInputChange('additionalInfo', e.target.value)}
+                rows={3}
+                className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                placeholder="Any additional details about your mortgage needs..."
+              ></textarea>
+            </div>
+
+            <Button
+              type="submit"
+              disabled={isSubmitting}
+              className="w-full bg-blue-600 hover:bg-blue-700 text-white py-4 text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+            >
+              {isSubmitting ? (
+                "Processing..."
+              ) : (
+                <>
+                  Get My Rate Quote
+                  <ArrowRight className="w-5 h-5 ml-2" />
+                </>
+              )}
+            </Button>
+          </form>
+
+          <div className="mt-6 p-4 bg-slate-50 rounded-lg">
+            <div className="flex items-center space-x-2 text-sm text-slate-600">
+              <Shield className="w-4 h-4 text-green-600" />
+              <span>Your information is secure and will never be shared with third parties.</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

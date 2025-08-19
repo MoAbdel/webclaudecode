@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+
+  <!-- Recent Resource Updates -->
+  <url>
+    <loc>https://mothebroker.com/resources/market-data</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Mo Abdel Mortgage Resources</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-19</news:publication_date>
+      <news:title>Orange County Housing Market Data August 2025</news:title>
+      <news:keywords>Orange County housing market, mortgage rates, home prices 2025</news:keywords>
+    </news:news>
+  </url>
+
+  <!-- Down Payment Assistance Updates -->
+  <url>
+    <loc>https://mothebroker.com/resources/down-payment-assistance</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Mo Abdel Mortgage Resources</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-19</news:publication_date>
+      <news:title>2025 Down Payment Assistance Programs Orange County</news:title>
+      <news:keywords>down payment assistance, first time home buyer, Orange County programs</news:keywords>
+    </news:news>
+  </url>
+
+  <!-- Credit Repair Resources -->
+  <url>
+    <loc>https://mothebroker.com/resources/credit-repair</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Mo Abdel Mortgage Resources</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-19</news:publication_date>
+      <news:title>Credit Repair Strategies for Home Buyers 2025</news:title>
+      <news:keywords>credit repair, credit score improvement, mortgage qualification</news:keywords>
+    </news:news>
+  </url>
+
+  <!-- Current Mortgage Guides -->
+  <url>
+    <loc>https://mothebroker.com/guides/orange-county-home-buyer-guide</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Mo Abdel Mortgage Guides</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-19</news:publication_date>
+      <news:title>Orange County Home Buyer Guide 2025</news:title>
+      <news:keywords>Orange County home buying, mortgage guide, first time buyers</news:keywords>
+    </news:news>
+  </url>
+
+  <url>
+    <loc>https://mothebroker.com/guides/orange-county-refinancing-guide</loc>
+    <news:news>
+      <news:publication>
+        <news:name>Mo Abdel Mortgage Guides</news:name>
+        <news:language>en</news:language>
+      </news:publication>
+      <news:publication_date>2025-08-19</news:publication_date>
+      <news:title>Orange County Refinancing Guide 2025</news:title>
+      <news:keywords>mortgage refinancing, Orange County rates, HELOC, cash out refinance</news:keywords>
+    </news:news>
+  </url>
+
+</urlset>

@@ -153,10 +153,12 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Quote: (714) 555-0123
-              </Button>
+              <a href="tel:(949) 579-2057">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Get Free Quote: (949) 579-2057
+                </Button>
+              </a>
               <Link href="/calculator">
                 <Button variant="outline" size="lg">
                   <Calculator className="w-5 h-5 mr-2" />

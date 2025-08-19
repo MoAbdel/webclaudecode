@@ -175,14 +175,18 @@ export default function ZipCode92660MortgageBrokerPage() {
                 Dedicated mortgage broker serving ZIP code 92660 in Newport Beach. Luxury expertise for Corona del Mar, Fashion Island area, and prestigious coastal properties.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (949) 579-2057
-                </Button>
-                <Button variant="outline" size="lg">
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Calculate Payment
-                </Button>
+                <a href="tel:(949) 579-2057">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 w-full">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call (949) 579-2057
+                  </Button>
+                </a>
+                <a href="/calculator">
+                  <Button variant="outline" size="lg" className="w-full">
+                    <Calculator className="w-5 h-5 mr-2" />
+                    Calculate Payment
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -350,14 +354,18 @@ export default function ZipCode92660MortgageBrokerPage() {
               Get specialized luxury financing expertise for ZIP code 92660. Local knowledge, premium service, competitive rates for Newport Beach's finest properties.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="bg-white text-amber-600 hover:bg-gray-100">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (949) 579-2057
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-amber-600 hover:bg-gray-100">
-                <Crown className="w-5 h-5 mr-2" />
-                Luxury Pre-Approval
-              </Button>
+              <a href="tel:(949) 579-2057">
+                <Button size="lg" variant="outline" className="bg-white text-amber-600 hover:bg-gray-100 w-full">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (949) 579-2057
+                </Button>
+              </a>
+              <a href="/contact">
+                <Button size="lg" variant="outline" className="bg-white text-amber-600 hover:bg-gray-100 w-full">
+                  <Crown className="w-5 h-5 mr-2" />
+                  Luxury Pre-Approval
+                </Button>
+              </a>
             </div>
             <p className="text-sm text-amber-200 mt-4">
               Licensed mortgage broker NMLS #1426884 • 92660 ZIP code luxury specialist

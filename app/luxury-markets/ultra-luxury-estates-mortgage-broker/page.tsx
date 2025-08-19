@@ -249,14 +249,18 @@ export default function UltraLuxuryEstatesMortgageBrokerPage() {
                 Exclusive financing for Orange County's most prestigious ultra-luxury estates. From $5M oceanfront mansions to private compounds, expert guidance for the ultimate in luxury living.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-purple-900 hover:bg-gray-100">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (949) 579-2057
-                </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-purple-900">
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Ultra-Luxury Calculator
-                </Button>
+                <a href="tel:(949) 579-2057">
+                  <Button size="lg" className="bg-white text-purple-900 hover:bg-gray-100 w-full">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call (949) 579-2057
+                  </Button>
+                </a>
+                <a href="/calculator">
+                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-purple-900 w-full">
+                    <Calculator className="w-5 h-5 mr-2" />
+                    Ultra-Luxury Calculator
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -492,14 +496,18 @@ export default function UltraLuxuryEstatesMortgageBrokerPage() {
               Get exclusive expertise for Orange County's most prestigious ultra-luxury properties. Discretionary service, private banking solutions, portfolio lending specialists.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="bg-white text-purple-900 hover:bg-gray-100">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (949) 579-2057
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-purple-900 hover:bg-gray-100">
-                <Diamond className="w-5 h-5 mr-2" />
-                Ultra-Luxury Pre-Approval
-              </Button>
+              <a href="tel:(949) 579-2057">
+                <Button size="lg" variant="outline" className="bg-white text-purple-900 hover:bg-gray-100 w-full">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (949) 579-2057
+                </Button>
+              </a>
+              <a href="/contact">
+                <Button size="lg" variant="outline" className="bg-white text-purple-900 hover:bg-gray-100 w-full">
+                  <Diamond className="w-5 h-5 mr-2" />
+                  Ultra-Luxury Pre-Approval
+                </Button>
+              </a>
             </div>
             <p className="text-sm text-purple-200 mt-4">
               Licensed mortgage broker NMLS #1426884 • Ultra-luxury estate and mansion specialist

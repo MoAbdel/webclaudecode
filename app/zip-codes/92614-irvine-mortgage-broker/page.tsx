@@ -175,14 +175,18 @@ export default function ZipCode92614MortgageBrokerPage() {
                 Dedicated mortgage broker serving ZIP code 92614 in Irvine. Expertise for Great Park area, Irvine Spectrum vicinity, and dynamic newer developments with diverse housing options.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                <a href="tel:(949) 579-2057">
+                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 w-full">
                   <Phone className="w-5 h-5 mr-2" />
                   Call (949) 579-2057
                 </Button>
-                <Button variant="outline" size="lg">
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Calculate Payment
-                </Button>
+                </a>
+                <a href="/calculator">
+                  <Button variant="outline" size="lg" className="w-full">
+                    <Calculator className="w-5 h-5 mr-2" />
+                    Calculate Payment
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -350,14 +354,18 @@ export default function ZipCode92614MortgageBrokerPage() {
               Get specialized financing expertise for ZIP code 92614. Local knowledge, dynamic market insights, competitive rates for Irvine's growth areas.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (949) 579-2057
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100">
-                <Star className="w-5 h-5 mr-2" />
-                Get Pre-Approved
-              </Button>
+              <a href="tel:(949) 579-2057">
+                <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (949) 579-2057
+                </Button>
+              </a>
+              <a href="/contact">
+                <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                  <Star className="w-5 h-5 mr-2" />
+                  Get Pre-Approved
+                </Button>
+              </a>
             </div>
             <p className="text-sm text-green-200 mt-4">
               Licensed mortgage broker NMLS #1426884 • 92614 ZIP code growth area specialist

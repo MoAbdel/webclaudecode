@@ -243,14 +243,18 @@ export default function GolfCourseHomesMortgageBrokerPage() {
                 Exclusive financing for Orange County's premier golf course communities. From championship fairway estates to luxury golf condos, expert guidance for the ultimate golf lifestyle.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Call (949) 579-2057
-                </Button>
-                <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600">
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Golf Course Calculator
-                </Button>
+                <a href="tel:(949) 579-2057">
+                  <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                    <Phone className="w-5 h-5 mr-2" />
+                    Call (949) 579-2057
+                  </Button>
+                </a>
+                <a href="/calculator">
+                  <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-green-600 w-full">
+                    <Calculator className="w-5 h-5 mr-2" />
+                    Golf Course Calculator
+                  </Button>
+                </a>
               </div>
             </div>
           </div>
@@ -484,14 +488,18 @@ export default function GolfCourseHomesMortgageBrokerPage() {
               Get specialized expertise for Orange County's premier golf course communities. Luxury financing solutions for the ultimate golf lifestyle.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100">
-                <Phone className="w-5 h-5 mr-2" />
-                Call (949) 579-2057
-              </Button>
-              <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100">
-                <Target className="w-5 h-5 mr-2" />
-                Golf Course Pre-Approval
-              </Button>
+              <a href="tel:(949) 579-2057">
+                <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Call (949) 579-2057
+                </Button>
+              </a>
+              <a href="/contact">
+                <Button size="lg" variant="outline" className="bg-white text-green-600 hover:bg-gray-100 w-full">
+                  <Target className="w-5 h-5 mr-2" />
+                  Golf Course Pre-Approval
+                </Button>
+              </a>
             </div>
             <p className="text-sm text-green-200 mt-4">
               Licensed mortgage broker NMLS #1426884 • Golf course and luxury community specialist

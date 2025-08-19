@@ -33,10 +33,10 @@ export default function FacebookPixel() {
 
   return (
     <>
-      {/* Facebook Pixel Code */}
+      {/* Facebook Pixel Code - Optimized for mobile performance */}
       <Script
         id="facebook-pixel"
-        strategy="afterInteractive"
+        strategy="lazyOnload"
         dangerouslySetInnerHTML={{
           __html: `
             !function(f,b,e,v,n,t,s)

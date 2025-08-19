@@ -2,10 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base44 Theme - Simplified */
+/* Critical mobile performance optimizations */
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Improve mobile scrolling performance */
+    -webkit-overflow-scrolling: touch;
+    /* Reduce repaints on mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Optimize font loading for mobile */
+  body {
+    font-display: swap;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* Reduce mobile layout shifts */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Optimize images for mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+    /* Prevent layout shift */
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
   }
 }
 

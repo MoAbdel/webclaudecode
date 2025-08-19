@@ -52,9 +52,19 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=5" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=5" />
         
-        {/* Preconnect to external domains for performance */}
+        {/* Critical resource hints for mobile performance */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        
+        {/* Preload critical CSS and fonts */}
+        <link rel="preload" href="/_next/static/css/app.css" as="style" />
+        <link rel="preload" href="/_next/static/chunks/main.js" as="script" />
+        
+        {/* Critical mobile viewport optimization */}
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="theme-color" content="#1e40af" />
         
         {/* OpenGraph Meta Tags */}
         <meta property="og:type" content="website" />

@@ -448,28 +448,34 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker</loc>
+    <lastmod>2025-08-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
 
   <!-- ZIP Code Pages -->
   <url>
-    <loc>https://mothebroker.com/zip-codes/92602-irvine-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/92602-irvine-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mothebroker.com/zip-codes/92660-newport-beach-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/92660-newport-beach-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mothebroker.com/zip-codes/92614-irvine-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/92614-irvine-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://mothebroker.com/zip-codes/92625-corona-del-mar-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/92625-corona-del-mar-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

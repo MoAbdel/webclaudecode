@@ -81,6 +81,29 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: 'Santa Ana', url: '/areas/santa-ana-mortgage-broker' },
   { title: 'Fountain Valley', url: '/areas/fountain-valley-mortgage-broker' },
   
+  // Irvine Neighborhoods
+  { title: '🏘️ IRVINE NEIGHBORHOODS', url: '#', isHeader: true },
+  { title: 'University Park', url: '/areas/irvine-neighborhoods/university-park-mortgage-broker' },
+  { title: 'Woodbridge', url: '/areas/irvine-neighborhoods/woodbridge-mortgage-broker' },
+  { title: 'Northwood', url: '/areas/irvine-neighborhoods/northwood-mortgage-broker' },
+  { title: 'Turtle Rock', url: '/areas/irvine-neighborhoods/turtle-rock-mortgage-broker' },
+  { title: 'Quail Hill', url: '/areas/irvine-neighborhoods/quail-hill-mortgage-broker' },
+  { title: 'Cypress Village', url: '/areas/irvine-neighborhoods/cypress-village-mortgage-broker' },
+  
+  // Newport Beach Neighborhoods
+  { title: '🌊 NEWPORT NEIGHBORHOODS', url: '#', isHeader: true },
+  { title: 'Lido Isle', url: '/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker' },
+  { title: 'Corona del Mar', url: '/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker' },
+  { title: 'Newport Coast', url: '/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker' },
+  { title: 'Balboa Island', url: '/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker' },
+  
+  // ZIP Code Areas
+  { title: '📍 ZIP CODE AREAS', url: '#', isHeader: true },
+  { title: 'Irvine 92614', url: '/areas/92614-irvine-mortgage-broker' },
+  { title: 'Corona del Mar 92625', url: '/areas/92625-corona-del-mar-mortgage-broker' },
+  { title: 'Newport Beach 92660', url: '/areas/92660-newport-beach-mortgage-broker' },
+  { title: 'Irvine 92602', url: '/areas/92602-irvine-mortgage-broker' },
+  
   // North Orange County
   { title: '🏘️ NORTH', url: '#', isHeader: true },
   { title: 'Anaheim', url: '/areas/anaheim-mortgage-broker' },

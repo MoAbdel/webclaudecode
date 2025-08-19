@@ -99,10 +99,10 @@ const serviceAreasDropdown: DropdownItem[] = [
   
   // ZIP Code Areas
   { title: '📍 ZIP CODE AREAS', url: '#', isHeader: true },
-  { title: 'Irvine 92614', url: '/areas/92614-irvine-mortgage-broker' },
-  { title: 'Corona del Mar 92625', url: '/areas/92625-corona-del-mar-mortgage-broker' },
-  { title: 'Newport Beach 92660', url: '/areas/92660-newport-beach-mortgage-broker' },
-  { title: 'Irvine 92602', url: '/areas/92602-irvine-mortgage-broker' },
+  { title: 'Irvine 92614', url: '/zip-codes/92614-irvine-mortgage-broker' },
+  { title: 'Corona del Mar 92625', url: '/zip-codes/92625-corona-del-mar-mortgage-broker' },
+  { title: 'Newport Beach 92660', url: '/zip-codes/92660-newport-beach-mortgage-broker' },
+  { title: 'Irvine 92602', url: '/zip-codes/92602-irvine-mortgage-broker' },
   
   // North Orange County
   { title: '🏘️ NORTH', url: '#', isHeader: true },

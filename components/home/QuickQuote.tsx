@@ -192,7 +192,7 @@ export default function QuickQuote() {
                     type="tel"
                     value={formData.phone}
                     onChange={(e) => handleInputChange("phone", e.target.value)}
-                    placeholder="(949) 555-0123"
+                    placeholder="(949) 579-2057"
                     className="border-slate-300"
                     required
                   />

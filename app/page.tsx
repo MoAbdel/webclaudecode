@@ -1,13 +1,24 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import HeroSection from '@/components/home/HeroSection';
-import RateDisplay from '@/components/home/RateDisplay';
-import QuickQuote from '@/components/home/QuickQuote';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
-import LocalMarketInsights from '@/components/home/LocalMarketInsights';
-import Testimonials from '@/components/home/Testimonials';
-import NewsletterSignup from '@/components/home/NewsletterSignup';
+import QuickQuote from '@/components/home/QuickQuote';
 import AIOOptimization from '@/components/seo/AIOOptimization';
 import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+
+// Lazy load below-the-fold components to reduce initial bundle size
+const RateDisplay = dynamic(() => import('@/components/home/RateDisplay'), {
+  loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
+});
+const LocalMarketInsights = dynamic(() => import('@/components/home/LocalMarketInsights'), {
+  loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
+});
+const Testimonials = dynamic(() => import('@/components/home/Testimonials'), {
+  loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
+});
+const NewsletterSignup = dynamic(() => import('@/components/home/NewsletterSignup'), {
+  loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
+});
 
 export default function HomePage() {
   const homePageContent = {

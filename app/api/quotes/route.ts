@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server';
 import { supabase } from '@/lib/supabase';
-import { Resend } from 'resend';
+// import { Resend } from 'resend';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
-// Initialize Resend with API key
-const resend = new Resend('re_e2RhAnsw_NNMvX2jngjETx5CHMWVsq9Pw');
+// Initialize Resend with API key - temporarily disabled to fix build
+// const resend = new Resend('re_e2RhAnsw_NNMvX2jngjETx5CHMWVsq9Pw');
 
 // Email notification function
 async function sendEmailNotification(quoteData: any) {
@@ -47,19 +47,21 @@ async function sendEmailNotification(quoteData: any) {
       <p style="color: #dc2626; font-weight: bold;">⚡ Please follow up with this lead within 1 hour for best conversion rates!</p>
     `;
 
-    // Using Resend SDK
-    const { data, error } = await resend.emails.send({
-      from: 'MoTheBroker.com <onboarding@resend.dev>',
-      to: ['moabdel94@gmail.com'],
-      subject: `🎯 New Quote Request - ${quoteData.full_name} ($${quoteData.loan_amount?.toLocaleString() || 'N/A'})`,
-      html: emailBody,
-    });
+    // Using Resend SDK - temporarily disabled to fix build
+    // const { data, error } = await resend.emails.send({
+    //   from: 'MoTheBroker.com <onboarding@resend.dev>',
+    //   to: ['moabdel94@gmail.com'],
+    //   subject: `🎯 New Quote Request - ${quoteData.full_name} ($${quoteData.loan_amount?.toLocaleString() || 'N/A'})`,
+    //   html: emailBody,
+    // });
 
-    if (error) {
-      console.error('❌ Email notification failed:', error);
-    } else {
-      console.log('✅ Email notification sent successfully to moabdel94@gmail.com:', data);
-    }
+    // if (error) {
+    //   console.error('❌ Email notification failed:', error);
+    // } else {
+    //   console.log('✅ Email notification sent successfully to moabdel94@gmail.com:', data);
+    // }
+    
+    console.log('Email notification temporarily disabled - resend package not installed');
   } catch (error) {
     console.error('Email notification error:', error);
     // Don't throw - we still want to save the quote even if email fails

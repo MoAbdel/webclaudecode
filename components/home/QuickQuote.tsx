@@ -166,10 +166,11 @@ export default function QuickQuote() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="first-name" className="block text-sm font-medium text-slate-700 mb-2">
                   First Name *
                 </label>
                 <input
+                  id="first-name"
                   type="text"
                   required
                   value={formData.firstName}
@@ -179,10 +180,11 @@ export default function QuickQuote() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="last-name" className="block text-sm font-medium text-slate-700 mb-2">
                   Last Name *
                 </label>
                 <input
+                  id="last-name"
                   type="text"
                   required
                   value={formData.lastName}
@@ -194,10 +196,11 @@ export default function QuickQuote() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label htmlFor="email-address" className="block text-sm font-medium text-slate-700 mb-2">
                 Email Address *
               </label>
               <input
+                id="email-address"
                 type="email"
                 required
                 value={formData.email}
@@ -208,10 +211,11 @@ export default function QuickQuote() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label htmlFor="phone-number" className="block text-sm font-medium text-slate-700 mb-2">
                 Phone Number *
               </label>
               <input
+                id="phone-number"
                 type="tel"
                 required
                 value={formData.phone}
@@ -223,10 +227,11 @@ export default function QuickQuote() {
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="loan-purpose" className="block text-sm font-medium text-slate-700 mb-2">
                   Loan Purpose
                 </label>
                 <select
+                  id="loan-purpose"
                   value={formData.loanPurpose}
                   onChange={(e) => handleInputChange('loanPurpose', e.target.value)}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -240,10 +245,11 @@ export default function QuickQuote() {
                 </select>
               </div>
               <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
+                <label htmlFor="loan-amount" className="block text-sm font-medium text-slate-700 mb-2">
                   Estimated Loan Amount
                 </label>
                 <input
+                  id="loan-amount"
                   type="text"
                   value={formData.loanAmount}
                   onChange={(e) => handleInputChange('loanAmount', e.target.value)}
@@ -254,10 +260,11 @@ export default function QuickQuote() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label htmlFor="timeline" className="block text-sm font-medium text-slate-700 mb-2">
                 Timeline
               </label>
               <select
+                id="timeline"
                 value={formData.timeline}
                 onChange={(e) => handleInputChange('timeline', e.target.value)}
                 className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -272,10 +279,11 @@ export default function QuickQuote() {
             </div>
             
             <div>
-              <label className="block text-sm font-medium text-slate-700 mb-2">
+              <label htmlFor="additional-info" className="block text-sm font-medium text-slate-700 mb-2">
                 Additional Information
               </label>
               <textarea
+                id="additional-info"
                 value={formData.additionalInfo}
                 onChange={(e) => handleInputChange('additionalInfo', e.target.value)}
                 rows={3}

@@ -15,6 +15,7 @@ const nextConfig = {
   // HTTP/2+ and Performance optimizations  
   experimental: {
     optimizePackageImports: ['lucide-react'],
+    scrollRestoration: true,
   },
   
   // Mobile performance settings
@@ -89,6 +90,29 @@ const nextConfig = {
         providedExports: true,
         usedExports: true,
         concatenateModules: true,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            default: false,
+            vendors: false,
+            // Extract vendor libraries
+            vendor: {
+              name: 'vendor',
+              chunks: 'all',
+              test: /node_modules/,
+              priority: 20
+            },
+            // Extract common code
+            common: {
+              name: 'common',
+              chunks: 'all',
+              minChunks: 2,
+              priority: 10,
+              reuseExistingChunk: true,
+              enforce: true
+            }
+          }
+        }
       };
       
       // Remove any polyfills

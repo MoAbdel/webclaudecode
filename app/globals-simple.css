@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Critical CSS inlined to prevent render blocking */
+@layer base {
+  /* Inline critical font declarations to prevent FOIT */
+  html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  }
+}
+
 /* Critical mobile performance optimizations */
 @layer base {
   html {

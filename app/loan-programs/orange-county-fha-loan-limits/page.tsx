@@ -247,7 +247,7 @@ export default function OrangeCountyFHALoanLimitsPage() {
                 <tr className="bg-slate-50">
                   <td className="px-6 py-4 font-medium">Mortgage Insurance</td>
                   <td className="px-6 py-4 text-center">MIP Required</td>
-                  <td className="px-6 py-4 text-center">PMI if <20% down</td>
+                  <td className="px-6 py-4 text-center">PMI if &lt;20% down</td>
                   <td className="px-6 py-4 text-center">No MI typically</td>
                 </tr>
                 <tr>

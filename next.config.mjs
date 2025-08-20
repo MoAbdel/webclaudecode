@@ -15,11 +15,6 @@ const nextConfig = {
   // HTTP/2+ and Performance optimizations  
   experimental: {
     optimizePackageImports: ['lucide-react'],
-    scrollRestoration: true,
-    optimizeCss: true,
-    gzipSize: true,
-    craCompat: true,
-    esmExternals: true,
   },
   
   // Mobile performance settings
@@ -81,7 +76,34 @@ const nextConfig = {
         ]
       },
       {
-        source: '/(.*\\.(css|js|woff2|woff))',
+        source: '/(.*)\\.css',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/(.*)\\.js',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/(.*)\\.woff2',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/(.*)\\.woff',
         headers: [
           {
             key: 'Cache-Control',
@@ -103,8 +125,6 @@ const nextConfig = {
     styledComponents: false,
   },
   
-  // SWC minification for modern JavaScript
-  swcMinify: true,
   
   // Webpack optimizations for ultra-modern browsers
   webpack: (config, { dev, isServer }) => {

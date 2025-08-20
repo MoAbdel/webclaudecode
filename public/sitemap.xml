@@ -136,6 +136,18 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://mothebroker.com/loan-programs/orange-county-fha-loan-limits</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/loan-programs/orange-county-va-loans</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 
   <!-- Individual Loan Program Pages -->
   <url>
@@ -253,6 +265,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://mothebroker.com/areas/garden-grove-mortgage-rates</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://mothebroker.com/areas/orange-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
@@ -287,6 +305,12 @@
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://mothebroker.com/areas/laguna-niguel-mortgage-rates</loc>
+    <lastmod>2025-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://mothebroker.com/areas/laguna-woods-mortgage-broker</loc>

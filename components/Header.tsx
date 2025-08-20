@@ -30,7 +30,9 @@ const loanProgramsDropdown: DropdownItem[] = [
   // Home Purchase Loans
   { title: '🏠 PURCHASE', url: '#', isHeader: true },
   { title: 'FHA Loans', url: '/loan-programs/fha-loans' },
+  { title: 'Orange County FHA Limits', url: '/loan-programs/orange-county-fha-loan-limits' },
   { title: 'VA Loans', url: '/loan-programs/va-loans' },
+  { title: 'Orange County VA Loans', url: '/loan-programs/orange-county-va-loans' },
   { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
   { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
   { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' },
@@ -116,6 +118,7 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: '🏡 SOUTH', url: '#', isHeader: true },
   { title: 'Mission Viejo', url: '/areas/mission-viejo-mortgage-broker' },
   { title: 'Laguna Niguel', url: '/areas/laguna-niguel-mortgage-broker' },
+  { title: 'Laguna Niguel Rates', url: '/areas/laguna-niguel-mortgage-rates' },
   { title: 'Laguna Woods', url: '/areas/laguna-woods-mortgage-broker' },
   
   // Beach Cities

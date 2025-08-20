@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, TrendingUp, Users, Star, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Newport Beach Mortgage Broker | Luxury Home Loans | Mo Abdel NMLS #1426884',
-  description: 'Newport Beach mortgage broker specializing in luxury home financing. Jumbo loans, conventional mortgages, and investment property financing. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'Newport Beach mortgage broker, Newport Beach home loans, luxury mortgage lender Newport Beach, jumbo loans Newport Beach'
+  title: 'Newport Beach Mortgage Brokers | Best Luxury Home Loans | Mo Abdel NMLS #1426884',
+  description: 'Top-rated Newport Beach mortgage brokers specializing in luxury home financing. Licensed mortgage broker Mo Abdel offers jumbo loans, refinancing, and investment property loans. Call (949) 579-2057.',
+  keywords: 'Newport Beach mortgage brokers, mortgage brokers in newport beach, Newport Beach mortgage broker, luxury home loans Newport Beach, jumbo loans Newport Beach'
 };
 
 export default function NewportBeachMortgageBrokerPage() {

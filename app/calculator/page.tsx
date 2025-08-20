@@ -39,8 +39,37 @@ export default function CalculatorPage() {
           </p>
         </div>
 
+
+        {/* Calculator Tabs - Mobile shows all tabs, Desktop has original design */}
+        <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
+          {/* Tab Navigation */}
+          <div className="border-b border-slate-200">
+            <nav className="flex">
+              {calculators.map((calc) => (
+                <button
+                  key={calc.id}
+                  onClick={() => setActiveTab(calc.id)}
+                  className={`flex-1 px-4 py-4 text-sm font-medium text-center border-b-2 transition-colors duration-200 ${
+                    activeTab === calc.id
+                      ? 'border-blue-600 text-blue-600 bg-blue-50'
+                      : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
+                  }`}
+                >
+                  <span className="block sm:hidden">{calc.title.split(' ')[0]}</span>
+                  <span className="hidden sm:block">{calc.title}</span>
+                </button>
+              ))}
+            </nav>
+          </div>
+
+          {/* Calculator Content */}
+          <div className="p-8">
+            {calculators.find(calc => calc.id === activeTab)?.component}
+          </div>
+        </div>
+
         {/* Advanced Calculator Links */}
-        <div className="mb-12">
+        <div className="mt-12 mb-12">
           <h2 className="text-2xl font-bold text-slate-900 mb-6 text-center">Advanced Calculator Suite</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <a 
@@ -89,39 +118,6 @@ export default function CalculatorPage() {
             </a>
           </div>
         </div>
-
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-slate-900 mb-4">Quick Rate Calculators</h2>
-        </div>
-
-        {/* Calculator Tabs - Mobile shows all tabs, Desktop has original design */}
-        <div className="bg-white rounded-xl shadow-lg border border-slate-200 overflow-hidden">
-          {/* Tab Navigation */}
-          <div className="border-b border-slate-200">
-            <nav className="flex">
-              {calculators.map((calc) => (
-                <button
-                  key={calc.id}
-                  onClick={() => setActiveTab(calc.id)}
-                  className={`flex-1 px-4 py-4 text-sm font-medium text-center border-b-2 transition-colors duration-200 ${
-                    activeTab === calc.id
-                      ? 'border-blue-600 text-blue-600 bg-blue-50'
-                      : 'border-transparent text-slate-500 hover:text-slate-700 hover:border-slate-300'
-                  }`}
-                >
-                  <span className="block sm:hidden">{calc.title.split(' ')[0]}</span>
-                  <span className="hidden sm:block">{calc.title}</span>
-                </button>
-              ))}
-            </nav>
-          </div>
-
-          {/* Calculator Content */}
-          <div className="p-8">
-            {calculators.find(calc => calc.id === activeTab)?.component}
-          </div>
-        </div>
-
 
         {/* CTA Section */}
         <div className="mt-12 text-center bg-slate-900 text-white rounded-xl p-8">

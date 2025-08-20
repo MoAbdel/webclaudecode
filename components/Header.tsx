@@ -27,6 +27,11 @@ interface NavigationItem {
 const loanProgramsDropdown: DropdownItem[] = [
   { title: 'All Programs', url: '/loan-programs' },
   
+  // Refinancing Options - MOVED TO TOP
+  { title: '🔄 REFINANCING', url: '#', isHeader: true },
+  { title: 'Rate & Term Refinance', url: '/loan-programs/rate-term-refinance' },
+  { title: 'Cash-Out Refinance', url: '/loan-programs/cash-out-refinance' },
+  
   // Home Purchase Loans
   { title: '🏠 PURCHASE', url: '#', isHeader: true },
   { title: 'FHA Loans', url: '/loan-programs/fha-loans' },
@@ -36,11 +41,6 @@ const loanProgramsDropdown: DropdownItem[] = [
   { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
   { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
   { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' },
-  
-  // Refinancing Options
-  { title: '🔄 REFINANCING', url: '#', isHeader: true },
-  { title: 'Rate & Term Refinance', url: '/loan-programs/rate-term-refinance' },
-  { title: 'Cash-Out Refinance', url: '/loan-programs/cash-out-refinance' },
   
   // Home Equity Solutions
   { title: '💰 EQUITY', url: '#', isHeader: true },

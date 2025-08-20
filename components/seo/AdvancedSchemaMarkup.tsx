@@ -37,7 +37,7 @@ export default function AdvancedSchemaMarkup({
   name = "Mo Abdel - Orange County Mortgage Expert",
   description = "Expert mortgage broker serving Orange County with access to 200+ lenders. Get better rates, faster closings, and personalized service for all loan types.",
   url = "https://mothebroker.com",
-  telephone = "(714) 555-0123",
+  telephone = "(949) 579-2057",
   address = {
     streetAddress: "400 Spectrum Center Drive, Suite 1000",
     addressLocality: "Irvine",

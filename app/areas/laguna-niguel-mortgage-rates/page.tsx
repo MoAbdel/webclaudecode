@@ -1,6 +1,6 @@
 import React from 'react';
 import type { Metadata } from 'next';
-import { CityPageTemplate } from '@/components/seo/CityPageTemplate';
+import CityPageTemplate from '@/components/seo/CityPageTemplate';
 
 export const metadata: Metadata = {
   title: 'Laguna Niguel Mortgage Rates 2025 | Best Home Loan Rates | Mo Abdel NMLS #1426884',

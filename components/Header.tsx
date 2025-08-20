@@ -27,7 +27,12 @@ interface NavigationItem {
 const loanProgramsDropdown: DropdownItem[] = [
   { title: 'All Programs', url: '/loan-programs' },
   
-  // Refinancing Options - MOVED TO TOP
+  // Home Equity Solutions - MOVED TO TOP
+  { title: '💰 EQUITY', url: '#', isHeader: true },
+  { title: 'HELOC', url: '/loan-programs/heloc' },
+  { title: 'HELOAN', url: '/loan-programs/heloan' },
+  
+  // Refinancing Options
   { title: '🔄 REFINANCING', url: '#', isHeader: true },
   { title: 'Rate & Term Refinance', url: '/loan-programs/rate-term-refinance' },
   { title: 'Cash-Out Refinance', url: '/loan-programs/cash-out-refinance' },
@@ -41,11 +46,6 @@ const loanProgramsDropdown: DropdownItem[] = [
   { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
   { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
   { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' },
-  
-  // Home Equity Solutions
-  { title: '💰 EQUITY', url: '#', isHeader: true },
-  { title: 'HELOC', url: '/loan-programs/heloc' },
-  { title: 'HELOAN', url: '/loan-programs/heloan' },
   
   // Self-Employed & Non-QM
   { title: '💼 SELF-EMPLOYED', url: '#', isHeader: true },
@@ -143,6 +143,14 @@ const guidesAndBlogDropdown: DropdownItem[] = [
   { title: '📚 COMPLETE GUIDES', url: '#', isHeader: true },
   { title: 'Orange County Home Buyer Guide', url: '/guides/orange-county-home-buyer-guide' },
   { title: 'Orange County Refinancing Guide', url: '/guides/orange-county-refinancing-guide' },
+  { title: 'Orange County School Districts Guide', url: '/guides/orange-county-school-districts' },
+  { title: 'Orange County Investment Property Guide', url: '/guides/orange-county-investment-property' },
+  { title: 'Orange County VA Loans Guide', url: '/guides/orange-county-va-loans' },
+  { title: 'Orange County Jumbo Loans Guide', url: '/guides/orange-county-jumbo-loans' },
+  
+  // Market Analysis
+  { title: '📊 MARKET ANALYSIS', url: '#', isHeader: true },
+  { title: 'Orange County Market Forecast 2025-2026', url: '/guides/orange-county-market-forecast-2025-2026' },
   
   // Seasonal Market Guides
   { title: '🌟 SEASONAL GUIDES', url: '#', isHeader: true },
@@ -171,6 +179,12 @@ const resourcesDropdown: DropdownItem[] = [
   { title: 'Down Payment Assistance', url: '/resources/down-payment-assistance' },
   { title: 'Credit Repair Resources', url: '/resources/credit-repair' },
   { title: 'Mortgage Calculators', url: '/calculator' },
+  
+  // Calculator Suite
+  { title: '🧮 CALCULATOR SUITE', url: '#', isHeader: true },
+  { title: 'Home Affordability Calculator', url: '/calculator/affordability' },
+  { title: 'Debt-to-Income Calculator', url: '/calculator/debt-to-income' },
+  { title: 'Closing Costs Calculator', url: '/calculator/closing-costs' },
   
   // Market & Reference  
   { title: '📊 DATA & REFERENCE', url: '#', isHeader: true },

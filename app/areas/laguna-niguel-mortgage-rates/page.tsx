@@ -14,38 +14,36 @@ export const metadata: Metadata = {
 };
 
 const lagunaNiguelData = {
-  cityName: "Laguna Niguel",
-  state: "California",
-  population: "65,000",
-  medianHomePrice: "$1,150,000",
-  averageRate: "6.85%",
-  marketTrend: "Appreciating",
+  name: 'Laguna Niguel',
+  slug: 'laguna-niguel-mortgage-rates',
+  population: 65000,
+  medianHomePrice: 1150000,
+  medianHouseholdIncome: 92000,
+  averageLoanAmount: 920000,
   topNeighborhoods: [
-    "Bear Brand Ranch",
-    "Crown Valley",
-    "Niguel Summit",
-    "Sea Country"
+    'Bear Brand Ranch',
+    'Crown Valley',
+    'Niguel Summit',
+    'Sea Country'
   ],
-  nearbyAreas: [
-    { name: "Mission Viejo", url: "/areas/mission-viejo-mortgage-broker" },
-    { name: "Laguna Beach", url: "/areas/laguna-beach-mortgage-broker" },
-    { name: "Dana Point", url: "/areas/dana-point-mortgage-broker" },
-    { name: "Newport Beach", url: "/areas/newport-beach-mortgage-broker" }
+  marketTrends: {
+    priceGrowth: '3.8% annually',
+    inventoryLevel: 'Limited',
+    averageDaysOnMarket: 32
+  },
+  localFactors: [
+    'Master-planned communities',
+    'Excellent schools',
+    'Hillside views',
+    'Luxury suburban lifestyle'
   ],
-  localInsights: "Laguna Niguel offers premier South Orange County living with master-planned communities, excellent schools, and beautiful hillside views. The area attracts families and professionals seeking luxury suburban lifestyle.",
-  schools: "Capistrano Unified School District",
-  zipCodes: ["92677"],
-  housingMarketData: {
-    averageDaysOnMarket: 32,
-    inventoryLevel: "Limited",
-    priceAppreciation: "+3.8% YoY"
-  }
+  keywordPhrase: 'Laguna Niguel mortgage rates'
 };
 
 export default function LagunaNiguelMortgageRatesPage() {
   return (
     <CityPageTemplate 
-      data={lagunaNiguelData}
+      cityData={lagunaNiguelData}
       specializedContent={
         <div className="py-8 bg-green-50">
           <div className="max-w-4xl mx-auto px-4">

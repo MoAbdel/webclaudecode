@@ -14,38 +14,36 @@ export const metadata: Metadata = {
 };
 
 const gardenGroveData = {
-  cityName: "Garden Grove",
-  state: "California",
-  population: "172,000",
-  medianHomePrice: "$825,000",
-  averageRate: "6.75%",
-  marketTrend: "Stable",
+  name: 'Garden Grove',
+  slug: 'garden-grove-mortgage-rates',
+  population: 172000,
+  medianHomePrice: 825000,
+  medianHouseholdIncome: 68900,
+  averageLoanAmount: 660000,
   topNeighborhoods: [
-    "West Garden Grove",
-    "East Garden Grove", 
-    "Magnolia Park",
-    "Chapman University Area"
+    'West Garden Grove',
+    'East Garden Grove',
+    'Magnolia Park',
+    'Village Green'
   ],
-  nearbyAreas: [
-    { name: "Westminster", url: "/areas/westminster-mortgage-broker" },
-    { name: "Santa Ana", url: "/areas/santa-ana-mortgage-broker" },
-    { name: "Orange", url: "/areas/orange-mortgage-broker" },
-    { name: "Fountain Valley", url: "/areas/fountain-valley-mortgage-broker" }
+  marketTrends: {
+    priceGrowth: '4.2% annually',
+    inventoryLevel: 'Balanced',
+    averageDaysOnMarket: 28
+  },
+  localFactors: [
+    'Affordable family housing',
+    'Strong Korean community',
+    'Central OC location',
+    'First-time buyer friendly'
   ],
-  localInsights: "Garden Grove offers affordable family-friendly neighborhoods with easy access to major employment centers. The area has seen steady appreciation and remains popular with first-time homebuyers.",
-  schools: "Garden Grove Unified School District",
-  zipCodes: ["92840", "92841", "92843", "92844"],
-  housingMarketData: {
-    averageDaysOnMarket: 28,
-    inventoryLevel: "Balanced",
-    priceAppreciation: "+4.2% YoY"
-  }
+  keywordPhrase: 'Garden Grove mortgage rates'
 };
 
 export default function GardenGroveMortgageRatesPage() {
   return (
     <CityPageTemplate 
-      data={gardenGroveData}
+      cityData={gardenGroveData}
       specializedContent={
         <div className="py-8 bg-blue-50">
           <div className="max-w-4xl mx-auto px-4">

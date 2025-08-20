@@ -81,6 +81,22 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
     {
       question: `What loan programs are available for ${cityData.name} home buyers?`,
       answer: `${cityData.name} residents have access to FHA loans (3.5% down), VA loans (0% down for veterans), conventional loans, jumbo loans, and first-time buyer programs. Mo Abdel can help determine the best option for your situation.`
+    },
+    {
+      question: `How long does it take to close a mortgage in ${cityData.name}?`,
+      answer: `Average closing times in ${cityData.name} are 18-30 days depending on loan type. Mo Abdel's streamlined process with 200+ lenders often results in faster closings - typically 18 days for purchase loans and 21 days for refinances.`
+    },
+    {
+      question: `What documents do I need for a ${cityData.name} mortgage application?`,
+      answer: `Required documents include: 2 years tax returns, 30 days pay stubs, 2 months bank statements, employment verification, and property information. Mo Abdel provides a complete checklist specific to your loan type and ${cityData.name} property.`
+    },
+    {
+      question: `Are there special programs for first-time buyers in ${cityData.name}?`,
+      answer: `Yes! ${cityData.name} first-time buyers can access FHA loans with 3.5% down, VA loans (if eligible), and local assistance programs. Mo Abdel helps identify down payment assistance and closing cost grants available in Orange County.`
+    },
+    {
+      question: `What credit score do I need to buy a home in ${cityData.name}?`,
+      answer: `Minimum credit scores vary: FHA loans require 580+, conventional loans 620+, and jumbo loans 700+. Even with lower scores, Mo Abdel works with specialty lenders to find solutions for ${cityData.name} home buyers.`
     }
   ];
 
@@ -137,10 +153,12 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
-                <Phone className="w-5 h-5 mr-2" />
-                Get Free Quote: (714) 555-0123
-              </Button>
+              <a href="tel:(949) 579-2057">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700">
+                  <Phone className="w-5 h-5 mr-2" />
+                  Get Free Quote: (949) 579-2057
+                </Button>
+              </a>
               <Link href="/calculator">
                 <Button variant="outline" size="lg">
                   <Calculator className="w-5 h-5 mr-2" />

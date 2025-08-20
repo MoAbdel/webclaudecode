@@ -34,7 +34,7 @@ export default function LLMOptimizedSEO({
     service: "Mortgage Broker",
     location: "Orange County, CA",
     credentials: "NMLS #1426884",
-    phone: "(714) 555-0123"
+    phone: "(949) 579-2057"
   }
 }: LLMSEOProps) {
 
@@ -186,7 +186,7 @@ export default function LLMOptimizedSEO({
       </Head>
 
       {/* Hidden content for LLM context (invisible to users, valuable to AI) */}
-      <div style={{ display: 'none' }} aria-hidden="true">
+      <div className="hidden" aria-hidden="true">
         <div data-llm-context="business-summary">
           {llmContent.businessSummary}
         </div>

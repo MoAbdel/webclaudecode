@@ -49,10 +49,8 @@ export default function ContactPage() {
                   <Mail className="w-6 h-6 text-blue-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-slate-900">Email</h3>
-                  <a href="mailto:mabdelfattah@nexamortgage.com" className="text-blue-600 hover:text-blue-700">
-                    mabdelfattah@nexamortgage.com
-                  </a>
+                  <h3 className="font-semibold text-slate-900">Email Contact</h3>
+                  <p className="text-blue-600">Use the form to the right →</p>
                   <p className="text-sm text-slate-600">I respond within 1 business day</p>
                 </div>
               </div>
@@ -91,7 +89,7 @@ export default function ContactPage() {
                   <div className="flex space-x-4 mt-2">
                     <a href="https://www.facebook.com/profile.php?id=61573517340174" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Facebook</a>
                     <a href="https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Yelp Reviews</a>
-                    <a href="https://maps.google.com/?cid=11756575614226532751" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Google Business</a>
+                    <a href="https://share.google/wFT7ePRJSrCjZ6KAg" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Google Business</a>
                     <a href="https://www.instagram.com/mo_thebroker" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 text-sm">Instagram</a>
                   </div>
                   <p className="text-sm text-slate-600">Follow for market updates and tips</p>

@@ -3,7 +3,11 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building } from 'lucide-react';
+import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building, Phone, Calculator } from 'lucide-react';
+import AIOOptimization from '@/components/seo/AIOOptimization';
+import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
+import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export const metadata: Metadata = {
   title: 'Irvine Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
@@ -12,6 +16,60 @@ export const metadata: Metadata = {
 };
 
 export default function IrvineMortgageBrokerPage() {
+  
+  const irvineData = {
+    mainTopic: "Irvine Mortgage Broker Services",
+    quickAnswer: "Mo Abdel is a licensed mortgage broker (NMLS #1426884) serving Irvine with specialized knowledge of University Park, Woodbridge, and Northwood neighborhoods. Expert in jumbo loans for luxury Irvine homes.",
+    keyFacts: [
+      "Licensed mortgage broker NMLS #1426884",
+      "Irvine neighborhood specialist",
+      "University Park, Woodbridge, Northwood expert",
+      "Jumbo loan specialist for luxury homes",
+      "UCI area financing",
+      "Average closing time: 18 days"
+    ],
+    statistics: [
+      {
+        stat: "Irvine median home price: $1.4M",
+        source: "Orange County MLS",
+        year: "2025"
+      },
+      {
+        stat: "85% of Irvine homes require jumbo loans",
+        source: "California Housing Finance Agency",
+        year: "2025"
+      }
+    ]
+  };
+
+  const schemaData = [
+    {
+      type: 'faq' as const,
+      title: 'Irvine Mortgage FAQ',
+      description: 'Common questions about Irvine mortgages and home loans',
+      url: 'https://mothebroker.com/areas/irvine-mortgage-broker',
+      data: {
+        questions: [
+          {
+            question: "What is the average home price in Irvine?",
+            answer: "The median home price in Irvine is $1.4M as of 2025, with University Park homes averaging $1.6M-$2.5M and Woodbridge homes around $1.2M-$1.8M."
+          },
+          {
+            question: "Do I need a jumbo loan to buy in Irvine?",
+            answer: "85% of Irvine homes exceed the 2025 conforming loan limit of $1,089,300, requiring jumbo loan financing. Mo Abdel specializes in jumbo loans for Irvine properties."
+          },
+          {
+            question: "Which Irvine neighborhoods are best for families?",
+            answer: "University Park, Woodbridge, and Northwood offer excellent schools, family amenities, and strong resale values. All are served by top-rated Irvine Unified School District."
+          },
+          {
+            question: "What loan programs work best for Irvine homes?",
+            answer: "Jumbo loans are most common for Irvine's luxury market. Physician loans are popular for UCI medical professionals. Conventional loans work for condos and townhomes under $1.089M."
+          }
+        ]
+      }
+    }
+  ];
   const irvineNeighborhoods = [
     {
       name: 'University Park',
@@ -358,6 +416,35 @@ export default function IrvineMortgageBrokerPage() {
             Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Irvine neighborhoods
           </p>
         </div>
+
+        {/* FAQ Section */}
+        <section className="py-16 bg-blue-50">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-slate-900 mb-12 text-center">
+              Irvine Mortgage FAQ
+            </h2>
+            <div className="space-y-8">
+              {schemaData[0]?.data?.questions?.map((faq: any, index: number) => (
+                <Card key={index} className="shadow-lg">
+                  <CardHeader>
+                    <CardTitle className="text-lg text-blue-600">{faq.question}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-slate-700">{faq.answer}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Internal Links */}
+        <InternalLinkEngine 
+          currentPage="/areas/irvine-mortgage-broker"
+          pageType="city"
+          city="Irvine"
+          maxLinks={6}
+        />
       </div>
     </div>
   );

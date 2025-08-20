@@ -15,6 +15,7 @@ interface Quote {
   loan_type: string;
   credit_score: string;
   status: string;
+  notes: string;
   created_at: string;
 }
 
@@ -198,6 +199,7 @@ export default function AdminDataPage() {
                       <th className="text-left py-3 px-2">Loan Amount</th>
                       <th className="text-left py-3 px-2">Loan Type</th>
                       <th className="text-left py-3 px-2">Credit Score</th>
+                      <th className="text-left py-3 px-2">Notes</th>
                       <th className="text-left py-3 px-2">Status</th>
                       <th className="text-left py-3 px-2">Date</th>
                     </tr>
@@ -210,7 +212,12 @@ export default function AdminDataPage() {
                         <td className="py-3 px-2">{quote.phone}</td>
                         <td className="py-3 px-2">{formatCurrency(quote.loan_amount)}</td>
                         <td className="py-3 px-2 capitalize">{quote.loan_type}</td>
-                        <td className="py-3 px-2 capitalize">{quote.credit_score}</td>
+                        <td className="py-3 px-2 capitalize">{quote.credit_score || 'N/A'}</td>
+                        <td className="py-3 px-2 max-w-xs">
+                          <div className="truncate" title={quote.notes}>
+                            {quote.notes ? quote.notes.substring(0, 50) + (quote.notes.length > 50 ? '...' : '') : 'N/A'}
+                          </div>
+                        </td>
                         <td className="py-3 px-2">
                           <span className={`px-2 py-1 rounded-full text-xs font-medium ${
                             quote.status === 'new' ? 'bg-blue-100 text-blue-800' :

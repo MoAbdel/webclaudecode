@@ -33,7 +33,7 @@ const refinancingOptions = [
     type: 'Cash-Out Refinance',
     purpose: 'Access home equity',
     cashOut: 'Yes',
-    timeframe: '3-4 weeks',
+    timeframe: '2-3 weeks',
     bestFor: 'Home improvements, debt consolidation, investments',
     description: 'Refinance for more than you owe and receive the difference in cash',
     link: '/loan-programs/cash-out-refinance',
@@ -187,7 +187,7 @@ const faqs = [
   },
   {
     question: 'How long does refinancing take in Orange County?',
-    answer: 'Rate-and-term refinances typically take 2-3 weeks, while cash-out refinances may take 3-4 weeks due to additional documentation requirements. HELOCs and HELOANs usually close in 2-3 weeks. Factors affecting timeline include appraisal scheduling, document submission speed, and lender processing times.'
+    answer: 'Rate-and-term refinances typically take 2-3 weeks, while cash-out refinances may take 2-3 weeks due to additional documentation requirements. HELOCs and HELOANs usually close in 2-3 weeks. Factors affecting timeline include appraisal scheduling, document submission speed, and lender processing times.'
   },
   {
     question: 'Can I refinance if I have poor credit?',
@@ -519,7 +519,7 @@ export default function OrangeCountyRefinancingGuide() {
                 <FileText className="w-12 h-12 text-orange-600 mx-auto mb-4" />
                 <h3 className="text-lg font-semibold text-slate-900 mb-2">Freddie Mac</h3>
                 <p className="text-slate-600 mb-4">Official rate information</p>
-                <a href="http://www.freddiemac.com/pmms/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.freddiemac.com/pmms/" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full">Visit Site</Button>
                 </a>
               </CardContent>

@@ -417,9 +417,9 @@ export default function ProfitLossStatementLoansPage() {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Processing Time</td>
-                  <td className="px-6 py-4 text-center text-purple-600">45-60 days</td>
-                  <td className="px-6 py-4 text-center text-blue-600 font-bold">30-45 days</td>
-                  <td className="px-6 py-4 text-center text-slate-600">45-60 days</td>
+                  <td className="px-6 py-4 text-center text-purple-600">6-8 weeks</td>
+                  <td className="px-6 py-4 text-center text-blue-600 font-bold">4-5 weeks</td>
+                  <td className="px-6 py-4 text-center text-slate-600">6-8 weeks</td>
                 </tr>
               </tbody>
             </table>

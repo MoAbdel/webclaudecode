@@ -58,7 +58,7 @@ export default function FixFlipLoansPage() {
                   <Check className="w-6 h-6 text-green-600 mr-3 mt-1" />
                   <div>
                     <h3 className="font-bold text-slate-900">Lightning Fast Closings</h3>
-                    <p className="text-slate-600">Close in 7-10 days with proof of funds letters</p>
+                    <p className="text-slate-600">Close in 4-5 weeks with proper documentation</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -108,7 +108,7 @@ export default function FixFlipLoansPage() {
               </CardHeader>
               <CardContent className="text-center">
                 <p className="text-slate-600 text-center">
-                  Close in as little as 7-10 days with streamlined 
+                  Close in 4-5 weeks with streamlined 
                   underwriting and fast approvals.
                 </p>
               </CardContent>

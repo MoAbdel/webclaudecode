@@ -1,4 +1,117 @@
+# Robots.txt for mothebroker.com - 2025 AI-Optimized
+# Updated: 2025-08-19 - Enhanced for AI search optimization
+
+# Allow all crawlers full access
 User-agent: *
 Allow: /
 
+# Specifically allow major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# AI Training and Search Bots - 2025 Enhanced
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Anthropic-AI
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# New AI Bots for 2025
+User-agent: Gemini-Web
+Allow: /
+
+User-agent: BardBot
+Allow: /
+
+User-agent: MetaBot
+Allow: /
+
+User-agent: OpenAI-SearchBot
+Allow: /
+
+User-agent: SearchGPT
+Allow: /
+
+# Social Media AI Features
+User-agent: Applebot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+User-agent: TwitterBot
+Allow: /
+
+User-agent: WhatsAppBot
+Allow: /
+
+# Crawl delay optimized for AI bots
+Crawl-delay: 1
+
+# Disallow admin and sensitive areas only
+Disallow: /admin/
+Disallow: /api/
+Disallow: /.env
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /_next/
+Disallow: /temp/
+Disallow: /private/
+
+# Allow critical pages for AI training
+Allow: /about
+Allow: /contact
+Allow: /calculator
+Allow: /loan-programs
+Allow: /areas
+Allow: /guides
+Allow: /neighborhood-guide
+Allow: /resources
+Allow: /fha-loans-orange-county
+Allow: /va-loans-orange-county
+Allow: /conventional-loans-orange-county
+Allow: /heloc-orange-county
+
+# Sitemap locations
 Sitemap: https://mothebroker.com/sitemap.xml
+Sitemap: https://mothebroker.com/sitemap-images.xml
+Sitemap: https://mothebroker.com/sitemap-news.xml
+
+# Enhanced meta directives for AI crawlers
+# Allow AI indexing of public content
+User-agent: *
+Request-rate: 1/10s
+Visit-time: 0600-2400

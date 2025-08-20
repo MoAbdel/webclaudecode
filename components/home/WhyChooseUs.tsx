@@ -61,7 +61,7 @@ export default function WhyChooseUs() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {features.map((feature, index) => (
-            <Card key={index} className="card-hover shadow-base44 border-slate-200 group flex flex-col transform hover:scale-105 transition-all duration-300 fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>
+            <Card key={index} className={`card-hover shadow-base44 border-slate-200 group flex flex-col transform hover:scale-105 transition-all duration-300 fade-in-up ${index === 0 ? '' : index === 1 ? 'animate-delay-100' : index === 2 ? 'animate-delay-200' : 'animate-delay-300'}`}>
               <CardContent className="p-6 flex flex-col items-center text-center flex-grow">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-100 to-green-100 rounded-lg flex items-center justify-center group-hover:from-blue-600 group-hover:to-green-600 transition-all duration-300 mb-4 flex-shrink-0 shadow-md group-hover:shadow-lg">
                   <feature.icon className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
@@ -79,39 +79,39 @@ export default function WhyChooseUs() {
         {/* Internal Linking to Service Pages */}
         <div className="text-center mt-12">
           <h3 className="text-2xl font-bold text-slate-900 mb-6">Popular Orange County Loan Programs</h3>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/fha-loans-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+          <div className="flex flex-wrap justify-center gap-3">
+            <Link href="/fha-loans-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Explore FHA Programs
               </Button>
             </Link>
-            <Link href="/va-loans-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/va-loans-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 VA Benefits & Rates
               </Button>
             </Link>
-            <Link href="/heloc-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/heloc-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 HELOC Calculator
               </Button>
             </Link>
-            <Link href="/conventional-loans-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/conventional-loans-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Conventional Options
               </Button>
             </Link>
-            <Link href="/non-qm-loans-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/non-qm-loans-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Self-Employed Programs
               </Button>
             </Link>
-            <Link href="/heloan-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/heloan-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Fixed-Rate HELOAN
               </Button>
             </Link>
-            <Link href="/rate-term-refinance-orange-county" className="inline-block">
-              <Button className="bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 text-sm">
+            <Link href="/rate-term-refinance-orange-county" className="inline-block w-full sm:w-auto">
+              <Button className="bg-blue-600 text-white hover:bg-blue-700 w-full sm:w-auto">
                 Refinance Calculator
               </Button>
             </Link>

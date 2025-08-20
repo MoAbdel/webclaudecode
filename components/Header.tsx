@@ -7,6 +7,7 @@ import { Home, Calculator, FileText, Phone, Menu, X, User, ChevronDown } from 'l
 import { Button } from '@/components/ui/Button';
 import { createPageUrl } from '@/lib/utils';
 import Image from 'next/image';
+import { useFacebookTracking } from '@/hooks/useFacebookTracking';
 
 interface DropdownItem {
   title: string;
@@ -55,7 +56,11 @@ const loanProgramsDropdown: DropdownItem[] = [
   { title: '🏢 INVESTMENT', url: '#', isHeader: true },
   { title: 'DSCR Investment Loans', url: '/loan-programs/dscr-investment-loans' },
   { title: 'Fix & Flip Loans', url: '/loan-programs/fix-flip-loans' },
-  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' }
+  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' },
+  
+  // City Specific Programs
+  { title: '🏙️ CITY SPECIFIC', url: '#', isHeader: true },
+  { title: 'FHA Loans Irvine', url: '/loan-programs/fha-loans-irvine' }
 ];
 
 const serviceAreasDropdown: DropdownItem[] = [
@@ -76,6 +81,29 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: 'Santa Ana', url: '/areas/santa-ana-mortgage-broker' },
   { title: 'Fountain Valley', url: '/areas/fountain-valley-mortgage-broker' },
   
+  // Irvine Neighborhoods
+  { title: '🏘️ IRVINE NEIGHBORHOODS', url: '#', isHeader: true },
+  { title: 'University Park', url: '/areas/irvine-neighborhoods/university-park-mortgage-broker' },
+  { title: 'Woodbridge', url: '/areas/irvine-neighborhoods/woodbridge-mortgage-broker' },
+  { title: 'Northwood', url: '/areas/irvine-neighborhoods/northwood-mortgage-broker' },
+  { title: 'Turtle Rock', url: '/areas/irvine-neighborhoods/turtle-rock-mortgage-broker' },
+  { title: 'Quail Hill', url: '/areas/irvine-neighborhoods/quail-hill-mortgage-broker' },
+  { title: 'Cypress Village', url: '/areas/irvine-neighborhoods/cypress-village-mortgage-broker' },
+  
+  // Newport Beach Neighborhoods
+  { title: '🌊 NEWPORT NEIGHBORHOODS', url: '#', isHeader: true },
+  { title: 'Lido Isle', url: '/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker' },
+  { title: 'Corona del Mar', url: '/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker' },
+  { title: 'Newport Coast', url: '/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker' },
+  { title: 'Balboa Island', url: '/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker' },
+  
+  // ZIP Code Areas
+  { title: '📍 ZIP CODE AREAS', url: '#', isHeader: true },
+  { title: 'Irvine 92614', url: '/zip-codes/92614-irvine-mortgage-broker' },
+  { title: 'Corona del Mar 92625', url: '/zip-codes/92625-corona-del-mar-mortgage-broker' },
+  { title: 'Newport Beach 92660', url: '/zip-codes/92660-newport-beach-mortgage-broker' },
+  { title: 'Irvine 92602', url: '/zip-codes/92602-irvine-mortgage-broker' },
+  
   // North Orange County
   { title: '🏘️ NORTH', url: '#', isHeader: true },
   { title: 'Anaheim', url: '/areas/anaheim-mortgage-broker' },
@@ -92,7 +120,17 @@ const serviceAreasDropdown: DropdownItem[] = [
   
   // Beach Cities
   { title: '🌊 BEACH', url: '#', isHeader: true },
-  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' }
+  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' },
+  
+  // Luxury Markets
+  { title: '💎 LUXURY MARKETS', url: '#', isHeader: true },
+  { title: 'Waterfront Homes', url: '/luxury-markets/waterfront-homes-mortgage-broker' },
+  { title: 'Golf Course Homes', url: '/luxury-markets/golf-course-homes-mortgage-broker' },
+  { title: 'Ultra-Luxury Estates', url: '/luxury-markets/ultra-luxury-estates-mortgage-broker' },
+  
+  // School Districts  
+  { title: '🎓 SCHOOL DISTRICTS', url: '#', isHeader: true },
+  { title: 'Irvine Unified School District', url: '/areas/irvine-unified-school-district-mortgage-broker' }
 ];
 
 const guidesAndBlogDropdown: DropdownItem[] = [
@@ -102,6 +140,11 @@ const guidesAndBlogDropdown: DropdownItem[] = [
   { title: '📚 COMPLETE GUIDES', url: '#', isHeader: true },
   { title: 'Orange County Home Buyer Guide', url: '/guides/orange-county-home-buyer-guide' },
   { title: 'Orange County Refinancing Guide', url: '/guides/orange-county-refinancing-guide' },
+  
+  // Seasonal Market Guides
+  { title: '🌟 SEASONAL GUIDES', url: '#', isHeader: true },
+  { title: 'Spring 2025 Home Buying Guide', url: '/guides/spring-2025-home-buying-guide' },
+  { title: 'Summer 2025 Market Guide', url: '/guides/summer-2025-market-guide' },
   
   // Neighborhood Guides
   { title: '🏘️ NEIGHBORHOOD GUIDES', url: '#', isHeader: true },
@@ -117,12 +160,44 @@ const guidesAndBlogDropdown: DropdownItem[] = [
   { title: 'Why Choose Local Mortgage Broker', url: '/guides/why-choose-local-mortgage-broker' }
 ];
 
+const resourcesDropdown: DropdownItem[] = [
+  { title: 'All Resources', url: '/resources' },
+  
+  // Financial Resources
+  { title: '💰 ASSISTANCE & TOOLS', url: '#', isHeader: true },
+  { title: 'Down Payment Assistance', url: '/resources/down-payment-assistance' },
+  { title: 'Credit Repair Resources', url: '/resources/credit-repair' },
+  { title: 'Mortgage Calculators', url: '/calculator' },
+  
+  // Market & Reference  
+  { title: '📊 DATA & REFERENCE', url: '#', isHeader: true },
+  { title: 'Orange County Market Data', url: '/resources/market-data' },
+  { title: 'Mortgage Glossary', url: '/resources/glossary' },
+  
+  // Process & Support
+  { title: '📋 PROCESS & SUPPORT', url: '#', isHeader: true },
+  { title: 'Document Checklist', url: '/resources/document-checklist' },
+  { title: 'Service Providers Directory', url: '/resources/service-providers' }
+];
+
 const navigationItems: NavigationItem[] = [
   {
     title: 'Home',
     page: 'Home',
     url: createPageUrl('Home'),
     icon: Home,
+  },
+  {
+    title: 'About',
+    page: 'About',
+    url: createPageUrl('About'),
+    icon: User,
+  },
+  {
+    title: 'Contact',
+    page: 'Contact',
+    url: createPageUrl('Contact'),
+    icon: Phone,
   },
   {
     title: 'Calculator',
@@ -155,22 +230,19 @@ const navigationItems: NavigationItem[] = [
     dropdownItems: guidesAndBlogDropdown
   },
   {
-    title: 'About',
-    page: 'About',
-    url: createPageUrl('About'),
-    icon: User,
-  },
-  {
-    title: 'Contact',
-    page: 'Contact',
-    url: createPageUrl('Contact'),
-    icon: Phone,
+    title: 'Resources',
+    page: 'Resources',
+    url: '/resources',
+    icon: FileText,
+    hasDropdown: true,
+    dropdownItems: resourcesDropdown
   },
 ];
 
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { trackPhoneCall } = useFacebookTracking();
 
   return (
     <header className="bg-white/95 backdrop-blur-sm shadow-base44 border-b border-slate-200 sticky top-0 z-[60]">
@@ -199,7 +271,8 @@ export default function Header() {
                       className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides')))
+                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides'))) ||
+                        (item.page === 'Resources' && pathname.startsWith('/resources'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}
@@ -248,7 +321,11 @@ export default function Header() {
 
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:(949) 579-2057" className="text-blue-600 font-medium hover:text-blue-700">
+            <a 
+              href="tel:(949) 579-2057" 
+              className="text-blue-600 font-medium hover:text-blue-700"
+              onClick={trackPhoneCall}
+            >
               (949) 579-2057
             </a>
             <Link href="/contact">
@@ -289,7 +366,8 @@ export default function Header() {
                       className={`block px-3 py-2 rounded-md text-base font-medium ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'NeighborhoodGuide' && pathname.startsWith('/neighborhood-guide'))
+                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides'))) ||
+                        (item.page === 'Resources' && pathname.startsWith('/resources'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
                       }`}
@@ -336,7 +414,11 @@ export default function Header() {
               </div>
             ))}
             <div className="pt-4 border-t border-slate-200 mt-4">
-              <a href="tel:(949) 579-2057" className="block px-3 py-2 text-blue-600 font-medium">
+              <a 
+                href="tel:(949) 579-2057" 
+                className="block px-3 py-2 text-blue-600 font-medium"
+                onClick={trackPhoneCall}
+              >
                 (949) 579-2057
               </a>
               <Link href="/contact" className="block px-3 py-2" onClick={() => setMobileMenuOpen(false)}>

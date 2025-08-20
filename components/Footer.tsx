@@ -41,7 +41,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
             <ul className="space-y-2 text-slate-400">
               <li>📞 (949) 579-2057</li>
-              <li>📧 mabdelfattah@nexamortgage.com</li>
+              <li>📧 <Link href="/contact" className="hover:text-white transition-colors">Get a Quote</Link></li>
               <li>📍 Orange County, CA</li>
               <li>🕒 Available 24/7</li>
             </ul>
@@ -73,7 +73,7 @@ export default function Footer() {
                   </svg>
                 </a>
                 <a 
-                  href="https://maps.google.com/?cid=11756575614226532751" 
+                  href="https://share.google/wFT7ePRJSrCjZ6KAg" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-slate-400 hover:text-green-500 transition-colors"
@@ -103,37 +103,52 @@ export default function Footer() {
         </div>
         
         <div className="border-t border-slate-700 mt-8 pt-8">
-          {/* Enhanced NMLS Disclosures */}
-          <div className="text-center mb-6">
-            <div className="bg-slate-800 p-4 rounded-lg inline-block">
-              <p className="text-white font-semibold mb-2">Mo Abdel - NMLS #1426884</p>
-              <p className="text-slate-300 text-sm mb-2">Licensed Mortgage Loan Originator</p>
-              <p className="text-slate-300 text-sm mb-2">NEXA Mortgage • Equal Housing Lender</p>
-              <p className="text-slate-400 text-xs">
-                Verify license at{' '}
-                <a 
-                  href="https://www.nmlsconsumeraccess.org" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-blue-400 hover:text-blue-300 underline"
-                >
-                  www.nmlsconsumeraccess.org
-                </a>
-              </p>
-            </div>
-          </div>
+          {/* License Information and Disclaimers Side by Side */}
+          <div className="max-w-6xl mx-auto mb-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              
+              {/* Enhanced NMLS Disclosures */}
+              <div className="text-center">
+                <div className="bg-slate-800 p-4 rounded-lg inline-block">
+                  <p className="text-white font-semibold mb-2">Mo Abdel - NMLS #1426884</p>
+                  <p className="text-slate-300 text-sm mb-2">Licensed Mortgage Loan Originator</p>
+                  <p className="text-slate-300 text-sm mb-3">NEXA Mortgage LLC • Equal Housing Lender</p>
+                  
+                  {/* Brokerage License Information */}
+                  <div className="border-t border-slate-600 pt-3 mb-3">
+                    <p className="text-slate-300 text-sm font-medium mb-1">NEXA Mortgage LLC</p>
+                    <p className="text-slate-400 text-xs mb-1">Company State License# AZMB - 0944059 | NMLS# 1660690</p>
+                    <p className="text-slate-400 text-xs">5559 S Sossaman Rd, Bldg 1 Ste 101, Mesa, AZ 85212</p>
+                  </div>
+                  
+                  <p className="text-slate-400 text-xs">
+                    Verify license at{' '}
+                    <a 
+                      href="https://www.nmlsconsumeraccess.org" 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300 underline"
+                    >
+                      www.nmlsconsumeraccess.org
+                    </a>
+                  </p>
+                </div>
+              </div>
 
-          {/* Required Disclaimers */}
-          <div className="max-w-4xl mx-auto mb-6">
-            <div className="bg-slate-800 p-4 rounded-lg">
-              <p className="text-slate-300 text-xs mb-2">
-                <strong>Important:</strong> This is not a commitment to lend. All information contained herein is subject to change without notice. 
-                All loans are subject to credit approval. Equal Housing Lender.
-              </p>
-              <p className="text-slate-400 text-xs">
-                This material is not from HUD or FHA and has not been approved by HUD or any government agency. 
-                The information provided is for informational purposes only and is not an advertisement for products or services.
-              </p>
+              {/* Required Disclaimers */}
+              <div className="flex items-center">
+                <div className="bg-slate-800 p-4 rounded-lg w-full">
+                  <p className="text-slate-300 text-xs mb-2">
+                    <strong>Important:</strong> This is not a commitment to lend. All information contained herein is subject to change without notice. 
+                    All loans are subject to credit approval. Equal Housing Lender.
+                  </p>
+                  <p className="text-slate-400 text-xs">
+                    This material is not from HUD or FHA and has not been approved by HUD or any government agency. 
+                    The information provided is for informational purposes only and is not an advertisement for products or services.
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
 

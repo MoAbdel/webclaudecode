@@ -2,10 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Base44 Theme - Simplified */
+/* Critical mobile performance optimizations */
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* Improve mobile scrolling performance */
+    -webkit-overflow-scrolling: touch;
+    /* Reduce repaints on mobile */
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  /* Optimize font loading for mobile */
+  body {
+    font-display: swap;
+    /* Improve text rendering on mobile */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* Reduce mobile layout shifts */
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Optimize images for mobile */
+  img {
+    max-width: 100%;
+    height: auto;
+    /* Prevent layout shift */
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
   }
 }
 
@@ -25,5 +55,32 @@
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+  }
+  
+  /* Animation delays for staggered animations */
+  .animate-delay-100 { animation-delay: 0.1s; }
+  .animate-delay-200 { animation-delay: 0.2s; }
+  .animate-delay-300 { animation-delay: 0.3s; }
+  .animate-delay-400 { animation-delay: 0.4s; }
+  
+  /* Fade in up animation */
+  .fade-in-up {
+    animation: fadeInUp 0.6s ease-out both;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Progress bar classes */
+  .progress-bar {
+    transition: width 0.3s ease-in-out;
   }
 }

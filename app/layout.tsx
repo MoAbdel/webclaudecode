@@ -51,9 +51,17 @@ export default function RootLayout({
         <link rel="canonical" href="https://mothebroker.com" />
         <link rel="manifest" href="/manifest.json" />
         
-        {/* Essential resource hints only */}
-        <link rel="preconnect" href="https://www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="https://connect.facebook.net" />
+        {/* Optimized resource hints for critical path */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
+        <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        
+        {/* Critical CSS preload for above-the-fold content */}
+        <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
+        <link rel="preload" href="/_next/static/chunks/main.js" as="script" />
+        
+        {/* Non-critical stylesheets with media="print" then switch to all */}
+        <link rel="preload" href="/favicon.ico" as="image" type="image/x-icon" />
         
         {/* Critical mobile viewport optimization */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
@@ -83,7 +91,6 @@ export default function RootLayout({
         <meta name="twitter:image" content="https://mothebroker.com/images/moabdel-headshot-final.png" />
         
         <AdvancedSchemaMarkup type="Organization" />
-        <meta name="build-timestamp" content={new Date().toISOString()} />
         <meta name="deployment-id" content="BGDyiFiyb-rollback" />
       </head>
       <body className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -95,18 +102,14 @@ export default function RootLayout({
         <GoogleAnalytics />
         <FacebookPixel />
         
-        {/* Non-blocking structured data scripts */}
+        {/* Combined structured data - single script for better performance */}
         <Script 
-          id="structured-data"
+          id="combined-structured-data"
           type="application/ld+json"
           strategy="lazyOnload"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-        <Script 
-          id="mortgage-loan-schema"
-          type="application/ld+json"
-          strategy="lazyOnload"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(mortgageLoanSchema) }}
+          dangerouslySetInnerHTML={{ 
+            __html: JSON.stringify([structuredData, mortgageLoanSchema])
+          }}
         />
       </body>
     </html>

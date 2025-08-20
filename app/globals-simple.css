@@ -19,6 +19,8 @@
     /* Reduce repaints on mobile */
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+    /* Force hardware acceleration */
+    will-change: scroll-position;
   }
   
   /* Optimize font loading for mobile */
@@ -28,6 +30,9 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeSpeed;
+    /* Prevent paint on scroll */
+    backface-visibility: hidden;
+    perspective: 1000px;
   }
   
   /* Reduce mobile layout shifts */
@@ -44,6 +49,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     shape-margin: 0.75rem;
+    /* Improve image rendering performance */
+    image-rendering: optimizeQuality;
+    image-rendering: -webkit-optimize-contrast;
+    /* Prevent unnecessary repaints */
+    will-change: auto;
   }
 }
 

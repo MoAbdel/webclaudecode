@@ -16,6 +16,10 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
     scrollRestoration: true,
+    optimizeCss: true,
+    gzipSize: true,
+    craCompat: true,
+    esmExternals: true,
   },
   
   // Mobile performance settings
@@ -63,7 +67,25 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000'
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/(favicon\\.ico|favicon-.*\\.png|android-chrome-.*\\.png|apple-touch-icon.*\\.png|manifest\\.json)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          }
+        ]
+      },
+      {
+        source: '/(.*\\.(css|js|woff2|woff))',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
           }
         ]
       }
@@ -76,7 +98,13 @@ const nextConfig = {
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
+    emotion: false,
+    reactRemoveProperties: process.env.NODE_ENV === 'production',
+    styledComponents: false,
   },
+  
+  // SWC minification for modern JavaScript
+  swcMinify: true,
   
   // Webpack optimizations for ultra-modern browsers
   webpack: (config, { dev, isServer }) => {
@@ -90,19 +118,40 @@ const nextConfig = {
         providedExports: true,
         usedExports: true,
         concatenateModules: true,
+        innerGraph: true,
+        mangleExports: 'size',
         splitChunks: {
           chunks: 'all',
+          minSize: 20000,
+          maxSize: 244000,
           cacheGroups: {
             default: false,
             vendors: false,
-            // Extract vendor libraries
+            // React and core libs
+            react: {
+              name: 'react',
+              chunks: 'all',
+              test: /[\\/]node_modules[\\/](react|react-dom|scheduler)[\\/]/,
+              priority: 40,
+              enforce: true
+            },
+            // Icons - separate chunk for better caching
+            icons: {
+              name: 'icons',
+              chunks: 'all', 
+              test: /[\\/]node_modules[\\/]lucide-react[\\/]/,
+              priority: 35,
+              enforce: true
+            },
+            // Other vendor libraries
             vendor: {
               name: 'vendor',
               chunks: 'all',
-              test: /node_modules/,
-              priority: 20
+              test: /[\\/]node_modules[\\/]/,
+              priority: 20,
+              minChunks: 1
             },
-            // Extract common code
+            // Common code across pages
             common: {
               name: 'common',
               chunks: 'all',

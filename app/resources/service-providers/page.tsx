@@ -542,6 +542,66 @@ export default function ServiceProvidersPage() {
         </div>
       </section>
 
+      {/* Professional Associations */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Professional Associations & Industry Resources
+            </h2>
+            <p className="text-xl text-slate-600">
+              Trusted organizations ensuring professional standards and ethics
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Home className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-slate-900 mb-4">National Association of Realtors</h3>
+                <p className="text-slate-600 mb-6">
+                  The largest trade association in the United States, representing over 1.5 million members. 
+                  Find Realtor® code of ethics, professional standards, and member directories.
+                </p>
+                <a 
+                  href="https://www.nar.realtor/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-lg"
+                >
+                  Visit NAR.realtor
+                  <ExternalLink className="w-5 h-5 ml-2" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Building className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-slate-900 mb-4">California Association of Mortgage Professionals</h3>
+                <p className="text-slate-600 mb-6">
+                  Leading advocacy organization for California mortgage professionals. 
+                  Resources for ethical lending practices, regulatory compliance, and professional development.
+                </p>
+                <a 
+                  href="https://www.camp-ca.org/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-lg"
+                >
+                  Visit CAMP-CA.org
+                  <ExternalLink className="w-5 h-5 ml-2" />
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

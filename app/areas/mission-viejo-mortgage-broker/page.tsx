@@ -333,6 +333,59 @@ export default function MissionViejoMortgageBrokerPage() {
           </div>
         </div>
 
+        {/* Mission Viejo City Resources */}
+        <div className="mb-16">
+          <div className="bg-slate-50 p-8 rounded-2xl">
+            <h2 className="text-2xl font-bold text-center text-slate-900 mb-6">
+              Official Mission Viejo City Resources
+            </h2>
+            <p className="text-center text-slate-600 mb-8">
+              Access official city services and information for Mission Viejo residents
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Building className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">City of Mission Viejo</h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    Official city website with services, permits, and community information
+                  </p>
+                  <a 
+                    href="https://www.cityofmissionviejo.org/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Visit CityofMissionViejo.org →
+                  </a>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <TreePine className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Lake Mission Viejo Association</h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    Official lake association for membership, activities, and community events
+                  </p>
+                  <a 
+                    href="https://www.lakemissionviejo.com/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Visit LakeMissionViejo.com →
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
           <h2 className="text-3xl font-bold mb-4">

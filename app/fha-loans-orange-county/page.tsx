@@ -260,7 +260,9 @@ export default function FHALoansOrangeCountyPage() {
           <p className="text-slate-600 mb-6">
             Learn more about FHA loans from official sources: 
             <a href="https://www.hud.gov/buying/loans" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline ml-1">HUD Official FHA Information</a> | 
-            <a href="https://www.fha.com/fha_loan_requirements" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline ml-1">FHA Loan Requirements</a>
+            <a href="https://www.fha.com/fha_loan_requirements" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline ml-1">FHA Loan Requirements</a> | 
+            <a href="https://www.consumerfinance.gov/ask-cfpb/what-is-an-fha-loan-en-107/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline ml-1">CFPB FHA Loan Guide</a> | 
+            <a href="https://www.fhfa.gov/homeownerspage" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 underline ml-1">FHFA Homeowner Resources</a>
           </p>
         </div>
 

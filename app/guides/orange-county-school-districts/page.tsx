@@ -320,6 +320,60 @@ export default function OrangeCountySchoolDistrictsGuide() {
         </div>
       </section>
 
+      {/* Official Education Resources */}
+      <section className="py-16 bg-slate-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Official Education Resources
+            </h2>
+            <p className="text-xl text-slate-600">
+              Access official information from education authorities
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white rounded-lg p-6 shadow-lg border border-slate-200 text-center">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <GraduationCap className="w-8 h-8 text-blue-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">California Department of Education</h3>
+              <p className="text-slate-600 mb-6">
+                Official state education authority with school performance data, accountability reports, and education policies
+              </p>
+              <a 
+                href="https://www.cde.ca.gov/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Visit CDE.ca.gov
+                <MapPin className="w-4 h-4 ml-1" />
+              </a>
+            </div>
+
+            <div className="bg-white rounded-lg p-6 shadow-lg border border-slate-200 text-center">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-orange-600" />
+              </div>
+              <h3 className="text-xl font-semibold text-slate-900 mb-3">Orange County Department of Education</h3>
+              <p className="text-slate-600 mb-6">
+                Local education authority serving Orange County with district information, programs, and educational services
+              </p>
+              <a 
+                href="https://www.ocde.us/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+              >
+                Visit OCDE.us
+                <MapPin className="w-4 h-4 ml-1" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Call to Action */}
       <section className="py-16 bg-blue-600">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

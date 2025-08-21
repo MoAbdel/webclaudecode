@@ -244,6 +244,142 @@ export default function ResourcesPage() {
         </div>
       </section>
 
+      {/* Government Resources Section */}
+      <section className="py-16 bg-slate-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Official Government Resources
+            </h2>
+            <p className="text-xl text-slate-600">
+              Trusted government agencies providing authoritative guidance and information
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Building className="w-8 h-8 text-blue-600 mr-3" />
+                  <div>
+                    <h3 className="font-semibold text-lg">Consumer Financial Protection Bureau</h3>
+                    <Badge variant="secondary">CFPB</Badge>
+                  </div>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Official federal agency protecting consumers in financial transactions including mortgages.
+                </p>
+                <a 
+                  href="https://www.consumerfinance.gov/owning-a-home/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
+                >
+                  Visit CFPB Home Buying Guide
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Building className="w-8 h-8 text-green-600 mr-3" />
+                  <div>
+                    <h3 className="font-semibold text-lg">Federal Housing Finance Agency</h3>
+                    <Badge variant="secondary">FHFA</Badge>
+                  </div>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Federal agency overseeing Fannie Mae and Freddie Mac, ensuring mortgage market stability.
+                </p>
+                <a 
+                  href="https://www.fhfa.gov/homeownerspage" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
+                >
+                  Visit FHFA Homeowner Resources
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Award className="w-8 h-8 text-red-600 mr-3" />
+                  <div>
+                    <h3 className="font-semibold text-lg">VA Housing Assistance</h3>
+                    <Badge variant="secondary">Veterans Affairs</Badge>
+                  </div>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Official VA home loan benefits and housing assistance programs for veterans and service members.
+                </p>
+                <a 
+                  href="https://www.va.gov/housing-assistance/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
+                >
+                  Visit VA Housing Resources
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <Home className="w-8 h-8 text-purple-600 mr-3" />
+                  <div>
+                    <h3 className="font-semibold text-lg">HUD Housing Counseling</h3>
+                    <Badge variant="secondary">HUD</Badge>
+                  </div>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Find HUD-approved housing counselors for free guidance on buying, renting, or avoiding foreclosure.
+                </p>
+                <a 
+                  href="https://www.hud.gov/findacounselor" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
+                >
+                  Find a HUD Counselor
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-1">
+              <CardContent className="p-6">
+                <div className="flex items-center mb-4">
+                  <TrendingUp className="w-8 h-8 text-orange-600 mr-3" />
+                  <div>
+                    <h3 className="font-semibold text-lg">Mortgage Bankers Association</h3>
+                    <Badge variant="secondary">MBA</Badge>
+                  </div>
+                </div>
+                <p className="text-slate-600 mb-4">
+                  Leading national association providing consumer education and mortgage industry insights.
+                </p>
+                <a 
+                  href="https://www.mba.org/consumers" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center"
+                >
+                  Visit MBA Consumer Resources
+                  <ArrowRight className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Quick Tools */}
       <section className="py-16 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

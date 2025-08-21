@@ -495,6 +495,59 @@ export default function NewportBeachMortgageBrokerPage() {
           </div>
         </div>
 
+        {/* Newport Beach City Resources */}
+        <div className="mb-16">
+          <div className="bg-slate-50 p-8 rounded-2xl">
+            <h2 className="text-2xl font-bold text-center text-slate-900 mb-6">
+              Official Newport Beach City Resources
+            </h2>
+            <p className="text-center text-slate-600 mb-8">
+              Access official city services and information for Newport Beach residents
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">City of Newport Beach</h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    Official city website with services, permits, and community information
+                  </p>
+                  <a 
+                    href="https://www.newportbeachca.gov/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Visit NewportBeachCA.gov →
+                  </a>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Home className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Newport Beach Planning</h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    Planning department for zoning, permits, and development information
+                  </p>
+                  <a 
+                    href="https://www.newportbeachca.gov/government/departments/community-development/planning" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Visit Planning Department →
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
           <h2 className="text-3xl font-bold mb-4">

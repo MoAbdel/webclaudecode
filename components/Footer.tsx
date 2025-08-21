@@ -15,7 +15,7 @@ export default function Footer() {
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-lg font-semibold mb-4">About Mo Abdel</h3>
             <p className="text-slate-400 mb-4">
@@ -99,6 +99,62 @@ export default function Footer() {
                 </a>
               </div>
             </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Official Resources</h3>
+            <ul className="space-y-2 text-slate-400">
+              <li>
+                <a 
+                  href="https://www.consumerfinance.gov/owning-a-home/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  CFPB Home Buying Guide
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.fhfa.gov/homeownerspage" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  Federal Housing Finance Agency
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.va.gov/housing-assistance/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  VA Housing Assistance
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.hud.gov/findacounselor" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  HUD Housing Counseling
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="https://www.mba.org/consumers" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition-colors duration-200"
+                >
+                  Mortgage Bankers Association
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         

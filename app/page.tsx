@@ -1,5 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
+import type { Metadata } from 'next';
 import HeroSectionServer from '@/components/home/HeroSectionServer';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import BrokerComparison from '@/components/home/BrokerComparison';
@@ -8,6 +9,14 @@ import StructuredFAQ from '@/components/home/StructuredFAQ';
 import PillarPageHub from '@/components/seo/PillarPageHub';
 import AIOOptimization from '@/components/seo/AIOOptimization';
 import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+
+export const metadata: Metadata = {
+  title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
+  description: 'Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.',
+  alternates: {
+    canonical: 'https://mothebroker.com',
+  },
+};
 
 // Lazy load below-the-fold components to reduce initial bundle size
 const RateDisplay = dynamic(() => import('@/components/home/RateDisplay'), {

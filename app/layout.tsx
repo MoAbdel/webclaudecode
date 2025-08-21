@@ -14,6 +14,10 @@ export const metadata: Metadata = {
   title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
   description: 'Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.',
   keywords: 'Orange County mortgage broker, home loans, refinancing, FHA loans, VA loans, mortgage rates, NMLS licensed, lender access, competitive rates',
+  metadataBase: new URL('https://mothebroker.com'),
+  alternates: {
+    canonical: 'https://mothebroker.com',
+  },
   icons: {
     icon: [
       { url: '/favicon.ico?v=5', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
@@ -66,7 +70,6 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="google-site-verification" content="gje53lhRpuQPVaMLhtYAUYdO8ciKzx8APLNwNVhcT1A" />
-        <link rel="canonical" href="https://mothebroker.com" />
         <link rel="manifest" href="/manifest.json" />
         
         {/* Prevent www redirect issues */}

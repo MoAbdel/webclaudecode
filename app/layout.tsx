@@ -2,6 +2,7 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Breadcrumbs from '@/components/navigation/Breadcrumbs';
 import GoogleAnalytics from '@/components/GoogleAnalytics';
 import FacebookPixel from '@/components/FacebookPixel';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
@@ -32,9 +33,26 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
     description: 'Get competitive mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
-    type: 'website',
-    locale: 'en_US',
+    url: 'https://mothebroker.com',
     siteName: 'Mo Abdel | Mortgage Broker',
+    images: [
+      {
+        url: 'https://mothebroker.com/images/og-image-mothebroker.png',
+        width: 1200,
+        height: 630,
+        alt: 'Orange County Mortgage Broker - Mo Abdel NMLS #1426884',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
+    description: 'Get competitive mortgage rates from 200+ lenders. Fast closings, unbiased advice, flexible home loan programs.',
+    images: ['https://mothebroker.com/images/og-image-mothebroker.png'],
+    creator: '@mothebroker',
+    site: '@mothebroker',
   },
 };
 
@@ -98,6 +116,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <Header />
+        <Breadcrumbs />
         <main className="flex-1">
           {children}
         </main>

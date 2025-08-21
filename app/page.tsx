@@ -2,7 +2,9 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import HeroSection from '@/components/home/HeroSection';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
+import BrokerComparison from '@/components/home/BrokerComparison';
 import QuickQuote from '@/components/home/QuickQuote';
+import StructuredFAQ from '@/components/home/StructuredFAQ';
 import AIOOptimization from '@/components/seo/AIOOptimization';
 import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
 
@@ -66,10 +68,12 @@ export default function HomePage() {
       {/* Main Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <HeroSection />
+        <BrokerComparison />
         <WhyChooseUs />
         <QuickQuote />
         <LocalMarketInsights />
         <RateDisplay />
+        <StructuredFAQ />
         <Testimonials />
         <NewsletterSignup />
       </div>

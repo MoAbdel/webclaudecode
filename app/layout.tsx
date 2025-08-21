@@ -51,6 +51,9 @@ export default function RootLayout({
         <link rel="canonical" href="https://mothebroker.com" />
         <link rel="manifest" href="/manifest.json" />
         
+        {/* Prevent www redirect issues */}
+        <meta name="robots" content="index, follow" />
+        
         {/* Optimized resource hints for critical path */}
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="" />

@@ -62,7 +62,8 @@ const loanProgramsDropdown: DropdownItem[] = [
   
   // City Specific Programs
   { title: '🏙️ CITY SPECIFIC', url: '#', isHeader: true },
-  { title: 'FHA Loans Irvine', url: '/loan-programs/fha-loans-irvine' }
+  { title: 'FHA Loans Irvine', url: '/loan-programs/fha-loans-irvine' },
+  { title: 'Bank Statement Loans Irvine', url: '/loan-programs/bank-statement-loans-irvine' }
 ];
 
 const serviceAreasDropdown: DropdownItem[] = [
@@ -79,8 +80,10 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: '🏢 CENTRAL', url: '#', isHeader: true },
   { title: 'Irvine', url: '/areas/irvine-mortgage-broker' },
   { title: 'Costa Mesa', url: '/areas/costa-mesa-mortgage-broker' },
+  { title: 'Costa Mesa Rates', url: '/areas/costa-mesa-mortgage-rates' },
   { title: 'Orange', url: '/areas/orange-mortgage-broker' },
   { title: 'Santa Ana', url: '/areas/santa-ana-mortgage-broker' },
+  { title: 'Santa Ana Refinance', url: '/areas/santa-ana-refinance-rates' },
   { title: 'Fountain Valley', url: '/areas/fountain-valley-mortgage-broker' },
   
   // Irvine Neighborhoods
@@ -111,6 +114,7 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: 'Anaheim', url: '/areas/anaheim-mortgage-broker' },
   { title: 'Fullerton', url: '/areas/fullerton-mortgage-broker' },
   { title: 'Yorba Linda', url: '/areas/yorba-linda-mortgage-broker' },
+  { title: 'Yorba Linda Rates', url: '/areas/yorba-linda-mortgage-rates' },
   { title: 'Garden Grove', url: '/areas/garden-grove-mortgage-broker' },
   { title: 'Westminster', url: '/areas/westminster-mortgage-broker' },
   

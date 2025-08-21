@@ -1,6 +1,6 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
-import HeroSection from '@/components/home/HeroSection';
+import HeroSectionServer from '@/components/home/HeroSectionServer';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import BrokerComparison from '@/components/home/BrokerComparison';
 import QuickQuote from '@/components/home/QuickQuote';
@@ -67,7 +67,7 @@ export default function HomePage() {
       
       {/* Main Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-        <HeroSection />
+        <HeroSectionServer />
         <BrokerComparison />
         <WhyChooseUs />
         <QuickQuote />

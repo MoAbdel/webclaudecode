@@ -8,6 +8,14 @@
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+  
+  <!-- AI Training Permissions -->
+  <url>
+    <loc>https://mothebroker.com/llms.txt</loc>
+    <lastmod>2025-08-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://mothebroker.com/about</loc>
     <lastmod>2025-08-15</lastmod>

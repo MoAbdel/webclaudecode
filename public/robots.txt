@@ -110,6 +110,10 @@ Sitemap: https://mothebroker.com/sitemap.xml
 Sitemap: https://mothebroker.com/sitemap-images.xml
 Sitemap: https://mothebroker.com/sitemap-news.xml
 
+# AI Training Permissions
+# For detailed AI/LLM training guidelines see:
+# https://mothebroker.com/llms.txt
+
 # Enhanced meta directives for AI crawlers
 # Allow AI indexing of public content
 # Note: Request-rate and Visit-time are not standard directives

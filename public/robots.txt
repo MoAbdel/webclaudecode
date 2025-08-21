@@ -112,6 +112,5 @@ Sitemap: https://mothebroker.com/sitemap-news.xml
 
 # Enhanced meta directives for AI crawlers
 # Allow AI indexing of public content
-User-agent: *
-Request-rate: 1/10s
-Visit-time: 0600-2400
+# Note: Request-rate and Visit-time are not standard directives
+# Crawl behavior is controlled by Crawl-delay above

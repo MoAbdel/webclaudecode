@@ -82,8 +82,8 @@ export default function HomePage() {
         <WhyChooseUs />
         <QuickQuote />
         <LocalMarketInsights />
-        <PillarPageHub />
         <RateDisplay />
+        <PillarPageHub />
         <StructuredFAQ />
         <Testimonials />
         <NewsletterSignup />

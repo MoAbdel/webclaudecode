@@ -10,11 +10,6 @@ import { Calculator, ArrowRight, Shield } from "lucide-react";
 import { fbTrack } from '@/components/FacebookPixel';
 
 // Google Ads conversion tracking
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
 
 export default function QuickQuote() {
   // Google Ads conversion tracking function

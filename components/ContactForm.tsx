@@ -6,11 +6,6 @@ import { Shield } from 'lucide-react';
 import { fbTrack } from '@/components/FacebookPixel';
 
 // Google Ads conversion tracking
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
 
 export default function ContactForm() {
   // Google Ads conversion tracking function

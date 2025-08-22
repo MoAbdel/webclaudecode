@@ -25,9 +25,3 @@ export default function GoogleAnalytics() {
 }
 
 // Extend Window interface for TypeScript
-declare global {
-  interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
-  }
-}

@@ -20,12 +20,6 @@ interface GEOMetrics {
   authoritySignals: number;
 }
 
-declare global {
-  interface Window {
-    gtag?: (...args: any[]) => void;
-    dataLayer?: any[];
-  }
-}
 
 export default function GEOTracking() {
   useEffect(() => {

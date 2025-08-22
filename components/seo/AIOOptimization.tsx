@@ -83,8 +83,8 @@ export default function AIOOptimization({
   const generateStatistics = () => {
     const defaultStats = [
       {
-        stat: "Average mortgage rate savings through brokers: 0.25-0.50%",
-        source: "National Association of Mortgage Brokers",
+        stat: "Average savings through mortgage brokers: $10,000+ per loan",
+        source: "Polygon Research Study",
         year: "2025"
       },
       {

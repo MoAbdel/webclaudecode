@@ -93,7 +93,7 @@ export default function BrokerComparison() {
               <tr className="hover:bg-gray-50 bg-gray-50">
                 <td className="px-6 py-4 font-medium text-slate-700">Typical Savings</td>
                 <td className="px-6 py-4 text-center">
-                  <span className="text-green-600 font-bold">0.25-0.50% Lower Rate</span>
+                  <span className="text-green-600 font-bold">$10,000+ Total Savings</span>
                 </td>
                 <td className="px-6 py-4 text-center">
                   <span className="text-slate-500">Base Rate</span>
@@ -156,7 +156,7 @@ export default function BrokerComparison() {
             See How Much You Can Save
           </h3>
           <p className="text-lg text-slate-600 mb-6">
-            On a $800,000 loan, saving 0.25% equals $2,000/year or $60,000 over 30 years
+            Research shows mortgage broker clients save over $10,000 through competitive rates and lower upfront costs
           </p>
           <a
             href="/contact"

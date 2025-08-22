@@ -13,11 +13,11 @@ export default function StructuredFAQ() {
     },
     {
       question: "What are current mortgage rates in Orange County?",
-      answer: "Current rates vary based on loan type and credit score. As of today, 30-year fixed rates are around 6.59%, 15-year fixed at 5.97%, and FHA loans at 6.17%. However, with my wholesale lender access, I can often beat these retail rates by 0.25-0.50%."
+      answer: "Current rates vary based on loan type and credit score. As of today, 30-year fixed rates are around 6.59%, 15-year fixed at 5.97%, and FHA loans at 6.17%. With my wholesale lender access, I consistently secure competitive rates and significantly lower upfront costs compared to retail banks."
     },
     {
       question: "How much can I save using a mortgage broker?",
-      answer: "On average, my clients save 0.25-0.50% on their interest rate compared to retail banks. On an $800,000 loan, that's $2,000-4,000 per year, or $60,000-120,000 over the life of a 30-year loan."
+      answer: "Research shows that borrowers save an average of over $10,000 throughout the life of their loan when working with mortgage brokers compared to retail banks. This comes from competitive rates, significantly lower upfront costs (typically 33 basis points less), and access to specialized loan programs that banks don't offer."
     },
     {
       question: "What's the minimum down payment required in Orange County?",

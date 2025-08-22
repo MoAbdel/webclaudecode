@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
-  <!-- Main Website Sitemap -->
+  <!-- Main Website Sitemap - 113 pages including all loan programs, service areas, guides, resources -->
   <sitemap>
     <loc>https://www.mothebroker.com/sitemap.xml</loc>
     <lastmod>2025-08-22</lastmod>
   </sitemap>
   
-  <!-- Image Sitemap -->
+  <!-- Image Sitemap - All website images for Google Image search -->
   <sitemap>
     <loc>https://www.mothebroker.com/sitemap-images.xml</loc>
     <lastmod>2025-08-22</lastmod>
   </sitemap>
   
-  <!-- News Sitemap -->
+  <!-- News Sitemap - Blog posts and news content for Google News -->
   <sitemap>
     <loc>https://www.mothebroker.com/sitemap-news.xml</loc>
     <lastmod>2025-08-22</lastmod>

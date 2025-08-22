@@ -5,12 +5,12 @@ import { TrendingDown, TrendingUp, Minus } from 'lucide-react';
 
 export default function RateComparisonTable() {
   const [rates, setRates] = useState({
-    thirtyYear: 6.59,
+    thirtyYear: 6.62,
     fifteenYear: 5.97,
-    fhaThirtyYear: 6.17,
-    vaThirtyYear: 6.09,
-    jumboThirtyYear: 6.89,
-    armFiveOne: 5.75
+    fhaThirtyYear: 6.22,
+    vaThirtyYear: 6.23,
+    jumboThirtyYear: 6.67,
+    armFiveOne: 6.11
   });
 
   useEffect(() => {
@@ -28,12 +28,12 @@ export default function RateComparisonTable() {
           const arm = result.data.find((r: any) => r.loan_type.includes('5/1 ARM'));
           
           setRates({
-            thirtyYear: thirty ? parseFloat(thirty.rate) : 6.59,
+            thirtyYear: thirty ? parseFloat(thirty.rate) : 6.62,
             fifteenYear: fifteen ? parseFloat(fifteen.rate) : 5.97,
-            fhaThirtyYear: fha ? parseFloat(fha.rate) : 6.17,
-            vaThirtyYear: va ? parseFloat(va.rate) : 6.09,
-            jumboThirtyYear: jumbo ? parseFloat(jumbo.rate) : 6.89,
-            armFiveOne: arm ? parseFloat(arm.rate) : 5.75
+            fhaThirtyYear: fha ? parseFloat(fha.rate) : 6.22,
+            vaThirtyYear: va ? parseFloat(va.rate) : 6.23,
+            jumboThirtyYear: jumbo ? parseFloat(jumbo.rate) : 6.67,
+            armFiveOne: arm ? parseFloat(arm.rate) : 6.11
           });
         }
       } catch (error) {

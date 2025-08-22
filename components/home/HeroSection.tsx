@@ -9,9 +9,9 @@ import Image from "next/image";
 
 export default function HeroSection() {
   const [rates, setRates] = useState({
-    thirtyYear: "6.59%",
+    thirtyYear: "6.62%",
     fifteenYear: "5.97%",
-    fhaThirtyYear: "6.17%"
+    fhaThirtyYear: "6.22%"
   });
 
   useEffect(() => {
@@ -32,9 +32,9 @@ export default function HeroSection() {
           const fha = result.data.find((r: any) => r.loan_type.includes('FHA'));
           
           setRates({
-            thirtyYear: thirty ? `${thirty.rate}%` : "6.59%",
+            thirtyYear: thirty ? `${thirty.rate}%` : "6.62%",
             fifteenYear: fifteen ? `${fifteen.rate}%` : "5.97%",
-            fhaThirtyYear: fha ? `${fha.rate}%` : "6.17%"
+            fhaThirtyYear: fha ? `${fha.rate}%` : "6.22%"
           });
         }
       } catch (error) {

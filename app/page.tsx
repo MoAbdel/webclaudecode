@@ -75,7 +75,7 @@ export default function HomePage() {
       />
       <EnhancedLocalSchema page_type="home" />
       
-      {/* Main Page Content */}
+      {/* Main Page Content - Cache Bust 2025-08-22 */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <HeroSectionServer />
         <BrokerComparison />

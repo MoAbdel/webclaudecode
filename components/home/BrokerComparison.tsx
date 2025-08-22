@@ -16,8 +16,8 @@ export default function BrokerComparison() {
           </p>
         </div>
 
-        {/* Comparison Table */}
-        <div className="overflow-x-auto">
+        {/* Desktop Comparison Table */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full border-collapse bg-white shadow-lg rounded-lg overflow-hidden">
             <thead>
               <tr className="bg-gradient-to-r from-blue-600 to-blue-700 text-white">
@@ -101,6 +101,81 @@ export default function BrokerComparison() {
               </tr>
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Comparison Cards */}
+        <div className="md:hidden space-y-4">
+          <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4">
+              <h3 className="text-lg font-bold text-center">Mortgage Broker (Mo) vs Big Banks</h3>
+            </div>
+            
+            <div className="space-y-1">
+              <div className="p-4 border-b border-gray-100">
+                <div className="font-medium text-slate-700 mb-2">Number of Lenders</div>
+                <div className="flex justify-between items-center">
+                  <span className="text-green-600 font-bold">200+ Lenders</span>
+                  <span className="text-red-600">1 (Their Own)</span>
+                </div>
+              </div>
+              
+              <div className="p-4 border-b border-gray-100 bg-gray-50">
+                <div className="font-medium text-slate-700 mb-2">Interest Rates</div>
+                <div className="flex justify-between items-center">
+                  <span className="text-green-600 font-bold">Wholesale (Lower)</span>
+                  <span className="text-red-600">Retail (Higher)</span>
+                </div>
+              </div>
+              
+              <div className="p-4 border-b border-gray-100">
+                <div className="font-medium text-slate-700 mb-2">Average Closing Time</div>
+                <div className="flex justify-between items-center">
+                  <span className="text-green-600 font-bold">18 Days</span>
+                  <span className="text-red-600">30-45 Days</span>
+                </div>
+              </div>
+              
+              <div className="p-4 border-b border-gray-100 bg-gray-50">
+                <div className="font-medium text-slate-700 mb-2">Works for You</div>
+                <div className="flex justify-between items-center">
+                  <Check className="w-6 h-6 text-green-600" />
+                  <X className="w-6 h-6 text-red-600" />
+                </div>
+              </div>
+              
+              <div className="p-4 border-b border-gray-100">
+                <div className="font-medium text-slate-700 mb-2">Personal Service</div>
+                <div className="flex justify-between items-center">
+                  <Check className="w-6 h-6 text-green-600" />
+                  <X className="w-6 h-6 text-red-600" />
+                </div>
+              </div>
+              
+              <div className="p-4 border-b border-gray-100 bg-gray-50">
+                <div className="font-medium text-slate-700 mb-2">Flexible Credit Requirements</div>
+                <div className="flex justify-between items-center">
+                  <Check className="w-6 h-6 text-green-600" />
+                  <X className="w-6 h-6 text-red-600" />
+                </div>
+              </div>
+              
+              <div className="p-4 border-b border-gray-100">
+                <div className="font-medium text-slate-700 mb-2">Weekend/Evening Availability</div>
+                <div className="flex justify-between items-center">
+                  <Check className="w-6 h-6 text-green-600" />
+                  <X className="w-6 h-6 text-red-600" />
+                </div>
+              </div>
+              
+              <div className="p-4 bg-gray-50">
+                <div className="font-medium text-slate-700 mb-2">Typical Savings</div>
+                <div className="flex justify-between items-center">
+                  <span className="text-green-600 font-bold">$10,000+ Total</span>
+                  <span className="text-slate-500">Base Rate</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Benefits List */}

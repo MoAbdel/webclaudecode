@@ -7,6 +7,10 @@ const navigationItems = [
   { title: 'Home', url: createPageUrl('Home') },
   { title: 'About', url: createPageUrl('About') },
   { title: 'Loan Programs', url: createPageUrl('Programs') },
+  { title: 'Service Areas', url: '/areas' },
+  { title: 'Guides & Education', url: '/guides' },
+  { title: 'Resources & Tools', url: '/resources' },
+  { title: 'Neighborhood Guide', url: '/neighborhood-guide' },
   { title: 'Rate Calculator', url: createPageUrl('Calculator') },
   { title: 'Contact', url: createPageUrl('Contact') },
 ];

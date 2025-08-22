@@ -29,7 +29,7 @@ export default function StructuredFAQ() {
     },
     {
       question: "What credit score do I need for a mortgage?",
-      answer: "With access to 200+ lenders, I have options for all credit situations. FHA loans can work with scores as low as 580, conventional loans typically need 620+, and the best rates are available for scores above 740."
+      answer: "With access to 200+ lenders, I have options for all credit situations. I can work with credit scores as low as 500 through specialized non-QM loan programs. FHA loans can work with scores as low as 580, conventional loans typically need 620+, and the best rates are available for scores above 740."
     },
     {
       question: "Do you offer jumbo loans for Orange County's high-priced homes?",

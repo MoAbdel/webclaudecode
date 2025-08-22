@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Updated: 2025-08-18 - Updated for SEO optimizations: Facebook pixel, business address, schema markup -->
+  <!-- Updated: 2025-08-22 - UltraThink SEO: Added current mortgage rates, security headers, accurate savings claims -->
   <!-- Main Pages -->
   <url>
     <loc>https://www.mothebroker.com/</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-22</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -18,13 +18,13 @@
   </url>
   <url>
     <loc>https://www.mothebroker.com/about</loc>
-    <lastmod>2025-08-15</lastmod>
+    <lastmod>2025-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.mothebroker.com/contact</loc>
-    <lastmod>2025-08-18</lastmod>
+    <lastmod>2025-08-22</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>

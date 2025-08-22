@@ -6,6 +6,7 @@ import WhyChooseUs from '@/components/home/WhyChooseUs';
 import BrokerComparison from '@/components/home/BrokerComparison';
 import QuickQuote from '@/components/home/QuickQuote';
 import StructuredFAQ from '@/components/home/StructuredFAQ';
+import CurrentMortgageRates from '@/components/home/CurrentMortgageRates';
 import PillarPageHub from '@/components/seo/PillarPageHub';
 import AIOOptimization from '@/components/seo/AIOOptimization';
 import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
@@ -82,6 +83,7 @@ export default function HomePage() {
         <WhyChooseUs />
         <QuickQuote />
         <LocalMarketInsights />
+        <CurrentMortgageRates />
         <PillarPageHub />
         <RateDisplay />
         <StructuredFAQ />

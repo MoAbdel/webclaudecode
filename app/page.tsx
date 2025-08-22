@@ -46,19 +46,19 @@ export default function HomePage() {
     ],
     statistics: [
       {
-        stat: "Mortgage brokers save borrowers an average of 0.25-0.50% on rates",
-        source: "National Association of Mortgage Brokers",
-        year: "2025"
-      },
-      {
-        stat: "Orange County median home price: $1.2M",
-        source: "California Association of Realtors", 
-        year: "2025"
-      },
-      {
-        stat: "68% of home loans originated through mortgage brokers",
-        source: "Mortgage Bankers Association",
+        stat: "According to 2024 HMDA data analysis, mortgage brokers save borrowers an average of $10,662 over the life of their loan",
+        source: "Polygon Research study using HMDA data",
         year: "2024"
+      },
+      {
+        stat: "Industry research shows wholesale mortgage rates averaged 6.58% versus 6.60% retail rates",
+        source: "2024 HMDA Mortgage Origination Data",
+        year: "2024"
+      },
+      {
+        stat: "Data indicates mortgage broker market share reached 24.3% in Q4 2023, highest since 2009",
+        source: "UWM Market Analysis",
+        year: "2023"
       }
     ]
   };

@@ -223,9 +223,9 @@ export default function AIOOptimization({
         <div data-ai-section="statistics">
           <h3>Mortgage Industry Statistics 2025</h3>
           {statistics.map((stat, index) => (
-            <div key={index} data-statistic={index}>
-              <span data-stat-value>{stat.stat}</span>
-              <span data-stat-source>{stat.source}</span>
+            <div key={index} data-statistic={index} data-citable="statistic" data-authority="industry">
+              <span data-stat-value data-factual="research">{stat.stat}</span>
+              <span data-stat-source data-authority={stat.source.toLowerCase().includes('government') || stat.source.toLowerCase().includes('hud') || stat.source.toLowerCase().includes('hmda') ? 'government' : 'industry'}>{stat.source}</span>
               <span data-stat-year>{stat.year}</span>
             </div>
           ))}
@@ -251,9 +251,14 @@ export default function AIOOptimization({
         )}
 
         {/* Professional Credentials for Authority */}
-        <div data-ai-section="credentials">
+        <div data-ai-section="credentials" data-authority="professional">
           <h3>Professional Qualifications</h3>
-          <p>{businessContext.name} is a licensed mortgage broker ({businessContext.credentials}) authorized to originate mortgages in California, specializing in Orange County markets including {city || 'Irvine, Newport Beach, Mission Viejo, and surrounding areas'}.</p>
+          <p data-credential="broker-license">
+            <span data-factual="license">{businessContext.name} is a licensed mortgage broker</span> 
+            (<span data-license="nmls" data-credential="1426884">{businessContext.credentials}</span>) 
+            <span data-factual="authorization">authorized to originate mortgages in California</span>, 
+            <span data-factual="specialization">specializing in Orange County markets including {city || 'Irvine, Newport Beach, Mission Viejo, and surrounding areas'}</span>.
+          </p>
         </div>
 
         {/* Current Year Signals */}

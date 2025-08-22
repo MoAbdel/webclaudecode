@@ -106,9 +106,7 @@ Allow: /conventional-loans-orange-county
 Allow: /heloc-orange-county
 
 # Sitemap locations
-Sitemap: https://mothebroker.com/sitemap.xml
-Sitemap: https://mothebroker.com/sitemap-images.xml
-Sitemap: https://mothebroker.com/sitemap-news.xml
+Sitemap: https://www.mothebroker.com/sitemap-index.xml
 
 # AI Training Permissions
 # For detailed AI/LLM training guidelines see:

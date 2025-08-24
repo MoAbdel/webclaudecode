@@ -93,17 +93,6 @@
   ],
   "redirects": [
     {
-      "source": "/((?!sitemap|robots).*)",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.mothebroker.com"
-        }
-      ],
-      "destination": "https://mothebroker.com/$1",
-      "permanent": true
-    },
-    {
       "source": "/index.html",
       "destination": "/",
       "permanent": true
@@ -179,5 +168,27 @@
       "permanent": true
     }
   ],
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/sitemap-index.xml",
+      "destination": "/sitemap-index.xml" 
+    },
+    {
+      "source": "/sitemap-images.xml",
+      "destination": "/sitemap-images.xml"
+    },
+    {
+      "source": "/sitemap-news.xml", 
+      "destination": "/sitemap-news.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    }
+  ]
 }

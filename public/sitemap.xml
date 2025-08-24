@@ -351,13 +351,8 @@
 
   <!-- Resources Main -->
   <url>
-<<<<<<< Updated upstream
-    <loc>https://mothebroker.com/resources</loc>
-    <lastmod>2025-08-18</lastmod>
-=======
     <loc>https://mothebroker.com/resources</loc>
     <lastmod>2025-08-24</lastmod>
->>>>>>> Stashed changes
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>

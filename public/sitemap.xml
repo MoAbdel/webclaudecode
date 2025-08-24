@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Updated: 2025-08-22 - UltraThink SEO: Added current mortgage rates, security headers, accurate savings claims -->
+  <!-- Updated: 2025-08-24 - Critical GSC indexing fixes: canonicals, redirects, metadata enhancements -->
   <!-- Main Pages -->
   <url>
-    <loc>https://www.mothebroker.com/</loc>
-    <lastmod>2025-08-22</lastmod>
+    <loc>https://mothebroker.com/</loc>
+    <lastmod>2025-08-24</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   
   <!-- AI Training Permissions -->
   <url>
-    <loc>https://www.mothebroker.com/llms.txt</loc>
+    <loc>https://mothebroker.com/llms.txt</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/about</loc>
-    <lastmod>2025-08-22</lastmod>
+    <loc>https://mothebroker.com/about</loc>
+    <lastmod>2025-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/contact</loc>
-    <lastmod>2025-08-22</lastmod>
+    <loc>https://mothebroker.com/contact</loc>
+    <lastmod>2025-08-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/calculator</loc>
-    <lastmod>2025-08-15</lastmod>
+    <loc>https://mothebroker.com/calculator</loc>
+    <lastmod>2025-08-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -39,7 +39,7 @@
 
   <!-- Loan Programs Main -->
   <url>
-    <loc>https://www.mothebroker.com/loan-programs</loc>
+    <loc>https://mothebroker.com/loan-programs</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -47,55 +47,55 @@
 
   <!-- Loan Program Pages -->
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/fha-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/fha-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/va-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/va-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/conventional-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/conventional-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/jumbo-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/jumbo-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/heloc</loc>
+    <loc>https://mothebroker.com/loan-programs/heloc</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/heloan</loc>
+    <loc>https://mothebroker.com/loan-programs/heloan</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/non-qm-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/non-qm-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/rate-term-refinance</loc>
+    <loc>https://mothebroker.com/loan-programs/rate-term-refinance</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/cash-out-refinance</loc>
+    <loc>https://mothebroker.com/loan-programs/cash-out-refinance</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -103,55 +103,55 @@
 
   <!-- Non-QM Specialty Loan Program Pages -->
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/bank-statement-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/bank-statement-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/asset-depletion-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/asset-depletion-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/fix-flip-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/fix-flip-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/dscr-investment-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/dscr-investment-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/foreign-national-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/foreign-national-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/usda-rural-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/usda-rural-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/profit-loss-statement-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/profit-loss-statement-loans</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/orange-county-fha-loan-limits</loc>
+    <loc>https://mothebroker.com/loan-programs/orange-county-fha-loan-limits</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/orange-county-va-loans</loc>
+    <loc>https://mothebroker.com/loan-programs/orange-county-va-loans</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -159,43 +159,43 @@
 
   <!-- Individual Loan Program Pages -->
   <url>
-    <loc>https://www.mothebroker.com/fha-loans-orange-county</loc>
+    <loc>https://mothebroker.com/fha-loans-orange-county</loc>
     <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/va-loans-orange-county</loc>
+    <loc>https://mothebroker.com/va-loans-orange-county</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/conventional-loans-orange-county</loc>
+    <loc>https://mothebroker.com/conventional-loans-orange-county</loc>
     <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/heloc-orange-county</loc>
+    <loc>https://mothebroker.com/heloc-orange-county</loc>
     <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/heloan-orange-county</loc>
+    <loc>https://mothebroker.com/heloan-orange-county</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/non-qm-loans-orange-county</loc>
+    <loc>https://mothebroker.com/non-qm-loans-orange-county</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/rate-term-refinance-orange-county</loc>
+    <loc>https://mothebroker.com/rate-term-refinance-orange-county</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -203,7 +203,7 @@
 
   <!-- Service Areas Main -->
   <url>
-    <loc>https://www.mothebroker.com/areas</loc>
+    <loc>https://mothebroker.com/areas</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -211,43 +211,43 @@
 
   <!-- Individual Service Area Pages -->
   <url>
-    <loc>https://www.mothebroker.com/areas/irvine-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/irvine-mortgage-broker</loc>
     <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/newport-beach-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/newport-beach-mortgage-broker</loc>
     <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/anaheim-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/anaheim-mortgage-broker</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/santa-ana-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/santa-ana-mortgage-broker</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/costa-mesa-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/costa-mesa-mortgage-broker</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/huntington-beach-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/huntington-beach-mortgage-broker</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/mission-viejo-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/mission-viejo-mortgage-broker</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -255,79 +255,79 @@
   
   <!-- Additional City Pages -->
   <url>
-    <loc>https://www.mothebroker.com/areas/fullerton-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/fullerton-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/westminster-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/westminster-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/garden-grove-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/garden-grove-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/garden-grove-mortgage-rates</loc>
+    <loc>https://mothebroker.com/areas/garden-grove-mortgage-rates</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/orange-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/orange-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/fountain-valley-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/fountain-valley-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/laguna-beach-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/laguna-beach-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/yorba-linda-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/yorba-linda-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/dana-point-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/dana-point-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/laguna-niguel-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/laguna-niguel-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/laguna-niguel-mortgage-rates</loc>
+    <loc>https://mothebroker.com/areas/laguna-niguel-mortgage-rates</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/laguna-woods-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/laguna-woods-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/seal-beach-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/seal-beach-mortgage-broker</loc>
     <lastmod>2025-08-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -335,7 +335,7 @@
 
   <!-- Neighborhood Guide Main -->
   <url>
-    <loc>https://www.mothebroker.com/neighborhood-guide</loc>
+    <loc>https://mothebroker.com/neighborhood-guide</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -343,7 +343,7 @@
 
   <!-- Blog Main -->
   <url>
-    <loc>https://www.mothebroker.com/guides</loc>
+    <loc>https://mothebroker.com/guides</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -351,45 +351,50 @@
 
   <!-- Resources Main -->
   <url>
-    <loc>https://www.mothebroker.com/resources</loc>
+<<<<<<< Updated upstream
+    <loc>https://mothebroker.com/resources</loc>
     <lastmod>2025-08-18</lastmod>
+=======
+    <loc>https://mothebroker.com/resources</loc>
+    <lastmod>2025-08-24</lastmod>
+>>>>>>> Stashed changes
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Individual Resource Pages -->
   <url>
-    <loc>https://www.mothebroker.com/resources/down-payment-assistance</loc>
+    <loc>https://mothebroker.com/resources/down-payment-assistance</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/resources/market-data</loc>
+    <loc>https://mothebroker.com/resources/market-data</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/resources/credit-repair</loc>
+    <loc>https://mothebroker.com/resources/credit-repair</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/resources/glossary</loc>
+    <loc>https://mothebroker.com/resources/glossary</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/resources/document-checklist</loc>
+    <loc>https://mothebroker.com/resources/document-checklist</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/resources/service-providers</loc>
+    <loc>https://mothebroker.com/resources/service-providers</loc>
     <lastmod>2025-08-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -397,49 +402,49 @@
 
   <!-- Individual Blog Posts -->
   <url>
-    <loc>https://www.mothebroker.com/guides/why-choose-local-mortgage-broker</loc>
+    <loc>https://mothebroker.com/guides/why-choose-local-mortgage-broker</loc>
     <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/guides/orange-county-home-buyer-guide</loc>
+    <loc>https://mothebroker.com/guides/orange-county-home-buyer-guide</loc>
     <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/guides/orange-county-refinancing-guide</loc>
+    <loc>https://mothebroker.com/guides/orange-county-refinancing-guide</loc>
     <lastmod>2025-01-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/guides/orange-county-school-districts</loc>
+    <loc>https://mothebroker.com/guides/orange-county-school-districts</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/guides/orange-county-investment-property</loc>
+    <loc>https://mothebroker.com/guides/orange-county-investment-property</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/guides/orange-county-va-loans</loc>
+    <loc>https://mothebroker.com/guides/orange-county-va-loans</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/guides/orange-county-jumbo-loans</loc>
+    <loc>https://mothebroker.com/guides/orange-county-jumbo-loans</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/guides/orange-county-market-forecast-2025-2026</loc>
+    <loc>https://mothebroker.com/guides/orange-county-market-forecast-2025-2026</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -447,7 +452,7 @@
 
   <!-- Tools Pages -->
   <url>
-    <loc>https://www.mothebroker.com/tools/mortgage-calculator</loc>
+    <loc>https://mothebroker.com/tools/mortgage-calculator</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -455,19 +460,19 @@
 
   <!-- Calculator Suite Pages -->
   <url>
-    <loc>https://www.mothebroker.com/calculator/affordability</loc>
+    <loc>https://mothebroker.com/calculator/affordability</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/calculator/debt-to-income</loc>
+    <loc>https://mothebroker.com/calculator/debt-to-income</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/calculator/closing-costs</loc>
+    <loc>https://mothebroker.com/calculator/closing-costs</loc>
     <lastmod>2025-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -475,37 +480,37 @@
 
   <!-- Irvine Neighborhood Pages -->
   <url>
-    <loc>https://www.mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/irvine-neighborhoods/northwood-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/irvine-neighborhoods/northwood-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/irvine-neighborhoods/turtle-rock-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/irvine-neighborhoods/turtle-rock-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/irvine-neighborhoods/quail-hill-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/irvine-neighborhoods/quail-hill-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/irvine-neighborhoods/cypress-village-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/irvine-neighborhoods/cypress-village-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -513,25 +518,25 @@
 
   <!-- Newport Beach Neighborhood Pages -->
   <url>
-    <loc>https://www.mothebroker.com/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -539,25 +544,25 @@
 
   <!-- ZIP Code Pages -->
   <url>
-    <loc>https://www.mothebroker.com/zip-codes/92602-irvine-mortgage-broker</loc>
+    <loc>https://mothebroker.com/zip-codes/92602-irvine-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/zip-codes/92660-newport-beach-mortgage-broker</loc>
+    <loc>https://mothebroker.com/zip-codes/92660-newport-beach-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/zip-codes/92614-irvine-mortgage-broker</loc>
+    <loc>https://mothebroker.com/zip-codes/92614-irvine-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/zip-codes/92625-corona-del-mar-mortgage-broker</loc>
+    <loc>https://mothebroker.com/zip-codes/92625-corona-del-mar-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -565,13 +570,13 @@
 
   <!-- Seasonal Guide Pages -->
   <url>
-    <loc>https://www.mothebroker.com/guides/spring-2025-home-buying-guide</loc>
+    <loc>https://mothebroker.com/guides/spring-2025-home-buying-guide</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/guides/summer-2025-market-guide</loc>
+    <loc>https://mothebroker.com/guides/summer-2025-market-guide</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -579,7 +584,7 @@
 
   <!-- Loan Program + City Combinations -->
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/fha-loans-irvine</loc>
+    <loc>https://mothebroker.com/loan-programs/fha-loans-irvine</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -587,7 +592,7 @@
 
   <!-- School District Pages -->
   <url>
-    <loc>https://www.mothebroker.com/areas/irvine-unified-school-district-mortgage-broker</loc>
+    <loc>https://mothebroker.com/areas/irvine-unified-school-district-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -595,19 +600,19 @@
 
   <!-- Luxury Market Segment Pages -->
   <url>
-    <loc>https://www.mothebroker.com/luxury-markets/waterfront-homes-mortgage-broker</loc>
+    <loc>https://mothebroker.com/luxury-markets/waterfront-homes-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/luxury-markets/golf-course-homes-mortgage-broker</loc>
+    <loc>https://mothebroker.com/luxury-markets/golf-course-homes-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/luxury-markets/ultra-luxury-estates-mortgage-broker</loc>
+    <loc>https://mothebroker.com/luxury-markets/ultra-luxury-estates-mortgage-broker</loc>
     <lastmod>2025-08-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -615,31 +620,31 @@
 
   <!-- Neighborhood Comparison Guides -->
   <url>
-    <loc>https://www.mothebroker.com/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide</loc>
+    <loc>https://mothebroker.com/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/neighborhood-guide/mission-viejo-vs-irvine-home-buying-guide</loc>
+    <loc>https://mothebroker.com/neighborhood-guide/mission-viejo-vs-irvine-home-buying-guide</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/neighborhood-guide/newport-beach-vs-laguna-beach-home-buying-guide</loc>
+    <loc>https://mothebroker.com/neighborhood-guide/newport-beach-vs-laguna-beach-home-buying-guide</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/neighborhood-guide/huntington-beach-vs-costa-mesa-home-buying-guide</loc>
+    <loc>https://mothebroker.com/neighborhood-guide/huntington-beach-vs-costa-mesa-home-buying-guide</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/neighborhood-guide/orange-county-neighborhoods-comparison-guide</loc>
+    <loc>https://mothebroker.com/neighborhood-guide/orange-county-neighborhoods-comparison-guide</loc>
     <lastmod>2025-08-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
@@ -647,25 +652,25 @@
 
   <!-- GSC Query-Based Pages - August 2025 -->
   <url>
-    <loc>https://www.mothebroker.com/areas/yorba-linda-mortgage-rates</loc>
+    <loc>https://mothebroker.com/areas/yorba-linda-mortgage-rates</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/costa-mesa-mortgage-rates</loc>
+    <loc>https://mothebroker.com/areas/costa-mesa-mortgage-rates</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/areas/santa-ana-refinance-rates</loc>
+    <loc>https://mothebroker.com/areas/santa-ana-refinance-rates</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.mothebroker.com/loan-programs/bank-statement-loans-irvine</loc>
+    <loc>https://mothebroker.com/loan-programs/bank-statement-loans-irvine</loc>
     <lastmod>2025-08-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>

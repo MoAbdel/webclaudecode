@@ -4,11 +4,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: seoData.About.title,
   description: seoData.About.description,
-};
+  keywords: 'Mo Abdel, mortgage broker, NEXA Mortgage, Orange County, NMLS 1426884, licensed mortgage broker, home loans',
+  path: '/about',
+  type: 'website'
+});
 
 export default function AboutPage() {
   return (

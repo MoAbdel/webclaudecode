@@ -1,118 +1,66 @@
-# Robots.txt for mothebroker.com - 2025 AI-Optimized
-# Updated: 2025-08-19 - Enhanced for AI search optimization
+# Robots.txt for mothebroker.com - 2025 GSC Indexing Optimized
+# Updated: 2025-01-24 - Enhanced for Google Search Console indexing fixes
 
-# Allow all crawlers full access
-User-agent: *
-Allow: /
-
-# Specifically allow major search engines
+# Primary search engines - optimized crawl settings
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 2
 
 User-agent: Slurp
 Allow: /
+Crawl-delay: 2
 
-User-agent: DuckDuckBot
+# Default for all other bots
+User-agent: *
 Allow: /
+Crawl-delay: 5
 
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# AI Training and Search Bots - 2025 Enhanced
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: Google-Extended
-Allow: /
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: Anthropic-AI
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-# New AI Bots for 2025
-User-agent: Gemini-Web
-Allow: /
-
-User-agent: BardBot
-Allow: /
-
-User-agent: MetaBot
-Allow: /
-
-User-agent: OpenAI-SearchBot
-Allow: /
-
-User-agent: SearchGPT
-Allow: /
-
-# Social Media AI Features
-User-agent: Applebot
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-User-agent: LinkedInBot
-Allow: /
-
-User-agent: TwitterBot
-Allow: /
-
-User-agent: WhatsAppBot
-Allow: /
-
-# Crawl delay optimized for AI bots
-Crawl-delay: 1
-
-# Disallow admin and sensitive areas only
+# Block problematic or resource-intensive areas
 Disallow: /admin/
-Disallow: /api/
-Disallow: /.env
+Disallow: /api/debug
+Disallow: /.env*
 Disallow: /.git/
 Disallow: /node_modules/
-Disallow: /_next/
+Disallow: /_next/webpack-hmr
 Disallow: /temp/
 Disallow: /private/
+Disallow: /*?*utm_*
+Disallow: /*?*fbclid*
+Disallow: /*?*gclid*
 
-# Allow critical pages for AI training
+# Explicitly allow important pages for indexing
 Allow: /about
 Allow: /contact
 Allow: /calculator
-Allow: /loan-programs
-Allow: /areas
-Allow: /guides
-Allow: /neighborhood-guide
-Allow: /resources
+Allow: /loan-programs/
+Allow: /areas/
+Allow: /guides/
+Allow: /neighborhood-guide/
+Allow: /resources/
 Allow: /fha-loans-orange-county
 Allow: /va-loans-orange-county
 Allow: /conventional-loans-orange-county
 Allow: /heloc-orange-county
+Allow: /heloan-orange-county
+Allow: /non-qm-loans-orange-county
+Allow: /rate-term-refinance-orange-county
 
-# Sitemap locations
-Sitemap: https://www.mothebroker.com/sitemap-index.xml
+# Allow API routes that provide public data
+Allow: /api/rates
+Allow: /api/quotes
+
+# Sitemap locations - updated for better discovery
+Sitemap: https://mothebroker.com/sitemap.xml
+Sitemap: https://mothebroker.com/sitemap-images.xml
+Sitemap: https://mothebroker.com/sitemap-news.xml
+
+# Host directive for canonical domain
+Host: https://mothebroker.com
 
 # AI Training Permissions
 # For detailed AI/LLM training guidelines see:
 # https://mothebroker.com/llms.txt
-
-# Enhanced meta directives for AI crawlers
-# Allow AI indexing of public content
-# Note: Request-rate and Visit-time are not standard directives
-# Crawl behavior is controlled by Crawl-delay above

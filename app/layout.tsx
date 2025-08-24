@@ -71,6 +71,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="google-site-verification" content="gje53lhRpuQPVaMLhtYAUYdO8ciKzx8APLNwNVhcT1A" />
+        {/* Canonical URL will be handled by individual pages */}
         <link rel="manifest" href="/manifest.json" />
         
         {/* Prevent www redirect issues */}

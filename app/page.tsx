@@ -9,6 +9,7 @@ import StructuredFAQ from '@/components/home/StructuredFAQ';
 import PillarPageHub from '@/components/seo/PillarPageHub';
 import AIOOptimization from '@/components/seo/AIOOptimization';
 import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import IndexingOptimization from '@/components/seo/IndexingOptimization';
 
 export const metadata: Metadata = {
   title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
@@ -74,6 +75,11 @@ export default function HomePage() {
         content={homePageContent}
       />
       <EnhancedLocalSchema page_type="home" />
+      <IndexingOptimization 
+        page="/" 
+        priority="high" 
+        lastModified="2025-01-24"
+      />
       
       {/* Main Page Content - Cache Bust 2025-08-22 */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">

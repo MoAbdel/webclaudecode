@@ -1,6 +1,7 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { generateMetadata } from '@/lib/metadata';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { Badge } from '@/components/ui/Badge';
@@ -22,11 +23,13 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: 'Mortgage Resources & Tools | Orange County Home Buyer Guides',
   description: 'Complete mortgage resources for Orange County home buyers. Down payment assistance, calculators, market data, guides, and tools to help you buy or refinance.',
-  keywords: 'mortgage resources, home buyer tools, down payment assistance, mortgage calculators, Orange County housing data, first time buyer guide',
-};
+  keywords: 'mortgage resources, home buyer tools, down payment assistance, mortgage calculators, Orange County housing data, first time buyer guide, mortgage broker resources',
+  path: '/resources',
+  type: 'website'
+});
 
 export default function ResourcesPage() {
   const resources = [

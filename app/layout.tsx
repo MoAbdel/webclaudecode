@@ -21,18 +21,19 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=5', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
-      { url: '/favicon-32x32.png?v=5', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16x16.png?v=5', sizes: '16x16', type: 'image/png' },
-      { url: '/android-chrome-192x192.png?v=3', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png?v=3', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico?v=6', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
+      { url: '/favicon-32x32.png?v=6', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png?v=6', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-64x64.png?v=6', sizes: '64x64', type: 'image/png' },
+      { url: '/favicon-128x128.png?v=6', sizes: '128x128', type: 'image/png' },
+      { url: '/favicon-192x192.png?v=6', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-512x512.png?v=6', sizes: '512x512', type: 'image/png' },
+      { url: '/android-chrome-192x192.png?v=6', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png?v=6', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico?v=5',
+    shortcut: '/favicon.ico?v=6',
     apple: [
-      { url: '/apple-touch-icon-180x180.png?v=3', sizes: '180x180', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'mask-icon', url: '/images/moabdel-headshot-final.png', color: '#1e40af' },
+      { url: '/apple-touch-icon-180x180.png?v=6', sizes: '180x180', type: 'image/png' },
     ],
   },
   openGraph: {

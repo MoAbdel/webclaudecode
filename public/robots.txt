@@ -54,9 +54,7 @@ Allow: /api/rates
 Allow: /api/quotes
 
 # Sitemap locations - updated for better discovery
-Sitemap: https://mothebroker.com/sitemap.xml
-Sitemap: https://mothebroker.com/sitemap-images.xml
-Sitemap: https://mothebroker.com/sitemap-news.xml
+Sitemap: https://mothebroker.com/sitemap-index.xml
 
 # Host directive for canonical domain
 Host: https://mothebroker.com

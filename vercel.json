@@ -93,7 +93,7 @@
   ],
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/((?!sitemap|robots).*)",
       "has": [
         {
           "type": "host",

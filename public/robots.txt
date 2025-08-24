@@ -53,8 +53,8 @@ Allow: /rate-term-refinance-orange-county
 Allow: /api/rates
 Allow: /api/quotes
 
-# Sitemap locations - updated for better discovery
-Sitemap: https://mothebroker.com/sitemap-index.xml
+# Sitemap location - unified sitemap with all pages
+Sitemap: https://mothebroker.com/sitemap.xml
 
 # Host directive for canonical domain
 Host: https://mothebroker.com

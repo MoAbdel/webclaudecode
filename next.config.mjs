@@ -19,6 +19,12 @@ const nextConfig = {
   
   // Mobile performance settings
   poweredByHeader: false,
+  trailingSlash: false,
+  
+  // Remove redirects - handled by vercel.json to avoid conflicts
+  async redirects() {
+    return []
+  },
   
   // Headers for HTTP/2+ optimization and SEO
   async headers() {

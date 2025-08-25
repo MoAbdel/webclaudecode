@@ -9,12 +9,13 @@ import StructuredFAQ from '@/components/home/StructuredFAQ';
 import PillarPageHub from '@/components/seo/PillarPageHub';
 import AIOOptimization from '@/components/seo/AIOOptimization';
 import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import IndexingOptimization from '@/components/seo/IndexingOptimization';
 
 export const metadata: Metadata = {
   title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
   description: 'Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.',
   alternates: {
-    canonical: 'https://mothebroker.com',
+    canonical: 'https://www.mothebroker.com',
   },
 };
 
@@ -70,10 +71,15 @@ export default function HomePage() {
         title="Orange County Mortgage Broker | Mo Abdel NMLS #1426884"
         description="Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884."
         keywords={["Orange County mortgage broker", "home loans", "mortgage rates", "FHA loans", "VA loans", "refinancing"]}
-        canonicalUrl="https://mothebroker.com"
+        canonicalUrl="https://www.mothebroker.com"
         content={homePageContent}
       />
       <EnhancedLocalSchema page_type="home" />
+      <IndexingOptimization 
+        page="/" 
+        priority="high" 
+        lastModified="2025-01-24"
+      />
       
       {/* Main Page Content - Cache Bust 2025-08-22 */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">

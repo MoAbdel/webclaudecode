@@ -15,25 +15,25 @@ export const metadata: Metadata = {
   title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
   description: 'Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.',
   keywords: 'Orange County mortgage broker, home loans, refinancing, FHA loans, VA loans, mortgage rates, NMLS licensed, lender access, competitive rates',
-  metadataBase: new URL('https://mothebroker.com'),
+  metadataBase: new URL('https://www.mothebroker.com'),
   alternates: {
-    canonical: 'https://mothebroker.com',
+    canonical: 'https://www.mothebroker.com',
   },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=6', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
-      { url: '/favicon-32x32.png?v=6', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16x16.png?v=6', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-48x48.png?v=6', sizes: '48x48', type: 'image/png' },
-      { url: '/favicon-64x64.png?v=6', sizes: '64x64', type: 'image/png' },
-      { url: '/favicon-128x128.png?v=6', sizes: '128x128', type: 'image/png' },
-      { url: '/android-chrome-192x192.png?v=6', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png?v=6', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico?v=8', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
+      { url: '/favicon-32x32.png?v=8', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png?v=8', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-48x48.png?v=8', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-64x64.png?v=8', sizes: '64x64', type: 'image/png' },
+      { url: '/favicon-128x128.png?v=8', sizes: '128x128', type: 'image/png' },
+      { url: '/android-chrome-192x192.png?v=8', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png?v=8', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico?v=6',
+    shortcut: '/favicon.ico?v=8',
     apple: [
-      { url: '/apple-touch-icon-180x180.png?v=6', sizes: '180x180', type: 'image/png' },
-      { url: '/apple-touch-icon-192x192.png?v=6', sizes: '192x192', type: 'image/png' },
+      { url: '/apple-touch-icon-180x180.png?v=8', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon-192x192.png?v=8', sizes: '192x192', type: 'image/png' },
     ],
     other: [
       { rel: 'mask-icon', url: '/images/MoAbdel-Favicon.png', color: '#1e40af' },
@@ -42,11 +42,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
     description: 'Get competitive mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
-    url: 'https://mothebroker.com',
+    url: 'https://www.mothebroker.com',
     siteName: 'Mo Abdel | Mortgage Broker',
     images: [
       {
-        url: 'https://mothebroker.com/images/og-image-mothebroker.png',
+        url: 'https://www.mothebroker.com/images/og-image-mothebroker.png',
         width: 1200,
         height: 630,
         alt: 'Orange County Mortgage Broker - Mo Abdel NMLS #1426884',
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
     description: 'Get competitive mortgage rates from 200+ lenders. Fast closings, unbiased advice, flexible home loan programs.',
-    images: ['https://mothebroker.com/images/og-image-mothebroker.png'],
+    images: ['https://www.mothebroker.com/images/og-image-mothebroker.png'],
     creator: '@mothebroker',
     site: '@mothebroker',
   },
@@ -75,6 +75,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="google-site-verification" content="gje53lhRpuQPVaMLhtYAUYdO8ciKzx8APLNwNVhcT1A" />
+        {/* Canonical URL will be handled by individual pages */}
         <link rel="manifest" href="/manifest.json" />
         
         {/* Prevent www redirect issues */}

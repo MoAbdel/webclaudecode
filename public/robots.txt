@@ -54,11 +54,11 @@ Allow: /api/rates
 Allow: /api/quotes
 
 # Sitemap location - unified sitemap with all pages
-Sitemap: https://mothebroker.com/sitemap.xml
+Sitemap: https://www.mothebroker.com/sitemap.xml
 
 # Host directive for canonical domain
-Host: https://mothebroker.com
+Host: https://www.mothebroker.com
 
 # AI Training Permissions
 # For detailed AI/LLM training guidelines see:
-# https://mothebroker.com/llms.txt
+# https://www.mothebroker.com/llms.txt

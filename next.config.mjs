@@ -21,50 +21,9 @@ const nextConfig = {
   poweredByHeader: false,
   trailingSlash: false,
   
-  // Redirects for common URL issues
+  // Remove redirects - handled by vercel.json to avoid conflicts
   async redirects() {
-    return [
-      // Handle trailing slash redirects
-      {
-        source: '/:path*/',
-        destination: '/:path*',
-        permanent: true,
-        has: [
-          {
-            type: 'query',
-            key: 'path',
-            value: '(?!.*/$)'
-          }
-        ]
-      },
-      // Fix common old URL patterns that might cause 404s
-      {
-        source: '/programs',
-        destination: '/loan-programs',
-        permanent: true,
-      },
-      {
-        source: '/services',
-        destination: '/loan-programs',
-        permanent: true,
-      },
-      {
-        source: '/blog',
-        destination: '/guides',
-        permanent: true,
-      },
-      {
-        source: '/rates',
-        destination: '/calculator',
-        permanent: true,
-      },
-      // Fix any double-slash issues
-      {
-        source: '//:path*',
-        destination: '/:path*',
-        permanent: true,
-      }
-    ]
+    return []
   },
   
   // Headers for HTTP/2+ optimization and SEO

@@ -13,7 +13,7 @@ import IndexingOptimization from '@/components/seo/IndexingOptimization';
 
 export const metadata: Metadata = {
   title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
-  description: 'Mortgage broker in Orange County. 200+ lenders. Better rates. Fast closing. FHA, VA, conventional loans. NMLS #1426884.',
+  description: 'Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.',
   alternates: {
     canonical: 'https://www.mothebroker.com',
   },
@@ -36,29 +36,29 @@ const NewsletterSignup = dynamic(() => import('@/components/home/NewsletterSignu
 export default function HomePage() {
   const homePageContent = {
     mainTopic: "Orange County Mortgage Broker Services",
-    quickAnswer: "Mo Abdel is a mortgage broker. NMLS #1426884. Serves Orange County. 200+ lenders. Better rates. Home loans, refinancing, FHA, VA, jumbo loans.",
+    quickAnswer: "Mo Abdel is a licensed mortgage broker (NMLS #1426884) serving Orange County with access to 200+ lenders for competitive rates on home loans, refinancing, FHA, VA, and jumbo loans.",
     keyFacts: [
-      "Mortgage broker NMLS #1426884",
-      "200+ lenders available",
-      "18-day average closing", 
-      "All Orange County served",
-      "FHA, VA, Conventional, Jumbo loans",
-      "NEXA Mortgage—America's largest wholesale brokerage"
+      "Licensed mortgage broker NMLS #1426884",
+      "Access to 200+ lenders",
+      "Average closing time: 18 days", 
+      "Serving all of Orange County",
+      "Specializes in FHA, VA, Conventional, and Jumbo loans",
+      "NEXA Mortgage LLC brokerage"
     ],
     statistics: [
       {
-        stat: "Brokers save borrowers $10,662 average. Based on loan lifetime.",
-        source: "HMDA data analysis",
+        stat: "According to 2024 HMDA data analysis, mortgage brokers save borrowers an average of $10,662 over the life of their loan",
+        source: "Polygon Research study using HMDA data",
         year: "2024"
       },
       {
-        stat: "Wholesale rates: 6.58%. Retail rates: 6.60%. Brokers win.",
-        source: "HMDA Mortgage Data",
+        stat: "Industry research shows wholesale mortgage rates averaged 6.58% versus 6.60% retail rates",
+        source: "2024 HMDA Mortgage Origination Data",
         year: "2024"
       },
       {
-        stat: "Broker market share: 24.3%. Highest since 2009.",
-        source: "UWM Analysis",
+        stat: "Data indicates mortgage broker market share reached 24.3% in Q4 2023, highest since 2009",
+        source: "UWM Market Analysis",
         year: "2023"
       }
     ]
@@ -69,7 +69,7 @@ export default function HomePage() {
       {/* AI Optimization Components */}
       <AIOOptimization
         title="Orange County Mortgage Broker | Mo Abdel NMLS #1426884"
-        description="Mortgage broker in Orange County. 200+ lenders. Better rates. Fast closing. FHA, VA, conventional loans. NMLS #1426884."
+        description="Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884."
         keywords={["Orange County mortgage broker", "home loans", "mortgage rates", "FHA loans", "VA loans", "refinancing"]}
         canonicalUrl="https://www.mothebroker.com"
         content={homePageContent}

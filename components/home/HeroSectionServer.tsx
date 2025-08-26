@@ -19,10 +19,7 @@ export default function HeroSectionServer() {
               </h1>
               
               <p className="text-lg text-slate-600 leading-relaxed max-w-lg">
-                I'm Mo, your mortgage broker. I work with NEXA Mortgage—America's largest wholesale brokerage. I'm based in Lake Forest. I serve all Orange County.
-              </p>
-              <p className="text-lg text-slate-600 leading-relaxed max-w-lg mt-3">
-                Big banks push their own loans. I work differently. You get access to 200+ lenders. They compete for your business. Result: Better rates. Faster approvals. More options that fit your needs.
+                I'm Mo, a Mortgage Broker with NEXA Mortgage—the nation's largest wholesale brokerage, and I'm proudly based in Lake Forest, serving all of Orange County. Unlike big banks that push their own products, I give you direct access to over 200 lenders with competitive pricing. That means better rates, faster approvals, and more flexible options tailored to you—not the other way around.
               </p>
               
               <div className="bg-slate-50 rounded-lg p-4 border-l-4 border-blue-600">

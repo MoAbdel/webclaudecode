@@ -114,10 +114,9 @@ export default function QuickQuote() {
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Shield className="w-8 h-8 text-green-600" />
               </div>
-              <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You for Your Inquiry!</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You!</h3>
               <p className="text-slate-600 mb-6">
-                We received your information and will be reaching out within 1 business day with your personalized rate quote. 
-                Mo will personally review your details to ensure you get the best possible terms.
+                I got your info. I'll call within 1 business day. Mo reviews every request. You'll get the best rates.
               </p>
               <Button 
                 onClick={() => setShowSuccess(false)}
@@ -137,23 +136,23 @@ export default function QuickQuote() {
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-            Get Your Personalized Rate Quote
+            Get Your Custom Rate Quote
           </h2>
           <p className="text-xl text-slate-600">
-            Takes 60 seconds • No impact to your credit • 100% Free
+            60 seconds • No credit check • Free quote
           </p>
         </div>
 
         <div className="bg-white rounded-lg shadow-lg p-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-6">Get Your Free Quote</h2>
           <p className="text-slate-600 mb-6">
-            Fill out the form below and I'll get back to you within 1 business day with a personalized rate quote.
+            Complete this form. I'll call you within 1 day. You'll get a custom rate quote.
           </p>
           
           {showError && (
             <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
               <p className="text-red-600 text-sm">
-                There was an error submitting your request. Please try again or call us directly at (949) 579-2057.
+                Error sending your request. Try again or call (949) 579-2057.
               </p>
             </div>
           )}
@@ -232,11 +231,11 @@ export default function QuickQuote() {
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                 >
                   <option value="">Select purpose</option>
-                  <option value="purchase">Home Purchase</option>
+                  <option value="purchase">Buy a Home</option>
                   <option value="refinance">Refinance</option>
-                  <option value="cash-out">Cash-Out Refinance</option>
+                  <option value="cash-out">Get Cash Out</option>
                   <option value="heloc">HELOC</option>
-                  <option value="investment">Investment Property</option>
+                  <option value="investment">Investment</option>
                 </select>
               </div>
               <div>
@@ -269,7 +268,7 @@ export default function QuickQuote() {
                 <option value="30-days">Within 30 days</option>
                 <option value="60-days">Within 60 days</option>
                 <option value="90-days">Within 90 days</option>
-                <option value="exploring">Just exploring options</option>
+                <option value="exploring">Just looking</option>
               </select>
             </div>
             
@@ -283,7 +282,7 @@ export default function QuickQuote() {
                 onChange={(e) => handleInputChange('additionalInfo', e.target.value)}
                 rows={3}
                 className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                placeholder="Any additional details about your mortgage needs..."
+                placeholder="Tell me more about your needs..."
               ></textarea>
             </div>
 
@@ -306,7 +305,7 @@ export default function QuickQuote() {
           <div className="mt-6 p-4 bg-slate-50 rounded-lg">
             <div className="flex items-center space-x-2 text-sm text-slate-600">
               <Shield className="w-4 h-4 text-green-600" />
-              <span>Your information is secure and will never be shared with third parties.</span>
+              <span>Your info is safe. We never share it.</span>
             </div>
           </div>
         </div>

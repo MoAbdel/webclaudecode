@@ -12,7 +12,7 @@ export default function BrokerComparison() {
             Mortgage Broker vs Big Banks: See the Difference
           </h2>
           <p className="text-lg text-slate-600 max-w-3xl mx-auto">
-            Why Orange County homebuyers choose mortgage brokers for better rates and service
+            Orange County buyers save money with brokers. Here's why.
           </p>
         </div>
 
@@ -185,19 +185,19 @@ export default function BrokerComparison() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <Check className="w-5 h-5 text-green-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-slate-700">Shop 200+ lenders with one application</span>
+                <span className="text-slate-700">One application. 200+ lenders compete.</span>
               </li>
               <li className="flex items-start">
                 <Check className="w-5 h-5 text-green-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-slate-700">Get wholesale rates not available to the public</span>
+                <span className="text-slate-700">Wholesale rates. Not sold to public.</span>
               </li>
               <li className="flex items-start">
                 <Check className="w-5 h-5 text-green-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-slate-700">Personal advocate throughout the entire process</span>
+                <span className="text-slate-700">Your personal guide. Start to finish.</span>
               </li>
               <li className="flex items-start">
                 <Check className="w-5 h-5 text-green-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-slate-700">Faster closings with dedicated processing</span>
+                <span className="text-slate-700">Fast closing. Dedicated team.</span>
               </li>
             </ul>
           </div>
@@ -207,19 +207,19 @@ export default function BrokerComparison() {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <X className="w-5 h-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-slate-700">Limited to their own loan products</span>
+                <span className="text-slate-700">Only their own loans</span>
               </li>
               <li className="flex items-start">
                 <X className="w-5 h-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-slate-700">Higher rates due to retail markups</span>
+                <span className="text-slate-700">Retail markup. Higher rates.</span>
               </li>
               <li className="flex items-start">
                 <X className="w-5 h-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-slate-700">Strict credit and income requirements</span>
+                <span className="text-slate-700">Strict rules. Less flexibility.</span>
               </li>
               <li className="flex items-start">
                 <X className="w-5 h-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                <span className="text-slate-700">Call center service, not personal attention</span>
+                <span className="text-slate-700">Call centers. No personal service.</span>
               </li>
             </ul>
           </div>
@@ -231,7 +231,7 @@ export default function BrokerComparison() {
             See How Much You Can Save
           </h3>
           <p className="text-lg text-slate-600 mb-6">
-            Research shows mortgage broker clients save over $10,000 through competitive rates and lower upfront costs
+            Broker clients save $10,000+. Better rates. Lower fees.
           </p>
           <a
             href="/contact"

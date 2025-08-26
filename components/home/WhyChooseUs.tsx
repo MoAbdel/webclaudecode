@@ -8,39 +8,39 @@ import { GitCompareArrows, Zap, Shield, Star, Award, TrendingUp } from "lucide-r
 const features = [
   {
     icon: GitCompareArrows,
-    title: "Unbiased Access to 200+ Lenders",
-    description: "According to industry data, brokers provide access to significantly more loan options than banks. I connect you to a massive network of lenders. They compete for your business. The result? Better rates and more programs.",
+    title: "Access to 200+ Lenders",
+    description: "Fact: Brokers offer more loans than banks. How it works: I connect you to 200+ lenders. Lenders compete for you. You get better rates. More programs available.",
     highlight: "More Options"
   },
   {
     icon: Zap,
-    title: "Tech-Savvy & Transparent Process",
-    description: "Research shows transparency improves client satisfaction by 40%. No confusing jargon or hidden fees. I use modern technology for seamless processing. The entire process remains transparent.",
-    highlight: "Transparent"
+    title: "Clear & Fast Process",
+    description: "Clear process improves results by 40%. No confusing terms. No hidden fees. I use modern tech. Everything stays simple and clear.",
+    highlight: "Clear Process"
   },
   {
     icon: Shield,
-    title: "Cut Through Red Tape & Fees",
-    description: "Studies indicate brokers help eliminate unnecessary fees. I navigate the complex lending landscape efficiently. I find cost savings and eliminate junk fees. This reduces your total loan costs.",
+    title: "Cut Red Tape & Fees",
+    description: "Brokers cut unnecessary fees. I handle the complex parts. I find savings. I remove junk fees. Your loan costs less.",
     highlight: "Lower Fees"
   },
   {
     icon: Star,
-    title: "Personalized, Tailored Lending",
-    description: "Data confirms personalized service leads to better outcomes. You're not a number in a queue. I provide dedicated one-on-one service. Each loan is tailored to your financial situation.",
+    title: "Personal Service",
+    description: "Personal service gets better results. You're not just a number. I work one-on-one with you. Each loan fits your needs.",
     highlight: "5-Star Service"
   },
   {
     icon: Award,
-    title: "Faster Turnarounds, More Approvals",
-    description: "Industry research shows streamlined processes reduce closing times by 25%. My tech-first approach cuts through delays. This leads to faster closings. You get more approval options.",
+    title: "Faster Closings",
+    description: "Tech cuts closing time by 25%. My approach avoids delays. Closings happen faster. You get more approval options.",
     highlight: "Faster Closing"
   },
   {
     icon: TrendingUp,
-    title: "Optimized for Your Success",
-    description: "According to client feedback, broker advocacy improves loan satisfaction. I work for you, not the banks. Your financial well-being is my top priority. This ensures optimal lending outcomes.",
-    highlight: "Client Focused"
+    title: "Built for Your Success",
+    description: "Brokers improve loan satisfaction. I work for you, not banks. Your success is my goal. This gets you better results.",
+    highlight: "Client First"
   }
 ];
 
@@ -54,8 +54,7 @@ export default function WhyChooseUs() {
             Why Choose an Orange County Mortgage Broker vs Banks?
           </h2>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-            Unlike big banks with a one-size-fits-all approach, I leverage technology and a vast lender network
-            to create better, faster, and more transparent mortgage solutions.
+            Big banks use one approach for everyone. I work differently. I use tech and 200+ lenders. You get better, faster loans.
           </p>
         </div>
 

@@ -107,19 +107,19 @@ export default function RootLayout({
         
         {/* OpenGraph Meta Tags */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://mothebroker.com" />
+        <meta property="og:url" content="https://www.mothebroker.com" />
         <meta property="og:title" content="Mo Abdel - Mortgage Broker | Orange County Mortgage NMLS #1426884" />
         <meta property="og:description" content="Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884." />
-        <meta property="og:image" content="https://mothebroker.com/images/moabdel-headshot-final.png" />
+        <meta property="og:image" content="https://www.mothebroker.com/images/moabdel-headshot-final.png" />
         <meta property="og:site_name" content="Mo Abdel" />
         <meta property="og:locale" content="en_US" />
         
         {/* Twitter Card Meta Tags */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://mothebroker.com" />
+        <meta name="twitter:url" content="https://www.mothebroker.com" />
         <meta name="twitter:title" content="Mo Abdel | Mortgage Broker Orange County" />
         <meta name="twitter:description" content="Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884." />
-        <meta name="twitter:image" content="https://mothebroker.com/images/moabdel-headshot-final.png" />
+        <meta name="twitter:image" content="https://www.mothebroker.com/images/moabdel-headshot-final.png" />
         
         <AdvancedSchemaMarkup type="Organization" />
         <meta name="deployment-id" content="BGDyiFiyb-rollback" />

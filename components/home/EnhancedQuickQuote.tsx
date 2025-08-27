@@ -893,7 +893,6 @@ export default function EnhancedQuickQuote() {
                   <div className="text-sm text-slate-600 space-y-1">
                     <div>• Conventional/FHA: Up to ${ORANGE_COUNTY_DATA.conformingLimit.toLocaleString()}</div>
                     <div>• Jumbo Loans: Above ${ORANGE_COUNTY_DATA.conformingLimit.toLocaleString()}</div>
-                    <div>• Down to ${ORANGE_COUNTY_DATA.lowBalanceLimit.toLocaleString()} (low-balance rates)</div>
                   </div>
                 </div>
 

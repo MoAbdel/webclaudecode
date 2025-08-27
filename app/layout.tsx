@@ -75,6 +75,7 @@ export default function RootLayout({
       <head>
         <meta charSet="utf-8" />
         <meta name="google-site-verification" content="gje53lhRpuQPVaMLhtYAUYdO8ciKzx8APLNwNVhcT1A" />
+        <meta name="msvalidate.01" content="F9E3BEE43DFA5A2B0676F3881B448BCA" />
         {/* Canonical URL will be handled by individual pages */}
         <link rel="manifest" href="/manifest.json" />
         

@@ -29,9 +29,19 @@ export default function HELOCOrangeCountyPage() {
             competitive HELOC rates with flexible access to funds when you need them most.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a 
+              href="https://axenmortgageheloc.com/account/heloc/register?referrer=0501bc94-1ee9-4764-9d93-e81183e82331"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg flex items-center">
+                <Zap className="w-5 h-5 mr-2" />
+                5-Min Pre-Approval
+              </Button>
+            </a>
             <Link href="/contact">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 text-lg">
-                Apply for HELOC
+                Traditional HELOC
               </Button>
             </Link>
             <a href="tel:(949) 579-2057">
@@ -39,6 +49,64 @@ export default function HELOCOrangeCountyPage() {
                 Call (949) 579-2057
               </Button>
             </a>
+          </div>
+        </div>
+
+        {/* Fast HELOC Approval Section */}
+        <div className="mb-16">
+          <div className="bg-green-50 border-2 border-green-200 rounded-2xl p-8">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center bg-green-600 text-white px-6 py-3 rounded-full text-lg font-bold mb-4">
+                <Zap className="w-6 h-6 mr-2" />
+                NEW: 5-Minute HELOC Pre-Approval
+              </div>
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Get Your Orange County HELOC Pre-Approved in Just 5 Minutes</h2>
+              <p className="text-xl text-slate-700 max-w-3xl mx-auto">
+                Revolutionary fast-track HELOC program with instant pre-approval decisions and funds available in 5-7 business days.
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-white font-bold text-2xl">5</span>
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Minutes to Pre-Approval</h3>
+                <p className="text-slate-700">Quick online application with instant decision technology</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Streamlined Process</h3>
+                <p className="text-slate-700">Simplified documentation and faster underwriting</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <DollarSign className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-2">Fast Funding</h3>
+                <p className="text-slate-700">Access your funds in 5-7 business days after approval</p>
+              </div>
+            </div>
+            
+            <div className="text-center">
+              <a 
+                href="https://axenmortgageheloc.com/account/heloc/register?referrer=0501bc94-1ee9-4764-9d93-e81183e82331"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Button className="bg-green-600 hover:bg-green-700 text-white px-12 py-4 text-xl font-bold">
+                  <Zap className="w-6 h-6 mr-3" />
+                  Start 5-Minute Pre-Approval
+                </Button>
+              </a>
+              <p className="text-sm text-slate-600 mt-4">
+                *Pre-approval subject to verification of income, assets, and property value. Final approval and terms may vary.
+              </p>
+            </div>
           </div>
         </div>
 
@@ -406,10 +474,20 @@ export default function HELOCOrangeCountyPage() {
           <p className="text-xl mb-6 text-blue-100">
             Get competitive HELOC rates and flexible access to your Orange County home's equity
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
+            <a 
+              href="https://axenmortgageheloc.com/account/heloc/register?referrer=0501bc94-1ee9-4764-9d93-e81183e82331"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button className="bg-green-500 hover:bg-green-400 text-white px-8 py-3 text-lg font-semibold flex items-center">
+                <Zap className="w-5 h-5 mr-2" />
+                5-Minute Pre-Approval
+              </Button>
+            </a>
             <Link href="/contact">
               <Button className="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 text-lg font-semibold">
-                Apply for HELOC Today
+                Traditional HELOC Application
               </Button>
             </Link>
             <a href="tel:(949) 579-2057">
@@ -418,7 +496,13 @@ export default function HELOCOrangeCountyPage() {
               </Button>
             </a>
           </div>
-          <p className="text-sm text-blue-200 mt-4">
+          <div className="bg-blue-800 bg-opacity-50 rounded-lg p-4 mb-4">
+            <p className="text-lg font-semibold text-green-200 mb-2">⚡ NEW Fast-Track HELOC Program</p>
+            <p className="text-blue-100">
+              5-minute pre-approval • Funds in 5-7 business days • Streamlined documentation
+            </p>
+          </div>
+          <p className="text-sm text-blue-200">
             Licensed competitive mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving Orange County homeowners
           </p>
         </div>

@@ -44,6 +44,11 @@ const LOAN_PROGRAMS = {
     description: 'Home Equity Line of Credit for flexible access to funds',
     programs: ['Traditional HELOC', 'Fixed-Rate HELOC', 'Interest-Only Options']
   },
+  heloan: {
+    title: 'HELOAN',
+    description: 'Home Equity Loan with fixed rate and monthly payments',
+    programs: ['Fixed-Rate HELOAN', 'Lump Sum Loan', 'Predictable Payments']
+  },
   investment: {
     title: 'Investment Property',
     description: 'Financing for Orange County rental properties',
@@ -158,10 +163,17 @@ export default function EnhancedContactForm() {
     if (loanAmount <= 0) return null;
 
     // Determine loan type based on user selection and amount
-    let loanType = formData.loanType || 'Conventional';
-    const isJumbo = loanAmount > ORANGE_COUNTY_DATA.conformingLimit;
-    if (isJumbo && loanType === 'Conventional') {
-      loanType = 'Jumbo';
+    let loanType = formData.loanType;
+    
+    // For HELOC and HELOAN, don't use traditional loan types
+    if (['heloc', 'heloan'].includes(formData.loanPurpose)) {
+      loanType = formData.loanPurpose === 'heloc' ? 'HELOC' : 'HELOAN';
+    } else {
+      loanType = loanType || 'Conventional';
+      const isJumbo = loanAmount > ORANGE_COUNTY_DATA.conformingLimit;
+      if (isJumbo && loanType === 'Conventional') {
+        loanType = 'Jumbo';
+      }
     }
     
     // Current market rates (2025)
@@ -170,6 +182,8 @@ export default function EnhancedContactForm() {
         case 'fha': return 0.061; // 6.1%
         case 'va': return 0.055; // 5.5%
         case 'jumbo': return 0.065; // 6.5%
+        case 'heloc': return 0.0875; // 8.75% (Prime + margin)
+        case 'heloan': return 0.085; // 8.5% (Fixed rate)
         case 'conventional':
         default: return 0.0625; // 6.25%
       }
@@ -177,11 +191,19 @@ export default function EnhancedContactForm() {
     
     const newInterestRate = getRateByLoanType(loanType);
     
-    // Calculate monthly P&I
+    // Calculate monthly payment
     const monthlyRate = newInterestRate / 12;
-    const numberOfPayments = 30 * 12; // 30 years
-    const principalAndInterest = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / 
-                                (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
+    let principalAndInterest = 0;
+    
+    if (loanType === 'HELOC') {
+      // HELOC: Interest-only during draw period (first 10 years)
+      principalAndInterest = loanAmount * monthlyRate;
+    } else {
+      // Standard P&I calculation for loans
+      const numberOfPayments = 30 * 12; // 30 years
+      principalAndInterest = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / 
+                            (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
+    }
     
     // Calculate current payment for refinance comparison
     let currentPayment = 0;
@@ -206,7 +228,7 @@ export default function EnhancedContactForm() {
       : ['Conventional', 'FHA', 'VA', 'Jumbo'];
 
     const results: CalculatorResults = {
-      monthlyPayment: principalAndInterest + propertyTax + insurance,
+      monthlyPayment: principalAndInterest, // Only show P&I, not taxes/insurance
       principalAndInterest,
       propertyTax,
       insurance,
@@ -273,7 +295,8 @@ export default function EnhancedContactForm() {
   };
 
   const canProceedToStep3 = () => {
-    if (!formData.loanType) return false;
+    // Loan type not required for HELOC and HELOAN
+    if (!['heloc', 'heloan'].includes(formData.loanPurpose) && !formData.loanType) return false;
     
     if (formData.loanPurpose === 'purchase') {
       return formData.loanAmount && formData.homeValue;
@@ -540,25 +563,27 @@ export default function EnhancedContactForm() {
                 <p className="text-slate-600">Help us calculate your estimated payments</p>
               </div>
 
-              {/* Loan Type Selection - Show for all purposes */}
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Loan Type *
-                </label>
-                <select
-                  value={formData.loanType}
-                  onChange={(e) => handleInputChange('loanType', e.target.value)}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                  required
-                >
-                  <option value="">Select loan type</option>
-                  <option value="Conventional">Conventional</option>
-                  <option value="FHA">FHA</option>
-                  <option value="VA">VA</option>
-                  <option value="Jumbo">Jumbo</option>
-                  <option value="USDA">USDA</option>
-                </select>
-              </div>
+              {/* Loan Type Selection - Hide for HELOC and HELOAN */}
+              {!['heloc', 'heloan'].includes(formData.loanPurpose) && (
+                <div>
+                  <label className="block text-sm font-medium text-slate-700 mb-2">
+                    Loan Type *
+                  </label>
+                  <select
+                    value={formData.loanType}
+                    onChange={(e) => handleInputChange('loanType', e.target.value)}
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    required
+                  >
+                    <option value="">Select loan type</option>
+                    <option value="Conventional">Conventional</option>
+                    <option value="FHA">FHA</option>
+                    <option value="VA">VA</option>
+                    <option value="Jumbo">Jumbo</option>
+                    <option value="USDA">USDA</option>
+                  </select>
+                </div>
+              )}
 
               {/* Purchase Fields */}
               {formData.loanPurpose === 'purchase' && (
@@ -833,6 +858,9 @@ export default function EnhancedContactForm() {
                   
                   <div className="text-2xl font-bold text-green-700 mb-2">
                     ${Math.round(calculatorResults.monthlyPayment).toLocaleString()}
+                    <span className="text-base font-normal text-slate-600 ml-2">
+                      {calculatorResults.loanType === 'HELOC' ? 'Interest Only' : 'Principal & Interest'}
+                    </span>
                   </div>
 
                   {/* Show current vs new comparison for refinances */}
@@ -866,12 +894,12 @@ export default function EnhancedContactForm() {
                     </div>
                   )}
 
-                  <div className="text-sm text-slate-600 space-y-1">
-                    <div>Principal & Interest: ${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
-                    <div>Property Tax: ${Math.round(calculatorResults.propertyTax).toLocaleString()}</div>
-                    <div>Insurance: ${Math.round(calculatorResults.insurance).toLocaleString()}</div>
+                  <div className="text-sm text-slate-600 text-center">
                     <div className="mt-2 text-xs text-slate-500">
-                      *Estimate based on {calculatorResults.loanType} loan at {calculatorResults.newRate?.toFixed(2)}%. Actual rates and terms may vary.
+                      *{calculatorResults.loanType === 'HELOC' ? 'Interest only payment during draw period (10 years)' : 'Principal & Interest only'}. 
+                      Estimate based on {calculatorResults.loanType || 'current'} loan at {calculatorResults.newRate?.toFixed(2)}%. 
+                      {calculatorResults.loanType !== 'HELOC' && 'Does not include taxes, insurance, or HOA. '}
+                      Actual rates and terms may vary.
                     </div>
                   </div>
                 </div>

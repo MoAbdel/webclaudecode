@@ -44,6 +44,11 @@ const LOAN_PROGRAMS = {
     description: 'Home Equity Line of Credit for flexible access to funds',
     programs: ['Traditional HELOC', 'Fixed-Rate HELOC', 'Interest-Only Options']
   },
+  heloan: {
+    title: 'HELOAN',
+    description: 'Home Equity Loan with fixed rate and monthly payments',
+    programs: ['Fixed-Rate HELOAN', 'Lump Sum Loan', 'Predictable Payments']
+  },
   investment: {
     title: 'Investment Property',
     description: 'Financing for Orange County rental properties',
@@ -61,6 +66,11 @@ interface FormData {
   loanAmount: string;
   homeValue: string;
   downPayment: string;
+  // Refinance specific fields
+  currentLoanAmount: string;
+  currentRate: string;
+  cashOutAmount: string;
+  loanType: string;
   
   // Step 3: Contact Info
   firstName: string;
@@ -78,6 +88,10 @@ interface CalculatorResults {
   loanType: string;
   isJumbo: boolean;
   availablePrograms: string[];
+  currentPayment?: number;
+  monthlySavings?: number;
+  newRate?: number;
+  currentRate?: number;
 }
 
 export default function EnhancedQuickQuote() {
@@ -89,6 +103,10 @@ export default function EnhancedQuickQuote() {
     loanAmount: '',
     homeValue: '',
     downPayment: '',
+    currentLoanAmount: '',
+    currentRate: '',
+    cashOutAmount: '',
+    loanType: '',
     firstName: '',
     lastName: '',
     email: '',
@@ -116,58 +134,130 @@ export default function EnhancedQuickQuote() {
     return false;
   };
 
-  // Calculate compliant estimates
-  const calculateEstimate = (loanAmount: number, homeValue: number, downPayment: number) => {
-    const loanToValue = ((loanAmount) / homeValue) * 100;
-    const isJumbo = loanAmount > ORANGE_COUNTY_DATA.conformingLimit;
+  // Calculate mortgage details
+  const calculateMortgageDetails = () => {
+    let loanAmount = 0;
+    let homeValue = 0;
+    let currentRate = 0;
     
-    // Sample rates (with disclaimers) - based on current market
-    let sampleRate = 0.0652; // 6.52% base rate
-    if (formData.loanPurpose === 'refinance') sampleRate += 0.002;
-    if (isJumbo) sampleRate += 0.005;
-    if (loanToValue > 80) sampleRate += 0.003;
+    // Handle different loan purposes
+    if (formData.loanPurpose === 'purchase') {
+      loanAmount = parseFloat(formData.loanAmount.replace(/[^0-9.]/g, '')) || 0;
+      homeValue = parseFloat(formData.homeValue.replace(/[^0-9.]/g, '')) || 0;
+    } else if (formData.loanPurpose === 'refinance') {
+      loanAmount = parseFloat(formData.currentLoanAmount.replace(/[^0-9.]/g, '')) || 0;
+      homeValue = parseFloat(formData.homeValue.replace(/[^0-9.]/g, '')) || loanAmount * 1.25; // Estimate if not provided
+      currentRate = parseFloat(formData.currentRate) / 100 || 0;
+    } else if (formData.loanPurpose === 'cash-out') {
+      const currentLoan = parseFloat(formData.currentLoanAmount.replace(/[^0-9.]/g, '')) || 0;
+      const cashOut = parseFloat(formData.cashOutAmount.replace(/[^0-9.]/g, '')) || 0;
+      loanAmount = currentLoan + cashOut;
+      homeValue = parseFloat(formData.homeValue.replace(/[^0-9.]/g, '')) || loanAmount * 1.25; // Estimate if not provided
+      currentRate = parseFloat(formData.currentRate) / 100 || 0;
+    } else {
+      // For HELOC, investment, etc.
+      loanAmount = parseFloat(formData.loanAmount.replace(/[^0-9.]/g, '')) || 0;
+      homeValue = parseFloat(formData.homeValue.replace(/[^0-9.]/g, '')) || 0;
+    }
+    
+    if (loanAmount <= 0) return null;
 
-    // Monthly P&I calculation
-    const monthlyRate = sampleRate / 12;
-    const numPayments = 30 * 12; // 30 year loan
-    const principalAndInterest = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / (Math.pow(1 + monthlyRate, numPayments) - 1);
+    // Determine loan type based on user selection and amount
+    let loanType = formData.loanType;
     
-    // Property tax (Orange County verified rate)
-    const annualPropertyTax = (homeValue - ORANGE_COUNTY_DATA.homeownersExemption) * ORANGE_COUNTY_DATA.averagePropertyTaxRate;
-    const monthlyPropertyTax = annualPropertyTax / 12;
-    
-    // Estimated insurance ($0.35 per $100 of home value - typical for OC)
-    const monthlyInsurance = (homeValue * 0.0035) / 12;
-    
-    const monthlyPayment = principalAndInterest + monthlyPropertyTax + monthlyInsurance;
-    
-    // Determine available programs
-    const programs = LOAN_PROGRAMS[formData.loanPurpose as keyof typeof LOAN_PROGRAMS]?.programs || [];
-    
-    return {
-      monthlyPayment,
-      principalAndInterest,
-      propertyTax: monthlyPropertyTax,
-      insurance: monthlyInsurance,
-      loanType: isJumbo ? 'Jumbo Loan' : (loanAmount <= ORANGE_COUNTY_DATA.lowBalanceLimit ? 'Conforming' : 'High-Balance Conforming'),
-      isJumbo,
-      availablePrograms: programs
-    };
-  };
-
-  // Update calculator when step 2 data changes
-  useEffect(() => {
-    if (currentStep >= 2 && formData.loanAmount && formData.homeValue) {
-      const loanAmount = parseFloat(formData.loanAmount.replace(/[^0-9.]/g, ''));
-      const homeValue = parseFloat(formData.homeValue.replace(/[^0-9.]/g, ''));
-      const downPayment = parseFloat(formData.downPayment.replace(/[^0-9.]/g, '')) || 0;
-      
-      if (loanAmount > 0 && homeValue > 0) {
-        const results = calculateEstimate(loanAmount, homeValue, downPayment);
-        setCalculatorResults(results);
+    // For HELOC and HELOAN, don't use traditional loan types
+    if (['heloc', 'heloan'].includes(formData.loanPurpose)) {
+      loanType = formData.loanPurpose === 'heloc' ? 'HELOC' : 'HELOAN';
+    } else {
+      loanType = loanType || 'Conventional';
+      const isJumbo = loanAmount > ORANGE_COUNTY_DATA.conformingLimit;
+      if (isJumbo && loanType === 'Conventional') {
+        loanType = 'Jumbo';
       }
     }
-  }, [formData.loanAmount, formData.homeValue, formData.downPayment, formData.loanPurpose, currentStep]);
+    
+    // Current market rates (2025)
+    const getRateByLoanType = (type: string) => {
+      switch (type.toLowerCase()) {
+        case 'fha': return 0.061; // 6.1%
+        case 'va': return 0.055; // 5.5%
+        case 'jumbo': return 0.065; // 6.5%
+        case 'heloc': return 0.0875; // 8.75% (Prime + margin)
+        case 'heloan': return 0.085; // 8.5% (Fixed rate)
+        case 'conventional':
+        default: return 0.0625; // 6.25%
+      }
+    };
+    
+    const newInterestRate = getRateByLoanType(loanType);
+    
+    // Calculate monthly payment
+    const monthlyRate = newInterestRate / 12;
+    let principalAndInterest = 0;
+    
+    if (loanType === 'HELOC') {
+      // HELOC: Interest-only during draw period (first 10 years)
+      principalAndInterest = loanAmount * monthlyRate;
+    } else {
+      // Standard P&I calculation for loans
+      const numberOfPayments = 30 * 12; // 30 years
+      principalAndInterest = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, numberOfPayments)) / 
+                            (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
+    }
+    
+    // Calculate current payment for refinance comparison
+    let currentPayment = 0;
+    if ((formData.loanPurpose === 'refinance' || formData.loanPurpose === 'cash-out') && currentRate > 0) {
+      const currentMonthlyRate = currentRate / 12;
+      const currentLoanBalance = parseFloat(formData.currentLoanAmount.replace(/[^0-9.]/g, '')) || 0;
+      const numberOfPayments = 30 * 12; // 30 years
+      currentPayment = currentLoanBalance * (currentMonthlyRate * Math.pow(1 + currentMonthlyRate, numberOfPayments)) / 
+                      (Math.pow(1 + currentMonthlyRate, numberOfPayments) - 1);
+    }
+    
+    // Calculate property tax (based on home value)
+    const taxableValue = Math.max((homeValue || loanAmount * 1.25) - ORANGE_COUNTY_DATA.homeownersExemption, 0);
+    const propertyTax = (taxableValue * ORANGE_COUNTY_DATA.averagePropertyTaxRate) / 12;
+    
+    // Estimate insurance ($3-4 per $1000 of home value annually)
+    const insurance = ((homeValue || loanAmount * 1.25) * 0.0035) / 12;
+    
+    // Get available programs
+    const selectedLoanPurpose = formData.loanPurpose;
+    const availablePrograms = selectedLoanPurpose && LOAN_PROGRAMS[selectedLoanPurpose as keyof typeof LOAN_PROGRAMS] 
+      ? LOAN_PROGRAMS[selectedLoanPurpose as keyof typeof LOAN_PROGRAMS].programs 
+      : ['Conventional', 'FHA', 'VA', 'Jumbo'];
+
+    const results: CalculatorResults = {
+      monthlyPayment: principalAndInterest, // Only show P&I, not taxes/insurance
+      principalAndInterest,
+      propertyTax,
+      insurance,
+      loanType,
+      isJumbo: loanAmount > ORANGE_COUNTY_DATA.conformingLimit,
+      availablePrograms,
+      currentPayment, // Add current payment for comparison
+      monthlySavings: currentPayment > 0 ? Math.max(0, currentPayment - principalAndInterest) : 0,
+      newRate: newInterestRate * 100,
+      currentRate: currentRate * 100
+    };
+
+    setCalculatorResults(results);
+    return results;
+  };
+
+  // Update calculator when relevant fields change
+  useEffect(() => {
+    const hasRequiredFields = 
+      (formData.loanPurpose === 'purchase' && formData.loanAmount) ||
+      (formData.loanPurpose === 'refinance' && formData.currentLoanAmount) ||
+      (formData.loanPurpose === 'cash-out' && formData.currentLoanAmount) ||
+      (formData.loanPurpose && !['purchase', 'refinance', 'cash-out'].includes(formData.loanPurpose) && formData.loanAmount);
+    
+    if (hasRequiredFields && (currentStep >= 2 || showSuccess === false)) {
+      calculateMortgageDetails();
+    }
+  }, [formData.loanAmount, formData.homeValue, formData.loanPurpose, formData.currentLoanAmount, formData.currentRate, formData.cashOutAmount, formData.loanType, currentStep]);
 
   const handleInputChange = (field: keyof FormData, value: string) => {
     setFormData(prev => ({

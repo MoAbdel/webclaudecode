@@ -593,6 +593,14 @@
     <priority>0.7</priority>
   </url>
 
+  <!-- Luxury Markets -->
+  <url>
+    <loc>https://www.mothebroker.com/luxury-markets</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Luxury Market Segment Pages -->
   <url>
     <loc>https://www.mothebroker.com/luxury-markets/waterfront-homes-mortgage-broker</loc>

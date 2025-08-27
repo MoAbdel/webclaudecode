@@ -28,9 +28,16 @@ Disallow: /node_modules/
 Disallow: /_next/webpack-hmr
 Disallow: /temp/
 Disallow: /private/
+
+# Block query parameter variations of static assets
 Disallow: /*?*utm_*
 Disallow: /*?*fbclid*
 Disallow: /*?*gclid*
+Disallow: /favicon.ico?*
+Disallow: /manifest.json?*
+Disallow: /*android-chrome*.png?*
+Disallow: /*apple-touch*.png?*
+Disallow: /*favicon*.png?*
 
 # Explicitly allow important pages for indexing
 Allow: /about

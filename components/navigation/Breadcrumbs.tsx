@@ -38,13 +38,19 @@ export default function Breadcrumbs() {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://mothebroker.com"
+        "item": {
+          "@id": "https://mothebroker.com",
+          "name": "Home"
+        }
       },
       ...breadcrumbItems.map((item, index) => ({
         "@type": "ListItem",
         "position": index + 2,
         "name": item.name,
-        "item": `https://mothebroker.com${item.href}`
+        "item": {
+          "@id": `https://mothebroker.com${item.href}`,
+          "name": item.name
+        }
       }))
     ]
   };

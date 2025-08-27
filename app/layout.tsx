@@ -21,19 +21,19 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico?v=8', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
-      { url: '/favicon-32x32.png?v=8', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16x16.png?v=8', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-48x48.png?v=8', sizes: '48x48', type: 'image/png' },
-      { url: '/favicon-64x64.png?v=8', sizes: '64x64', type: 'image/png' },
-      { url: '/favicon-128x128.png?v=8', sizes: '128x128', type: 'image/png' },
-      { url: '/android-chrome-192x192.png?v=8', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png?v=8', sizes: '512x512', type: 'image/png' },
+      { url: '/favicon.ico', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
+      { url: '/favicon-64x64.png', sizes: '64x64', type: 'image/png' },
+      { url: '/favicon-128x128.png', sizes: '128x128', type: 'image/png' },
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
-    shortcut: '/favicon.ico?v=8',
+    shortcut: '/favicon.ico',
     apple: [
-      { url: '/apple-touch-icon-180x180.png?v=8', sizes: '180x180', type: 'image/png' },
-      { url: '/apple-touch-icon-192x192.png?v=8', sizes: '192x192', type: 'image/png' },
+      { url: '/apple-touch-icon-180x180.png', sizes: '180x180', type: 'image/png' },
+      { url: '/apple-touch-icon-192x192.png', sizes: '192x192', type: 'image/png' },
     ],
     other: [
       { rel: 'mask-icon', url: '/images/MoAbdel-Favicon.png', color: '#1e40af' },
@@ -91,7 +91,7 @@ export default function RootLayout({
         <link rel="preload" href="/_next/static/chunks/main.js" as="script" />
         
         {/* Non-critical stylesheets with media="print" then switch to all */}
-        <link rel="preload" href="/favicon.ico?v=6" as="image" type="image/x-icon" />
+        <link rel="preload" href="/favicon.ico" as="image" type="image/x-icon" />
         
         {/* Critical mobile viewport optimization */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

@@ -57,13 +57,19 @@ export default function IndexingOptimization({
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": baseUrl
+            "item": {
+              "@id": baseUrl,
+              "name": "Home"
+            }
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": page.replace(/[\/\-]/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-            "item": `${baseUrl}${page.startsWith('/') ? page : `/${page}`}`
+            "item": {
+              "@id": `${baseUrl}${page.startsWith('/') ? page : `/${page}`}`,
+              "name": page.replace(/[\/\-]/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
+            }
           }
         ]
       }

@@ -70,6 +70,22 @@ export default function MortgageCalculator() {
       updatedData.loanAmount = (homePrice - downPayment).toString();
     }
     
+    // Auto-calculate PMI based on LTV ratio
+    const homePrice = parseFloat(field === 'homePrice' ? value : updatedData.homePrice) || 0;
+    const loanAmount = parseFloat(field === 'loanAmount' ? value : updatedData.loanAmount) || 0;
+    
+    if (homePrice > 0 && loanAmount > 0) {
+      const ltv = (loanAmount / homePrice) * 100;
+      // If LTV is less than 80%, set PMI to 0
+      if (ltv < 80) {
+        updatedData.pmi = "0";
+      } else if (field !== 'pmi' && parseFloat(updatedData.pmi) === 0) {
+        // If LTV >= 80% and PMI is currently 0, set it to a default value
+        // Only do this if the user isn't manually changing the PMI field
+        updatedData.pmi = "300";
+      }
+    }
+    
     setFormData(updatedData);
   };
 
@@ -206,7 +222,23 @@ export default function MortgageCalculator() {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="pmi" className="text-slate-700 font-medium">Monthly PMI</Label>
+                <Label htmlFor="pmi" className="text-slate-700 font-medium">
+                  Monthly PMI
+                  {(() => {
+                    const homePrice = parseFloat(formData.homePrice) || 0;
+                    const loanAmount = parseFloat(formData.loanAmount) || 0;
+                    const ltv = homePrice > 0 ? (loanAmount / homePrice) * 100 : 0;
+                    return ltv < 80 && ltv > 0 ? (
+                      <span className="ml-2 text-xs text-green-600 font-semibold">
+                        (Auto $0 - LTV {ltv.toFixed(1)}% &lt; 80%)
+                      </span>
+                    ) : ltv >= 80 ? (
+                      <span className="ml-2 text-xs text-orange-600 font-semibold">
+                        (LTV {ltv.toFixed(1)}% ≥ 80%)
+                      </span>
+                    ) : null;
+                  })()}
+                </Label>
                 <div className="relative">
                   <DollarSign className="absolute left-3 top-3 h-4 w-4 text-slate-400" />
                   <Input
@@ -280,8 +312,13 @@ export default function MortgageCalculator() {
               
               <div className="flex justify-between items-center">
                 <span className="text-slate-600">PMI:</span>
-                <span className="font-semibold text-slate-900">
+                <span className={`font-semibold ${parseFloat(formData.pmi) === 0 ? 'text-green-600' : 'text-slate-900'}`}>
                   ${parseFloat(formData.pmi).toLocaleString('en-US', {minimumFractionDigits: 0, maximumFractionDigits: 0})}
+                  {parseFloat(formData.pmi) === 0 && (
+                    <span className="ml-2 text-xs text-green-600 font-normal">
+                      (LTV &lt; 80%)
+                    </span>
+                  )}
                 </span>
               </div>
               

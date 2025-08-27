@@ -210,9 +210,15 @@ export default function EnhancedQuickQuote() {
     if ((formData.loanPurpose === 'refinance' || formData.loanPurpose === 'cash-out') && currentRate > 0) {
       const currentMonthlyRate = currentRate / 12;
       const currentLoanBalance = parseFloat(formData.currentLoanAmount.replace(/[^0-9.]/g, '')) || 0;
-      const numberOfPayments = 30 * 12; // 30 years
-      currentPayment = currentLoanBalance * (currentMonthlyRate * Math.pow(1 + currentMonthlyRate, numberOfPayments)) / 
-                      (Math.pow(1 + currentMonthlyRate, numberOfPayments) - 1);
+      if (currentLoanBalance > 0) {
+        const numberOfPayments = 30 * 12; // 30 years
+        currentPayment = currentLoanBalance * (currentMonthlyRate * Math.pow(1 + currentMonthlyRate, numberOfPayments)) / 
+                        (Math.pow(1 + currentMonthlyRate, numberOfPayments) - 1);
+        // Ensure the result is valid
+        if (isNaN(currentPayment) || currentPayment <= 0) {
+          currentPayment = 0;
+        }
+      }
     }
     
     // Calculate property tax (based on home value)

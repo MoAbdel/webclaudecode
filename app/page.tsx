@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import HeroSectionServer from '@/components/home/HeroSectionServer';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import BrokerComparison from '@/components/home/BrokerComparison';
-import QuickQuote from '@/components/home/QuickQuote';
+import EnhancedQuickQuote from '@/components/home/EnhancedQuickQuote';
 import StructuredFAQ from '@/components/home/StructuredFAQ';
 import PillarPageHub from '@/components/seo/PillarPageHub';
 import AIOOptimization from '@/components/seo/AIOOptimization';
@@ -86,7 +86,7 @@ export default function HomePage() {
         <HeroSectionServer />
         <BrokerComparison />
         <WhyChooseUs />
-        <QuickQuote />
+        <EnhancedQuickQuote />
         <LocalMarketInsights />
         <RateDisplay />
         <PillarPageHub />

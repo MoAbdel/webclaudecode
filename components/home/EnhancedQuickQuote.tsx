@@ -1,0 +1,767 @@
+'use client';
+
+import React, { useState, useEffect } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
+import { Button } from "@/components/ui/Button";
+import { Badge } from "@/components/ui/Badge";
+import { Calculator, ArrowRight, Shield, ChevronRight, ChevronLeft, MapPin, DollarSign, Home, Calendar, User, Phone, Mail, FileText } from "lucide-react";
+import { fbTrack } from '@/components/FacebookPixel';
+
+// Compliant 2025 Orange County Data (verified via web search)
+const ORANGE_COUNTY_DATA = {
+  conformingLimit: 1209750,
+  lowBalanceLimit: 806500,
+  fhaLimit: 1209750,
+  averagePropertyTaxRate: 0.0067, // 0.67%
+  homeownersExemption: 7000
+};
+
+const ORANGE_COUNTY_CITIES = [
+  'Irvine', 'Newport Beach', 'Huntington Beach', 'Costa Mesa', 'Mission Viejo',
+  'Anaheim', 'Santa Ana', 'Fullerton', 'Garden Grove', 'Orange',
+  'Fountain Valley', 'Laguna Beach', 'Laguna Niguel', 'Dana Point',
+  'Yorba Linda', 'Seal Beach', 'Westminster', 'Lake Forest'
+];
+
+const LOAN_PROGRAMS = {
+  purchase: {
+    title: 'Home Purchase',
+    description: 'Buying your new Orange County home',
+    programs: ['Conventional', 'FHA (3.5% down)', 'VA (0% down)', 'Jumbo', 'First-Time Buyer Programs']
+  },
+  refinance: {
+    title: 'Rate & Term Refinance', 
+    description: 'Lower your rate or change loan terms',
+    programs: ['Conventional Refi', 'FHA Streamline', 'VA IRRRL', 'Cash-Out Options']
+  },
+  'cash-out': {
+    title: 'Cash-Out Refinance',
+    description: 'Access your home equity for improvements or investments',
+    programs: ['Conventional Cash-Out', 'FHA Cash-Out', 'VA Cash-Out', 'HELOC Alternative']
+  },
+  heloc: {
+    title: 'HELOC',
+    description: 'Home Equity Line of Credit for flexible access to funds',
+    programs: ['Traditional HELOC', 'Fixed-Rate HELOC', 'Interest-Only Options']
+  },
+  investment: {
+    title: 'Investment Property',
+    description: 'Financing for Orange County rental properties',
+    programs: ['Conventional Investment', 'DSCR Loans', 'Bank Statement Programs', 'Asset-Based Lending']
+  }
+};
+
+interface FormData {
+  // Step 1: Location & Purpose
+  city: string;
+  loanPurpose: string;
+  timeline: string;
+  
+  // Step 2: Loan Details
+  loanAmount: string;
+  homeValue: string;
+  downPayment: string;
+  
+  // Step 3: Contact Info
+  firstName: string;
+  lastName: string;
+  email: string;
+  phone: string;
+  additionalInfo: string;
+}
+
+interface CalculatorResults {
+  monthlyPayment: number;
+  principalAndInterest: number;
+  propertyTax: number;
+  insurance: number;
+  loanType: string;
+  isJumbo: boolean;
+  availablePrograms: string[];
+}
+
+export default function EnhancedQuickQuote() {
+  const [currentStep, setCurrentStep] = useState(1);
+  const [formData, setFormData] = useState<FormData>({
+    city: '',
+    loanPurpose: '',
+    timeline: '',
+    loanAmount: '',
+    homeValue: '',
+    downPayment: '',
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    additionalInfo: ''
+  });
+  const [calculatorResults, setCalculatorResults] = useState<CalculatorResults | null>(null);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [showError, setShowError] = useState(false);
+
+  // Google Ads conversion tracking
+  const gtagSendEvent = (url?: string) => {
+    const callback = function () {
+      if (typeof url === 'string') {
+        window.location.href = url;
+      }
+    };
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'ads_conversion_Contact_Us_1', {
+        'event_callback': callback,
+        'event_timeout': 2000,
+      });
+    }
+    return false;
+  };
+
+  // Calculate compliant estimates
+  const calculateEstimate = (loanAmount: number, homeValue: number, downPayment: number) => {
+    const loanToValue = ((loanAmount) / homeValue) * 100;
+    const isJumbo = loanAmount > ORANGE_COUNTY_DATA.conformingLimit;
+    
+    // Sample rates (with disclaimers) - based on current market
+    let sampleRate = 0.0652; // 6.52% base rate
+    if (formData.loanPurpose === 'refinance') sampleRate += 0.002;
+    if (isJumbo) sampleRate += 0.005;
+    if (loanToValue > 80) sampleRate += 0.003;
+
+    // Monthly P&I calculation
+    const monthlyRate = sampleRate / 12;
+    const numPayments = 30 * 12; // 30 year loan
+    const principalAndInterest = loanAmount * (monthlyRate * Math.pow(1 + monthlyRate, numPayments)) / (Math.pow(1 + monthlyRate, numPayments) - 1);
+    
+    // Property tax (Orange County verified rate)
+    const annualPropertyTax = (homeValue - ORANGE_COUNTY_DATA.homeownersExemption) * ORANGE_COUNTY_DATA.averagePropertyTaxRate;
+    const monthlyPropertyTax = annualPropertyTax / 12;
+    
+    // Estimated insurance ($0.35 per $100 of home value - typical for OC)
+    const monthlyInsurance = (homeValue * 0.0035) / 12;
+    
+    const monthlyPayment = principalAndInterest + monthlyPropertyTax + monthlyInsurance;
+    
+    // Determine available programs
+    const programs = LOAN_PROGRAMS[formData.loanPurpose as keyof typeof LOAN_PROGRAMS]?.programs || [];
+    
+    return {
+      monthlyPayment,
+      principalAndInterest,
+      propertyTax: monthlyPropertyTax,
+      insurance: monthlyInsurance,
+      loanType: isJumbo ? 'Jumbo Loan' : (loanAmount <= ORANGE_COUNTY_DATA.lowBalanceLimit ? 'Conforming' : 'High-Balance Conforming'),
+      isJumbo,
+      availablePrograms: programs
+    };
+  };
+
+  // Update calculator when step 2 data changes
+  useEffect(() => {
+    if (currentStep >= 2 && formData.loanAmount && formData.homeValue) {
+      const loanAmount = parseFloat(formData.loanAmount.replace(/[^0-9.]/g, ''));
+      const homeValue = parseFloat(formData.homeValue.replace(/[^0-9.]/g, ''));
+      const downPayment = parseFloat(formData.downPayment.replace(/[^0-9.]/g, '')) || 0;
+      
+      if (loanAmount > 0 && homeValue > 0) {
+        const results = calculateEstimate(loanAmount, homeValue, downPayment);
+        setCalculatorResults(results);
+      }
+    }
+  }, [formData.loanAmount, formData.homeValue, formData.downPayment, formData.loanPurpose, currentStep]);
+
+  const handleInputChange = (field: keyof FormData, value: string) => {
+    setFormData(prev => ({
+      ...prev,
+      [field]: value
+    }));
+  };
+
+  const nextStep = () => {
+    if (currentStep < 3) {
+      setCurrentStep(currentStep + 1);
+      
+      // Track progression for analytics
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'form_step_complete', {
+          step: currentStep,
+          loan_purpose: formData.loanPurpose,
+          city: formData.city
+        });
+      }
+    }
+  };
+
+  const prevStep = () => {
+    if (currentStep > 1) {
+      setCurrentStep(currentStep - 1);
+    }
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('/api/quotes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          full_name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          loan_type: formData.loanPurpose || 'purchase',
+          loan_amount: parseFloat(formData.loanAmount.replace(/[^0-9.]/g, '')) || 0,
+          notes: `Enhanced Quote - City: ${formData.city}, Loan Amount: ${formData.loanAmount}, Home Value: ${formData.homeValue}, Timeline: ${formData.timeline}, Purpose: ${formData.loanPurpose}${calculatorResults ? `, Estimated Payment: $${Math.round(calculatorResults.monthlyPayment)}` : ''}${formData.additionalInfo ? ', Additional Info: ' + formData.additionalInfo : ''}`,
+          status: "new"
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit quote');
+      }
+      
+      // Track conversions
+      gtagSendEvent();
+      fbTrack('Lead', {
+        content_name: 'Enhanced Quick Quote Submission',
+        content_category: 'mortgage_quote',
+        value: calculatorResults?.monthlyPayment || 0,
+        currency: 'USD'
+      });
+      
+      setShowSuccess(true);
+      setFormData({
+        city: '', loanPurpose: '', timeline: '', loanAmount: '', homeValue: '', 
+        downPayment: '', firstName: '', lastName: '', email: '', phone: '', additionalInfo: ''
+      });
+      setCurrentStep(1);
+      setCalculatorResults(null);
+    } catch (error) {
+      console.error("Error submitting quote request:", error);
+      setShowError(true);
+      setTimeout(() => setShowError(false), 5000);
+    }
+    
+    setIsSubmitting(false);
+  };
+
+  // Success state
+  if (showSuccess) {
+    return (
+      <section className="py-16 bg-gradient-to-br from-green-50 to-blue-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="shadow-xl border-green-200">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Shield className="w-8 h-8 text-green-600" />
+              </div>
+              <h3 className="text-2xl font-bold text-slate-900 mb-2">Thank You for Your Orange County Mortgage Inquiry!</h3>
+              <p className="text-slate-600 mb-6">
+                We received your information and will be reaching out within 1 business day with your personalized rate quote for {formData.city ? `${formData.city}, ` : ''}Orange County. 
+                Mo will personally review your details to ensure you get the best possible terms from our 200+ lender network.
+              </p>
+              {calculatorResults && (
+                <div className="bg-blue-50 rounded-lg p-4 mb-6">
+                  <p className="text-sm text-slate-600">
+                    <strong>Your Estimated Monthly Payment:</strong> ${Math.round(calculatorResults.monthlyPayment).toLocaleString()}*
+                    <br />
+                    <em className="text-xs">*Educational estimate only. Actual rates and payments determined after application and credit review.</em>
+                  </p>
+                </div>
+              )}
+              <Button 
+                onClick={() => setShowSuccess(false)}
+                className="bg-blue-600 hover:bg-blue-700"
+              >
+                Get Another Quote
+              </Button>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    );
+  }
+
+  const isStep1Complete = formData.city && formData.loanPurpose && formData.timeline;
+  const isStep2Complete = formData.loanAmount && formData.homeValue;
+  const isStep3Complete = formData.firstName && formData.lastName && formData.email && formData.phone;
+
+  return (
+    <section className="py-16 bg-white">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header with SEO-optimized content */}
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+            Get Your Orange County Mortgage Rate Quote
+          </h2>
+          <p className="text-xl text-slate-600 mb-4">
+            Personalized rates from 200+ lenders • 3-step process • NMLS #1426884
+          </p>
+          <div className="flex items-center justify-center space-x-4 text-sm text-slate-500 mb-6">
+            <div className="flex items-center">
+              <Shield className="w-4 h-4 text-green-600 mr-1" />
+              No credit impact
+            </div>
+            <div className="flex items-center">
+              <MapPin className="w-4 h-4 text-blue-600 mr-1" />
+              Orange County expert
+            </div>
+            <div className="flex items-center">
+              <Calculator className="w-4 h-4 text-purple-600 mr-1" />
+              Instant estimates
+            </div>
+          </div>
+        </div>
+
+        {/* Progress indicator */}
+        <div className="flex items-center justify-center mb-8">
+          <div className="flex items-center space-x-4">
+            {[1, 2, 3].map((step) => (
+              <div key={step} className="flex items-center">
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-semibold ${
+                  currentStep >= step 
+                    ? 'bg-blue-600 text-white' 
+                    : 'bg-slate-200 text-slate-600'
+                }`}>
+                  {step}
+                </div>
+                {step < 3 && (
+                  <ChevronRight className={`w-4 h-4 mx-2 ${
+                    currentStep > step ? 'text-blue-600' : 'text-slate-300'
+                  }`} />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+          {/* Step headers */}
+          <div className="bg-slate-50 px-6 py-4 border-b">
+            <h3 className="text-lg font-semibold text-slate-900">
+              {currentStep === 1 && (
+                <>
+                  <MapPin className="w-5 h-5 inline mr-2 text-blue-600" />
+                  Step 1: Orange County Location & Loan Purpose
+                </>
+              )}
+              {currentStep === 2 && (
+                <>
+                  <Calculator className="w-5 h-5 inline mr-2 text-purple-600" />
+                  Step 2: Loan Details & Payment Calculator
+                </>
+              )}
+              {currentStep === 3 && (
+                <>
+                  <User className="w-5 h-5 inline mr-2 text-green-600" />
+                  Step 3: Contact Information & Next Steps
+                </>
+              )}
+            </h3>
+          </div>
+
+          <form onSubmit={handleSubmit} className="p-6">
+            {showError && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
+                <p className="text-red-600 text-sm">
+                  There was an error submitting your request. Please try again or call us directly at (949) 579-2057.
+                </p>
+              </div>
+            )}
+
+            {/* Step 1: Location & Purpose */}
+            {currentStep === 1 && (
+              <div className="space-y-6">
+                <div>
+                  <label htmlFor="city" className="block text-sm font-medium text-slate-700 mb-2">
+                    Orange County City or Area *
+                  </label>
+                  <select
+                    id="city"
+                    required
+                    value={formData.city}
+                    onChange={(e) => handleInputChange('city', e.target.value)}
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select your city...</option>
+                    {ORANGE_COUNTY_CITIES.map(city => (
+                      <option key={city} value={city}>{city}</option>
+                    ))}
+                    <option value="other">Other Orange County Area</option>
+                  </select>
+                  <p className="mt-1 text-xs text-slate-500">
+                    Serving all Orange County cities with local market expertise
+                  </p>
+                </div>
+
+                <div>
+                  <label htmlFor="loan-purpose" className="block text-sm font-medium text-slate-700 mb-2">
+                    What's your loan purpose? *
+                  </label>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {Object.entries(LOAN_PROGRAMS).map(([key, program]) => (
+                      <div key={key}>
+                        <label className={`block p-4 border rounded-lg cursor-pointer transition-all ${
+                          formData.loanPurpose === key 
+                            ? 'border-blue-500 bg-blue-50' 
+                            : 'border-slate-200 hover:border-slate-300'
+                        }`}>
+                          <input
+                            type="radio"
+                            name="loanPurpose"
+                            value={key}
+                            checked={formData.loanPurpose === key}
+                            onChange={(e) => handleInputChange('loanPurpose', e.target.value)}
+                            className="sr-only"
+                          />
+                          <div className="font-medium text-slate-900">{program.title}</div>
+                          <div className="text-sm text-slate-600">{program.description}</div>
+                        </label>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label htmlFor="timeline" className="block text-sm font-medium text-slate-700 mb-2">
+                    Timeline *
+                  </label>
+                  <select
+                    id="timeline"
+                    required
+                    value={formData.timeline}
+                    onChange={(e) => handleInputChange('timeline', e.target.value)}
+                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option value="">Select timeline...</option>
+                    <option value="asap">ASAP (Pre-approved buyers)</option>
+                    <option value="30-days">Within 30 days</option>
+                    <option value="60-days">Within 60 days</option>
+                    <option value="90-days">Within 90 days</option>
+                    <option value="exploring">Just exploring options</option>
+                  </select>
+                </div>
+
+                {/* Show selected program benefits */}
+                {formData.loanPurpose && (
+                  <div className="bg-blue-50 rounded-lg p-4">
+                    <h4 className="font-medium text-slate-900 mb-2">
+                      Available Programs for {LOAN_PROGRAMS[formData.loanPurpose as keyof typeof LOAN_PROGRAMS].title}:
+                    </h4>
+                    <div className="space-y-1">
+                      {LOAN_PROGRAMS[formData.loanPurpose as keyof typeof LOAN_PROGRAMS].programs.map((program, index) => (
+                        <div key={index} className="flex items-center text-sm text-slate-700">
+                          <div className="w-1 h-1 bg-blue-600 rounded-full mr-2"></div>
+                          {program}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Step 2: Loan Details */}
+            {currentStep === 2 && (
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="home-value" className="block text-sm font-medium text-slate-700 mb-2">
+                      {formData.loanPurpose === 'purchase' ? 'Purchase Price' : 'Current Home Value'} *
+                    </label>
+                    <div className="relative">
+                      <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                      <input
+                        id="home-value"
+                        type="text"
+                        required
+                        value={formData.homeValue}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/[^\d]/g, '');
+                          const formatted = value ? parseInt(value).toLocaleString() : '';
+                          handleInputChange('homeValue', formatted);
+                        }}
+                        className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="750,000"
+                      />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label htmlFor="loan-amount" className="block text-sm font-medium text-slate-700 mb-2">
+                      Loan Amount Needed *
+                    </label>
+                    <div className="relative">
+                      <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                      <input
+                        id="loan-amount"
+                        type="text"
+                        required
+                        value={formData.loanAmount}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/[^\d]/g, '');
+                          const formatted = value ? parseInt(value).toLocaleString() : '';
+                          handleInputChange('loanAmount', formatted);
+                        }}
+                        className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="600,000"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {formData.loanPurpose === 'purchase' && (
+                  <div>
+                    <label htmlFor="down-payment" className="block text-sm font-medium text-slate-700 mb-2">
+                      Down Payment Amount
+                    </label>
+                    <div className="relative">
+                      <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                      <input
+                        id="down-payment"
+                        type="text"
+                        value={formData.downPayment}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/[^\d]/g, '');
+                          const formatted = value ? parseInt(value).toLocaleString() : '';
+                          handleInputChange('downPayment', formatted);
+                        }}
+                        className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="150,000 (20%)"
+                      />
+                    </div>
+                  </div>
+                )}
+
+                {/* Loan limits information */}
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <h4 className="font-medium text-slate-900 mb-2">2025 Orange County Loan Limits:</h4>
+                  <div className="text-sm text-slate-600 space-y-1">
+                    <div>• Conventional/FHA: Up to ${ORANGE_COUNTY_DATA.conformingLimit.toLocaleString()}</div>
+                    <div>• Jumbo Loans: Above ${ORANGE_COUNTY_DATA.conformingLimit.toLocaleString()}</div>
+                    <div>• Down to ${ORANGE_COUNTY_DATA.lowBalanceLimit.toLocaleString()} (low-balance rates)</div>
+                  </div>
+                </div>
+
+                {/* Live calculator results */}
+                {calculatorResults && (
+                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border-2 border-blue-200">
+                    <h4 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
+                      <Calculator className="w-6 h-6 text-blue-600 mr-2" />
+                      Your Estimated Monthly Payment
+                    </h4>
+                    
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      <div>
+                        <div className="text-3xl font-bold text-blue-600 mb-2">
+                          ${Math.round(calculatorResults.monthlyPayment).toLocaleString()}
+                        </div>
+                        <div className="text-sm text-slate-600 space-y-1">
+                          <div>Principal & Interest: ${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
+                          <div>Property Tax: ${Math.round(calculatorResults.propertyTax).toLocaleString()}</div>
+                          <div>Insurance: ${Math.round(calculatorResults.insurance).toLocaleString()}</div>
+                        </div>
+                      </div>
+                      
+                      <div>
+                        <div className="space-y-2 text-sm">
+                          <div className="flex items-center justify-between">
+                            <span>Loan Type:</span>
+                            <Badge variant={calculatorResults.isJumbo ? "secondary" : "default"}>
+                              {calculatorResults.loanType}
+                            </Badge>
+                          </div>
+                          <div className="text-xs text-slate-500 mt-3">
+                            <strong>Important:</strong> This is an educational estimate only using sample rates. 
+                            Your actual rate and payment will be determined after application, credit check, 
+                            and income verification per TRID regulations. Property tax estimated using Orange County's 
+                            average 0.67% effective rate with $7,000 homeowner's exemption.
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="mt-4 p-3 bg-white rounded-lg">
+                      <div className="text-xs text-slate-500">
+                        <strong>Compliance Note:</strong> Rates shown are sample estimates for educational purposes. 
+                        Actual rates vary based on credit score, loan-to-value ratio, debt-to-income ratio, loan purpose, 
+                        property type, and other factors. APR will be higher. Contact for personalized rate quote. 
+                        Equal Housing Opportunity. Licensed by CA Department of Financial Protection and Innovation. 
+                        NMLS #1426884.
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Step 3: Contact Information */}
+            {currentStep === 3 && (
+              <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="first-name" className="block text-sm font-medium text-slate-700 mb-2">
+                      First Name *
+                    </label>
+                    <div className="relative">
+                      <User className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                      <input
+                        id="first-name"
+                        type="text"
+                        required
+                        value={formData.firstName}
+                        onChange={(e) => handleInputChange('firstName', e.target.value)}
+                        className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="John"
+                      />
+                    </div>
+                  </div>
+                  <div>
+                    <label htmlFor="last-name" className="block text-sm font-medium text-slate-700 mb-2">
+                      Last Name *
+                    </label>
+                    <div className="relative">
+                      <User className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                      <input
+                        id="last-name"
+                        type="text"
+                        required
+                        value={formData.lastName}
+                        onChange={(e) => handleInputChange('lastName', e.target.value)}
+                        className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Doe"
+                      />
+                    </div>
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="email-address" className="block text-sm font-medium text-slate-700 mb-2">
+                    Email Address *
+                  </label>
+                  <div className="relative">
+                    <Mail className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                    <input
+                      id="email-address"
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => handleInputChange('email', e.target.value)}
+                      className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="john.doe@example.com"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="phone-number" className="block text-sm font-medium text-slate-700 mb-2">
+                    Phone Number *
+                  </label>
+                  <div className="relative">
+                    <Phone className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                    <input
+                      id="phone-number"
+                      type="tel"
+                      required
+                      value={formData.phone}
+                      onChange={(e) => handleInputChange('phone', e.target.value)}
+                      className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="(949) 555-0123"
+                    />
+                  </div>
+                </div>
+                
+                <div>
+                  <label htmlFor="additional-info" className="block text-sm font-medium text-slate-700 mb-2">
+                    Additional Information
+                  </label>
+                  <div className="relative">
+                    <FileText className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                    <textarea
+                      id="additional-info"
+                      value={formData.additionalInfo}
+                      onChange={(e) => handleInputChange('additionalInfo', e.target.value)}
+                      rows={3}
+                      className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      placeholder="Any questions or special circumstances we should know about?"
+                    ></textarea>
+                  </div>
+                </div>
+
+                {/* Summary of what they entered */}
+                <div className="bg-slate-50 rounded-lg p-4">
+                  <h4 className="font-medium text-slate-900 mb-2">Your Orange County Mortgage Summary:</h4>
+                  <div className="text-sm text-slate-600 space-y-1">
+                    <div>• Location: {formData.city}, Orange County</div>
+                    <div>• Purpose: {LOAN_PROGRAMS[formData.loanPurpose as keyof typeof LOAN_PROGRAMS]?.title}</div>
+                    <div>• Timeline: {formData.timeline}</div>
+                    {formData.loanAmount && <div>• Loan Amount: ${parseInt(formData.loanAmount.replace(/,/g, '')).toLocaleString()}</div>}
+                    {calculatorResults && <div>• Estimated Payment: ${Math.round(calculatorResults.monthlyPayment).toLocaleString()}/month</div>}
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {/* Navigation buttons */}
+            <div className="flex justify-between items-center mt-8 pt-6 border-t">
+              <Button
+                type="button"
+                onClick={prevStep}
+                disabled={currentStep === 1}
+                variant="ghost"
+                className="flex items-center"
+              >
+                <ChevronLeft className="w-4 h-4 mr-1" />
+                Previous
+              </Button>
+
+              {currentStep < 3 && (
+                <Button
+                  type="button"
+                  onClick={nextStep}
+                  disabled={
+                    (currentStep === 1 && !isStep1Complete) ||
+                    (currentStep === 2 && !isStep2Complete)
+                  }
+                  className="bg-blue-600 hover:bg-blue-700 text-white flex items-center"
+                >
+                  Next Step
+                  <ChevronRight className="w-4 h-4 ml-1" />
+                </Button>
+              )}
+
+              {currentStep === 3 && (
+                <Button
+                  type="submit"
+                  disabled={isSubmitting || !isStep3Complete}
+                  className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg font-semibold transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                >
+                  {isSubmitting ? (
+                    "Getting Your Quote..."
+                  ) : (
+                    <>
+                      Get My Orange County Rate Quote
+                      <ArrowRight className="w-5 h-5 ml-2" />
+                    </>
+                  )}
+                </Button>
+              )}
+            </div>
+          </form>
+
+          {/* Security notice */}
+          <div className="px-6 pb-6">
+            <div className="p-4 bg-slate-50 rounded-lg">
+              <div className="flex items-center space-x-2 text-sm text-slate-600">
+                <Shield className="w-4 h-4 text-green-600 flex-shrink-0" />
+                <span>Your information is secure and will never be shared. NMLS #1426884 • Equal Housing Opportunity</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
-import ContactForm from '@/components/ContactForm';
+import EnhancedContactForm from '@/components/EnhancedContactForm';
 import { generateMetadata } from '@/lib/metadata';
 
 export const metadata: Metadata = generateMetadata({
@@ -124,8 +124,8 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <ContactForm />
+          {/* Enhanced Contact Form */}
+          <EnhancedContactForm />
         </div>
 
         {/* Service Areas */}

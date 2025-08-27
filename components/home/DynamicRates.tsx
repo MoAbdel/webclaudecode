@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/Badge";
 
 export default function DynamicRates() {
   const [rates, setRates] = useState({
-    thirtyYear: "6.62%",
-    fifteenYear: "5.97%",
-    fhaThirtyYear: "6.22%"
+    thirtyYear: "6.52%",
+    fifteenYear: "5.90%",
+    fhaThirtyYear: "6.10%"
   });
 
   useEffect(() => {
@@ -28,9 +28,9 @@ export default function DynamicRates() {
           const fha = result.data.find((r: any) => r.loan_type.includes('FHA'));
           
           setRates({
-            thirtyYear: thirty ? `${thirty.rate}%` : "6.62%",
-            fifteenYear: fifteen ? `${fifteen.rate}%` : "5.97%",
-            fhaThirtyYear: fha ? `${fha.rate}%` : "6.22%"
+            thirtyYear: thirty ? `${thirty.rate}%` : "6.52%",
+            fifteenYear: fifteen ? `${fifteen.rate}%` : "5.90%",
+            fhaThirtyYear: fha ? `${fha.rate}%` : "6.10%"
           });
         }
       } catch (error) {

@@ -10,37 +10,37 @@ import Link from "next/link";
 const defaultRateData = [
   {
     loanType: "30-Year Fixed Conventional",
-    rate: "6.62%",
+    rate: "6.52%",
     apr: "APR may vary",
-    trend: "up",
-    change: "+0.01",
+    trend: "down",
+    change: "-0.10",
     icon: Home,
     description: "Perfect for stable payments over 30 years"
   },
   {
     loanType: "15-Year Fixed Conventional",
-    rate: "5.97%",
+    rate: "5.90%",
     apr: "APR may vary",
-    trend: "stable",
-    change: "+0.00",
+    trend: "down",
+    change: "-0.07",
     icon: TrendingDown,
     description: "Build equity faster with higher payments"
   },
   {
     loanType: "30-Year FHA",
-    rate: "6.22%",
+    rate: "6.10%",
     apr: "APR may vary",
-    trend: "up",
-    change: "+0.03",
+    trend: "down",
+    change: "-0.12",
     icon: Users,
     description: "Low down payment option for first-time buyers"
   },
   {
     loanType: "30-Year Jumbo",
-    rate: "6.67%",
+    rate: "6.50%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.01",
+    change: "-0.17",
     icon: Building,
     description: "For loan amounts above conventional limits"
   }

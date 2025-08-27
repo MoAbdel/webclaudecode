@@ -324,7 +324,8 @@ export default function EnhancedQuickQuote() {
       setShowSuccess(true);
       setFormData({
         city: '', loanPurpose: '', timeline: '', loanAmount: '', homeValue: '', 
-        downPayment: '', firstName: '', lastName: '', email: '', phone: '', additionalInfo: ''
+        downPayment: '', currentLoanAmount: '', currentRate: '', cashOutAmount: '', loanType: '',
+        firstName: '', lastName: '', email: '', phone: '', additionalInfo: ''
       });
       setCurrentStep(1);
       setCalculatorResults(null);
@@ -375,7 +376,22 @@ export default function EnhancedQuickQuote() {
   }
 
   const isStep1Complete = formData.city && formData.loanPurpose && formData.timeline;
-  const isStep2Complete = formData.loanAmount && formData.homeValue;
+  
+  const isStep2Complete = () => {
+    // Loan type not required for HELOC and HELOAN
+    if (!['heloc', 'heloan'].includes(formData.loanPurpose) && !formData.loanType) return false;
+    
+    if (formData.loanPurpose === 'purchase') {
+      return formData.loanAmount && formData.homeValue;
+    } else if (formData.loanPurpose === 'refinance') {
+      return formData.currentLoanAmount && formData.currentRate && formData.homeValue;
+    } else if (formData.loanPurpose === 'cash-out') {
+      return formData.currentLoanAmount && formData.currentRate && formData.cashOutAmount && formData.homeValue;
+    } else {
+      return formData.loanAmount && formData.homeValue;
+    }
+  };
+  
   const isStep3Complete = formData.firstName && formData.lastName && formData.email && formData.phone;
 
   return (
@@ -556,73 +572,319 @@ export default function EnhancedQuickQuote() {
             {/* Step 2: Loan Details */}
             {currentStep === 2 && (
               <div className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {/* Loan Type Selection - Hide for HELOC and HELOAN */}
+                {!['heloc', 'heloan'].includes(formData.loanPurpose) && (
                   <div>
-                    <label htmlFor="home-value" className="block text-sm font-medium text-slate-700 mb-2">
-                      {formData.loanPurpose === 'purchase' ? 'Purchase Price' : 'Current Home Value'} *
+                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                      Loan Type *
                     </label>
-                    <div className="relative">
-                      <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
-                      <input
-                        id="home-value"
-                        type="text"
-                        required
-                        value={formData.homeValue}
-                        onChange={(e) => {
-                          const value = e.target.value.replace(/[^\d]/g, '');
-                          const formatted = value ? parseInt(value).toLocaleString() : '';
-                          handleInputChange('homeValue', formatted);
-                        }}
-                        className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="750,000"
-                      />
-                    </div>
+                    <select
+                      value={formData.loanType}
+                      onChange={(e) => handleInputChange('loanType', e.target.value)}
+                      className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      required
+                    >
+                      <option value="">Select loan type</option>
+                      <option value="Conventional">Conventional</option>
+                      <option value="FHA">FHA</option>
+                      <option value="VA">VA</option>
+                      <option value="Jumbo">Jumbo</option>
+                      <option value="USDA">USDA</option>
+                    </select>
                   </div>
+                )}
 
-                  <div>
-                    <label htmlFor="loan-amount" className="block text-sm font-medium text-slate-700 mb-2">
-                      Loan Amount Needed *
-                    </label>
-                    <div className="relative">
-                      <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
-                      <input
-                        id="loan-amount"
-                        type="text"
-                        required
-                        value={formData.loanAmount}
-                        onChange={(e) => {
-                          const value = e.target.value.replace(/[^\d]/g, '');
-                          const formatted = value ? parseInt(value).toLocaleString() : '';
-                          handleInputChange('loanAmount', formatted);
-                        }}
-                        className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="600,000"
-                      />
-                    </div>
-                  </div>
-                </div>
-
+                {/* Purchase Fields */}
                 {formData.loanPurpose === 'purchase' && (
-                  <div>
-                    <label htmlFor="down-payment" className="block text-sm font-medium text-slate-700 mb-2">
-                      Down Payment Amount
-                    </label>
-                    <div className="relative">
-                      <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                  <>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Home Purchase Price *
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.homeValue}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('homeValue', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('homeValue', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="750,000"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Loan Amount *
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.loanAmount}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('loanAmount', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('loanAmount', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="600,000"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Down Payment (Optional)
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.downPayment}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('downPayment', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('downPayment', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="150,000"
+                        />
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* Refinance Fields */}
+                {formData.loanPurpose === 'refinance' && (
+                  <>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Current Home Value *
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.homeValue}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('homeValue', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('homeValue', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="950,000"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Current Loan Balance *
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.currentLoanAmount}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('currentLoanAmount', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('currentLoanAmount', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="650,000"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Current Interest Rate (%) *
+                      </label>
                       <input
-                        id="down-payment"
                         type="text"
-                        value={formData.downPayment}
+                        value={formData.currentRate}
                         onChange={(e) => {
-                          const value = e.target.value.replace(/[^\d]/g, '');
-                          const formatted = value ? parseInt(value).toLocaleString() : '';
-                          handleInputChange('downPayment', formatted);
+                          const value = e.target.value.replace(/[^0-9.]/g, '');
+                          handleInputChange('currentRate', value);
                         }}
-                        className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        placeholder="150,000 (20%)"
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="7.25"
+                        required
                       />
                     </div>
-                  </div>
+                  </>
+                )}
+
+                {/* Cash-Out Refinance Fields */}
+                {formData.loanPurpose === 'cash-out' && (
+                  <>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Current Home Value *
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.homeValue}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('homeValue', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('homeValue', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="950,000"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Current Loan Balance *
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.currentLoanAmount}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('currentLoanAmount', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('currentLoanAmount', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="650,000"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Current Interest Rate (%) *
+                      </label>
+                      <input
+                        type="text"
+                        value={formData.currentRate}
+                        onChange={(e) => {
+                          const value = e.target.value.replace(/[^0-9.]/g, '');
+                          handleInputChange('currentRate', value);
+                        }}
+                        className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="7.25"
+                        required
+                      />
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Desired Cash-Out Amount *
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.cashOutAmount}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('cashOutAmount', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('cashOutAmount', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="100,000"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </>
+                )}
+
+                {/* Other Loan Types (HELOC, Investment, etc.) */}
+                {!['purchase', 'refinance', 'cash-out'].includes(formData.loanPurpose) && (
+                  <>
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Property Value *
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.homeValue}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('homeValue', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('homeValue', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="750,000"
+                          required
+                        />
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        Desired Loan Amount *
+                      </label>
+                      <div className="relative">
+                        <DollarSign className="absolute left-3 top-3 w-5 h-5 text-slate-400" />
+                        <input
+                          type="text"
+                          value={formData.loanAmount}
+                          onChange={(e) => {
+                            const value = e.target.value.replace(/[^0-9]/g, '');
+                            if (value) {
+                              handleInputChange('loanAmount', parseInt(value).toLocaleString());
+                            } else {
+                              handleInputChange('loanAmount', '');
+                            }
+                          }}
+                          className="w-full pl-10 pr-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          placeholder="600,000"
+                          required
+                        />
+                      </div>
+                    </div>
+                  </>
                 )}
 
                 {/* Loan limits information */}
@@ -637,49 +899,64 @@ export default function EnhancedQuickQuote() {
 
                 {/* Live calculator results */}
                 {calculatorResults && (
-                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 rounded-xl p-6 border-2 border-blue-200">
-                    <h4 className="text-xl font-bold text-slate-900 mb-4 flex items-center">
-                      <Calculator className="w-6 h-6 text-blue-600 mr-2" />
-                      Your Estimated Monthly Payment
+                  <div className="bg-green-50 border-2 border-green-200 rounded-lg p-4">
+                    <h4 className="font-semibold text-slate-900 mb-3 flex items-center">
+                      <Calculator className="w-4 h-4 mr-2" />
+                      {(formData.loanPurpose === 'refinance' || formData.loanPurpose === 'cash-out') ? 
+                        'New Estimated Payment' : 'Estimated Monthly Payment'}
                     </h4>
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div>
-                        <div className="text-3xl font-bold text-blue-600 mb-2">
-                          ${Math.round(calculatorResults.monthlyPayment).toLocaleString()}
-                        </div>
-                        <div className="text-sm text-slate-600 space-y-1">
-                          <div>Principal & Interest: ${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
-                          <div>Property Tax: ${Math.round(calculatorResults.propertyTax).toLocaleString()}</div>
-                          <div>Insurance: ${Math.round(calculatorResults.insurance).toLocaleString()}</div>
-                        </div>
-                      </div>
-                      
-                      <div>
-                        <div className="space-y-2 text-sm">
-                          <div className="flex items-center justify-between">
-                            <span>Loan Type:</span>
-                            <Badge variant={calculatorResults.isJumbo ? "secondary" : "default"}>
-                              {calculatorResults.loanType}
-                            </Badge>
-                          </div>
-                          <div className="text-xs text-slate-500 mt-3">
-                            <strong>Important:</strong> This is an educational estimate only using sample rates. 
-                            Your actual rate and payment will be determined after application, credit check, 
-                            and income verification per TRID regulations. Property tax estimated using Orange County's 
-                            average 0.67% effective rate with $7,000 homeowner's exemption.
-                          </div>
-                        </div>
-                      </div>
+                    <div className="text-2xl font-bold text-green-700 mb-2">
+                      ${Math.round(calculatorResults.monthlyPayment).toLocaleString()}
+                      <span className="text-base font-normal text-slate-600 ml-2">
+                        {calculatorResults.loanType === 'HELOC' ? 'Interest Only' : 'Principal & Interest'}
+                      </span>
                     </div>
-                    
-                    <div className="mt-4 p-3 bg-white rounded-lg">
-                      <div className="text-xs text-slate-500">
-                        <strong>Compliance Note:</strong> Rates shown are sample estimates for educational purposes. 
-                        Actual rates vary based on credit score, loan-to-value ratio, debt-to-income ratio, loan purpose, 
-                        property type, and other factors. APR will be higher. Contact for personalized rate quote. 
-                        Equal Housing Opportunity. Licensed by CA Department of Financial Protection and Innovation. 
-                        NMLS #1426884.
+
+                    {/* Show current vs new comparison for refinances */}
+                    {(calculatorResults.currentPayment && calculatorResults.currentPayment > 0) && (
+                      <div className="mb-3 p-3 bg-blue-100 rounded-lg">
+                        <div className="grid grid-cols-2 gap-4 text-sm">
+                          <div>
+                            <span className="text-slate-600">Current Rate:</span>
+                            <div className="font-semibold">{calculatorResults.currentRate?.toFixed(2)}%</div>
+                          </div>
+                          <div>
+                            <span className="text-slate-600">New Rate:</span>
+                            <div className="font-semibold text-green-700">{calculatorResults.newRate?.toFixed(2)}%</div>
+                          </div>
+                          <div>
+                            <span className="text-slate-600">Current P&I:</span>
+                            <div className="font-semibold">${Math.round(calculatorResults.currentPayment).toLocaleString()}</div>
+                          </div>
+                          <div>
+                            <span className="text-slate-600">New P&I:</span>
+                            <div className="font-semibold text-green-700">${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
+                          </div>
+                        </div>
+                        {calculatorResults.monthlySavings && calculatorResults.monthlySavings > 0 && (
+                          <div className="mt-2 text-center">
+                            <span className="text-green-700 font-bold">
+                              Monthly Savings: ${Math.round(calculatorResults.monthlySavings).toLocaleString()}
+                            </span>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-sm text-slate-600">Loan Type:</span>
+                      <Badge variant={calculatorResults.isJumbo ? "secondary" : "default"}>
+                        {calculatorResults.loanType}
+                      </Badge>
+                    </div>
+
+                    <div className="text-sm text-slate-600 text-center">
+                      <div className="mt-2 text-xs text-slate-500">
+                        *{calculatorResults.loanType === 'HELOC' ? 'Interest only payment during draw period (10 years)' : 'Principal & Interest only'}. 
+                        Property tax and insurance not included. Rates shown are sample estimates for educational purposes. 
+                        Your actual rate and payment will be determined after application, credit check, 
+                        and income verification. NMLS #1426884.
                       </div>
                     </div>
                   </div>
@@ -813,7 +1090,7 @@ export default function EnhancedQuickQuote() {
                   onClick={nextStep}
                   disabled={
                     (currentStep === 1 && !isStep1Complete) ||
-                    (currentStep === 2 && !isStep2Complete)
+                    (currentStep === 2 && !isStep2Complete())
                   }
                   className="bg-blue-600 hover:bg-blue-700 text-white flex items-center"
                 >

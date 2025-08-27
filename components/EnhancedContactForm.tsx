@@ -210,6 +210,7 @@ export default function EnhancedContactForm() {
     if ((formData.loanPurpose === 'refinance' || formData.loanPurpose === 'cash-out') && currentRate > 0) {
       const currentMonthlyRate = currentRate / 12;
       const currentLoanBalance = parseFloat(formData.currentLoanAmount.replace(/[^0-9.]/g, '')) || 0;
+      const numberOfPayments = 30 * 12; // 30 years
       currentPayment = currentLoanBalance * (currentMonthlyRate * Math.pow(1 + currentMonthlyRate, numberOfPayments)) / 
                       (Math.pow(1 + currentMonthlyRate, numberOfPayments) - 1);
     }
@@ -226,6 +227,8 @@ export default function EnhancedContactForm() {
     const availablePrograms = selectedLoanPurpose && LOAN_PROGRAMS[selectedLoanPurpose as keyof typeof LOAN_PROGRAMS] 
       ? LOAN_PROGRAMS[selectedLoanPurpose as keyof typeof LOAN_PROGRAMS].programs 
       : ['Conventional', 'FHA', 'VA', 'Jumbo'];
+
+    const isJumbo = loanAmount > ORANGE_COUNTY_DATA.conformingLimit;
 
     const results: CalculatorResults = {
       monthlyPayment: principalAndInterest, // Only show P&I, not taxes/insurance

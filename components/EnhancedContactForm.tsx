@@ -891,16 +891,16 @@ export default function EnhancedContactForm() {
                               <span className="text-slate-600">New Rate:</span>
                               <div className="font-semibold text-green-700">{calculatorResults.newRate.toFixed(2)}%</div>
                             </div>
+                            <div>
+                              <span className="text-slate-600">Current P&I:</span>
+                              <div className="font-semibold">${Math.round(calculatorResults.currentPayment).toLocaleString()}</div>
+                            </div>
+                            <div>
+                              <span className="text-slate-600">New P&I:</span>
+                              <div className="font-semibold text-green-700">${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
+                            </div>
                           </>
                         )}
-                        <div>
-                          <span className="text-slate-600">Current P&I:</span>
-                          <div className="font-semibold">${Math.round(calculatorResults.currentPayment).toLocaleString()}</div>
-                        </div>
-                        <div>
-                          <span className="text-slate-600">New P&I:</span>
-                          <div className="font-semibold text-green-700">${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
-                        </div>
                       </div>
                       {calculatorResults.monthlySavings && calculatorResults.monthlySavings > 0 && (
                         <div className="mt-2 text-center">

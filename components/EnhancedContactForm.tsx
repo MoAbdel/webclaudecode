@@ -246,8 +246,8 @@ export default function EnhancedContactForm() {
       availablePrograms,
       currentPayment, // Add current payment for comparison
       monthlySavings: currentPayment > 0 ? Math.max(0, currentPayment - principalAndInterest) : 0,
-      newRate: newInterestRate * 100,
-      currentRate: currentPayment > 0 ? currentRate * 100 : undefined
+      newRate: (currentPayment > 0 && currentRate > 0) ? newInterestRate * 100 : undefined,
+      currentRate: (currentPayment > 0 && currentRate > 0) ? currentRate * 100 : undefined
     };
 
     setCalculatorResults(results);

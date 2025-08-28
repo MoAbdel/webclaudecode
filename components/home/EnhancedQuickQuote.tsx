@@ -244,8 +244,8 @@ export default function EnhancedQuickQuote() {
       availablePrograms,
       currentPayment, // Add current payment for comparison
       monthlySavings: currentPayment > 0 ? Math.max(0, currentPayment - principalAndInterest) : 0,
-      newRate: newInterestRate * 100,
-      currentRate: currentPayment > 0 ? currentRate * 100 : undefined
+      newRate: (currentPayment > 0 && currentRate > 0) ? newInterestRate * 100 : undefined,
+      currentRate: (currentPayment > 0 && currentRate > 0) ? currentRate * 100 : undefined
     };
 
     setCalculatorResults(results);
@@ -921,6 +921,11 @@ export default function EnhancedQuickQuote() {
                       <span className="text-base font-normal text-slate-600 ml-2">
                         {calculatorResults.loanType === 'HELOC' ? '' : 'Principal & Interest'}
                       </span>
+                    </div>
+                    
+                    {/* DEBUG: Temporary diagnostic info */}
+                    <div style={{fontSize: '10px', color: 'red', border: '1px solid red', padding: '2px'}}>
+                      DEBUG: currentPayment={calculatorResults.currentPayment}, currentRate={calculatorResults.currentRate}, newRate={calculatorResults.newRate}
                     </div>
 
                     {/* Show current vs new comparison for refinances */}

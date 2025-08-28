@@ -245,7 +245,7 @@ export default function EnhancedQuickQuote() {
       currentPayment, // Add current payment for comparison
       monthlySavings: currentPayment > 0 ? Math.max(0, currentPayment - principalAndInterest) : 0,
       newRate: newInterestRate * 100,
-      currentRate: currentRate * 100
+      currentRate: currentPayment > 0 ? currentRate * 100 : undefined
     };
 
     setCalculatorResults(results);
@@ -922,14 +922,18 @@ export default function EnhancedQuickQuote() {
                     {(calculatorResults.currentPayment && calculatorResults.currentPayment > 0) && (
                       <div className="mb-3 p-3 bg-blue-100 rounded-lg">
                         <div className="grid grid-cols-2 gap-4 text-sm">
-                          <div>
-                            <span className="text-slate-600">Current Rate:</span>
-                            <div className="font-semibold">{calculatorResults.currentRate?.toFixed(2)}%</div>
-                          </div>
-                          <div>
-                            <span className="text-slate-600">New Rate:</span>
-                            <div className="font-semibold text-green-700">{calculatorResults.newRate?.toFixed(2)}%</div>
-                          </div>
+                          {calculatorResults.currentRate && calculatorResults.currentRate > 0 && (
+                            <>
+                              <div>
+                                <span className="text-slate-600">Current Rate:</span>
+                                <div className="font-semibold">{calculatorResults.currentRate.toFixed(2)}%</div>
+                              </div>
+                              <div>
+                                <span className="text-slate-600">New Rate:</span>
+                                <div className="font-semibold text-green-700">{calculatorResults.newRate?.toFixed(2)}%</div>
+                              </div>
+                            </>
+                          )}
                           <div>
                             <span className="text-slate-600">Current P&I:</span>
                             <div className="font-semibold">${Math.round(calculatorResults.currentPayment).toLocaleString()}</div>

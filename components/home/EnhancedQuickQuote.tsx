@@ -601,7 +601,6 @@ export default function EnhancedQuickQuote() {
                       <option value="FHA">FHA</option>
                       <option value="VA">VA</option>
                       <option value="Jumbo">Jumbo</option>
-                      <option value="USDA">USDA</option>
                     </select>
                   </div>
                 )}
@@ -928,7 +927,7 @@ export default function EnhancedQuickQuote() {
                     {(calculatorResults.currentPayment && calculatorResults.currentPayment > 0) && (
                       <div className="mb-3 p-3 bg-blue-100 rounded-lg">
                         <div className="grid grid-cols-2 gap-4 text-sm">
-                          {calculatorResults.currentRate && calculatorResults.currentRate > 0 && (
+                          {calculatorResults.currentRate && calculatorResults.currentRate > 0 && calculatorResults.newRate && calculatorResults.newRate > 0 && (
                             <>
                               <div>
                                 <span className="text-slate-600">Current Rate:</span>
@@ -936,7 +935,7 @@ export default function EnhancedQuickQuote() {
                               </div>
                               <div>
                                 <span className="text-slate-600">New Rate:</span>
-                                <div className="font-semibold text-green-700">{calculatorResults.newRate?.toFixed(2)}%</div>
+                                <div className="font-semibold text-green-700">{calculatorResults.newRate.toFixed(2)}%</div>
                               </div>
                             </>
                           )}

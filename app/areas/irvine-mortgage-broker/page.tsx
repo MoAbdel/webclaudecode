@@ -56,7 +56,7 @@ export default function IrvineMortgageBrokerPage() {
           },
           {
             question: "Do I need a jumbo loan to buy in Irvine?",
-            answer: "85% of Irvine homes exceed the 2025 conforming loan limit of $1,089,300, requiring jumbo loan financing. Mo Abdel specializes in jumbo loans for Irvine properties."
+            answer: "85% of Irvine homes exceed the 2025 conforming loan limit of $1,209,750, requiring jumbo loan financing. Mo Abdel specializes in jumbo loans for Irvine properties."
           },
           {
             question: "Which Irvine neighborhoods are best for families?",
@@ -112,7 +112,7 @@ export default function IrvineMortgageBrokerPage() {
     },
     {
       title: 'Jumbo Loans',
-      description: 'Financing for Irvine\'s higher-priced homes above $766,550',
+      description: 'Financing for Irvine\'s higher-priced homes above $1,209,750',
       benefits: ['Competitive jumbo rates', 'Up to $3M+ loan amounts', 'Flexible down payments'],
       icon: <Building className="w-8 h-8 text-green-600" />
     },
@@ -371,11 +371,11 @@ export default function IrvineMortgageBrokerPage() {
             <div className="space-y-4">
               <div className="flex items-center justify-between">
                 <span className="text-slate-700">Loan Limits (Conforming):</span>
-                <span className="font-bold" data-factual="loan-limit">$766,550</span>
+                <span className="font-bold" data-factual="loan-limit">$1,209,750</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-slate-700">Jumbo Loan Minimum:</span>
-                <span className="font-bold" data-factual="loan-minimum">$766,551+</span>
+                <span className="font-bold" data-factual="loan-minimum">$1,209,751+</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-slate-700">Average HELOC Amount:</span>
@@ -424,7 +424,7 @@ export default function IrvineMortgageBrokerPage() {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600">
-                  Yes, many Irvine homes exceed the 2025 conforming loan limit of $1,089,300, 
+                  Yes, many Irvine homes exceed the 2025 conforming loan limit of $1,209,750, 
                   requiring jumbo financing. We specialize in competitive jumbo loan rates 
                   through our lender network.
                 </p>

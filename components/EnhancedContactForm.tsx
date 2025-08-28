@@ -878,29 +878,25 @@ export default function EnhancedContactForm() {
                   </div>
 
                   {/* Show current vs new comparison for refinances */}
-                  {(calculatorResults.currentPayment && calculatorResults.currentPayment > 0) && (
+                  {(calculatorResults.currentPayment && calculatorResults.currentPayment > 0 && calculatorResults.currentRate && calculatorResults.currentRate > 0 && calculatorResults.newRate && calculatorResults.newRate > 0) && (
                     <div className="mb-3 p-3 bg-blue-100 rounded-lg">
                       <div className="grid grid-cols-2 gap-4 text-sm">
-                        {calculatorResults.currentRate && calculatorResults.currentRate > 0 && calculatorResults.newRate && calculatorResults.newRate > 0 && (
-                          <>
-                            <div>
-                              <span className="text-slate-600">Current Rate:</span>
-                              <div className="font-semibold">{calculatorResults.currentRate.toFixed(2)}%</div>
-                            </div>
-                            <div>
-                              <span className="text-slate-600">New Rate:</span>
-                              <div className="font-semibold text-green-700">{calculatorResults.newRate.toFixed(2)}%</div>
-                            </div>
-                            <div>
-                              <span className="text-slate-600">Current P&I:</span>
-                              <div className="font-semibold">${Math.round(calculatorResults.currentPayment).toLocaleString()}</div>
-                            </div>
-                            <div>
-                              <span className="text-slate-600">New P&I:</span>
-                              <div className="font-semibold text-green-700">${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
-                            </div>
-                          </>
-                        )}
+                        <div>
+                          <span className="text-slate-600">Current Rate:</span>
+                          <div className="font-semibold">{calculatorResults.currentRate.toFixed(2)}%</div>
+                        </div>
+                        <div>
+                          <span className="text-slate-600">New Rate:</span>
+                          <div className="font-semibold text-green-700">{calculatorResults.newRate.toFixed(2)}%</div>
+                        </div>
+                        <div>
+                          <span className="text-slate-600">Current P&I:</span>
+                          <div className="font-semibold">${Math.round(calculatorResults.currentPayment).toLocaleString()}</div>
+                        </div>
+                        <div>
+                          <span className="text-slate-600">New P&I:</span>
+                          <div className="font-semibold text-green-700">${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
+                        </div>
                       </div>
                       {calculatorResults.monthlySavings && calculatorResults.monthlySavings > 0 && (
                         <div className="mt-2 text-center">

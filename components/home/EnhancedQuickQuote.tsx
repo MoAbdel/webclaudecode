@@ -88,10 +88,6 @@ interface CalculatorResults {
   loanType: string;
   isJumbo: boolean;
   availablePrograms: string[];
-  currentPayment?: number;
-  monthlySavings?: number;
-  newRate?: number;
-  currentRate?: number;
 }
 
 export default function EnhancedQuickQuote() {
@@ -205,21 +201,7 @@ export default function EnhancedQuickQuote() {
                             (Math.pow(1 + monthlyRate, numberOfPayments) - 1);
     }
     
-    // Calculate current payment for refinance comparison
-    let currentPayment = 0;
-    if ((formData.loanPurpose === 'refinance' || formData.loanPurpose === 'cash-out') && currentRate > 0) {
-      const currentMonthlyRate = currentRate / 12;
-      const currentLoanBalance = parseFloat(formData.currentLoanAmount.replace(/[^0-9.]/g, '')) || 0;
-      if (currentLoanBalance > 0) {
-        const numberOfPayments = 30 * 12; // 30 years
-        currentPayment = currentLoanBalance * (currentMonthlyRate * Math.pow(1 + currentMonthlyRate, numberOfPayments)) / 
-                        (Math.pow(1 + currentMonthlyRate, numberOfPayments) - 1);
-        // Ensure the result is valid
-        if (isNaN(currentPayment) || currentPayment <= 0) {
-          currentPayment = 0;
-        }
-      }
-    }
+    // Remove refinance comparison calculations to eliminate zero display issues
     
     // Calculate property tax (based on home value)
     const taxableValue = Math.max((homeValue || loanAmount * 1.25) - ORANGE_COUNTY_DATA.homeownersExemption, 0);
@@ -241,11 +223,7 @@ export default function EnhancedQuickQuote() {
       insurance,
       loanType,
       isJumbo: loanAmount > ORANGE_COUNTY_DATA.conformingLimit,
-      availablePrograms,
-      currentPayment, // Add current payment for comparison
-      monthlySavings: currentPayment > 0 ? Math.max(0, currentPayment - principalAndInterest) : 0,
-      newRate: (currentPayment > 0 && currentRate > 0) ? newInterestRate * 100 : undefined,
-      currentRate: (currentPayment > 0 && currentRate > 0) ? currentRate * 100 : undefined
+      availablePrograms
     };
 
     setCalculatorResults(results);
@@ -922,42 +900,6 @@ export default function EnhancedQuickQuote() {
                         {calculatorResults.loanType === 'HELOC' ? '' : 'Principal & Interest'}
                       </span>
                     </div>
-                    
-                    {/* DEBUG: Temporary diagnostic info */}
-                    <div style={{fontSize: '10px', color: 'red', border: '1px solid red', padding: '2px'}}>
-                      DEBUG: currentPayment={calculatorResults.currentPayment}, currentRate={calculatorResults.currentRate}, newRate={calculatorResults.newRate}
-                    </div>
-
-                    {/* Show current vs new comparison for refinances */}
-                    {(calculatorResults.currentPayment && calculatorResults.currentPayment > 0 && calculatorResults.currentRate && calculatorResults.currentRate > 0 && calculatorResults.newRate && calculatorResults.newRate > 0) && (
-                      <div className="mb-3 p-3 bg-blue-100 rounded-lg">
-                        <div className="grid grid-cols-2 gap-4 text-sm">
-                          <div>
-                            <span className="text-slate-600">Current Rate:</span>
-                            <div className="font-semibold">{calculatorResults.currentRate.toFixed(2)}%</div>
-                          </div>
-                          <div>
-                            <span className="text-slate-600">New Rate:</span>
-                            <div className="font-semibold text-green-700">{calculatorResults.newRate.toFixed(2)}%</div>
-                          </div>
-                          <div>
-                            <span className="text-slate-600">Current P&I:</span>
-                            <div className="font-semibold">${Math.round(calculatorResults.currentPayment).toLocaleString()}</div>
-                          </div>
-                          <div>
-                            <span className="text-slate-600">New P&I:</span>
-                            <div className="font-semibold text-green-700">${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
-                          </div>
-                        </div>
-                        {calculatorResults.monthlySavings && calculatorResults.monthlySavings > 0 && (
-                          <div className="mt-2 text-center">
-                            <span className="text-green-700 font-bold">
-                              Monthly Savings: ${Math.round(calculatorResults.monthlySavings).toLocaleString()}
-                            </span>
-                          </div>
-                        )}
-                      </div>
-                    )}
 
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm text-slate-600">Loan Type:</span>

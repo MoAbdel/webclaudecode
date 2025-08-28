@@ -90,6 +90,7 @@ interface CalculatorResults {
   availablePrograms: string[];
   currentPayment?: number;
   monthlySavings?: number;
+  monthlyDifference?: number; // Can be positive (savings) or negative (cost increase)
   newRate?: number;
   currentRate?: number;
 }
@@ -245,7 +246,8 @@ export default function EnhancedContactForm() {
       isJumbo,
       availablePrograms,
       currentPayment, // Add current payment for comparison
-      monthlySavings: currentPayment > 0 ? Math.max(0, currentPayment - principalAndInterest) : 0,
+      monthlySavings: currentPayment > 0 ? Math.max(0, currentPayment - principalAndInterest) : 0, // Legacy field for positive savings only
+      monthlyDifference: currentPayment > 0 ? (currentPayment - principalAndInterest) : 0, // Actual difference (can be negative)
       newRate: (currentPayment > 0 && currentRate > 0) ? newInterestRate * 100 : undefined,
       currentRate: (currentPayment > 0 && currentRate > 0) ? currentRate * 100 : undefined
     };
@@ -895,14 +897,27 @@ export default function EnhancedContactForm() {
                         </div>
                         <div>
                           <span className="text-slate-600">New P&I:</span>
-                          <div className="font-semibold text-green-700">${Math.round(calculatorResults.principalAndInterest).toLocaleString()}</div>
+                          <div className={`font-semibold ${calculatorResults.monthlyDifference && calculatorResults.monthlyDifference < 0 ? 'text-red-600' : 'text-green-700'}`}>
+                            ${Math.round(calculatorResults.principalAndInterest).toLocaleString()}
+                          </div>
                         </div>
                       </div>
-                      {calculatorResults.monthlySavings && calculatorResults.monthlySavings > 0 && (
+                      {calculatorResults.monthlyDifference && Math.abs(calculatorResults.monthlyDifference) > 5 && (
                         <div className="mt-2 text-center">
-                          <span className="text-green-700 font-bold">
-                            Monthly Savings: ${Math.round(calculatorResults.monthlySavings).toLocaleString()}
-                          </span>
+                          {calculatorResults.monthlyDifference > 0 ? (
+                            <span className="text-green-700 font-bold">
+                              Monthly Savings: ${Math.round(calculatorResults.monthlyDifference).toLocaleString()}
+                            </span>
+                          ) : (
+                            <div className="space-y-1">
+                              <span className="text-red-600 font-bold">
+                                Monthly Increase: ${Math.round(Math.abs(calculatorResults.monthlyDifference)).toLocaleString()}
+                              </span>
+                              <div className="text-xs text-red-600">
+                                ⚠️ Your current rate is better - refinancing not recommended
+                              </div>
+                            </div>
+                          )}
                         </div>
                       )}
                     </div>

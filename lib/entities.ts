@@ -114,9 +114,9 @@ let mortgageRates: MortgageRateData[] = [
   {
     id: '6',
     loan_type: '7_6_sofr_arm',
-    rate: 6.11,
-    apr: 6.280,
-    display_name: '7/6 SOFR ARM',
+    rate: 5.95,
+    apr: 6.200,
+    display_name: '7/6 ARM',
     min_down_payment: '5%',
     is_active: true,
     effective_date: new Date().toISOString().split('T')[0]

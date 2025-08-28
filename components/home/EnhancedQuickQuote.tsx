@@ -266,6 +266,12 @@ export default function EnhancedQuickQuote() {
   }, [formData.loanAmount, formData.homeValue, formData.loanPurpose, formData.currentLoanAmount, formData.currentRate, formData.cashOutAmount, formData.loanType, currentStep]);
 
   const handleInputChange = (field: keyof FormData, value: string) => {
+    // Redirect to non-QM loan page when investment is selected
+    if (field === 'loanPurpose' && value === 'investment') {
+      window.location.href = '/loan-programs/non-qm-loans';
+      return;
+    }
+    
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -914,7 +920,7 @@ export default function EnhancedQuickQuote() {
                     <div className="text-2xl font-bold text-green-700 mb-2">
                       ${Math.round(calculatorResults.monthlyPayment).toLocaleString()}
                       <span className="text-base font-normal text-slate-600 ml-2">
-                        {calculatorResults.loanType === 'HELOC' ? 'Interest Only' : 'Principal & Interest'}
+                        {calculatorResults.loanType === 'HELOC' ? '' : 'Principal & Interest'}
                       </span>
                     </div>
 
@@ -962,7 +968,7 @@ export default function EnhancedQuickQuote() {
 
                     <div className="text-sm text-slate-600 text-center">
                       <div className="mt-2 text-xs text-slate-500">
-                        *{calculatorResults.loanType === 'HELOC' ? 'Interest only payment during draw period (10 years)' : 'Principal & Interest only'}. 
+                        *{calculatorResults.loanType === 'HELOC' ? 'Monthly payment estimate' : 'Principal & Interest only'}. 
                         Property tax and insurance not included. Rates shown are sample estimates for educational purposes. 
                         Your actual rate and payment will be determined after application, credit check, 
                         and income verification. NMLS #1426884.

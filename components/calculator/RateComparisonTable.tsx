@@ -25,7 +25,7 @@ export default function RateComparisonTable() {
           const fha = result.data.find((r: any) => r.loan_type.includes('FHA'));
           const va = result.data.find((r: any) => r.loan_type.includes('VA'));
           const jumbo = result.data.find((r: any) => r.loan_type.includes('Jumbo'));
-          const arm = result.data.find((r: any) => r.loan_type.includes('5/1 ARM'));
+          const arm = result.data.find((r: any) => r.loan_type.includes('7/6 ARM'));
           
           setRates({
             thirtyYear: thirty ? parseFloat(thirty.rate) : 6.62,
@@ -33,7 +33,7 @@ export default function RateComparisonTable() {
             fhaThirtyYear: fha ? parseFloat(fha.rate) : 6.22,
             vaThirtyYear: va ? parseFloat(va.rate) : 6.23,
             jumboThirtyYear: jumbo ? parseFloat(jumbo.rate) : 6.67,
-            armFiveOne: arm ? parseFloat(arm.rate) : 6.11
+            armFiveOne: arm ? parseFloat(arm.rate) : 5.95
           });
         }
       } catch (error) {
@@ -101,7 +101,7 @@ export default function RateComparisonTable() {
       bestFor: 'High-value homes'
     },
     {
-      name: '5/1 ARM',
+      name: '7/6 ARM',
       rate: rates.armFiveOne,
       apr: rates.armFiveOne + 0.25,
       payment: calculateMonthlyPayment(loanAmount, rates.armFiveOne, 30),

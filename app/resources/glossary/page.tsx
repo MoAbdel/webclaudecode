@@ -33,7 +33,7 @@ export default function GlossaryPage() {
   const glossaryTerms = [
     {
       term: 'Adjustable Rate Mortgage (ARM)',
-      definition: 'A mortgage loan where the interest rate can change periodically based on market conditions. Common types include 5/1, 7/1, and 10/1 ARMs.',
+      definition: 'A mortgage loan where the interest rate can change periodically based on market conditions. Common types include 7/6, 5/1, 7/1, and 10/1 ARMs.',
       category: 'Loan Types',
       related: ['Fixed Rate Mortgage', 'Interest Rate', 'Rate Adjustment']
     },

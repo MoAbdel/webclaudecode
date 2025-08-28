@@ -268,6 +268,12 @@ export default function EnhancedContactForm() {
   }, [formData.loanAmount, formData.homeValue, formData.loanPurpose, formData.currentLoanAmount, formData.currentRate, formData.cashOutAmount, formData.loanType]);
 
   const handleInputChange = (field: string, value: string) => {
+    // Redirect to non-QM loan page when investment is selected
+    if (field === 'loanPurpose' && value === 'investment') {
+      window.location.href = '/loan-programs/non-qm-loans';
+      return;
+    }
+    
     setFormData(prev => ({
       ...prev,
       [field]: value
@@ -868,7 +874,7 @@ export default function EnhancedContactForm() {
                   <div className="text-2xl font-bold text-green-700 mb-2">
                     ${Math.round(calculatorResults.monthlyPayment).toLocaleString()}
                     <span className="text-base font-normal text-slate-600 ml-2">
-                      {calculatorResults.loanType === 'HELOC' ? 'Interest Only' : 'Principal & Interest'}
+                      {calculatorResults.loanType === 'HELOC' ? '' : 'Principal & Interest'}
                     </span>
                   </div>
 
@@ -909,7 +915,7 @@ export default function EnhancedContactForm() {
 
                   <div className="text-sm text-slate-600 text-center">
                     <div className="mt-2 text-xs text-slate-500">
-                      *{calculatorResults.loanType === 'HELOC' ? 'Interest only payment during draw period (10 years)' : 'Principal & Interest only'}. 
+                      *{calculatorResults.loanType === 'HELOC' ? 'Monthly payment estimate' : 'Principal & Interest only'}. 
                       Estimate based on {calculatorResults.loanType || 'current'} loan at {calculatorResults.newRate?.toFixed(2)}%. 
                       {calculatorResults.loanType !== 'HELOC' && 'Does not include taxes, insurance, or HOA. '}
                       Actual rates and terms may vary.

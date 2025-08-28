@@ -1017,7 +1017,23 @@ export default function EnhancedContactForm() {
                     </div>
                     <div>
                       <span className="text-slate-600">Loan Amount:</span>
-                      <div className="font-semibold">${formData.loanAmount}</div>
+                      <div className="font-semibold">
+                        {(() => {
+                          let amount = 0;
+                          if (formData.loanPurpose === 'purchase') {
+                            amount = parseFloat(formData.loanAmount?.replace(/[^0-9.]/g, '') || '0');
+                          } else if (formData.loanPurpose === 'refinance') {
+                            amount = parseFloat(formData.currentLoanAmount?.replace(/[^0-9.]/g, '') || '0');
+                          } else if (formData.loanPurpose === 'cash-out') {
+                            const currentLoan = parseFloat(formData.currentLoanAmount?.replace(/[^0-9.]/g, '') || '0');
+                            const cashOut = parseFloat(formData.cashOutAmount?.replace(/[^0-9.]/g, '') || '0');
+                            amount = currentLoan + cashOut;
+                          } else {
+                            amount = parseFloat(formData.loanAmount?.replace(/[^0-9.]/g, '') || '0');
+                          }
+                          return amount > 0 ? `$${amount.toLocaleString()}` : 'N/A';
+                        })()}
+                      </div>
                     </div>
                     <div>
                       <span className="text-slate-600">Est. Payment:</span>

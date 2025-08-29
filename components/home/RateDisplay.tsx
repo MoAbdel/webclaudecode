@@ -10,37 +10,37 @@ import Link from "next/link";
 const defaultRateData = [
   {
     loanType: "30-Year Fixed Conventional",
-    rate: "6.59%",
+    rate: "6.52%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.28%",
+    change: "-0.10",
     icon: Home,
     description: "Perfect for stable payments over 30 years"
   },
   {
     loanType: "15-Year Fixed Conventional",
-    rate: "5.97%",
+    rate: "5.90%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.28%",
+    change: "-0.07",
     icon: TrendingDown,
     description: "Build equity faster with higher payments"
   },
   {
-    loanType: "FHA 30-Year Fixed",
-    rate: "6.17%",
+    loanType: "30-Year FHA",
+    rate: "6.10%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.33%",
+    change: "-0.12",
     icon: Users,
     description: "Low down payment option for first-time buyers"
   },
   {
-    loanType: "Jumbo 30-Year Fixed",
-    rate: "6.70%",
+    loanType: "30-Year Jumbo",
+    rate: "6.50%",
     apr: "APR may vary",
-    trend: "stable",
-    change: "Stable this week",
+    trend: "down",
+    change: "-0.17",
     icon: Building,
     description: "For loan amounts above conventional limits"
   }
@@ -55,7 +55,7 @@ export default function RateDisplay() {
     setLoading(false);
   }, []);
   return (
-    <section className="py-16 bg-white">
+    <section className="py-16 bg-gradient-to-br from-blue-50 to-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">

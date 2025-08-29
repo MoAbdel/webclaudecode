@@ -3,12 +3,16 @@ import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
-import ContactForm from '@/components/ContactForm';
+import EnhancedContactForm from '@/components/EnhancedContactForm';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = generateMetadata({
   title: seoData.Contact.title,
   description: seoData.Contact.description,
-};
+  keywords: 'contact mortgage broker, Orange County mortgage, Mo Abdel contact, NMLS 1426884, mortgage application, home loan consultation',
+  path: '/contact',
+  type: 'website'
+});
 
 export default function ContactPage() {
   return (
@@ -120,8 +124,8 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <ContactForm />
+          {/* Enhanced Contact Form */}
+          <EnhancedContactForm />
         </div>
 
         {/* Service Areas */}

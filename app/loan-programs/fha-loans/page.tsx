@@ -3,6 +3,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Button } from '@/components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import TopicClusterLinks from '@/components/seo/TopicClusterLinks';
 import { Home, Shield, Users, CheckCircle, AlertCircle, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -434,6 +435,12 @@ export default function FHALoansPage() {
             </p>
           </div>
         </div>
+
+        {/* Topic Cluster Links */}
+        <TopicClusterLinks 
+          currentPage="/loan-programs/fha-loans" 
+          clusterType="loan-programs" 
+        />
       </div>
     </div>
   );

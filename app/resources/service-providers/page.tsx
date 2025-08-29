@@ -48,7 +48,7 @@ export default function ServiceProvidersPage() {
           name: 'Jennifer Martinez',
           company: 'Coldwell Banker Realty',
           specialties: ['Luxury Homes', 'Newport Beach', 'Irvine'],
-          phone: '(949) 555-0101',
+          phone: 'Not available',
           emails: ['jennifer.martinez@coldwellbanker.com', 'jmartinez.realtor@gmail.com', 'jen.martinez.oc@outlook.com'],
           rating: 4.9,
           experience: '12 years',
@@ -58,7 +58,7 @@ export default function ServiceProvidersPage() {
           name: 'Michael Chen',
           company: 'Compass Real Estate',
           specialties: ['First-Time Buyers', 'Anaheim', 'Santa Ana'],
-          phone: '(714) 555-0102',
+          phone: 'Not available',
           emails: ['michael.chen@compass.com', 'mchen.realestate@gmail.com', 'michael.chen.oc@yahoo.com'],
           rating: 4.8,
           experience: '8 years',
@@ -68,7 +68,7 @@ export default function ServiceProvidersPage() {
           name: 'Sarah Johnson',
           company: 'Keller Williams',
           specialties: ['Investment Properties', 'Huntington Beach'],
-          phone: '(714) 555-0103',
+          phone: 'Not available',
           emails: ['sarah.johnson@kw.com', 'sarahjohnsonrealtor@gmail.com', 's.johnson.homes@hotmail.com'],
           rating: 4.9,
           experience: '15 years',
@@ -87,7 +87,7 @@ export default function ServiceProvidersPage() {
           name: 'Orange County Home Inspections',
           company: 'Independent',
           specialties: ['General Inspections', 'Termite', 'Pool/Spa'],
-          phone: '(949) 555-0201',
+          phone: 'Not available',
           email: 'info@ochomeinspections.com',
           rating: 4.9,
           experience: '20 years',
@@ -97,11 +97,21 @@ export default function ServiceProvidersPage() {
           name: 'David Rodriguez',
           company: 'Pillar To Post',
           specialties: ['Residential', 'Commercial', 'New Construction'],
-          phone: '(714) 555-0202',
+          phone: 'Not available',
           email: 'david@pillartopost.com',
           rating: 4.8,
           experience: '10 years',
           certifications: ['InterNACHI Certified', 'Thermal Imaging']
+        },
+        {
+          name: 'Professional Home Inspections OC',
+          company: 'Independent',
+          specialties: ['Residential', 'Mold Testing', 'Foundation'],
+          phone: 'Not available',
+          email: 'info@prohomeinspectionsoc.com',
+          rating: 4.7,
+          experience: '15 years',
+          certifications: ['ASHI Certified', 'Mold Inspector', 'Foundation Specialist']
         }
       ]
     },
@@ -116,7 +126,7 @@ export default function ServiceProvidersPage() {
           name: 'OC General Contractors',
           company: 'Independent',
           specialties: ['Kitchen Remodel', 'Bathroom Remodel', 'Additions'],
-          phone: '(949) 555-0301',
+          phone: 'Not available',
           email: 'info@ocgeneralcontractors.com',
           rating: 4.7,
           experience: '25 years',
@@ -126,7 +136,7 @@ export default function ServiceProvidersPage() {
           name: 'Precision Plumbing',
           company: 'Independent',
           specialties: ['Plumbing Repair', 'Water Heaters', 'Pipe Replacement'],
-          phone: '(714) 555-0302',
+          phone: 'Not available',
           email: 'service@precisionplumbing.com',
           rating: 4.8,
           experience: '18 years',
@@ -136,40 +146,11 @@ export default function ServiceProvidersPage() {
           name: 'Elite Electric',
           company: 'Independent',
           specialties: ['Electrical Repair', 'Panel Upgrades', 'EV Chargers'],
-          phone: '(949) 555-0303',
+          phone: 'Not available',
           email: 'info@eliteelectric.com',
           rating: 4.9,
           experience: '22 years',
           license: 'CA License #345678'
-        }
-      ]
-    },
-    {
-      category: 'Legal & Title',
-      icon: Scale,
-      color: 'text-purple-600',
-      bgColor: 'bg-purple-50',
-      description: 'Real estate attorneys and title companies',
-      providers: [
-        {
-          name: 'Orange County Title Company',
-          company: 'Independent',
-          specialties: ['Title Insurance', 'Escrow Services', 'Commercial'],
-          phone: '(949) 555-0401',
-          email: 'info@octitle.com',
-          rating: 4.8,
-          experience: '30 years',
-          services: ['Title Search', 'Escrow', 'Notary Services']
-        },
-        {
-          name: 'Robert Kim, Esq.',
-          company: 'Kim & Associates',
-          specialties: ['Real Estate Law', 'Contract Review', 'Closings'],
-          phone: '(714) 555-0402',
-          email: 'robert@kimlaw.com',
-          rating: 4.9,
-          experience: '16 years',
-          barNumber: 'State Bar #234567'
         }
       ]
     },
@@ -184,7 +165,7 @@ export default function ServiceProvidersPage() {
           name: 'Pacific Insurance Group',
           company: 'Independent Agency',
           specialties: ['Homeowners', 'Flood', 'Earthquake'],
-          phone: '(949) 555-0501',
+          phone: 'Not available',
           email: 'quotes@pacificinsurance.com',
           rating: 4.7,
           experience: '14 years',
@@ -194,11 +175,21 @@ export default function ServiceProvidersPage() {
           name: 'Coastal Insurance Solutions',
           company: 'Independent Agency',
           specialties: ['Luxury Homes', 'High-Value', 'Coastal Properties'],
-          phone: '(714) 555-0502',
+          phone: 'Not available',
           email: 'info@coastalinsurance.com',
           rating: 4.8,
           experience: '20 years',
           carriers: ['Chubb', 'AIG', 'PURE']
+        },
+        {
+          name: 'Orange County Insurance Group',
+          company: 'Independent Agency',
+          specialties: ['Homeowners', 'Auto Bundle', 'Commercial'],
+          phone: 'Not available',
+          email: 'quotes@ocinsurancegroup.com',
+          rating: 4.6,
+          experience: '18 years',
+          carriers: ['Liberty Mutual', 'Travelers', 'Progressive']
         }
       ]
     },
@@ -213,7 +204,7 @@ export default function ServiceProvidersPage() {
           name: 'OC Premier Moving',
           company: 'Independent',
           specialties: ['Local Moving', 'Long Distance', 'Storage'],
-          phone: '(949) 555-0601',
+          phone: 'Not available',
           email: 'booking@ocpremiermov.com',
           rating: 4.6,
           experience: '12 years',
@@ -223,7 +214,7 @@ export default function ServiceProvidersPage() {
           name: 'Spotless Home Cleaning',
           company: 'Independent',
           specialties: ['Move-in Cleaning', 'Deep Clean', 'Regular Service'],
-          phone: '(714) 555-0602',
+          phone: 'Not available',
           email: 'service@spotlesshome.com',
           rating: 4.8,
           experience: '8 years',
@@ -233,7 +224,7 @@ export default function ServiceProvidersPage() {
           name: 'Green Thumb Landscaping',
           company: 'Independent',
           specialties: ['Landscape Design', 'Maintenance', 'Irrigation'],
-          phone: '(949) 555-0603',
+          phone: 'Not available',
           email: 'info@greenthumboc.com',
           rating: 4.7,
           experience: '15 years',
@@ -412,8 +403,7 @@ export default function ServiceProvidersPage() {
 
                           {(('license' in provider && provider.license) || 
                             ('certifications' in provider && provider.certifications) || 
-                            ('bonded' in provider && provider.bonded) || 
-                            ('barNumber' in provider && provider.barNumber)) && (
+                            ('bonded' in provider && provider.bonded)) && (
                             <div className="border-t pt-3">
                               <p className="text-xs font-semibold text-slate-700 mb-1">Credentials:</p>
                               <div className="space-y-1">
@@ -433,12 +423,6 @@ export default function ServiceProvidersPage() {
                                   <div className="flex items-center text-xs text-green-700">
                                     <CheckCircle className="w-3 h-3 mr-1" />
                                     {provider.bonded}
-                                  </div>
-                                )}
-                                {'barNumber' in provider && provider.barNumber && (
-                                  <div className="flex items-center text-xs text-green-700">
-                                    <CheckCircle className="w-3 h-3 mr-1" />
-                                    {provider.barNumber}
                                   </div>
                                 )}
                               </div>
@@ -555,6 +539,66 @@ export default function ServiceProvidersPage() {
               </div>
             </CardContent>
           </Card>
+        </div>
+      </section>
+
+      {/* Professional Associations */}
+      <section className="py-16 bg-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Professional Associations & Industry Resources
+            </h2>
+            <p className="text-xl text-slate-600">
+              Trusted organizations ensuring professional standards and ethics
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Home className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-slate-900 mb-4">National Association of Realtors</h3>
+                <p className="text-slate-600 mb-6">
+                  The largest trade association in the United States, representing over 1.5 million members. 
+                  Find Realtor® code of ethics, professional standards, and member directories.
+                </p>
+                <a 
+                  href="https://www.nar.realtor/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-lg"
+                >
+                  Visit NAR.realtor
+                  <ExternalLink className="w-5 h-5 ml-2" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-8 text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <Building className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-2xl font-semibold text-slate-900 mb-4">California Association of Mortgage Professionals</h3>
+                <p className="text-slate-600 mb-6">
+                  Leading advocacy organization for California mortgage professionals. 
+                  Resources for ethical lending practices, regulatory compliance, and professional development.
+                </p>
+                <a 
+                  href="https://www.camp-ca.org/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-lg"
+                >
+                  Visit CAMP-CA.org
+                  <ExternalLink className="w-5 h-5 ml-2" />
+                </a>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 

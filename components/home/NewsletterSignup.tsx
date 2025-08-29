@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Input } from '@/components/ui/Input';
+import { Label } from '@/components/ui/Label';
 import SuccessPopup from '@/components/ui/SuccessPopup';
 import { Mail, TrendingUp, Shield, CheckCircle } from 'lucide-react';
 
@@ -106,7 +107,9 @@ export default function NewsletterSignup() {
             <form onSubmit={handleSubmit} className="max-w-2xl mx-auto mb-8">
               <div className="flex flex-col sm:flex-row gap-4">
                 <div className="flex-1">
+                  <Label htmlFor="newsletter-first-name" className="sr-only">First Name</Label>
                   <Input
+                    id="newsletter-first-name"
                     type="text"
                     placeholder="First Name"
                     value={firstName}
@@ -116,7 +119,9 @@ export default function NewsletterSignup() {
                   />
                 </div>
                 <div className="flex-1">
+                  <Label htmlFor="newsletter-email" className="sr-only">Email Address</Label>
                   <Input
+                    id="newsletter-email"
                     type="email"
                     placeholder="Your Email Address"
                     value={email}

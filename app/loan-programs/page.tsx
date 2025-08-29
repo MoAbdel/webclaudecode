@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
-import { Home, Shield, Users, TrendingUp, TrendingDown, DollarSign } from 'lucide-react';
+import { Home, Shield, Users, TrendingUp, TrendingDown, DollarSign, Zap } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: seoData.Programs.title,
@@ -107,6 +107,16 @@ export default function ProgramsPage() {
                 </div>
               </div>
 
+              <div className="bg-green-100 border-2 border-green-300 rounded-lg p-4 mb-4">
+                <div className="flex items-center justify-center mb-2">
+                  <Zap className="w-5 h-5 text-green-600 mr-2" />
+                  <span className="text-green-800 font-bold">NEW: 5-Minute Pre-Approval</span>
+                </div>
+                <p className="text-green-700 text-center text-sm">
+                  Revolutionary fast-track program • Funds in 5-7 business days
+                </p>
+              </div>
+
               <div className="bg-blue-200 rounded-lg p-4 mb-6">
                 <p className="text-blue-900 font-bold text-center text-lg">
                   Access $50K - $500K • Prime + 0% intro rates available
@@ -132,11 +142,23 @@ export default function ProgramsPage() {
                 </div>
               </div>
               
-              <Link href="/programs/heloc">
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold">
-                  Get HELOC Details & Rates
-                </Button>
-              </Link>
+              <div className="flex flex-col gap-3">
+                <a 
+                  href="https://axenmortgageheloc.com/account/heloc/register?referrer=0501bc94-1ee9-4764-9d93-e81183e82331"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Button className="w-full bg-green-600 hover:bg-green-700 text-white py-3 text-lg font-semibold flex items-center justify-center">
+                    <Zap className="w-5 h-5 mr-2" />
+                    5-Min Pre-Approval
+                  </Button>
+                </a>
+                <Link href="/heloc-orange-county">
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 text-lg font-semibold">
+                    Traditional HELOC Details
+                  </Button>
+                </Link>
+              </div>
             </div>
 
             {/* HELOAN */}

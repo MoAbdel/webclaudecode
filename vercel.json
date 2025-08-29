@@ -6,6 +6,66 @@
   "outputDirectory": ".next",
   "headers": [
     {
+      "source": "/_next/static/css/(.*)\\.css",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/css"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/_next/static/js/(.*)\\.js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/_next/static/chunks/(.*)\\.js",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/javascript"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/llms.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain; charset=utf-8"
+        },
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        },
+        {
+          "key": "X-Robots-Tag",
+          "value": "index, follow"
+        }
+      ]
+    },
+    {
       "source": "/(.*)",
       "headers": [
         {
@@ -34,6 +94,11 @@
   "redirects": [
     {
       "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/index.php", 
       "destination": "/",
       "permanent": true
     },
@@ -69,9 +134,106 @@
     },
     {
       "source": "/neighborhoods",
-      "destination": "/neighborhood-guide",
+      "destination": "/neighborhood-guide", 
+      "permanent": true
+    },
+    {
+      "source": "/rates",
+      "destination": "/calculator",
+      "permanent": true
+    },
+    {
+      "source": "/mortgage-rates",
+      "destination": "/calculator",
+      "permanent": true
+    },
+    {
+      "source": "/tools",
+      "destination": "/calculator",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/index.html",
+      "destination": "/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*/index.php",
+      "destination": "/:path*", 
+      "permanent": true
+    },
+    {
+      "source": "/:path*//",
+      "destination": "/:path*/",
+      "permanent": true
+    },
+    {
+      "source": "/programs/heloan",
+      "destination": "/loan-programs/heloan",
+      "permanent": true
+    },
+    {
+      "source": "/programs/heloc",
+      "destination": "/loan-programs/heloc",
+      "permanent": true
+    },
+    {
+      "source": "/programs/fix-flip-loans",
+      "destination": "/loan-programs/fix-flip-loans", 
+      "permanent": true
+    },
+    {
+      "source": "/programs/usda-rural-loans",
+      "destination": "/loan-programs/usda-rural-loans",
+      "permanent": true
+    },
+    {
+      "source": "/programs/non-qm-bank-statement",
+      "destination": "/loan-programs/bank-statement-loans",
+      "permanent": true
+    },
+    {
+      "source": "/programs/doc-investment-loans",
+      "destination": "/loan-programs/dscr-investment-loans",
+      "permanent": true
+    },
+    {
+      "source": "/programs/non-qm-asset-depletion",
+      "destination": "/loan-programs/asset-depletion-loans",
+      "permanent": true
+    },
+    {
+      "source": "/Mo",
+      "destination": "/about",
+      "permanent": true
+    },
+    {
+      "source": "/cookie-policy",
+      "destination": "/privacy-policy",
       "permanent": true
     }
   ],
-  "trailingSlash": false
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/sitemap.xml",
+      "destination": "/sitemap.xml"
+    },
+    {
+      "source": "/sitemap-index.xml",
+      "destination": "/sitemap-index.xml" 
+    },
+    {
+      "source": "/sitemap-images.xml",
+      "destination": "/sitemap-images.xml"
+    },
+    {
+      "source": "/sitemap-news.xml", 
+      "destination": "/sitemap-news.xml"
+    },
+    {
+      "source": "/robots.txt",
+      "destination": "/robots.txt"
+    }
+  ]
 }

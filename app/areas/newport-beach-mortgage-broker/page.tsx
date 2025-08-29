@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, TrendingUp, Users, Star, Phone } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Newport Beach Mortgage Broker | Luxury Home Loans | Mo Abdel NMLS #1426884',
-  description: 'Newport Beach mortgage broker specializing in luxury home financing. Jumbo loans, conventional mortgages, and investment property financing. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'Newport Beach mortgage broker, Newport Beach home loans, luxury mortgage lender Newport Beach, jumbo loans Newport Beach'
+  title: 'Newport Beach Mortgage Brokers | Best Luxury Home Loans | Mo Abdel NMLS #1426884',
+  description: 'Top-rated Newport Beach mortgage brokers specializing in luxury home financing. Licensed mortgage broker Mo Abdel offers jumbo loans, refinancing, and investment property loans. Call (949) 579-2057.',
+  keywords: 'Newport Beach mortgage brokers, mortgage brokers in newport beach, Newport Beach mortgage broker, luxury home loans Newport Beach, jumbo loans Newport Beach'
 };
 
 export default function NewportBeachMortgageBrokerPage() {
@@ -22,7 +22,7 @@ export default function NewportBeachMortgageBrokerPage() {
             🏖️ Luxury Coastal Community
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Newport Beach</span> Mortgage Broker: Luxury Home Loans and Refinancing
+            <span className="text-blue-600">Newport Beach Mortgage Brokers</span> | Luxury Home Financing Expert
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Specializing in luxury home financing for Newport Beach's prestigious waterfront 
@@ -226,9 +226,39 @@ export default function NewportBeachMortgageBrokerPage() {
           </div>
         </div>
 
+        {/* Choosing Newport Beach Mortgage Brokers */}
+        <div className="bg-blue-50 rounded-lg p-8 mb-16">
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-6">
+            How to Choose the Best Newport Beach Mortgage Brokers
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <div className="bg-blue-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Star className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-semibold text-slate-900 mb-2">Luxury Market Experience</h3>
+              <p className="text-slate-600 text-sm">Look for brokers with proven track record in high-value Newport Beach transactions</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-orange-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <Users className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-semibold text-slate-900 mb-2">Local Network</h3>
+              <p className="text-slate-600 text-sm">Choose brokers with strong relationships in Newport Beach real estate community</p>
+            </div>
+            <div className="text-center">
+              <div className="bg-green-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <TrendingUp className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="font-semibold text-slate-900 mb-2">Jumbo Loan Expertise</h3>
+              <p className="text-slate-600 text-sm">Ensure your broker specializes in jumbo loans for Newport Beach's premium pricing</p>
+            </div>
+          </div>
+        </div>
+
         {/* Why Choose Mo for Newport Beach */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-center mb-8">Why Choose Mo Abdel for Newport Beach?</h2>
+          <h2 className="text-3xl font-bold text-center mb-8">Why Mo Abdel Stands Out Among Newport Beach Mortgage Brokers</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Card className="border-l-4 border-l-blue-500">
               <CardContent className="p-6">
@@ -462,6 +492,59 @@ export default function NewportBeachMortgageBrokerPage() {
                 </p>
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Newport Beach City Resources */}
+        <div className="mb-16">
+          <div className="bg-slate-50 p-8 rounded-2xl">
+            <h2 className="text-2xl font-bold text-center text-slate-900 mb-6">
+              Official Newport Beach City Resources
+            </h2>
+            <p className="text-center text-slate-600 mb-8">
+              Access official city services and information for Newport Beach residents
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <MapPin className="w-6 h-6 text-blue-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">City of Newport Beach</h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    Official city website with services, permits, and community information
+                  </p>
+                  <a 
+                    href="https://www.newportbeachca.gov/" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Visit NewportBeachCA.gov →
+                  </a>
+                </CardContent>
+              </Card>
+
+              <Card className="hover:shadow-lg transition-shadow">
+                <CardContent className="p-6 text-center">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Home className="w-6 h-6 text-green-600" />
+                  </div>
+                  <h3 className="font-semibold text-lg mb-2">Newport Beach Planning</h3>
+                  <p className="text-slate-600 text-sm mb-4">
+                    Planning department for zoning, permits, and development information
+                  </p>
+                  <a 
+                    href="https://www.newportbeachca.gov/government/departments/community-development/planning" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 font-medium"
+                  >
+                    Visit Planning Department →
+                  </a>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
 

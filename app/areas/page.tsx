@@ -175,6 +175,100 @@ export default function NeighborhoodGuidePage() {
           </div>
         </div>
 
+        {/* Local Orange County Resources */}
+        <div className="mb-16">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Orange County Local Resources
+            </h2>
+            <p className="text-xl text-slate-600 max-w-3xl mx-auto">
+              Access official Orange County government resources and services for homeowners and residents
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="w-6 h-6 text-blue-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">Orange County Government</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  Official Orange County services, permits, and community information
+                </p>
+                <a 
+                  href="https://www.ocgov.com/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                >
+                  Visit OC.gov →
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Home className="w-6 h-6 text-green-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">OC Planning Department</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  Zoning information, building permits, and development guidelines
+                </p>
+                <a 
+                  href="https://www.ocgov.com/gov/ceo/occr/planning" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                >
+                  Visit Planning Dept →
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <TrendingUp className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">OC Housing Authority</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  Affordable housing programs and assistance for Orange County residents
+                </p>
+                <a 
+                  href="https://www.ochousing.org/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                >
+                  Visit OC Housing →
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Phone className="w-6 h-6 text-orange-600" />
+                </div>
+                <h3 className="font-semibold text-lg mb-2">OC Community Resources</h3>
+                <p className="text-slate-600 text-sm mb-4">
+                  Local assistance programs, community services, and family resources
+                </p>
+                <a 
+                  href="https://www.ocgov.com/gov/health/about/admin/cao/cap" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-blue-600 hover:text-blue-800 font-medium text-sm"
+                >
+                  Visit Community Resources →
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
         {/* Why Choose Mo */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
           <div>

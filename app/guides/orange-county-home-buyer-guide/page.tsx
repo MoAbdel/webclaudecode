@@ -401,7 +401,7 @@ export default function OrangeCountyHomeBuyerGuide() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
             <Card className="shadow-lg border-0">
               <CardContent className="p-6 text-center">
                 <Calculator className="w-12 h-12 text-blue-600 mx-auto mb-4" />
@@ -431,6 +431,28 @@ export default function OrangeCountyHomeBuyerGuide() {
                 <p className="text-slate-600 mb-4">First-time buyer programs and assistance</p>
                 <a href="https://www.calhfa.ca.gov/" target="_blank" rel="noopener noreferrer">
                   <Button className="w-full">Visit CalHFA</Button>
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg border-0">
+              <CardContent className="p-6 text-center">
+                <Shield className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">CFPB Home Buying Guide</h3>
+                <p className="text-slate-600 mb-4">Official federal guidance for home buyers</p>
+                <a href="https://www.consumerfinance.gov/owning-a-home/" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full">Visit CFPB Guide</Button>
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg border-0">
+              <CardContent className="p-6 text-center">
+                <Home className="w-12 h-12 text-green-600 mx-auto mb-4" />
+                <h3 className="text-lg font-semibold text-slate-900 mb-2">HUD Housing Counseling</h3>
+                <p className="text-slate-600 mb-4">Find certified housing counselors near you</p>
+                <a href="https://www.hud.gov/findacounselor" target="_blank" rel="noopener noreferrer">
+                  <Button className="w-full">Find HUD Counselor</Button>
                 </a>
               </CardContent>
             </Card>

@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { MapPin, Home, Waves, Sun, TrendingUp, Users, Building } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Huntington Beach Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
-  description: 'Huntington Beach mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving Surf City, Main Street, Bella Terra area. Call (949) 579-2057.',
-  keywords: 'Huntington Beach mortgage broker, Huntington Beach home loans, Huntington Beach HELOC, Surf City mortgage, Main Street loans, Bella Terra mortgage broker'
+  title: 'Huntington Beach Mortgage | Home Loans & HELOC Rates | Mo Abdel NMLS #1426884',
+  description: 'Best Huntington Beach mortgage rates and home loan services. Competitive mortgage rates, HELOC, refinancing, FHA, VA, and jumbo loans. Serving Surf City, Main Street, Bella Terra. Call (949) 579-2057.',
+  keywords: 'Huntington Beach mortgage, huntington beach mortgage, Huntington Beach home loans, Huntington Beach HELOC rates, Huntington Beach refinance, Surf City mortgage, Main Street mortgage'
 };
 
 export default function HuntingtonBeachMortgageBrokerPage() {
@@ -77,7 +77,7 @@ export default function HuntingtonBeachMortgageBrokerPage() {
             Serving All Huntington Beach Areas
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Huntington Beach</span> Mortgage Broker: Beach Home Loans and Refinancing
+            <span className="text-blue-600">Huntington Beach Mortgage</span> | Beach Home Loans & Refinancing
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Competitive mortgage rates for Huntington Beach homebuyers and homeowners. Specializing in 

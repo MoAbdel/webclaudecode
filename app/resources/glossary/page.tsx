@@ -33,7 +33,7 @@ export default function GlossaryPage() {
   const glossaryTerms = [
     {
       term: 'Adjustable Rate Mortgage (ARM)',
-      definition: 'A mortgage loan where the interest rate can change periodically based on market conditions. Common types include 5/1, 7/1, and 10/1 ARMs.',
+      definition: 'A mortgage loan where the interest rate can change periodically based on market conditions. Common types include 7/6, 5/1, 7/1, and 10/1 ARMs.',
       category: 'Loan Types',
       related: ['Fixed Rate Mortgage', 'Interest Rate', 'Rate Adjustment']
     },
@@ -424,6 +424,37 @@ export default function GlossaryPage() {
                   </Button>
                 </a>
               </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      {/* Official Authority Reference */}
+      <section className="py-16 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <Card className="bg-gradient-to-r from-green-50 to-blue-50 border-green-200">
+            <CardContent className="p-8 text-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Shield className="w-8 h-8 text-green-600" />
+              </div>
+              <h2 className="text-2xl font-bold text-slate-900 mb-4">
+                Official Financial Terms & Definitions
+              </h2>
+              <p className="text-slate-600 mb-6">
+                For additional mortgage terms and official definitions, visit the Consumer Financial Protection Bureau's 
+                comprehensive financial terminology database. The CFPB provides authoritative definitions for all 
+                financial and mortgage-related terms.
+              </p>
+              <a 
+                href="https://www.consumerfinance.gov/consumer-tools/mortgages/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors"
+              >
+                <BookOpen className="w-5 h-5 mr-2" />
+                Visit CFPB Mortgage Resources
+                <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
             </CardContent>
           </Card>
         </div>

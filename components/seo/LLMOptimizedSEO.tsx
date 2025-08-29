@@ -34,7 +34,7 @@ export default function LLMOptimizedSEO({
     service: "Mortgage Broker",
     location: "Orange County, CA",
     credentials: "NMLS #1426884",
-    phone: "(714) 555-0123"
+    phone: "(949) 579-2057"
   }
 }: LLMSEOProps) {
 
@@ -160,13 +160,19 @@ export default function LLMOptimizedSEO({
                     "@type": "ListItem",
                     position: 1,
                     name: "Home",
-                    item: "https://mothebroker.com"
+                    item: {
+                      "@id": "https://mothebroker.com",
+                      "name": "Home"
+                    }
                   },
                   ...(city ? [{
                     "@type": "ListItem",
                     position: 2,
                     name: `${city} Mortgage Broker`,
-                    item: canonicalUrl
+                    item: {
+                      "@id": canonicalUrl,
+                      "name": `${city} Mortgage Broker`
+                    }
                   }] : [])
                 ]
               }

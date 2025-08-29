@@ -64,8 +64,8 @@ let mortgageRates: MortgageRateData[] = [
   {
     id: '1',
     loan_type: '30_year_fixed',
-    rate: 6.59,
-    apr: 6.650,
+    rate: 6.62,
+    apr: 6.680,
     display_name: '30-Year Fixed Conventional',
     min_down_payment: '3%',
     is_active: true,
@@ -84,7 +84,7 @@ let mortgageRates: MortgageRateData[] = [
   {
     id: '3',
     loan_type: 'fha_30_year',
-    rate: 6.17,
+    rate: 6.22,
     apr: 6.420,
     display_name: 'FHA 30-Year Fixed',
     min_down_payment: '3.5%',
@@ -94,7 +94,7 @@ let mortgageRates: MortgageRateData[] = [
   {
     id: '4',
     loan_type: 'jumbo_30_year',
-    rate: 6.70,
+    rate: 6.67,
     apr: 6.730,
     display_name: 'Jumbo 30-Year Fixed',
     min_down_payment: '10%',
@@ -104,10 +104,20 @@ let mortgageRates: MortgageRateData[] = [
   {
     id: '5',
     loan_type: 'va_30_year',
-    rate: 6.19,
-    apr: 6.380,
+    rate: 6.23,
+    apr: 6.420,
     display_name: 'VA 30-Year Fixed',
     min_down_payment: '0%',
+    is_active: true,
+    effective_date: new Date().toISOString().split('T')[0]
+  },
+  {
+    id: '6',
+    loan_type: '7_6_sofr_arm',
+    rate: 5.95,
+    apr: 6.200,
+    display_name: '7/6 ARM',
+    min_down_payment: '5%',
     is_active: true,
     effective_date: new Date().toISOString().split('T')[0]
   }

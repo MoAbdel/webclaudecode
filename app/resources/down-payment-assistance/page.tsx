@@ -605,6 +605,85 @@ export default function DownPaymentAssistancePage() {
         </div>
       </section>
 
+      {/* Educational Resources */}
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900 mb-4">
+              Educational Resources & Training
+            </h2>
+            <p className="text-xl text-slate-600">
+              Free educational resources to help you succeed in homeownership
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Home className="w-8 h-8 text-blue-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">HUD Homebuyer Education</h3>
+                <p className="text-slate-600 mb-6">
+                  Free online and in-person courses covering the entire homebuying process, from budgeting to closing
+                </p>
+                <a 
+                  href="https://www.hud.gov/topics/homeownership" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                >
+                  Access HUD Education
+                  <ExternalLink className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FileText className="w-8 h-8 text-green-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">FHA Resource Center</h3>
+                <p className="text-slate-600 mb-6">
+                  Official FHA resources about down payment requirements, loan programs, and qualification guidelines
+                </p>
+                <a 
+                  href="https://www.fha.com/fha_loan_requirements" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                >
+                  Visit FHA Resources
+                  <ExternalLink className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+
+            <Card className="hover:shadow-lg transition-shadow">
+              <CardContent className="p-6 text-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Users className="w-8 h-8 text-purple-600" />
+                </div>
+                <h3 className="text-xl font-semibold text-slate-900 mb-3">Financial Counseling Association</h3>
+                <p className="text-slate-600 mb-6">
+                  Find certified financial counselors and housing counselors to help with budgeting and program applications
+                </p>
+                <a 
+                  href="https://www.fcaa.org/" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium"
+                >
+                  Find a Counselor
+                  <ExternalLink className="w-4 h-4 ml-1" />
+                </a>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-r from-blue-600 to-blue-800 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -27,23 +27,25 @@ interface NavigationItem {
 const loanProgramsDropdown: DropdownItem[] = [
   { title: 'All Programs', url: '/loan-programs' },
   
-  // Home Purchase Loans
-  { title: '🏠 PURCHASE', url: '#', isHeader: true },
-  { title: 'FHA Loans', url: '/loan-programs/fha-loans' },
-  { title: 'VA Loans', url: '/loan-programs/va-loans' },
-  { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
-  { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
-  { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' },
+  // Home Equity Solutions - MOVED TO TOP
+  { title: '💰 EQUITY', url: '#', isHeader: true },
+  { title: 'HELOC', url: '/loan-programs/heloc' },
+  { title: 'HELOAN', url: '/loan-programs/heloan' },
   
   // Refinancing Options
   { title: '🔄 REFINANCING', url: '#', isHeader: true },
   { title: 'Rate & Term Refinance', url: '/loan-programs/rate-term-refinance' },
   { title: 'Cash-Out Refinance', url: '/loan-programs/cash-out-refinance' },
   
-  // Home Equity Solutions
-  { title: '💰 EQUITY', url: '#', isHeader: true },
-  { title: 'HELOC', url: '/loan-programs/heloc' },
-  { title: 'HELOAN', url: '/loan-programs/heloan' },
+  // Home Purchase Loans
+  { title: '🏠 PURCHASE', url: '#', isHeader: true },
+  { title: 'FHA Loans', url: '/loan-programs/fha-loans' },
+  { title: 'Orange County FHA Limits', url: '/loan-programs/orange-county-fha-loan-limits' },
+  { title: 'VA Loans', url: '/loan-programs/va-loans' },
+  { title: 'Orange County VA Loans', url: '/loan-programs/orange-county-va-loans' },
+  { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
+  { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
+  { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' },
   
   // Self-Employed & Non-QM
   { title: '💼 SELF-EMPLOYED', url: '#', isHeader: true },
@@ -56,7 +58,12 @@ const loanProgramsDropdown: DropdownItem[] = [
   { title: '🏢 INVESTMENT', url: '#', isHeader: true },
   { title: 'DSCR Investment Loans', url: '/loan-programs/dscr-investment-loans' },
   { title: 'Fix & Flip Loans', url: '/loan-programs/fix-flip-loans' },
-  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' }
+  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' },
+  
+  // City Specific Programs
+  { title: '🏙️ CITY SPECIFIC', url: '#', isHeader: true },
+  { title: 'FHA Loans Irvine', url: '/loan-programs/fha-loans-irvine' },
+  { title: 'Bank Statement Loans Irvine', url: '/loan-programs/bank-statement-loans-irvine' }
 ];
 
 const serviceAreasDropdown: DropdownItem[] = [
@@ -72,16 +79,46 @@ const serviceAreasDropdown: DropdownItem[] = [
   // Central Orange County
   { title: '🏢 CENTRAL', url: '#', isHeader: true },
   { title: 'Irvine', url: '/areas/irvine-mortgage-broker' },
+  { title: 'Irvine Rates', url: '/areas/irvine-mortgage-rates' },
   { title: 'Costa Mesa', url: '/areas/costa-mesa-mortgage-broker' },
+  { title: 'Costa Mesa Rates', url: '/areas/costa-mesa-mortgage-rates' },
   { title: 'Orange', url: '/areas/orange-mortgage-broker' },
   { title: 'Santa Ana', url: '/areas/santa-ana-mortgage-broker' },
+  { title: 'Santa Ana Rates', url: '/areas/santa-ana-mortgage-rates' },
+  { title: 'Santa Ana Refinance', url: '/areas/santa-ana-refinance-rates' },
   { title: 'Fountain Valley', url: '/areas/fountain-valley-mortgage-broker' },
+  { title: 'Fountain Valley Rates', url: '/areas/fountain-valley-mortgage-rates' },
+  
+  // Irvine Neighborhoods
+  { title: '🏘️ IRVINE NEIGHBORHOODS', url: '#', isHeader: true },
+  { title: 'University Park', url: '/areas/irvine-neighborhoods/university-park-mortgage-broker' },
+  { title: 'Woodbridge', url: '/areas/irvine-neighborhoods/woodbridge-mortgage-broker' },
+  { title: 'Northwood', url: '/areas/irvine-neighborhoods/northwood-mortgage-broker' },
+  { title: 'Turtle Rock', url: '/areas/irvine-neighborhoods/turtle-rock-mortgage-broker' },
+  { title: 'Quail Hill', url: '/areas/irvine-neighborhoods/quail-hill-mortgage-broker' },
+  { title: 'Cypress Village', url: '/areas/irvine-neighborhoods/cypress-village-mortgage-broker' },
+  
+  // Newport Beach Neighborhoods
+  { title: '🌊 NEWPORT NEIGHBORHOODS', url: '#', isHeader: true },
+  { title: 'Lido Isle', url: '/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker' },
+  { title: 'Corona del Mar', url: '/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker' },
+  { title: 'Newport Coast', url: '/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker' },
+  { title: 'Balboa Island', url: '/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker' },
+  
+  // ZIP Code Areas
+  { title: '📍 ZIP CODE AREAS', url: '#', isHeader: true },
+  { title: 'Irvine 92614', url: '/zip-codes/92614-irvine-mortgage-broker' },
+  { title: 'Corona del Mar 92625', url: '/zip-codes/92625-corona-del-mar-mortgage-broker' },
+  { title: 'Newport Beach 92660', url: '/zip-codes/92660-newport-beach-mortgage-broker' },
+  { title: 'Irvine 92602', url: '/zip-codes/92602-irvine-mortgage-broker' },
   
   // North Orange County
   { title: '🏘️ NORTH', url: '#', isHeader: true },
   { title: 'Anaheim', url: '/areas/anaheim-mortgage-broker' },
+  { title: 'Anaheim Rates', url: '/areas/anaheim-mortgage-rates' },
   { title: 'Fullerton', url: '/areas/fullerton-mortgage-broker' },
   { title: 'Yorba Linda', url: '/areas/yorba-linda-mortgage-broker' },
+  { title: 'Yorba Linda Rates', url: '/areas/yorba-linda-mortgage-rates' },
   { title: 'Garden Grove', url: '/areas/garden-grove-mortgage-broker' },
   { title: 'Westminster', url: '/areas/westminster-mortgage-broker' },
   
@@ -89,11 +126,22 @@ const serviceAreasDropdown: DropdownItem[] = [
   { title: '🏡 SOUTH', url: '#', isHeader: true },
   { title: 'Mission Viejo', url: '/areas/mission-viejo-mortgage-broker' },
   { title: 'Laguna Niguel', url: '/areas/laguna-niguel-mortgage-broker' },
+  { title: 'Laguna Niguel Rates', url: '/areas/laguna-niguel-mortgage-rates' },
   { title: 'Laguna Woods', url: '/areas/laguna-woods-mortgage-broker' },
   
   // Beach Cities
   { title: '🌊 BEACH', url: '#', isHeader: true },
-  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' }
+  { title: 'Huntington Beach', url: '/areas/huntington-beach-mortgage-broker' },
+  
+  // Luxury Markets
+  { title: '💎 LUXURY MARKETS', url: '#', isHeader: true },
+  { title: 'Waterfront Homes', url: '/luxury-markets/waterfront-homes-mortgage-broker' },
+  { title: 'Golf Course Homes', url: '/luxury-markets/golf-course-homes-mortgage-broker' },
+  { title: 'Ultra-Luxury Estates', url: '/luxury-markets/ultra-luxury-estates-mortgage-broker' },
+  
+  // School Districts  
+  { title: '🎓 SCHOOL DISTRICTS', url: '#', isHeader: true },
+  { title: 'Irvine Unified School District', url: '/areas/irvine-unified-school-district-mortgage-broker' }
 ];
 
 const guidesAndBlogDropdown: DropdownItem[] = [
@@ -103,6 +151,19 @@ const guidesAndBlogDropdown: DropdownItem[] = [
   { title: '📚 COMPLETE GUIDES', url: '#', isHeader: true },
   { title: 'Orange County Home Buyer Guide', url: '/guides/orange-county-home-buyer-guide' },
   { title: 'Orange County Refinancing Guide', url: '/guides/orange-county-refinancing-guide' },
+  { title: 'Orange County School Districts Guide', url: '/guides/orange-county-school-districts' },
+  { title: 'Orange County Investment Property Guide', url: '/guides/orange-county-investment-property' },
+  { title: 'Orange County VA Loans Guide', url: '/guides/orange-county-va-loans' },
+  { title: 'Orange County Jumbo Loans Guide', url: '/guides/orange-county-jumbo-loans' },
+  
+  // Market Analysis
+  { title: '📊 MARKET ANALYSIS', url: '#', isHeader: true },
+  { title: 'Orange County Market Forecast 2025-2026', url: '/guides/orange-county-market-forecast-2025-2026' },
+  
+  // Seasonal Market Guides
+  { title: '🌟 SEASONAL GUIDES', url: '#', isHeader: true },
+  { title: 'Spring 2025 Home Buying Guide', url: '/guides/spring-2025-home-buying-guide' },
+  { title: 'Summer 2025 Market Guide', url: '/guides/summer-2025-market-guide' },
   
   // Neighborhood Guides
   { title: '🏘️ NEIGHBORHOOD GUIDES', url: '#', isHeader: true },
@@ -127,6 +188,12 @@ const resourcesDropdown: DropdownItem[] = [
   { title: 'Credit Repair Resources', url: '/resources/credit-repair' },
   { title: 'Mortgage Calculators', url: '/calculator' },
   
+  // Calculator Suite
+  { title: '🧮 CALCULATOR SUITE', url: '#', isHeader: true },
+  { title: 'Home Affordability Calculator', url: '/calculator/affordability' },
+  { title: 'Debt-to-Income Calculator', url: '/calculator/debt-to-income' },
+  { title: 'Closing Costs Calculator', url: '/calculator/closing-costs' },
+  
   // Market & Reference  
   { title: '📊 DATA & REFERENCE', url: '#', isHeader: true },
   { title: 'Orange County Market Data', url: '/resources/market-data' },
@@ -144,6 +211,18 @@ const navigationItems: NavigationItem[] = [
     page: 'Home',
     url: createPageUrl('Home'),
     icon: Home,
+  },
+  {
+    title: 'About',
+    page: 'About',
+    url: createPageUrl('About'),
+    icon: User,
+  },
+  {
+    title: 'Contact',
+    page: 'Contact',
+    url: createPageUrl('Contact'),
+    icon: Phone,
   },
   {
     title: 'Calculator',
@@ -182,18 +261,6 @@ const navigationItems: NavigationItem[] = [
     icon: FileText,
     hasDropdown: true,
     dropdownItems: resourcesDropdown
-  },
-  {
-    title: 'About',
-    page: 'About',
-    url: createPageUrl('About'),
-    icon: User,
-  },
-  {
-    title: 'Contact',
-    page: 'Contact',
-    url: createPageUrl('Contact'),
-    icon: Phone,
   },
 ];
 
@@ -299,6 +366,7 @@ export default function Header() {
               variant="ghost"
               size="icon"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Close mobile menu" : "Open mobile menu"}
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />

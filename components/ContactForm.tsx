@@ -6,11 +6,6 @@ import { Shield } from 'lucide-react';
 import { fbTrack } from '@/components/FacebookPixel';
 
 // Google Ads conversion tracking
-declare global {
-  interface Window {
-    gtag: (...args: any[]) => void;
-  }
-}
 
 export default function ContactForm() {
   // Google Ads conversion tracking function
@@ -149,10 +144,11 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label htmlFor="contact-first-name" className="block text-sm font-medium text-slate-700 mb-2">
               First Name *
             </label>
             <input
+              id="contact-first-name"
               type="text"
               required
               value={formData.firstName}
@@ -162,10 +158,11 @@ export default function ContactForm() {
             />
           </div>
           <div>
-            <label className="block text-sm font-medium text-slate-700 mb-2">
+            <label htmlFor="contact-last-name" className="block text-sm font-medium text-slate-700 mb-2">
               Last Name *
             </label>
             <input
+              id="contact-last-name"
               type="text"
               required
               value={formData.lastName}
@@ -177,10 +174,11 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="contact-email" className="block text-sm font-medium text-slate-700 mb-2">
             Email Address *
           </label>
           <input
+            id="contact-email"
             type="email"
             required
             value={formData.email}
@@ -191,10 +189,11 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="contact-phone" className="block text-sm font-medium text-slate-700 mb-2">
             Phone Number *
           </label>
           <input
+            id="contact-phone"
             type="tel"
             required
             value={formData.phone}
@@ -205,10 +204,11 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="contact-loan-purpose" className="block text-sm font-medium text-slate-700 mb-2">
             Loan Purpose
           </label>
           <select 
+            id="contact-loan-purpose"
             value={formData.loanPurpose}
             onChange={(e) => handleInputChange('loanPurpose', e.target.value)}
             className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -222,10 +222,11 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="contact-loan-amount" className="block text-sm font-medium text-slate-700 mb-2">
             Approximate Loan Amount
           </label>
           <select 
+            id="contact-loan-amount"
             value={formData.loanAmount}
             onChange={(e) => handleInputChange('loanAmount', e.target.value)}
             className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -240,10 +241,11 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="contact-timeline" className="block text-sm font-medium text-slate-700 mb-2">
             Timeline
           </label>
           <select 
+            id="contact-timeline"
             value={formData.timeline}
             onChange={(e) => handleInputChange('timeline', e.target.value)}
             className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -258,10 +260,11 @@ export default function ContactForm() {
         </div>
         
         <div>
-          <label className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="contact-additional-info" className="block text-sm font-medium text-slate-700 mb-2">
             Additional Information
           </label>
           <textarea
+            id="contact-additional-info"
             rows={4}
             value={formData.additionalInfo}
             onChange={(e) => handleInputChange('additionalInfo', e.target.value)}

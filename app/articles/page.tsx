@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 
@@ -74,7 +73,6 @@ export default function ArticlesPage() {
 
   return (
     <>
-      <Header />
       <AdvancedSchemaMarkup type="FinancialService" />
       
       <main className="min-h-screen bg-white">

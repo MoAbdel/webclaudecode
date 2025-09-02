@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'First-Time Homebuyer Mortgage Orange County | Mo Abdel',
     description: 'Your guide to buying your first home in Orange County. Expert advice on loans, programs, and market strategies.',
-    images: ['/images/mo-headshot.webp'],
+    images: ['/images/moabdel-headshot-final.png'],
     url: 'https://www.mothebroker.com/articles/first-time-homebuyer-mortgage-orange-county',
     type: 'article',
   },

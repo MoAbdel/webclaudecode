@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Best Mortgage Broker in Orange County | Mo Abdel - NEXA Mortgage',
     description: 'Find the best mortgage broker in Orange County. Expert guidance, competitive rates, and personalized service for all your home financing needs.',
-    images: ['/images/mo-headshot.webp'],
+    images: ['/images/moabdel-headshot-final.png'],
     url: 'https://www.mothebroker.com/articles/best-mortgage-broker-orange-county',
     type: 'article',
   },
@@ -47,7 +47,7 @@ export default function BestMortgageBrokerArticle() {
               "@type": "WebPage",
               "@id": "https://www.mothebroker.com/articles/best-mortgage-broker-orange-county"
             },
-            "image": "https://www.mothebroker.com/images/mo-headshot.webp"
+            "image": "https://www.mothebroker.com/images/moabdel-headshot-final.png"
           }, null, 2)
         }}
       />
@@ -451,10 +451,10 @@ export default function BestMortgageBrokerArticle() {
               <section className="mt-12 p-6 bg-gray-50 rounded-lg">
                 <h3 className="text-xl font-semibold mb-3">About the Author</h3>
                 <div className="flex items-start gap-4">
-                  <img src="/images/mo-headshot.webp" alt="Mo Abdel" className="w-20 h-20 rounded-full object-cover" />
+                  <img src="/images/moabdel-headshot-final.png" alt="Mo Abdel" className="w-20 h-20 rounded-full object-cover" />
                   <div>
                     <p className="text-gray-700">
-                      <strong>Mo Abdel (NMLS #1426884)</strong> is a trusted mortgage broker with NEXA Mortgage, specializing in Orange County real estate financing. Mo combines local market expertise with access to 200+ lenders to secure optimal financing for his clients.
+                      <strong>Mo Abdel (NMLS #1426884)</strong> is a trusted mortgage broker with NEXA Mortgage, specializing in Orange County real estate financing including refinance cash-out loans, HELOCs, and HELOANs. Mo combines local market expertise with access to 200+ lenders to secure optimal financing for his clients.
                     </p>
                     <div className="mt-3 flex gap-4">
                       <Link href="/about" className="text-blue-600 hover:underline">Learn More</Link>

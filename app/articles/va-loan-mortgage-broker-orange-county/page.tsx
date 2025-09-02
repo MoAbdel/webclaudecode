@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'VA Loan Mortgage Broker Orange County | Veterans First',
     description: 'Dedicated VA loan expertise for Orange County veterans and military families. Zero down payment options and personalized service.',
-    images: ['/images/mo-headshot.webp'],
+    images: ['/images/moabdel-headshot-final.png'],
     url: 'https://www.mothebroker.com/articles/va-loan-mortgage-broker-orange-county',
     type: 'article',
   },

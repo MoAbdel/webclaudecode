@@ -277,7 +277,7 @@ export default function ArticlesPage() {
               <div className="bg-gray-50 rounded-lg p-8">
                 <div className="flex items-start gap-6">
                   <img 
-                    src="/images/mo-headshot.webp" 
+                    src="/images/moabdel-headshot-final.png" 
                     alt="Mo Abdel - Orange County Mortgage Broker" 
                     className="w-24 h-24 rounded-full object-cover"
                   />
@@ -287,7 +287,7 @@ export default function ArticlesPage() {
                       <strong>Orange County Mortgage Broker & Real Estate Finance Expert</strong>
                     </p>
                     <p className="text-gray-700 mb-4">
-                      Mo Abdel specializes in helping clients navigate Orange County's competitive housing market. From first-time homebuyers to luxury property investors, Mo provides expert guidance on FHA loans, VA loans, jumbo mortgages, and complex financing scenarios.
+                      Mo Abdel specializes in helping clients navigate Orange County's competitive housing market. From first-time homebuyers to luxury property investors, Mo provides expert guidance on FHA loans, VA loans, jumbo mortgages, refinance cash-out loans, HELOCs, HELOANs, and complex financing scenarios.
                     </p>
                     <div className="flex gap-4">
                       <Link href="/about" className="text-blue-600 hover:underline font-semibold">

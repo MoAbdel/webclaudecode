@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Orange County Mortgage Refinance Specialist | Mo Abdel - NEXA',
     description: 'Refinance your Orange County home with an expert specialist. Lower payments, cash-out options, and personalized service.',
-    images: ['/images/mo-headshot.webp'],
+    images: ['/images/moabdel-headshot-final.png'],
     url: 'https://www.mothebroker.com/articles/orange-county-mortgage-refinance-specialist',
     type: 'article',
   },

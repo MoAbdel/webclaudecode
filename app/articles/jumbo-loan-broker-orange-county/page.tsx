@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Jumbo Loan Broker Orange County | Mo Abdel - NEXA Mortgage',
     description: 'Finance your luxury Orange County home with expert jumbo loan guidance. Competitive rates and flexible terms for high-value properties.',
-    images: ['/images/mo-headshot.webp'],
+    images: ['/images/moabdel-headshot-final.png'],
     url: 'https://www.mothebroker.com/articles/jumbo-loan-broker-orange-county',
     type: 'article',
   },

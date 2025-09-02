@@ -4,45 +4,63 @@ import React, { useEffect, useState } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { TrendingDown, TrendingUp, Home, Building, Users, Calculator } from "lucide-react";
+import { TrendingDown, TrendingUp, Home, Building, Users, Calculator, Shield, BarChart3 } from "lucide-react";
 import Link from "next/link";
 
 const defaultRateData = [
   {
     loanType: "30-Year Fixed Conventional",
-    rate: "6.52%",
+    rate: "6.53%",
     apr: "APR may vary",
-    trend: "down",
-    change: "-0.10",
+    trend: "up",
+    change: "+0.01",
     icon: Home,
     description: "Perfect for stable payments over 30 years"
   },
   {
     loanType: "15-Year Fixed Conventional",
-    rate: "5.90%",
+    rate: "5.88%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.07",
+    change: "-0.02",
     icon: TrendingDown,
     description: "Build equity faster with higher payments"
   },
   {
     loanType: "30-Year FHA",
-    rate: "6.10%",
+    rate: "6.09%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.12",
+    change: "-0.01",
     icon: Users,
     description: "Low down payment option for first-time buyers"
   },
   {
     loanType: "30-Year Jumbo",
-    rate: "6.50%",
+    rate: "6.47%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.17",
+    change: "-0.03",
     icon: Building,
     description: "For loan amounts above conventional limits"
+  },
+  {
+    loanType: "30-Year VA",
+    rate: "6.10%",
+    apr: "APR may vary",
+    trend: "down",
+    change: "-0.01",
+    icon: Shield,
+    description: "Zero down payment for eligible veterans"
+  },
+  {
+    loanType: "7/6 SOFR ARM",
+    rate: "5.91%",
+    apr: "APR may vary",
+    trend: "stable",
+    change: "0.00",
+    icon: BarChart3,
+    description: "Adjustable rate with lower initial payments"
   }
 ];
 
@@ -69,7 +87,7 @@ export default function RateDisplay() {
           </Badge>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {rateData.map((loan, index) => (
             <Card key={index} className="card-hover shadow-base44 border-slate-200 transform hover:scale-105 transition-all duration-300">
               <CardHeader className="pb-4">

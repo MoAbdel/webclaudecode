@@ -147,6 +147,15 @@ const serviceAreasDropdown: DropdownItem[] = [
 const guidesAndBlogDropdown: DropdownItem[] = [
   { title: 'All Guides & Articles', url: '/guides' },
   
+  // Expert Articles - NEW
+  { title: '✨ EXPERT ARTICLES', url: '#', isHeader: true },
+  { title: 'All Articles', url: '/articles' },
+  { title: 'Best Mortgage Broker in Orange County', url: '/articles/best-mortgage-broker-orange-county' },
+  { title: 'Orange County Refinance Specialist', url: '/articles/orange-county-mortgage-refinance-specialist' },
+  { title: 'Jumbo Loan Broker Orange County', url: '/articles/jumbo-loan-broker-orange-county' },
+  { title: 'First-Time Homebuyer Mortgage', url: '/articles/first-time-homebuyer-mortgage-orange-county' },
+  { title: 'VA Loan Mortgage Broker', url: '/articles/va-loan-mortgage-broker-orange-county' },
+  
   // Complete Guides
   { title: '📚 COMPLETE GUIDES', url: '#', isHeader: true },
   { title: 'Orange County Home Buyer Guide', url: '/guides/orange-county-home-buyer-guide' },
@@ -175,7 +184,7 @@ const guidesAndBlogDropdown: DropdownItem[] = [
   { title: 'OC Neighborhoods Comparison', url: '/neighborhood-guide/orange-county-neighborhoods-comparison-guide' },
   
   // Blog Articles
-  { title: '📝 ARTICLES', url: '#', isHeader: true },
+  { title: '📝 OTHER ARTICLES', url: '#', isHeader: true },
   { title: 'Why Choose Local Mortgage Broker', url: '/guides/why-choose-local-mortgage-broker' }
 ];
 
@@ -296,7 +305,7 @@ export default function Header() {
                       className={`inline-flex items-center px-2 py-2 rounded-md text-sm font-medium transition-all duration-200 whitespace-nowrap ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides'))) ||
+                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides') || pathname.startsWith('/articles'))) ||
                         (item.page === 'Resources' && pathname.startsWith('/resources'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'
@@ -391,7 +400,7 @@ export default function Header() {
                       className={`block px-3 py-2 rounded-md text-base font-medium ${
                         (item.page === 'Programs' && pathname.startsWith('/loan-programs')) ||
                         (item.page === 'ServiceAreas' && pathname.startsWith('/areas')) ||
-                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides'))) ||
+                        (item.page === 'Guides' && (pathname.startsWith('/neighborhood-guide') || pathname.startsWith('/guides') || pathname.startsWith('/articles'))) ||
                         (item.page === 'Resources' && pathname.startsWith('/resources'))
                           ? 'text-blue-600 bg-blue-50'
                           : 'text-slate-700 hover:text-blue-600 hover:bg-slate-50'

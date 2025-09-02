@@ -6,7 +6,7 @@ import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 
 export const metadata: Metadata = {
   title: 'Best Mortgage Broker in Orange County | Expert Local Guidance',
-  description: 'Discover why Mo Abdel is the best mortgage broker in Orange County. Save thousands with expert rate negotiation, 100+ lender network, and personalized service for your home financing needs.',
+  description: 'Discover why Mo Abdel is the best mortgage broker in Orange County. Save thousands with expert rate negotiation, 200+ lender network, and personalized service for your home financing needs.',
   openGraph: {
     title: 'Best Mortgage Broker in Orange County | Mo Abdel - NEXA Mortgage',
     description: 'Find the best mortgage broker in Orange County. Expert guidance, competitive rates, and personalized service for all your home financing needs.',
@@ -93,7 +93,7 @@ export default function BestMortgageBrokerArticle() {
               {/* Introduction */}
               <section className="mb-12">
                 <p className="text-xl leading-relaxed text-gray-700">
-                  Buying a home in Orange County isn't just a major investment—it's an emotional journey through one of California's most competitive real estate markets. After spending over 15 years helping families secure financing across our diverse communities, from coastal Newport Beach to master-planned Irvine, I've learned that your choice of mortgage broker often determines whether your purchase feels empowering or exhausting.
+                  Buying a home in Orange County isn't just a major investment—it's an emotional journey through one of California's most competitive real estate markets. As a dedicated Orange County mortgage professional helping families secure financing across our diverse communities, from coastal Newport Beach to master-planned Irvine, I've learned that your choice of mortgage broker often determines whether your purchase feels empowering or exhausting.
                 </p>
               </section>
 
@@ -189,17 +189,17 @@ export default function BestMortgageBrokerArticle() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">How the Right Broker Saves You Time and Money</h2>
                 
                 <div className="bg-green-50 border border-green-200 rounded-lg p-8 mb-8">
-                  <h3 className="text-2xl font-semibold text-green-900 mb-4">Real Client Success Story</h3>
+                  <h3 className="text-2xl font-semibold text-green-900 mb-4">The Power of Expert Rate Negotiation</h3>
                   <p className="text-gray-700 mb-4">
-                    A recent Irvine client with excellent credit received initial quotes ranging from 6.3% to 6.8% on a $750,000 loan. By leveraging my lender relationships and negotiating aggressively, I secured 6.25% with lender credits covering appraisal fees.
+                    By leveraging relationships with 200+ lenders and negotiating aggressively, I can often secure significantly better terms than what borrowers find on their own. Rate differences of 0.25% to 0.50% are common.
                   </p>
                   <div className="bg-white p-4 rounded-lg">
-                    <p className="font-semibold text-green-900 mb-2">The Results:</p>
+                    <p className="font-semibold text-green-900 mb-2">Potential Savings Example (on $750K loan):</p>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• <strong>Monthly Savings:</strong> $218</li>
-                      <li>• <strong>Annual Savings:</strong> $2,616</li>
-                      <li>• <strong>30-Year Total Savings:</strong> $78,480</li>
-                      <li>• <strong>Plus:</strong> $1,500 in waived fees</li>
+                      <li>• <strong>0.25% Rate Reduction:</strong> $109/month savings</li>
+                      <li>• <strong>Annual Savings:</strong> $1,308</li>
+                      <li>• <strong>30-Year Total Savings:</strong> $39,240</li>
+                      <li>• <strong>Plus:</strong> Potential lender credits for fees</li>
                     </ul>
                   </div>
                 </div>
@@ -240,37 +240,37 @@ export default function BestMortgageBrokerArticle() {
                 </div>
               </section>
 
-              {/* First-Time Buyer Case Study */}
+              {/* First-Time Buyer Strategies */}
               <section className="mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Story: First-Time Buyer Wins in Competitive Market</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Strategic Approach: First-Time Buyer Success in Competitive Markets</h2>
                 
                 <div className="bg-blue-50 rounded-lg p-8">
                   <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-3">The Challenge</h3>
+                    <h3 className="text-xl font-semibold mb-3">Common First-Time Buyer Challenges</h3>
                     <p className="text-gray-700">
-                      Jennifer, a first-time buyer, initially believed she couldn't compete with cash investors in Irvine's hot market. She'd considered online lenders but worried about impersonal service during such an important transaction.
+                      Many first-time buyers believe they can't compete with cash investors in Orange County's competitive market. Online lenders may seem convenient but often lack the personal guidance needed during such an important transaction.
                     </p>
                   </div>
                   
                   <div className="mb-6">
-                    <h3 className="text-xl font-semibold mb-3">Our Solution</h3>
+                    <h3 className="text-xl font-semibold mb-3">Winning Strategies</h3>
                     <ul className="space-y-2 text-gray-700">
-                      <li>• Analyzed her complete financial picture to maximize buying power</li>
-                      <li>• Identified a 5% down payment program perfect for her situation</li>
-                      <li>• Negotiated seller credits to reduce closing costs</li>
-                      <li>• Provided detailed pre-approval letter that strengthened her offer</li>
+                      <li>• Analyze complete financial picture to maximize buying power</li>
+                      <li>• Identify low down payment programs (FHA, VA, conventional 3%)</li>
+                      <li>• Structure offers with seller credits to reduce closing costs</li>
+                      <li>• Provide detailed pre-approval letters that strengthen offers</li>
+                      <li>• Guide through documentation and timeline requirements</li>
                     </ul>
                   </div>
                   
                   <div className="bg-white p-4 rounded-lg">
-                    <h3 className="text-xl font-semibold mb-3">The Outcome</h3>
-                    <p className="text-gray-700 mb-2">
-                      <strong>Secured her dream townhouse in just 30 days!</strong>
-                    </p>
-                    <p className="italic text-gray-600">
-                      "Having someone translate lender language into plain English and fight for my interests made all the difference. Mo didn't just get me a loan—he got me a home."
-                    </p>
-                    <p className="text-sm text-gray-500 mt-2">- Jennifer K., Irvine</p>
+                    <h3 className="text-xl font-semibold mb-3">The Key Advantages</h3>
+                    <ul className="space-y-2 text-gray-700">
+                      <li>• Access to 200+ lenders with varied programs</li>
+                      <li>• Expert guidance through complex processes</li>
+                      <li>• Competitive offer strategies in hot markets</li>
+                      <li>• Clear communication in plain English</li>
+                    </ul>
                   </div>
                 </div>
               </section>
@@ -454,7 +454,7 @@ export default function BestMortgageBrokerArticle() {
                   <img src="/images/mo-headshot.webp" alt="Mo Abdel" className="w-20 h-20 rounded-full object-cover" />
                   <div>
                     <p className="text-gray-700">
-                      <strong>Mo Abdel (NMLS #1426884)</strong> is a trusted mortgage broker with NEXA Mortgage, specializing in Orange County real estate financing. With over 15 years of experience and hundreds of successful closings, Mo combines local market expertise with access to 100+ lenders to secure optimal financing for his clients.
+                      <strong>Mo Abdel (NMLS #1426884)</strong> is a trusted mortgage broker with NEXA Mortgage, specializing in Orange County real estate financing. Mo combines local market expertise with access to 200+ lenders to secure optimal financing for his clients.
                     </p>
                     <div className="mt-3 flex gap-4">
                       <Link href="/about" className="text-blue-600 hover:underline">Learn More</Link>

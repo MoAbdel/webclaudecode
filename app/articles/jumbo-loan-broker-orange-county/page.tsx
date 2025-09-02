@@ -64,7 +64,7 @@ export default function JumboLoanBrokerArticle() {
               {/* Introduction */}
               <section className="mb-12">
                 <p className="text-xl leading-relaxed text-gray-700">
-                  Orange County's prestigious neighborhoods—from coastal Newport Beach to master-planned Irvine—often feature homes exceeding conventional loan limits. When you're purchasing a luxury property requiring jumbo financing, working with an experienced jumbo loan broker in Orange County becomes essential for securing optimal terms and navigating complex underwriting requirements.
+                  Orange County's prestigious neighborhoods—from coastal Newport Beach to master-planned Irvine—often feature homes exceeding conventional loan limits. When you're purchasing a luxury property requiring jumbo financing, working with a dedicated jumbo loan broker in Orange County becomes essential for securing optimal terms and navigating complex underwriting requirements.
                 </p>
               </section>
 
@@ -311,39 +311,39 @@ export default function JumboLoanBrokerArticle() {
                 </div>
               </section>
 
-              {/* Case Study */}
+              {/* Jumbo Loan Strategy Guide */}
               <section className="mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Story: Newport Beach Luxury Purchase</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Strategic Approaches to Orange County Jumbo Financing</h2>
                 
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">Client Profile</h3>
+                      <h3 className="text-xl font-semibold mb-4">Asset-Based Qualification</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li><strong>Profession:</strong> Tech entrepreneur</li>
-                        <li><strong>Property:</strong> $2.5M Newport Beach home</li>
-                        <li><strong>Down Payment:</strong> 20% ($500,000)</li>
-                        <li><strong>Loan Amount:</strong> $2,000,000</li>
-                        <li><strong>Challenge:</strong> Variable income from business</li>
+                        <li><strong>Best For:</strong> High-net-worth borrowers</li>
+                        <li><strong>Typical Scenarios:</strong> Investment portfolios $2M+</li>
+                        <li><strong>Documentation:</strong> Account statements only</li>
+                        <li><strong>Income Calculation:</strong> Asset depletion method</li>
+                        <li><strong>Advantage:</strong> No tax return complexity</li>
                       </ul>
                     </div>
                     
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">Solution & Results</h3>
+                      <h3 className="text-xl font-semibold mb-4">Traditional Income Approach</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li><strong>Lender:</strong> Portfolio lender (not big bank)</li>
-                        <li><strong>Rate:</strong> 6.75% (competitive for jumbo)</li>
-                        <li><strong>Program:</strong> Asset-based income qualification</li>
-                        <li><strong>Timeline:</strong> 30 days to close</li>
-                        <li><strong>Savings:</strong> 0.5% lower than bank quotes</li>
+                        <li><strong>Best For:</strong> W-2 employees and stable businesses</li>
+                        <li><strong>Documentation:</strong> Tax returns, pay stubs, W-2s</li>
+                        <li><strong>DTI Requirements:</strong> Usually under 43%</li>
+                        <li><strong>Processing:</strong> Standard underwriting</li>
+                        <li><strong>Rates:</strong> Often most competitive</li>
                       </ul>
                     </div>
                   </div>
                   
                   <div className="mt-6 p-4 bg-white rounded-lg">
-                    <h4 className="font-semibold mb-2">Key Strategy</h4>
+                    <h4 className="font-semibold mb-2">Choosing Your Optimal Strategy</h4>
                     <p className="text-gray-700 text-sm">
-                      Instead of focusing on business income fluctuations, we used the client's substantial investment portfolio for income qualification. This asset-based approach simplified documentation and allowed approval with a competitive rate despite variable business earnings.
+                      The key to successful jumbo loan approval lies in selecting the right qualification approach based on your financial profile. Asset-based programs work well for borrowers with substantial investments but irregular income, while traditional income approaches often secure the best rates for borrowers with stable W-2 income.
                     </p>
                   </div>
                 </div>

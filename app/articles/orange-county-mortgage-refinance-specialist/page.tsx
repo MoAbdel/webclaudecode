@@ -197,7 +197,7 @@ export default function RefinanceSpecialistArticle() {
                   <div className="bg-green-50 p-6 rounded-lg">
                     <h3 className="text-xl font-semibold text-green-900 mb-4">Refinance Specialist Advantages</h3>
                     <ul className="space-y-3 text-gray-700">
-                      <li>• Shops 50+ lenders for best rates</li>
+                      <li>• Shops 200+ lenders for best rates</li>
                       <li>• Negotiates better terms using volume</li>
                       <li>• Understands local property values</li>
                       <li>• Handles complex financial situations</li>
@@ -220,39 +220,39 @@ export default function RefinanceSpecialistArticle() {
                 </div>
               </section>
 
-              {/* Case Study */}
+              {/* Refinancing Strategy Analysis */}
               <section className="mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Story: Costa Mesa Kitchen Remodel</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Smart Refinancing Strategies for Orange County Homeowners</h2>
                 
                 <div className="bg-blue-50 rounded-lg p-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">Client Situation</h3>
+                      <h3 className="text-xl font-semibold mb-4">Equity Access Strategy</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li><strong>Property:</strong> Costa Mesa home</li>
-                        <li><strong>Purchase Price (2019):</strong> $600,000</li>
-                        <li><strong>Current Value:</strong> $900,000</li>
-                        <li><strong>Existing Loan:</strong> $500,000 at 4.5%</li>
-                        <li><strong>Goal:</strong> $100,000 for kitchen remodel</li>
+                        <li><strong>Property Type:</strong> Orange County homes</li>
+                        <li><strong>Typical Appreciation:</strong> 40-50% since 2020</li>
+                        <li><strong>Average Equity:</strong> $300,000+</li>
+                        <li><strong>Cash-Out Options:</strong> Up to 80% LTV</li>
+                        <li><strong>Common Uses:</strong> Home improvements, investments</li>
                       </ul>
                     </div>
                     
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">Our Solution</h3>
+                      <h3 className="text-xl font-semibold mb-4">Rate & Term Benefits</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li><strong>New Loan:</strong> $600,000 at 6.0%</li>
-                        <li><strong>Cash Out:</strong> $100,000</li>
-                        <li><strong>New Payment:</strong> +$127/month</li>
-                        <li><strong>Appraisal:</strong> Confirmed $900k value</li>
-                        <li><strong>Closing:</strong> 23 days</li>
+                        <li><strong>ARM to Fixed:</strong> Payment stability</li>
+                        <li><strong>PMI Removal:</strong> 20%+ equity requirement</li>
+                        <li><strong>Term Reduction:</strong> 30 to 15-year options</li>
+                        <li><strong>Rate Improvements:</strong> 0.5%+ recommended</li>
+                        <li><strong>Timeline:</strong> 21-30 days typical</li>
                       </ul>
                     </div>
                   </div>
                   
                   <div className="mt-6 p-4 bg-white rounded-lg">
-                    <h4 className="font-semibold mb-2">Analysis & Results</h4>
+                    <h4 className="font-semibold mb-2">Market Analysis & Strategy</h4>
                     <p className="text-gray-700 text-sm">
-                      Despite the slight rate increase, Mark accessed $100,000 in equity for home improvements at a much lower rate than a HELOC or personal loan would have provided. The kitchen renovation is expected to add $150,000+ in home value, creating instant equity.
+                      Orange County's robust appreciation creates significant refinancing opportunities. Whether accessing equity for improvements or optimizing loan terms, strategic refinancing can unlock thousands in value while maintaining favorable borrowing costs.
                     </p>
                   </div>
                 </div>

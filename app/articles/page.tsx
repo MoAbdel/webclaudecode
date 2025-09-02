@@ -287,7 +287,7 @@ export default function ArticlesPage() {
                       <strong>Orange County Mortgage Broker & Real Estate Finance Expert</strong>
                     </p>
                     <p className="text-gray-700 mb-4">
-                      With over 15 years of experience in Orange County real estate financing, Mo Abdel specializes in helping clients navigate the region's competitive housing market. From first-time homebuyers to luxury property investors, Mo provides expert guidance on FHA loans, VA loans, jumbo mortgages, and complex financing scenarios.
+                      Mo Abdel specializes in helping clients navigate Orange County's competitive housing market. From first-time homebuyers to luxury property investors, Mo provides expert guidance on FHA loans, VA loans, jumbo mortgages, and complex financing scenarios.
                     </p>
                     <div className="flex gap-4">
                       <Link href="/about" className="text-blue-600 hover:underline font-semibold">

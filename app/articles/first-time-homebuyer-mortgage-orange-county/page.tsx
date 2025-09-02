@@ -254,7 +254,7 @@ export default function FirstTimeHomebuyerArticle() {
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-8 mb-8">
                   <h3 className="text-xl font-semibold text-yellow-900 mb-4">⚠️ Critical First-Time Buyer Tip</h3>
                   <p className="text-gray-700">
-                    In Orange County's competitive market, a strong pre-approval letter is essential. Sellers often receive multiple offers and favor buyers who demonstrate clear financing capability. A comprehensive pre-approval from an experienced broker can be the difference between getting your offer accepted or losing your dream home.
+                    In Orange County's competitive market, a strong pre-approval letter is essential. Sellers often receive multiple offers and favor buyers who demonstrate clear financing capability. A comprehensive pre-approval from a dedicated broker can be the difference between getting your offer accepted or losing your dream home.
                   </p>
                 </div>
 
@@ -425,41 +425,41 @@ export default function FirstTimeHomebuyerArticle() {
                 </div>
               </section>
 
-              {/* Success Story */}
+              {/* First-Time Buyer Strategy Guide */}
               <section className="mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Story: First-Time Buyer Victory in Fullerton</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Winning Strategies for Orange County First-Time Buyers</h2>
                 
                 <div className="bg-blue-50 rounded-lg p-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">Client Background</h3>
+                      <h3 className="text-xl font-semibold mb-4">Smart Financing Approach</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li><strong>Names:</strong> Sarah & Mike (Teachers)</li>
-                        <li><strong>Combined Income:</strong> $95,000</li>
-                        <li><strong>Savings:</strong> $35,000</li>
-                        <li><strong>Credit Score:</strong> 720</li>
-                        <li><strong>Goal:</strong> 3BR home under $750K</li>
-                        <li><strong>Challenge:</strong> Competing with investors</li>
+                        <li><strong>Loan Options:</strong> FHA, Conventional, VA available</li>
+                        <li><strong>Down Payment:</strong> As low as 3-3.5%</li>
+                        <li><strong>Assistance Programs:</strong> CalHFA, local grants</li>
+                        <li><strong>Credit Requirements:</strong> 580-620 minimum</li>
+                        <li><strong>Income Guidelines:</strong> Varies by program</li>
+                        <li><strong>Debt-to-Income:</strong> Up to 50% allowed</li>
                       </ul>
                     </div>
                     
                     <div>
-                      <h3 className="text-xl font-semibold mb-4">Winning Strategy</h3>
+                      <h3 className="text-xl font-semibold mb-4">Competitive Offer Elements</h3>
                       <ul className="space-y-2 text-gray-700">
-                        <li><strong>Loan:</strong> FHA 3.5% down</li>
-                        <li><strong>Down Payment:</strong> $26,250 (3.5%)</li>
-                        <li><strong>CalHFA Assistance:</strong> $8,000</li>
-                        <li><strong>Seller Concessions:</strong> 3% ($22,500)</li>
-                        <li><strong>Final Purchase:</strong> $725,000 Fullerton home</li>
-                        <li><strong>Cash to Close:</strong> Only $3,200!</li>
+                        <li><strong>Pre-Approval:</strong> Strong financing letter</li>
+                        <li><strong>Earnest Money:</strong> 2-3% of purchase price</li>
+                        <li><strong>Seller Concessions:</strong> Up to 3-6% negotiable</li>
+                        <li><strong>Appraisal Gap:</strong> Coverage when possible</li>
+                        <li><strong>Timeline Flexibility:</strong> Accommodate seller needs</li>
+                        <li><strong>Clean Terms:</strong> Minimal contingencies</li>
                       </ul>
                     </div>
                   </div>
                   
                   <div className="mt-6 p-4 bg-white rounded-lg">
-                    <h4 className="font-semibold mb-2">Key Success Factors</h4>
+                    <h4 className="font-semibold mb-2">Maximizing Your Buying Power</h4>
                     <p className="text-gray-700 text-sm">
-                      By combining FHA financing with CalHFA down payment assistance and negotiating seller concessions, Sarah and Mike purchased their dream home with minimal out-of-pocket costs. Their strong pre-approval and flexible terms helped them win against higher offers. They're now building equity instead of paying rent!
+                      Success in Orange County's competitive market comes from strategic preparation. Combining low down payment programs with down payment assistance, negotiating seller concessions, and presenting strong financing terms can help first-time buyers compete effectively against cash offers and experienced investors.
                     </p>
                   </div>
                 </div>
@@ -467,10 +467,10 @@ export default function FirstTimeHomebuyerArticle() {
 
               {/* Working with a Broker */}
               <section className="mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Why First-Time Buyers Need an Experienced Broker</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Why First-Time Buyers Need Professional Broker Guidance</h2>
                 
                 <p className="text-gray-700 mb-6">
-                  The complexity of first-time homebuying in Orange County—from loan program selection to competitive offer strategies—makes professional guidance invaluable. Here's what an experienced broker provides:
+                  The complexity of first-time homebuying in Orange County—from loan program selection to competitive offer strategies—makes professional guidance invaluable. Here's what a dedicated broker provides:
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8">
@@ -549,7 +549,7 @@ export default function FirstTimeHomebuyerArticle() {
                   <div className="border-b border-gray-200 pb-6">
                     <h3 className="text-xl font-semibold mb-3">How do I compete with cash buyers and investors?</h3>
                     <p className="text-gray-700">
-                      Strong financing preparation is key. Get fully pre-approved (not pre-qualified), consider larger earnest money deposits, be flexible on timing, and work with experienced agents who know how to structure competitive offers. Sometimes offering full asking price with good terms beats a higher cash offer that might not close.
+                      Strong financing preparation is key. Get fully pre-approved (not pre-qualified), consider larger earnest money deposits, be flexible on timing, and work with knowledgeable agents who know how to structure competitive offers. Sometimes offering full asking price with good terms beats a higher cash offer that might not close.
                     </p>
                   </div>
                 </div>

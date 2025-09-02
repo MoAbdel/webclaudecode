@@ -326,7 +326,7 @@ export default function VALoanBrokerArticle() {
                     <ul className="space-y-2 text-gray-700 text-sm">
                       <li>• Deep knowledge of VA guidelines and overlays</li>
                       <li>• Relationships with VA-friendly lenders</li>
-                      <li>• Experience with complex eligibility situations</li>
+                      <li>• Knowledge of complex eligibility situations</li>
                       <li>• Quick COE processing and verification</li>
                       <li>• Funding fee reduction strategies</li>
                       <li>• IRRRL refinancing expertise</li>
@@ -347,44 +347,44 @@ export default function VALoanBrokerArticle() {
                 </div>
               </section>
 
-              {/* Success Story */}
+              {/* VA Loan Benefits Analysis */}
               <section className="mb-12">
-                <h2 className="text-3xl font-bold text-gray-900 mb-6">Success Story: Marine Veteran Secures Dream Home in Mission Viejo</h2>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Maximizing VA Loan Benefits in Orange County</h2>
                 
                 <div className="bg-gradient-to-r from-red-50 to-blue-50 rounded-lg p-8">
                   <div className="flex items-center gap-4 mb-6">
                     <span className="text-4xl">🎖️</span>
-                    <h3 className="text-xl font-semibold">From Deployment to Homeownership</h3>
+                    <h3 className="text-xl font-semibold">Strategic VA Loan Advantages</h3>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <h4 className="font-semibold text-lg mb-3">Veteran Profile</h4>
+                      <h4 className="font-semibold text-lg mb-3">Zero Down Payment Benefits</h4>
                       <ul className="space-y-2 text-gray-700">
-                        <li><strong>Service:</strong> Marine Corps veteran (2 tours)</li>
-                        <li><strong>Family:</strong> Married with 2 children</li>
-                        <li><strong>Challenge:</strong> Limited savings after deployment</li>
-                        <li><strong>Goal:</strong> 4BR home near good schools</li>
-                        <li><strong>Timeline:</strong> PCS orders in 90 days</li>
+                        <li><strong>Typical Purchase:</strong> $800,000 Orange County home</li>
+                        <li><strong>Conventional Down Payment:</strong> $160,000 (20%)</li>
+                        <li><strong>VA Loan Down Payment:</strong> $0</li>
+                        <li><strong>Cash Preserved:</strong> $160,000+ for reserves</li>
+                        <li><strong>Additional Savings:</strong> No PMI required</li>
                       </ul>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold text-lg mb-3">Mission Accomplished</h4>
+                      <h4 className="font-semibold text-lg mb-3">Funding Fee Scenarios</h4>
                       <ul className="space-y-2 text-gray-700">
-                        <li><strong>Purchase Price:</strong> $825,000</li>
-                        <li><strong>Down Payment:</strong> $0</li>
-                        <li><strong>Funding Fee:</strong> Waived (disability rating)</li>
-                        <li><strong>Closing Time:</strong> 25 days</li>
-                        <li><strong>Monthly Payment:</strong> $4,950 (incl. taxes/insurance)</li>
+                        <li><strong>First-Time Use:</strong> 2.15% ($17,200 on $800k)</li>
+                        <li><strong>Subsequent Use:</strong> 3.3% ($26,400 on $800k)</li>
+                        <li><strong>Disability Rating 10%+:</strong> $0 funding fee</li>
+                        <li><strong>Purple Heart Recipients:</strong> $0 funding fee</li>
+                        <li><strong>Surviving Spouses:</strong> $0 funding fee</li>
                       </ul>
                     </div>
                   </div>
                   
                   <div className="mt-6 p-4 bg-white rounded-lg">
-                    <h4 className="font-semibold mb-2">Key Success Factors</h4>
+                    <h4 className="font-semibold mb-2">Competitive Advantage Strategy</h4>
                     <p className="text-gray-700 text-sm">
-                      Despite competing against cash offers, we structured a compelling offer highlighting the veteran's strong financial profile and pre-approval strength. The disability rating waived the funding fee, saving over $17,000. The family moved into their dream home with excellent schools, honoring their service with the homeownership they deserved.
+                      VA loans offer unique advantages in competitive Orange County markets. Zero down payment frees up substantial cash for competitive offers, stronger earnest money deposits, or home improvements. Combined with no PMI and competitive rates, VA loans often provide better long-term value than conventional financing.
                     </p>
                   </div>
                 </div>

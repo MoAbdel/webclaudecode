@@ -48,7 +48,7 @@ export default function HeroSection() {
     return () => clearInterval(interval);
   }, []);
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-white">
+    <section className="relative py-14 lg:py-22 overflow-hidden bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

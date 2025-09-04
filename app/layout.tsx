@@ -132,7 +132,6 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
-        <AIChatbot />
         <GoogleAnalytics />
         <FacebookPixel />
         <GEOTracking />
@@ -145,6 +144,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ 
             __html: JSON.stringify([structuredData, mortgageLoanSchema])
           }}
+        />
+        
+        {/* AI Chatbot - Pure JavaScript injection */}
+        <Script 
+          src="/chatbot.js"
+          strategy="afterInteractive"
         />
       </body>
     </html>

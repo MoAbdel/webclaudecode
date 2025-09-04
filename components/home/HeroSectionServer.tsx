@@ -86,7 +86,7 @@ export default function HeroSectionServer() {
                 style={{ 
                   maxHeight: '280px',
                   objectFit: 'cover',
-                  objectPosition: 'center top'
+                  objectPosition: 'center bottom'
                 }}
               >
                 <source src="/hero-video.mov" type="video/quicktime" />

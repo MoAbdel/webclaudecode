@@ -913,8 +913,12 @@ export default function EnhancedContactForm() {
                               <span className="text-red-600 font-bold">
                                 Monthly Increase: ${Math.round(Math.abs(calculatorResults.monthlyDifference)).toLocaleString()}
                               </span>
-                              <div className="text-xs text-red-600">
-                                ⚠️ Your current rate is better - refinancing not recommended
+                              <div className="text-xs text-blue-600">
+                                {formData.loanPurpose === 'cash-out' ? (
+                                  <>💰 Cash-Out Analysis: Access ${parseFloat(formData.cashOutAmount?.replace(/[^0-9.]/g, '') || '0').toLocaleString()} equity for a ${Math.round(Math.abs(calculatorResults.monthlyDifference)).toLocaleString()}/month increase. Evaluate if the cash meets your financial goals.</>
+                                ) : (
+                                  <>⚠️ Your current rate is better - refinancing not recommended</>
+                                )}
                               </div>
                             </div>
                           )}

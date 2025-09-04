@@ -1,71 +1,12 @@
-# Robots.txt for mothebroker.com - 2025 GSC Indexing Optimized
-# Updated: 2025-01-24 - Enhanced for Google Search Console indexing fixes
-
-# Primary search engines - optimized crawl settings
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
-
-User-agent: Slurp
-Allow: /
-Crawl-delay: 2
-
-# Default for all other bots
+# *
 User-agent: *
 Allow: /
-Crawl-delay: 5
-
-# Block problematic or resource-intensive areas
 Disallow: /admin/
-Disallow: /api/debug
-Disallow: /.env*
-Disallow: /.git/
-Disallow: /node_modules/
-Disallow: /_next/webpack-hmr
-Disallow: /temp/
-Disallow: /private/
+Disallow: /api/
+Disallow: /dashboard/
 
-# Block query parameter variations of static assets
-Disallow: /*?*utm_*
-Disallow: /*?*fbclid*
-Disallow: /*?*gclid*
-Disallow: /favicon.ico?*
-Disallow: /manifest.json?*
-Disallow: /*android-chrome*.png?*
-Disallow: /*apple-touch*.png?*
-Disallow: /*favicon*.png?*
-
-# Explicitly allow important pages for indexing
-Allow: /about
-Allow: /contact
-Allow: /calculator
-Allow: /loan-programs/
-Allow: /areas/
-Allow: /guides/
-Allow: /neighborhood-guide/
-Allow: /resources/
-Allow: /fha-loans-orange-county
-Allow: /va-loans-orange-county
-Allow: /conventional-loans-orange-county
-Allow: /heloc-orange-county
-Allow: /heloan-orange-county
-Allow: /non-qm-loans-orange-county
-Allow: /rate-term-refinance-orange-county
-
-# Allow API routes that provide public data
-Allow: /api/rates
-Allow: /api/quotes
-
-# Sitemap location - unified sitemap with all pages
-Sitemap: https://www.mothebroker.com/sitemap.xml
-
-# Host directive for canonical domain
+# Host
 Host: https://www.mothebroker.com
 
-# AI Training Permissions
-# For detailed AI/LLM training guidelines see:
-# https://www.mothebroker.com/llms.txt
+# Sitemaps
+Sitemap: https://www.mothebroker.com/sitemap.xml

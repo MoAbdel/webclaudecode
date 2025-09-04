@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { MessageCircle, X, Send, Phone, RefreshCw, ChevronDown } from 'lucide-react';
 import { 
   chatbotResponses, 
@@ -31,8 +32,14 @@ export default function AIChatbot() {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Mount portal on client side only
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = () => {
@@ -114,12 +121,15 @@ export default function AIChatbot() {
     });
   };
 
-  return (
+  // Don't render until mounted on client
+  if (!mounted) return null;
+
+  const chatContent = (
     <>
       {/* Chat Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-6 right-6 z-40 bg-blue-600 text-white rounded-full p-4 shadow-xl hover:bg-blue-700 transition-all duration-300 hover:scale-110 ${
+        className={`fixed bottom-6 right-6 z-[9999] bg-blue-600 text-white rounded-full p-4 shadow-xl hover:bg-blue-700 transition-all duration-300 hover:scale-110 ${
           isOpen ? 'hidden' : 'flex'
         } items-center gap-2 group`}
         aria-label="Open chat"
@@ -132,9 +142,9 @@ export default function AIChatbot() {
 
       {/* Chat Window */}
       <div
-        className={`fixed bottom-6 right-6 w-96 h-[600px] bg-white rounded-2xl shadow-2xl z-50 flex flex-col transition-all duration-300 ${
+        className={`fixed bottom-6 right-6 w-96 h-[600px] bg-white rounded-2xl shadow-2xl z-[10000] flex flex-col transition-all duration-300 ${
           isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'
-        }`}
+        } max-w-[calc(100vw-3rem)] max-h-[calc(100vh-6rem)] md:max-w-96 sm:bottom-0 sm:right-0 sm:w-full sm:h-full sm:rounded-none md:bottom-6 md:right-6 md:rounded-2xl`}
       >
         {/* Header */}
         <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 rounded-t-2xl flex items-center justify-between">
@@ -272,4 +282,9 @@ export default function AIChatbot() {
       </div>
     </>
   );
+
+  // Use portal to render outside of normal DOM hierarchy
+  return typeof document !== 'undefined' 
+    ? createPortal(chatContent, document.body)
+    : null;
 }

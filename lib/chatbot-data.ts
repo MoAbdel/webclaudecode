@@ -330,4 +330,6 @@ export const welcomeMessage = `👋 Hi! I'm Mo's AI assistant. I can help you wi
 • Refinancing options
 • Or connect you directly with Mo
 
-What can I help you with today?`;
+What can I help you with today?
+
+*Information provided is for educational purposes. Rates and terms subject to qualification and may vary.*`;

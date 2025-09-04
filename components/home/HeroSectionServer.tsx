@@ -9,7 +9,7 @@ export default function HeroSectionServer() {
     <section className="relative py-20 lg:py-32 overflow-hidden bg-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
@@ -76,7 +76,7 @@ export default function HeroSectionServer() {
           {/* Right Column Content */}
           <div className="space-y-8">
             {/* Hero Video - Aligned with H1 text */}
-            <div className="relative w-full mt-0">
+            <div className="relative w-full -mt-2">
               <video 
                 className="w-full h-auto rounded-xl shadow-xl border border-gray-200"
                 controls

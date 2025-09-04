@@ -110,27 +110,17 @@ function ChatbotUI() {
   const formatTime = (d: Date) =>
     d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
 
-  // Common fixed positioning (launcher & panel)
-  const commonFixed: React.CSSProperties = useMemo(
-    () => ({
-      position: 'fixed',
-      right: '24px',
-      bottom: '24px',
-      zIndex: 2147483647,
-      fontFamily:
-        '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
-    }),
-    []
-  );
-
   return (
     <>
-      {/* Floating Launcher (fixed to viewport) */}
+      {/* Chat Button */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
           style={{
-            ...commonFixed,
+            position: 'fixed',
+            right: '24px',
+            bottom: '24px',
+            zIndex: 2147483647,
             width: '64px',
             height: '64px',
             backgroundColor: '#2563eb',
@@ -143,8 +133,7 @@ function ChatbotUI() {
             cursor: 'pointer',
             boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
             transition: 'transform 0.2s ease',
-            bottom: 'max(24px, env(safe-area-inset-bottom, 24px))',
-            right: 'max(24px, env(safe-area-inset-right, 24px))'
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
           }}
           onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.06)')}
           onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
@@ -154,13 +143,16 @@ function ChatbotUI() {
         </button>
       )}
 
-      {/* Chat Panel (also fixed to viewport; not absolute) */}
+      {/* Chat Panel */}
       {isOpen && (
         <div
           role="dialog"
           aria-label="Mo's AI Assistant"
           style={{
-            ...commonFixed,
+            position: 'fixed',
+            right: '24px',
+            bottom: '24px',
+            zIndex: 2147483647,
             width: '384px',
             height: '600px',
             backgroundColor: 'white',
@@ -170,8 +162,7 @@ function ChatbotUI() {
             flexDirection: 'column',
             overflow: 'hidden',
             border: '1px solid #e5e7eb',
-            bottom: 'max(24px, env(safe-area-inset-bottom, 24px))',
-            right: 'max(24px, env(safe-area-inset-right, 24px))'
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
           }}
         >
           {/* Header */}

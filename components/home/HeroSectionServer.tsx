@@ -83,7 +83,6 @@ export default function HeroSectionServer() {
                 muted
                 playsInline
                 autoPlay
-                loop
                 style={{ 
                   maxHeight: '280px',
                   objectFit: 'cover'

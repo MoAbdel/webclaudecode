@@ -7,6 +7,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 import FacebookPixel from '@/components/FacebookPixel';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 import GEOTracking from '@/components/GEOTracking';
+import AIChatbot from '@/components/AIChatbot';
 import Script from 'next/script';
 import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
@@ -131,6 +132,7 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <AIChatbot />
         <GoogleAnalytics />
         <FacebookPixel />
         <GEOTracking />

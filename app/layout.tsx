@@ -7,7 +7,6 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 import FacebookPixel from '@/components/FacebookPixel';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 import GEOTracking from '@/components/GEOTracking';
-import FixedChatbot from '@/components/FixedChatbot';
 import Script from 'next/script';
 import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
@@ -146,7 +145,12 @@ export default function RootLayout({
           }}
         />
         
-        <FixedChatbot />
+        
+        {/* Independent JavaScript Chatbot - Fixed Positioning */}
+        <Script 
+          src="/chatbot-init.js" 
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );

@@ -35,7 +35,7 @@ export const chatbotResponses: ChatResponse[] = [
   // Rates & Pricing
   {
     question: "What are current mortgage rates?",
-    answer: "Current rates vary by loan type and credit score. Today's rates are approximately: 30-year fixed at 6.53%, 15-year fixed at 5.88%, FHA at 6.09%, VA at 6.10%, and Jumbo at 6.47%. With my wholesale lender access, I consistently secure competitive rates. Call me at (949) 579-2057 for your personalized rate quote.",
+    answer: "Current rates vary by loan type and credit score. Today's rates are approximately: 30-year fixed at 6.53%, 15-year fixed at 5.88%, FHA at 6.09%, VA at 6.10%, and Jumbo at 6.47%. These are sample rates - your actual rate depends on credit score, down payment, and loan specifics. Call (949) 579-2057 for your personalized rate quote with no obligation.",
     category: "rates",
     keywords: ["rates", "interest", "current", "today", "apr", "percentage"],
     followUp: ["What affects my rate?", "Can I lock my rate?"]
@@ -88,7 +88,7 @@ export const chatbotResponses: ChatResponse[] = [
   // Down Payment & Qualification
   {
     question: "What's the minimum down payment?",
-    answer: "Minimum down payment varies by program: VA loans = 0% down for veterans, FHA = 3.5% down, Conventional = 3% for first-time buyers (5% standard), Jumbo = 10-20% down, Non-QM = 10-30% depending on program. I also help with down payment assistance programs and gift funds.",
+    answer: "Minimum down payment varies by program: VA loans = 0% down for eligible veterans, FHA = 3.5% down with 580+ credit score, Conventional = 3% for first-time buyers (5% standard), Jumbo = typically 10-20% down, Non-QM = 10-30% depending on program. Down payment assistance programs may be available for qualified buyers. Gift funds from family are often acceptable.",
     category: "qualification",
     keywords: ["down payment", "minimum", "deposit", "upfront", "cash"],
     followUp: ["Can I use gift funds?", "Are there down payment assistance programs?"]
@@ -129,6 +129,13 @@ export const chatbotResponses: ChatResponse[] = [
     category: "process",
     keywords: ["preapproval", "pre-approval", "prequalified", "approved"],
     followUp: ["How do I get pre-approved?", "Is pre-approval guaranteed?"]
+  },
+  {
+    question: "Is pre-approval guaranteed?",
+    answer: "Pre-approval is a conditional commitment based on the information you provide and initial underwriting review. Final loan approval requires: property appraisal meeting value requirements, no significant changes to your financial situation, verification of all documentation, and clear title on the property. While not 100% guaranteed, my pre-approvals have a very high success rate because I thoroughly verify everything upfront. I'll be transparent about any potential issues early in the process.",
+    category: "process",
+    keywords: ["preapproval", "guaranteed", "final", "approval", "conditional"],
+    followUp: ["What could cause denial after pre-approval?", "How solid is pre-approval?"]
   },
   {
     question: "What are closing costs?",
@@ -235,7 +242,7 @@ export const chatbotResponses: ChatResponse[] = [
   },
   {
     question: "Can you beat my bank's rate?",
-    answer: "In most cases, yes! With access to 200+ wholesale lenders, I typically find better rates than retail banks. Banks mark up rates for profit; I pass wholesale rates directly to you. Even a 0.25% rate difference saves thousands over the loan life. Let me run a comparison - call (949) 579-2057.",
+    answer: "I often find better rates through my 200+ wholesale lenders compared to retail banks. However, rates depend on many factors including credit score, down payment, and loan type. I'd be happy to provide a free rate comparison to see if I can save you money. No obligation to proceed. Call (949) 579-2057 for your personalized comparison.",
     category: "rates",
     keywords: ["beat", "match", "better", "lower", "compete"],
     followUp: ["How much can I save?", "Will you match rates?"]
@@ -246,6 +253,57 @@ export const chatbotResponses: ChatResponse[] = [
     category: "process",
     keywords: ["start", "begin", "get started", "apply", "first step"],
     followUp: ["What information do you need?", "How long for pre-approval?"]
+  },
+
+  // Additional follow-up questions that were missing
+  {
+    question: "Can I lock my rate?",
+    answer: "Yes, you can lock your interest rate once you have an accepted offer on a property. Rate locks typically range from 30-60 days, with some lenders offering up to 90 days. Locking protects you from rate increases during the loan process. I'll advise on the best timing based on market conditions and your closing timeline.",
+    category: "rates",
+    keywords: ["lock", "rate lock", "guarantee", "fixed", "protect"],
+    followUp: ["How long can I lock?", "What if rates drop after locking?"]
+  },
+  {
+    question: "Can I use gift funds?",
+    answer: "Yes, most loan programs allow gift funds for down payment and closing costs. FHA and VA accept 100% gift funds, Conventional loans allow gifts with proper documentation, and gifts must come from acceptable sources (family, employer, close friend). I'll help you document the gift properly with a gift letter and proof of transfer.",
+    category: "qualification",
+    keywords: ["gift", "funds", "family", "help", "down payment gift"],
+    followUp: ["Who can give gift funds?", "How do I document gifts?"]
+  },
+  {
+    question: "What could cause denial after pre-approval?",
+    answer: "Common reasons for denial after pre-approval include: major purchases affecting debt-to-income ratio, job loss or income changes, new credit inquiries or accounts, property appraisal coming in low, issues discovered during underwriting, or undisclosed financial information. I help clients avoid these pitfalls by providing clear guidance on what not to do during the loan process.",
+    category: "process",
+    keywords: ["denial", "denied", "rejected", "pre-approval", "fail"],
+    followUp: ["How to avoid denial?", "What if appraisal is low?"]
+  },
+  {
+    question: "What are your business hours?",
+    answer: "I'm available 24/7 to serve your needs! While standard business hours are Monday-Friday 9 AM to 6 PM, I understand buying a home doesn't follow a 9-5 schedule. Feel free to call or text (949) 579-2057 anytime. I typically respond within 1 hour during business hours and within 24 hours on weekends.",
+    category: "contact",
+    keywords: ["hours", "available", "when", "time", "schedule", "open"],
+    followUp: ["Best time to call?", "Do you meet on weekends?"]
+  },
+  {
+    question: "Will you match rates?",
+    answer: "I'm committed to getting you the best rate possible. If you have a Loan Estimate from another lender, I'll review it and work to find equal or better terms through my 200+ lenders. Often, I can beat both the rate AND fees. Bring me any written quote for a free, no-obligation comparison.",
+    category: "rates",
+    keywords: ["match", "beat", "compete", "comparison", "lower"],
+    followUp: ["What do you need to match?", "How to compare offers?"]
+  },
+  {
+    question: "Do I qualify as first-time buyer?",
+    answer: "You're considered a first-time buyer if you haven't owned a home in the past 3 years. This includes: never owning before, divorced individuals who haven't owned in 3+ years, and single parents who only owned with ex-spouse. First-time buyer status unlocks special programs with lower down payments and assistance options.",
+    category: "firsttime",
+    keywords: ["qualify", "first-time", "eligible", "count", "considered"],
+    followUp: ["What first-time benefits exist?", "What if spouse owned before?"]
+  },
+  {
+    question: "How much can I save with you?",
+    answer: "Typical savings range from $5,000-$15,000 over the loan life through better rates and lower fees. On a $800,000 loan, just 0.25% rate difference saves $40,000+ over 30 years. Plus, my wholesale lender fees are often $2,000-$5,000 less than retail banks. I'll provide a detailed comparison showing your exact savings.",
+    category: "rates",
+    keywords: ["save", "savings", "money", "cost", "cheaper"],
+    followUp: ["Can you guarantee savings?", "Show me the math?"]
   }
 ];
 
@@ -332,4 +390,6 @@ export const welcomeMessage = `👋 Hi! I'm Mo's AI assistant. I can help you wi
 
 What can I help you with today?
 
-*Information provided is for educational purposes. Rates and terms subject to qualification and may vary.*`;
+📞 For personalized assistance: (949) 579-2057
+
+*This is an automated assistant. Information provided is for educational purposes only and not a commitment to lend. All loans subject to underwriting approval. Rates and terms subject to change without notice.*`;

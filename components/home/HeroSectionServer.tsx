@@ -85,7 +85,8 @@ export default function HeroSectionServer() {
                 autoPlay
                 style={{ 
                   maxHeight: '280px',
-                  objectFit: 'cover'
+                  objectFit: 'cover',
+                  objectPosition: 'center top'
                 }}
               >
                 <source src="/hero-video.mov" type="video/quicktime" />

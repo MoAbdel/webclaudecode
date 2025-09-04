@@ -5,14 +5,14 @@
   // Wait for DOM and React to be fully loaded
   function initializeChatbot() {
     // Remove any existing chatbot
-    const existing = document.getElementById('independent-chatbot-root');
+    const existing = document.getElementById('ai-chatbot-root');
     if (existing) {
       existing.remove();
     }
     
     // Create completely independent root element
     const chatbotRoot = document.createElement('div');
-    chatbotRoot.id = 'independent-chatbot-root';
+    chatbotRoot.id = 'ai-chatbot-root';
     chatbotRoot.style.cssText = `
       position: fixed !important;
       bottom: 24px !important;

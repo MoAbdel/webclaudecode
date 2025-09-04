@@ -151,6 +151,26 @@ export default function RootLayout({
           src="/chatbot-init.js" 
           strategy="afterInteractive"
         />
+        
+        {/* Reparent chatbot to body to escape footer constraints */}
+        <Script id="chatbot-reparent" strategy="afterInteractive">
+          {`
+            (function () {
+              function mountBot() {
+                var el = document.getElementById('ai-chatbot-root');
+                if (!el) return;
+                if (el.parentElement !== document.body) {
+                  document.body.appendChild(el);  // move out of footer/container
+                }
+              }
+              if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', mountBot);
+              } else {
+                mountBot();
+              }
+            })();
+          `}
+        </Script>
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useRef, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { MessageCircle, X, Send, Phone } from 'lucide-react';
 import { 
   chatbotResponses, 
@@ -31,8 +32,56 @@ export default function AIChatbot() {
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  // Ensure component mounts on client only
+  useEffect(() => {
+    setMounted(true);
+    
+    // Force high z-index on body to ensure chatbot stays on top
+    const style = document.createElement('style');
+    style.innerHTML = `
+      #chatbot-container {
+        position: fixed !important;
+        z-index: 2147483647 !important;
+        pointer-events: auto !important;
+      }
+      #chatbot-button {
+        position: fixed !important;
+        bottom: 24px !important;
+        right: 24px !important;
+        z-index: 2147483647 !important;
+        pointer-events: auto !important;
+      }
+      #chatbot-window {
+        position: fixed !important;
+        bottom: 24px !important;
+        right: 24px !important;
+        z-index: 2147483647 !important;
+        pointer-events: auto !important;
+      }
+      @media (max-width: 640px) {
+        #chatbot-window {
+          bottom: 0 !important;
+          right: 0 !important;
+          width: 100% !important;
+          height: 100% !important;
+          border-radius: 0 !important;
+          max-width: 100% !important;
+          max-height: 100% !important;
+        }
+      }
+    `;
+    document.head.appendChild(style);
+
+    return () => {
+      if (document.head.contains(style)) {
+        document.head.removeChild(style);
+      }
+    };
+  }, []);
 
   // Auto-scroll to bottom when new messages arrive
   const scrollToBottom = () => {
@@ -116,15 +165,18 @@ export default function AIChatbot() {
     });
   };
 
-  return (
-    <div className="fixed bottom-0 right-0 z-[99999]">
+  // Don't render until mounted
+  if (!mounted) return null;
+
+  const chatbotContent = (
+    <div id="chatbot-container">
       {/* Chat Button */}
       {!isOpen && (
         <button
+          id="chatbot-button"
           onClick={() => setIsOpen(true)}
-          className="fixed bottom-6 right-6 bg-blue-600 text-white rounded-full p-4 shadow-xl hover:bg-blue-700 transition-all duration-300 hover:scale-110 flex items-center gap-2 group"
+          className="bg-blue-600 text-white rounded-full p-4 shadow-xl hover:bg-blue-700 transition-all duration-300 hover:scale-110 flex items-center gap-2 group"
           aria-label="Open chat"
-          style={{ zIndex: 99999 }}
         >
           <MessageCircle className="w-6 h-6" />
           <span className="hidden group-hover:inline-block bg-blue-700 text-white px-3 py-1 rounded-lg absolute right-full mr-2 whitespace-nowrap">
@@ -136,11 +188,11 @@ export default function AIChatbot() {
       {/* Chat Window */}
       {isOpen && (
         <div 
-          className="fixed bottom-0 right-0 w-full h-full sm:bottom-6 sm:right-6 sm:w-96 sm:h-[600px] bg-white sm:rounded-2xl shadow-2xl flex flex-col"
-          style={{ zIndex: 99999 }}
+          id="chatbot-window"
+          className="w-96 h-[600px] bg-white rounded-2xl shadow-2xl flex flex-col"
         >
           {/* Header */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 sm:rounded-t-2xl flex items-center justify-between">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 text-white p-4 rounded-t-2xl flex items-center justify-between">
             <div className="flex items-center gap-3">
               <div className="relative">
                 <div className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center">
@@ -276,4 +328,7 @@ export default function AIChatbot() {
       )}
     </div>
   );
+
+  // Use portal to render directly to body
+  return createPortal(chatbotContent, document.body);
 }

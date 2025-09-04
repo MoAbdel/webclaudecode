@@ -73,8 +73,31 @@ export default function HeroSectionServer() {
             </div>
           </div>
 
-          {/* Dynamic Rates Card - Client Component */}
-          <DynamicRates />
+          {/* Right Column Content */}
+          <div className="space-y-8">
+            {/* Hero Video - Aligned with H1 text */}
+            <div className="relative w-full mt-0">
+              <video 
+                className="w-full h-auto rounded-xl shadow-xl border border-gray-200"
+                controls
+                muted
+                playsInline
+                autoPlay
+                loop
+                style={{ 
+                  maxHeight: '280px',
+                  objectFit: 'cover'
+                }}
+              >
+                <source src="/hero-video.mov" type="video/quicktime" />
+                <source src="/hero-video.mov" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            
+            {/* Dynamic Rates Card - Client Component */}
+            <DynamicRates />
+          </div>
         </div>
       </div>
     </section>

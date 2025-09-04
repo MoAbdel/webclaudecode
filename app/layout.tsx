@@ -8,6 +8,7 @@ import FacebookPixel from '@/components/FacebookPixel';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 import GEOTracking from '@/components/GEOTracking';
 import FixedChatbot from '@/components/FixedChatbot';
+import ChatbotHardReset from '@/components/ChatbotHardReset';
 import Script from 'next/script';
 import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
@@ -135,6 +136,7 @@ export default function RootLayout({
         <GoogleAnalytics />
         <FacebookPixel />
         <GEOTracking />
+        <ChatbotHardReset />
         
         {/* Combined structured data - single script for better performance */}
         <Script 

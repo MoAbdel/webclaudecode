@@ -102,3 +102,12 @@
     transition: width 0.3s ease-in-out;
   }
 }
+
+/* Chatbot: neutralize containing blocks that break position: fixed */
+html, body, #__next, #root, main, .site, .layout, .page, .site-wrapper {
+  transform: none !important;
+  filter: none !important;
+  backdrop-filter: none !important;
+  perspective: none !important;
+  contain: none !important;
+}

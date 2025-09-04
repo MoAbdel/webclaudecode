@@ -110,6 +110,13 @@ function ChatbotUI() {
   const formatTime = (d: Date) =>
     d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
 
+  // Lock background scroll when chat is open
+  useEffect(() => {
+    if (isOpen) document.documentElement.classList.add('chatbot-no-scroll');
+    else document.documentElement.classList.remove('chatbot-no-scroll');
+    return () => document.documentElement.classList.remove('chatbot-no-scroll');
+  }, [isOpen]);
+
   return (
     <>
       {/* Chat Button */}
@@ -118,11 +125,11 @@ function ChatbotUI() {
           onClick={() => setIsOpen(true)}
           style={{
             position: 'fixed',
-            right: '24px',
-            bottom: '24px',
+            right: 'max(16px, env(safe-area-inset-right, 16px))',
+            bottom: 'max(16px, env(safe-area-inset-bottom, 16px))',
             zIndex: 2147483647,
-            width: '64px',
-            height: '64px',
+            width: '56px',
+            height: '56px',
             backgroundColor: '#2563eb',
             color: 'white',
             borderRadius: '50%',
@@ -131,15 +138,16 @@ function ChatbotUI() {
             justifyContent: 'center',
             border: 'none',
             cursor: 'pointer',
-            boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
+            boxShadow: '0 10px 24px rgba(0,0,0,0.22)',
             transition: 'transform 0.2s ease',
-            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+            WebkitTapHighlightColor: 'transparent'
           }}
           onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.06)')}
           onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
           aria-label="Open chat"
         >
-          <MessageCircle size={24} />
+          <MessageCircle size={22} />
         </button>
       )}
 
@@ -150,19 +158,22 @@ function ChatbotUI() {
           aria-label="Mo's AI Assistant"
           style={{
             position: 'fixed',
-            right: '24px',
-            bottom: '24px',
+            right: 'max(12px, env(safe-area-inset-right, 12px))',
+            bottom: 'max(12px, env(safe-area-inset-bottom, 12px))',
             zIndex: 2147483647,
-            width: '384px',
-            height: '600px',
+            // Mobile-first sizing with dvh for iOS URL bar handling
+            width: 'min(92vw, 420px)',
+            height: 'min(80dvh, 640px)',
             backgroundColor: 'white',
             borderRadius: '16px',
-            boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.28)',
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
             border: '1px solid #e5e7eb',
-            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+            fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+            // Prevent parent CSS interference
+            transform: 'translateZ(0)'
           }}
         >
           {/* Header */}
@@ -260,6 +271,7 @@ function ChatbotUI() {
             style={{
               flex: 1,
               overflowY: 'auto',
+              WebkitOverflowScrolling: 'touch',
               padding: '16px',
               display: 'flex',
               flexDirection: 'column',
@@ -388,11 +400,20 @@ function ChatbotUI() {
           </div>
 
           {/* Input */}
-          <div style={{ padding: '16px', borderTop: '1px solid #e5e7eb', backgroundColor: 'white' }}>
+          <div style={{ 
+            padding: '16px', 
+            borderTop: '1px solid #e5e7eb', 
+            backgroundColor: 'white',
+            paddingBottom: 'max(16px, env(safe-area-inset-bottom, 16px))'
+          }}>
             <div style={{ display: 'flex', gap: '8px' }}>
               <input
                 ref={inputRef}
                 type="text"
+                inputMode="text"
+                autoCapitalize="sentences"
+                autoComplete="off"
+                autoCorrect="on"
                 value={inputValue}
                 onChange={e => setInputValue(e.target.value)}
                 onKeyDown={e => {
@@ -437,14 +458,25 @@ function ChatbotUI() {
         </div>
       )}
 
-      {/* Keyframes (scoped) */}
+      {/* Keyframes and Mobile Styles */}
       <style
         dangerouslySetInnerHTML={{
           __html: `
           @keyframes bounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
-          @media (max-width: 768px){
-            /* smaller on mobile */
-            [role="dialog"][aria-label="Mo's AI Assistant"] { width: 92vw; height: 70vh; right: max(12px, env(safe-area-inset-right, 12px)); bottom: max(12px, env(safe-area-inset-bottom, 12px)); }
+          @media (min-width: 768px) {
+            /* Desktop/tablet: give it more real estate */
+            [role="dialog"][aria-label="Mo's AI Assistant"] {
+              width: 384px !important;
+              height: 600px !important;
+              right: 24px !important;
+              bottom: 24px !important;
+            }
+          }
+          /* Prevent body scroll hijack when panel open */
+          .chatbot-no-scroll { 
+            overflow: hidden !important; 
+            touch-action: none !important; 
+            overscroll-behavior: contain !important; 
           }
         `
         }}

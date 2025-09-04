@@ -1,15 +1,16 @@
+// components/FixedChatbot.tsx
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { MessageCircle, X, Send, Phone } from 'lucide-react';
-import { 
-  chatbotResponses, 
-  findBestResponse, 
-  quickActions, 
+import {
+  chatbotResponses,
+  findBestResponse,
+  quickActions,
   welcomeMessage,
   fallbackResponses,
-  ChatResponse 
+  ChatResponse
 } from '@/lib/chatbot-data';
 
 interface Message {
@@ -20,45 +21,55 @@ interface Message {
   followUp?: string[];
 }
 
+function useBodyPortal(id = 'ai-chatbot-root') {
+  const [el, setEl] = useState<HTMLElement | null>(null);
+  useEffect(() => {
+    let node = document.getElementById(id) as HTMLElement | null;
+    if (!node) {
+      node = document.createElement('div');
+      node.id = id;
+      document.body.appendChild(node);
+    } else if (node.parentElement !== document.body) {
+      document.body.appendChild(node);
+    }
+    // Ensure the portal root itself cannot create containing blocks
+    node.style.position = 'static';
+    node.style.transform = 'none';
+    node.style.filter = 'none';
+    node.style.contain = 'none';
+    setEl(node);
+    return () => {
+      // optional: keep it for subsequent mounts; remove if you prefer cleanup
+      // node.remove();
+    };
+  }, [id]);
+  return el;
+}
+
 function ChatbotUI() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    {
-      id: '1',
-      text: welcomeMessage,
-      isUser: false,
-      timestamp: new Date()
-    }
+    { id: '1', text: welcomeMessage, isUser: false, timestamp: new Date() }
   ]);
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Auto-scroll to bottom when new messages arrive
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
-  };
+  const scrollToBottom = () => messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  useEffect(() => { scrollToBottom(); }, [messages]);
 
-  useEffect(() => {
-    scrollToBottom();
-  }, [messages]);
-
-  // Focus input when chat opens
   useEffect(() => {
     if (isOpen && inputRef.current) {
-      setTimeout(() => {
-        inputRef.current?.focus();
-      }, 100);
+      const t = setTimeout(() => inputRef.current?.focus(), 100);
+      return () => clearTimeout(t);
     }
   }, [isOpen]);
 
-  // Handle sending a message
   const handleSend = async (text?: string) => {
-    const messageText = text || inputValue.trim();
+    const messageText = (text ?? inputValue).trim();
     if (!messageText) return;
 
-    // Add user message
     const userMessage: Message = {
       id: Date.now().toString(),
       text: messageText,
@@ -69,69 +80,57 @@ function ChatbotUI() {
     setInputValue('');
     setIsTyping(true);
 
-    // Simulate typing delay
-    await new Promise(resolve => setTimeout(resolve, 500 + Math.random() * 1000));
+    await new Promise(r => setTimeout(r, 500 + Math.random() * 1000));
 
-    // Find response
     const response = findBestResponse(messageText);
-    
-    let botResponse: Message;
-    if (response) {
-      botResponse = {
-        id: (Date.now() + 1).toString(),
-        text: response.answer,
-        isUser: false,
-        timestamp: new Date(),
-        followUp: response.followUp
-      };
-    } else {
-      // Use fallback response
-      const fallback = fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
-      botResponse = {
-        id: (Date.now() + 1).toString(),
-        text: fallback,
-        isUser: false,
-        timestamp: new Date()
-      };
-    }
+    const botResponse: Message = response
+      ? {
+          id: (Date.now() + 1).toString(),
+          text: response.answer,
+          isUser: false,
+          timestamp: new Date(),
+          followUp: response.followUp
+        }
+      : {
+          id: (Date.now() + 1).toString(),
+          text: fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)],
+          isUser: false,
+          timestamp: new Date()
+        };
 
     setIsTyping(false);
     setMessages(prev => [...prev, botResponse]);
   };
 
-  // Handle quick actions
   const handleQuickAction = (action: string) => {
-    if (action === 'calculator') {
-      window.location.href = '/calculator';
-    } else {
-      handleSend(action);
-    }
+    if (action === 'calculator') window.location.href = '/calculator';
+    else handleSend(action);
   };
 
-  // Format timestamp
-  const formatTime = (date: Date) => {
-    return date.toLocaleTimeString('en-US', { 
-      hour: 'numeric', 
-      minute: '2-digit',
-      hour12: true 
-    });
-  };
+  const formatTime = (d: Date) =>
+    d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
+
+  // Common fixed positioning (launcher & panel)
+  const commonFixed: React.CSSProperties = useMemo(
+    () => ({
+      position: 'fixed',
+      right: '24px',
+      bottom: '24px',
+      zIndex: 2147483647,
+      fontFamily:
+        '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+    }),
+    []
+  );
 
   return (
-    <div 
-      style={{
-        position: 'fixed',
-        bottom: '24px',
-        right: '24px',
-        zIndex: 2147483647,
-        fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
-      }}
-    >
-      {/* Chat Button */}
+    <>
+      {/* Floating Launcher (fixed to viewport) */}
       {!isOpen && (
         <button
           onClick={() => setIsOpen(true)}
           style={{
+            ...commonFixed,
             width: '64px',
             height: '64px',
             backgroundColor: '#2563eb',
@@ -143,48 +142,25 @@ function ChatbotUI() {
             border: 'none',
             cursor: 'pointer',
             boxShadow: '0 8px 24px rgba(0,0,0,0.2)',
-            transition: 'all 0.3s ease',
-            position: 'relative'
+            transition: 'transform 0.2s ease',
+            bottom: 'max(24px, env(safe-area-inset-bottom, 24px))',
+            right: 'max(24px, env(safe-area-inset-right, 24px))'
           }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.transform = 'scale(1.1)';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.transform = 'scale(1)';
-          }}
+          onMouseEnter={e => (e.currentTarget.style.transform = 'scale(1.06)')}
+          onMouseLeave={e => (e.currentTarget.style.transform = 'scale(1)')}
+          aria-label="Open chat"
         >
           <MessageCircle size={24} />
-          {/* Tooltip */}
-          <div 
-            style={{
-              position: 'absolute',
-              right: '70px',
-              backgroundColor: '#1f2937',
-              color: 'white',
-              padding: '8px 12px',
-              borderRadius: '8px',
-              fontSize: '14px',
-              whiteSpace: 'nowrap',
-              opacity: 0,
-              transition: 'opacity 0.3s ease',
-              pointerEvents: 'none'
-            }}
-            onMouseOver={(e) => {
-              e.currentTarget.style.opacity = '1';
-            }}
-          >
-            Chat with Mo's AI Assistant
-          </div>
         </button>
       )}
 
-      {/* Chat Window */}
+      {/* Chat Panel (also fixed to viewport; not absolute) */}
       {isOpen && (
-        <div 
+        <div
+          role="dialog"
+          aria-label="Mo's AI Assistant"
           style={{
-            position: 'absolute',
-            bottom: '0px',
-            right: '0px',
+            ...commonFixed,
             width: '384px',
             height: '600px',
             backgroundColor: 'white',
@@ -193,43 +169,51 @@ function ChatbotUI() {
             display: 'flex',
             flexDirection: 'column',
             overflow: 'hidden',
-            border: '1px solid #e5e7eb'
+            border: '1px solid #e5e7eb',
+            bottom: 'max(24px, env(safe-area-inset-bottom, 24px))',
+            right: 'max(24px, env(safe-area-inset-right, 24px))'
           }}
         >
           {/* Header */}
-          <div style={{
-            background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
-            color: 'white',
-            padding: '16px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between'
-          }}>
+          <div
+            style={{
+              background: 'linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%)',
+              color: 'white',
+              padding: '16px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'space-between'
+            }}
+          >
             <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
-              <div style={{
-                width: '40px',
-                height: '40px',
-                background: 'rgba(255,255,255,0.2)',
-                borderRadius: '50%',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                position: 'relative'
-              }}>
-                <MessageCircle size={20} />
-                <div style={{
-                  position: 'absolute',
-                  bottom: '-2px',
-                  right: '-2px',
-                  width: '12px',
-                  height: '12px',
-                  backgroundColor: '#10b981',
+              <div
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  background: 'rgba(255,255,255,0.2)',
                   borderRadius: '50%',
-                  border: '2px solid #1d4ed8'
-                }}></div>
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  position: 'relative'
+                }}
+              >
+                <MessageCircle size={20} />
+                <div
+                  style={{
+                    position: 'absolute',
+                    bottom: '-2px',
+                    right: '-2px',
+                    width: '12px',
+                    height: '12px',
+                    backgroundColor: '#10b981',
+                    borderRadius: '50%',
+                    border: '2px solid #1d4ed8'
+                  }}
+                />
               </div>
               <div>
-                <div style={{ fontSize: '16px', fontWeight: '600' }}>Mo's AI Assistant</div>
+                <div style={{ fontSize: '16px', fontWeight: 600 }}>Mo&apos;s AI Assistant</div>
                 <div style={{ fontSize: '12px', opacity: 0.8 }}>Always here to help</div>
               </div>
             </div>
@@ -247,25 +231,28 @@ function ChatbotUI() {
                 alignItems: 'center',
                 justifyContent: 'center'
               }}
+              aria-label="Close chat"
             >
               <X size={16} />
             </button>
           </div>
 
           {/* Call Mo Banner */}
-          <div style={{
-            backgroundColor: '#f0fdf4',
-            borderBottom: '1px solid #dcfce7',
-            padding: '12px 16px',
-            textAlign: 'center'
-          }}>
-            <a 
+          <div
+            style={{
+              backgroundColor: '#f0fdf4',
+              borderBottom: '1px solid #dcfce7',
+              padding: '12px 16px',
+              textAlign: 'center'
+            }}
+          >
+            <a
               href="tel:9495792057"
               style={{
                 color: '#166534',
                 textDecoration: 'none',
                 fontSize: '14px',
-                fontWeight: '500',
+                fontWeight: 500,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -277,55 +264,46 @@ function ChatbotUI() {
             </a>
           </div>
 
-          {/* Messages Area */}
-          <div style={{
-            flex: 1,
-            overflowY: 'auto',
-            padding: '16px',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px'
-          }}>
-            {messages.map((message) => (
-              <div
-                key={message.id}
-                style={{
-                  display: 'flex',
-                  justifyContent: message.isUser ? 'flex-end' : 'flex-start'
-                }}
-              >
+          {/* Messages */}
+          <div
+            style={{
+              flex: 1,
+              overflowY: 'auto',
+              padding: '16px',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '16px'
+            }}
+          >
+            {messages.map(m => (
+              <div key={m.id} style={{ display: 'flex', justifyContent: m.isUser ? 'flex-end' : 'flex-start' }}>
                 <div
                   style={{
                     maxWidth: '80%',
                     padding: '12px 16px',
                     borderRadius: '16px',
-                    backgroundColor: message.isUser ? '#2563eb' : '#f3f4f6',
-                    color: message.isUser ? 'white' : '#374151',
-                    borderBottomRightRadius: message.isUser ? '4px' : '16px',
-                    borderBottomLeftRadius: message.isUser ? '16px' : '4px'
+                    backgroundColor: m.isUser ? '#2563eb' : '#f3f4f6',
+                    color: m.isUser ? 'white' : '#374151',
+                    borderBottomRightRadius: m.isUser ? '4px' : '16px',
+                    borderBottomLeftRadius: m.isUser ? '16px' : '4px'
                   }}
                 >
                   <div style={{ fontSize: '14px', lineHeight: '1.4', whiteSpace: 'pre-wrap' }}>
-                    {message.text}
+                    {m.text}
                   </div>
-                  <div style={{
-                    fontSize: '11px',
-                    marginTop: '4px',
-                    opacity: 0.7
-                  }}>
-                    {formatTime(message.timestamp)}
+                  <div style={{ fontSize: '11px', marginTop: '4px', opacity: 0.7 }}>
+                    {formatTime(m.timestamp)}
                   </div>
-                  
-                  {/* Follow-up questions */}
-                  {message.followUp && message.followUp.length > 0 && (
+
+                  {m.followUp && m.followUp.length > 0 && (
                     <div style={{ marginTop: '12px' }}>
                       <div style={{ fontSize: '11px', marginBottom: '6px', opacity: 0.8 }}>
                         Related questions:
                       </div>
-                      {message.followUp.map((question, idx) => (
+                      {m.followUp.map((q, i) => (
                         <button
-                          key={idx}
-                          onClick={() => handleSend(question)}
+                          key={i}
+                          onClick={() => handleSend(q)}
                           style={{
                             display: 'block',
                             width: '100%',
@@ -340,7 +318,7 @@ function ChatbotUI() {
                             cursor: 'pointer'
                           }}
                         >
-                          {question}
+                          {q}
                         </button>
                       ))}
                     </div>
@@ -348,43 +326,50 @@ function ChatbotUI() {
                 </div>
               </div>
             ))}
-            
-            {/* Typing Indicator */}
+
             {isTyping && (
               <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                <div style={{
-                  backgroundColor: '#f3f4f6',
-                  padding: '12px 16px',
-                  borderRadius: '16px',
-                  borderBottomLeftRadius: '4px'
-                }}>
+                <div
+                  style={{
+                    backgroundColor: '#f3f4f6',
+                    padding: '12px 16px',
+                    borderRadius: '16px',
+                    borderBottomLeftRadius: '4px'
+                  }}
+                >
                   <div style={{ display: 'flex', gap: '4px' }}>
-                    <div style={{
-                      width: '8px',
-                      height: '8px',
-                      backgroundColor: '#9ca3af',
-                      borderRadius: '50%',
-                      animation: 'bounce 1.4s ease-in-out infinite both'
-                    }}></div>
-                    <div style={{
-                      width: '8px',
-                      height: '8px',
-                      backgroundColor: '#9ca3af',
-                      borderRadius: '50%',
-                      animation: 'bounce 1.4s ease-in-out 0.2s infinite both'
-                    }}></div>
-                    <div style={{
-                      width: '8px',
-                      height: '8px',
-                      backgroundColor: '#9ca3af',
-                      borderRadius: '50%',
-                      animation: 'bounce 1.4s ease-in-out 0.4s infinite both'
-                    }}></div>
+                    <div
+                      style={{
+                        width: '8px',
+                        height: '8px',
+                        backgroundColor: '#9ca3af',
+                        borderRadius: '50%',
+                        animation: 'bounce 1.4s ease-in-out infinite both'
+                      }}
+                    />
+                    <div
+                      style={{
+                        width: '8px',
+                        height: '8px',
+                        backgroundColor: '#9ca3af',
+                        borderRadius: '50%',
+                        animation: 'bounce 1.4s ease-in-out 0.2s infinite both'
+                      }}
+                    />
+                    <div
+                      style={{
+                        width: '8px',
+                        height: '8px',
+                        backgroundColor: '#9ca3af',
+                        borderRadius: '50%',
+                        animation: 'bounce 1.4s ease-in-out 0.4s infinite both'
+                      }}
+                    />
                   </div>
                 </div>
               </div>
             )}
-            
+
             <div ref={messagesEndRef} />
           </div>
 
@@ -411,19 +396,15 @@ function ChatbotUI() {
             </div>
           </div>
 
-          {/* Input Area */}
-          <div style={{
-            padding: '16px',
-            borderTop: '1px solid #e5e7eb',
-            backgroundColor: 'white'
-          }}>
+          {/* Input */}
+          <div style={{ padding: '16px', borderTop: '1px solid #e5e7eb', backgroundColor: 'white' }}>
             <div style={{ display: 'flex', gap: '8px' }}>
               <input
                 ref={inputRef}
                 type="text"
                 value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
-                onKeyPress={(e) => {
+                onChange={e => setInputValue(e.target.value)}
+                onKeyDown={e => {
                   if (e.key === 'Enter') {
                     e.preventDefault();
                     handleSend();
@@ -454,8 +435,9 @@ function ChatbotUI() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  opacity: (!inputValue.trim() || isTyping) ? 0.5 : 1
+                  opacity: !inputValue.trim() || isTyping ? 0.5 : 1
                 }}
+                aria-label="Send message"
               >
                 <Send size={16} />
               </button>
@@ -464,32 +446,24 @@ function ChatbotUI() {
         </div>
       )}
 
-      {/* CSS for animations */}
-      <style dangerouslySetInnerHTML={{
-        __html: `
-          @keyframes bounce {
-            0%, 80%, 100% {
-              transform: scale(0);
-            } 40% {
-              transform: scale(1);
-            }
+      {/* Keyframes (scoped) */}
+      <style
+        dangerouslySetInnerHTML={{
+          __html: `
+          @keyframes bounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+          @media (max-width: 768px){
+            /* smaller on mobile */
+            [role="dialog"][aria-label="Mo's AI Assistant"] { width: 92vw; height: 70vh; right: max(12px, env(safe-area-inset-right, 12px)); bottom: max(12px, env(safe-area-inset-bottom, 12px)); }
           }
         `
-      }} />
-    </div>
+        }}
+      />
+    </>
   );
 }
 
 export default function FixedChatbot() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  // Don't render until mounted on client
-  if (!mounted) return null;
-
-  // Use portal to render directly to document.body, bypassing all layout constraints
-  return createPortal(<ChatbotUI />, document.body);
+  const portalEl = useBodyPortal('ai-chatbot-root');
+  if (!portalEl) return null; // SSR-safe: render only on client
+  return createPortal(<ChatbotUI />, portalEl);
 }

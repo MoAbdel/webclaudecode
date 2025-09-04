@@ -7,6 +7,7 @@ import GoogleAnalytics from '@/components/GoogleAnalytics';
 import FacebookPixel from '@/components/FacebookPixel';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 import GEOTracking from '@/components/GEOTracking';
+import FixedChatbot from '@/components/FixedChatbot';
 import Script from 'next/script';
 import { structuredData, mortgageLoanSchema } from '@/lib/seo';
 import './globals-simple.css';
@@ -145,58 +146,7 @@ export default function RootLayout({
           }}
         />
         
-        {/* AI Chatbot - Inline Script */}
-        <Script id="chatbot-inline" strategy="afterInteractive">
-        {`
-          console.log('Inline chatbot script starting...');
-          
-          function createChatbot() {
-            console.log('Creating chatbot...');
-            
-            // Remove existing
-            const existing = document.getElementById('mo-chatbot-fixed');
-            if (existing) existing.remove();
-            
-            // Create button
-            const button = document.createElement('div');
-            button.id = 'mo-chatbot-fixed';
-            button.innerHTML = 'CHAT';
-            button.style.cssText = \`
-              position: fixed !important;
-              bottom: 20px !important;
-              right: 20px !important;
-              width: 60px !important;
-              height: 60px !important;
-              background: #2563eb !important;
-              color: white !important;
-              border-radius: 50% !important;
-              display: flex !important;
-              align-items: center !important;
-              justify-content: center !important;
-              cursor: pointer !important;
-              z-index: 999999 !important;
-              font-weight: bold !important;
-              box-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
-            \`;
-            
-            button.onclick = function() {
-              alert('Chat clicked! Call Mo at (949) 579-2057');
-            };
-            
-            document.body.appendChild(button);
-            console.log('Chatbot button added to body');
-          }
-          
-          if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', createChatbot);
-          } else {
-            createChatbot();
-          }
-          
-          // Backup - try again after 2 seconds
-          setTimeout(createChatbot, 2000);
-        `}
-        </Script>
+        <FixedChatbot />
       </body>
     </html>
   );

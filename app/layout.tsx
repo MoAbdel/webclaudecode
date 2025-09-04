@@ -146,28 +146,94 @@ export default function RootLayout({
         />
         
         
-        {/* Independent JavaScript Chatbot - Fixed Positioning */}
-        <Script 
-          src="/chatbot-init.js" 
-          strategy="afterInteractive"
-        />
-        
-        {/* Reparent chatbot to body to escape footer constraints */}
-        <Script id="chatbot-reparent" strategy="afterInteractive">
+        {/* Embedded JavaScript Chatbot - Direct Implementation */}
+        <Script id="embedded-chatbot" strategy="afterInteractive">
           {`
-            (function () {
-              function mountBot() {
-                var el = document.getElementById('ai-chatbot-root');
-                if (!el) return;
-                if (el.parentElement !== document.body) {
-                  document.body.appendChild(el);  // move out of footer/container
+            // Chatbot initialization - runs completely independent of React
+            (function() {
+              'use strict';
+              
+              // Wait for DOM and React to be fully loaded
+              function initializeChatbot() {
+                // Remove any existing chatbot
+                const existing = document.getElementById('ai-chatbot-root');
+                if (existing) {
+                  existing.remove();
                 }
+                
+                // Create completely independent root element
+                const chatbotRoot = document.createElement('div');
+                chatbotRoot.id = 'ai-chatbot-root';
+                chatbotRoot.style.cssText = \`
+                  position: fixed !important;
+                  bottom: 24px !important;
+                  right: 24px !important;
+                  z-index: 2147483647 !important;
+                  pointer-events: none !important;
+                \`;
+                
+                // Create the chatbot button
+                const chatButton = document.createElement('button');
+                chatButton.id = 'independent-chat-button';
+                chatButton.innerHTML = \`
+                  <svg width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20 2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h4v3c0 .6.4 1 1 1h.5c.3 0 .6-.1.8-.3L14.1 18H20c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2z"/>
+                  </svg>
+                \`;
+                chatButton.style.cssText = \`
+                  width: 64px !important;
+                  height: 64px !important;
+                  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%) !important;
+                  color: white !important;
+                  border-radius: 50% !important;
+                  border: none !important;
+                  cursor: pointer !important;
+                  display: flex !important;
+                  align-items: center !important;
+                  justify-content: center !important;
+                  box-shadow: 0 8px 24px rgba(0,0,0,0.2) !important;
+                  transition: all 0.3s ease !important;
+                  pointer-events: auto !important;
+                  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+                \`;
+                
+                // Add hover effect
+                chatButton.addEventListener('mouseenter', function() {
+                  this.style.transform = 'scale(1.1)';
+                  this.style.boxShadow = '0 12px 32px rgba(0,0,0,0.3)';
+                });
+                
+                chatButton.addEventListener('mouseleave', function() {
+                  this.style.transform = 'scale(1)';
+                  this.style.boxShadow = '0 8px 24px rgba(0,0,0,0.2)';
+                });
+                
+                // Add elements to root
+                chatbotRoot.appendChild(chatButton);
+                
+                // Click handler for chat button
+                chatButton.addEventListener('click', function() {
+                  alert('Chatbot clicked! Contact Mo at (949) 579-2057');
+                });
+                
+                // Append to body - completely independent
+                document.body.appendChild(chatbotRoot);
+                console.log('Independent chatbot initialized successfully');
               }
+              
+              // Initialize when DOM is ready
               if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', mountBot);
+                document.addEventListener('DOMContentLoaded', initializeChatbot);
+              } else if (document.readyState === 'interactive') {
+                setTimeout(initializeChatbot, 100);
               } else {
-                mountBot();
+                initializeChatbot();
               }
+              
+              // Backup initialization
+              setTimeout(initializeChatbot, 1000);
+              setTimeout(initializeChatbot, 3000);
+              
             })();
           `}
         </Script>

@@ -26,7 +26,7 @@ export default function HELOCPage() {
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Unlock your Orange County home's equity with a flexible credit line. 
-            Access $50K to $500K for any purpose with competitive rates from Prime + 0%.
+            Access $50K to $500K for any purpose with competitive variable rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -48,8 +48,8 @@ export default function HELOCPage() {
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <TrendingUp className="w-8 h-8 text-blue-600" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Prime + 0%</h3>
-            <p className="text-slate-600">Intro rates available for qualified borrowers</p>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Variable Rates</h3>
+            <p className="text-slate-600">Competitive variable rates tied to prime</p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -69,8 +69,8 @@ export default function HELOCPage() {
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="w-8 h-8 text-orange-600" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">No Closing Costs</h3>
-            <p className="text-slate-600">Many programs with zero closing costs</p>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Flexible Terms</h3>
+            <p className="text-slate-600">Customizable repayment options available</p>
           </div>
         </div>
 
@@ -121,11 +121,11 @@ export default function HELOCPage() {
                 <div className="border-t pt-4">
                   <div className="flex justify-between">
                     <span className="text-slate-600">Monthly Payment on $200K:</span>
-                    <span className="font-bold text-green-600">~$1,625/mo*</span>
+                    <span className="font-bold text-green-600">~$1,500/mo*</span>
                   </div>
                 </div>
               </div>
-              <p className="text-xs text-slate-500 mt-4">*Interest-only payment at 9.75% rate. Rates subject to change.</p>
+              <p className="text-xs text-slate-500 mt-4">*Interest-only payment at 9% rate. Rates subject to change.</p>
             </div>
           </div>
         </div>
@@ -147,7 +147,7 @@ export default function HELOCPage() {
               <tbody className="divide-y divide-slate-200">
                 <tr>
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Interest Rate</td>
-                  <td className="px-6 py-4 text-center text-green-600 font-bold">Prime + 0-2%</td>
+                  <td className="px-6 py-4 text-center text-green-600 font-bold">Variable Rate</td>
                   <td className="px-6 py-4 text-center text-slate-600">8-18%</td>
                   <td className="px-6 py-4 text-center text-slate-600">18-29%</td>
                   <td className="px-6 py-4 text-center text-slate-600">Current Mortgage Rates</td>

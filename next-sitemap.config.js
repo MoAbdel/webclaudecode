@@ -33,7 +33,7 @@ module.exports = {
     }
     
     // Main loan program pages - high priority
-    else if (path.startsWith('/loan-programs/') && !path.includes('-irvine')) {
+    else if (path.startsWith('/loan-programs/') || path.startsWith('/programs/')) {
       priority = 0.9;
       changefreq = 'weekly';
     }
@@ -48,6 +48,12 @@ module.exports = {
     else if (path.startsWith('/guides/') || path.startsWith('/resources/')) {
       priority = 0.8;
       changefreq = 'weekly';
+    }
+    
+    // Profile pages - important brand content
+    else if (path === '/Mo' || path === '/cookie-policy') {
+      priority = 0.7;
+      changefreq = 'monthly';
     }
     
     // Tools/calculators - medium-high priority
@@ -103,6 +109,30 @@ module.exports = {
     const additionalPaths = [
       // Home page - ensure it's included
       '/',
+      
+      // Area pages
+      '/areas/irvine',
+      '/areas/mission-viejo',
+      '/areas/newport-beach',
+      '/areas/newport-beach-neighborhoods',
+      '/areas/irvine-neighborhoods',
+      
+      // Program pages
+      '/programs/heloc',
+      '/programs/heloan',
+      '/programs/fix-flip-loans',
+      '/programs/non-qm-bank-statement',
+      '/programs/usda-rural-loans',
+      '/programs/dscr-investment-loans',
+      '/programs/non-qm-asset-depletion',
+      '/programs/foreign-national-loans',
+      
+      // Resources
+      '/resources/mortgage-glossary',
+      
+      // Utility pages
+      '/cookie-policy',
+      '/Mo',
       
       // Main loan program redirects
       '/fha-loans-orange-county',

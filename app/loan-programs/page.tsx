@@ -119,7 +119,7 @@ export default function ProgramsPage() {
 
               <div className="bg-blue-200 rounded-lg p-4 mb-6">
                 <p className="text-blue-900 font-bold text-center text-lg">
-                  Access $50K - $500K • Prime + 0% intro rates available
+                  Access $50K - $500K • Competitive variable rates
                 </p>
               </div>
 

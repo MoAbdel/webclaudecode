@@ -66,6 +66,7 @@ export default function HomePage() {
 
   return (
     <>
+      <h1 className="sr-only">Orange County, CA Mortgage Broker — Home Loans & Refinance</h1>
       {/* AI Optimization Components */}
       <AIOOptimization
         title="Orange County Mortgage Broker | Mo Abdel NMLS #1426884"
@@ -83,6 +84,7 @@ export default function HomePage() {
       
       {/* Main Page Content - Cache Bust 2025-08-22 */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+        <p className="sr-only">Serving Irvine and Newport Beach with competitive home loan options.</p>
         <HeroSectionServer />
         <BrokerComparison />
         <WhyChooseUs />
@@ -93,6 +95,16 @@ export default function HomePage() {
         <StructuredFAQ />
         <Testimonials />
         <NewsletterSignup />
+
+        {/* Internal links for crawlability */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+          <nav aria-label="Related">
+            <ul className="list-disc list-inside text-blue-700">
+              <li><a href="/loan-programs/conventional-loans">Conventional Loans in Orange County, CA</a></li>
+              <li><a href="/loan-programs/rate-term-refinance">Rate &amp; Term Refinance in Orange County, CA</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
 
       {/* JSON-LD: Person (E-E-A-T) */}

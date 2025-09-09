@@ -4,15 +4,11 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
-import { generateMetadata } from '@/lib/metadata';
-
-export const metadata: Metadata = generateMetadata({
-  title: seoData.About.title,
-  description: seoData.About.description,
-  keywords: 'Mo Abdel, mortgage broker, NEXA Mortgage, Orange County, NMLS 1426884, licensed mortgage broker, home loans',
-  path: '/about',
-  type: 'website'
-});
+export const metadata: Metadata = {
+  title: 'About Mo Abdel in Orange County, CA | Mo Abdel — Mortgage Broker',
+  description: 'Learn about Mo Abdel — Mortgage Broker in Orange County, CA. Get local guidance or call (949) 579-2057 to get started.',
+  alternates: { canonical: 'https://mothebroker.com/about' }
+};
 
 export default function AboutPage() {
   return (

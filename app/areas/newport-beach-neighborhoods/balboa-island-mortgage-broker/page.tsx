@@ -51,7 +51,7 @@ export default function BalboaIslandMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Balboa Island Mortgage FAQ',
       description: 'Common questions about Balboa Island luxury home financing',
-      url: 'https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker',
       data: {
         questions: [
           {
@@ -81,7 +81,7 @@ export default function BalboaIslandMortgageBrokerPage() {
       type: 'article' as const,
       title: 'Balboa Island Real Estate Market 2025',
       description: 'Complete guide to Balboa Island luxury waterfront real estate and financing',
-      url: 'https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker',
       data: {
         section: 'Luxury Waterfront Analysis',
         keywords: ['Balboa Island', 'luxury waterfront homes', 'Newport Beach', 'jumbo loans', 'waterfront financing'],
@@ -143,7 +143,7 @@ export default function BalboaIslandMortgageBrokerPage() {
         description="Balboa Island mortgage broker specializing in luxury waterfront home financing. Jumbo loans, investment property loans, and unique property financing."
         keywords={["Balboa Island mortgage", "Newport Beach waterfront loans", "luxury waterfront financing", "Balboa Island homes", "jumbo loans Newport Beach"]}
         city="Balboa Island, Newport Beach"
-        canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker"
         content={balboaIslandData}
       />
       <EnhancedLocalSchema city="Balboa Island, Newport Beach" page_type="city" service_focus="luxury waterfront home financing" />

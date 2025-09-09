@@ -51,7 +51,7 @@ export default function ZipCode92660MortgageBrokerPage() {
       type: 'faq' as const,
       title: '92660 Newport Beach Mortgage FAQ',
       description: 'Common questions about 92660 ZIP code luxury home financing',
-      url: 'https://mothebroker.com/zip-codes/92660-newport-beach-mortgage-broker',
+      url: 'https://www.mothebroker.com/zip-codes/92660-newport-beach-mortgage-broker',
       data: {
         questions: [
           {
@@ -137,7 +137,7 @@ export default function ZipCode92660MortgageBrokerPage() {
         description="92660 Newport Beach mortgage broker serving this luxury ZIP code area. Corona del Mar, Fashion Island area financing, competitive rates."
         keywords={["92660 mortgage broker", "92660 home loans", "Newport Beach 92660 financing", "ZIP code mortgage specialist"]}
         city="92660, Newport Beach"
-        canonicalUrl="https://mothebroker.com/zip-codes/92660-newport-beach-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/zip-codes/92660-newport-beach-mortgage-broker"
         content={zipCodeData}
       />
       <EnhancedLocalSchema city="92660, Newport Beach" page_type="city" service_focus="luxury ZIP code specific mortgage services" />

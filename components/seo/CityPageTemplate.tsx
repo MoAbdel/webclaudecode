@@ -30,7 +30,7 @@ interface CityPageProps {
 }
 
 export function generateCityMetadata(cityData: CityData): Metadata {
-  const canonical = `https://mothebroker.com/areas/${cityData.slug}`;
+  const canonical = `https://www.mothebroker.com/areas/${cityData.slug}`;
   const title = `Mortgage Broker in ${cityData.name}, CA | Mo Abdel`;
   // <=160 chars, includes city + CTA
   const description = `Trusted mortgage broker in ${cityData.name}, CA. Compare rates from 200+ lenders and get pre-approved fast. Call (949) 579-2057 to get started.`;
@@ -68,7 +68,7 @@ export function generateCityMetadata(cityData: CityData): Metadata {
 }
 
 export default function CityPageTemplate({ cityData }: CityPageProps) {
-  const canonicalUrl = `https://mothebroker.com/areas/${cityData.slug}`;
+  const canonicalUrl = `https://www.mothebroker.com/areas/${cityData.slug}`;
   
   const structuredFAQ = [
     {

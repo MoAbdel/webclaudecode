@@ -51,7 +51,7 @@ export default function CoronaDelMarMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Corona del Mar Newport Beach Mortgage FAQ',
       description: 'Common questions about Corona del Mar Newport Beach luxury home financing',
-      url: 'https://mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker',
       data: {
         questions: [
           {
@@ -150,7 +150,7 @@ export default function CoronaDelMarMortgageBrokerPage() {
         description="Corona del Mar Newport Beach mortgage broker specializing in luxury coastal home financing. Prestigious beachside community loans, competitive rates."
         keywords={["Corona del Mar Newport Beach mortgage", "luxury coastal homes", "beachside community loans", "Corona del Mar mortgage broker", "Newport Beach luxury financing"]}
         city="Corona del Mar, Newport Beach"
-        canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker"
         content={coronaDelMarData}
       />
       <EnhancedLocalSchema city="Corona del Mar, Newport Beach" page_type="city" service_focus="luxury coastal home financing" />

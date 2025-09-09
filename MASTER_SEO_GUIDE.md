@@ -678,7 +678,7 @@ const zipCodeStrategy = [
   "@type": ["FinancialService", "LocalBusiness"],
   "name": "Mo Abdel - NEXA Mortgage",
   "description": "Licensed mortgage broker serving Orange County",
-  "url": "https://mothebroker.com",
+  "url": "https://www.mothebroker.com",
   "telephone": "(949) 579-2057",
   "address": {
     "@type": "PostalAddress",

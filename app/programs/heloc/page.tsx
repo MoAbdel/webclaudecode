@@ -5,11 +5,11 @@ export const metadata = {
   title: 'HELOC Program | Home Equity Line of Credit | Orange County',
   description:
     'Flexible HELOC program with competitive rates. Access your home equity with a revolving credit line. Compare HELOC vs cash-out refinance options with wholesale pricing.',
-  alternates: { canonical: 'https://mothebroker.com/programs/heloc' },
+  alternates: { canonical: 'https://www.mothebroker.com/programs/heloc' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'HELOC Program | Home Equity Line of Credit',
-    url: 'https://mothebroker.com/programs/heloc',
+    url: 'https://www.mothebroker.com/programs/heloc',
   },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
       name: 'Mo the Broker',
       areaServed: 'Orange County, CA',
     },
-    url: 'https://mothebroker.com/programs/heloc',
+    url: 'https://www.mothebroker.com/programs/heloc',
     description: 'Home Equity Line of Credit program offering flexible access to home equity with competitive variable rates.',
     offers: {
       '@type': 'Offer',

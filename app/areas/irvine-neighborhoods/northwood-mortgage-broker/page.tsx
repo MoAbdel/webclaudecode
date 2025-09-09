@@ -51,7 +51,7 @@ export default function NorthwoodMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Northwood Irvine Mortgage FAQ',
       description: 'Common questions about Northwood Irvine home financing',
-      url: 'https://mothebroker.com/areas/irvine-neighborhoods/northwood-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/irvine-neighborhoods/northwood-mortgage-broker',
       data: {
         questions: [
           {
@@ -122,7 +122,7 @@ export default function NorthwoodMortgageBrokerPage() {
         description="Northwood Irvine mortgage broker specializing in newer construction homes. Modern amenities, family community, competitive financing."
         keywords={["Northwood Irvine mortgage", "newer construction loans", "modern Irvine homes", "family community financing", "Northwood homes"]}
         city="Northwood, Irvine"
-        canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/northwood-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/areas/irvine-neighborhoods/northwood-mortgage-broker"
         content={northwoodData}
       />
       <EnhancedLocalSchema city="Northwood, Irvine" page_type="city" service_focus="newer construction home financing" />

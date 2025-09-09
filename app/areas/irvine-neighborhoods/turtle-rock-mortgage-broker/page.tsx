@@ -51,7 +51,7 @@ export default function TurtleRockMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Turtle Rock Irvine Mortgage FAQ',
       description: 'Common questions about Turtle Rock Irvine upscale home financing',
-      url: 'https://mothebroker.com/areas/irvine-neighborhoods/turtle-rock-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/irvine-neighborhoods/turtle-rock-mortgage-broker',
       data: {
         questions: [
           {
@@ -143,7 +143,7 @@ export default function TurtleRockMortgageBrokerPage() {
         description="Turtle Rock Irvine mortgage broker specializing in upscale family community homes. Established neighborhood financing, luxury amenities, competitive rates."
         keywords={["Turtle Rock Irvine mortgage", "upscale family homes", "Irvine luxury loans", "established community financing", "Turtle Rock homes"]}
         city="Turtle Rock, Irvine"
-        canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/turtle-rock-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/areas/irvine-neighborhoods/turtle-rock-mortgage-broker"
         content={turtleRockData}
       />
       <EnhancedLocalSchema city="Turtle Rock, Irvine" page_type="city" service_focus="upscale family community home financing" />

@@ -5,11 +5,11 @@ import Image from 'next/image';
 export const metadata = {
   title: 'Mo Abdel | Orange County Mortgage Broker & Founder',
   description: 'Meet Mo Abdel, NMLS #1426884, Orange County wholesale mortgage broker and founder of Mo the Broker. Experienced in jumbo loans, HELOCs, and refinancing.',
-  alternates: { canonical: 'https://mothebroker.com/Mo' },
+  alternates: { canonical: 'https://www.mothebroker.com/Mo' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Mo Abdel | Orange County Mortgage Broker & Founder',
-    url: 'https://mothebroker.com/Mo',
+    url: 'https://www.mothebroker.com/Mo',
   },
 };
 
@@ -32,7 +32,7 @@ export default function MoProfilePage() {
       '@type': 'Organization',
       name: 'Mo the Broker',
     },
-    url: 'https://mothebroker.com/Mo',
+    url: 'https://www.mothebroker.com/Mo',
     telephone: '+1-949-735-4000',
     email: 'mo@mothebroker.com',
     address: {

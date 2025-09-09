@@ -112,7 +112,7 @@ This system provides real-time notifications when someone submits a quote reques
 
 ## Admin Dashboard
 
-View all quotes at: `https://mothebroker.com/admin`
+View all quotes at: `https://www.mothebroker.com/admin`
 - Password protected (set ADMIN_PASSWORD in .env.local)
 - View all quote submissions
 - Sort by date

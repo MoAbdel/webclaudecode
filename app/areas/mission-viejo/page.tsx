@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Mission Viejo Mortgage Broker | Home Loans & HELOCs in Mission Viejo, CA',
   description:
     'Local mortgage broker serving Mission Viejo homeowners and buyers. Compare HELOCs, cash-out refinance, jumbo, FHA, VA loans with wholesale pricing and 200+ lenders.',
-  alternates: { canonical: 'https://mothebroker.com/areas/mission-viejo' },
+  alternates: { canonical: 'https://www.mothebroker.com/areas/mission-viejo' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Mission Viejo Mortgage Broker | HELOC, Cash-Out & Home Loans',
-    url: 'https://mothebroker.com/areas/mission-viejo',
+    url: 'https://www.mothebroker.com/areas/mission-viejo',
   },
 };
 
@@ -28,7 +28,7 @@ export default function Page() {
     '@type': 'MortgageBroker',
     name: 'Mo the Broker - Mission Viejo',
     areaServed: 'Mission Viejo, Orange County, CA',
-    url: 'https://mothebroker.com/areas/mission-viejo',
+    url: 'https://www.mothebroker.com/areas/mission-viejo',
     telephone: '+1-949-735-4000',
     address: { '@type': 'PostalAddress', addressLocality: 'Mission Viejo', addressRegion: 'CA', addressCountry: 'US' },
     sameAs: ['https://www.linkedin.com/in/mothebroker', 'https://www.instagram.com/mothebroker'],

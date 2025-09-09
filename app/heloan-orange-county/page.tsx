@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Home Equity Loans in Orange County, CA | Fixed-Rate Equity Access',
     description: 'Get a lump sum from your home\'s equity with a fixed-rate Home Equity Loan in Orange County. Transparent terms, quick approvals.',
-    url: 'https://mothebroker.com/heloan-orange-county',
+    url: 'https://www.mothebroker.com/heloan-orange-county',
   }
 };
 
@@ -27,7 +27,7 @@ const structuredData = {
     "addressRegion": "CA"
   },
   "telephone": "(949) 579-2057",
-  "url": "https://mothebroker.com/heloan-orange-county",
+  "url": "https://www.mothebroker.com/heloan-orange-county",
   "description": "Expert Home Equity Loan services in Orange County, CA",
   "areaServed": "Orange County, CA",
   "additionalType": "https://schema.org/MortgageBroker"

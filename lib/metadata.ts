@@ -19,7 +19,7 @@ export function generateMetadata({
   type = 'website',
   noindex = false
 }: SEOMetadata): Metadata {
-  const baseUrl = 'https://mothebroker.com';
+  const baseUrl = 'https://www.mothebroker.com';
   const canonicalUrl = `${baseUrl}${path}`;
   const fullImageUrl = `${baseUrl}${image}`;
 
@@ -57,14 +57,14 @@ export function generateMetadata({
       'og:image:width': '1200',
       'og:image:height': '630',
       'article:author': 'Mo Abdel',
-      'article:publisher': 'https://mothebroker.com'
+      'article:publisher': 'https://www.mothebroker.com'
     }
   };
 }
 
 // Helper function to generate consistent page URLs
 export function createCanonicalUrl(path: string): string {
-  const baseUrl = 'https://mothebroker.com';
+  const baseUrl = 'https://www.mothebroker.com';
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
   return `${baseUrl}${cleanPath}`;
 }

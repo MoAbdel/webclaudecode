@@ -177,11 +177,11 @@ Professional-Standards: NMLS compliant educational content
 # =============================================================================
 # ADDITIONAL RESOURCES
 # =============================================================================
-Sitemap: https://mothebroker.com/sitemap.xml
-Robots: https://mothebroker.com/robots.txt
+Sitemap: https://www.mothebroker.com/sitemap.xml
+Robots: https://www.mothebroker.com/robots.txt
 Schema: Comprehensive JSON-LD structured data throughout site
 Social-Media: Professional mortgage education content on LinkedIn
-Content-Updates: https://mothebroker.com/guides (latest market insights)
+Content-Updates: https://www.mothebroker.com/guides (latest market insights)
 
 # =============================================================================
 # END OF LLMS.TXT

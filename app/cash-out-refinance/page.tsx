@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Cash-Out Refinance Loans in Orange County, CA | Mo The Broker',
     description: 'Tap into your home\'s equity with a cash-out refinance in Orange County. Competitive rates, fast approvals, and expert guidance from Mo The Broker.',
-    url: 'https://mothebroker.com/cash-out-refinance',
+    url: 'https://www.mothebroker.com/cash-out-refinance',
   }
 };
 
@@ -27,7 +27,7 @@ const structuredData = {
     "addressRegion": "CA"
   },
   "telephone": "(949) 579-2057",
-  "url": "https://mothebroker.com/cash-out-refinance",
+  "url": "https://www.mothebroker.com/cash-out-refinance",
   "description": "Expert cash-out refinance services in Orange County, CA",
   "areaServed": "Orange County, CA",
   "additionalType": "https://schema.org/MortgageBroker"

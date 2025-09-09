@@ -49,7 +49,7 @@ export default function EnhancedLocalSchema({
       "jobTitle": "Licensed Mortgage Broker",
       "telephone": "(949) 579-2057",
       "email": "mo@mothebroker.com",
-      "url": "https://mothebroker.com",
+      "url": "https://www.mothebroker.com",
       "hasCredential": {
         "@type": "EducationalOccupationalCredential",
         "name": "NMLS License",
@@ -81,7 +81,7 @@ export default function EnhancedLocalSchema({
         "description": "Low down payment FHA loans with as little as 3.5% down payment",
         "category": "Mortgage Loan",
         "eligibility": "Owner-occupied primary residence",
-        "url": "https://mothebroker.com/fha-loans-orange-county"
+        "url": "https://www.mothebroker.com/fha-loans-orange-county"
       },
       {
         "@type": "Offer",
@@ -89,28 +89,28 @@ export default function EnhancedLocalSchema({
         "description": "Zero down payment VA loans for veterans and active military",
         "category": "Mortgage Loan",
         "eligibility": "Veterans and active military",
-        "url": "https://mothebroker.com/va-loans-orange-county"
+        "url": "https://www.mothebroker.com/va-loans-orange-county"
       },
       {
         "@type": "Offer",
         "name": "Conventional Loans",
         "description": "Traditional home financing with down payments as low as 3%",
         "category": "Mortgage Loan",
-        "url": "https://mothebroker.com/conventional-loans-orange-county"
+        "url": "https://www.mothebroker.com/conventional-loans-orange-county"
       },
       {
         "@type": "Offer",
         "name": "HELOC",
         "description": "Home Equity Line of Credit with flexible access to funds",
         "category": "Home Equity Loan",
-        "url": "https://mothebroker.com/heloc-orange-county"
+        "url": "https://www.mothebroker.com/heloc-orange-county"
       },
       {
         "@type": "Offer",
         "name": "Jumbo Loans",
         "description": "High-balance loans for luxury homes exceeding conforming loan limits",
         "category": "Mortgage Loan",
-        "url": "https://mothebroker.com/loan-programs/jumbo-loans"
+        "url": "https://www.mothebroker.com/loan-programs/jumbo-loans"
       }
     ],
     "additionalType": "https://schema.org/FinancialService",
@@ -129,10 +129,10 @@ export default function EnhancedLocalSchema({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": `${city ? city + ' ' : 'Orange County '}Mortgage Broker | Mo Abdel`,
-    "image": "https://mothebroker.com/images/moabdel-headshot-final.png",
+    "image": "https://www.mothebroker.com/images/moabdel-headshot-final.png",
     "telephone": "(949) 579-2057",
     "email": "mo@mothebroker.com",
-    "url": city ? `https://mothebroker.com/areas/${city.toLowerCase().replace(/\s+/g, '-')}-mortgage-broker` : "https://mothebroker.com",
+    "url": city ? `https://www.mothebroker.com/areas/${city.toLowerCase().replace(/\s+/g, '-')}-mortgage-broker` : "https://www.mothebroker.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": city || "Orange County",

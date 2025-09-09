@@ -51,7 +51,7 @@ export default function Spring2025HomeBuyingGuidePage() {
       type: 'article' as const,
       title: 'Spring 2025 Orange County Home Buying Guide',
       description: 'Comprehensive guide to buying homes in Orange County during Spring 2025',
-      url: 'https://mothebroker.com/guides/spring-2025-home-buying-guide',
+      url: 'https://www.mothebroker.com/guides/spring-2025-home-buying-guide',
       data: {
         author: 'Mo Abdel',
         publishDate: '2025-02-01',
@@ -68,7 +68,7 @@ export default function Spring2025HomeBuyingGuidePage() {
       type: 'howto' as const,
       title: 'How to Buy a Home in Spring 2025',
       description: 'Step-by-step guide to successful spring home buying in Orange County',
-      url: 'https://mothebroker.com/guides/spring-2025-home-buying-guide',
+      url: 'https://www.mothebroker.com/guides/spring-2025-home-buying-guide',
       data: {
         totalTime: 'PT90D',
         cost: 'Varies by home price',
@@ -196,7 +196,7 @@ export default function Spring2025HomeBuyingGuidePage() {
         description="Spring 2025 Orange County home buying guide. Market trends, mortgage rates, inventory levels, and expert tips for successful spring home purchases."
         keywords={["Spring 2025 home buying", "Orange County spring market", "2025 mortgage rates", "spring home buying tips", "seasonal real estate trends"]}
         city="Orange County"
-        canonicalUrl="https://mothebroker.com/guides/spring-2025-home-buying-guide"
+        canonicalUrl="https://www.mothebroker.com/guides/spring-2025-home-buying-guide"
         content={springGuideData}
       />
       <EnhancedLocalSchema city="Orange County" page_type="service" service_focus="spring 2025 home buying guidance" />

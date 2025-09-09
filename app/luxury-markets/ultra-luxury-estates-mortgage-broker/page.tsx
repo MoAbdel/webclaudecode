@@ -51,7 +51,7 @@ export default function UltraLuxuryEstatesMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Orange County Ultra-Luxury Estates Financing FAQ',
       description: 'Common questions about financing ultra-luxury estate properties',
-      url: 'https://mothebroker.com/luxury-markets/ultra-luxury-estates-mortgage-broker',
+      url: 'https://www.mothebroker.com/luxury-markets/ultra-luxury-estates-mortgage-broker',
       data: {
         questions: [
           {
@@ -211,7 +211,7 @@ export default function UltraLuxuryEstatesMortgageBrokerPage() {
         description="Orange County ultra-luxury estates mortgage broker specializing in $5M+ properties. Mansions, beachfront estates, and exclusive compounds financing."
         keywords={["ultra luxury estates mortgage Orange County", "$5M+ home financing", "mansion mortgages", "beachfront estate loans", "exclusive compound financing"]}
         city="Orange County"
-        canonicalUrl="https://mothebroker.com/luxury-markets/ultra-luxury-estates-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/luxury-markets/ultra-luxury-estates-mortgage-broker"
         content={ultraLuxuryData}
       />
       <EnhancedLocalSchema city="Orange County" page_type="service" service_focus="ultra-luxury estate and mansion financing services" />

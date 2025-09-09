@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Irvine Neighborhoods Mortgage Guide | Woodbridge, Turtle Rock, Great Park',
   description:
     'Complete Irvine neighborhoods financing guide. Mortgage options for Woodbridge, Turtle Rock, University Park, Great Park, and all Irvine villages with competitive wholesale rates.',
-  alternates: { canonical: 'https://mothebroker.com/areas/irvine-neighborhoods' },
+  alternates: { canonical: 'https://www.mothebroker.com/areas/irvine-neighborhoods' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Irvine Neighborhoods Mortgage Guide | Village-Specific Home Financing',
-    url: 'https://mothebroker.com/areas/irvine-neighborhoods',
+    url: 'https://www.mothebroker.com/areas/irvine-neighborhoods',
   },
 };
 
@@ -28,7 +28,7 @@ export default function Page() {
     '@type': 'MortgageBroker',
     name: 'Mo the Broker - Irvine Neighborhoods',
     areaServed: 'Irvine, Orange County, CA',
-    url: 'https://mothebroker.com/areas/irvine-neighborhoods',
+    url: 'https://www.mothebroker.com/areas/irvine-neighborhoods',
     telephone: '+1-949-735-4000',
     address: { '@type': 'PostalAddress', addressLocality: 'Irvine', addressRegion: 'CA', addressCountry: 'US' },
     sameAs: ['https://www.linkedin.com/in/mothebroker', 'https://www.instagram.com/mothebroker'],

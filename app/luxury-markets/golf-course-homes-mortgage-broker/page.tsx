@@ -51,7 +51,7 @@ export default function GolfCourseHomesMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Orange County Golf Course Homes Financing FAQ',
       description: 'Common questions about financing luxury golf course properties',
-      url: 'https://mothebroker.com/luxury-markets/golf-course-homes-mortgage-broker',
+      url: 'https://www.mothebroker.com/luxury-markets/golf-course-homes-mortgage-broker',
       data: {
         questions: [
           {
@@ -205,7 +205,7 @@ export default function GolfCourseHomesMortgageBrokerPage() {
         description="Orange County golf course homes mortgage broker specializing in luxury fairway properties. Championship courses, resort amenities, and prestige living."
         keywords={["golf course homes mortgage Orange County", "luxury fairway properties", "golf community financing", "championship course homes", "resort living mortgage"]}
         city="Orange County"
-        canonicalUrl="https://mothebroker.com/luxury-markets/golf-course-homes-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/luxury-markets/golf-course-homes-mortgage-broker"
         content={golfCourseData}
       />
       <EnhancedLocalSchema city="Orange County" page_type="service" service_focus="golf course and luxury golf community home financing" />

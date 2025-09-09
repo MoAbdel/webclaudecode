@@ -22,7 +22,7 @@ export default function AboutPage() {
       <AdvancedSchemaMarkup
         type="Organization"
         name="Mo Abdel — Mortgage Broker"
-        url="https://mothebroker.com/about"
+        url="https://www.mothebroker.com/about"
         sameAs={[
           'https://www.facebook.com/profile.php?id=61573517340174',
           'https://www.instagram.com/mo_thebroker',
@@ -220,3 +220,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

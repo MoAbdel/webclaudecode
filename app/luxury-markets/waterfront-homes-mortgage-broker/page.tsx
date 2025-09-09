@@ -51,7 +51,7 @@ export default function WaterfrontHomesMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Orange County Waterfront Homes Financing FAQ',
       description: 'Common questions about financing luxury waterfront properties',
-      url: 'https://mothebroker.com/luxury-markets/waterfront-homes-mortgage-broker',
+      url: 'https://www.mothebroker.com/luxury-markets/waterfront-homes-mortgage-broker',
       data: {
         questions: [
           {
@@ -199,7 +199,7 @@ export default function WaterfrontHomesMortgageBrokerPage() {
         description="Orange County waterfront homes mortgage broker specializing in luxury coastal properties. Bayfront, oceanfront, and harbor homes financing expertise."
         keywords={["waterfront homes mortgage Orange County", "luxury coastal financing", "bayfront homes loans", "oceanfront property financing", "harbor homes mortgage"]}
         city="Orange County"
-        canonicalUrl="https://mothebroker.com/luxury-markets/waterfront-homes-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/luxury-markets/waterfront-homes-mortgage-broker"
         content={waterfrontData}
       />
       <EnhancedLocalSchema city="Orange County" page_type="service" service_focus="waterfront and luxury coastal home financing" />

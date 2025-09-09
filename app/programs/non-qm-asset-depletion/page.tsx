@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Asset Depletion Loans | Asset-Based Mortgage Qualification',
   description:
     'Asset depletion loan program for borrowers with substantial assets but limited traditional income. Qualify based on liquid assets with competitive non-QM rates.',
-  alternates: { canonical: 'https://mothebroker.com/programs/non-qm-asset-depletion' },
+  alternates: { canonical: 'https://www.mothebroker.com/programs/non-qm-asset-depletion' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Asset Depletion Loans | Asset-Based Mortgage Program',
-    url: 'https://mothebroker.com/programs/non-qm-asset-depletion',
+    url: 'https://www.mothebroker.com/programs/non-qm-asset-depletion',
   },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
       name: 'Mo the Broker',
       areaServed: 'Orange County, CA',
     },
-    url: 'https://mothebroker.com/programs/non-qm-asset-depletion',
+    url: 'https://www.mothebroker.com/programs/non-qm-asset-depletion',
     description: 'Non-QM mortgage program qualifying borrowers based on liquid assets rather than traditional income documentation.',
   };
 

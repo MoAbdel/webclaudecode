@@ -2,7 +2,7 @@
 
 ## ✅ SITEMAP VERIFICATION (COMPLETE)
 **Status: VERIFIED ✅**
-- ✅ Sitemap.xml is live at https://mothebroker.com/sitemap.xml
+- ✅ Sitemap.xml is live at https://www.mothebroker.com/sitemap.xml
 - ✅ 85+ pages properly indexed with lastmod dates  
 - ✅ All major page categories included:
   - Main pages (home, about, contact, calculator)
@@ -16,7 +16,7 @@
 
 ## ✅ ROBOTS.TXT VERIFICATION (COMPLETE)  
 **Status: VERIFIED ✅**
-- ✅ Live at https://mothebroker.com/robots.txt
+- ✅ Live at https://www.mothebroker.com/robots.txt
 - ✅ Allows all search engines and AI bots
 - ✅ Proper sitemap references (3 sitemaps listed)
 - ✅ Admin pages properly blocked (Disallow: /admin/)

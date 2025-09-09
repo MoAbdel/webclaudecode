@@ -47,7 +47,7 @@ export default function IrvineMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Irvine Mortgage FAQ',
       description: 'Common questions about Irvine mortgages and home loans',
-      url: 'https://mothebroker.com/areas/irvine-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/irvine-mortgage-broker',
       data: {
         questions: [
           {

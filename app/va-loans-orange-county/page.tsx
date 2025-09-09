@@ -35,7 +35,7 @@ const jsonLd = {
     "addressCountry": "US"
   },
   "telephone": "(949) 579-2057",
-  "url": "https://mothebroker.com/va-loans-orange-county",
+  "url": "https://www.mothebroker.com/va-loans-orange-county",
   "sameAs": [
     "https://www.facebook.com/mothebroker",
     "https://www.linkedin.com/in/mo-abdel-mortgage"

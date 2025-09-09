@@ -51,7 +51,7 @@ export default function WoodbridgeMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Woodbridge Irvine Mortgage FAQ',
       description: 'Common questions about Woodbridge Irvine home financing',
-      url: 'https://mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker',
       data: {
         questions: [
           {
@@ -122,7 +122,7 @@ export default function WoodbridgeMortgageBrokerPage() {
         description="Woodbridge Irvine mortgage broker specializing in lake community homes. Established neighborhood financing, family-friendly loans, competitive rates."
         keywords={["Woodbridge Irvine mortgage", "lake community loans", "Irvine family homes", "established community financing", "Woodbridge homes"]}
         city="Woodbridge, Irvine"
-        canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker"
         content={woodbridgeData}
       />
       <EnhancedLocalSchema city="Woodbridge, Irvine" page_type="city" service_focus="lake community home financing" />

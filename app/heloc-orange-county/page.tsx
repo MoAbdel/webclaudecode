@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'HELOC Loans in Orange County, CA | Flexible Home Equity Access',
     description: 'Access your home\'s equity with a Home Equity Line of Credit in Orange County. Flexible withdrawals, competitive rates, expert guidance.',
-    url: 'https://mothebroker.com/heloc-orange-county',
+    url: 'https://www.mothebroker.com/heloc-orange-county',
   }
 };
 
@@ -27,7 +27,7 @@ const structuredData = {
     "addressRegion": "CA"
   },
   "telephone": "(949) 579-2057",
-  "url": "https://mothebroker.com/heloc-orange-county",
+  "url": "https://www.mothebroker.com/heloc-orange-county",
   "description": "Expert HELOC services in Orange County, CA",
   "areaServed": "Orange County, CA",
   "additionalType": "https://schema.org/MortgageBroker"

@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Home Equity Loan Program | Fixed-Rate Second Mortgage | Orange County',
   description:
     'Fixed-rate home equity loan program with competitive rates. Get a lump sum with predictable payments. Compare home equity loan vs HELOC options.',
-  alternates: { canonical: 'https://mothebroker.com/programs/heloan' },
+  alternates: { canonical: 'https://www.mothebroker.com/programs/heloan' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Home Equity Loan Program | Fixed-Rate Second Mortgage',
-    url: 'https://mothebroker.com/programs/heloan',
+    url: 'https://www.mothebroker.com/programs/heloan',
   },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
       name: 'Mo the Broker',
       areaServed: 'Orange County, CA',
     },
-    url: 'https://mothebroker.com/programs/heloan',
+    url: 'https://www.mothebroker.com/programs/heloan',
     description: 'Fixed-rate home equity loan program offering predictable payments and competitive rates for lump-sum financing needs.',
   };
 

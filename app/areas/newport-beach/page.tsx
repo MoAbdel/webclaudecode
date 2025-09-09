@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Newport Beach Mortgage Broker | Luxury Home Loans & Jumbo Financing',
   description:
     'Newport Beach mortgage broker specializing in jumbo loans, luxury home financing, HELOCs, and cash-out refinancing. Wholesale pricing with 200+ lenders for Newport Beach properties.',
-  alternates: { canonical: 'https://mothebroker.com/areas/newport-beach' },
+  alternates: { canonical: 'https://www.mothebroker.com/areas/newport-beach' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Newport Beach Mortgage Broker | Jumbo Loans & Luxury Home Financing',
-    url: 'https://mothebroker.com/areas/newport-beach',
+    url: 'https://www.mothebroker.com/areas/newport-beach',
   },
 };
 
@@ -28,7 +28,7 @@ export default function Page() {
     '@type': 'MortgageBroker',
     name: 'Mo the Broker - Newport Beach',
     areaServed: 'Newport Beach, Orange County, CA',
-    url: 'https://mothebroker.com/areas/newport-beach',
+    url: 'https://www.mothebroker.com/areas/newport-beach',
     telephone: '+1-949-735-4000',
     address: { '@type': 'PostalAddress', addressLocality: 'Newport Beach', addressRegion: 'CA', addressCountry: 'US' },
     sameAs: ['https://www.linkedin.com/in/mothebroker', 'https://www.instagram.com/mothebroker'],

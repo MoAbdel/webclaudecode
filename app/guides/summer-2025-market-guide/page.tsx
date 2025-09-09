@@ -51,7 +51,7 @@ export default function Summer2025MarketGuidePage() {
       type: 'article' as const,
       title: 'Summer 2025 Orange County Market Guide',
       description: 'Complete guide to navigating Orange County\'s peak summer real estate market',
-      url: 'https://mothebroker.com/guides/summer-2025-market-guide',
+      url: 'https://www.mothebroker.com/guides/summer-2025-market-guide',
       data: {
         author: 'Mo Abdel',
         publishDate: '2025-04-01',
@@ -68,7 +68,7 @@ export default function Summer2025MarketGuidePage() {
       type: 'howto' as const,
       title: 'How to Compete in Summer 2025 Market',
       description: 'Strategic approach to winning in Orange County\'s competitive summer market',
-      url: 'https://mothebroker.com/guides/summer-2025-market-guide',
+      url: 'https://www.mothebroker.com/guides/summer-2025-market-guide',
       data: {
         totalTime: 'PT60D',
         cost: 'Varies by home price',
@@ -219,7 +219,7 @@ export default function Summer2025MarketGuidePage() {
         description="Summer 2025 Orange County real estate market guide. Peak season strategies, competition insights, inventory trends, and expert buying tips."
         keywords={["Summer 2025 real estate", "Orange County summer market", "peak season home buying", "summer 2025 trends", "competitive market strategies"]}
         city="Orange County"
-        canonicalUrl="https://mothebroker.com/guides/summer-2025-market-guide"
+        canonicalUrl="https://www.mothebroker.com/guides/summer-2025-market-guide"
         content={summerGuideData}
       />
       <EnhancedLocalSchema city="Orange County" page_type="service" service_focus="summer 2025 market guidance" />

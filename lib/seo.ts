@@ -99,18 +99,18 @@ export const structuredData = {
     "longitude": "-117.8265"
   },
   "telephone": "+1-949-579-2057",
-  "url": "https://mothebroker.com",
+  "url": "https://www.mothebroker.com",
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61573517340174",
     "https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest",
     "https://maps.google.com/?cid=11756575614226532751",
     "https://www.instagram.com/mo_thebroker",
-    "https://mothebroker.com"
+    "https://www.mothebroker.com"
   ],
   "priceRange": "$$",
   "description": "Licensed mortgage broker based in Lake Forest, serving Orange County, CA. Local homebuyers get access to over 200 lenders for competitive mortgage rates on home loans and refinancing. NMLS #1426884. Call (949) 579-2057 for local mortgage expertise.",
-  "image": "https://mothebroker.com/images/moabdel-headshot-final.png",
-  "logo": "https://mothebroker.com/images/mo-logo-white.webp",
+  "image": "https://www.mothebroker.com/images/moabdel-headshot-final.png",
+  "logo": "https://www.mothebroker.com/images/mo-logo-white.webp",
   "openingHours": ["Mo 08:00-20:00", "Tu 08:00-20:00", "We 08:00-20:00", "Th 08:00-20:00", "Fr 08:00-20:00", "Sa 09:00-18:00", "Su 10:00-16:00"],
   "paymentAccepted": ["Cash", "Check", "Wire Transfer", "ACH"],
   "currenciesAccepted": "USD",

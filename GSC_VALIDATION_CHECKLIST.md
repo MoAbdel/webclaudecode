@@ -42,7 +42,7 @@
 
 ### **Step 1: Submit Updated Sitemap**
 1. Go to **Sitemaps** in GSC
-2. Submit: `https://mothebroker.com/sitemap.xml`
+2. Submit: `https://www.mothebroker.com/sitemap.xml`
 3. Click "Submit" to trigger re-crawl
 
 ### **Step 2: Request Validation for Issues**
@@ -55,11 +55,11 @@
 
 ### **Step 3: Request Re-indexing (Priority Pages)**
 Use **URL Inspection** tool for these key pages:
-1. `https://mothebroker.com/` → Inspect → Request Indexing
-2. `https://mothebroker.com/about` → Inspect → Request Indexing
-3. `https://mothebroker.com/contact` → Inspect → Request Indexing
-4. `https://mothebroker.com/calculator` → Inspect → Request Indexing
-5. `https://mothebroker.com/resources` → Inspect → Request Indexing
+1. `https://www.mothebroker.com/` → Inspect → Request Indexing
+2. `https://www.mothebroker.com/about` → Inspect → Request Indexing
+3. `https://www.mothebroker.com/contact` → Inspect → Request Indexing
+4. `https://www.mothebroker.com/calculator` → Inspect → Request Indexing
+5. `https://www.mothebroker.com/resources` → Inspect → Request Indexing
 
 ### **Step 4: Monitor Progress**
 - Check validation status in 24-48 hours

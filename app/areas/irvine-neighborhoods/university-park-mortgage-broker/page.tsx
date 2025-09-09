@@ -50,7 +50,7 @@ export default function UniversityParkMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'University Park Irvine Mortgage FAQ',
       description: 'Common questions about University Park Irvine mortgages',
-      url: 'https://mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker',
       data: {
         questions: [
           {
@@ -76,7 +76,7 @@ export default function UniversityParkMortgageBrokerPage() {
       type: 'article' as const,
       title: 'University Park Irvine Real Estate Market 2025',
       description: 'Comprehensive guide to University Park Irvine housing market and mortgage options',
-      url: 'https://mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker',
       data: {
         section: 'Neighborhood Analysis',
         keywords: ['University Park Irvine', 'luxury homes', 'jumbo loans', 'UCI area', 'mortgage broker'],
@@ -132,7 +132,7 @@ export default function UniversityParkMortgageBrokerPage() {
         description="University Park Irvine mortgage broker specializing in luxury home loans. UCI area financing, jumbo loans, investment properties. Licensed NMLS #1426884."
         keywords={["University Park Irvine mortgage", "UCI area home loans", "luxury Irvine financing", "jumbo loans", "University Park mortgage broker"]}
         city="University Park, Irvine"
-        canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker"
         content={universityParkData}
       />
       <EnhancedLocalSchema city="University Park, Irvine" page_type="city" service_focus="luxury home financing" />

@@ -5,11 +5,11 @@ export const metadata = {
   title: 'USDA Rural Loans | 100% Financing for Eligible Areas',
   description:
     'USDA rural development loans with no down payment required. Check eligible areas in Orange County and surrounding regions. Government-backed rural housing program.',
-  alternates: { canonical: 'https://mothebroker.com/programs/usda-rural-loans' },
+  alternates: { canonical: 'https://www.mothebroker.com/programs/usda-rural-loans' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'USDA Rural Loans | No Down Payment Government Financing',
-    url: 'https://mothebroker.com/programs/usda-rural-loans',
+    url: 'https://www.mothebroker.com/programs/usda-rural-loans',
   },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
       name: 'Mo the Broker',
       areaServed: 'Orange County, CA',
     },
-    url: 'https://mothebroker.com/programs/usda-rural-loans',
+    url: 'https://www.mothebroker.com/programs/usda-rural-loans',
     description: 'USDA government-backed rural housing loans with no down payment required for eligible properties and borrowers.',
   };
 

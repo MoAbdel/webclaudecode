@@ -36,7 +36,7 @@ export default function AdvancedSchemaMarkup({
   type,
   name = "Mo Abdel - Orange County Mortgage Expert",
   description = "Mortgage broker serving Orange County with access to 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.",
-  url = "https://mothebroker.com",
+  url = "https://www.mothebroker.com",
   telephone = "(949) 579-2057",
   address = {
     streetAddress: "",

@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Bank Statement Loans | Non-QM Self-Employed Mortgage Program',
   description:
     'Bank statement loan program for self-employed borrowers. Qualify using bank deposits instead of tax returns. Competitive non-QM rates for Orange County self-employed professionals.',
-  alternates: { canonical: 'https://mothebroker.com/programs/non-qm-bank-statement' },
+  alternates: { canonical: 'https://www.mothebroker.com/programs/non-qm-bank-statement' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Bank Statement Loans | Self-Employed Mortgage Program',
-    url: 'https://mothebroker.com/programs/non-qm-bank-statement',
+    url: 'https://www.mothebroker.com/programs/non-qm-bank-statement',
   },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
       name: 'Mo the Broker',
       areaServed: 'Orange County, CA',
     },
-    url: 'https://mothebroker.com/programs/non-qm-bank-statement',
+    url: 'https://www.mothebroker.com/programs/non-qm-bank-statement',
     description: 'Non-QM mortgage program for self-employed borrowers using bank statement income verification.',
   };
 

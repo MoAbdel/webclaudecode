@@ -51,7 +51,7 @@ export default function ZipCode92625CoronaDelMarMortgageBrokerPage() {
       type: 'faq' as const,
       title: '92625 Corona del Mar Mortgage FAQ',
       description: 'Common questions about 92625 ZIP code luxury beachside financing',
-      url: 'https://mothebroker.com/zip-codes/92625-corona-del-mar-mortgage-broker',
+      url: 'https://www.mothebroker.com/zip-codes/92625-corona-del-mar-mortgage-broker',
       data: {
         questions: [
           {
@@ -160,7 +160,7 @@ export default function ZipCode92625CoronaDelMarMortgageBrokerPage() {
         description="92625 Corona del Mar mortgage broker serving this exclusive beachside ZIP code. Luxury coastal homes, beach access properties, competitive rates."
         keywords={["92625 mortgage broker", "92625 home loans", "Corona del Mar 92625 financing", "ZIP code mortgage specialist", "beachside mortgage"]}
         city="92625, Corona del Mar"
-        canonicalUrl="https://mothebroker.com/zip-codes/92625-corona-del-mar-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/zip-codes/92625-corona-del-mar-mortgage-broker"
         content={zipCodeData}
       />
       <EnhancedLocalSchema city="92625, Corona del Mar" page_type="city" service_focus="beachside luxury ZIP code specific mortgage services" />

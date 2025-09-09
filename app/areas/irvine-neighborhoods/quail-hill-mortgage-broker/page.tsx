@@ -51,7 +51,7 @@ export default function QuailHillMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Quail Hill Irvine Mortgage FAQ',
       description: 'Common questions about Quail Hill Irvine premium community home financing',
-      url: 'https://mothebroker.com/areas/irvine-neighborhoods/quail-hill-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/irvine-neighborhoods/quail-hill-mortgage-broker',
       data: {
         questions: [
           {
@@ -143,7 +143,7 @@ export default function QuailHillMortgageBrokerPage() {
         description="Quail Hill Irvine mortgage broker specializing in premium master-planned community homes. Newer construction financing, luxury amenities, competitive rates."
         keywords={["Quail Hill Irvine mortgage", "premium community loans", "newer construction Irvine homes", "master-planned community financing", "Quail Hill homes"]}
         city="Quail Hill, Irvine"
-        canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/quail-hill-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/areas/irvine-neighborhoods/quail-hill-mortgage-broker"
         content={quailHillData}
       />
       <EnhancedLocalSchema city="Quail Hill, Irvine" page_type="city" service_focus="premium master-planned community home financing" />

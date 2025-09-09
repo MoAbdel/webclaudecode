@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Foreign National Loans | Non-U.S. Citizen Mortgage Program',
   description:
     'Foreign national mortgage loans for non-U.S. citizens purchasing U.S. real estate. Specialized financing for international buyers in Orange County with competitive terms.',
-  alternates: { canonical: 'https://mothebroker.com/programs/foreign-national-loans' },
+  alternates: { canonical: 'https://www.mothebroker.com/programs/foreign-national-loans' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Foreign National Loans | International Buyer Mortgage Program',
-    url: 'https://mothebroker.com/programs/foreign-national-loans',
+    url: 'https://www.mothebroker.com/programs/foreign-national-loans',
   },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
       name: 'Mo the Broker',
       areaServed: 'Orange County, CA',
     },
-    url: 'https://mothebroker.com/programs/foreign-national-loans',
+    url: 'https://www.mothebroker.com/programs/foreign-national-loans',
     description: 'Specialized mortgage financing for foreign nationals and non-U.S. citizens purchasing U.S. real estate.',
   };
 

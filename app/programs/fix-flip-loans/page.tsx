@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Fix & Flip Loans | Short-Term Real Estate Investment Financing',
   description:
     'Specialized fix and flip loans for real estate investors. Fast funding, flexible terms, and experience-based underwriting for Orange County property rehabilitation projects.',
-  alternates: { canonical: 'https://mothebroker.com/programs/fix-flip-loans' },
+  alternates: { canonical: 'https://www.mothebroker.com/programs/fix-flip-loans' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Fix & Flip Loans | Real Estate Investment Financing',
-    url: 'https://mothebroker.com/programs/fix-flip-loans',
+    url: 'https://www.mothebroker.com/programs/fix-flip-loans',
   },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
       name: 'Mo the Broker',
       areaServed: 'Orange County, CA',
     },
-    url: 'https://mothebroker.com/programs/fix-flip-loans',
+    url: 'https://www.mothebroker.com/programs/fix-flip-loans',
     description: 'Short-term real estate investment loans for property rehabilitation and resale projects.',
   };
 

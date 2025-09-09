@@ -5,11 +5,11 @@ export const metadata = {
   title: 'DSCR Investment Loans | Debt Service Coverage Ratio Financing',
   description:
     'DSCR investment property loans qualify based on rental income, not personal income. Competitive rates for Orange County rental properties with flexible terms.',
-  alternates: { canonical: 'https://mothebroker.com/programs/dscr-investment-loans' },
+  alternates: { canonical: 'https://www.mothebroker.com/programs/dscr-investment-loans' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'DSCR Investment Loans | Rental Property Financing',
-    url: 'https://mothebroker.com/programs/dscr-investment-loans',
+    url: 'https://www.mothebroker.com/programs/dscr-investment-loans',
   },
 };
 
@@ -32,7 +32,7 @@ export default function Page() {
       name: 'Mo the Broker',
       areaServed: 'Orange County, CA',
     },
-    url: 'https://mothebroker.com/programs/dscr-investment-loans',
+    url: 'https://www.mothebroker.com/programs/dscr-investment-loans',
     description: 'Investment property loans qualifying based on rental income rather than personal income.',
   };
 

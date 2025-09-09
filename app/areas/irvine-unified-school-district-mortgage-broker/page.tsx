@@ -51,7 +51,7 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
       type: 'faq' as const,
       title: 'Irvine Unified School District Mortgage FAQ',
       description: 'Common questions about buying homes in IUSD boundaries',
-      url: 'https://mothebroker.com/areas/irvine-unified-school-district-mortgage-broker',
+      url: 'https://www.mothebroker.com/areas/irvine-unified-school-district-mortgage-broker',
       data: {
         questions: [
           {
@@ -172,7 +172,7 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
         description="Irvine Unified School District mortgage broker specializing in homes within top-rated IUSD boundaries. Expert financing for families prioritizing education."
         keywords={["Irvine Unified School District mortgage", "IUSD homes", "top rated schools mortgage", "Irvine schools mortgage broker", "education focused home buying"]}
         city="Irvine Unified School District"
-        canonicalUrl="https://mothebroker.com/areas/irvine-unified-school-district-mortgage-broker"
+        canonicalUrl="https://www.mothebroker.com/areas/irvine-unified-school-district-mortgage-broker"
         content={iusdData}
       />
       <EnhancedLocalSchema city="Irvine Unified School District" page_type="city" service_focus="school district focused mortgage services" />

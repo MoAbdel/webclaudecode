@@ -134,11 +134,11 @@ Disallow: /*?*gclid*
 npm run build
 
 # Check canonical URLs are working
-curl -I https://mothebroker.com/about
+curl -I https://www.mothebroker.com/about
 # Should show proper canonical header
 
 # Test robots.txt
-curl https://mothebroker.com/robots.txt
+curl https://www.mothebroker.com/robots.txt
 ```
 
 ### 2. GSC Monitoring:

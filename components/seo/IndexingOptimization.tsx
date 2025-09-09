@@ -15,7 +15,7 @@ export default function IndexingOptimization({
   
   // Generate structured data optimized for indexing
   const generateIndexingSchema = () => {
-    const baseUrl = 'https://mothebroker.com';
+    const baseUrl = 'https://www.mothebroker.com';
     const currentDate = new Date().toISOString();
     
     return {

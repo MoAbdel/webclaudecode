@@ -24,7 +24,7 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             name: "Mo Abdel — Mortgage Broker",
-            url: "https://mothebroker.com/contact",
+            url: "https://www.mothebroker.com/contact",
             telephone: "(949) 579-2057",
             address: {
               "@type": "PostalAddress",
@@ -178,3 +178,4 @@ export default function ContactPage() {
     </div>
   );
 }
+

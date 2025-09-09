@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Newport Beach Neighborhoods | Luxury Home Financing by Area',
   description:
     'Complete guide to Newport Beach neighborhoods for homebuyers and refinancing. Balboa Island, Lido Isle, Newport Coast, Fashion Island area mortgage financing with wholesale rates.',
-  alternates: { canonical: 'https://mothebroker.com/areas/newport-beach-neighborhoods' },
+  alternates: { canonical: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Newport Beach Neighborhoods Mortgage Guide | Luxury Area Financing',
-    url: 'https://mothebroker.com/areas/newport-beach-neighborhoods',
+    url: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods',
   },
 };
 
@@ -28,7 +28,7 @@ export default function Page() {
     '@type': 'MortgageBroker',
     name: 'Mo the Broker - Newport Beach Neighborhoods',
     areaServed: 'Newport Beach, Orange County, CA',
-    url: 'https://mothebroker.com/areas/newport-beach-neighborhoods',
+    url: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods',
     telephone: '+1-949-735-4000',
     address: { '@type': 'PostalAddress', addressLocality: 'Newport Beach', addressRegion: 'CA', addressCountry: 'US' },
     sameAs: ['https://www.linkedin.com/in/mothebroker', 'https://www.instagram.com/mothebroker'],

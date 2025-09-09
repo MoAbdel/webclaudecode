@@ -5,11 +5,11 @@ export const metadata = {
   title: 'Irvine Mortgage Broker | Home Loans & HELOCs in Irvine, CA',
   description:
     'Local mortgage guidance for Irvine homeowners and buyers. Compare HELOCs, cash-out refinance, VA, FHA, jumbo and more with a wholesale mortgage broker.',
-  alternates: { canonical: 'https://mothebroker.com/areas/irvine' },
+  alternates: { canonical: 'https://www.mothebroker.com/areas/irvine' },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Irvine Mortgage Broker | HELOC, Cash-Out & Home Loans',
-    url: 'https://mothebroker.com/areas/irvine',
+    url: 'https://www.mothebroker.com/areas/irvine',
   },
 };
 
@@ -28,7 +28,7 @@ export default function Page() {
     '@type': 'MortgageBroker',
     name: 'Mo the Broker - Irvine',
     areaServed: 'Irvine, Orange County, CA',
-    url: 'https://mothebroker.com/areas/irvine',
+    url: 'https://www.mothebroker.com/areas/irvine',
     telephone: '+1-949-735-4000',
     address: { '@type': 'PostalAddress', addressLocality: 'Irvine', addressRegion: 'CA', addressCountry: 'US' },
     sameAs: ['https://www.linkedin.com/in/mothebroker', 'https://www.instagram.com/mothebroker'],

@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { TrendingUp, DollarSign, Calendar, Shield, CheckCircle, AlertCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'HELOC (Home Equity Line of Credit) - Orange County | Mo The Mortgage Broker',
-  description: 'Get a HELOC in Orange County with rates from Prime + 0%. Access up to $500K from your home equity. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'HELOC Orange County, home equity line of credit California, HELOC rates, home equity credit line'
+  title: 'HELOC in Orange County, CA | Home Equity Line of Credit | Mo Abdel — Mortgage Broker',
+  description: 'HELOC in Orange County, CA. Flexible home-equity access. Get rates or call (949) 579-2057.',
+  keywords: 'HELOC Orange County CA, home equity line, HELOC rates'
 };
 
 export default function HELOCPage() {
@@ -22,8 +22,9 @@ export default function HELOCPage() {
             🔥 #1 Most Popular Program in Orange County
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            HELOC: <span className="text-blue-600">Home Equity Line of Credit</span>
+            HELOC: <span className="text-blue-600">Home Equity Line of Credit</span> in Orange County, CA
           </h1>
+          <p className="text-slate-600">Serving Irvine, Anaheim, Huntington Beach, and Newport Beach.</p>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Unlock your Orange County home's equity with a flexible credit line. 
             Access $50K to $500K for any purpose with competitive rates from Prime + 0%.
@@ -312,6 +313,52 @@ export default function HELOCPage() {
             </div>
           </div>
         </div>
+
+        {/* Related Options (Internal Links) */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold mb-4">Related Options</h2>
+          <ul className="list-disc list-inside text-blue-700">
+            <li><Link href="/loan-programs/cash-out-refinance">Cash-Out Refinance</Link></li>
+            <li><Link href="/loan-programs/heloan">HELOAN (Fixed-Rate Home Equity Loan)</Link></li>
+          </ul>
+        </section>
+
+        {/* FAQ */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6">HELOC FAQs (Orange County, CA)</h2>
+          <div className="space-y-4 text-slate-700">
+            <details><summary className="font-semibold">Is a HELOC better than a cash-out refinance?</summary><p>HELOCs can offer low closing costs and flexibility. Cash-out may suit large, one-time needs at a fixed rate.</p></details>
+            <details><summary className="font-semibold">Are HELOC rates variable?</summary><p>Yes, most are variable. We’ll discuss fixed options and rate caps if available.</p></details>
+            <details><summary className="font-semibold">How quickly can I access funds?</summary><p>After closing, draw periods allow you to access funds as needed.</p></details>
+          </div>
+        </section>
+
+        {/* Structured Data */}
+        {(() => {
+          const serviceSchema = {
+            "@context":"https://schema.org",
+            "@type":"FinancialService",
+            "name":"Mo Abdel — Mortgage Broker — HELOC",
+            "areaServed":"Orange County, CA",
+            "serviceType":"HELOC",
+            "url":"https://example.com/loan-programs/heloc",
+            "telephone":"(949) 579-2057",
+            "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."
+          };
+          const faqSchema = {
+            "@context":"https://schema.org",
+            "@type":"FAQPage",
+            "mainEntity":[
+              {"@type":"Question","name":"Is a HELOC better than a cash-out refinance?","acceptedAnswer":{"@type":"Answer","text":"HELOCs offer flexible access and low closing costs; cash-out may be better for large, fixed needs."}},
+              {"@type":"Question","name":"Are HELOC rates variable?","acceptedAnswer":{"@type":"Answer","text":"Typically yes; we’ll review options and rate caps."}},
+              {"@type":"Question","name":"How quickly can I access funds?","acceptedAnswer":{"@type":"Answer","text":"Once open, draw periods allow access whenever you need funds."}}
+            ]
+          };
+          return (<>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+          </>);
+        })()}
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">

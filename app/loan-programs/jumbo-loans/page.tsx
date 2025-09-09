@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Crown, TrendingUp, Shield, CheckCircle, AlertCircle, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Jumbo Loans Orange County | $1,209,750+ Mortgages | Mo The Mortgage Broker NMLS #1426884',
-  description: 'Jumbo loans in Orange County for luxury homes over $1,209,750. Competitive rates on non-conforming mortgages. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'jumbo loans Orange County, jumbo mortgage California, luxury home loans, non-conforming loans Orange County'
+  title: 'Jumbo Loans in Orange County, CA | $1,209,750+ Mortgages | Mo Abdel — Mortgage Broker',
+  description: 'Jumbo mortgages in Orange County, CA above $1,209,750. Get options or call (949) 579-2057.',
+  keywords: 'jumbo loans Orange County CA, luxury home mortgage, non-conforming loans'
 };
 
 export default function JumboLoansPage() {
@@ -22,7 +22,7 @@ export default function JumboLoansPage() {
             👑 Luxury Home Financing
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-purple-600">Jumbo Loans</span> in Orange County
+            <span className="text-purple-600">Jumbo Loans</span> in Orange County, CA
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Finance luxury Orange County homes above $1,209,750 with competitive jumbo mortgage 
@@ -463,6 +463,52 @@ export default function JumboLoansPage() {
             </Card>
           </div>
         </div>
+
+        {/* Related Options (Internal Links) */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold mb-4">Related Options</h2>
+          <ul className="list-disc list-inside text-blue-700">
+            <li><Link href="/loan-programs/conventional-loans">Conventional Loans (Conforming up to $1,209,750)</Link></li>
+            <li><Link href="/loan-programs/rate-term-refinance">Rate &amp; Term Refinance</Link></li>
+          </ul>
+        </section>
+
+        {/* FAQ */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6">Jumbo Loan FAQs (Orange County, CA)</h2>
+          <div className="space-y-4 text-slate-700">
+            <details><summary className="font-semibold">What’s considered a Jumbo loan in OC?</summary><p>Loans above $1,209,750 (2025) for a 1-unit home are Jumbo in Orange County, CA.</p></details>
+            <details><summary className="font-semibold">Are jumbo rates higher?</summary><p>Not always; competitive profiles can be near conforming rates. We’ll shop aggressively.</p></details>
+            <details><summary className="font-semibold">Do I need reserves?</summary><p>Many investors require 2–6 months of reserves. We’ll outline program-specific requirements.</p></details>
+          </div>
+        </section>
+
+        {/* Structured Data */}
+        {(() => {
+          const serviceSchema = {
+            "@context":"https://schema.org",
+            "@type":"FinancialService",
+            "name":"Mo Abdel — Mortgage Broker — Jumbo Loans",
+            "areaServed":"Orange County, CA",
+            "serviceType":"Jumbo Loans",
+            "url":"https://example.com/loan-programs/jumbo-loans",
+            "telephone":"(949) 579-2057",
+            "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."
+          };
+          const faqSchema = {
+            "@context":"https://schema.org",
+            "@type":"FAQPage",
+            "mainEntity":[
+              {"@type":"Question","name":"What’s considered a Jumbo loan in OC?","acceptedAnswer":{"@type":"Answer","text":"Above $1,209,750 (1-unit) in Orange County, CA for 2025."}},
+              {"@type":"Question","name":"Are jumbo rates higher?","acceptedAnswer":{"@type":"Answer","text":"Depends on profile; we’ll shop multiple investors for best terms."}},
+              {"@type":"Question","name":"Do I need reserves?","acceptedAnswer":{"@type":"Answer","text":"Often 2–6 months PITI depending on program and property type."}}
+            ]
+          };
+          return (<>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+          </>);
+        })()}
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-purple-600 to-purple-700 rounded-2xl p-8 text-white">

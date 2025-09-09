@@ -7,9 +7,9 @@ import TopicClusterLinks from '@/components/seo/TopicClusterLinks';
 import { Home, Shield, Users, CheckCircle, AlertCircle, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'FHA Loans Orange County | 3.5% Down Payment | Mo The Mortgage Broker NMLS #1426884',
-  description: 'FHA loans in Orange County with just 3.5% down payment. Government-backed mortgages with flexible credit requirements. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'FHA loans Orange County, FHA mortgage California, 3.5% down payment, first time homebuyer Orange County, government backed loans'
+  title: 'FHA Loans in Orange County, CA | 3.5% Down | Mo Abdel — Mortgage Broker',
+  description: 'FHA loans in Orange County, CA with 3.5% down. Get pre-approved or call (949) 579-2057.',
+  keywords: 'FHA loans Orange County CA, 3.5% down FHA, first-time buyer FHA'
 };
 
 export default function FHALoansPage() {
@@ -23,7 +23,7 @@ export default function FHALoansPage() {
             🏠 Government-Backed Loan Program
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">FHA Loans</span> in Orange County
+            <span className="text-blue-600">FHA Loans</span> in Orange County, CA
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Buy your Orange County home with as little as 3.5% down payment. FHA loans offer 
@@ -391,6 +391,52 @@ export default function FHALoansPage() {
             </div>
           </div>
         </div>
+
+        {/* Related Options (Internal Links) */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold mb-4">Related Options</h2>
+          <ul className="list-disc list-inside text-blue-700">
+            <li><Link href="/loan-programs/conventional-loans">Conventional (Purchase) Loans</Link></li>
+            <li><Link href="/loan-programs/va-loans">VA Loans</Link></li>
+          </ul>
+        </section>
+
+        {/* FAQ */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6">FHA Loan FAQs (Orange County, CA)</h2>
+          <div className="space-y-4 text-slate-700">
+            <details><summary className="font-semibold">What is the 2025 FHA loan limit?</summary><p>The Orange County, CA 1-unit FHA loan limit is $1,089,300.</p></details>
+            <details><summary className="font-semibold">Can gift funds be used?</summary><p>Yes, FHA allows gift funds to cover down payment and closing costs.</p></details>
+            <details><summary className="font-semibold">Is FHA only for first-time buyers?</summary><p>No—any qualified borrower can use FHA, not just first-time buyers.</p></details>
+          </div>
+        </section>
+
+        {/* Structured Data */}
+        {(() => {
+          const serviceSchema = {
+            "@context":"https://schema.org",
+            "@type":"FinancialService",
+            "name":"Mo Abdel — Mortgage Broker — FHA Loans",
+            "areaServed":"Orange County, CA",
+            "serviceType":"FHA Loans",
+            "url":"https://example.com/loan-programs/fha-loans",
+            "telephone":"(949) 579-2057",
+            "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."
+          };
+          const faqSchema = {
+            "@context":"https://schema.org",
+            "@type":"FAQPage",
+            "mainEntity":[
+              {"@type":"Question","name":"What is the 2025 FHA loan limit?","acceptedAnswer":{"@type":"Answer","text":"$1,089,300 for a 1-unit property in Orange County, CA."}},
+              {"@type":"Question","name":"Can gift funds be used?","acceptedAnswer":{"@type":"Answer","text":"Yes, FHA allows gift funds for down payment and closing costs."}},
+              {"@type":"Question","name":"Is FHA only for first-time buyers?","acceptedAnswer":{"@type":"Answer","text":"No, any qualified borrower can use FHA financing."}}
+            ]
+          };
+          return (<>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+          </>);
+        })()}
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">

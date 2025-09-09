@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { DollarSign, Home, TrendingUp, CheckCircle, AlertCircle, Calculator } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Cash-Out Refinance Orange County | Replace Mortgage + Get Cash | Mo The Mortgage Broker',
-  description: 'Cash-out refinance in Orange County. Replace your mortgage with a larger loan and get cash from your equity. Competitive mortgage broker rates through NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'cash out refinance Orange County, cash out refi California, home equity cash out, mortgage refinance cash'
+  title: 'Cash-Out Refinance in Orange County, CA | Replace Mortgage + Get Cash | Mo Abdel — Mortgage Broker',
+  description: 'Cash-out refinance in Orange County, CA. Replace your mortgage and get cash. Get rates or call (949) 579-2057.',
+  keywords: 'cash out refinance Orange County CA, equity refinance, cash from home equity'
 };
 
 export default function CashOutRefinancePage() {
@@ -22,8 +22,9 @@ export default function CashOutRefinancePage() {
             🔥 Most Popular Refinance Option
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-orange-600">Cash-Out Refinance</span> in Orange County
+            <span className="text-orange-600">Cash-Out Refinance</span> in Orange County, CA
           </h1>
+          <p className="text-slate-600">Serving Irvine, Anaheim, Huntington Beach, Newport Beach, and all of Orange County, CA.</p>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Replace your current mortgage with a larger loan and get cash from your Orange County 
             home's equity at closing. Perfect for major expenses with potentially lower rates 
@@ -356,6 +357,63 @@ export default function CashOutRefinancePage() {
             </div>
           </div>
         </div>
+
+        {/* Orange County Loan Limits (2025) */}
+        <section className="mb-12 bg-orange-50 p-6 rounded-xl">
+          <h2 className="text-2xl font-bold mb-3">Orange County 2025 Loan Limits</h2>
+          <ul className="list-disc list-inside text-slate-700">
+            <li>Conforming (1-unit): <strong>$1,209,750</strong></li>
+            <li>FHA (1-unit): <strong>$1,089,300</strong></li>
+            <li>Jumbo: <strong>Above $1,209,750</strong></li>
+          </ul>
+        </section>
+
+        {/* Related Options (Internal Links) */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold mb-4">Related Options</h2>
+          <ul className="list-disc list-inside text-blue-700">
+            <li><Link href="/loan-programs/heloc">HELOC (Home Equity Line of Credit)</Link></li>
+            <li><Link href="/loan-programs/heloan">HELOAN (Fixed-Rate Home Equity Loan)</Link></li>
+            <li><Link href="/loan-programs/rate-term-refinance">Rate &amp; Term Refinance</Link></li>
+          </ul>
+        </section>
+
+        {/* FAQ */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6">Cash-Out Refinance FAQs (Orange County, CA)</h2>
+          <div className="space-y-4 text-slate-700">
+            <details><summary className="font-semibold">How much cash can I take out?</summary><p>It depends on your home value, program, and credit. We’ll calculate a safe maximum for you.</p></details>
+            <details><summary className="font-semibold">Will my interest rate change?</summary><p>Often you can get cash and a competitive rate. We’ll compare total cost vs. HELOC/HELOAN.</p></details>
+            <details><summary className="font-semibold">Are there limits I should know about?</summary><p>Yes: Conforming $1,209,750; FHA $1,089,300; Jumbo above $1,209,750 in Orange County.</p></details>
+          </div>
+        </section>
+
+        {/* Structured Data */}
+        {(() => {
+          const serviceSchema = {
+            "@context": "https://schema.org",
+            "@type": "FinancialService",
+            "name": "Mo Abdel — Mortgage Broker — Cash-Out Refinance",
+            "areaServed": "Orange County, CA",
+            "serviceType": "Cash-Out Refinance",
+            "url": "https://example.com/loan-programs/cash-out-refinance",
+            "telephone": "(949) 579-2057",
+            "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."
+          };
+          const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {"@type":"Question","name":"How much cash can I take out?","acceptedAnswer":{"@type":"Answer","text":"Based on value, program, and credit; we’ll calculate your safe max."}},
+              {"@type":"Question","name":"Will my interest rate change?","acceptedAnswer":{"@type":"Answer","text":"Often you can get cash and a competitive rate; we’ll compare options."}},
+              {"@type":"Question","name":"Are there limits I should know about?","acceptedAnswer":{"@type":"Answer","text":"Conforming $1,209,750; FHA $1,089,300; Jumbo above $1,209,750 (Orange County)."}}
+            ]
+          };
+          return (<>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+          </>);
+        })()}
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-orange-600 to-orange-700 rounded-2xl p-8 text-white">

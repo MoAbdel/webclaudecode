@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { DollarSign, Calendar, Shield, CheckCircle, AlertCircle, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'HELOAN (Home Equity Loan) - Orange County | Mo The Mortgage Broker',
-  description: 'Get a fixed-rate Home Equity Loan in Orange County. Lump sum up to $500K with predictable payments. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'HELOAN Orange County, home equity loan California, fixed rate home equity, second mortgage Orange County'
+  title: 'HELOAN in Orange County, CA | Home Equity Loan | Mo Abdel — Mortgage Broker',
+  description: 'HELOAN in Orange County, CA. Fixed-rate lump sum. Get terms or call (949) 579-2057.',
+  keywords: 'HELOAN Orange County CA, home equity loan, fixed-rate second mortgage'
 };
 
 export default function HELOANPage() {
@@ -22,8 +22,9 @@ export default function HELOANPage() {
             💰 Fixed Payment Solution
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            HELOAN: <span className="text-green-600">Home Equity Loan</span>
+            HELOAN: <span className="text-green-600">Home Equity Loan</span> in Orange County, CA
           </h1>
+          <p className="text-slate-600">Serving Irvine, Anaheim, Huntington Beach, and Newport Beach.</p>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Get a lump sum from your Orange County home's equity with a fixed interest rate 
             and predictable monthly payments. Perfect for large one-time expenses.
@@ -314,6 +315,52 @@ export default function HELOANPage() {
             </div>
           </div>
         </div>
+
+        {/* Related Options (Internal Links) */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold mb-4">Related Options</h2>
+          <ul className="list-disc list-inside text-blue-700">
+            <li><Link href="/loan-programs/cash-out-refinance">Cash-Out Refinance</Link></li>
+            <li><Link href="/loan-programs/heloc">HELOC (Home Equity Line of Credit)</Link></li>
+          </ul>
+        </section>
+
+        {/* FAQ */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6">HELOAN FAQs (Orange County, CA)</h2>
+          <div className="space-y-4 text-slate-700">
+            <details><summary className="font-semibold">When is a HELOAN better than a HELOC?</summary><p>HELOANs offer a fixed rate and predictable payment for a lump sum—great for large, one-time projects.</p></details>
+            <details><summary className="font-semibold">How long are repayment terms?</summary><p>Common terms range 10–30 years; we’ll tailor options to your budget.</p></details>
+            <details><summary className="font-semibold">Are there prepayment penalties?</summary><p>Most options have no prepayment penalty; we’ll confirm with your chosen lender/program.</p></details>
+          </div>
+        </section>
+
+        {/* Structured Data */}
+        {(() => {
+          const serviceSchema = {
+            "@context":"https://schema.org",
+            "@type":"FinancialService",
+            "name":"Mo Abdel — Mortgage Broker — HELOAN",
+            "areaServed":"Orange County, CA",
+            "serviceType":"HELOAN",
+            "url":"https://example.com/loan-programs/heloan",
+            "telephone":"(949) 579-2057",
+            "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."
+          };
+          const faqSchema = {
+            "@context":"https://schema.org",
+            "@type":"FAQPage",
+            "mainEntity":[
+              {"@type":"Question","name":"When is a HELOAN better than a HELOC?","acceptedAnswer":{"@type":"Answer","text":"HELOANs provide fixed rates and predictable payments for lump sums."}},
+              {"@type":"Question","name":"How long are repayment terms?","acceptedAnswer":{"@type":"Answer","text":"Typically 10–30 years depending on program and credit."}},
+              {"@type":"Question","name":"Are there prepayment penalties?","acceptedAnswer":{"@type":"Answer","text":"Most programs have no prepayment penalty; we’ll verify specifics."}}
+            ]
+          };
+          return (<>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+          </>);
+        })()}
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-8 text-white">

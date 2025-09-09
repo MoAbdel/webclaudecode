@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { TrendingUp, Shield, Home, CheckCircle, AlertCircle, DollarSign } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Conventional Loans Orange County | 3% Down Payment | Mo The Mortgage Broker NMLS #1426884',
-  description: 'Conventional loans in Orange County with competitive rates and flexible terms. 3% down payment options available. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'conventional loans Orange County, conventional mortgage California, 3% down payment, conforming loans Orange County'
+  title: 'Conventional Loans in Orange County, CA | 3% Down Payment | Mo Abdel — Mortgage Broker',
+  description: 'Conventional loans in Orange County, CA. 3% down options. Get pre-approved or call (949) 579-2057.',
+  keywords: 'conventional loans Orange County CA, conforming loans Orange County 2025 limit, 3% down mortgage, purchase mortgage Orange County'
 };
 
 export default function ConventionalLoansPage() {
@@ -22,7 +22,7 @@ export default function ConventionalLoansPage() {
             🏆 Most Popular Loan Program
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-blue-600">Conventional Loans</span> in Orange County
+            <span className="text-blue-600">Conventional Loans</span> in Orange County, CA
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             The most popular mortgage option with competitive rates, flexible terms, and as 
@@ -85,7 +85,7 @@ export default function ConventionalLoansPage() {
                 <div className="space-y-4">
                   <div className="flex justify-between">
                     <span className="text-slate-600">Single Family Home:</span>
-                    <span className="font-bold text-blue-600">$1,089,300</span>
+                    <span className="font-bold text-blue-600">$1,209,750</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">2-Unit Property:</span>
@@ -393,7 +393,7 @@ export default function ConventionalLoansPage() {
                 </tr>
                 <tr>
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Loan Limits (OC)</td>
-                  <td className="px-6 py-4 text-center text-blue-600 font-bold">$1,089,300</td>
+                  <td className="px-6 py-4 text-center text-blue-600 font-bold">$1,209,750</td>
                   <td className="px-6 py-4 text-center text-slate-600">$766,550</td>
                   <td className="px-6 py-4 text-center text-green-600">No limit</td>
                   <td className="px-6 py-4 text-center text-green-600">No limit</td>
@@ -438,7 +438,7 @@ export default function ConventionalLoansPage() {
                   <div>
                     <h3 className="text-xl font-bold text-slate-900 mb-2">Perfect for OC Price Range</h3>
                     <p className="text-slate-600">
-                      Conforming limits of $1,089,300 cover many Orange County homes, while jumbo 
+                      Conforming limits of $1,209,750 cover many Orange County homes, while jumbo 
                       options handle luxury properties seamlessly.
                     </p>
                   </div>
@@ -508,6 +508,83 @@ export default function ConventionalLoansPage() {
         </div>
 
         {/* CTA Section */}
+        {/* Related Services (Internal Links) */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold mb-4">Related Mortgage Options</h2>
+          <ul className="list-disc list-inside text-blue-700">
+            <li><Link href="/loan-programs/fha-loans">FHA Loans in Orange County, CA</Link></li>
+            <li><Link href="/loan-programs/jumbo-loans">Jumbo Loans (&gt;$1,209,750) in Orange County, CA</Link></li>
+            <li><Link href="/loan-programs/rate-term-refinance">Rate &amp; Term Refinance in Orange County, CA</Link></li>
+          </ul>
+        </section>
+
+        {/* FAQ */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6">Conventional Loan FAQs (Orange County, CA)</h2>
+          <div className="space-y-4 text-slate-700">
+            <details>
+              <summary className="font-semibold">What is the 2025 Orange County conforming loan limit?</summary>
+              <p>The 2025 conforming limit for a single-family home in Orange County, CA is $1,209,750. Loans above this amount are considered Jumbo.</p>
+            </details>
+            <details>
+              <summary className="font-semibold">How much down payment do I need?</summary>
+              <p>Conventional loans can go as low as 3% down for well-qualified buyers. We’ll help you choose the best option for your budget and goals.</p>
+            </details>
+            <details>
+              <summary className="font-semibold">Can I buy in Irvine or Newport Beach?</summary>
+              <p>Yes. We serve all of Orange County, including Irvine, Anaheim, Huntington Beach, and Newport Beach.</p>
+            </details>
+          </div>
+        </section>
+
+        {/* Structured Data */}
+        {(() => {
+          const serviceSchema = {
+            "@context": "https://schema.org",
+            "@type": "FinancialService",
+            "name": "Mo Abdel — Mortgage Broker — Conventional Loans",
+            "areaServed": "Orange County, CA",
+            "serviceType": "Conventional Loans",
+            "url": "https://example.com/loan-programs/conventional-loans",
+            "telephone": "(949) 579-2057",
+            "provider": "NEXA Mortgage",
+            "brand": "Mo Abdel — Mortgage Broker, Orange County, CA.",
+            "description": "Conventional mortgages in Orange County, CA with competitive rates and low down payment options.",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Orange County",
+              "addressRegion": "CA",
+              "addressCountry": "US"
+            }
+          };
+          const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the 2025 Orange County conforming loan limit?",
+                "acceptedAnswer": { "@type": "Answer", "text": "The 2025 conforming limit for a single-family home in Orange County, CA is $1,209,750." }
+              },
+              {
+                "@type": "Question",
+                "name": "How much down payment do I need?",
+                "acceptedAnswer": { "@type": "Answer", "text": "As low as 3% down for qualified buyers; we’ll help you compare." }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I buy in Irvine or Newport Beach?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, we lend throughout Orange County including Irvine, Anaheim, Huntington Beach, and Newport Beach." }
+              }
+            ]
+          };
+          return (
+            <>
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+              <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+            </>
+          );
+        })()}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
           <h2 className="text-3xl font-bold mb-4">
             Ready for the Most Popular Loan Program?

@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { Shield, Star, Users, CheckCircle, AlertCircle, Flag } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'VA Loans Orange County | 0% Down Military Benefits | Mo The Mortgage Broker NMLS #1426884',
-  description: 'VA loans in Orange County with 0% down payment for veterans and active military. No PMI, competitive rates. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'VA loans Orange County, VA mortgage California, military home loans, veterans mortgage benefits, 0% down payment Orange County'
+  title: 'VA Loans in Orange County, CA | 0% Down Military Benefits | Mo Abdel — Mortgage Broker',
+  description: 'VA loans in Orange County, CA with 0% down and no PMI. Get pre-approved or call (949) 579-2057.',
+  keywords: 'VA loans Orange County CA, VA mortgage benefits, zero down VA loan'
 };
 
 export default function VALoansPage() {
@@ -22,8 +22,9 @@ export default function VALoansPage() {
             🇺🇸 Exclusive Military Benefits
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-red-600">VA Loans</span> in Orange County
+            <span className="text-red-600">VA Loans</span> in Orange County, CA
           </h1>
+          <p className="text-slate-600">Proudly serving veterans in Irvine, Anaheim, Huntington Beach, and Newport Beach.</p>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Exclusive mortgage benefits for military veterans, active service members, and eligible 
             spouses in Orange County. Buy with $0 down payment, no PMI, and competitive rates - 
@@ -439,6 +440,52 @@ export default function VALoansPage() {
           </div>
           <p className="text-xs text-slate-500 mt-4">*Funding fee can be financed. Disabled veterans exempt from funding fee.</p>
         </div>
+
+        {/* Related Options (Internal Links) */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold mb-4">Related Options</h2>
+          <ul className="list-disc list-inside text-blue-700">
+            <li><Link href="/loan-programs/conventional-loans">Conventional (Purchase) Loans</Link></li>
+            <li><Link href="/loan-programs/fha-loans">FHA Loans</Link></li>
+          </ul>
+        </section>
+
+        {/* FAQ */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6">VA Loan FAQs (Orange County, CA)</h2>
+          <div className="space-y-4 text-slate-700">
+            <details><summary className="font-semibold">Do I need a down payment?</summary><p>Qualified VA borrowers can buy with 0% down and no PMI.</p></details>
+            <details><summary className="font-semibold">Is there a funding fee?</summary><p>VA loans include a funding fee; we’ll explain exemptions and exact amounts for you.</p></details>
+            <details><summary className="font-semibold">Can I buy a condo?</summary><p>Yes, subject to VA condo approval. We’ll check eligibility in your target area.</p></details>
+          </div>
+        </section>
+
+        {/* Structured Data */}
+        {(() => {
+          const serviceSchema = {
+            "@context":"https://schema.org",
+            "@type":"FinancialService",
+            "name":"Mo Abdel — Mortgage Broker — VA Loans",
+            "areaServed":"Orange County, CA",
+            "serviceType":"VA Loans",
+            "url":"https://example.com/loan-programs/va-loans",
+            "telephone":"(949) 579-2057",
+            "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."
+          };
+          const faqSchema = {
+            "@context":"https://schema.org",
+            "@type":"FAQPage",
+            "mainEntity":[
+              {"@type":"Question","name":"Do I need a down payment?","acceptedAnswer":{"@type":"Answer","text":"Qualified VA borrowers can buy with 0% down and no PMI."}},
+              {"@type":"Question","name":"Is there a funding fee?","acceptedAnswer":{"@type":"Answer","text":"Yes; we’ll explain exemptions and exact amounts for your situation."}},
+              {"@type":"Question","name":"Can I buy a condo?","acceptedAnswer":{"@type":"Answer","text":"Yes, subject to VA condo approval."}}
+            ]
+          };
+          return (<>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+          </>);
+        })()}
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-red-600 to-red-700 rounded-2xl p-8 text-white">

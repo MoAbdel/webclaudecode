@@ -6,9 +6,9 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { TrendingDown, Calendar, Shield, CheckCircle, AlertCircle, Calculator } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Rate & Term Refinance Orange County | Lower Payment & Rate | Mo The Mortgage Broker',
-  description: 'Rate and term refinance in Orange County. Lower your mortgage payment, eliminate PMI, or switch to fixed rate. Competitive mortgage broker rates through NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'rate and term refinance Orange County, lower mortgage payment, eliminate PMI, refinance California'
+  title: 'Rate & Term Refinance in Orange County, CA | Lower Payment & Rate | Mo Abdel — Mortgage Broker',
+  description: 'Refinance in Orange County, CA to lower payments or remove PMI. Get a quote or call (949) 579-2057.',
+  keywords: 'refinance Orange County CA, lower mortgage payment, remove PMI, fixed rate refinance'
 };
 
 export default function RateTermRefinancePage() {
@@ -22,8 +22,9 @@ export default function RateTermRefinancePage() {
             💰 Money Saver
           </div>
           <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            <span className="text-green-600">Rate & Term Refinance</span> in Orange County
+            <span className="text-green-600">Rate &amp; Term Refinance</span> in Orange County, CA
           </h1>
+          <p className="text-slate-600">Serving Irvine, Anaheim, Huntington Beach, Newport Beach, and all of Orange County, CA.</p>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Lower your interest rate, reduce monthly payments, eliminate PMI, or change your 
             loan term without taking cash out. Perfect for optimizing your current mortgage 
@@ -337,6 +338,64 @@ export default function RateTermRefinancePage() {
             </table>
           </div>
         </div>
+
+        {/* Orange County Loan Limits (2025) */}
+        <section className="mb-12 bg-green-50 p-6 rounded-xl">
+          <h2 className="text-2xl font-bold mb-3">Orange County 2025 Loan Limits</h2>
+          <ul className="list-disc list-inside text-slate-700">
+            <li>Conforming (1-unit): <strong>$1,209,750</strong></li>
+            <li>FHA (1-unit): <strong>$1,089,300</strong></li>
+            <li>Jumbo: <strong>Above $1,209,750</strong></li>
+          </ul>
+          <p className="text-sm text-slate-600 mt-2">Jumbo may require different qualifying standards. We’ll help you compare.</p>
+        </section>
+
+        {/* Related Options (Internal Links) */}
+        <section className="mt-16">
+          <h2 className="text-2xl font-bold mb-4">Related Options</h2>
+          <ul className="list-disc list-inside text-blue-700">
+            <li><Link href="/loan-programs/cash-out-refinance">Cash-Out Refinance in Orange County, CA</Link></li>
+            <li><Link href="/loan-programs/heloc">HELOC (Home Equity Line of Credit)</Link></li>
+          </ul>
+        </section>
+
+        {/* FAQ */}
+        <section className="mt-16">
+          <h2 className="text-3xl font-bold mb-6">Refinance FAQs (Orange County, CA)</h2>
+          <div className="space-y-4 text-slate-700">
+            <details><summary className="font-semibold">When does a refinance make sense?</summary><p>When your new rate lowers your payment, removes PMI, or better fits your financial goals.</p></details>
+            <details><summary className="font-semibold">Will I need a new appraisal?</summary><p>Often yes, depending on the program and equity. We’ll advise based on your scenario.</p></details>
+            <details><summary className="font-semibold">What are OC loan limits in 2025?</summary><p>Conforming $1,209,750; FHA $1,089,300; Jumbo above $1,209,750.</p></details>
+          </div>
+        </section>
+
+        {/* Structured Data */}
+        {(() => {
+          const serviceSchema = {
+            "@context": "https://schema.org",
+            "@type": "FinancialService",
+            "name": "Mo Abdel — Mortgage Broker — Rate & Term Refinance",
+            "areaServed": "Orange County, CA",
+            "serviceType": "Rate & Term Refinance",
+            "url": "https://example.com/loan-programs/rate-term-refinance",
+            "telephone": "(949) 579-2057",
+            "provider": "NEXA Mortgage",
+            "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."
+          };
+          const faqSchema = {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {"@type":"Question","name":"When does a refinance make sense?","acceptedAnswer":{"@type":"Answer","text":"When your new rate lowers payment, removes PMI, or better fits goals."}},
+              {"@type":"Question","name":"Will I need a new appraisal?","acceptedAnswer":{"@type":"Answer","text":"Often yes, depending on equity and program."}},
+              {"@type":"Question","name":"What are OC loan limits in 2025?","acceptedAnswer":{"@type":"Answer","text":"Conforming $1,209,750; FHA $1,089,300; Jumbo above $1,209,750."}}
+            ]
+          };
+          return (<>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+          </>);
+        })()}
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-8 text-white">

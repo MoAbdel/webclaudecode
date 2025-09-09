@@ -228,7 +228,7 @@ export default function JumboLoansOrangeCountyPage() {
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-semibold">Private Mortgage Insurance</td>
                     <td className="px-6 py-4 text-center text-green-600 font-bold">Not Available</td>
-                    <td className="px-6 py-4 text-center text-red-600">Required if < 20% down</td>
+                    <td className="px-6 py-4 text-center text-red-600">Required if &lt; 20% down</td>
                     <td className="px-6 py-4 text-center text-green-600 font-bold">Not Available</td>
                   </tr>
                   <tr className="hover:bg-gray-50">

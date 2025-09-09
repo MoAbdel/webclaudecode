@@ -297,7 +297,7 @@ export default function VALoansOrangeCountyPage() {
                     <td className="px-6 py-4 font-semibold">Mortgage Insurance</td>
                     <td className="px-6 py-4 text-center text-green-600 font-bold">None</td>
                     <td className="px-6 py-4 text-center text-red-600">Required (MIP)</td>
-                    <td className="px-6 py-4 text-center text-red-600">PMI if < 20% down</td>
+                    <td className="px-6 py-4 text-center text-red-600">PMI if &lt; 20% down</td>
                   </tr>
                   <tr className="hover:bg-gray-50">
                     <td className="px-6 py-4 font-semibold">Credit Score Requirement</td>

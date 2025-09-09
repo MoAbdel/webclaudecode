@@ -17,6 +17,30 @@ export const metadata: Metadata = generateMetadata({
 export default function ContactPage() {
   return (
     <div className="min-h-screen py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            name: "Mo Abdel — Mortgage Broker",
+            url: "https://mothebroker.com/contact",
+            telephone: "(949) 579-2057",
+            address: {
+              "@type": "PostalAddress",
+              addressLocality: "Orange County",
+              addressRegion: "CA",
+              addressCountry: "US"
+            },
+            contactPoint: {
+              "@type": "ContactPoint",
+              telephone: "+1-949-579-2057",
+              contactType: "customer service",
+              areaServed: "US-CA"
+            }
+          })
+        }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">

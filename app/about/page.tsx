@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/Button';
 import { seoData } from '@/lib/seo';
 import { generateMetadata } from '@/lib/metadata';
+import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 
 export const metadata: Metadata = generateMetadata({
   title: seoData.About.title,
@@ -17,6 +18,19 @@ export const metadata: Metadata = generateMetadata({
 export default function AboutPage() {
   return (
     <div className="min-h-screen py-12">
+      {/* Organization JSON-LD */}
+      <AdvancedSchemaMarkup
+        type="Organization"
+        name="Mo Abdel — Mortgage Broker"
+        url="https://mothebroker.com/about"
+        sameAs={[
+          'https://www.facebook.com/profile.php?id=61573517340174',
+          'https://www.instagram.com/mo_thebroker',
+          'https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest',
+          'https://g.co/kgs/jUSUoW6',
+          'https://www.zillow.com/lender-profile/Mo%20Abdel/'
+        ]}
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
@@ -57,6 +71,11 @@ export default function AboutPage() {
             <p className="text-slate-700">
               My clients appreciate my data-driven approach, lightning-fast processing times, and the fact that I'm available 24/7 to guide you through every step. According to client feedback data, personalized mortgage strategies result in higher satisfaction rates and better financial outcomes. I believe tapping into your home's equity should be profitable and stress-free, not complicated.
             </p>
+          </div>
+
+          {/* Helpful links */}
+          <div className="text-center mt-8">
+            <Link href="/purchase-loans" className="text-blue-600 hover:underline font-semibold">Explore Purchase Loans</Link>
           </div>
 
           {/* Credentials */}

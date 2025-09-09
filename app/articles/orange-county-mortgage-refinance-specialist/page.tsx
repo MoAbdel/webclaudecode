@@ -2,18 +2,15 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Orange County Mortgage Refinance Specialist | Save Thousands',
-  description: 'Expert Orange County mortgage refinance specialist helping homeowners reduce payments, access equity, and switch loan programs. Free consultation and rate analysis available.',
-  openGraph: {
-    title: 'Orange County Mortgage Refinance Specialist | Mo Abdel - NEXA',
-    description: 'Refinance your Orange County home with an expert specialist. Lower payments, cash-out options, and personalized service.',
-    images: ['/images/moabdel-headshot-final.png'],
-    url: 'https://www.mothebroker.com/articles/orange-county-mortgage-refinance-specialist',
-    type: 'article',
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: 'Orange County Mortgage Refinance Specialist | Mo Abdel',
+  description: 'Lower payments or tap equity in Orange County, CA. Compare refinance options and get a free analysis today.',
+  keywords: 'refinance, Orange County CA, cash-out refinance',
+  path: '/articles/orange-county-mortgage-refinance-specialist',
+  type: 'article'
+});
 
 export default function RefinanceSpecialistArticle() {
   return (
@@ -396,6 +393,11 @@ export default function RefinanceSpecialistArticle() {
       </main>
       
       <Footer />
+      {/* Internal links to services/locations for SEO */}
+      <div className="hidden" aria-hidden="true">
+        <Link href="/refinance-loans">Refinance Loans</Link>
+        <Link href="/areas/irvine">Irvine Mortgage Broker</Link>
+      </div>
     </>
   );
 }

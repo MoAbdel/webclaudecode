@@ -7,7 +7,11 @@ module.exports = {
     '/admin/*',
     '/api/*',
     '/dashboard/*',
-    '/_not-found'
+    '/_not-found',
+    '/draft*',
+    '/temp*',
+    '/staging*',
+    '/thank-you*'
   ],
   robotsTxtOptions: {
     policies: [

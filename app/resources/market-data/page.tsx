@@ -24,11 +24,15 @@ import {
   Percent
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Orange County Housing Market Data 2025 | Real Estate Trends & Stats',
-  description: 'Current Orange County housing market data, trends, and analysis. Home prices, inventory levels, days on market, and neighborhood statistics for informed home buying.',
-  keywords: 'Orange County housing market, home prices, real estate trends, market data, inventory levels, days on market, median home price, Orange County real estate statistics',
-};
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'Orange County Housing Market Data | Mo Abdel',
+  description: 'Live Orange County, CA home prices and trends. Market insights with a mortgage lens. Compare and get started.',
+  keywords: 'Orange County CA housing market, home prices, trends',
+  path: '/resources/market-data',
+  type: 'website'
+});
 
 export default function MarketDataPage() {
   const currentData = {

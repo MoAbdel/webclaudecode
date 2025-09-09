@@ -26,11 +26,15 @@ import {
   Users
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Credit Repair Resources | Improve Your Credit Score for Better Rates',
-  description: 'Complete guide to credit repair for Orange County home buyers. Improve your credit score, dispute errors, and qualify for better mortgage rates. Expert tips and strategies.',
-  keywords: 'credit repair, improve credit score, mortgage credit requirements, dispute credit errors, credit reports, FICO score, Orange County mortgage, credit improvement strategies',
-};
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'Credit Repair for Orange County Home Buyers | Mo Abdel',
+  description: 'Improve your credit score in Orange County, CA for better mortgage rates. Get actionable tips and templates. Start now.',
+  keywords: 'credit repair, Orange County CA, mortgage credit',
+  path: '/resources/credit-repair',
+  type: 'article'
+});
 
 export default function CreditRepairPage() {
   const creditScoreRanges = [

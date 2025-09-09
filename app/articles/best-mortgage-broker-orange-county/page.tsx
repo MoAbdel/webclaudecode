@@ -2,18 +2,15 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Best Mortgage Broker in Orange County | Expert Local Guidance',
-  description: 'Discover why Mo Abdel is the best mortgage broker in Orange County. Save thousands with expert rate negotiation, 200+ lender network, and personalized service for your home financing needs.',
-  openGraph: {
-    title: 'Best Mortgage Broker in Orange County | Mo Abdel - NEXA Mortgage',
-    description: 'Find the best mortgage broker in Orange County. Expert guidance, competitive rates, and personalized service for all your home financing needs.',
-    images: ['/images/moabdel-headshot-final.png'],
-    url: 'https://www.mothebroker.com/articles/best-mortgage-broker-orange-county',
-    type: 'article',
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: 'Best Mortgage Broker in Orange County, CA | Mo Abdel',
+  description: 'How to choose the best mortgage broker in Orange County, CA. Compare lenders, rates, and service. Call to get started today.',
+  keywords: 'best mortgage broker, Orange County CA, compare rates',
+  path: '/articles/best-mortgage-broker-orange-county',
+  type: 'article'
+});
 
 export default function BestMortgageBrokerArticle() {
   return (
@@ -486,6 +483,11 @@ export default function BestMortgageBrokerArticle() {
       </main>
       
       <Footer />
+      {/* Internal links to services/locations for SEO */}
+      <div className="hidden" aria-hidden="true">
+        <Link href="/purchase-loans">Purchase Loans</Link>
+        <Link href="/areas/irvine">Irvine Mortgage Broker</Link>
+      </div>
     </>
   );
 }

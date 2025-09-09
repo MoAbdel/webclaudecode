@@ -2,18 +2,15 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Jumbo Loan Broker Orange County | Luxury Home Financing Expert',
-  description: 'Expert jumbo loan broker in Orange County specializing in high-value property financing. Competitive rates, flexible guidelines, and personalized service for luxury home purchases.',
-  openGraph: {
-    title: 'Jumbo Loan Broker Orange County | Mo Abdel - NEXA Mortgage',
-    description: 'Finance your luxury Orange County home with expert jumbo loan guidance. Competitive rates and flexible terms for high-value properties.',
-    images: ['/images/moabdel-headshot-final.png'],
-    url: 'https://www.mothebroker.com/articles/jumbo-loan-broker-orange-county',
-    type: 'article',
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: 'Jumbo Loan Broker in Orange County, CA | Mo Abdel',
+  description: 'Expert jumbo loan guidance for Orange County, CA luxury homes. Compare lenders and secure competitive rates. Get started today.',
+  keywords: 'jumbo loans, Orange County CA, luxury home financing',
+  path: '/articles/jumbo-loan-broker-orange-county',
+  type: 'article'
+});
 
 export default function JumboLoanBrokerArticle() {
   return (
@@ -546,6 +543,11 @@ export default function JumboLoanBrokerArticle() {
       </main>
       
       <Footer />
+      {/* Internal links to services/locations for SEO */}
+      <div className="hidden" aria-hidden="true">
+        <Link href="/loan-programs/jumbo-loans">Jumbo Loans</Link>
+        <Link href="/areas/newport-beach">Newport Beach Mortgage Broker</Link>
+      </div>
     </>
   );
 }

@@ -30,8 +30,10 @@ interface CityPageProps {
 }
 
 export function generateCityMetadata(cityData: CityData): Metadata {
-  const title = `${cityData.name} Mortgage Broker | Mo Abdel NMLS #1426884`;
-  const description = `Expert mortgage broker serving ${cityData.name}, CA. Access to 200+ lenders, competitive rates, and fast closings. Free consultation. Licensed & bonded.`;
+  const canonical = `https://mothebroker.com/areas/${cityData.slug}`;
+  const title = `Mortgage Broker in ${cityData.name}, CA | Mo Abdel`;
+  // <=160 chars, includes city + CTA
+  const description = `Trusted mortgage broker in ${cityData.name}, CA. Compare rates from 200+ lenders and get pre-approved fast. Call (949) 579-2057 to get started.`;
 
   return {
     title,
@@ -43,13 +45,16 @@ export function generateCityMetadata(cityData: CityData): Metadata {
       `${cityData.name} refinancing`,
       `FHA loans ${cityData.name}`,
       `VA loans ${cityData.name}`,
-      `Orange County mortgage`,
+      'Orange County mortgage',
       'NMLS licensed broker'
     ].join(', '),
+    alternates: {
+      canonical,
+    },
     openGraph: {
       title,
       description,
-      url: `https://mothebroker.com/areas/${cityData.slug}`,
+      url: canonical,
       type: 'website',
       locale: 'en_US',
       siteName: 'Mo Abdel'
@@ -118,8 +123,8 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
   return (
     <>
       <LLMOptimizedSEO 
-        title={`${cityData.name} Mortgage Broker | Mo Abdel NMLS #1426884`}
-        description={`Expert mortgage broker serving ${cityData.name}, CA. Access to 200+ lenders, competitive rates, and fast closings. Free consultation. Licensed & bonded.`}
+        title={`Mortgage Broker in ${cityData.name}, CA | Mo Abdel`}
+        description={`Trusted mortgage broker in ${cityData.name}, CA. Compare rates from 200+ lenders and get pre-approved fast. Call (949) 579-2057 to get started.`}
         keywords={keywordsList}
         city={cityData.name}
         canonicalUrl={canonicalUrl}
@@ -370,6 +375,17 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
                 </Button>
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* Nearby Cities (internal links for GEO relevance) */}
+        <section className="py-10 px-4 bg-slate-50">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-slate-700">
+              Looking around Orange County? Explore nearby areas like{' '}
+              <Link href="/areas/irvine" className="text-blue-600 hover:underline">Irvine</Link>{' '}and{' '}
+              <Link href="/areas/newport-beach" className="text-blue-600 hover:underline">Newport Beach</Link>.
+            </p>
           </div>
         </section>
       </div>

@@ -2,18 +2,15 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'VA Loan Mortgage Broker Orange County | Veterans & Military',
-  description: 'Expert VA loan mortgage broker serving Orange County veterans and military families. 100% financing, no PMI, competitive rates. Honor your service with homeownership.',
-  openGraph: {
-    title: 'VA Loan Mortgage Broker Orange County | Veterans First',
-    description: 'Dedicated VA loan expertise for Orange County veterans and military families. Zero down payment options and personalized service.',
-    images: ['/images/moabdel-headshot-final.png'],
-    url: 'https://www.mothebroker.com/articles/va-loan-mortgage-broker-orange-county',
-    type: 'article',
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: 'VA Loan Mortgage Broker in Orange County, CA | Mo Abdel',
+  description: 'Explore VA loan benefits in Orange County, CA. 0% down options and expert guidance. Call now to compare VA rates.',
+  keywords: 'VA loans, Orange County CA, zero down mortgage',
+  path: '/articles/va-loan-mortgage-broker-orange-county',
+  type: 'article'
+});
 
 export default function VALoanBrokerArticle() {
   return (
@@ -578,6 +575,11 @@ export default function VALoanBrokerArticle() {
       </main>
       
       <Footer />
+      {/* Internal links for SEO */}
+      <div className="hidden" aria-hidden="true">
+        <Link href="/va-loans-orange-county">VA Loans in Orange County</Link>
+        <Link href="/areas/newport-beach">Newport Beach Mortgage Broker</Link>
+      </div>
     </>
   );
 }

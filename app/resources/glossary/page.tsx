@@ -23,11 +23,15 @@ import {
   ArrowRight
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Mortgage Glossary | Complete Guide to Home Loan Terms & Definitions',
-  description: 'Comprehensive mortgage glossary for Orange County home buyers. Understand loan terms, definitions, and mortgage vocabulary. Over 100 terms explained simply.',
-  keywords: 'mortgage glossary, home loan terms, real estate definitions, mortgage vocabulary, lending terms, Orange County mortgage broker, mortgage terminology',
-};
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'Mortgage Glossary | Orange County, CA | Mo Abdel',
+  description: 'Understand mortgage terminology for Orange County, CA home buyers. Clear definitions and examples. Start learning now.',
+  keywords: 'mortgage glossary, Orange County CA, loan terms',
+  path: '/resources/glossary',
+  type: 'website'
+});
 
 export default function GlossaryPage() {
   const glossaryTerms = [

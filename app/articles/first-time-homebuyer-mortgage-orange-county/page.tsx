@@ -2,18 +2,15 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'First-Time Homebuyer Mortgage Orange County | Expert Guidance',
-  description: 'Navigate Orange County\'s competitive market as a first-time homebuyer. Expert guidance on FHA loans, down payment assistance, and local programs. Free consultation available.',
-  openGraph: {
-    title: 'First-Time Homebuyer Mortgage Orange County | Mo Abdel',
-    description: 'Your guide to buying your first home in Orange County. Expert advice on loans, programs, and market strategies.',
-    images: ['/images/moabdel-headshot-final.png'],
-    url: 'https://www.mothebroker.com/articles/first-time-homebuyer-mortgage-orange-county',
-    type: 'article',
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: 'First-Time Homebuyer Mortgage Guide | Mo Abdel',
+  description: 'Orange County, CA first-time buyer tips: FHA, down payment help, and local programs. Get started with expert guidance.',
+  keywords: 'first-time homebuyer, Orange County CA, FHA, DPA',
+  path: '/articles/first-time-homebuyer-mortgage-orange-county',
+  type: 'article'
+});
 
 export default function FirstTimeHomebuyerArticle() {
   return (
@@ -596,6 +593,11 @@ export default function FirstTimeHomebuyerArticle() {
       </main>
       
       <Footer />
+      {/* Internal links to services/locations for SEO */}
+      <div className="hidden" aria-hidden="true">
+        <Link href="/purchase-loans">Purchase Loans</Link>
+        <Link href="/areas/irvine">Irvine Mortgage Broker</Link>
+      </div>
     </>
   );
 }

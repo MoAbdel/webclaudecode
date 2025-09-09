@@ -27,11 +27,15 @@ import {
   Award
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Mortgage Document Checklist & Templates | Orange County Home Buyers',
-  description: 'Complete mortgage document checklist for Orange County home buyers. Required documents, templates, and organization tips for faster loan approval.',
-  keywords: 'mortgage documents, loan application checklist, required documents, mortgage paperwork, Orange County mortgage, document templates, loan approval documents',
-};
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'Mortgage Document Checklist | Orange County, CA | Mo Abdel',
+  description: 'Required mortgage documents for Orange County, CA. Download templates and get organized. Get started today.',
+  keywords: 'mortgage documents, checklist, Orange County CA',
+  path: '/resources/document-checklist',
+  type: 'article'
+});
 
 export default function DocumentChecklistPage() {
   const documentCategories = [

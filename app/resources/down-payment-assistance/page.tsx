@@ -18,11 +18,15 @@ import {
   Phone
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Orange County Down Payment Assistance Programs 2025 | Complete Guide',
-  description: 'Complete guide to down payment assistance programs in Orange County, CA. Find grants, loans, and programs to help with your home purchase. Updated for 2025.',
-  keywords: 'down payment assistance Orange County, first time buyer programs, CalHFA, FHA grants, home buyer assistance, Orange County housing programs',
-};
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'Down Payment Assistance — Orange County, CA | Mo Abdel',
+  description: 'Find down payment assistance in Orange County, CA. Grants and loans to help you buy. Get started today.',
+  keywords: 'down payment assistance, Orange County CA, first-time buyer',
+  path: '/resources/down-payment-assistance',
+  type: 'article'
+});
 
 export default function DownPaymentAssistancePage() {
   const statePrograms = [

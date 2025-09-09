@@ -1,0 +1,1 @@
+All good — no missing alt attributes detected by static scan.

@@ -3,11 +3,15 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
 import { BookOpen, Clock, TrendingUp, Users } from 'lucide-react';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Mortgage Blog | Home Buying Tips & Loan Advice - Orange County',
-  description: 'Expert mortgage blog and home buying tips from Mo Abdel. Learn about loan programs, market insights, and get professional advice for Orange County homebuyers.',
-};
+export const metadata: Metadata = generateMetadata({
+  title: 'Orange County Mortgage Guides & Blog | Mo Abdel',
+  description: 'Expert mortgage tips for Orange County, CA. Learn loan programs and market insights. Get started today.',
+  keywords: 'mortgage blog, Orange County CA, mortgage tips',
+  path: '/guides',
+  type: 'website'
+});
 
 const guides = [
   {

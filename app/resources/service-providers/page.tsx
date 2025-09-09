@@ -29,11 +29,15 @@ import {
   DollarSign
 } from 'lucide-react';
 
-export const metadata: Metadata = {
-  title: 'Local Service Providers Directory | Orange County Real Estate Professionals',
-  description: 'Trusted Orange County real estate professionals directory. Find vetted realtors, home inspectors, contractors, attorneys, and other home buying professionals.',
-  keywords: 'Orange County real estate agents, home inspectors, contractors, real estate attorney, mortgage professionals, home services, Orange County home buying team',
-};
+import { generateMetadata } from '@/lib/metadata';
+
+export const metadata: Metadata = generateMetadata({
+  title: 'Orange County Real Estate Service Providers | Mo Abdel',
+  description: 'Trusted Orange County, CA providers: inspectors, contractors, insurance, and more. Get connected and get started.',
+  keywords: 'Orange County CA service providers, inspectors, contractors',
+  path: '/resources/service-providers',
+  type: 'website'
+});
 
 export default function ServiceProvidersPage() {
   const serviceCategories = [

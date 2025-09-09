@@ -2,18 +2,15 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
+import { generateMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: 'Orange County Mortgage Articles & Expert Insights | Mo Abdel',
-  description: 'Expert mortgage broker insights on Orange County real estate financing. In-depth articles covering FHA loans, VA loans, jumbo mortgages, refinancing, and first-time homebuyer strategies.',
-  openGraph: {
-    title: 'Orange County Mortgage Articles | Expert Real Estate Financing Insights',
-    description: 'Professional insights on Orange County mortgage markets, loan programs, and homebuying strategies from experienced broker Mo Abdel.',
-    images: ['/images/mo-headshot.webp'],
-    url: 'https://www.mothebroker.com/articles',
-    type: 'website',
-  },
-};
+export const metadata: Metadata = generateMetadata({
+  title: 'Orange County Mortgage Articles | Mo Abdel',
+  description: 'Expert mortgage insights for Orange County, CA. Learn about FHA, VA, jumbo, and refinancing. Get started today for a personalized plan.',
+  keywords: 'mortgage articles, Orange County CA, FHA, VA, jumbo, refinance',
+  path: '/articles',
+  type: 'website'
+});
 
 export default function ArticlesPage() {
   const articles = [

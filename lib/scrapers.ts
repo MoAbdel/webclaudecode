@@ -448,3 +448,4 @@ function getFallbackInsights(): MarketInsightData[] {
     }
   ];
 }
+

@@ -41,3 +41,4 @@ export interface RateQuote {
   notes?: string;
   created_at?: string;
 }
+

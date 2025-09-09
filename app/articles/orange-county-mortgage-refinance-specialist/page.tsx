@@ -82,7 +82,7 @@ export default function RefinanceSpecialistArticle() {
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div>
-                    <h3 className="text-2xl font-semibold mb-4">Rate & Term Refinance Benefits</h3>
+                    <h3 className="text-2xl font-semibold mb-4">Rate-Term Refinance Benefits</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <span className="text-green-600 mr-3">✓</span>
@@ -104,7 +104,7 @@ export default function RefinanceSpecialistArticle() {
                   </div>
                   
                   <div>
-                    <h3 className="text-2xl font-semibold mb-4">Cash-Out Refinance Uses</h3>
+                    <h3 className="text-2xl font-semibold mb-4">Cash-Out Refi Uses</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start">
                         <span className="text-green-600 mr-3">✓</span>
@@ -149,7 +149,7 @@ export default function RefinanceSpecialistArticle() {
                   </div>
 
                   <div className="border-l-4 border-blue-600 pl-6">
-                    <h3 className="text-2xl font-semibold mb-3">Cash-Out Refinance</h3>
+                    <h3 className="text-2xl font-semibold mb-3">Cash-Out Refi</h3>
                     <p className="text-gray-700 mb-4">
                       Borrow more than you owe and take the difference as cash. With Orange County's appreciation, many homeowners have significant untapped equity.
                     </p>
@@ -342,7 +342,7 @@ export default function RefinanceSpecialistArticle() {
                   </div>
 
                   <div className="border-b border-gray-200 pb-6">
-                    <h3 className="text-xl font-semibold mb-3">Are cash-out refinance proceeds taxable?</h3>
+                    <h3 className="text-xl font-semibold mb-3">Are Cash-Out Refi proceeds taxable?</h3>
                     <p className="text-gray-700">
                       Generally no, because you're borrowing against your own equity, not earning income. However, if you use the funds for business investment or rental property, different rules may apply. Always consult with a tax professional for your specific situation.
                     </p>
@@ -398,4 +398,6 @@ export default function RefinanceSpecialistArticle() {
       <Footer />
     </>
   );
-}
+}
+
+

@@ -18,7 +18,7 @@ export default function AreasLayout({ children }: { children: React.ReactNode })
         <h2 className="text-2xl font-bold mb-3">Related Options</h2>
         <ul className="list-disc list-inside text-blue-700">
           <li><a href="/loan-programs/conventional-loans">Conventional Loans in Orange County, CA</a></li>
-          <li><a href="/loan-programs/rate-term-refinance">Rate &amp; Term Refinance in Orange County, CA</a></li>
+          <li><a href="/loan-programs/rate-term-refinance">Rate-Term Refinance in Orange County, CA</a></li>
         </ul>
         <p className="text-slate-600 mt-4">Also serving Irvine and Newport Beach across Orange County, CA.</p>
       </section>
@@ -52,3 +52,6 @@ export default function AreasLayout({ children }: { children: React.ReactNode })
     </div>
   );
 }
+
+
+

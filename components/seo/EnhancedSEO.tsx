@@ -82,3 +82,4 @@ export default function EnhancedSEO({
   // Most SEO is handled by generateEnhancedMetadata for server-side rendering
   return null;
 }
+

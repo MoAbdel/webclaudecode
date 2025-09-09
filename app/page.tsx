@@ -120,10 +120,11 @@ export default function HomePage() {
             "Jumbo Mortgage"
           ],
           "sameAs": [
-            "https://www.google.com/maps?cid=TODO_REPLACE_GBP",
-            "https://www.linkedin.com/in/TODO_REPLACE",
-            "https://www.zillow.com/lender-profile/TODO_REPLACE",
-            "https://www.yelp.com/biz/TODO_REPLACE"
+            "https://share.google/KsoqAEbkqoKiBVjgz",
+            "https://www.facebook.com/profile.php?id=61573517340174",
+            "https://www.instagram.com/mo_thebroker/",
+            "https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest",
+            "https://www.zillow.com/lender-profile/mabdel0/"
           ]
         };
         return (
@@ -140,14 +141,15 @@ export default function HomePage() {
           "@context": "https://schema.org",
           "@type": "Organization",
           "name": "Mo Abdel — Mortgage Broker",
-          "url": "https://YOUR_DOMAIN_HERE",
+          "url": "https://mothebroker.com",
           "telephone": "(949) 579-2057",
-          "logo": "https://YOUR_DOMAIN_HERE/logo.png",
+          "logo": "https://mothebroker.com/logo.png",
           "sameAs": [
-            "https://www.google.com/maps?cid=TODO_REPLACE_GBP",
-            "https://www.linkedin.com/in/TODO_REPLACE",
-            "https://www.zillow.com/lender-profile/TODO_REPLACE",
-            "https://www.yelp.com/biz/TODO_REPLACE"
+            "https://share.google/KsoqAEbkqoKiBVjgz",
+            "https://www.facebook.com/profile.php?id=61573517340174",
+            "https://www.instagram.com/mo_thebroker/",
+            "https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest",
+            "https://www.zillow.com/lender-profile/mabdel0/"
           ],
           "address": {
             "@type": "PostalAddress",

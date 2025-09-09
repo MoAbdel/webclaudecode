@@ -50,7 +50,7 @@ export default function HELOCPage() {
               <TrendingUp className="w-8 h-8 text-blue-600" />
             </div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Flexible Rate Options</h3>
-            <p className="text-slate-600">Rates vary by program, lender, credit, and market conditions</p>
+            <p className="text-slate-600">HELOC rates may be variable or fixed depending on the program. We’ll compare current options and outline how rate adjustments, caps, or fixed-rate features (if available) could affect your payment.</p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -71,7 +71,7 @@ export default function HELOCPage() {
               <Shield className="w-8 h-8 text-orange-600" />
             </div>
             <h3 className="text-lg font-bold text-slate-900 mb-2">Transparent Costs</h3>
-            <p className="text-slate-600">Closing costs depend on program and lender; credits may be available</p>
+            <p className="text-slate-600">Closing costs vary by lender and program. We’ll provide a transparent estimate of fees before you proceed.</p>
           </div>
         </div>
 
@@ -327,9 +327,9 @@ export default function HELOCPage() {
         <section className="mt-16">
           <h2 className="text-3xl font-bold mb-6">HELOC FAQs (Orange County, CA)</h2>
           <div className="space-y-4 text-slate-700">
-            <details><summary className="font-semibold">Is a HELOC better than a cash-out refinance?</summary><p>HELOCs provide flexible access to revolving credit. Cash-out may suit large, one-time needs at a fixed rate.</p></details>
-            <details><summary className="font-semibold">Are HELOC rates variable?</summary><p>Yes, most are variable. We’ll discuss fixed options and rate caps if available.</p></details>
-            <details><summary className="font-semibold">How quickly can I access funds?</summary><p>After closing, draw periods allow you to access funds as needed.</p></details>
+            <details><summary className="font-semibold">Are HELOC rates variable?</summary><p>Many HELOCs are variable; some programs may offer fixed-rate features. We’ll review current options and caps.</p></details>
+            <details><summary className="font-semibold">How much can I draw?</summary><p>Typical ranges depend on equity, credit, and lender guidelines. We’ll calculate a safe maximum for your scenario.</p></details>
+            <details><summary className="font-semibold">How does repayment work?</summary><p>Draw periods allow access to funds, followed by a repayment period. We’ll outline examples based on your terms.</p></details>
           </div>
         </section>
 
@@ -349,9 +349,9 @@ export default function HELOCPage() {
             "@context":"https://schema.org",
             "@type":"FAQPage",
             "mainEntity":[
-              {"@type":"Question","name":"Is a HELOC better than a cash-out refinance?","acceptedAnswer":{"@type":"Answer","text":"HELOCs provide flexible access to revolving credit; cash-out may be better for large, fixed needs."}},
-              {"@type":"Question","name":"Are HELOC rates variable?","acceptedAnswer":{"@type":"Answer","text":"Typically yes; we’ll review options and rate caps."}},
-              {"@type":"Question","name":"How quickly can I access funds?","acceptedAnswer":{"@type":"Answer","text":"Once open, draw periods allow access whenever you need funds."}}
+              {"@type":"Question","name":"Are HELOC rates variable?","acceptedAnswer":{"@type":"Answer","text":"Many HELOCs are variable; some programs may offer fixed-rate features. We’ll review current options and caps."}},
+              {"@type":"Question","name":"How much can I draw?","acceptedAnswer":{"@type":"Answer","text":"Typical ranges depend on equity, credit, and lender guidelines. We’ll calculate a safe maximum for your scenario."}},
+              {"@type":"Question","name":"How does repayment work?","acceptedAnswer":{"@type":"Answer","text":"Draw periods allow access to funds, followed by a repayment period. We’ll outline examples based on your terms."}}
             ]
           };
           return (<>
@@ -359,6 +359,13 @@ export default function HELOCPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
           </>);
         })()}
+
+        {/* Compliance Disclosure */}
+        <div className="bg-slate-100 rounded-lg p-4 mt-8">
+          <p className="text-xs text-slate-600">
+            Program availability, terms, and costs are subject to change and eligibility. We’ll present written loan estimates for comparison.
+          </p>
+        </div>
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">

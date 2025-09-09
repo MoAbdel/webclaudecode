@@ -8,7 +8,8 @@ import { Crown, TrendingUp, Shield, CheckCircle, AlertCircle, DollarSign } from 
 export const metadata: Metadata = {
   title: 'Jumbo Loans in Orange County, CA | $1,209,750+ Mortgages | Mo Abdel — Mortgage Broker',
   description: 'Jumbo mortgages in Orange County, CA above $1,209,750. Get options or call (949) 579-2057.',
-  keywords: 'jumbo loans Orange County CA, luxury home mortgage, non-conforming loans'
+  keywords: 'jumbo loans Orange County CA, luxury home mortgage, non-conforming loans',
+  alternates: { canonical: 'https://mothebroker.com/loan-programs/jumbo-loans' }
 };
 
 export default function JumboLoansPage() {
@@ -488,9 +489,9 @@ export default function JumboLoansPage() {
           const serviceSchema = {
             "@context":"https://schema.org",
             "@type":"FinancialService",
-            "name":"Mo Abdel — Mortgage Broker — Jumbo Loans",
+            "name":"Mo Abdel — Mortgage Broker",
             "areaServed":"Orange County, CA",
-            "serviceType":"Jumbo Loans",
+            "serviceType":"Jumbo Mortgage",
             "url":"https://example.com/loan-programs/jumbo-loans",
             "telephone":"(949) 579-2057",
             "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."

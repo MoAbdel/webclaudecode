@@ -8,7 +8,8 @@ import { Shield, Star, Users, CheckCircle, AlertCircle, Flag } from 'lucide-reac
 export const metadata: Metadata = {
   title: 'VA Loans in Orange County, CA | 0% Down Military Benefits | Mo Abdel — Mortgage Broker',
   description: 'VA loans in Orange County, CA with 0% down and no PMI. Get pre-approved or call (949) 579-2057.',
-  keywords: 'VA loans Orange County CA, VA mortgage benefits, zero down VA loan'
+  keywords: 'VA loans Orange County CA, VA mortgage benefits, zero down VA loan',
+  alternates: { canonical: 'https://mothebroker.com/loan-programs/va-loans' }
 };
 
 export default function VALoansPage() {
@@ -465,9 +466,9 @@ export default function VALoansPage() {
           const serviceSchema = {
             "@context":"https://schema.org",
             "@type":"FinancialService",
-            "name":"Mo Abdel — Mortgage Broker — VA Loans",
+            "name":"Mo Abdel — Mortgage Broker",
             "areaServed":"Orange County, CA",
-            "serviceType":"VA Loans",
+            "serviceType":"VA Loan",
             "url":"https://example.com/loan-programs/va-loans",
             "telephone":"(949) 579-2057",
             "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."

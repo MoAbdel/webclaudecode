@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: 'Conventional Loans in Orange County, CA | 3% Down Payment | Mo Abdel — Mortgage Broker',
   description: 'Conventional loans in Orange County, CA. 3% down options. Get pre-approved or call (949) 579-2057.',
   keywords: 'conventional loans Orange County CA, conforming loans Orange County 2025 limit, 3% down mortgage, purchase mortgage Orange County'
+  ,alternates: { canonical: 'https://mothebroker.com/loan-programs/conventional-loans' }
 };
 
 export default function ConventionalLoansPage() {
@@ -542,9 +543,9 @@ export default function ConventionalLoansPage() {
           const serviceSchema = {
             "@context": "https://schema.org",
             "@type": "FinancialService",
-            "name": "Mo Abdel — Mortgage Broker — Conventional Loans",
+            "name": "Mo Abdel — Mortgage Broker",
             "areaServed": "Orange County, CA",
-            "serviceType": "Conventional Loans",
+            "serviceType": "Conventional Mortgage",
             "url": "https://example.com/loan-programs/conventional-loans",
             "telephone": "(949) 579-2057",
             "provider": "NEXA Mortgage",

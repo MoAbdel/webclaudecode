@@ -8,7 +8,8 @@ import { DollarSign, Calendar, Shield, CheckCircle, AlertCircle, TrendingUp } fr
 export const metadata: Metadata = {
   title: 'HELOAN in Orange County, CA | Home Equity Loan | Mo Abdel — Mortgage Broker',
   description: 'HELOAN in Orange County, CA. Fixed-rate lump sum. Get terms or call (949) 579-2057.',
-  keywords: 'HELOAN Orange County CA, home equity loan, fixed-rate second mortgage'
+  keywords: 'HELOAN Orange County CA, home equity loan, fixed-rate second mortgage',
+  alternates: { canonical: 'https://mothebroker.com/loan-programs/heloan' }
 };
 
 export default function HELOANPage() {
@@ -355,9 +356,9 @@ export default function HELOANPage() {
           const serviceSchema = {
             "@context":"https://schema.org",
             "@type":"FinancialService",
-            "name":"Mo Abdel — Mortgage Broker — HELOAN",
+            "name":"Mo Abdel — Mortgage Broker",
             "areaServed":"Orange County, CA",
-            "serviceType":"HELOAN",
+            "serviceType":"Home Equity Loan (HELOAN)",
             "url":"https://example.com/loan-programs/heloan",
             "telephone":"(949) 579-2057",
             "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."

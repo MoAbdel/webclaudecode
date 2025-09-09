@@ -9,7 +9,8 @@ import { Home, Shield, Users, CheckCircle, AlertCircle, DollarSign } from 'lucid
 export const metadata: Metadata = {
   title: 'FHA Loans in Orange County, CA | 3.5% Down | Mo Abdel — Mortgage Broker',
   description: 'FHA loans in Orange County, CA with 3.5% down. Get pre-approved or call (949) 579-2057.',
-  keywords: 'FHA loans Orange County CA, 3.5% down FHA, first-time buyer FHA'
+  keywords: 'FHA loans Orange County CA, 3.5% down FHA, first-time buyer FHA',
+  alternates: { canonical: 'https://mothebroker.com/loan-programs/fha-loans' }
 };
 
 export default function FHALoansPage() {
@@ -416,9 +417,9 @@ export default function FHALoansPage() {
           const serviceSchema = {
             "@context":"https://schema.org",
             "@type":"FinancialService",
-            "name":"Mo Abdel — Mortgage Broker — FHA Loans",
+            "name":"Mo Abdel — Mortgage Broker",
             "areaServed":"Orange County, CA",
-            "serviceType":"FHA Loans",
+            "serviceType":"FHA Loan",
             "url":"https://example.com/loan-programs/fha-loans",
             "telephone":"(949) 579-2057",
             "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."

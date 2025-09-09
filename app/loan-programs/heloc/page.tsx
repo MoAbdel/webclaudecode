@@ -8,7 +8,8 @@ import { TrendingUp, DollarSign, Calendar, Shield, CheckCircle, AlertCircle } fr
 export const metadata: Metadata = {
   title: 'HELOC in Orange County, CA | Home Equity Line of Credit | Mo Abdel — Mortgage Broker',
   description: 'HELOC in Orange County, CA. Flexible home-equity access. Get rates or call (949) 579-2057.',
-  keywords: 'HELOC Orange County CA, home equity line, HELOC rates'
+  keywords: 'HELOC Orange County CA, home equity line, HELOC rates',
+  alternates: { canonical: 'https://mothebroker.com/loan-programs/heloc' }
 };
 
 export default function HELOCPage() {
@@ -338,9 +339,9 @@ export default function HELOCPage() {
           const serviceSchema = {
             "@context":"https://schema.org",
             "@type":"FinancialService",
-            "name":"Mo Abdel — Mortgage Broker — HELOC",
+            "name":"Mo Abdel — Mortgage Broker",
             "areaServed":"Orange County, CA",
-            "serviceType":"HELOC",
+            "serviceType":"Home Equity Line of Credit (HELOC)",
             "url":"https://example.com/loan-programs/heloc",
             "telephone":"(949) 579-2057",
             "brand": "Mo Abdel — Mortgage Broker, Orange County, CA."

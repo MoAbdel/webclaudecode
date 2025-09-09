@@ -8,7 +8,8 @@ import { TrendingDown, Calendar, Shield, CheckCircle, AlertCircle, Calculator } 
 export const metadata: Metadata = {
   title: 'Rate & Term Refinance in Orange County, CA | Lower Payment & Rate | Mo Abdel — Mortgage Broker',
   description: 'Refinance in Orange County, CA to lower payments or remove PMI. Get a quote or call (949) 579-2057.',
-  keywords: 'refinance Orange County CA, lower mortgage payment, remove PMI, fixed rate refinance'
+  keywords: 'refinance Orange County CA, lower mortgage payment, remove PMI, fixed rate refinance',
+  alternates: { canonical: 'https://mothebroker.com/loan-programs/rate-term-refinance' }
 };
 
 export default function RateTermRefinancePage() {
@@ -374,9 +375,9 @@ export default function RateTermRefinancePage() {
           const serviceSchema = {
             "@context": "https://schema.org",
             "@type": "FinancialService",
-            "name": "Mo Abdel — Mortgage Broker — Rate & Term Refinance",
+            "name": "Mo Abdel — Mortgage Broker",
             "areaServed": "Orange County, CA",
-            "serviceType": "Rate & Term Refinance",
+            "serviceType": "Rate and Term Refinance",
             "url": "https://example.com/loan-programs/rate-term-refinance",
             "telephone": "(949) 579-2057",
             "provider": "NEXA Mortgage",

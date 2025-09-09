@@ -8,7 +8,8 @@ import { DollarSign, Home, TrendingUp, CheckCircle, AlertCircle, Calculator } fr
 export const metadata: Metadata = {
   title: 'Cash-Out Refinance in Orange County, CA | Replace Mortgage + Get Cash | Mo Abdel — Mortgage Broker',
   description: 'Cash-out refinance in Orange County, CA. Replace your mortgage and get cash. Get rates or call (949) 579-2057.',
-  keywords: 'cash out refinance Orange County CA, equity refinance, cash from home equity'
+  keywords: 'cash out refinance Orange County CA, equity refinance, cash from home equity',
+  alternates: { canonical: 'https://mothebroker.com/loan-programs/cash-out-refinance' }
 };
 
 export default function CashOutRefinancePage() {
@@ -393,7 +394,7 @@ export default function CashOutRefinancePage() {
           const serviceSchema = {
             "@context": "https://schema.org",
             "@type": "FinancialService",
-            "name": "Mo Abdel — Mortgage Broker — Cash-Out Refinance",
+            "name": "Mo Abdel — Mortgage Broker",
             "areaServed": "Orange County, CA",
             "serviceType": "Cash-Out Refinance",
             "url": "https://example.com/loan-programs/cash-out-refinance",

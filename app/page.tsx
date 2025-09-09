@@ -12,8 +12,8 @@ import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
 import IndexingOptimization from '@/components/seo/IndexingOptimization';
 
 export const metadata: Metadata = {
-  title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
-  description: 'Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.',
+  title: 'Orange County, CA Mortgage Broker | Home Loans & Refinance | Mo Abdel — Mortgage Broker',
+  description: 'Mortgage broker serving Orange County, CA. Get competitive options, fast closings, and local guidance. Call (949) 579-2057 to get started.',
   alternates: {
     canonical: 'https://www.mothebroker.com',
   },
@@ -163,6 +163,24 @@ export default function HomePage() {
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
           />
+        );
+      })()}
+
+      {/* JSON-LD: WebSite with SearchAction */}
+      {(() => {
+        const siteSchema = {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "Mo Abdel — Mortgage Broker",
+          "url": "https://mothebroker.com",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://mothebroker.com/search?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        };
+        return (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteSchema) }} />
         );
       })()}
     </>

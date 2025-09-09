@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import type { Metadata } from 'next';
 import { Phone, Mail, MapPin, Clock } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
@@ -122,11 +123,11 @@ export default function ContactPage() {
                 </li>
               </ul>
             </div>
-          </div>
-
-          {/* Enhanced Contact Form */}
-          <EnhancedContactForm />
         </div>
+
+        {/* Enhanced Contact Form */}
+        <EnhancedContactForm />
+      </div>
 
         {/* Service Areas */}
         <div className="mt-16">
@@ -150,6 +151,39 @@ export default function ContactPage() {
             </p>
           </div>
         </div>
+      {/* Organization Schema for Contact */}
+      {(() => {
+        const org = {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Mo Abdel — Mortgage Broker",
+          "url": "https://mothebroker.com/contact",
+          "telephone": "(949) 579-2057",
+          "sameAs": [
+            "https://share.google/KsoqAEbkqoKiBVjgz",
+            "https://www.facebook.com/profile.php?id=61573517340174",
+            "https://www.instagram.com/mo_thebroker/",
+            "https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest",
+            "https://www.zillow.com/lender-profile/mabdel0/"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Orange County",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+          }
+        };
+        return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
+      })()}
+
+      {/* Related Links */}
+      <div className="mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl font-bold mb-3">Related Options</h2>
+        <ul className="list-disc list-inside text-blue-700">
+          <li><Link href="/loan-programs/conventional-loans">Conventional Loans</Link></li>
+          <li><Link href="/loan-programs/fha-loans">FHA Loans</Link></li>
+        </ul>
+      </div>
       </div>
     </div>
   );

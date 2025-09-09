@@ -198,6 +198,39 @@ export default function AboutPage() {
           </div>
         </div>
       </div>
+      {/* Organization Schema for About */}
+      {(() => {
+        const org = {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Mo Abdel — Mortgage Broker",
+          "url": "https://mothebroker.com/about",
+          "telephone": "(949) 579-2057",
+          "sameAs": [
+            "https://share.google/KsoqAEbkqoKiBVjgz",
+            "https://www.facebook.com/profile.php?id=61573517340174",
+            "https://www.instagram.com/mo_thebroker/",
+            "https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest",
+            "https://www.zillow.com/lender-profile/mabdel0/"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Orange County",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+          }
+        };
+        return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
+      })()}
+
+      {/* Related Links for SEO/Internal linking */}
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
+        <h2 className="text-2xl font-bold mb-3">Explore More</h2>
+        <ul className="list-disc list-inside text-blue-700">
+          <li><Link href="/loan-programs/conventional-loans">Conventional Loans in Orange County, CA</Link></li>
+          <li><Link href="/loan-programs/fha-loans">FHA Loans in Orange County, CA</Link></li>
+        </ul>
+      </div>
     </div>
   );
 }

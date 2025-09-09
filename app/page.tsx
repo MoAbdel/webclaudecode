@@ -94,6 +94,75 @@ export default function HomePage() {
         <Testimonials />
         <NewsletterSignup />
       </div>
+
+      {/* JSON-LD: Person (E-E-A-T) */}
+      {(() => {
+        const personSchema = {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Mo Abdel",
+          "jobTitle": "Mortgage Broker",
+          "identifier": [
+            { "@type": "PropertyValue", "name": "NMLS", "value": "1426884" }
+          ],
+          "worksFor": { "@type": "Organization", "name": "NEXA Mortgage" },
+          "brand": "Mo Abdel — Mortgage Broker",
+          "telephone": "(949) 579-2057",
+          "areaServed": "Orange County, CA",
+          "knowsAbout": [
+            "Conventional Mortgage",
+            "Rate and Term Refinance",
+            "Cash-Out Refinance",
+            "Home Equity Line of Credit (HELOC)",
+            "Home Equity Loan (HELOAN)",
+            "FHA Loan",
+            "VA Loan",
+            "Jumbo Mortgage"
+          ],
+          "sameAs": [
+            "https://www.google.com/maps?cid=TODO_REPLACE_GBP",
+            "https://www.linkedin.com/in/TODO_REPLACE",
+            "https://www.zillow.com/lender-profile/TODO_REPLACE",
+            "https://www.yelp.com/biz/TODO_REPLACE"
+          ]
+        };
+        return (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+          />
+        );
+      })()}
+
+      {/* JSON-LD: Organization (E-E-A-T) */}
+      {(() => {
+        const orgSchema = {
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          "name": "Mo Abdel — Mortgage Broker",
+          "url": "https://YOUR_DOMAIN_HERE",
+          "telephone": "(949) 579-2057",
+          "logo": "https://YOUR_DOMAIN_HERE/logo.png",
+          "sameAs": [
+            "https://www.google.com/maps?cid=TODO_REPLACE_GBP",
+            "https://www.linkedin.com/in/TODO_REPLACE",
+            "https://www.zillow.com/lender-profile/TODO_REPLACE",
+            "https://www.yelp.com/biz/TODO_REPLACE"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Orange County",
+            "addressRegion": "CA",
+            "addressCountry": "US"
+          }
+        };
+        return (
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+          />
+        );
+      })()}
     </>
   );
 }

@@ -138,7 +138,7 @@ export default function ProgramsPage() {
                 </div>
                 <div className="flex items-center">
                   <span className="text-blue-600 mr-3 text-xl">✓</span>
-                  <span className="text-slate-700"><strong>No closing costs</strong> on most programs</span>
+                  <span className="text-slate-700"><strong>Transparent costs</strong> — varies by program; credits may offset costs</span>
                 </div>
               </div>
               

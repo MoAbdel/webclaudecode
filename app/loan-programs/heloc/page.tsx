@@ -27,7 +27,7 @@ export default function HELOCPage() {
           <p className="text-slate-600">Serving Irvine, Anaheim, Huntington Beach, and Newport Beach.</p>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
             Unlock your Orange County home's equity with a flexible credit line. 
-            Access $50K to $500K for any purpose with competitive rates from Prime + 0%.
+            Access $50K to $500K for any purpose with competitive, market-based rates.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/contact">
@@ -49,8 +49,8 @@ export default function HELOCPage() {
             <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <TrendingUp className="w-8 h-8 text-blue-600" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">Prime + 0%</h3>
-            <p className="text-slate-600">Intro rates available for qualified borrowers</p>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Flexible Rate Options</h3>
+            <p className="text-slate-600">Rates vary by program, lender, credit, and market conditions</p>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg text-center">
             <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -70,8 +70,8 @@ export default function HELOCPage() {
             <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
               <Shield className="w-8 h-8 text-orange-600" />
             </div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">No Closing Costs</h3>
-            <p className="text-slate-600">Many programs with zero closing costs</p>
+            <h3 className="text-lg font-bold text-slate-900 mb-2">Transparent Costs</h3>
+            <p className="text-slate-600">Closing costs depend on program and lender; credits may be available</p>
           </div>
         </div>
 
@@ -148,7 +148,7 @@ export default function HELOCPage() {
               <tbody className="divide-y divide-slate-200">
                 <tr>
                   <td className="px-6 py-4 text-sm text-slate-900 font-medium">Interest Rate</td>
-                  <td className="px-6 py-4 text-center text-green-600 font-bold">Prime + 0-2%</td>
+                  <td className="px-6 py-4 text-center text-green-600 font-bold">Variable (index + margin)</td>
                   <td className="px-6 py-4 text-center text-slate-600">8-18%</td>
                   <td className="px-6 py-4 text-center text-slate-600">18-29%</td>
                   <td className="px-6 py-4 text-center text-slate-600">Current Mortgage Rates</td>
@@ -285,7 +285,7 @@ export default function HELOCPage() {
                   <AlertCircle className="w-5 h-5 text-orange-500 mr-3 mt-1 flex-shrink-0" />
                   <div>
                     <p className="font-semibold text-slate-900">Variable Interest Rate</p>
-                    <p className="text-slate-600 text-sm">Rate can change based on Prime Rate movements</p>
+                    <p className="text-slate-600 text-sm">Rates may adjust periodically based on program terms</p>
                   </div>
                 </div>
                 <div className="flex items-start">
@@ -327,7 +327,7 @@ export default function HELOCPage() {
         <section className="mt-16">
           <h2 className="text-3xl font-bold mb-6">HELOC FAQs (Orange County, CA)</h2>
           <div className="space-y-4 text-slate-700">
-            <details><summary className="font-semibold">Is a HELOC better than a cash-out refinance?</summary><p>HELOCs can offer low closing costs and flexibility. Cash-out may suit large, one-time needs at a fixed rate.</p></details>
+            <details><summary className="font-semibold">Is a HELOC better than a cash-out refinance?</summary><p>HELOCs provide flexible access to revolving credit. Cash-out may suit large, one-time needs at a fixed rate.</p></details>
             <details><summary className="font-semibold">Are HELOC rates variable?</summary><p>Yes, most are variable. We’ll discuss fixed options and rate caps if available.</p></details>
             <details><summary className="font-semibold">How quickly can I access funds?</summary><p>After closing, draw periods allow you to access funds as needed.</p></details>
           </div>
@@ -349,7 +349,7 @@ export default function HELOCPage() {
             "@context":"https://schema.org",
             "@type":"FAQPage",
             "mainEntity":[
-              {"@type":"Question","name":"Is a HELOC better than a cash-out refinance?","acceptedAnswer":{"@type":"Answer","text":"HELOCs offer flexible access and low closing costs; cash-out may be better for large, fixed needs."}},
+              {"@type":"Question","name":"Is a HELOC better than a cash-out refinance?","acceptedAnswer":{"@type":"Answer","text":"HELOCs provide flexible access to revolving credit; cash-out may be better for large, fixed needs."}},
               {"@type":"Question","name":"Are HELOC rates variable?","acceptedAnswer":{"@type":"Answer","text":"Typically yes; we’ll review options and rate caps."}},
               {"@type":"Question","name":"How quickly can I access funds?","acceptedAnswer":{"@type":"Answer","text":"Once open, draw periods allow access whenever you need funds."}}
             ]

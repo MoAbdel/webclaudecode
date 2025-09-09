@@ -75,6 +75,21 @@ export default function HELOANPage() {
           </div>
         </div>
 
+        {/* Rates & Costs (Neutral Language) */}
+        <section className="mb-16 bg-green-50 p-6 rounded-2xl">
+          <h2 className="text-2xl font-bold text-slate-900 mb-4">Rates and Costs</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Rates</h3>
+              <p className="text-slate-700">HELOAN rates are fixed for the selected term. We’ll compare current options and outline how points, lender credits, or term choices could affect your APR and total cost.</p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-slate-900 mb-2">Closing Costs</h3>
+              <p className="text-slate-700">Closing costs vary by lender and program. We’ll provide a transparent estimate of fees before you proceed.</p>
+            </div>
+          </div>
+        </section>
+
         {/* HELOAN vs HELOC Comparison */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-center mb-8">HELOAN vs HELOC: Which is Right for You?</h2>
@@ -329,9 +344,9 @@ export default function HELOANPage() {
         <section className="mt-16">
           <h2 className="text-3xl font-bold mb-6">HELOAN FAQs (Orange County, CA)</h2>
           <div className="space-y-4 text-slate-700">
-            <details><summary className="font-semibold">When is a HELOAN better than a HELOC?</summary><p>HELOANs offer a fixed rate and predictable payment for a lump sum—great for large, one-time projects.</p></details>
-            <details><summary className="font-semibold">How long are repayment terms?</summary><p>Common terms range 10–30 years; we’ll tailor options to your budget.</p></details>
-            <details><summary className="font-semibold">Are there prepayment penalties?</summary><p>Most options have no prepayment penalty; we’ll confirm with your chosen lender/program.</p></details>
+            <details><summary className="font-semibold">Is the HELOAN rate fixed?</summary><p>Yes, HELOANs offer a fixed interest rate with predictable payments for the selected term.</p></details>
+            <details><summary className="font-semibold">How does a HELOAN differ from a HELOC?</summary><p>A HELOAN provides a single lump sum with a fixed rate; a HELOC is a revolving credit line that may have variable rates.</p></details>
+            <details><summary className="font-semibold">What loan sizes are common?</summary><p>Many borrowers use $50K–$500K, depending on equity, credit, and lender guidelines.</p></details>
           </div>
         </section>
 
@@ -351,9 +366,9 @@ export default function HELOANPage() {
             "@context":"https://schema.org",
             "@type":"FAQPage",
             "mainEntity":[
-              {"@type":"Question","name":"When is a HELOAN better than a HELOC?","acceptedAnswer":{"@type":"Answer","text":"HELOANs provide fixed rates and predictable payments for lump sums."}},
-              {"@type":"Question","name":"How long are repayment terms?","acceptedAnswer":{"@type":"Answer","text":"Typically 10–30 years depending on program and credit."}},
-              {"@type":"Question","name":"Are there prepayment penalties?","acceptedAnswer":{"@type":"Answer","text":"Most programs have no prepayment penalty; we’ll verify specifics."}}
+              {"@type":"Question","name":"Is the HELOAN rate fixed?","acceptedAnswer":{"@type":"Answer","text":"Yes, HELOANs offer a fixed interest rate with predictable payments for the selected term."}},
+              {"@type":"Question","name":"How does a HELOAN differ from a HELOC?","acceptedAnswer":{"@type":"Answer","text":"A HELOAN provides a single lump sum with a fixed rate; a HELOC is a revolving credit line that may have variable rates."}},
+              {"@type":"Question","name":"What loan sizes are common?","acceptedAnswer":{"@type":"Answer","text":"Many borrowers use $50K–$500K, depending on equity, credit, and lender guidelines."}}
             ]
           };
           return (<>
@@ -361,6 +376,13 @@ export default function HELOANPage() {
             <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
           </>);
         })()}
+
+        {/* Compliance Disclosure */}
+        <div className="bg-slate-100 rounded-lg p-4 mt-8">
+          <p className="text-xs text-slate-600">
+            Program availability, terms, and costs are subject to change and eligibility. We’ll present written loan estimates for comparison.
+          </p>
+        </div>
 
         {/* CTA Section */}
         <div className="text-center bg-gradient-to-r from-green-600 to-green-700 rounded-2xl p-8 text-white">

@@ -292,6 +292,21 @@ export default function DocumentChecklistPage() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* TechArticle schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TechArticle",
+            headline: 'Mortgage Document Checklist | Orange County, CA | Mo Abdel',
+            description: 'Required mortgage documents for Orange County, CA. Download templates and get organized. Get started today.',
+            author: { "@type": "Person", name: 'Mo Abdel' },
+            publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker' },
+            mainEntityOfPage: { "@type": "WebPage", "@id": 'https://www.mothebroker.com/resources/document-checklist' }
+          })
+        }}
+      />
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

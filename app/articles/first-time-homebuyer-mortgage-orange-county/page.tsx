@@ -16,6 +16,22 @@ export default function FirstTimeHomebuyerArticle() {
   return (
     <>
       <AdvancedSchemaMarkup type="FinancialService" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: 'First-Time Homebuyer Mortgage Guide | Mo Abdel',
+            description: 'Orange County, CA first-time buyer tips: FHA, down payment help, and local programs. Get started with expert guidance.',
+            author: { "@type": "Person", name: 'Mo Abdel' },
+            publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker' },
+            datePublished: '2025-01-09',
+            dateModified: '2025-01-09',
+            mainEntityOfPage: { "@type": "WebPage", "@id": 'https://www.mothebroker.com/articles/first-time-homebuyer-mortgage-orange-county' }
+          })
+        }}
+      />
       
       <main className="min-h-screen bg-white">
         {/* Article Header */}

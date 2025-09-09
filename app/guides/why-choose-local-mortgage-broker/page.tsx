@@ -35,6 +35,23 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* Article schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Article",
+              headline: 'Why Choose a Local Orange County Mortgage Broker | Mo Abdel',
+              description: 'Discover why working with a local Orange County, CA mortgage broker provides better rates, personal service, and market expertise. Get started today.',
+              author: { "@type": "Person", name: 'Mo Abdel' },
+              publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker', logo: { "@type": "ImageObject", url: 'https://www.mothebroker.com/images/mo-logo-white.webp' } },
+              datePublished: '2025-07-18',
+              dateModified: '2025-07-18',
+              mainEntityOfPage: { "@type": "WebPage", "@id": 'https://www.mothebroker.com/guides/why-choose-local-mortgage-broker' }
+            })
+          }}
+        />
         
         {/* Back Navigation */}
         <div className="mb-8">

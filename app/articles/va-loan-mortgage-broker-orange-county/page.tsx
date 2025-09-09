@@ -16,6 +16,22 @@ export default function VALoanBrokerArticle() {
   return (
     <>
       <AdvancedSchemaMarkup type="FinancialService" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: 'VA Loan Mortgage Broker in Orange County, CA | Mo Abdel',
+            description: 'Explore VA loan benefits in Orange County, CA. 0% down options and expert guidance. Call now to compare VA rates.',
+            author: { "@type": "Person", name: 'Mo Abdel' },
+            publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker' },
+            datePublished: '2025-01-09',
+            dateModified: '2025-01-09',
+            mainEntityOfPage: { "@type": "WebPage", "@id": 'https://www.mothebroker.com/articles/va-loan-mortgage-broker-orange-county' }
+          })
+        }}
+      />
       
       <main className="min-h-screen bg-white">
         {/* Article Header */}

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -31,6 +31,32 @@ export default function AboutPage() {
           'https://www.zillow.com/lender-profile/Mo%20Abdel/'
         ]}
       />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: 'Mo Abdel — Mortgage Broker',
+            url: 'https://www.mothebroker.com',
+            logo: 'https://www.mothebroker.com/images/mo-logo-white.webp',
+            sameAs: [
+              'https://www.facebook.com/profile.php?id=61573517340174',
+              'https://www.instagram.com/mo_thebroker',
+              'https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest',
+              'https://g.co/kgs/jUSUoW6',
+              'https://www.zillow.com/lender-profile/Mo%20Abdel/'
+            ],
+            contactPoint: {
+              "@type": 'ContactPoint',
+              telephone: '(949) 579-2057',
+              contactType: 'customer service',
+              areaServed: 'Orange County, CA'
+            }
+          })
+        }}
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
@@ -60,13 +86,13 @@ export default function AboutPage() {
               As a mortgage broker serving Orange County, I specialize in helping homeowners unlock the power of their home's equity and secure better mortgage terms through strategic refinancing. <span data-factual="research" data-citable="statistic" data-authority="government">According to 2024 HMDA data analysis, research shows that mortgage brokers save borrowers an average of $10,662 over the life of their loan compared to retail lenders.</span> With access to over 200 lenders, I can offer you rates and equity programs that traditional banks simply cannot match.
             </p>
             <p className="text-slate-700 mb-4">
-              Your home is likely your largest asset—let's make it work harder for you. Industry data indicates that homeowners who strategically utilize their equity see measurable financial improvements within the first year of refinancing.
+              Your home is likely your largest assetâ€”let's make it work harder for you. Industry data indicates that homeowners who strategically utilize their equity see measurable financial improvements within the first year of refinancing.
             </p>
             <p className="text-slate-700 mb-4">
               Whether you're looking to lower your monthly payments, eliminate PMI, consolidate high-interest debt, or access cash for home improvements, investment opportunities, or major life expenses, I have the expertise and lender relationships to find the perfect solution. Studies confirm that borrowers working with brokers have access to significantly more loan options than those going directly to banks.
             </p>
             <p className="text-slate-700 mb-4">
-              What sets me apart is my commitment to maximizing your financial benefits. When you work with me, you're not just refinancing—you're optimizing your entire financial strategy. Research demonstrates that comprehensive mortgage analysis leads to better long-term financial outcomes. I take the time to analyze your current mortgage, assess your home's equity potential, and craft a refinancing or equity strategy that delivers real value to your bottom line.
+              What sets me apart is my commitment to maximizing your financial benefits. When you work with me, you're not just refinancingâ€”you're optimizing your entire financial strategy. Research demonstrates that comprehensive mortgage analysis leads to better long-term financial outcomes. I take the time to analyze your current mortgage, assess your home's equity potential, and craft a refinancing or equity strategy that delivers real value to your bottom line.
             </p>
             <p className="text-slate-700">
               My clients appreciate my data-driven approach, lightning-fast processing times, and the fact that I'm available 24/7 to guide you through every step. According to client feedback data, personalized mortgage strategies result in higher satisfaction rates and better financial outcomes. I believe tapping into your home's equity should be profitable and stress-free, not complicated.
@@ -89,22 +115,22 @@ export default function AboutPage() {
               <div data-authority="professional">
                 <h3 className="text-xl font-semibold mb-3">Verified Professional Licenses</h3>
                 <ul className="space-y-2 text-slate-700">
-                  <li data-credential="nmls" data-license="1426884">• <strong data-factual="license">NMLS #1426884</strong> - Nationwide Multistate Licensing System</li>
-                  <li data-credential="california-broker" data-factual="license">• <strong>California Licensed Mortgage Broker</strong> - Department of Financial Protection</li>
-                  <li data-credential="washington-broker" data-factual="license">• <strong>Washington Licensed Mortgage Broker</strong> - State Licensed</li>
-                  <li data-credential="virginia-broker" data-factual="license">• <strong>Virginia Licensed Mortgage Broker</strong> - State Licensed</li>
-                  <li data-credential="colorado-broker" data-factual="license">• <strong>Colorado Licensed Mortgage Broker</strong> - State Licensed</li>
-                  <li data-credential="continuing-education" data-factual="compliance">• <strong>Continuing Education Current</strong> - Annual Requirements Met</li>
+                  <li data-credential="nmls" data-license="1426884">â€¢ <strong data-factual="license">NMLS #1426884</strong> - Nationwide Multistate Licensing System</li>
+                  <li data-credential="california-broker" data-factual="license">â€¢ <strong>California Licensed Mortgage Broker</strong> - Department of Financial Protection</li>
+                  <li data-credential="washington-broker" data-factual="license">â€¢ <strong>Washington Licensed Mortgage Broker</strong> - State Licensed</li>
+                  <li data-credential="virginia-broker" data-factual="license">â€¢ <strong>Virginia Licensed Mortgage Broker</strong> - State Licensed</li>
+                  <li data-credential="colorado-broker" data-factual="license">â€¢ <strong>Colorado Licensed Mortgage Broker</strong> - State Licensed</li>
+                  <li data-credential="continuing-education" data-factual="compliance">â€¢ <strong>Continuing Education Current</strong> - Annual Requirements Met</li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-xl font-semibold mb-3">Specializations</h3>
                 <ul className="space-y-2 text-slate-700">
-                  <li>• First-Time Homebuyers</li>
-                  <li>• Refinancing Specialists</li>
-                  <li>• Jumbo & High-Balance Loans</li>
-                  <li>• Investment Properties</li>
-                  <li>• Bank Statement Loans (No W2 Programs)</li>
+                  <li>â€¢ First-Time Homebuyers</li>
+                  <li>â€¢ Refinancing Specialists</li>
+                  <li>â€¢ Jumbo & High-Balance Loans</li>
+                  <li>â€¢ Investment Properties</li>
+                  <li>â€¢ Bank Statement Loans (No W2 Programs)</li>
                 </ul>
               </div>
             </div>
@@ -220,4 +246,8 @@ export default function AboutPage() {
     </div>
   );
 }
+
+
+
+
 

@@ -22,6 +22,22 @@ export default function BestMortgageBrokerArticle() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Article",
+            headline: 'Best Mortgage Broker in Orange County, CA | Mo Abdel',
+            description: 'How to choose the best mortgage broker in Orange County, CA. Compare lenders, rates, and service. Call to get started today.',
+            author: { "@type": "Person", name: 'Mo Abdel' },
+            publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker', logo: { "@type": "ImageObject", url: 'https://www.mothebroker.com/images/mo-logo-white.webp' } },
+            datePublished: '2025-01-09',
+            dateModified: '2025-01-09',
+            mainEntityOfPage: { "@type": "WebPage", "@id": 'https://www.mothebroker.com/articles/best-mortgage-broker-orange-county' }
+          })
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
             "headline": "Best Mortgage Broker in Orange County: Your Complete Guide",
             "author": {
               "@type": "Person",

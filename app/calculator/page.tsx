@@ -29,6 +29,21 @@ export default function CalculatorPage() {
 
   return (
     <div className="min-h-screen py-12">
+      {/* SoftwareApplication schema for calculators hub */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: 'Mortgage Calculators',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Web',
+            url: 'https://www.mothebroker.com/calculator',
+            publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker' }
+          })
+        }}
+      />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-12">

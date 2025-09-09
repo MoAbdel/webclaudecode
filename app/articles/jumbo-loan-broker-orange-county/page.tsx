@@ -16,6 +16,22 @@ export default function JumboLoanBrokerArticle() {
   return (
     <>
       <AdvancedSchemaMarkup type="FinancialService" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: 'Jumbo Loan Broker in Orange County, CA | Mo Abdel',
+            description: 'Expert jumbo loan guidance for Orange County, CA luxury homes. Compare lenders and secure competitive rates. Get started today.',
+            author: { "@type": "Person", name: 'Mo Abdel' },
+            publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker' },
+            datePublished: '2025-01-09',
+            dateModified: '2025-01-09',
+            mainEntityOfPage: { "@type": "WebPage", "@id": 'https://www.mothebroker.com/articles/jumbo-loan-broker-orange-county' }
+          })
+        }}
+      />
       
       <main className="min-h-screen bg-white">
         {/* Article Header */}

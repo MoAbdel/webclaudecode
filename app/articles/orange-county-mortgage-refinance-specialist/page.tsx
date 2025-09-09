@@ -16,6 +16,22 @@ export default function RefinanceSpecialistArticle() {
   return (
     <>
       <AdvancedSchemaMarkup type="FinancialService" />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Article",
+            headline: 'Orange County Mortgage Refinance Specialist | Mo Abdel',
+            description: 'Lower payments or tap equity in Orange County, CA. Compare refinance options and get a free analysis today.',
+            author: { "@type": "Person", name: 'Mo Abdel' },
+            publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker' },
+            datePublished: '2025-01-09',
+            dateModified: '2025-01-09',
+            mainEntityOfPage: { "@type": "WebPage", "@id": 'https://www.mothebroker.com/articles/orange-county-mortgage-refinance-specialist' }
+          })
+        }}
+      />
       
       <main className="min-h-screen bg-white">
         {/* Article Header */}

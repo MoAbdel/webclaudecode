@@ -49,11 +49,11 @@
 | /areas/yorba-linda-mortgage-broker | Location |  |  | yes | no | no | yes | ok | WARN |
 | /areas/yorba-linda-mortgage-rates | Location | Yorba Linda Mortgage Rates 2025 | Best Home Loan Rates | Mo Abdel NMLS #1426884 | 162 chars | no | no | no | yes | ok | WARN |
 | /articles/best-mortgage-broker-orange-county | Article | Best Mortgage Broker in Orange County, CA | Mo Abdel | 124 chars | yes | yes | yes | yes | ok | OK |
-| /articles/first-time-homebuyer-mortgage-orange-county | Article | First-Time Homebuyer Mortgage Guide | Mo Abdel | 118 chars | yes | no | yes | yes | ok | WARN |
-| /articles/jumbo-loan-broker-orange-county | Article | Jumbo Loan Broker in Orange County, CA | Mo Abdel | 127 chars | yes | no | yes | yes | ok | WARN |
-| /articles/orange-county-mortgage-refinance-specialist | Article | Orange County Mortgage Refinance Specialist | Mo Abdel | 107 chars | yes | no | yes | yes | ok | WARN |
+| /articles/first-time-homebuyer-mortgage-orange-county | Article | First-Time Homebuyer Mortgage Guide | Mo Abdel | 118 chars | yes | yes | yes | yes | ok | OK |
+| /articles/jumbo-loan-broker-orange-county | Article | Jumbo Loan Broker in Orange County, CA | Mo Abdel | 127 chars | yes | yes | yes | yes | ok | OK |
+| /articles/orange-county-mortgage-refinance-specialist | Article | Orange County Mortgage Refinance Specialist | Mo Abdel | 107 chars | yes | yes | yes | yes | ok | OK |
 | /articles | Other | Orange County Mortgage Articles | Mo Abdel | 135 chars | yes | no | yes | yes | ok | OK |
-| /articles/va-loan-mortgage-broker-orange-county | Article | VA Loan Mortgage Broker in Orange County, CA | Mo Abdel | 113 chars | yes | no | yes | yes | ok | WARN |
+| /articles/va-loan-mortgage-broker-orange-county | Article | VA Loan Mortgage Broker in Orange County, CA | Mo Abdel | 113 chars | yes | yes | yes | yes | ok | OK |
 | /calculator/affordability | Calculator |  |  | no | no | no | yes | ok | WARN |
 | /calculator/closing-costs | Calculator |  |  | no | no | no | yes | ok | WARN |
 | /calculator/debt-to-income | Calculator |  |  | no | no | no | yes | ok | WARN |

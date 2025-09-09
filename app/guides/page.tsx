@@ -68,6 +68,22 @@ export default function GuidesPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        {/* ItemList schema for guides */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "ItemList",
+              itemListElement: guides.map((g, i) => ({
+                "@type": "ListItem",
+                position: i + 1,
+                url: `https://www.mothebroker.com${g.url}`,
+                name: g.title
+              }))
+            })
+          }}
+        />
         
         {/* Header */}
         <div className="text-center mb-16">

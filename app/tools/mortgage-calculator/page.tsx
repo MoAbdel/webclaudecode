@@ -160,6 +160,21 @@ export default function MortgageCalculatorPage() {
         content={calculatorData}
       />
       <AdvancedSchemaGenerator schemas={schemaData} />
+      {/* SoftwareApplication schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: 'Mortgage Calculator',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Web',
+            url: 'https://www.mothebroker.com/tools/mortgage-calculator',
+            publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker' }
+          })
+        }}
+      />
 
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}

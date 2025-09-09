@@ -57,6 +57,20 @@ export default function AffordabilityCalculator() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            name: 'Home Affordability Calculator',
+            applicationCategory: 'FinanceApplication',
+            operatingSystem: 'Web',
+            url: 'https://www.mothebroker.com/calculator/affordability',
+            publisher: { "@type": "Organization", name: 'Mo Abdel — Mortgage Broker' }
+          })
+        }}
+      />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-6">

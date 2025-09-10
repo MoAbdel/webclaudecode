@@ -18,6 +18,10 @@ export default function HeroSectionServer() {
                 <span className="text-blue-600">Better Wholesale Loan Rates, Faster Closing</span>
               </h1>
               
+              <p className="text-lg text-slate-600 leading-relaxed max-w-lg">
+                I'm Mo, a Mortgage Broker with NEXA Mortgage—the nation's largest wholesale brokerage, and I'm proudly based in Lake Forest, serving all of Orange County. Unlike big banks that push their own products, I give you direct access to over 200 lenders with competitive pricing. That means better rates, faster approvals, and more flexible options tailored to you—not the other way around.
+              </p>
+              
               <div className="bg-slate-50 rounded-lg p-4 border-l-4 border-blue-600">
                 <p className="text-sm text-slate-600">
                   <span className="font-semibold text-slate-900">Serving Orange County from Lake Forest</span><br/>
@@ -69,15 +73,8 @@ export default function HeroSectionServer() {
             </div>
           </div>
 
-          {/* Right Column Content */}
-          <div className="space-y-8">
-            {/* Add spacing to align with intro paragraph */}
-            <div className="lg:pt-16">
-              <p className="text-lg text-slate-600 leading-relaxed">
-                I'm Mo, a Mortgage Broker with NEXA Mortgage—the nation's largest wholesale brokerage, and I'm proudly based in Lake Forest, serving all of Orange County. Unlike big banks that push their own products, I give you direct access to over 200 lenders with competitive pricing. That means better rates, faster approvals, and more flexible options tailored to you—not the other way around.
-              </p>
-            </div>
-            
+          {/* Right Column Content - Aligned with intro paragraph */}
+          <div className="lg:pt-20">
             {/* Dynamic Rates Card - Client Component */}
             <DynamicRates />
           </div>

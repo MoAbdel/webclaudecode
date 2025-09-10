@@ -133,10 +133,10 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
       
       <AdvancedSchemaMarkup 
         type="LocalBusiness"
-        name={`Mo Abdel - ${cityData.name} Mortgage Expert`}
+        name={`Mo Abdel — Mortgage Broker`}
         description={`Professional mortgage broker serving ${cityData.name}, California with access to 200+ lenders.`}
         url={canonicalUrl}
-        areaServed={[`${cityData.name}, CA`]}
+        areaServed={[`${cityData.name}, CA`, 'Orange County, CA']}
       />
 
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">

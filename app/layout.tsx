@@ -124,6 +124,25 @@ export default function RootLayout({
         <meta name="twitter:image" content="https://www.mothebroker.com/images/moabdel-headshot-final.png" />
         
         <AdvancedSchemaMarkup type="Organization" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Mo Abdel',
+              jobTitle: 'Mortgage Broker',
+              worksFor: { '@type': 'Organization', name: 'Mo Abdel — Mortgage Broker' },
+              sameAs: [
+                'https://www.facebook.com/profile.php?id=61573517340174',
+                'https://www.instagram.com/mo_thebroker/',
+                'https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest',
+                'https://share.google/KsoqAEbkqoKiBVjgz',
+                'https://www.zillow.com/lender-profile/mabdel0/'
+              ]
+            })
+          }}
+        />
         <meta name="deployment-id" content="BGDyiFiyb-rollback" />
       </head>
       <body className="min-h-screen bg-gradient-to-b from-slate-50 to-white">

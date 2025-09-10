@@ -10,55 +10,55 @@ import Link from "next/link";
 const defaultRateData = [
   {
     loanType: "30-Year Fixed Conventional",
-    rate: "6.53%",
+    rate: "6.29%",
     apr: "APR may vary",
-    trend: "up",
-    change: "+0.01",
+    trend: "down",
+    change: "-0.24",
     icon: Home,
     description: "Perfect for stable payments over 30 years"
   },
   {
     loanType: "15-Year Fixed Conventional",
-    rate: "5.88%",
+    rate: "5.69%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.02",
+    change: "-0.19",
     icon: TrendingDown,
     description: "Build equity faster with higher payments"
   },
   {
     loanType: "30-Year FHA",
-    rate: "6.09%",
+    rate: "5.98%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.01",
+    change: "-0.11",
     icon: Users,
     description: "Low down payment option for first-time buyers"
   },
   {
     loanType: "30-Year Jumbo",
-    rate: "6.47%",
+    rate: "6.25%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.03",
+    change: "-0.22",
     icon: Building,
     description: "For loan amounts above conventional limits"
   },
   {
     loanType: "30-Year VA",
-    rate: "6.10%",
+    rate: "6.00%",
     apr: "APR may vary",
     trend: "down",
-    change: "-0.01",
+    change: "-0.10",
     icon: Shield,
     description: "Zero down payment for eligible veterans"
   },
   {
     loanType: "7/6 SOFR ARM",
-    rate: "5.91%",
+    rate: "5.68%",
     apr: "APR may vary",
-    trend: "stable",
-    change: "0.00",
+    trend: "down",
+    change: "-0.23",
     icon: BarChart3,
     description: "Adjustable rate with lower initial payments"
   }

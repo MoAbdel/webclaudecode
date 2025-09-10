@@ -1,5 +1,7 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import type { Metadata } from 'next';
+import CityPageTemplate from '@/components/seo/CityPageTemplate';
 
 export async function generateMetadata() {
   const path = "/areas/laguna-niguel-mortgage-rates";
@@ -18,13 +20,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import type { Metadata } from 'next';
-import CityPageTemplate from '@/components/seo/CityPageTemplate';
 
 const lagunaNiguelData = {
   name: 'Laguna Niguel',
@@ -51,10 +46,10 @@ const lagunaNiguelData = {
     'Luxury suburban lifestyle'
   ],
   keywordPhrase: 'Laguna Niguel mortgage rates'
+};
 
 export default function LagunaNiguelMortgageRatesPage() {
   return <CityPageTemplate cityData={lagunaNiguelData} />;
+}
 
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/laguna-niguel-mortgage-rates","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
+

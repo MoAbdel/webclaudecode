@@ -1,5 +1,13 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import type { Metadata } from 'next';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { MapPin, Home, Anchor, TrendingUp, Calculator, Phone, DollarSign } from 'lucide-react';
+import AIOOptimization from '@/components/seo/AIOOptimization';
+import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
+import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export async function generateMetadata() {
   const path = "/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker";
@@ -18,19 +26,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import type { Metadata } from 'next';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { MapPin, Home, Anchor, TrendingUp, Calculator, Phone, DollarSign } from 'lucide-react';
-import AIOOptimization from '@/components/seo/AIOOptimization';
-import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
-import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
-import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export default function BalboaIslandMortgageBrokerPage() {
   
@@ -60,10 +55,10 @@ export default function BalboaIslandMortgageBrokerPage() {
         stat: "100% of sales require jumbo financing",
         source: "California Housing Finance Agency",
         year: "2025"
+  },
+],
 
-    ]
-
-  const schemaData = [
+const schemaData = [
     {
       type: 'faq' as const,
       title: 'Balboa Island Mortgage FAQ',
@@ -104,9 +99,9 @@ export default function BalboaIslandMortgageBrokerPage() {
         keywords: ['Balboa Island', 'luxury waterfront homes', 'Newport Beach', 'jumbo loans', 'waterfront financing'],
         wordCount: 3000
 
-  ];
+  ],
 
-  const propertyTypes = [
+const propertyTypes = [
     {
       name: 'Waterfront Homes',
       priceRange: '$4M - $8M+',
@@ -125,9 +120,9 @@ export default function BalboaIslandMortgageBrokerPage() {
       description: 'Income-producing duplexes popular with investors',
       features: ['Rental income', 'Investment property', 'Dual units', 'High ROI']
 
-  ];
+  ],
 
-  const financingOptions = [
+const financingOptions = [
     {
       name: 'Jumbo Loans',
       description: 'For homes $1.089M - $3M',
@@ -160,12 +155,8 @@ export default function BalboaIslandMortgageBrokerPage() {
         keywords={["Balboa Island mortgage", "Newport Beach waterfront loans", "luxury waterfront financing", "Balboa Island homes", "jumbo loans Newport Beach"]}
         city="Balboa Island, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker"
-        content={balboaIslandData}
-      />
-      <EnhancedLocalSchema city="Balboa Island, Newport Beach" page_type="city" service_focus="luxury waterfront home financing" />
-      <AdvancedSchemaGenerator schemas={schemaData} />
-
-      {/* Page Content */}
+        content={balboaIslandData};<EnhancedLocalSchema city="Balboa Island, Newport Beach" page_type="city" service_focus="luxury waterfront home financing" />
+      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -396,12 +387,9 @@ export default function BalboaIslandMortgageBrokerPage() {
           currentPage="/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker"
           pageType="city"
           city="Balboa Island"
-          maxLinks={6}
-        />
-      </div>
+          maxLinks={6};</div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
-</>
-  );
+
+);
+
+}

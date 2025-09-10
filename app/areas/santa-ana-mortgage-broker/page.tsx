@@ -1,5 +1,10 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { MapPin, Home, Building2, Users, TrendingUp, Heart, Briefcase } from 'lucide-react';
 
 export async function generateMetadata() {
   const path = "/areas/santa-ana-mortgage-broker";
@@ -18,16 +23,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import Link from 'next/link';
-import type { Metadata } from 'next';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, Building2, Users, TrendingUp, Heart, Briefcase } from 'lucide-react';
 
 export default function SantaAnaMortgageBrokerPage() {
   const santaAnaNeighborhoods = [
@@ -60,10 +55,10 @@ export default function SantaAnaMortgageBrokerPage() {
       name: 'Delhi',
       avgPrice: '$550K',
       description: 'Historic area with craftsman homes and cultural significance'
+    },
+  ],
 
-  ];
-
-  const loanPrograms = [
+const loanPrograms = [
     {
       title: 'FHA Loans for Santa Ana',
       description: 'Low down payment government-backed loans perfect for homeownership',
@@ -82,6 +77,7 @@ export default function SantaAnaMortgageBrokerPage() {
       benefits: ['Up to $500K credit lines', 'Prime + 0% intro rates', 'Tax-deductible interest'],
       icon: <TrendingUp className="w-8 h-8 text-purple-600" />
 
+    },
   ];
 
   return (
@@ -375,8 +371,8 @@ export default function SantaAnaMortgageBrokerPage() {
         </div>
       </div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/santa-ana-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
+
 </div>
   );
+
+}

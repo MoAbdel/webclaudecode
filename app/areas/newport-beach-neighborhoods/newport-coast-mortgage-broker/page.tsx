@@ -1,5 +1,13 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import type { Metadata } from 'next';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { MapPin, Home, Mountain, TrendingUp, Calculator, Phone, Crown, Eye } from 'lucide-react';
+import AIOOptimization from '@/components/seo/AIOOptimization';
+import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
+import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export async function generateMetadata() {
   const path = "/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker";
@@ -18,19 +26,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import type { Metadata } from 'next';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { MapPin, Home, Mountain, TrendingUp, Calculator, Phone, Crown, Eye } from 'lucide-react';
-import AIOOptimization from '@/components/seo/AIOOptimization';
-import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
-import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
-import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export default function NewportCoastMortgageBrokerPage() {
   
@@ -60,10 +55,10 @@ export default function NewportCoastMortgageBrokerPage() {
         stat: "Average lot size: 15,000+ sq ft",
         source: "Newport Coast Master Plan",
         year: "2024"
+  },
+],
 
-    ]
-
-  const schemaData = [
+const schemaData = [
     {
       type: 'faq' as const,
       title: 'Newport Coast Luxury Mortgage FAQ',
@@ -93,9 +88,9 @@ export default function NewportCoastMortgageBrokerPage() {
 
         ]
 
-  ];
+  ],
 
-  const newportCoastFeatures = [
+const newportCoastFeatures = [
     {
       name: 'Ocean Views',
       description: 'Panoramic Pacific Ocean and Catalina Island views',
@@ -111,9 +106,10 @@ export default function NewportCoastMortgageBrokerPage() {
       description: 'Coastal bluffs and Crystal Cove State Park access',
       icon: <Mountain className="w-6 h-6" />
 
-  ];
+    },
+  ],
 
-  const propertyTypes = [
+const propertyTypes = [
     {
       name: 'Ocean View Estates',
       priceRange: '$8M - $20M+',
@@ -132,9 +128,9 @@ export default function NewportCoastMortgageBrokerPage() {
       description: 'Luxury homes in gated Newport Coast communities',
       features: ['Gated security', 'Custom design', 'Premium lots', 'Resort amenities']
 
-  ];
+  ],
 
-  const financingOptions = [
+const financingOptions = [
     {
       name: 'Super Jumbo Loans',
       description: 'For homes $3M - $10M',
@@ -167,12 +163,8 @@ export default function NewportCoastMortgageBrokerPage() {
         keywords={["Newport Coast mortgage", "luxury coastal homes", "ocean view financing", "ultra-luxury mortgage broker", "Newport Coast estates"]}
         city="Newport Coast, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker"
-        content={newportCoastData}
-      />
-      <EnhancedLocalSchema city="Newport Coast, Newport Beach" page_type="city" service_focus="ultra-luxury coastal estate financing" />
-      <AdvancedSchemaGenerator schemas={schemaData} />
-
-      {/* Page Content */}
+        content={newportCoastData};<EnhancedLocalSchema city="Newport Coast, Newport Beach" page_type="city" service_focus="ultra-luxury coastal estate financing" />
+      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -418,12 +410,9 @@ export default function NewportCoastMortgageBrokerPage() {
           currentPage="/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker"
           pageType="city"
           city="Newport Coast"
-          maxLinks={6}
-        />
-      </div>
+          maxLinks={6};</div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
-</>
-  );
+
+);
+
+}

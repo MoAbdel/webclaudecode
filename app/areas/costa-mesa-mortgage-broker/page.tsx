@@ -1,5 +1,10 @@
-﻿import React from 'react';
+import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { MapPin, Home, ShoppingBag, Palette, TrendingUp, Users, Building } from 'lucide-react';
 
 export async function generateMetadata() {
   const path = "/areas/costa-mesa-mortgage-broker";
@@ -18,13 +23,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-\n\nimport Link from 'next/link';
-import type { Metadata } from 'next';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, ShoppingBag, Palette, TrendingUp, Users, Building } from 'lucide-react';
 
 export default function CostaMesaMortgageBrokerPage() {
   const costaMesaNeighborhoods = [
@@ -57,10 +55,11 @@ export default function CostaMesaMortgageBrokerPage() {
       name: 'College Park',
       avgPrice: '$800K',
       description: 'Affordable area near Orange Coast College with starter homes'
+    },
 
   ];
 
-  const loanPrograms = [
+const loanPrograms = [
     {
       title: 'HELOC for Costa Mesa Homes',
       description: 'Access your home equity for improvements, education, or business ventures',
@@ -78,6 +77,7 @@ export default function CostaMesaMortgageBrokerPage() {
       description: 'Government-backed loans with low down payment requirements',
       benefits: ['3.5% down payment', 'Credit scores from 500+', 'Assumable loans'],
       icon: <Home className="w-8 h-8 text-purple-600" />
+    },
 
   ];
 
@@ -373,8 +373,8 @@ export default function CostaMesaMortgageBrokerPage() {
         </div>
       </div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel â€” Mortgage Broker","url":"https://www.mothebroker.com/areas/costa-mesa-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
+
 </div>
   );
+
+}

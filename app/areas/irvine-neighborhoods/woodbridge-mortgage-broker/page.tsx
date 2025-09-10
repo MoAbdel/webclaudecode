@@ -1,5 +1,13 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import type { Metadata } from 'next';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { MapPin, Home, Waves, TrendingUp, Calculator, Phone, TreePine } from 'lucide-react';
+import AIOOptimization from '@/components/seo/AIOOptimization';
+import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
+import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export async function generateMetadata() {
   const path = "/areas/irvine-neighborhoods/woodbridge-mortgage-broker";
@@ -18,19 +26,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import type { Metadata } from 'next';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { MapPin, Home, Waves, TrendingUp, Calculator, Phone, TreePine } from 'lucide-react';
-import AIOOptimization from '@/components/seo/AIOOptimization';
-import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
-import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
-import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export default function WoodbridgeMortgageBrokerPage() {
   
@@ -60,10 +55,10 @@ export default function WoodbridgeMortgageBrokerPage() {
         stat: "5 man-made lakes in community",
         source: "Irvine Company",
         year: "2024"
+  },
+],
 
-    ]
-
-  const schemaData = [
+const schemaData = [
     {
       type: 'faq' as const,
       title: 'Woodbridge Irvine Mortgage FAQ',
@@ -89,9 +84,9 @@ export default function WoodbridgeMortgageBrokerPage() {
 
         ]
 
-  ];
+  ],
 
-  const woodbridgeFeatures = [
+const woodbridgeFeatures = [
     {
       name: 'Lake Access',
       description: '5 private lakes with walking trails and recreational activities',
@@ -107,9 +102,10 @@ export default function WoodbridgeMortgageBrokerPage() {
       description: 'Recreation centers, pools, tennis courts, and playgrounds',
       icon: <Home className="w-6 h-6" />
 
-  ];
+    },
+  ],
 
-  const propertyTypes = [
+const propertyTypes = [
     {
       name: 'Lakefront Homes',
       priceRange: '$1.6M - $2.2M',
@@ -139,12 +135,8 @@ export default function WoodbridgeMortgageBrokerPage() {
         keywords={["Woodbridge Irvine mortgage", "lake community loans", "Irvine family homes", "established community financing", "Woodbridge homes"]}
         city="Woodbridge, Irvine"
         canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker"
-        content={woodbridgeData}
-      />
-      <EnhancedLocalSchema city="Woodbridge, Irvine" page_type="city" service_focus="lake community home financing" />
-      <AdvancedSchemaGenerator schemas={schemaData} />
-
-      {/* Page Content */}
+        content={woodbridgeData};<EnhancedLocalSchema city="Woodbridge, Irvine" page_type="city" service_focus="lake community home financing" />
+      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -347,12 +339,9 @@ export default function WoodbridgeMortgageBrokerPage() {
           currentPage="/areas/irvine-neighborhoods/woodbridge-mortgage-broker"
           pageType="city"
           city="Woodbridge"
-          maxLinks={6}
-        />
-      </div>
+          maxLinks={6};</div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
-</>
-  );
+
+);
+
+}

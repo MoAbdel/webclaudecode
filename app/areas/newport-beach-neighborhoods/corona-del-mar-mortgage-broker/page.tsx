@@ -1,5 +1,13 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import type { Metadata } from 'next';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { MapPin, Home, Sun, TrendingUp, Calculator, Phone, Crown, Waves } from 'lucide-react';
+import AIOOptimization from '@/components/seo/AIOOptimization';
+import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
+import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export async function generateMetadata() {
   const path = "/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker";
@@ -18,19 +26,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import type { Metadata } from 'next';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { MapPin, Home, Sun, TrendingUp, Calculator, Phone, Crown, Waves } from 'lucide-react';
-import AIOOptimization from '@/components/seo/AIOOptimization';
-import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
-import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
-import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export default function CoronaDelMarMortgageBrokerPage() {
   
@@ -60,10 +55,10 @@ export default function CoronaDelMarMortgageBrokerPage() {
         stat: "Walking distance to Corona del Mar State Beach",
         source: "Newport Beach City Planning",
         year: "2024"
+  },
+],
 
-    ]
-
-  const schemaData = [
+const schemaData = [
     {
       type: 'faq' as const,
       title: 'Corona del Mar Newport Beach Mortgage FAQ',
@@ -93,9 +88,9 @@ export default function CoronaDelMarMortgageBrokerPage() {
 
         ]
 
-  ];
+  ],
 
-  const coronaDelMarFeatures = [
+const coronaDelMarFeatures = [
     {
       name: 'Beachside Living',
       description: 'Direct access to Corona del Mar State Beach and coastal lifestyle',
@@ -111,9 +106,10 @@ export default function CoronaDelMarMortgageBrokerPage() {
       description: 'Top-rated schools and family-oriented luxury community',
       icon: <Sun className="w-6 h-6" />
 
-  ];
+    },
+  ],
 
-  const propertyTypes = [
+const propertyTypes = [
     {
       name: 'Beachside Estates',
       priceRange: '$8M - $20M+',
@@ -132,9 +128,9 @@ export default function CoronaDelMarMortgageBrokerPage() {
       description: 'Beautiful coastal homes with community amenities and beach access',
       features: ['Coastal living', 'Community access', 'Modern updates', 'Family-friendly']
 
-  ];
+  ],
 
-  const financingOptions = [
+const financingOptions = [
     {
       name: 'Jumbo Loans',
       description: 'For properties $1M - $3M',
@@ -167,12 +163,8 @@ export default function CoronaDelMarMortgageBrokerPage() {
         keywords={["Corona del Mar Newport Beach mortgage", "luxury coastal homes", "beachside community loans", "Corona del Mar mortgage broker", "Newport Beach luxury financing"]}
         city="Corona del Mar, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker"
-        content={coronaDelMarData}
-      />
-      <EnhancedLocalSchema city="Corona del Mar, Newport Beach" page_type="city" service_focus="luxury coastal home financing" />
-      <AdvancedSchemaGenerator schemas={schemaData} />
-
-      {/* Page Content */}
+        content={coronaDelMarData};<EnhancedLocalSchema city="Corona del Mar, Newport Beach" page_type="city" service_focus="luxury coastal home financing" />
+      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -418,12 +410,9 @@ export default function CoronaDelMarMortgageBrokerPage() {
           currentPage="/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker"
           pageType="city"
           city="Corona del Mar"
-          maxLinks={6}
-        />
-      </div>
+          maxLinks={6};</div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
-</>
-  );
+
+);
+
+}

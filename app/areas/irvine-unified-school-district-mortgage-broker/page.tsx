@@ -1,5 +1,13 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import type { Metadata } from 'next';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { GraduationCap, MapPin, Home, Star, Calculator, Phone, BookOpen, Users } from 'lucide-react';
+import AIOOptimization from '@/components/seo/AIOOptimization';
+import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
+import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export async function generateMetadata() {
   const path = "/areas/irvine-unified-school-district-mortgage-broker";
@@ -18,19 +26,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import type { Metadata } from 'next';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { GraduationCap, MapPin, Home, Star, Calculator, Phone, BookOpen, Users } from 'lucide-react';
-import AIOOptimization from '@/components/seo/AIOOptimization';
-import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
-import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
-import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
   
@@ -60,10 +55,10 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
         stat: "Average home price in IUSD boundaries: $1.6M",
         source: "Orange County MLS",
         year: "2025"
+  },
+],
 
-    ]
-
-  const schemaData = [
+const schemaData = [
     {
       type: 'faq' as const,
       title: 'Irvine Unified School District Mortgage FAQ',
@@ -89,9 +84,9 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
 
         ]
 
-  ];
+  ],
 
-  const iusdNeighborhoods = [
+const iusdNeighborhoods = [
     {
       name: 'University Park',
       priceRange: '$1.8M - $2.8M',
@@ -127,10 +122,10 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
       priceRange: '$800K - $1.5M',
       schools: 'Various IUSD schools depending on location',
       description: 'More affordable entry point to IUSD with diverse housing options'
+    },
+  ],
 
-  ];
-
-  const schoolHighlights = [
+const schoolHighlights = [
     {
       category: 'Elementary Schools',
       achievement: '95% proficient in English/Math',
@@ -151,9 +146,9 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
       achievement: 'Award-winning music and arts',
       highlight: 'Comprehensive special needs support'
 
-  ];
+  ],
 
-  const affordabilityOptions = [
+const affordabilityOptions = [
     {
       option: 'Condos & Townhomes',
       priceRange: '$700K - $1.2M',
@@ -189,12 +184,8 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
         keywords={["Irvine Unified School District mortgage", "IUSD homes", "top rated schools mortgage", "Irvine schools mortgage broker", "education focused home buying"]}
         city="Irvine Unified School District"
         canonicalUrl="https://mothebroker.com/areas/irvine-unified-school-district-mortgage-broker"
-        content={iusdData}
-      />
-      <EnhancedLocalSchema city="Irvine Unified School District" page_type="city" service_focus="school district focused mortgage services" />
-      <AdvancedSchemaGenerator schemas={schemaData} />
-
-      {/* Page Content */}
+        content={iusdData};<EnhancedLocalSchema city="Irvine Unified School District" page_type="city" service_focus="school district focused mortgage services" />
+      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -445,12 +436,9 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
           currentPage="/areas/irvine-unified-school-district-mortgage-broker"
           pageType="city"
           city="Irvine Unified School District"
-          maxLinks={6}
-        />
-      </div>
+          maxLinks={6};</div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/irvine-unified-school-district-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
-</>
-  );
+
+);
+
+}

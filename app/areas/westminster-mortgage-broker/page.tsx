@@ -1,5 +1,7 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import type { Metadata } from 'next';
+import CityPageTemplate, { generateCityMetadata } from '@/components/seo/CityPageTemplate';
 
 export async function generateMetadata() {
   const path = "/areas/westminster-mortgage-broker";
@@ -18,13 +20,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import type { Metadata } from 'next';
-import CityPageTemplate, { generateCityMetadata } from '@/components/seo/CityPageTemplate';
 
 const westminsterData = {
   name: 'Westminster',
@@ -53,10 +48,10 @@ const westminsterData = {
     'Good freeway access'
   ],
   keywordPhrase: 'Westminster mortgage broker'
+};
 
 export default function WestminsterMortgageBrokerPage() {
   return <CityPageTemplate cityData={westminsterData} />;
+}
 
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/westminster-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
+

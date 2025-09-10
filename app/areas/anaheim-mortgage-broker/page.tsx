@@ -1,5 +1,10 @@
-﻿import React from 'react';
+import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { MapPin, Home, Castle, Users, TrendingUp, Building, Heart } from 'lucide-react';
 
 export async function generateMetadata() {
   const path = "/areas/anaheim-mortgage-broker";
@@ -18,13 +23,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-\n\nimport Link from 'next/link';
-import type { Metadata } from 'next';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, Castle, Users, TrendingUp, Building, Heart } from 'lucide-react';
 
 export default function AnaheimMortgageBrokerPage() {
   const anaheimNeighborhoods = [
@@ -56,9 +54,11 @@ export default function AnaheimMortgageBrokerPage() {
     {
       name: 'Canyon Hills',
       avgPrice: '$900K',
-          }  ];
+      description: 'Hillside community with parks, trails, and newer homes'
+    },
+  ];
 
-  const loanPrograms = [
+const loanPrograms = [
     {
       title: 'FHA Loans for Anaheim',
       description: 'Low down payment government-backed loans perfect for first-time buyers',
@@ -75,7 +75,8 @@ export default function AnaheimMortgageBrokerPage() {
       title: 'Conventional Loans',
       description: 'Flexible financing options for Anaheim homes with competitive rates',
       benefits: ['As low as 3% down payment', 'No PMI with 20% down', 'Various loan terms'],
-          }  ];
+          },
+];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
@@ -368,8 +369,7 @@ export default function AnaheimMortgageBrokerPage() {
         </div>
       </div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel â€” Mortgage Broker","url":"https://www.mothebroker.com/areas/anaheim-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
+
 </div>
   );
+}

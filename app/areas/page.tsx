@@ -1,5 +1,10 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { MapPin, Home, TrendingUp, Phone } from 'lucide-react';
 
 export async function generateMetadata() {
   const path = "/areas";
@@ -18,16 +23,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import Link from 'next/link';
-import type { Metadata } from 'next';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, TrendingUp, Phone } from 'lucide-react';
 
 const serviceAreas = [
   {
@@ -164,8 +159,7 @@ export default function NeighborhoodGuidePage() {
                   </div>
                 </div>
                 
-                <Link href={`/areas/${area.slug}`}>
-                  <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                <Link href={`/areas/${area.slug}`};<Button className="w-full bg-blue-600 hover:bg-blue-700">
                     {area.city} Mortgage Info
                   </Button>
                 </Link>
@@ -372,8 +366,8 @@ export default function NeighborhoodGuidePage() {
         </div>
       </div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
+
 </div>
   );
+
+}

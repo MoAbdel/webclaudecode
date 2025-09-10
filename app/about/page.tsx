@@ -224,6 +224,7 @@ export default function AboutPage() {
             "addressRegion": "CA",
             "addressCountry": "US"
           }
+        };
         return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
       })()}
 

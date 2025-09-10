@@ -1,5 +1,13 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import type { Metadata } from 'next';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { MapPin, Home, Anchor, TrendingUp, Calculator, Phone, Crown, Waves } from 'lucide-react';
+import AIOOptimization from '@/components/seo/AIOOptimization';
+import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
+import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export async function generateMetadata() {
   const path = "/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker";
@@ -18,19 +26,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import type { Metadata } from 'next';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { MapPin, Home, Anchor, TrendingUp, Calculator, Phone, Crown, Waves } from 'lucide-react';
-import AIOOptimization from '@/components/seo/AIOOptimization';
-import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
-import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
-import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 
 export default function LidoIsleMortgageBrokerPage() {
   
@@ -60,10 +55,10 @@ export default function LidoIsleMortgageBrokerPage() {
         stat: "Private island with 285 exclusive properties",
         source: "Lido Isle Association",
         year: "2024"
+  },
+],
 
-    ]
-
-  const schemaData = [
+const schemaData = [
     {
       type: 'faq' as const,
       title: 'Lido Isle Newport Beach Mortgage FAQ',
@@ -93,9 +88,9 @@ export default function LidoIsleMortgageBrokerPage() {
 
         ]
 
-  ];
+  ],
 
-  const lidoIsleFeatures = [
+const lidoIsleFeatures = [
     {
       name: 'Private Island',
       description: 'Exclusive access to private island community with only 285 properties',
@@ -111,9 +106,10 @@ export default function LidoIsleMortgageBrokerPage() {
       description: 'Highest level of luxury living with estate-quality properties',
       icon: <Anchor className="w-6 h-6" />
 
-  ];
+    },
+  ],
 
-  const propertyTypes = [
+const propertyTypes = [
     {
       name: 'Bayfront Estates',
       priceRange: '$10M - $20M+',
@@ -132,9 +128,9 @@ export default function LidoIsleMortgageBrokerPage() {
       description: 'Exclusive island properties with luxury amenities and privacy',
       features: ['Private island access', 'Luxury amenities', 'Exclusive community', 'Premium locations']
 
-  ];
+  ],
 
-  const financingOptions = [
+const financingOptions = [
     {
       name: 'Super Jumbo Loans',
       description: 'For properties $4M - $12M',
@@ -167,12 +163,8 @@ export default function LidoIsleMortgageBrokerPage() {
         keywords={["Lido Isle Newport Beach mortgage", "waterfront estate loans", "private island homes", "Newport Beach luxury financing", "Lido Isle estates"]}
         city="Lido Isle, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker"
-        content={lidoIsleData}
-      />
-      <EnhancedLocalSchema city="Lido Isle, Newport Beach" page_type="city" service_focus="waterfront estate financing" />
-      <AdvancedSchemaGenerator schemas={schemaData} />
-
-      {/* Page Content */}
+        content={lidoIsleData};<EnhancedLocalSchema city="Lido Isle, Newport Beach" page_type="city" service_focus="waterfront estate financing" />
+      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -418,12 +410,9 @@ export default function LidoIsleMortgageBrokerPage() {
           currentPage="/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker"
           pageType="city"
           city="Lido Isle"
-          maxLinks={6}
-        />
-      </div>
+          maxLinks={6};</div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
-</>
-  );
+
+);
+
+}

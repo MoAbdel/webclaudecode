@@ -1,5 +1,12 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import type { Metadata } from 'next';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { Button } from '@/components/ui/Button';
+import { MapPin, Home, School, TrendingUp, Calculator, Phone } from 'lucide-react';
+import AIOOptimization from '@/components/seo/AIOOptimization';
+import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
+import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
 
 export async function generateMetadata() {
   const path = "/areas/irvine-neighborhoods/university-park-mortgage-broker";
@@ -18,18 +25,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import type { Metadata } from 'next';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { Button } from '@/components/ui/Button';
-import { MapPin, Home, School, TrendingUp, Calculator, Phone } from 'lucide-react';
-import AIOOptimization from '@/components/seo/AIOOptimization';
-import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
-import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
 
 export default function UniversityParkMortgageBrokerPage() {
   
@@ -59,10 +54,10 @@ export default function UniversityParkMortgageBrokerPage() {
         stat: "Average lot size: 8,000 sq ft",
         source: "Irvine Company",
         year: "2024"
+  },
+],
 
-    ]
-
-  const schemaData = [
+const schemaData = [
     {
       type: 'faq' as const,
       title: 'University Park Irvine Mortgage FAQ',
@@ -99,9 +94,9 @@ export default function UniversityParkMortgageBrokerPage() {
         keywords: ['University Park Irvine', 'luxury homes', 'jumbo loans', 'UCI area', 'mortgage broker'],
         wordCount: 2500
 
-  ];
+  ],
 
-  const neighborhoods = [
+const neighborhoods = [
     {
       name: 'North University Park',
       avgPrice: '$2.1M',
@@ -116,10 +111,10 @@ export default function UniversityParkMortgageBrokerPage() {
       name: 'University Hills',
       avgPrice: '$1.9M',
       description: 'Hillside homes with city views and premium lot locations'
+    },
+  ],
 
-  ];
-
-  const mortgagePrograms = [
+const mortgagePrograms = [
     {
       name: 'Jumbo Loans',
       description: 'Financing for homes above $1,089,300',
@@ -149,12 +144,8 @@ export default function UniversityParkMortgageBrokerPage() {
         keywords={["University Park Irvine mortgage", "UCI area home loans", "luxury Irvine financing", "jumbo loans", "University Park mortgage broker"]}
         city="University Park, Irvine"
         canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker"
-        content={universityParkData}
-      />
-      <EnhancedLocalSchema city="University Park, Irvine" page_type="city" service_focus="luxury home financing" />
-      <AdvancedSchemaGenerator schemas={schemaData} />
-
-      {/* Page Content */}
+        content={universityParkData};<EnhancedLocalSchema city="University Park, Irvine" page_type="city" service_focus="luxury home financing" />
+      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -368,8 +359,7 @@ export default function UniversityParkMortgageBrokerPage() {
         </section>
       </div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
-</>
-  );
+
+);
+
+}

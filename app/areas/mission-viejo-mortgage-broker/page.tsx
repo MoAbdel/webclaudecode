@@ -1,5 +1,10 @@
 import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { Button } from '@/components/ui/Button';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
+import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building, TreePine } from 'lucide-react';
 
 export async function generateMetadata() {
   const path = "/areas/mission-viejo-mortgage-broker";
@@ -18,16 +23,6 @@ export async function generateMetadata() {
     },
   };
 }
-
-}
-
-}
-
-import Link from 'next/link';
-import type { Metadata } from 'next';
-import { Button } from '@/components/ui/Button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
-import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building, TreePine } from 'lucide-react';
 
 export default function MissionViejoMortgageBrokerPage() {
   const missionViejoNeighborhoods = [
@@ -60,10 +55,10 @@ export default function MissionViejoMortgageBrokerPage() {
       name: 'Marguerite',
       avgPrice: '$920K',
       description: 'Hillside community with canyon views and hiking trails'
+    },
+  ],
 
-  ];
-
-  const loanPrograms = [
+const loanPrograms = [
     {
       title: 'HELOC for Mission Viejo Homes',
       description: 'Access your home equity for education, improvements, or investments',
@@ -82,6 +77,7 @@ export default function MissionViejoMortgageBrokerPage() {
       benefits: ['Rate & term refinancing', 'Cash-out options', 'PMI removal'],
       icon: <Home className="w-8 h-8 text-purple-600" />
 
+    },
   ];
 
   return (
@@ -429,8 +425,8 @@ export default function MissionViejoMortgageBrokerPage() {
         </div>
       </div>
     
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"LocalBusiness","name":"Mo Abdel — Mortgage Broker","url":"https://www.mothebroker.com/areas/mission-viejo-mortgage-broker","areaServed":"Orange County, CA","telephone":"(949) 579-2057","image":"https://www.mothebroker.com/logo.png","sameAs":["https://www.facebook.com/profile.php?id=61573517340174","https://www.instagram.com/mo_thebroker/","https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest","https://www.zillow.com/lender-profile/mabdel0/","https://maps.google.com/?cid=KsoqAEbkqoKiBVjgz"]})
-}} />
+
 </div>
   );
+
+}

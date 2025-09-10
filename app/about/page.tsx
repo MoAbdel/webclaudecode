@@ -40,7 +40,7 @@ export default function AboutPage() {
             "@type": "Organization",
             name: 'Mo Abdel — Mortgage Broker',
             url: 'https://www.mothebroker.com',
-            logo: 'https://www.mothebroker.com/images/mo-logo-white.webp',
+            logo: 'https://www.mothebroker.com/logo.png',
             sameAs: [
               'https://www.facebook.com/profile.php?id=61573517340174',
               'https://www.instagram.com/mo_thebroker',

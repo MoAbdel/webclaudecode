@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Head from 'next/head';
+import { BRAND, CANONICAL_BASE, TELEPHONE, PROFILES, AREA_SERVED } from '@/lib/seo-constants';
 
 interface SchemaProps {
   type: 'Organization' | 'MortgageBroker' | 'FinancialService' | 'LocalBusiness';
@@ -34,10 +35,10 @@ interface SchemaProps {
 
 export default function AdvancedSchemaMarkup({
   type,
-  name = "Mo Abdel - Orange County Mortgage Expert",
+  name = BRAND,
   description = "Mortgage broker serving Orange County with access to 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.",
-  url = "https://www.mothebroker.com",
-  telephone = "(949) 579-2057",
+  url = CANONICAL_BASE,
+  telephone = TELEPHONE,
   address = {
     streetAddress: "",
     addressLocality: "Lake Forest",
@@ -45,13 +46,7 @@ export default function AdvancedSchemaMarkup({
     postalCode: "92630",
     addressCountry: "US"
   },
-  areaServed = [
-    "Irvine, CA", "Newport Beach, CA", "Huntington Beach, CA", "Costa Mesa, CA",
-    "Mission Viejo, CA", "Anaheim, CA", "Santa Ana, CA", "Fullerton, CA",
-    "Westminster, CA", "Garden Grove, CA", "Orange, CA", "Fountain Valley, CA",
-    "Laguna Beach, CA", "Yorba Linda, CA", "Dana Point, CA", "Laguna Niguel, CA",
-    "Laguna Woods, CA", "Seal Beach, CA"
-  ],
+  areaServed = [AREA_SERVED],
   services = [
     "Mortgage Broker Services", "Home Purchase Loans", "Refinancing",
     "FHA Loans", "VA Loans", "Conventional Loans", "Jumbo Loans",
@@ -63,10 +58,7 @@ export default function AdvancedSchemaMarkup({
     "Mo-Fr 09:00-18:00",
     "Sa 10:00-16:00"
   ],
-  sameAs = [
-    "https://www.linkedin.com/in/moabdel",
-    "https://www.nexamortgage.com"
-  ],
+  sameAs = PROFILES,
   aggregateRating = {
     ratingValue: 4.9,
     reviewCount: 127

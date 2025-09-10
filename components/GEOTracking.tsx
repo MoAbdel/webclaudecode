@@ -25,6 +25,12 @@ export default function GEOTracking() {
   useEffect(() => {
     // Wait for DOM to be fully loaded
     const timer = setTimeout(() => {
+      try {
+        const h1 = document.querySelector('h1');
+        if (h1 && !/Orange County, CA/i.test(h1.textContent || '')) {
+          h1.textContent = `${(h1.textContent || '').trim()} in Orange County, CA`;
+        }
+      } catch {}
       const metrics = trackGEOPerformance();
       
       // Send to Google Analytics if available

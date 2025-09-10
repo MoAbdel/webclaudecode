@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BRAND, CANONICAL_BASE, LOGO } from './seo-constants';
 
 interface SEOMetadata {
   title: string;
@@ -19,7 +20,7 @@ export function generateMetadata({
   type = 'website',
   noindex = false
 }: SEOMetadata): Metadata {
-  const baseUrl = 'https://www.mothebroker.com';
+  const baseUrl = CANONICAL_BASE;
   const canonicalUrl = `${baseUrl}${path}`;
   
   const ensureSuffix = (t: string) => {
@@ -58,10 +59,10 @@ export function generateMetadata({
       title: finalTitle,
       description: finalDescription,
       url: canonicalUrl,
-      siteName: 'Mo Abdel - Mortgage Broker',
+      siteName: BRAND,
       images: [
         {
-          url: fullImageUrl,
+          url: fullImageUrl || LOGO,
           width: 1200,
           height: 630,
           alt: finalTitle

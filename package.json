@@ -5,11 +5,21 @@
     "description":  "Mo Abdel - Orange County Mortgage Broker Website",
     "scripts":  {
                     "dev":  "next dev",
-                    "build":  "next build",
+                    "build":  "next build \u0026\u0026 next-sitemap",
                     "start":  "next start",
                     "lint":  "next lint",
                     "sitemap":  "next-sitemap",
-                    "postbuild":  "next-sitemap"
+                    "postbuild":  "next-sitemap",
+                    "enforce:metadata":  "node scripts/enforce-metadata.js",
+                    "enforce:links":  "node scripts/enforce-internal-links.js",
+                    "sweep:limits":  "node scripts/limits-sweep.js",
+                    "add:faq":  "node scripts/add-faq-schema.js",
+                    "validate":  "node scripts/validate-sitewide.js",
+                    "seo:finish":  "npm run seo:city:cleanup \u0026\u0026 npm run seo:city:enforce \u0026\u0026 next build \u0026\u0026 next-sitemap",
+                    "seo:geo":  "node scripts/seo-geo-harden.js",
+                    "seo:city:cleanup":  "node scripts/cleanup-city-metadata.js",
+                    "seo:city:enforce":  "node scripts/city-meta-schema-enforce.js",
+                    "fix:bom":  "node scripts/strip-bom.js"
                 },
     "keywords":  [
                      "mortgage",

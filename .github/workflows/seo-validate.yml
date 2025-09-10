@@ -1,0 +1,19 @@
+name: SEO Validate
+on:
+  pull_request:
+    branches: [ main, production, release/**, seo/** ]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - run: |
+          export NEXT_PUBLIC_SUPABASE_URL="https://example.supabase.co"
+          export NEXT_PUBLIC_SUPABASE_AK="anon-public"
+          npm run build
+      - run: npm run validate
+

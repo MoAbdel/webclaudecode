@@ -47,7 +47,6 @@ const santaAnaData = {
   ],
   keywordPhrase: 'Santa Ana refinance rates',
   specialization: 'refinance'
-};
 
 export default function SantaAnaRefinanceRatesPage() {
   return <CityPageTemplate cityData={santaAnaData} />;

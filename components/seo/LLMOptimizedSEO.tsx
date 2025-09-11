@@ -161,7 +161,7 @@ export default function LLMOptimizedSEO({
                     position: 1,
                     name: "Home",
                     item: {
-                      "@id": "https://mothebroker.com",
+                      "@id": "https://www.mothebroker.com",
                       "name": "Home"
                     }
                   },

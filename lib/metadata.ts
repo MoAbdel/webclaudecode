@@ -19,7 +19,7 @@ export function generateMetadata({
   type = 'website',
   noindex = false
 }: SEOMetadata): Metadata {
-  const baseUrl = 'https://mothebroker.com';
+  const baseUrl = 'https://www.mothebroker.com';
   const canonicalUrl = `${baseUrl}${path}`;
   const fullImageUrl = `${baseUrl}${image}`;
 
@@ -63,8 +63,8 @@ export function generateMetadata({
 }
 
 // Helper function to generate consistent page URLs
-export function createCanonicalUrl(path: string): string {
-  const baseUrl = 'https://mothebroker.com';
+export function createCanonicalUrl(path: string): string {
+  const baseUrl = 'https://www.mothebroker.com';
   const cleanPath = path.startsWith('/') ? path : `/${path}`;
   return `${baseUrl}${cleanPath}`;
 }

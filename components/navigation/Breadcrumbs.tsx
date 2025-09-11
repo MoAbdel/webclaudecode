@@ -39,7 +39,7 @@ export default function Breadcrumbs() {
         "position": 1,
         "name": "Home",
         "item": {
-          "@id": "https://mothebroker.com",
+          "@id": "https://www.mothebroker.com",
           "name": "Home"
         }
       },
@@ -48,7 +48,7 @@ export default function Breadcrumbs() {
         "position": index + 2,
         "name": item.name,
         "item": {
-          "@id": `https://mothebroker.com${item.href}`,
+          "@id": `https://www.mothebroker.com${item.href}`,
           "name": item.name
         }
       }))

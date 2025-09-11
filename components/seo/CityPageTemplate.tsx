@@ -49,7 +49,7 @@ export function generateCityMetadata(cityData: CityData): Metadata {
     openGraph: {
       title,
       description,
-      url: `https://mothebroker.com/areas/${cityData.slug}`,
+      url: `https://www.mothebroker.com/areas/${cityData.slug}`,
       type: 'website',
       locale: 'en_US',
       siteName: 'Mo Abdel'
@@ -63,7 +63,7 @@ export function generateCityMetadata(cityData: CityData): Metadata {
 }
 
 export default function CityPageTemplate({ cityData }: CityPageProps) {
-  const canonicalUrl = `https://mothebroker.com/areas/${cityData.slug}`;
+  const canonicalUrl = `https://www.mothebroker.com/areas/${cityData.slug}`;
   
   const structuredFAQ = [
     {

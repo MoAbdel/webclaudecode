@@ -13,8 +13,8 @@ export function generateEnhancedMetadata({
   title = 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
   description = 'Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.',
   keywords = 'Orange County mortgage broker, home loans, refinancing, FHA loans, VA loans, mortgage rates, NMLS licensed, lender access, competitive rates',
-  canonicalUrl = 'https://mothebroker.com',
-  ogImage = 'https://mothebroker.com/images/og-image-mothebroker.png',
+  canonicalUrl = 'https://www.mothebroker.com',
+  ogImage = 'https://www.mothebroker.com/images/og-image-mothebroker.png',
   noindex = false
 }: EnhancedSEOProps): Metadata {
   const robots = noindex ? 'noindex, nofollow' : 'index, follow';

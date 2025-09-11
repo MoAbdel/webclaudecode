@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -88,6 +88,7 @@ const serviceAreas = [
     slug: 'tustin-mortgage-broker',
     highlights: ['The District', 'Tustin Legacy', 'Historic Old Town', 'Great schools']
 
+  },
 ];
 
 export default function NeighborhoodGuidePage() {
@@ -159,7 +160,8 @@ export default function NeighborhoodGuidePage() {
                   </div>
                 </div>
                 
-                <Link href={`/areas/${area.slug}`};<Button className="w-full bg-blue-600 hover:bg-blue-700">
+                <Link href={`/areas/${area.slug}`}>
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700">
                     {area.city} Mortgage Info
                   </Button>
                 </Link>
@@ -214,7 +216,7 @@ export default function NeighborhoodGuidePage() {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm"
                 >
-                  Visit OC.gov →
+                  Visit OC.gov â†’
                 </a>
               </CardContent>
             </Card>
@@ -234,7 +236,7 @@ export default function NeighborhoodGuidePage() {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm"
                 >
-                  Visit Planning Dept →
+                  Visit Planning Dept â†’
                 </a>
               </CardContent>
             </Card>
@@ -254,7 +256,7 @@ export default function NeighborhoodGuidePage() {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm"
                 >
-                  Visit OC Housing →
+                  Visit OC Housing â†’
                 </a>
               </CardContent>
             </Card>
@@ -274,7 +276,7 @@ export default function NeighborhoodGuidePage() {
                   rel="noopener noreferrer"
                   className="text-blue-600 hover:text-blue-800 font-medium text-sm"
                 >
-                  Visit Community Resources →
+                  Visit Community Resources â†’
                 </a>
               </CardContent>
             </Card>
@@ -361,7 +363,7 @@ export default function NeighborhoodGuidePage() {
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884
+            Licensed mortgage broker with NEXA Mortgage â€¢ NMLS #1426884
           </p>
         </div>
       </div>

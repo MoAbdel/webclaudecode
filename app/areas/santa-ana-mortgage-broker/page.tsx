@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -56,7 +56,7 @@ export default function SantaAnaMortgageBrokerPage() {
       avgPrice: '$550K',
       description: 'Historic area with craftsman homes and cultural significance'
     },
-  ],
+  ];
 
 const loanPrograms = [
     {
@@ -276,10 +276,10 @@ const loanPrograms = [
             <div className="mt-6 p-4 bg-white rounded-lg">
               <h4 className="font-bold text-slate-900 mb-2">Popular Santa Ana Programs:</h4>
               <div className="space-y-1 text-sm text-slate-600">
-                <div>• FHA loans for first-time buyers</div>
-                <div>• Down payment assistance programs</div>
-                <div>• HELOC for home improvements</div>
-                <div>• Historic home renovation loans</div>
+                <div>â€¢ FHA loans for first-time buyers</div>
+                <div>â€¢ Down payment assistance programs</div>
+                <div>â€¢ HELOC for home improvements</div>
+                <div>â€¢ Historic home renovation loans</div>
               </div>
             </div>
           </div>
@@ -366,7 +366,7 @@ const loanPrograms = [
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-4">
-            Licensed mortgage broker with NEXA Mortgage • NMLS #1426884 • Serving all Santa Ana neighborhoods
+            Licensed mortgage broker with NEXA Mortgage â€¢ NMLS #1426884 â€¢ Serving all Santa Ana neighborhoods
           </p>
         </div>
       </div>

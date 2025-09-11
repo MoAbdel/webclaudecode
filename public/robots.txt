@@ -1,9 +1,5 @@
-# *
 User-agent: *
 Allow: /
-
-# *
-User-agent: *
 Disallow: /api/
 Disallow: /preview
 Disallow: /draft
@@ -11,7 +7,7 @@ Disallow: /temp
 Disallow: /staging
 
 # Host
-Host: https://mothebroker.com
+Host: https://www.mothebroker.com
 
 # Sitemaps
-Sitemap: https://mothebroker.com/sitemap.xml
+Sitemap: https://www.mothebroker.com/sitemap.xml

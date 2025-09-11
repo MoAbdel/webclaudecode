@@ -54,47 +54,11 @@ export default function UniversityParkMortgageBrokerPage() {
         stat: "Average lot size: 8,000 sq ft",
         source: "Irvine Company",
         year: "2024"
-  },
-],
+      },
+    ],
+  };
 
-const schemaData = [
-    {
-      type: 'faq' as const,
-      title: 'University Park Irvine Mortgage FAQ',
-      description: 'Common questions about University Park Irvine mortgages',
-      url: 'https://mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker',
-      data: {
-        questions: [
-          {
-            question: "What is the average home price in University Park Irvine?",
-            answer: "University Park Irvine homes typically range from $1.6M to $2.5M, with a median price around $1.8M. Most purchases require jumbo loan financing due to exceeding conforming loan limits."
-          },
-          {
-            question: "Do I need a jumbo loan for University Park?",
-            answer: "Yes, 95% of University Park homes exceed the 2025 conforming loan limit of $1,089,300, requiring jumbo loan financing. Mo Abdel specializes in jumbo loans for luxury Irvine properties."
-          },
-          {
-            question: "What makes University Park special for UCI families?",
-            answer: "University Park offers proximity to UC Irvine, top-rated schools, luxury amenities, and large lots averaging 8,000 sq ft. It's ideal for UCI faculty and families wanting premium education access."
-          },
-          {
-            question: "Can I get financing for University Park investment properties?",
-            answer: "Yes, Mo Abdel provides investment property financing for University Park rentals, popular with UCI students and faculty. Specialty non-QM loans available for investors."
-
-        ]
-
-    },
-    {
-      type: 'article' as const,
-      title: 'University Park Irvine Real Estate Market 2025',
-      description: 'Comprehensive guide to University Park Irvine housing market and mortgage options',
-      url: 'https://mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker',
-      data: {
-        section: 'Neighborhood Analysis',
-        keywords: ['University Park Irvine', 'luxury homes', 'jumbo loans', 'UCI area', 'mortgage broker'],
-        wordCount: 2500
-
-  ],
+  const schemaData: any[] = [];
 
 const neighborhoods = [
     {
@@ -112,7 +76,7 @@ const neighborhoods = [
       avgPrice: '$1.9M',
       description: 'Hillside homes with city views and premium lot locations'
     },
-  ],
+  ];
 
 const mortgagePrograms = [
     {
@@ -132,20 +96,23 @@ const mortgagePrograms = [
       description: 'Rental property financing near UCI',
       rates: 'From 6.75%',
       downPayment: '20-25%'
-
+    }
   ];
 
   return (
     <>
-      {/* SEO Optimization Components */}
-      <AIOOptimization
-        title="University Park Irvine Mortgage Broker | Luxury Home Loans | Mo Abdel NMLS #1426884"
-        description="University Park Irvine mortgage broker specializing in luxury home loans. UCI area financing, jumbo loans, investment properties. Licensed NMLS #1426884."
-        keywords={["University Park Irvine mortgage", "UCI area home loans", "luxury Irvine financing", "jumbo loans", "University Park mortgage broker"]}
-        city="University Park, Irvine"
-        canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker"
-        content={universityParkData};<EnhancedLocalSchema city="University Park, Irvine" page_type="city" service_focus="luxury home financing" />
-      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
+          {/* SEO Optimization Components */}
+          <AIOOptimization
+            title="University Park Irvine Mortgage Broker | Luxury Home Loans | Mo Abdel NMLS #1426884"
+            description="University Park Irvine mortgage broker specializing in luxury home loans. UCI area financing, jumbo loans, investment properties. Licensed NMLS #1426884."
+            keywords={["University Park Irvine mortgage", "UCI area home loans", "luxury Irvine financing", "jumbo loans", "University Park mortgage broker"]}
+            city="University Park, Irvine"
+            canonicalUrl="https://www.mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker"
+            content={universityParkData}
+          />
+          <EnhancedLocalSchema city="University Park, Irvine" page_type="city" service_focus="luxury home financing" />
+          
+          {/* Page Content */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -358,8 +325,6 @@ const mortgagePrograms = [
           </div>
         </section>
       </div>
-    
-
-);
-
+    </>
+  );
 }

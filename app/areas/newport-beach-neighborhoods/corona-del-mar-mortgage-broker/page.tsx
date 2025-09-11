@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { CANONICAL_BASE, SHORT_BRAND, LOGO, TELEPHONE, AREA_SERVED, PROFILES } from "@/lib/seo-constants";
 import type { Metadata } from 'next';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/Card';
@@ -55,104 +55,15 @@ export default function CoronaDelMarMortgageBrokerPage() {
         stat: "Walking distance to Corona del Mar State Beach",
         source: "Newport Beach City Planning",
         year: "2024"
-  },
-],
+      },
+    ],
+  };
 
-const schemaData = [
-    {
-      type: 'faq' as const,
-      title: 'Corona del Mar Newport Beach Mortgage FAQ',
-      description: 'Common questions about Corona del Mar Newport Beach luxury home financing',
-      url: 'https://mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker',
-      data: {
-        questions: [
-          {
-            question: "What makes Corona del Mar a prestigious Newport Beach community?",
-            answer: "Corona del Mar offers luxury beachside living with direct beach access, top-rated schools, upscale shopping and dining, and beautiful coastal homes. It's considered one of Newport Beach's most desirable family-oriented luxury communities."
-          },
-          {
-            question: "What is the typical price range for Corona del Mar homes?",
-            answer: "Corona del Mar homes range from $2M to over $12M, with beachside and view properties commanding premium prices. The median home price is around $4.2M as of 2025."
-          },
-          {
-            question: "Do Corona del Mar homes require jumbo financing?",
-            answer: "95% of Corona del Mar homes exceed the 2025 conforming loan limit of $1,089,300, requiring jumbo or super jumbo loan financing. Beachside properties typically require super jumbo loans."
-          },
-          {
-            question: "What financing options are best for Corona del Mar?",
-            answer: "Jumbo loans for properties $1M-$3M, super jumbo loans for luxury homes above $3M, and portfolio loans for unique or ultra-luxury properties. Down payments typically range from 20-40%."
-          },
-          {
-            question: "What amenities make Corona del Mar attractive to families?",
-            answer: "Direct beach access, top-rated Corona del Mar High School, upscale shopping at Fashion Island, fine dining, harbor activities, and family-friendly beach culture in a luxury setting."
+  const schemaData: any[] = [];
 
-        ]
-
-  ],
-
-const coronaDelMarFeatures = [
-    {
-      name: 'Beachside Living',
-      description: 'Direct access to Corona del Mar State Beach and coastal lifestyle',
-      icon: <Waves className="w-6 h-6" />
-    },
-    {
-      name: 'Luxury Community',
-      description: 'Prestigious neighborhood with upscale homes and amenities',
-      icon: <Crown className="w-6 h-6" />
-    },
-    {
-      name: 'Family Excellence',
-      description: 'Top-rated schools and family-oriented luxury community',
-      icon: <Sun className="w-6 h-6" />
-
-    },
-  ],
-
-const propertyTypes = [
-    {
-      name: 'Beachside Estates',
-      priceRange: '$8M - $20M+',
-      description: 'Ultra-luxury homes with direct beach access and ocean views',
-      features: ['Ocean proximity', 'Beach access', 'Luxury finishes', 'Premium locations']
-    },
-    {
-      name: 'Luxury Family Homes',
-      priceRange: '$3M - $8M',
-      description: 'Upscale family homes with modern amenities and prestigious location',
-      features: ['Family-focused design', 'Modern amenities', 'Top schools', 'Luxury features']
-    },
-    {
-      name: 'Coastal Properties',
-      priceRange: '$2M - $4M',
-      description: 'Beautiful coastal homes with community amenities and beach access',
-      features: ['Coastal living', 'Community access', 'Modern updates', 'Family-friendly']
-
-  ],
-
-const financingOptions = [
-    {
-      name: 'Jumbo Loans',
-      description: 'For properties $1M - $3M',
-      rate: 'From 7.25%',
-      downPayment: '20-30%',
-      maxAmount: '$3M'
-    },
-    {
-      name: 'Super Jumbo Loans',
-      description: 'For luxury homes $3M - $12M',
-      rate: 'From 7.75%',
-      downPayment: '30-40%',
-      maxAmount: '$12M'
-    },
-    {
-      name: 'Portfolio Loans',
-      description: 'For ultra-luxury beachside estates',
-      rate: 'From 8.25%',
-      downPayment: '40-50%',
-      maxAmount: '$20M+'
-
-  ];
+  const coronaDelMarFeatures: any[] = [];
+  const propertyTypes: any[] = [];
+  const financingOptions: any[] = [];
 
   return (
     <>
@@ -162,9 +73,11 @@ const financingOptions = [
         description="Corona del Mar Newport Beach mortgage broker specializing in luxury coastal home financing. Prestigious beachside community loans, competitive rates."
         keywords={["Corona del Mar Newport Beach mortgage", "luxury coastal homes", "beachside community loans", "Corona del Mar mortgage broker", "Newport Beach luxury financing"]}
         city="Corona del Mar, Newport Beach"
-        canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker"
-        content={coronaDelMarData};<EnhancedLocalSchema city="Corona del Mar, Newport Beach" page_type="city" service_focus="luxury coastal home financing" />
-      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
+        canonicalUrl="https://www.mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker"
+        content={coronaDelMarData}
+      />
+      <EnhancedLocalSchema city="Corona del Mar, Newport Beach" page_type="city" service_focus="luxury coastal home financing" />
+      
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -310,7 +223,7 @@ const financingOptions = [
                   <CardContent>
                     <p className="text-slate-600 mb-4">{property.description}</p>
                     <div className="space-y-2">
-                      {property.features.map((feature, index) => (
+                      {property.features.map((feature: any, index: number) => (
                         <div key={index} className="flex items-center text-sm text-slate-700">
                           <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
                           {feature}
@@ -400,7 +313,7 @@ const financingOptions = [
               </Button>
             </div>
             <p className="text-sm text-orange-200 mt-4">
-              Licensed mortgage broker NMLS #1426884 • Corona del Mar luxury coastal specialist
+              Licensed mortgage broker NMLS #1426884 â€¢ Corona del Mar luxury coastal specialist
             </p>
           </div>
         </section>
@@ -410,9 +323,9 @@ const financingOptions = [
           currentPage="/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker"
           pageType="city"
           city="Corona del Mar"
-          maxLinks={6};</div>
-    
-
-);
-
+          maxLinks={6} />
+        </div>
+      </>
+  );
 }
+

@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
 export const dynamic = "force-static";
 export async function generateMetadata() {
@@ -9,7 +9,7 @@ export async function generateMetadata() {
     title,
     description,
     alternates: { canonical: BASE + "/articles/first-time-homebuyer-mortgage-orange-county" },
-    openGraph: { title, description, url: BASE + "/articles/first-time-homebuyer-mortgage-orange-county", siteName: "Mo Abdel — Mortgage Broker", images: ["https://www.mothebroker.com/logo.png"] },
+    openGraph: { title, description, url: BASE + '/articles/first-time-homebuyer-mortgage-orange-county', siteName: 'Mo Abdel – Mortgage Broker', images: ['https://www.mothebroker.com/logo.png'] },
     twitter: { card: "summary_large_image", title, description },
   };
 }
@@ -17,8 +17,6 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 
-,
-};
 
 export default function FirstTimeHomebuyerArticle() {
   return (
@@ -44,9 +42,9 @@ export default function FirstTimeHomebuyerArticle() {
               
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 <span>By Mo Abdel, NMLS #1426884</span>
-                <span>•</span>
+                <span>â€¢</span>
                 <span>January 9, 2025</span>
-                <span>•</span>
+                <span>â€¢</span>
                 <span>13 min read</span>
               </div>
               
@@ -81,19 +79,19 @@ export default function FirstTimeHomebuyerArticle() {
                     <div className="bg-white p-4 rounded-lg">
                       <h4 className="font-semibold text-lg mb-3">Median Home Prices</h4>
                       <ul className="text-sm text-gray-700 space-y-2">
-                        <li>• Countywide median: $900,000+</li>
-                        <li>• First-time buyer sweet spot: $650K-$850K</li>
-                        <li>• Condos/townhomes: $500K-$700K</li>
-                        <li>• Affordable pockets: $450K-$600K</li>
+                        <li>â€¢ Countywide median: $900,000+</li>
+                        <li>â€¢ First-time buyer sweet spot: $650K-$850K</li>
+                        <li>â€¢ Condos/townhomes: $500K-$700K</li>
+                        <li>â€¢ Affordable pockets: $450K-$600K</li>
                       </ul>
                     </div>
                     <div className="bg-white p-4 rounded-lg">
                       <h4 className="font-semibold text-lg mb-3">Market Conditions</h4>
                       <ul className="text-sm text-gray-700 space-y-2">
-                        <li>• Average days on market: 25-35</li>
-                        <li>• Inventory: Limited but improving</li>
-                        <li>• Competition: Moderate to high</li>
-                        <li>• Best opportunities: Fall/Winter</li>
+                        <li>â€¢ Average days on market: 25-35</li>
+                        <li>â€¢ Inventory: Limited but improving</li>
+                        <li>â€¢ Competition: Moderate to high</li>
+                        <li>â€¢ Best opportunities: Fall/Winter</li>
                       </ul>
                     </div>
                   </div>
@@ -104,24 +102,24 @@ export default function FirstTimeHomebuyerArticle() {
                   <div className="bg-red-50 border border-red-200 rounded-lg p-6">
                     <h4 className="font-semibold text-red-900 mb-3">Common Challenges</h4>
                     <ul className="space-y-2 text-gray-700 text-sm">
-                      <li>• High median prices vs. income</li>
-                      <li>• Competition from investors and move-up buyers</li>
-                      <li>• Limited inventory in affordable ranges</li>
-                      <li>• Complex HOA and Mello-Roos structures</li>
-                      <li>• Need for larger down payments</li>
-                      <li>• Bidding wars in desirable areas</li>
+                      <li>â€¢ High median prices vs. income</li>
+                      <li>â€¢ Competition from investors and move-up buyers</li>
+                      <li>â€¢ Limited inventory in affordable ranges</li>
+                      <li>â€¢ Complex HOA and Mello-Roos structures</li>
+                      <li>â€¢ Need for larger down payments</li>
+                      <li>â€¢ Bidding wars in desirable areas</li>
                     </ul>
                   </div>
                   
                   <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                     <h4 className="font-semibold text-green-900 mb-3">Available Opportunities</h4>
                     <ul className="space-y-2 text-gray-700 text-sm">
-                      <li>• Multiple first-time buyer programs</li>
-                      <li>• Low down payment loan options</li>
-                      <li>• Down payment assistance programs</li>
-                      <li>• Seller concessions in slower markets</li>
-                      <li>• Condo/townhome affordability</li>
-                      <li>• Up-and-coming neighborhoods</li>
+                      <li>â€¢ Multiple first-time buyer programs</li>
+                      <li>â€¢ Low down payment loan options</li>
+                      <li>â€¢ Down payment assistance programs</li>
+                      <li>â€¢ Seller concessions in slower markets</li>
+                      <li>â€¢ Condo/townhome affordability</li>
+                      <li>â€¢ Up-and-coming neighborhoods</li>
                     </ul>
                   </div>
                 </div>
@@ -142,20 +140,20 @@ export default function FirstTimeHomebuyerArticle() {
                         <div>
                           <h4 className="font-semibold mb-2">Key Benefits</h4>
                           <ul className="text-sm text-gray-700 space-y-1">
-                            <li>• 3.5% down payment minimum</li>
-                            <li>• Credit scores as low as 580</li>
-                            <li>• Seller can pay up to 6% closing costs</li>
-                            <li>• Gift funds allowed for down payment</li>
-                            <li>• Assumable loans</li>
+                            <li>â€¢ 3.5% down payment minimum</li>
+                            <li>â€¢ Credit scores as low as 580</li>
+                            <li>â€¢ Seller can pay up to 6% closing costs</li>
+                            <li>â€¢ Gift funds allowed for down payment</li>
+                            <li>â€¢ Assumable loans</li>
                           </ul>
                         </div>
                         <div>
                           <h4 className="font-semibold mb-2">2025 Orange County Limits</h4>
                           <ul className="text-sm text-gray-700 space-y-1">
-                            <li>• Single-family: $1,089,300</li>
-                            <li>• Duplex: $1,394,775</li>
-                            <li>• Triplex: $1,685,850</li>
-                            <li>• Fourplex: $2,095,200</li>
+                            <li>â€¢ Single-family: $1,089,300</li>
+                            <li>â€¢ Duplex: $1,394,775</li>
+                            <li>â€¢ Triplex: $1,685,850</li>
+                            <li>â€¢ Fourplex: $2,095,200</li>
                           </ul>
                         </div>
                       </div>
@@ -172,19 +170,19 @@ export default function FirstTimeHomebuyerArticle() {
                         <div>
                           <h4 className="font-semibold mb-2">HomeReady Program</h4>
                           <ul className="text-sm text-gray-700 space-y-1">
-                            <li>• 3% down payment</li>
-                            <li>• Income limits apply</li>
-                            <li>• Flexible income sources</li>
-                            <li>• Reduced mortgage insurance</li>
+                            <li>â€¢ 3% down payment</li>
+                            <li>â€¢ Income limits apply</li>
+                            <li>â€¢ Flexible income sources</li>
+                            <li>â€¢ Reduced mortgage insurance</li>
                           </ul>
                         </div>
                         <div>
                           <h4 className="font-semibold mb-2">Home Possible</h4>
                           <ul className="text-sm text-gray-700 space-y-1">
-                            <li>• 3% down payment</li>
-                            <li>• First-time buyer focus</li>
-                            <li>• Homebuyer education required</li>
-                            <li>• Cancellable mortgage insurance</li>
+                            <li>â€¢ 3% down payment</li>
+                            <li>â€¢ First-time buyer focus</li>
+                            <li>â€¢ Homebuyer education required</li>
+                            <li>â€¢ Cancellable mortgage insurance</li>
                           </ul>
                         </div>
                       </div>
@@ -199,12 +197,12 @@ export default function FirstTimeHomebuyerArticle() {
                     <div className="bg-green-50 p-4 rounded-lg">
                       <p className="font-semibold text-green-900 mb-2">Unbeatable Benefits:</p>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• $0 down payment required</li>
-                        <li>• No private mortgage insurance</li>
-                        <li>• Competitive interest rates</li>
-                        <li>• Flexible credit requirements</li>
-                        <li>• No prepayment penalties</li>
-                        <li>• Reusable benefit</li>
+                        <li>â€¢ $0 down payment required</li>
+                        <li>â€¢ No private mortgage insurance</li>
+                        <li>â€¢ Competitive interest rates</li>
+                        <li>â€¢ Flexible credit requirements</li>
+                        <li>â€¢ No prepayment penalties</li>
+                        <li>â€¢ Reusable benefit</li>
                       </ul>
                     </div>
                   </div>
@@ -255,7 +253,7 @@ export default function FirstTimeHomebuyerArticle() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Getting Pre-Approved: Your Competitive Advantage</h2>
                 
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-8 mb-8">
-                  <h3 className="text-xl font-semibold text-yellow-900 mb-4">⚠️ Critical First-Time Buyer Tip</h3>
+                  <h3 className="text-xl font-semibold text-yellow-900 mb-4">âš ï¸ Critical First-Time Buyer Tip</h3>
                   <p className="text-gray-700">
                     In Orange County's competitive market, a strong pre-approval letter is essential. Sellers often receive multiple offers and favor buyers who demonstrate clear financing capability. A comprehensive pre-approval from a dedicated broker can be the difference between getting your offer accepted or losing your dream home.
                   </p>
@@ -267,23 +265,23 @@ export default function FirstTimeHomebuyerArticle() {
                     <h4 className="font-semibold text-lg mb-3">Financial Documentation</h4>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-1">✓</span>
+                        <span className="text-green-600 mt-1">âœ“</span>
                         <span>Last 2 years W-2 forms</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-1">✓</span>
+                        <span className="text-green-600 mt-1">âœ“</span>
                         <span>Recent pay stubs (30 days)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-1">✓</span>
+                        <span className="text-green-600 mt-1">âœ“</span>
                         <span>Bank statements (2 months)</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-1">✓</span>
+                        <span className="text-green-600 mt-1">âœ“</span>
                         <span>Investment account statements</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-green-600 mt-1">✓</span>
+                        <span className="text-green-600 mt-1">âœ“</span>
                         <span>Gift letter (if applicable)</span>
                       </li>
                     </ul>
@@ -293,23 +291,23 @@ export default function FirstTimeHomebuyerArticle() {
                     <h4 className="font-semibold text-lg mb-3">Credit & Income Review</h4>
                     <ul className="space-y-2 text-gray-700">
                       <li className="flex items-start gap-2">
-                        <span className="text-blue-600 mt-1">•</span>
+                        <span className="text-blue-600 mt-1">â€¢</span>
                         <span>Credit score analysis and improvement plan</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-blue-600 mt-1">•</span>
+                        <span className="text-blue-600 mt-1">â€¢</span>
                         <span>Debt-to-income ratio calculation</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-blue-600 mt-1">•</span>
+                        <span className="text-blue-600 mt-1">â€¢</span>
                         <span>Employment verification process</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-blue-600 mt-1">•</span>
+                        <span className="text-blue-600 mt-1">â€¢</span>
                         <span>Asset verification and sourcing</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <span className="text-blue-600 mt-1">•</span>
+                        <span className="text-blue-600 mt-1">â€¢</span>
                         <span>Affordability analysis with all costs</span>
                       </li>
                     </ul>
@@ -325,32 +323,32 @@ export default function FirstTimeHomebuyerArticle() {
                     <div>
                       <p className="font-semibold mb-2">Monthly Housing Costs</p>
                       <ul className="space-y-1 text-gray-700">
-                        <li>• Principal & Interest</li>
-                        <li>• Property taxes (1.2-1.8%)</li>
-                        <li>• Homeowners insurance</li>
-                        <li>• PMI (if applicable)</li>
-                        <li>• HOA dues</li>
-                        <li>• Mello-Roos (if applicable)</li>
+                        <li>â€¢ Principal & Interest</li>
+                        <li>â€¢ Property taxes (1.2-1.8%)</li>
+                        <li>â€¢ Homeowners insurance</li>
+                        <li>â€¢ PMI (if applicable)</li>
+                        <li>â€¢ HOA dues</li>
+                        <li>â€¢ Mello-Roos (if applicable)</li>
                       </ul>
                     </div>
                     <div>
                       <p className="font-semibold mb-2">Upfront Costs</p>
                       <ul className="space-y-1 text-gray-700">
-                        <li>• Down payment</li>
-                        <li>• Closing costs (2-3%)</li>
-                        <li>• Inspection fees</li>
-                        <li>• Appraisal fee</li>
-                        <li>• Moving expenses</li>
+                        <li>â€¢ Down payment</li>
+                        <li>â€¢ Closing costs (2-3%)</li>
+                        <li>â€¢ Inspection fees</li>
+                        <li>â€¢ Appraisal fee</li>
+                        <li>â€¢ Moving expenses</li>
                       </ul>
                     </div>
                     <div>
                       <p className="font-semibold mb-2">Ongoing Expenses</p>
                       <ul className="space-y-1 text-gray-700">
-                        <li>• Maintenance/repairs</li>
-                        <li>• Utilities</li>
-                        <li>• Landscaping</li>
-                        <li>• Emergency fund</li>
-                        <li>• Future improvements</li>
+                        <li>â€¢ Maintenance/repairs</li>
+                        <li>â€¢ Utilities</li>
+                        <li>â€¢ Landscaping</li>
+                        <li>â€¢ Emergency fund</li>
+                        <li>â€¢ Future improvements</li>
                       </ul>
                     </div>
                   </div>
@@ -407,21 +405,21 @@ export default function FirstTimeHomebuyerArticle() {
                     <div>
                       <h5 className="font-semibold mb-2">Financial Strength</h5>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• Strong pre-approval letter</li>
-                        <li>• Proof of funds for down payment</li>
-                        <li>• Pre-inspection when possible</li>
-                        <li>• Larger earnest money deposit</li>
-                        <li>• All-cash appearance (bridge loan option)</li>
+                        <li>â€¢ Strong pre-approval letter</li>
+                        <li>â€¢ Proof of funds for down payment</li>
+                        <li>â€¢ Pre-inspection when possible</li>
+                        <li>â€¢ Larger earnest money deposit</li>
+                        <li>â€¢ All-cash appearance (bridge loan option)</li>
                       </ul>
                     </div>
                     <div>
                       <h5 className="font-semibold mb-2">Terms & Timing</h5>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• Flexible closing timeline</li>
-                        <li>• Minimal contingencies</li>
-                        <li>• Seller concessions negotiation</li>
-                        <li>• Personal letter to sellers</li>
-                        <li>• Quick response times</li>
+                        <li>â€¢ Flexible closing timeline</li>
+                        <li>â€¢ Minimal contingencies</li>
+                        <li>â€¢ Seller concessions negotiation</li>
+                        <li>â€¢ Personal letter to sellers</li>
+                        <li>â€¢ Quick response times</li>
                       </ul>
                     </div>
                   </div>
@@ -473,29 +471,29 @@ export default function FirstTimeHomebuyerArticle() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Why First-Time Buyers Need Professional Broker Guidance</h2>
                 
                 <p className="text-gray-700 mb-6">
-                  The complexity of first-time homebuying in Orange County—from loan program selection to competitive offer strategies—makes professional guidance invaluable. Here's what a dedicated broker provides:
+                  The complexity of first-time homebuying in Orange Countyâ€”from loan program selection to competitive offer strategiesâ€”makes professional guidance invaluable. Here's what a dedicated broker provides:
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-8">
                   <div className="bg-blue-50 border border-blue-200 rounded-lg p-6">
                     <h3 className="font-semibold text-lg text-blue-900 mb-4">Program Expertise</h3>
                     <ul className="space-y-2 text-gray-700 text-sm">
-                      <li>• Compare all available loan programs</li>
-                      <li>• Identify down payment assistance opportunities</li>
-                      <li>• Navigate income and asset requirements</li>
-                      <li>• Optimize loan structure for your situation</li>
-                      <li>• Access wholesale rates and relationships</li>
+                      <li>â€¢ Compare all available loan programs</li>
+                      <li>â€¢ Identify down payment assistance opportunities</li>
+                      <li>â€¢ Navigate income and asset requirements</li>
+                      <li>â€¢ Optimize loan structure for your situation</li>
+                      <li>â€¢ Access wholesale rates and relationships</li>
                     </ul>
                   </div>
                   
                   <div className="bg-green-50 border border-green-200 rounded-lg p-6">
                     <h3 className="font-semibold text-lg text-green-900 mb-4">Market Guidance</h3>
                     <ul className="space-y-2 text-gray-700 text-sm">
-                      <li>• Local market insight and timing advice</li>
-                      <li>• Neighborhood-specific financing strategies</li>
-                      <li>• Offer structure recommendations</li>
-                      <li>• Coordinate with realtors and escrow</li>
-                      <li>• Troubleshoot issues before they become problems</li>
+                      <li>â€¢ Local market insight and timing advice</li>
+                      <li>â€¢ Neighborhood-specific financing strategies</li>
+                      <li>â€¢ Offer structure recommendations</li>
+                      <li>â€¢ Coordinate with realtors and escrow</li>
+                      <li>â€¢ Troubleshoot issues before they become problems</li>
                     </ul>
                   </div>
                 </div>
@@ -506,12 +504,12 @@ export default function FirstTimeHomebuyerArticle() {
                     Beyond securing your loan, I provide comprehensive education about:
                   </p>
                   <ul className="grid md:grid-cols-2 gap-4 text-sm text-gray-700">
-                    <li>• Understanding loan terms and payments</li>
-                    <li>• Building equity and wealth strategies</li>
-                    <li>• Future refinancing opportunities</li>
-                    <li>• Home maintenance and ownership costs</li>
-                    <li>• Tax benefits of homeownership</li>
-                    <li>• When and how to remove PMI</li>
+                    <li>â€¢ Understanding loan terms and payments</li>
+                    <li>â€¢ Building equity and wealth strategies</li>
+                    <li>â€¢ Future refinancing opportunities</li>
+                    <li>â€¢ Home maintenance and ownership costs</li>
+                    <li>â€¢ Tax benefits of homeownership</li>
+                    <li>â€¢ When and how to remove PMI</li>
                   </ul>
                 </div>
               </section>
@@ -603,7 +601,7 @@ export default function FirstTimeHomebuyerArticle() {
       <Footer />
     
 <script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":"First Time Homebuyer Mortgage Orange County | Mo Abdel","mainEntityOfPage":"https://www.mothebroker.com/articles/first-time-homebuyer-mortgage-orange-county","author":{"@type":"Person","name":"Mo Abdel"},"publisher":{"@type":"Organization","name":"Mo Abdel — Mortgage Broker","logo":{"@type":"ImageObject","url":"https://www.mothebroker.com/logo.png"}},"image":"https://www.mothebroker.com/logo.png"})
+  __html: JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":"First Time Homebuyer Mortgage Orange County | Mo Abdel","mainEntityOfPage":"https://www.mothebroker.com/articles/first-time-homebuyer-mortgage-orange-county","author":{"@type":"Person","name":"Mo Abdel"},"publisher":{"@type":"Organization","name":"Mo Abdel â€” Mortgage Broker","logo":{"@type":"ImageObject","url":"https://www.mothebroker.com/logo.png"}},"image":"https://www.mothebroker.com/logo.png"})
 }} />
 </>
   );

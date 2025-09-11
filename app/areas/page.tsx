@@ -88,6 +88,7 @@ const serviceAreas = [
     slug: 'tustin-mortgage-broker',
     highlights: ['The District', 'Tustin Legacy', 'Historic Old Town', 'Great schools']
 
+  },
 ];
 
 export default function NeighborhoodGuidePage() {
@@ -159,7 +160,7 @@ export default function NeighborhoodGuidePage() {
                   </div>
                 </div>
                 
-                <Link href={`/areas/${area.slug}`};<Button className="w-full bg-blue-600 hover:bg-blue-700">
+                <Link href={`/areas/${area.slug}`}><Button className="w-full bg-blue-600 hover:bg-blue-700">
                     {area.city} Mortgage Info
                   </Button>
                 </Link>

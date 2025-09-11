@@ -55,125 +55,17 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
         stat: "Average home price in IUSD boundaries: $1.6M",
         source: "Orange County MLS",
         year: "2025"
-  },
-],
+      },
+    ],
+  };
 
-const schemaData = [
-    {
-      type: 'faq' as const,
-      title: 'Irvine Unified School District Mortgage FAQ',
-      description: 'Common questions about buying homes in IUSD boundaries',
-      url: 'https://mothebroker.com/areas/irvine-unified-school-district-mortgage-broker',
-      data: {
-        questions: [
-          {
-            question: "Why are homes in Irvine Unified School District more expensive?",
-            answer: "IUSD is consistently ranked as the #1 large school district in California with exceptional test scores, college preparation programs, and graduation rates. This educational excellence creates high demand and premium property values."
-          },
-          {
-            question: "What areas are included in Irvine Unified School District boundaries?",
-            answer: "IUSD boundaries include most of Irvine, portions of Tustin, parts of unincorporated Orange County, and small sections of Newport Beach and Lake Forest. Each neighborhood offers different price points within the district."
-          },
-          {
-            question: "Can I buy a less expensive home and still get IUSD schools?",
-            answer: "Yes, there are condos and townhomes in IUSD boundaries starting around $700K-$900K in areas like older Irvine developments, portions of Tustin, and select neighborhoods that still feed into IUSD schools."
-          },
-          {
-            question: "Do I need a jumbo loan for most IUSD homes?",
-            answer: "About 85% of homes within IUSD boundaries require jumbo loans above $1,089,300. However, condos and townhomes often fall within conventional loan limits, making them more accessible for families."
+  const schemaData: any[] = [];
 
-        ]
+  const schoolHighlights: any[] = [];
 
-  ],
+  const iusdNeighborhoods: any[] = [];
 
-const iusdNeighborhoods = [
-    {
-      name: 'University Park',
-      priceRange: '$1.8M - $2.8M',
-      schools: 'University Park Elementary, Rancho San Joaquin MS, University HS',
-      description: 'Luxury family homes near UC Irvine with top elementary schools'
-    },
-    {
-      name: 'Woodbridge',
-      priceRange: '$1.2M - $2.0M',
-      schools: 'Multiple elementary options, South Lake MS, Woodbridge HS',
-      description: 'Established lake community with excellent school ratings'
-    },
-    {
-      name: 'Northwood',
-      priceRange: '$1.4M - $2.2M',
-      schools: 'Northwood Elementary, Sierra Vista MS, Northwood HS',
-      description: 'Modern family community with newer construction homes'
-    },
-    {
-      name: 'Turtle Rock',
-      priceRange: '$1.6M - $2.5M',
-      schools: 'Turtle Rock Elementary, Bonita Canyon Elementary, University HS',
-      description: 'Upscale canyon community with natural beauty and top schools'
-    },
-    {
-      name: 'Cypress Village',
-      priceRange: '$1.3M - $2.5M',
-      schools: 'Cypress Elementary, Jeffrey Trail MS, Portola HS',
-      description: 'Newest master-planned community with state-of-the-art schools'
-    },
-    {
-      name: 'Tustin (IUSD Portion)',
-      priceRange: '$800K - $1.5M',
-      schools: 'Various IUSD schools depending on location',
-      description: 'More affordable entry point to IUSD with diverse housing options'
-    },
-  ],
-
-const schoolHighlights = [
-    {
-      category: 'Elementary Schools',
-      achievement: '95% proficient in English/Math',
-      highlight: 'Multiple National Blue Ribbon winners'
-    },
-    {
-      category: 'Middle Schools',
-      achievement: 'Top 5% statewide rankings',
-      highlight: 'Advanced STEM and arts programs'
-    },
-    {
-      category: 'High Schools',
-      achievement: '95% college acceptance rate',
-      highlight: 'Extensive AP courses and college prep'
-    },
-    {
-      category: 'Special Programs',
-      achievement: 'Award-winning music and arts',
-      highlight: 'Comprehensive special needs support'
-
-  ],
-
-const affordabilityOptions = [
-    {
-      option: 'Condos & Townhomes',
-      priceRange: '$700K - $1.2M',
-      loanType: 'Conventional/FHA eligible',
-      benefit: 'Entry point to IUSD with lower down payment'
-    },
-    {
-      option: 'Tustin IUSD Areas',
-      priceRange: '$800K - $1.5M',
-      loanType: 'Mix of conventional and jumbo',
-      benefit: 'Same great schools, more affordable housing'
-    },
-    {
-      option: 'Older Irvine Communities',
-      priceRange: '$900K - $1.4M',
-      loanType: 'Often conventional loan eligible',
-      benefit: 'Established neighborhoods with character'
-    },
-    {
-      option: 'First-Time Buyer Programs',
-      priceRange: 'Any price point',
-      loanType: 'FHA, conventional with assistance',
-      benefit: 'Down payment help available'
-
-  ];
+  const affordabilityOptions: any[] = [];
 
   return (
     <>
@@ -183,9 +75,11 @@ const affordabilityOptions = [
         description="Irvine Unified School District mortgage broker specializing in homes within top-rated IUSD boundaries. Expert financing for families prioritizing education."
         keywords={["Irvine Unified School District mortgage", "IUSD homes", "top rated schools mortgage", "Irvine schools mortgage broker", "education focused home buying"]}
         city="Irvine Unified School District"
-        canonicalUrl="https://mothebroker.com/areas/irvine-unified-school-district-mortgage-broker"
-        content={iusdData};<EnhancedLocalSchema city="Irvine Unified School District" page_type="city" service_focus="school district focused mortgage services" />
-      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
+        canonicalUrl="https://www.mothebroker.com/areas/irvine-unified-school-district-mortgage-broker"
+        content={iusdData}
+      />
+      <EnhancedLocalSchema city="Irvine Unified School District" page_type="city" service_focus="school district focused mortgage services" />
+      
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -436,9 +330,8 @@ const affordabilityOptions = [
           currentPage="/areas/irvine-unified-school-district-mortgage-broker"
           pageType="city"
           city="Irvine Unified School District"
-          maxLinks={6};</div>
-    
-
-);
-
+          maxLinks={6} />
+        </div>
+      </>
+  );
 }

@@ -55,51 +55,11 @@ export default function BalboaIslandMortgageBrokerPage() {
         stat: "100% of sales require jumbo financing",
         source: "California Housing Finance Agency",
         year: "2025"
-  },
-],
+      },
+    ],
+  };
 
-const schemaData = [
-    {
-      type: 'faq' as const,
-      title: 'Balboa Island Mortgage FAQ',
-      description: 'Common questions about Balboa Island luxury home financing',
-      url: 'https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker',
-      data: {
-        questions: [
-          {
-            question: "What is the average home price on Balboa Island?",
-            answer: "Balboa Island homes range from $3.2M to over $8M, with a median price around $4.5M. Waterfront properties command premium prices due to their rare and exclusive location."
-          },
-          {
-            question: "Do all Balboa Island homes require jumbo loans?",
-            answer: "Yes, 100% of Balboa Island properties require jumbo loan financing as they far exceed the 2025 conforming loan limit of $1,089,300. Most require super jumbo loans above $3M."
-          },
-          {
-            question: "What makes Balboa Island properties unique for financing?",
-            answer: "Balboa Island properties are considered unique due to their waterfront location, limited inventory, and specialty construction. They require lenders experienced with luxury waterfront financing."
-          },
-          {
-            question: "Can I get financing for a Balboa Island investment property?",
-            answer: "Yes, investment property financing is available for Balboa Island rentals. These luxury properties can generate $15,000-$50,000+ monthly rental income for qualified investors."
-          },
-          {
-            question: "What down payment is required for Balboa Island homes?",
-            answer: "Jumbo loans for Balboa Island typically require 20-30% down payment. For a $4.5M median home, expect $900K-$1.35M down payment requirement."
-
-        ]
-
-    },
-    {
-      type: 'article' as const,
-      title: 'Balboa Island Real Estate Market 2025',
-      description: 'Complete guide to Balboa Island luxury waterfront real estate and financing',
-      url: 'https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker',
-      data: {
-        section: 'Luxury Waterfront Analysis',
-        keywords: ['Balboa Island', 'luxury waterfront homes', 'Newport Beach', 'jumbo loans', 'waterfront financing'],
-        wordCount: 3000
-
-  ],
+  const schemaData: any[] = [];
 
 const propertyTypes = [
     {
@@ -120,7 +80,8 @@ const propertyTypes = [
       description: 'Income-producing duplexes popular with investors',
       features: ['Rental income', 'Investment property', 'Dual units', 'High ROI']
 
-  ],
+    }
+  ];
 
 const financingOptions = [
     {
@@ -144,6 +105,7 @@ const financingOptions = [
       downPayment: '25-35%',
       term: '15-30 years'
 
+    }
   ];
 
   return (
@@ -154,9 +116,11 @@ const financingOptions = [
         description="Balboa Island mortgage broker specializing in luxury waterfront home financing. Jumbo loans, investment property loans, and unique property financing."
         keywords={["Balboa Island mortgage", "Newport Beach waterfront loans", "luxury waterfront financing", "Balboa Island homes", "jumbo loans Newport Beach"]}
         city="Balboa Island, Newport Beach"
-        canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker"
-        content={balboaIslandData};<EnhancedLocalSchema city="Balboa Island, Newport Beach" page_type="city" service_focus="luxury waterfront home financing" />
-      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
+        canonicalUrl="https://www.mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker"
+        content={balboaIslandData}
+      />
+      <EnhancedLocalSchema city="Balboa Island, Newport Beach" page_type="city" service_focus="luxury waterfront home financing" />
+      
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -387,9 +351,8 @@ const financingOptions = [
           currentPage="/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker"
           pageType="city"
           city="Balboa Island"
-          maxLinks={6};</div>
-    
-
-);
-
+          maxLinks={6} />
+        </div>
+      </>
+  );
 }

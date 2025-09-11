@@ -55,40 +55,13 @@ export default function NewportCoastMortgageBrokerPage() {
         stat: "Average lot size: 15,000+ sq ft",
         source: "Newport Coast Master Plan",
         year: "2024"
-  },
-],
+      },
+    ],
+  };
 
-const schemaData = [
-    {
-      type: 'faq' as const,
-      title: 'Newport Coast Luxury Mortgage FAQ',
-      description: 'Common questions about Newport Coast ultra-luxury home financing',
-      url: 'https://mothebroker.com/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker',
-      data: {
-        questions: [
-          {
-            question: "What makes Newport Coast the most prestigious address in Orange County?",
-            answer: "Newport Coast offers unparalleled ocean views, custom estates on large lots, resort-style amenities, and exclusive coastal living. It's considered the crown jewel of Orange County luxury real estate."
-          },
-          {
-            question: "What is the typical price range for Newport Coast homes?",
-            answer: "Newport Coast homes range from $3M to over $20M, with a median price around $7.2M. Ocean view properties command significant premiums, often exceeding $10M."
-          },
-          {
-            question: "Do all Newport Coast homes require jumbo financing?",
-            answer: "Yes, 100% of Newport Coast properties require super jumbo loans above $3M. Many require portfolio loans or specialized ultra-high-net-worth financing programs."
-          },
-          {
-            question: "What loan programs are available for Newport Coast estates?",
-            answer: "Super jumbo loans, portfolio loans, asset-based lending, and private banking solutions. Down payments typically range from 25-40% depending on the loan amount."
-          },
-          {
-            question: "What amenities make Newport Coast unique?",
-            answer: "The Resort at Pelican Hill, championship golf courses, private beaches, hiking trails, and Crystal Cove State Park access. It's a resort-style community with permanent residences."
+  const schemaData: any[] = [];
 
-        ]
-
-  ],
+        
 
 const newportCoastFeatures = [
     {
@@ -107,7 +80,7 @@ const newportCoastFeatures = [
       icon: <Mountain className="w-6 h-6" />
 
     },
-  ],
+  ];
 
 const propertyTypes = [
     {
@@ -127,8 +100,8 @@ const propertyTypes = [
       priceRange: '$3M - $8M',
       description: 'Luxury homes in gated Newport Coast communities',
       features: ['Gated security', 'Custom design', 'Premium lots', 'Resort amenities']
-
-  ],
+    }
+  ];
 
 const financingOptions = [
     {
@@ -152,6 +125,7 @@ const financingOptions = [
       downPayment: '40-50%',
       maxAmount: 'No limit'
 
+    }
   ];
 
   return (
@@ -163,8 +137,9 @@ const financingOptions = [
         keywords={["Newport Coast mortgage", "luxury coastal homes", "ocean view financing", "ultra-luxury mortgage broker", "Newport Coast estates"]}
         city="Newport Coast, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker"
-        content={newportCoastData};<EnhancedLocalSchema city="Newport Coast, Newport Beach" page_type="city" service_focus="ultra-luxury coastal estate financing" />
-      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
+        content={newportCoastData}
+      />
+      <EnhancedLocalSchema city="Newport Coast, Newport Beach" page_type="city" service_focus="ultra-luxury coastal estate financing" />
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -410,9 +385,10 @@ const financingOptions = [
           currentPage="/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker"
           pageType="city"
           city="Newport Coast"
-          maxLinks={6};</div>
+          maxLinks={6}
+        /></div>
     
 
-);
-
+    </>
+  );
 }

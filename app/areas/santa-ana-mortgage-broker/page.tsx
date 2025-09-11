@@ -56,7 +56,7 @@ export default function SantaAnaMortgageBrokerPage() {
       avgPrice: '$550K',
       description: 'Historic area with craftsman homes and cultural significance'
     },
-  ],
+  ];
 
 const loanPrograms = [
     {

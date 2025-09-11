@@ -55,40 +55,13 @@ export default function LidoIsleMortgageBrokerPage() {
         stat: "Private island with 285 exclusive properties",
         source: "Lido Isle Association",
         year: "2024"
-  },
-],
+      },
+    ],
+  };
 
-const schemaData = [
-    {
-      type: 'faq' as const,
-      title: 'Lido Isle Newport Beach Mortgage FAQ',
-      description: 'Common questions about Lido Isle Newport Beach waterfront estate financing',
-      url: 'https://mothebroker.com/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker',
-      data: {
-        questions: [
-          {
-            question: "What makes Lido Isle unique in Newport Beach?",
-            answer: "Lido Isle is an exclusive private island community with only 285 properties, featuring waterfront estates, private docks, and ultra-luxury amenities. It offers the ultimate in privacy and prestige with direct bay access."
-          },
-          {
-            question: "What is the typical price range for Lido Isle homes?",
-            answer: "Lido Isle homes range from $4M to over $15M, with waterfront properties commanding premium prices. The median home price is around $8.5M as of 2025, reflecting the exclusive private island location."
-          },
-          {
-            question: "Do all Lido Isle homes require jumbo financing?",
-            answer: "Yes, 100% of Lido Isle properties require super jumbo loans above $3M. Most require specialized portfolio loans or private banking solutions due to the ultra-luxury nature and high values."
-          },
-          {
-            question: "What financing options are available for Lido Isle estates?",
-            answer: "Super jumbo loans, portfolio loans, asset-based lending, and private banking solutions. Down payments typically range from 30-50% depending on the loan amount and borrower profile."
-          },
-          {
-            question: "What amenities make Lido Isle exclusive?",
-            answer: "Private island access, waterfront living, private docks and boat slips, yacht access, exclusive community amenities, and unparalleled privacy in the heart of Newport Beach."
+  const schemaData: any[] = [];
 
-        ]
-
-  ],
+        
 
 const lidoIsleFeatures = [
     {
@@ -107,7 +80,7 @@ const lidoIsleFeatures = [
       icon: <Anchor className="w-6 h-6" />
 
     },
-  ],
+  ];
 
 const propertyTypes = [
     {
@@ -127,8 +100,8 @@ const propertyTypes = [
       priceRange: '$4M - $8M',
       description: 'Exclusive island properties with luxury amenities and privacy',
       features: ['Private island access', 'Luxury amenities', 'Exclusive community', 'Premium locations']
-
-  ],
+    }
+  ];
 
 const financingOptions = [
     {
@@ -151,7 +124,7 @@ const financingOptions = [
       rate: 'Negotiable',
       downPayment: '50%+',
       maxAmount: 'No limit'
-
+    }
   ];
 
   return (
@@ -163,8 +136,9 @@ const financingOptions = [
         keywords={["Lido Isle Newport Beach mortgage", "waterfront estate loans", "private island homes", "Newport Beach luxury financing", "Lido Isle estates"]}
         city="Lido Isle, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker"
-        content={lidoIsleData};<EnhancedLocalSchema city="Lido Isle, Newport Beach" page_type="city" service_focus="waterfront estate financing" />
-      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
+        content={lidoIsleData}
+      />
+      <EnhancedLocalSchema city="Lido Isle, Newport Beach" page_type="city" service_focus="waterfront estate financing" />
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -410,9 +384,10 @@ const financingOptions = [
           currentPage="/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker"
           pageType="city"
           city="Lido Isle"
-          maxLinks={6};</div>
+          maxLinks={6}
+        /></div>
     
 
-);
-
+    </>
+  );
 }

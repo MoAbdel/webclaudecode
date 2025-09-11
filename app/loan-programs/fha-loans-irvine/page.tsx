@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 
 export const dynamic = "force-static";
 export async function generateMetadata() {
@@ -9,7 +9,7 @@ export async function generateMetadata() {
     title,
     description,
     alternates: { canonical: BASE + "/loan-programs/fha-loans-irvine" },
-    openGraph: { title, description, url: BASE + "/loan-programs/fha-loans-irvine", siteName: "Mo Abdel — Mortgage Broker", images: ["https://www.mothebroker.com/logo.png"] },
+    openGraph: { title, description, url: BASE + "/loan-programs/fha-loans-irvine", siteName: "Mo Abdel â€” Mortgage Broker", images: ["https://www.mothebroker.com/logo.png"] },
     twitter: { card: "summary_large_image", title, description },
   };
 }
@@ -419,7 +419,7 @@ export default function FHALoansIrvinePage() {
               </a>
             </div>
             <p className="text-sm text-blue-200 mt-4">
-              Licensed mortgage broker NMLS #1426884 • Irvine FHA loan specialist
+              Licensed mortgage broker NMLS #1426884 â€¢ Irvine FHA loan specialist
             </p>
           </div>
         </section>
@@ -440,14 +440,3 @@ export default function FHALoansIrvinePage() {
 
 
 
-<section className="mt-12">
-  <h2 className="text-2xl font-bold mb-4">Related Options</h2>
-  <ul className="list-disc list-inside text-blue-700 space-y-1">
-    <li><a href="/loan-programs/conventional-loans">Conventional Loans</a></li>
-    <li><a href="/loan-programs/jumbo-loans">Jumbo Loans</a></li>
-  </ul>
-
-<script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"FinancialService","name":"Mo Abdel — Mortgage Broker","serviceType":"Mortgage Service","areaServed":"Orange County, CA","url":"https://www.mothebroker.com/loan-programs/fha-loans-irvine","telephone":"(949) 579-2057","address":{"@type":"PostalAddress","addressLocality":"Orange County","addressRegion":"CA","addressCountry":"US"}})
-}} />
-</section>

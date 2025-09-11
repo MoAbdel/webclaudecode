@@ -1,4 +1,4 @@
-import { Metadata } from 'next';
+﻿import { Metadata } from 'next';
 
 export const dynamic = "force-static";
 export async function generateMetadata() {
@@ -9,7 +9,7 @@ export async function generateMetadata() {
     title,
     description,
     alternates: { canonical: BASE + "/articles/orange-county-mortgage-refinance-specialist" },
-    openGraph: { title, description, url: BASE + "/articles/orange-county-mortgage-refinance-specialist", siteName: "Mo Abdel — Mortgage Broker", images: ["https://www.mothebroker.com/logo.png"] },
+    openGraph: { title, description, url: BASE + '/articles/orange-county-mortgage-refinance-specialist', siteName: 'Mo Abdel – Mortgage Broker', images: ['https://www.mothebroker.com/logo.png'] },
     twitter: { card: "summary_large_image", title, description },
   };
 }
@@ -17,8 +17,6 @@ import Link from 'next/link';
 import Footer from '@/components/Footer';
 import AdvancedSchemaMarkup from '@/components/seo/AdvancedSchemaMarkup';
 
-,
-};
 
 export default function RefinanceSpecialistArticle() {
   return (
@@ -44,9 +42,9 @@ export default function RefinanceSpecialistArticle() {
               
               <div className="flex items-center gap-4 text-gray-600 mb-8">
                 <span>By Mo Abdel, NMLS #1426884</span>
-                <span>•</span>
+                <span>â€¢</span>
                 <span>January 9, 2025</span>
-                <span>•</span>
+                <span>â€¢</span>
                 <span>10 min read</span>
               </div>
               
@@ -80,8 +78,8 @@ export default function RefinanceSpecialistArticle() {
                   <p className="mb-4">Use this simple break-even analysis:</p>
                   <div className="bg-white p-4 rounded-lg">
                     <p className="font-semibold mb-2">Break-Even Formula:</p>
-                    <p className="text-sm text-gray-700">Total Closing Costs ÷ Monthly Savings = Break-Even (in months)</p>
-                    <p className="text-xs text-gray-600 mt-2">Example: $6,000 costs ÷ $250 savings = 24 months</p>
+                    <p className="text-sm text-gray-700">Total Closing Costs Ã· Monthly Savings = Break-Even (in months)</p>
+                    <p className="text-xs text-gray-600 mt-2">Example: $6,000 costs Ã· $250 savings = 24 months</p>
                   </div>
                 </div>
 
@@ -90,19 +88,19 @@ export default function RefinanceSpecialistArticle() {
                     <h3 className="text-2xl font-semibold mb-4">Rate-Term Refinance Benefits</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-3">✓</span>
+                        <span className="text-green-600 mr-3">âœ“</span>
                         <span>Lower interest rate (ideal when rates drop 0.5%+ below current)</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-3">✓</span>
+                        <span className="text-green-600 mr-3">âœ“</span>
                         <span>Switch from ARM to fixed-rate stability</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-3">✓</span>
+                        <span className="text-green-600 mr-3">âœ“</span>
                         <span>Remove PMI with 20%+ equity</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-3">✓</span>
+                        <span className="text-green-600 mr-3">âœ“</span>
                         <span>Shorten loan term (30-year to 15-year)</span>
                       </li>
                     </ul>
@@ -112,19 +110,19 @@ export default function RefinanceSpecialistArticle() {
                     <h3 className="text-2xl font-semibold mb-4">Cash-Out Refi Uses</h3>
                     <ul className="space-y-3">
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-3">✓</span>
+                        <span className="text-green-600 mr-3">âœ“</span>
                         <span>Home improvements and renovations</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-3">✓</span>
+                        <span className="text-green-600 mr-3">âœ“</span>
                         <span>High-interest debt consolidation</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-3">✓</span>
+                        <span className="text-green-600 mr-3">âœ“</span>
                         <span>Investment property down payment</span>
                       </li>
                       <li className="flex items-start">
-                        <span className="text-green-600 mr-3">✓</span>
+                        <span className="text-green-600 mr-3">âœ“</span>
                         <span>Education expenses or business funding</span>
                       </li>
                     </ul>
@@ -145,10 +143,10 @@ export default function RefinanceSpecialistArticle() {
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <p className="font-semibold text-gray-900 mb-2">Best For:</p>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• Lowering monthly payments</li>
-                        <li>• Eliminating PMI with sufficient equity</li>
-                        <li>• Switching from ARM to fixed</li>
-                        <li>• Building equity faster (30 to 15-year)</li>
+                        <li>â€¢ Lowering monthly payments</li>
+                        <li>â€¢ Eliminating PMI with sufficient equity</li>
+                        <li>â€¢ Switching from ARM to fixed</li>
+                        <li>â€¢ Building equity faster (30 to 15-year)</li>
                       </ul>
                     </div>
                   </div>
@@ -161,10 +159,10 @@ export default function RefinanceSpecialistArticle() {
                     <div className="bg-gray-50 p-4 rounded-lg">
                       <p className="font-semibold text-gray-900 mb-2">Typical Guidelines:</p>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>• Maximum 80% combined loan-to-value (CLTV)</li>
-                        <li>• Minimum 620 credit score</li>
-                        <li>• Debt-to-income ratio under 43%</li>
-                        <li>• 2-6 months mortgage reserves required</li>
+                        <li>â€¢ Maximum 80% combined loan-to-value (CLTV)</li>
+                        <li>â€¢ Minimum 620 credit score</li>
+                        <li>â€¢ Debt-to-income ratio under 43%</li>
+                        <li>â€¢ 2-6 months mortgage reserves required</li>
                       </ul>
                     </div>
                   </div>
@@ -190,7 +188,7 @@ export default function RefinanceSpecialistArticle() {
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Why Choose a Refinance Specialist vs. Your Current Lender</h2>
                 
                 <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-8 mb-8">
-                  <h3 className="text-xl font-semibold text-yellow-900 mb-4">⚠️ Common Refinance Mistake</h3>
+                  <h3 className="text-xl font-semibold text-yellow-900 mb-4">âš ï¸ Common Refinance Mistake</h3>
                   <p className="text-gray-700">
                     Many homeowners only contact their current lender when considering a refinance. This single-source approach often costs thousands in missed savings. A specialist shops multiple lenders to ensure you get the best deal available.
                   </p>
@@ -200,24 +198,24 @@ export default function RefinanceSpecialistArticle() {
                   <div className="bg-green-50 p-6 rounded-lg">
                     <h3 className="text-xl font-semibold text-green-900 mb-4">Refinance Specialist Advantages</h3>
                     <ul className="space-y-3 text-gray-700">
-                      <li>• Shops 200+ lenders for best rates</li>
-                      <li>• Negotiates better terms using volume</li>
-                      <li>• Understands local property values</li>
-                      <li>• Handles complex financial situations</li>
-                      <li>• Provides unbiased rate comparisons</li>
-                      <li>• Manages entire process from start to close</li>
+                      <li>â€¢ Shops 200+ lenders for best rates</li>
+                      <li>â€¢ Negotiates better terms using volume</li>
+                      <li>â€¢ Understands local property values</li>
+                      <li>â€¢ Handles complex financial situations</li>
+                      <li>â€¢ Provides unbiased rate comparisons</li>
+                      <li>â€¢ Manages entire process from start to close</li>
                     </ul>
                   </div>
                   
                   <div className="bg-red-50 p-6 rounded-lg">
                     <h3 className="text-xl font-semibold text-red-900 mb-4">Single Lender Limitations</h3>
                     <ul className="space-y-3 text-gray-700">
-                      <li>• Only offers their own products</li>
-                      <li>• May not have competitive rates</li>
-                      <li>• Limited flexibility on guidelines</li>
-                      <li>• Less incentive to negotiate</li>
-                      <li>• Generic approach to unique situations</li>
-                      <li>• May push higher-profit products</li>
+                      <li>â€¢ Only offers their own products</li>
+                      <li>â€¢ May not have competitive rates</li>
+                      <li>â€¢ Limited flexibility on guidelines</li>
+                      <li>â€¢ Less incentive to negotiate</li>
+                      <li>â€¢ Generic approach to unique situations</li>
+                      <li>â€¢ May push higher-profit products</li>
                     </ul>
                   </div>
                 </div>
@@ -313,21 +311,21 @@ export default function RefinanceSpecialistArticle() {
                     <div>
                       <h4 className="font-semibold mb-2">Financial Documents</h4>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>□ Last 2 years W-2s</li>
-                        <li>□ Last 2 years tax returns</li>
-                        <li>□ Recent pay stubs (30 days)</li>
-                        <li>□ Bank statements (2 months)</li>
-                        <li>□ Investment account statements</li>
+                        <li>â–¡ Last 2 years W-2s</li>
+                        <li>â–¡ Last 2 years tax returns</li>
+                        <li>â–¡ Recent pay stubs (30 days)</li>
+                        <li>â–¡ Bank statements (2 months)</li>
+                        <li>â–¡ Investment account statements</li>
                       </ul>
                     </div>
                     <div>
                       <h4 className="font-semibold mb-2">Property Documents</h4>
                       <ul className="text-sm text-gray-700 space-y-1">
-                        <li>□ Current mortgage statement</li>
-                        <li>□ Homeowners insurance policy</li>
-                        <li>□ Property tax records</li>
-                        <li>□ HOA documents (if applicable)</li>
-                        <li>□ Recent property tax bill</li>
+                        <li>â–¡ Current mortgage statement</li>
+                        <li>â–¡ Homeowners insurance policy</li>
+                        <li>â–¡ Property tax records</li>
+                        <li>â–¡ HOA documents (if applicable)</li>
+                        <li>â–¡ Recent property tax bill</li>
                       </ul>
                     </div>
                   </div>
@@ -403,11 +401,12 @@ export default function RefinanceSpecialistArticle() {
       <Footer />
     
 <script type="application/ld+json" dangerouslySetInnerHTML={{
-  __html: JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":"Orange County Mortgage Refinance Specialist | Mo Abdel","mainEntityOfPage":"https://www.mothebroker.com/articles/orange-county-mortgage-refinance-specialist","author":{"@type":"Person","name":"Mo Abdel"},"publisher":{"@type":"Organization","name":"Mo Abdel — Mortgage Broker","logo":{"@type":"ImageObject","url":"https://www.mothebroker.com/logo.png"}},"image":"https://www.mothebroker.com/logo.png"})
+  __html: JSON.stringify({"@context":"https://schema.org","@type":"Article","headline":"Orange County Mortgage Refinance Specialist | Mo Abdel","mainEntityOfPage":"https://www.mothebroker.com/articles/orange-county-mortgage-refinance-specialist","author":{"@type":"Person","name":"Mo Abdel"},"publisher":{"@type":"Organization","name":"Mo Abdel â€” Mortgage Broker","logo":{"@type":"ImageObject","url":"https://www.mothebroker.com/logo.png"}},"image":"https://www.mothebroker.com/logo.png"})
 }} />
 </>
   );
 }
+
 
 
 

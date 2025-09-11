@@ -56,7 +56,7 @@ export default function MissionViejoMortgageBrokerPage() {
       avgPrice: '$920K',
       description: 'Hillside community with canyon views and hiking trails'
     },
-  ],
+  ];
 
 const loanPrograms = [
     {

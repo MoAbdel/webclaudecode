@@ -55,76 +55,15 @@ export default function WoodbridgeMortgageBrokerPage() {
         stat: "5 man-made lakes in community",
         source: "Irvine Company",
         year: "2024"
-  },
-],
+      },
+    ],
+  };
 
-const schemaData = [
-    {
-      type: 'faq' as const,
-      title: 'Woodbridge Irvine Mortgage FAQ',
-      description: 'Common questions about Woodbridge Irvine home financing',
-      url: 'https://mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker',
-      data: {
-        questions: [
-          {
-            question: "What makes Woodbridge special for families?",
-            answer: "Woodbridge features 5 man-made lakes, extensive parks, top-rated schools, and family-friendly amenities. It's one of Irvine's most established communities, built in the 1970s with mature landscaping."
-          },
-          {
-            question: "What is the price range for Woodbridge homes?",
-            answer: "Woodbridge homes typically range from $1.2M to $1.8M, with lakefront properties commanding premium prices. The median home price is around $1.5M as of 2025."
-          },
-          {
-            question: "Do Woodbridge homes require jumbo loans?",
-            answer: "75% of Woodbridge homes exceed the 2025 conforming loan limit of $1,089,300, requiring jumbo loan financing. Lakefront properties almost always need jumbo loans."
-          },
-          {
-            question: "What loan programs work best for Woodbridge?",
-            answer: "Jumbo loans are most common, with conventional loans for condos and townhomes. Physician loans are popular due to proximity to medical facilities, and investment property loans for rental homes."
+  const schemaData: any[] = [];
 
-        ]
+  const woodbridgeFeatures: { name: string; description: string; icon: React.ReactNode }[] = [];
 
-  ],
-
-const woodbridgeFeatures = [
-    {
-      name: 'Lake Access',
-      description: '5 private lakes with walking trails and recreational activities',
-      icon: <Waves className="w-6 h-6" />
-    },
-    {
-      name: 'Mature Community',
-      description: 'Established 1970s development with mature trees and landscaping',
-      icon: <TreePine className="w-6 h-6" />
-    },
-    {
-      name: 'Family Amenities',
-      description: 'Recreation centers, pools, tennis courts, and playgrounds',
-      icon: <Home className="w-6 h-6" />
-
-    },
-  ],
-
-const propertyTypes = [
-    {
-      name: 'Lakefront Homes',
-      priceRange: '$1.6M - $2.2M',
-      description: 'Premium homes with direct lake views and private access',
-      sqft: '3,000-4,500 sq ft'
-    },
-    {
-      name: 'Interior Homes',
-      priceRange: '$1.2M - $1.6M',
-      description: 'Family homes on tree-lined streets with community amenities',
-      sqft: '2,500-3,500 sq ft'
-    },
-    {
-      name: 'Townhomes',
-      priceRange: '$900K - $1.3M',
-      description: 'Attached homes with shared walls, often conventional loan eligible',
-      sqft: '1,800-2,800 sq ft'
-
-  ];
+  const propertyTypes: any[] = [];
 
   return (
     <>
@@ -134,9 +73,11 @@ const propertyTypes = [
         description="Woodbridge Irvine mortgage broker specializing in lake community homes. Established neighborhood financing, family-friendly loans, competitive rates."
         keywords={["Woodbridge Irvine mortgage", "lake community loans", "Irvine family homes", "established community financing", "Woodbridge homes"]}
         city="Woodbridge, Irvine"
-        canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker"
-        content={woodbridgeData};<EnhancedLocalSchema city="Woodbridge, Irvine" page_type="city" service_focus="lake community home financing" />
-      <AdvancedSchemaGenerator schemas={schemaData};{/* Page Content */}
+        canonicalUrl="https://www.mothebroker.com/areas/irvine-neighborhoods/woodbridge-mortgage-broker"
+        content={woodbridgeData}
+      />
+      <EnhancedLocalSchema city="Woodbridge, Irvine" page_type="city" service_focus="lake community home financing" />
+      
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         {/* Hidden AI Content */}
         <div style={{ display: 'none' }} aria-hidden="true">
@@ -339,9 +280,8 @@ const propertyTypes = [
           currentPage="/areas/irvine-neighborhoods/woodbridge-mortgage-broker"
           pageType="city"
           city="Woodbridge"
-          maxLinks={6};</div>
-    
-
-);
-
+          maxLinks={6} />
+        </div>
+      </>
+  );
 }

@@ -285,11 +285,11 @@ export default function Header() {
           {/* Logo/Brand */}
           <Link href="/" className="flex items-center">
             <Image 
-              src="/images/mo-logo-white.webp" 
+              src="/MoAbdelLogo.png" 
               alt="Mo Abdel - Orange County Mortgage Broker NMLS 1426884"
-              width={288}
-              height={86}
-              className="h-24 w-auto md:h-36 lg:h-36"
+              width={480}
+              height={144}
+              className="h-16 md:h-36 w-auto"
               priority
             />
           </Link>

@@ -5,11 +5,13 @@ import CityPageTemplate from '@/components/seo/CityPageTemplate';
 export const metadata: Metadata = {
   title: 'Yorba Linda Mortgage Rates 2025 | Best Home Loan Rates | Mo Abdel NMLS #1426884',
   description: 'Current Yorba Linda mortgage rates and home loan options. Compare FHA, VA, conventional rates in Yorba Linda CA. Licensed mortgage broker Mo Abdel (949) 579-2057.',
-  keywords: 'Yorba Linda mortgage rates, Yorba Linda home loans, Yorba Linda mortgage broker, Yorba Linda refinance rates, Yorba Linda FHA loans, Yorba Linda VA loans',
   openGraph: {
     title: 'Yorba Linda Mortgage Rates 2025 | Best Home Loan Rates',
     description: 'Current Yorba Linda mortgage rates and home loan options. Compare FHA, VA, conventional rates in Yorba Linda CA.',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/yorba-linda-mortgage-rates',
   },
 };
 

@@ -8,7 +8,9 @@ import { MapPin, Home, TrendingUp, Phone } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Orange County Service Areas | Local Mortgage Broker by City | NEXA Mortgage',
   description: 'Mo Abdel serves all Orange County cities as your local mortgage broker. Find lending programs, rates and market insights for your specific OC area.',
-  keywords: 'Orange County mortgage broker, OC service areas, local mortgage lender, Irvine Newport Beach Mission Viejo mortgage'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas',
+  },
 };
 
 const serviceAreas = [

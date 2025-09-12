@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     url: 'https://www.mothebroker.com/articles/best-mortgage-broker-orange-county',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/articles/best-mortgage-broker-orange-county',
+  },
 };
 
 export default function BestMortgageBrokerArticle() {

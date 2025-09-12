@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: '92660 Newport Beach Mortgage Broker | ZIP Code Specialist | Mo Abdel NMLS #1426884',
   description: '92660 Newport Beach mortgage broker serving this luxury ZIP code area. Corona del Mar, Fashion Island area financing, competitive rates. Call (949) 579-2057.',
-  keywords: '92660 mortgage broker, 92660 home loans, Newport Beach 92660 financing, ZIP code 92660 mortgage specialist'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/zip-codes/92660-newport-beach-mortgage-broker',
+  },
 };
 
 export default function ZipCode92660MortgageBrokerPage() {
@@ -135,7 +137,6 @@ export default function ZipCode92660MortgageBrokerPage() {
       <AIOOptimization
         title="92660 Newport Beach Mortgage Broker | ZIP Code Specialist | Mo Abdel NMLS #1426884"
         description="92660 Newport Beach mortgage broker serving this luxury ZIP code area. Corona del Mar, Fashion Island area financing, competitive rates."
-        keywords={["92660 mortgage broker", "92660 home loans", "Newport Beach 92660 financing", "ZIP code mortgage specialist"]}
         city="92660, Newport Beach"
         canonicalUrl="https://mothebroker.com/zip-codes/92660-newport-beach-mortgage-broker"
         content={zipCodeData}

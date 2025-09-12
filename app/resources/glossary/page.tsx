@@ -26,7 +26,9 @@ import {
 export const metadata: Metadata = {
   title: 'Mortgage Glossary | Complete Guide to Home Loan Terms & Definitions',
   description: 'Comprehensive mortgage glossary for Orange County home buyers. Understand loan terms, definitions, and mortgage vocabulary. Over 100 terms explained simply.',
-  keywords: 'mortgage glossary, home loan terms, real estate definitions, mortgage vocabulary, lending terms, Orange County mortgage broker, mortgage terminology',
+  alternates: {
+    canonical: 'https://www.mothebroker.com/resources/glossary',
+  },
 };
 
 export default function GlossaryPage() {

@@ -12,7 +12,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Irvine Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
   description: 'Irvine mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and jumbo loans. Serving University Park, Woodbridge, Northwood. Call (949) 579-2057.',
-  keywords: 'Irvine mortgage broker, Irvine home loans, Irvine HELOC, University Park mortgage, Woodbridge loans, Northwood mortgage broker'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/irvine-mortgage-broker',
+  },
 };
 
 export default function IrvineMortgageBrokerPage() {

@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     url: 'https://www.mothebroker.com/articles/first-time-homebuyer-mortgage-orange-county',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/articles/first-time-homebuyer-mortgage-orange-county',
+  },
 };
 
 export default function FirstTimeHomebuyerArticle() {

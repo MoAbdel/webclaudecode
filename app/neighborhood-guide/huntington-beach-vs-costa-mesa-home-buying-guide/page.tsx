@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2025-04-10T09:15:00Z',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/neighborhood-guide/huntington-beach-vs-costa-mesa-home-buying-guide',
+  },
 };
 
 export default function HuntingtonBeachVsCostaMesaGuide() {

@@ -9,12 +9,14 @@ import { CheckCircle, Home, Calculator, FileText, Users, TrendingUp, Shield, Map
 export const metadata: Metadata = {
   title: 'Orange County Refinancing Guide 2025 | HELOC, HELOAN & Rate-Term Refi | Mo Abdel',
   description: 'Complete Orange County refinancing guide covering rate-and-term refinancing, cash-out refinance, HELOC, and HELOAN options. Expert mortgage broker insights for homeowners.',
-  keywords: 'Orange County refinancing, HELOC Orange County, HELOAN, cash out refinance, rate and term refinance, mortgage refinancing, home equity',
   openGraph: {
     title: 'Orange County Refinancing Guide 2025 | HELOC, HELOAN & Rate-Term Refi',
     description: 'Complete Orange County refinancing guide covering rate-and-term refinancing, cash-out refinance, HELOC, and HELOAN options.',
     type: 'article',
     publishedTime: '2025-01-15T08:00:00.000Z',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/guides/orange-county-refinancing-guide',
   },
 };
 

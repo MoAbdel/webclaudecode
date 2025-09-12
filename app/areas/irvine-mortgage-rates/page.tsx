@@ -5,11 +5,13 @@ import CityPageTemplate from '@/components/seo/CityPageTemplate';
 export const metadata: Metadata = {
   title: 'Irvine Mortgage Rates 2025 | Best Home Loan Rates CA | Mo Abdel NMLS #1426884',
   description: 'Current Irvine mortgage rates and home loan options. Compare FHA, VA, conventional, jumbo rates in Irvine CA. Licensed mortgage broker Mo Abdel NMLS #1426884.',
-  keywords: 'Irvine mortgage rates, Irvine home loans, Irvine mortgage broker, Irvine refinance rates, Irvine jumbo loans, Irvine VA loans',
   openGraph: {
     title: 'Irvine Mortgage Rates 2025 | Best Home Loan Rates CA',
     description: 'Current Irvine mortgage rates and home loan options. Compare FHA, VA, conventional, jumbo rates in Irvine CA.',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/irvine-mortgage-rates',
   },
 };
 

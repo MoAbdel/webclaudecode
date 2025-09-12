@@ -8,7 +8,9 @@ import { Shield, Star, Users, CheckCircle, AlertCircle, Flag } from 'lucide-reac
 export const metadata: Metadata = {
   title: 'VA Loans Orange County | 0% Down Military Benefits | Mo The Mortgage Broker NMLS #1426884',
   description: 'VA loans in Orange County with 0% down payment for veterans and active military. No PMI, competitive rates. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'VA loans Orange County, VA mortgage California, military home loans, veterans mortgage benefits, 0% down payment Orange County'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/va-loans',
+  },
 };
 
 export default function VALoansPage() {

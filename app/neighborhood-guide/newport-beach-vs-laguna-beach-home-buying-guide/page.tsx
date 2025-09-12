@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2025-01-22T11:45:00Z',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/neighborhood-guide/newport-beach-vs-laguna-beach-home-buying-guide',
+  },
 };
 
 export default function NewportBeachVsLagunaBeachGuide() {

@@ -8,7 +8,9 @@ import { TrendingUp, DollarSign, Calendar, Shield, CheckCircle, AlertCircle } fr
 export const metadata: Metadata = {
   title: 'HELOC (Home Equity Line of Credit) - Orange County | Mo The Mortgage Broker',
   description: 'Get a HELOC in Orange County with rates from Prime + 0%. Access up to $500K from your home equity. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'HELOC Orange County, home equity line of credit California, HELOC rates, home equity credit line'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/heloc',
+  },
 };
 
 export default function HELOCPage() {

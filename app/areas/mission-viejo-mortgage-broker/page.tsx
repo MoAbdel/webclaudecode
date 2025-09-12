@@ -8,7 +8,9 @@ import { MapPin, Home, GraduationCap, Shield, TrendingUp, Users, Building, TreeP
 export const metadata: Metadata = {
   title: 'Mission Viejo Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
   description: 'Mission Viejo mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Saddleback Valley, Lake Mission Viejo area. Call (949) 579-2057.',
-  keywords: 'Mission Viejo mortgage broker, Mission Viejo home loans, Mission Viejo HELOC, Saddleback Valley mortgage, Lake Mission Viejo loans, mortgage broker'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/mission-viejo-mortgage-broker',
+  },
 };
 
 export default function MissionViejoMortgageBrokerPage() {

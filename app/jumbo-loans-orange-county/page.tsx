@@ -8,7 +8,9 @@ import { Star, Shield, DollarSign, TrendingUp, Users, CheckCircle, Home, Calcula
 export const metadata: Metadata = {
   title: 'Jumbo Loans Orange County 2025 | High-Balance Mortgage Financing',
   description: 'Get jumbo loans in Orange County above $1,209,750 for luxury homes. Mo Abdel specializes in high-balance mortgage financing with competitive rates and flexible terms.',
-  keywords: 'jumbo loans Orange County, high balance mortgage California, luxury home loans OC, jumbo mortgage specialist Orange County, high-value home financing 2025'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/jumbo-loans-orange-county',
+  },
 };
 
 const jsonLd = {

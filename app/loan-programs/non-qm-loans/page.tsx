@@ -8,7 +8,9 @@ import { Zap, TrendingUp, Users, CheckCircle, AlertCircle, Briefcase } from 'luc
 export const metadata: Metadata = {
   title: 'Non-QM Loans Orange County | Alternative Income Documentation | Mo The Mortgage Broker',
   description: 'Non-QM loans in Orange County for self-employed, investors, and unique income situations. Bank statements, asset-based, and alternative documentation programs through mortgage broker. Call (949) 579-2057.',
-  keywords: 'Non-QM loans Orange County, bank statement loans, self-employed mortgage, asset based loans, alternative documentation'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/non-qm-loans',
+  },
 };
 
 export default function NonQMLoansPage() {

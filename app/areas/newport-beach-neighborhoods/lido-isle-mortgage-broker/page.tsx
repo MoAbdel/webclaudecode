@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Lido Isle Newport Beach Mortgage Broker | Waterfront Estate Loans | Mo Abdel NMLS #1426884',
   description: 'Lido Isle Newport Beach mortgage broker specializing in waterfront estate financing. Private island living, luxury waterfront homes, competitive rates. Call (949) 579-2057.',
-  keywords: 'Lido Isle Newport Beach mortgage, waterfront estate loans, private island homes, Newport Beach luxury financing, Lido Isle mortgage broker'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker',
+  },
 };
 
 export default function LidoIsleMortgageBrokerPage() {
@@ -148,7 +150,6 @@ export default function LidoIsleMortgageBrokerPage() {
       <AIOOptimization
         title="Lido Isle Newport Beach Mortgage Broker | Waterfront Estate Loans | Mo Abdel NMLS #1426884"
         description="Lido Isle Newport Beach mortgage broker specializing in waterfront estate financing. Private island living, luxury waterfront homes, competitive rates."
-        keywords={["Lido Isle Newport Beach mortgage", "waterfront estate loans", "private island homes", "Newport Beach luxury financing", "Lido Isle estates"]}
         city="Lido Isle, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/lido-isle-mortgage-broker"
         content={lidoIsleData}

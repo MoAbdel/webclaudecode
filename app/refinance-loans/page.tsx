@@ -7,12 +7,14 @@ import { TrendingDown, DollarSign, Home, Clock, Calculator, CheckCircle, Zap, Cr
 export const metadata: Metadata = {
   title: 'Refinance Loans in Orange County, CA | Lower Your Rate',
   description: 'Lower your monthly payments or shorten your term with a refinance. Get expert advice and wholesale rates in Orange County.',
-  keywords: 'refinance loans orange county, mortgage refinancing, rate and term refinance, cash out refinance, lower mortgage rate orange county',
   openGraph: {
     title: 'Refinance Loans in Orange County, CA | Lower Your Rate',
     description: 'Lower your monthly payments or shorten your term with a refinance. Get expert advice and wholesale rates in Orange County.',
     url: 'https://mothebroker.com/refinance-loans',
-  }
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/refinance-loans',
+  },
 };
 
 // JSON-LD Schema for LocalBusiness

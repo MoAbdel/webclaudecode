@@ -10,7 +10,9 @@ import AdvancedSchemaGenerator from '@/components/seo/AdvancedSchemaGenerator';
 export const metadata: Metadata = {
   title: 'University Park Irvine Mortgage Broker | Luxury Home Loans | Mo Abdel NMLS #1426884',
   description: 'University Park Irvine mortgage broker specializing in luxury home loans. UCI area financing, jumbo loans, investment properties. Licensed NMLS #1426884. Call (949) 579-2057.',
-  keywords: 'University Park Irvine mortgage, UCI area home loans, luxury Irvine financing, University Park mortgage broker, Irvine jumbo loans'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker',
+  },
 };
 
 export default function UniversityParkMortgageBrokerPage() {
@@ -130,7 +132,6 @@ export default function UniversityParkMortgageBrokerPage() {
       <AIOOptimization
         title="University Park Irvine Mortgage Broker | Luxury Home Loans | Mo Abdel NMLS #1426884"
         description="University Park Irvine mortgage broker specializing in luxury home loans. UCI area financing, jumbo loans, investment properties. Licensed NMLS #1426884."
-        keywords={["University Park Irvine mortgage", "UCI area home loans", "luxury Irvine financing", "jumbo loans", "University Park mortgage broker"]}
         city="University Park, Irvine"
         canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/university-park-mortgage-broker"
         content={universityParkData}

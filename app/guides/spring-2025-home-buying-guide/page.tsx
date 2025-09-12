@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Spring 2025 Orange County Home Buying Guide | Best Time to Buy | Mo Abdel NMLS #1426884',
   description: 'Spring 2025 Orange County home buying guide. Market trends, mortgage rates, inventory levels, and expert tips for successful spring home purchases. Call (949) 579-2057.',
-  keywords: 'Spring 2025 home buying, Orange County spring market, 2025 mortgage rates, spring home buying tips, seasonal real estate trends'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/guides/spring-2025-home-buying-guide',
+  },
 };
 
 export default function Spring2025HomeBuyingGuidePage() {
@@ -194,7 +196,6 @@ export default function Spring2025HomeBuyingGuidePage() {
       <AIOOptimization
         title="Spring 2025 Orange County Home Buying Guide | Best Time to Buy | Mo Abdel NMLS #1426884"
         description="Spring 2025 Orange County home buying guide. Market trends, mortgage rates, inventory levels, and expert tips for successful spring home purchases."
-        keywords={["Spring 2025 home buying", "Orange County spring market", "2025 mortgage rates", "spring home buying tips", "seasonal real estate trends"]}
         city="Orange County"
         canonicalUrl="https://mothebroker.com/guides/spring-2025-home-buying-guide"
         content={springGuideData}

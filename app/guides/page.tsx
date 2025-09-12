@@ -7,6 +7,9 @@ import { BookOpen, Clock, TrendingUp, Users } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Mortgage Blog | Home Buying Tips & Loan Advice - Orange County',
   description: 'Expert mortgage blog and home buying tips from Mo Abdel. Learn about loan programs, market insights, and get professional advice for Orange County homebuyers.',
+  alternates: {
+    canonical: 'https://www.mothebroker.com/guides',
+  },
 };
 
 const guides = [

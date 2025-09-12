@@ -8,7 +8,9 @@ import { TrendingUp, Shield, Home, CheckCircle, AlertCircle, DollarSign } from '
 export const metadata: Metadata = {
   title: 'Conventional Loans Orange County | 3% Down Payment | Mo The Mortgage Broker NMLS #1426884',
   description: 'Conventional loans in Orange County with competitive rates and flexible terms. 3% down payment options available. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'conventional loans Orange County, conventional mortgage California, 3% down payment, conforming loans Orange County'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/conventional-loans',
+  },
 };
 
 export default function ConventionalLoansPage() {

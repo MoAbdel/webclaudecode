@@ -20,37 +20,21 @@ function findAllPageTsxFiles(dir, files = []) {
 
 function fixSyntaxErrors(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
-  let modified = false;
+  let originalContent = content;
+  
+  // Fix pattern: Missing comma before openGraph (with single quotes)
+  content = content.replace(/description:\s*'([^']*)'openGraph:/g, "description: '$1',\n  openGraph:");
+  
+  // Fix pattern: Missing comma after closing } before alternates
+  content = content.replace(/}\s*alternates:/g, "},\n  alternates:");
+  
+  // Fix pattern: Duplicated metadata declarations
+  content = content.replace(/export const metadata: Metadata = \{[\s\S]*?export const metadata: Metadata = \{/g, 'export const metadata: Metadata = {');
+  
+  // Fix unterminated strings with 'export const metadata'
+  content = content.replace(/description:\s*'([^']*)'export const metadata: Metadata = \{/g, "description: '$1',\n  alternates: {\n    canonical: 'https://www.mothebroker.com',\n  },\n};\n\nexport const metadata2: Metadata = {");
 
-  // Fix pattern 1: "description: seoData.About.descriptionpath: '/about',"
-  const pattern1 = /description:\s*([^,\n]+)path:\s*'([^']+)'/g;
-  if (pattern1.test(content)) {
-    content = content.replace(pattern1, "description: $1,\n  alternates: {\n    canonical: 'https://www.mothebroker.com$2',\n  }");
-    modified = true;
-  }
-
-  // Fix pattern 2: Missing comma before alternates
-  const pattern2 = /description:\s*'([^']+)'\s+alternates:/g;
-  if (pattern2.test(content)) {
-    content = content.replace(pattern2, "description: '$1',\n  alternates:");
-    modified = true;
-  }
-
-  // Fix pattern 3: Missing comma before openGraph
-  const pattern3 = /description:\s*'([^']+)'openGraph:/g;
-  if (pattern3.test(content)) {
-    content = content.replace(pattern3, "description: '$1',\n  openGraph:");
-    modified = true;
-  }
-
-  // Fix pattern 4: Missing comma before other properties
-  const pattern4 = /description:\s*'([^']+)'\s+([a-zA-Z]+):/g;
-  if (pattern4.test(content)) {
-    content = content.replace(pattern4, "description: '$1',\n  $2:");
-    modified = true;
-  }
-
-  if (modified) {
+  if (content !== originalContent) {
     fs.writeFileSync(filePath, content, 'utf8');
     console.log(`Fixed syntax errors in: ${filePath}`);
     return true;

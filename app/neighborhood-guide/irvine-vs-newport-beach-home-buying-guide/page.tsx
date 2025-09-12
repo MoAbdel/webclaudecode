@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2025-03-15T10:00:00Z',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/neighborhood-guide/irvine-vs-newport-beach-home-buying-guide',
+  },
 };
 
 export default function IrvineVsNewportBeachGuide() {

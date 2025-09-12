@@ -8,7 +8,9 @@ import { MapPin, Home, Waves, Sun, TrendingUp, Users, Building } from 'lucide-re
 export const metadata: Metadata = {
   title: 'Huntington Beach Mortgage | Home Loans & HELOC Rates | Mo Abdel NMLS #1426884',
   description: 'Best Huntington Beach mortgage rates and home loan services. Competitive mortgage rates, HELOC, refinancing, FHA, VA, and jumbo loans. Serving Surf City, Main Street, Bella Terra. Call (949) 579-2057.',
-  keywords: 'Huntington Beach mortgage, huntington beach mortgage, Huntington Beach home loans, Huntington Beach HELOC rates, Huntington Beach refinance, Surf City mortgage, Main Street mortgage'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/huntington-beach-mortgage-broker',
+  },
 };
 
 export default function HuntingtonBeachMortgageBrokerPage() {

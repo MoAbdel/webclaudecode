@@ -5,11 +5,13 @@ import CityPageTemplate from '@/components/seo/CityPageTemplate';
 export const metadata: Metadata = {
   title: 'Fountain Valley Mortgage Rates 2025 | Best Home Loan Rates CA | Mo Abdel NMLS #1426884',
   description: 'Current Fountain Valley mortgage rates and home loan options. Compare FHA, VA, conventional rates in Fountain Valley CA. Licensed mortgage broker Mo Abdel NMLS #1426884.',
-  keywords: 'Fountain Valley mortgage rates, Fountain Valley home loans, Fountain Valley mortgage broker, Fountain Valley refinance rates, Fountain Valley FHA loans, Fountain Valley VA loans',
   openGraph: {
     title: 'Fountain Valley Mortgage Rates 2025 | Best Home Loan Rates CA',
     description: 'Current Fountain Valley mortgage rates and home loan options. Compare FHA, VA, conventional rates in Fountain Valley CA.',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/fountain-valley-mortgage-rates',
   },
 };
 

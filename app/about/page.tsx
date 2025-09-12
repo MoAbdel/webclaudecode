@@ -9,7 +9,6 @@ import { generateMetadata } from '@/lib/metadata';
 export const metadata: Metadata = generateMetadata({
   title: seoData.About.title,
   description: seoData.About.description,
-  keywords: 'Mo Abdel, mortgage broker, NEXA Mortgage, Orange County, NMLS 1426884, licensed mortgage broker, home loans',
   path: '/about',
   type: 'website'
 });

@@ -27,7 +27,9 @@ import {
 export const metadata: Metadata = {
   title: 'Orange County Housing Market Data 2025 | Real Estate Trends & Stats',
   description: 'Current Orange County housing market data, trends, and analysis. Home prices, inventory levels, days on market, and neighborhood statistics for informed home buying.',
-  keywords: 'Orange County housing market, home prices, real estate trends, market data, inventory levels, days on market, median home price, Orange County real estate statistics',
+  alternates: {
+    canonical: 'https://www.mothebroker.com/resources/market-data',
+  },
 };
 
 export default function MarketDataPage() {

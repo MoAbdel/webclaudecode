@@ -8,7 +8,9 @@ import { Crown, TrendingUp, Shield, CheckCircle, AlertCircle, DollarSign } from 
 export const metadata: Metadata = {
   title: 'Jumbo Loans Orange County | $1,209,750+ Mortgages | Mo The Mortgage Broker NMLS #1426884',
   description: 'Jumbo loans in Orange County for luxury homes over $1,209,750. Competitive rates on non-conforming mortgages. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'jumbo loans Orange County, jumbo mortgage California, luxury home loans, non-conforming loans Orange County'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/jumbo-loans',
+  },
 };
 
 export default function JumboLoansPage() {

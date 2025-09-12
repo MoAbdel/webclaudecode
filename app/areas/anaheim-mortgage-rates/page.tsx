@@ -5,11 +5,13 @@ import CityPageTemplate from '@/components/seo/CityPageTemplate';
 export const metadata: Metadata = {
   title: 'Anaheim Mortgage Rates 2025 | Best Home Loan Rates CA | Mo Abdel NMLS #1426884',
   description: 'Current Anaheim mortgage rates and home loan options. Compare FHA, VA, conventional rates in Anaheim CA. Licensed mortgage broker Mo Abdel NMLS #1426884.',
-  keywords: 'Anaheim mortgage rates, Anaheim home loans, Anaheim mortgage broker, Anaheim refinance rates, Anaheim FHA loans, Anaheim VA loans',
   openGraph: {
     title: 'Anaheim Mortgage Rates 2025 | Best Home Loan Rates CA',
     description: 'Current Anaheim mortgage rates and home loan options. Compare FHA, VA, conventional rates in Anaheim CA.',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/anaheim-mortgage-rates',
   },
 };
 

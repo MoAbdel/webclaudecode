@@ -8,7 +8,9 @@ import { MapPin, Home, Castle, Users, TrendingUp, Building, Heart } from 'lucide
 export const metadata: Metadata = {
   title: 'Anaheim Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
   description: 'Anaheim mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Disneyland area, Anaheim Hills, Downtown. Call (949) 579-2057.',
-  keywords: 'Anaheim mortgage broker, Anaheim home loans, Anaheim HELOC, Disneyland area mortgage, Anaheim Hills loans, Downtown Anaheim mortgage broker'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/anaheim-mortgage-broker',
+  },
 };
 
 export default function AnaheimMortgageBrokerPage() {

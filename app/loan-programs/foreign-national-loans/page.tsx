@@ -7,6 +7,9 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'Foreign National Loans Orange County | International Buyer Mortgages | No US Credit Required',
   description: 'Foreign national loans in Orange County for non-US citizens. No US credit history required. 25-40% down payment. Purchase or refinance. International buyer specialist. Call (949) 579-2057.',
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/foreign-national-loans',
+  },
 };
 
 export default function ForeignNationalLoansPage() {

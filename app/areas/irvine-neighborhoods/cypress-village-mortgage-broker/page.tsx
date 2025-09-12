@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Cypress Village Irvine Mortgage Broker | Newest Community Home Loans | Mo Abdel NMLS #1426884',
   description: 'Cypress Village Irvine mortgage broker specializing in newest master-planned community homes. Brand new construction financing, modern amenities, competitive rates. Call (949) 579-2057.',
-  keywords: 'Cypress Village Irvine mortgage, newest community loans, brand new construction Irvine homes, Cypress Village mortgage broker, newest Irvine development financing'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/irvine-neighborhoods/cypress-village-mortgage-broker',
+  },
 };
 
 export default function CypressVillageMortgageBrokerPage() {
@@ -141,7 +143,6 @@ export default function CypressVillageMortgageBrokerPage() {
       <AIOOptimization
         title="Cypress Village Irvine Mortgage Broker | Newest Community Home Loans | Mo Abdel NMLS #1426884"
         description="Cypress Village Irvine mortgage broker specializing in newest master-planned community homes. Brand new construction financing, modern amenities, competitive rates."
-        keywords={["Cypress Village Irvine mortgage", "newest community loans", "brand new construction Irvine homes", "newest Irvine development financing", "Cypress Village homes"]}
         city="Cypress Village, Irvine"
         canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/cypress-village-mortgage-broker"
         content={cypressVillageData}

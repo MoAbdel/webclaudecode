@@ -7,12 +7,14 @@ import { Home, Shield, Users, TrendingUp, Calculator, CheckCircle, DollarSign, C
 export const metadata: Metadata = {
   title: 'Home Purchase Loans in Orange County, CA | Mo The Broker',
   description: 'Secure your dream home in Orange County with competitive purchase loan rates. Local expertise, wholesale access, and fast approvals.',
-  keywords: 'purchase loans orange county, home buying orange county, mortgage broker, first time buyer loans, conventional loans, fha loans, va loans, jumbo loans',
   openGraph: {
     title: 'Home Purchase Loans in Orange County, CA | Mo The Broker',
     description: 'Secure your dream home in Orange County with competitive purchase loan rates. Local expertise, wholesale access, and fast approvals.',
     url: 'https://mothebroker.com/purchase-loans',
-  }
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/purchase-loans',
+  },
 };
 
 // JSON-LD Schema for LocalBusiness

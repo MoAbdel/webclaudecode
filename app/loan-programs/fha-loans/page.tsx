@@ -9,7 +9,9 @@ import { Home, Shield, Users, CheckCircle, AlertCircle, DollarSign } from 'lucid
 export const metadata: Metadata = {
   title: 'FHA Loans Orange County | 3.5% Down Payment | Mo The Mortgage Broker NMLS #1426884',
   description: 'FHA loans in Orange County with just 3.5% down payment. Government-backed mortgages with flexible credit requirements. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'FHA loans Orange County, FHA mortgage California, 3.5% down payment, first time homebuyer Orange County, government backed loans'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/fha-loans',
+  },
 };
 
 export default function FHALoansPage() {

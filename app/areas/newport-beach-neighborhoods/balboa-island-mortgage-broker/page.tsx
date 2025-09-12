@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Balboa Island Mortgage Broker | Luxury Waterfront Home Loans | Mo Abdel NMLS #1426884',
   description: 'Balboa Island mortgage broker specializing in luxury waterfront home financing. Jumbo loans, investment property loans, and unique property financing. Call (949) 579-2057.',
-  keywords: 'Balboa Island mortgage, Newport Beach waterfront loans, luxury home financing, Balboa Island homes, waterfront mortgage broker'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker',
+  },
 };
 
 export default function BalboaIslandMortgageBrokerPage() {
@@ -141,7 +143,6 @@ export default function BalboaIslandMortgageBrokerPage() {
       <AIOOptimization
         title="Balboa Island Mortgage Broker | Luxury Waterfront Home Loans | Mo Abdel NMLS #1426884"
         description="Balboa Island mortgage broker specializing in luxury waterfront home financing. Jumbo loans, investment property loans, and unique property financing."
-        keywords={["Balboa Island mortgage", "Newport Beach waterfront loans", "luxury waterfront financing", "Balboa Island homes", "jumbo loans Newport Beach"]}
         city="Balboa Island, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/balboa-island-mortgage-broker"
         content={balboaIslandData}

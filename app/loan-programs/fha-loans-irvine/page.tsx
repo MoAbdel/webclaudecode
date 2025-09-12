@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'FHA Loans Irvine CA | 3.5% Down Payment | Mo Abdel NMLS #1426884',
   description: 'FHA loans in Irvine CA with 3.5% down payment. Government-backed mortgages for Irvine condos, townhomes, and family homes. Call (949) 579-2057.',
-  keywords: 'FHA loans Irvine, Irvine FHA mortgage, 3.5% down Irvine, first time buyer Irvine, government backed loans Irvine CA'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/fha-loans-irvine',
+  },
 };
 
 export default function FHALoansIrvinePage() {
@@ -158,7 +160,6 @@ export default function FHALoansIrvinePage() {
       <AIOOptimization
         title="FHA Loans Irvine CA | 3.5% Down Payment | Mo Abdel NMLS #1426884"
         description="FHA loans in Irvine CA with 3.5% down payment. Government-backed mortgages for Irvine condos, townhomes, and family homes."
-        keywords={["FHA loans Irvine", "Irvine FHA mortgage", "3.5% down Irvine", "first time buyer Irvine", "government backed loans Irvine CA"]}
         city="Irvine"
         canonicalUrl="https://mothebroker.com/loan-programs/fha-loans-irvine"
         content={fhaIrvineData}

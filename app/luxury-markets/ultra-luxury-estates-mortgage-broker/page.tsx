@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Orange County Ultra-Luxury Estates Mortgage Broker | $5M+ Properties | Mo Abdel NMLS #1426884',
   description: 'Orange County ultra-luxury estates mortgage broker specializing in $5M+ properties. Mansions, beachfront estates, and exclusive compounds financing. Call (949) 579-2057.',
-  keywords: 'ultra luxury estates mortgage Orange County, $5M+ home financing, mansion mortgages, beachfront estate loans, exclusive compound financing'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/luxury-markets/ultra-luxury-estates-mortgage-broker',
+  },
 };
 
 export default function UltraLuxuryEstatesMortgageBrokerPage() {
@@ -209,7 +211,6 @@ export default function UltraLuxuryEstatesMortgageBrokerPage() {
       <AIOOptimization
         title="Orange County Ultra-Luxury Estates Mortgage Broker | $5M+ Properties | Mo Abdel NMLS #1426884"
         description="Orange County ultra-luxury estates mortgage broker specializing in $5M+ properties. Mansions, beachfront estates, and exclusive compounds financing."
-        keywords={["ultra luxury estates mortgage Orange County", "$5M+ home financing", "mansion mortgages", "beachfront estate loans", "exclusive compound financing"]}
         city="Orange County"
         canonicalUrl="https://mothebroker.com/luxury-markets/ultra-luxury-estates-mortgage-broker"
         content={ultraLuxuryData}

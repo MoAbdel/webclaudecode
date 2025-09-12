@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: '92625 Corona del Mar Mortgage Broker | Beachside ZIP Code Specialist | Mo Abdel NMLS #1426884',
   description: '92625 Corona del Mar mortgage broker serving this exclusive beachside ZIP code. Luxury coastal homes, beach access properties, competitive rates. Call (949) 579-2057.',
-  keywords: '92625 mortgage broker, 92625 home loans, Corona del Mar 92625 financing, ZIP code 92625 mortgage specialist, beachside mortgage'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/zip-codes/92625-corona-del-mar-mortgage-broker',
+  },
 };
 
 export default function ZipCode92625CoronaDelMarMortgageBrokerPage() {
@@ -158,7 +160,6 @@ export default function ZipCode92625CoronaDelMarMortgageBrokerPage() {
       <AIOOptimization
         title="92625 Corona del Mar Mortgage Broker | Beachside ZIP Code Specialist | Mo Abdel NMLS #1426884"
         description="92625 Corona del Mar mortgage broker serving this exclusive beachside ZIP code. Luxury coastal homes, beach access properties, competitive rates."
-        keywords={["92625 mortgage broker", "92625 home loans", "Corona del Mar 92625 financing", "ZIP code mortgage specialist", "beachside mortgage"]}
         city="92625, Corona del Mar"
         canonicalUrl="https://mothebroker.com/zip-codes/92625-corona-del-mar-mortgage-broker"
         content={zipCodeData}

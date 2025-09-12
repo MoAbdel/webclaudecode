@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: 'Get conventional loans in Orange County with competitive rates. Flexible down payments from 3% and loan amounts up to $1,089,300. Apply today with Mo Abdel.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/conventional-loans-orange-county',
+  },
 };
 
 const benefits = [

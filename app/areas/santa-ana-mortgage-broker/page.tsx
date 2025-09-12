@@ -8,7 +8,9 @@ import { MapPin, Home, Building2, Users, TrendingUp, Heart, Briefcase } from 'lu
 export const metadata: Metadata = {
   title: 'Santa Ana Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
   description: 'Santa Ana mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving Downtown, Floral Park, French Park. Call (949) 579-2057.',
-  keywords: 'Santa Ana mortgage broker, Santa Ana home loans, Santa Ana HELOC, Downtown Santa Ana mortgage, Floral Park loans, French Park mortgage broker'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/santa-ana-mortgage-broker',
+  },
 };
 
 export default function SantaAnaMortgageBrokerPage() {

@@ -9,7 +9,9 @@ import { DollarSign, PieChart, TrendingUp, Users, Check, AlertCircle, Calculator
 export const metadata: Metadata = {
   title: 'Asset Depletion Loans Orange County | Asset-Based Mortgage | High Net Worth Lending',
   description: 'Asset depletion loans in Orange County for high net worth borrowers. Qualify using retirement accounts, investments, and liquid assets. No income documentation required. Call (949) 579-2057.',
-  keywords: 'asset depletion loans, asset-based mortgage, high net worth lending, retirement account loans, investment portfolio lending Orange County'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/asset-depletion-loans',
+  },
 };
 
 export default function AssetDepletionLoansPage() {

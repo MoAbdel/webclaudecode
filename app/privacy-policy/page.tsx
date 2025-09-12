@@ -6,7 +6,10 @@ import { Shield, Eye, FileText, Phone } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Privacy Policy | Mo Abdel Mortgage Broker - NMLS #1426884',
   description: 'Privacy Policy for Mo Abdel Mortgage Services. Learn how we protect your personal and financial information in compliance with CCPA, GDPR, and Gramm-Leach-Bliley Act.',
-  robots: 'noindex, nofollow' // Typical for legal pages
+  robots: 'noindex, nofollow', // Typical for legal pages
+  alternates: {
+    canonical: 'https://www.mothebroker.com/privacy-policy',
+  },
 };
 
 export default function PrivacyPolicyPage() {

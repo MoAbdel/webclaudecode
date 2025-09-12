@@ -8,7 +8,9 @@ import { TrendingDown, Calendar, Shield, CheckCircle, AlertCircle, Calculator } 
 export const metadata: Metadata = {
   title: 'Rate & Term Refinance Orange County | Lower Payment & Rate | Mo The Mortgage Broker',
   description: 'Rate and term refinance in Orange County. Lower your mortgage payment, eliminate PMI, or switch to fixed rate. Competitive mortgage broker rates through NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'rate and term refinance Orange County, lower mortgage payment, eliminate PMI, refinance California'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/rate-term-refinance',
+  },
 };
 
 export default function RateTermRefinancePage() {

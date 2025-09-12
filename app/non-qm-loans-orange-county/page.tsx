@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: 'Get Non-QM loans in Orange County with flexible income verification. Perfect for self-employed, investors, and non-traditional borrowers. Apply today with Mo Abdel.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/non-qm-loans-orange-county',
+  },
 };
 
 const benefits = [

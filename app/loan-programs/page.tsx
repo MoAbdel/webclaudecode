@@ -8,6 +8,9 @@ import { Home, Shield, Users, TrendingUp, TrendingDown, DollarSign, Zap } from '
 export const metadata: Metadata = {
   title: seoData.Programs.title,
   description: seoData.Programs.description,
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs',
+  },
 };
 
 const loanPrograms = [

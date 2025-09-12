@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     url: 'https://www.mothebroker.com/articles/orange-county-mortgage-refinance-specialist',
     type: 'article',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/articles/orange-county-mortgage-refinance-specialist',
+  },
 };
 
 export default function RefinanceSpecialistArticle() {

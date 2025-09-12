@@ -7,12 +7,14 @@ import { TrendingUp, DollarSign, Home, Zap, Users, CheckCircle, Calculator, Cred
 export const metadata: Metadata = {
   title: 'HELOC Loans in Orange County, CA | Flexible Home Equity Access',
   description: 'Access your home\'s equity with a Home Equity Line of Credit in Orange County. Flexible withdrawals, competitive rates, expert guidance.',
-  keywords: 'HELOC orange county, home equity line of credit, flexible home equity access, draw period, variable rates orange county, credit line',
   openGraph: {
     title: 'HELOC Loans in Orange County, CA | Flexible Home Equity Access',
     description: 'Access your home\'s equity with a Home Equity Line of Credit in Orange County. Flexible withdrawals, competitive rates, expert guidance.',
     url: 'https://mothebroker.com/heloc-orange-county',
-  }
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/heloc-orange-county',
+  },
 };
 
 // JSON-LD Schema for LocalBusiness

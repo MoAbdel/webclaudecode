@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Summer 2025 Orange County Market Guide | Peak Season Strategy | Mo Abdel NMLS #1426884',
   description: 'Summer 2025 Orange County real estate market guide. Peak season strategies, competition insights, inventory trends, and expert buying tips. Call (949) 579-2057.',
-  keywords: 'Summer 2025 real estate, Orange County summer market, peak season home buying, summer 2025 trends, competitive market strategies'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/guides/summer-2025-market-guide',
+  },
 };
 
 export default function Summer2025MarketGuidePage() {
@@ -217,7 +219,6 @@ export default function Summer2025MarketGuidePage() {
       <AIOOptimization
         title="Summer 2025 Orange County Market Guide | Peak Season Strategy | Mo Abdel NMLS #1426884"
         description="Summer 2025 Orange County real estate market guide. Peak season strategies, competition insights, inventory trends, and expert buying tips."
-        keywords={["Summer 2025 real estate", "Orange County summer market", "peak season home buying", "summer 2025 trends", "competitive market strategies"]}
         city="Orange County"
         canonicalUrl="https://mothebroker.com/guides/summer-2025-market-guide"
         content={summerGuideData}

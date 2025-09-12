@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Orange County Waterfront Homes Mortgage Broker | Luxury Coastal Financing | Mo Abdel NMLS #1426884',
   description: 'Orange County waterfront homes mortgage broker specializing in luxury coastal properties. Bayfront, oceanfront, and harbor homes financing expertise. Call (949) 579-2057.',
-  keywords: 'waterfront homes mortgage Orange County, luxury coastal financing, bayfront homes loans, oceanfront property financing, harbor homes mortgage'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/luxury-markets/waterfront-homes-mortgage-broker',
+  },
 };
 
 export default function WaterfrontHomesMortgageBrokerPage() {
@@ -197,7 +199,6 @@ export default function WaterfrontHomesMortgageBrokerPage() {
       <AIOOptimization
         title="Orange County Waterfront Homes Mortgage Broker | Luxury Coastal Financing | Mo Abdel NMLS #1426884"
         description="Orange County waterfront homes mortgage broker specializing in luxury coastal properties. Bayfront, oceanfront, and harbor homes financing expertise."
-        keywords={["waterfront homes mortgage Orange County", "luxury coastal financing", "bayfront homes loans", "oceanfront property financing", "harbor homes mortgage"]}
         city="Orange County"
         canonicalUrl="https://mothebroker.com/luxury-markets/waterfront-homes-mortgage-broker"
         content={waterfrontData}

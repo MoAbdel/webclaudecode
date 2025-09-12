@@ -6,7 +6,6 @@ import Head from 'next/head';
 interface AIOOptimizationProps {
   title: string;
   description: string;
-  keywords: string[];
   city?: string;
   canonicalUrl: string;
   businessContext?: {
@@ -31,7 +30,6 @@ interface AIOOptimizationProps {
 export default function AIOOptimization({
   title,
   description,
-  keywords,
   city,
   canonicalUrl,
   businessContext = {

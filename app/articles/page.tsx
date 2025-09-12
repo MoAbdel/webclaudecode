@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     url: 'https://www.mothebroker.com/articles',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/articles',
+  },
 };
 
 export default function ArticlesPage() {

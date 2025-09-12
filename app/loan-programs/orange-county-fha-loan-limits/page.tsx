@@ -8,11 +8,13 @@ import { DollarSign, Home, TrendingUp, MapPin, Phone, CheckCircle } from 'lucide
 export const metadata: Metadata = {
   title: 'Orange County FHA Loan Limits 2025 | Current FHA Limits CA | Mo Abdel NMLS #1426884',
   description: 'Current Orange County FHA loan limits for 2025. $1,089,300 limit allows FHA financing for most OC homes. Licensed FHA specialist Mo Abdel (949) 579-2057.',
-  keywords: 'Orange County FHA loan limits, FHA loan limits Orange County, Orange County FHA loans, FHA loan limit California 2025, FHA Orange County CA',
   openGraph: {
     title: 'Orange County FHA Loan Limits 2025 | Current FHA Limits CA',
     description: 'Current Orange County FHA loan limits for 2025. $1,089,300 limit allows FHA financing for most OC homes.',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/orange-county-fha-loan-limits',
   },
 };
 

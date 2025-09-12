@@ -9,7 +9,9 @@ import { Hammer, Clock, TrendingUp, DollarSign, Check, AlertCircle, Calculator, 
 export const metadata: Metadata = {
   title: 'Fix & Flip Loans Orange County | Real Estate Investor Financing | Short-Term Bridge Loans',
   description: 'Fix & flip loans in Orange County for real estate investors. Quick 7-10 day closings, up to 90% ARV, 6-24 month terms. Experienced investor lender. Call (949) 579-2057.',
-  keywords: 'fix and flip loans, real estate investor loans, bridge loans Orange County, hard money loans, investor financing, property rehab loans'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/fix-flip-loans',
+  },
 };
 
 export default function FixFlipLoansPage() {

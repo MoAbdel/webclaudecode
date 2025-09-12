@@ -8,7 +8,9 @@ import { DollarSign, Home, TrendingUp, CheckCircle, AlertCircle, Calculator } fr
 export const metadata: Metadata = {
   title: 'Cash-Out Refinance Orange County | Replace Mortgage + Get Cash | Mo The Mortgage Broker',
   description: 'Cash-out refinance in Orange County. Replace your mortgage with a larger loan and get cash from your equity. Competitive mortgage broker rates through NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'cash out refinance Orange County, cash out refi California, home equity cash out, mortgage refinance cash'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/cash-out-refinance',
+  },
 };
 
 export default function CashOutRefinancePage() {

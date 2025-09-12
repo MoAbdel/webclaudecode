@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     description: 'Refinance your Orange County home to lower your rate, reduce payments, or eliminate PMI. Get competitive refinance rates from 200+ lenders with Mo Abdel.',
     type: 'website',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/rate-term-refinance-orange-county',
+  },
 };
 
 const benefits = [

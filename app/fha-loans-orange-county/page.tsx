@@ -7,12 +7,14 @@ import { Home, Shield, DollarSign, TrendingUp, Users, CheckCircle, Calculator, H
 export const metadata: Metadata = {
   title: 'FHA Loans in Orange County, CA | Low Down Payment Options',
   description: 'Buy a home in Orange County with as little as 3.5% down. FHA loans available through Mo The Broker.',
-  keywords: 'FHA loans orange county, low down payment home loans, first time buyer FHA, 3.5% down payment, mortgage insurance orange county',
   openGraph: {
     title: 'FHA Loans in Orange County, CA | Low Down Payment Options',
     description: 'Buy a home in Orange County with as little as 3.5% down. FHA loans available through Mo The Broker.',
     url: 'https://mothebroker.com/fha-loans-orange-county',
-  }
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/fha-loans-orange-county',
+  },
 };
 
 // JSON-LD Schema for LocalBusiness

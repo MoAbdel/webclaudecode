@@ -7,6 +7,9 @@ import { Badge } from '@/components/ui/Badge';
 export const metadata: Metadata = {
   title: 'DSCR Investment Loans Orange County | No Income Verification Rental Property Loans',
   description: 'DSCR investment loans in Orange County. Qualify based on rental income, not personal income. No employment verification. Perfect for real estate investors. Call (949) 579-2057.',
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/dscr-investment-loans',
+  },
 };
 
 export default function DSCRInvestmentLoansPage() {

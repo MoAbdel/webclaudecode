@@ -8,7 +8,9 @@ import { Home, MapPin, Crown, TrendingUp, Phone, Star } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Orange County Luxury Real Estate & Mortgage Financing | High-End Home Loans',
   description: 'Specialized luxury mortgage financing for Orange County\'s most exclusive properties. Jumbo loans, portfolio lending, and white-glove service for ultra-luxury homes.',
-  keywords: 'luxury mortgage broker Orange County, jumbo loans, ultra-luxury home financing, Newport Beach luxury mortgages, high-end property loans'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/luxury-markets',
+  },
 };
 
 const luxuryMarkets = [

@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2025-02-28T14:30:00Z',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/neighborhood-guide/mission-viejo-vs-irvine-home-buying-guide',
+  },
 };
 
 export default function MissionViejoVsIrvineGuide() {

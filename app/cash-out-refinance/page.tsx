@@ -7,12 +7,14 @@ import { DollarSign, Home, TrendingUp, Calculator, CheckCircle, CreditCard, Hamm
 export const metadata: Metadata = {
   title: 'Cash-Out Refinance Loans in Orange County, CA | Mo The Broker',
   description: 'Tap into your home\'s equity with a cash-out refinance in Orange County. Competitive rates, fast approvals, and expert guidance from Mo The Broker.',
-  keywords: 'cash out refinance orange county, home equity cash out, refinance for cash, mortgage cash out orange county, home equity refinancing',
   openGraph: {
     title: 'Cash-Out Refinance Loans in Orange County, CA | Mo The Broker',
     description: 'Tap into your home\'s equity with a cash-out refinance in Orange County. Competitive rates, fast approvals, and expert guidance from Mo The Broker.',
     url: 'https://mothebroker.com/cash-out-refinance',
-  }
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/cash-out-refinance',
+  },
 };
 
 // JSON-LD Schema for LocalBusiness

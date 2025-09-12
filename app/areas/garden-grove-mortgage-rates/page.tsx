@@ -5,11 +5,13 @@ import CityPageTemplate from '@/components/seo/CityPageTemplate';
 export const metadata: Metadata = {
   title: 'Garden Grove Mortgage Rates 2025 | Best Home Loan Rates CA | Mo Abdel NMLS #1426884',
   description: 'Current Garden Grove mortgage rates and home loan options. Compare FHA, VA, conventional rates in Garden Grove CA. Licensed mortgage broker Mo Abdel NMLS #1426884.',
-  keywords: 'Garden Grove mortgage rates, Garden Grove home loans, Garden Grove mortgage broker, Garden Grove refinance rates, Garden Grove FHA loans, Garden Grove VA loans',
   openGraph: {
     title: 'Garden Grove Mortgage Rates 2025 | Best Home Loan Rates CA',
     description: 'Current Garden Grove mortgage rates and home loan options. Compare FHA, VA, conventional rates in Garden Grove CA.',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/garden-grove-mortgage-rates',
   },
 };
 

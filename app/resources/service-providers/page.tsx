@@ -32,7 +32,9 @@ import {
 export const metadata: Metadata = {
   title: 'Local Service Providers Directory | Orange County Real Estate Professionals',
   description: 'Trusted Orange County real estate professionals directory. Find vetted realtors, home inspectors, contractors, attorneys, and other home buying professionals.',
-  keywords: 'Orange County real estate agents, home inspectors, contractors, real estate attorney, mortgage professionals, home services, Orange County home buying team',
+  alternates: {
+    canonical: 'https://www.mothebroker.com/resources/service-providers',
+  },
 };
 
 export default function ServiceProvidersPage() {

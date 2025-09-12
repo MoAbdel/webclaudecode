@@ -8,7 +8,9 @@ import { Star, Shield, DollarSign, TrendingUp, Users, CheckCircle, Home, Calcula
 export const metadata: Metadata = {
   title: 'VA Loans Orange County 2025 | Zero Down Veterans Home Loans',
   description: 'Get VA loans in Orange County with $0 down, no PMI, and competitive rates. Mo Abdel specializes in VA financing for veterans with 2025 loan limits up to $1,209,750.',
-  keywords: 'VA loans Orange County, zero down VA mortgage California, veterans home loans OC, VA loan specialist Orange County, military home financing 2025'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/va-loans-orange-county',
+  },
 };
 
 const jsonLd = {

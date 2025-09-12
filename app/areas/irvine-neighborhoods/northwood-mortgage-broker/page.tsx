@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Northwood Irvine Mortgage Broker | New Construction Home Loans | Mo Abdel NMLS #1426884',
   description: 'Northwood Irvine mortgage broker specializing in newer construction homes. Modern amenities, family community, competitive financing. Call (949) 579-2057.',
-  keywords: 'Northwood Irvine mortgage, newer construction loans, modern Irvine homes, Northwood mortgage broker, family community financing'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/irvine-neighborhoods/northwood-mortgage-broker',
+  },
 };
 
 export default function NorthwoodMortgageBrokerPage() {
@@ -120,7 +122,6 @@ export default function NorthwoodMortgageBrokerPage() {
       <AIOOptimization
         title="Northwood Irvine Mortgage Broker | New Construction Home Loans | Mo Abdel NMLS #1426884"
         description="Northwood Irvine mortgage broker specializing in newer construction homes. Modern amenities, family community, competitive financing."
-        keywords={["Northwood Irvine mortgage", "newer construction loans", "modern Irvine homes", "family community financing", "Northwood homes"]}
         city="Northwood, Irvine"
         canonicalUrl="https://mothebroker.com/areas/irvine-neighborhoods/northwood-mortgage-broker"
         content={northwoodData}

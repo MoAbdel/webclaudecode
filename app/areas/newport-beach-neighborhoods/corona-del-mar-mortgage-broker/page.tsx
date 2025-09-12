@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Corona del Mar Newport Beach Mortgage Broker | Luxury Coastal Home Loans | Mo Abdel NMLS #1426884',
   description: 'Corona del Mar Newport Beach mortgage broker specializing in luxury coastal home financing. Prestigious beachside community loans, competitive rates. Call (949) 579-2057.',
-  keywords: 'Corona del Mar Newport Beach mortgage, luxury coastal homes, beachside community loans, Corona del Mar mortgage broker, Newport Beach luxury financing'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker',
+  },
 };
 
 export default function CoronaDelMarMortgageBrokerPage() {
@@ -148,7 +150,6 @@ export default function CoronaDelMarMortgageBrokerPage() {
       <AIOOptimization
         title="Corona del Mar Newport Beach Mortgage Broker | Luxury Coastal Home Loans | Mo Abdel NMLS #1426884"
         description="Corona del Mar Newport Beach mortgage broker specializing in luxury coastal home financing. Prestigious beachside community loans, competitive rates."
-        keywords={["Corona del Mar Newport Beach mortgage", "luxury coastal homes", "beachside community loans", "Corona del Mar mortgage broker", "Newport Beach luxury financing"]}
         city="Corona del Mar, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/corona-del-mar-mortgage-broker"
         content={coronaDelMarData}

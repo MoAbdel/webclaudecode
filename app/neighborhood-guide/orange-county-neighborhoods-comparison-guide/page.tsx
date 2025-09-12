@@ -14,6 +14,9 @@ export const metadata: Metadata = {
     type: 'article',
     publishedTime: '2025-06-05T16:20:00Z',
   },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/neighborhood-guide/orange-county-neighborhoods-comparison-guide',
+  },
 };
 
 const neighborhoods = [

@@ -5,11 +5,13 @@ import CityPageTemplate from '@/components/seo/CityPageTemplate';
 export const metadata: Metadata = {
   title: 'Santa Ana Refinance Rates 2025 | Cash-Out & Rate-Term Refinancing | Mo Abdel NMLS #1426884',
   description: 'Current Santa Ana refinance rates and cash-out refinancing options. Compare rate-and-term refinance rates in Santa Ana CA. Licensed mortgage broker Mo Abdel (949) 579-2057.',
-  keywords: 'Santa Ana refinance rates, Santa Ana cash out refinance, Santa Ana rate and term refinance, Santa Ana mortgage refinancing, Santa Ana HELOC rates',
   openGraph: {
     title: 'Santa Ana Refinance Rates 2025 | Cash-Out & Rate-Term Refinancing',
     description: 'Current Santa Ana refinance rates and cash-out refinancing options. Compare rate-and-term refinance rates in Santa Ana CA.',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/santa-ana-refinance-rates',
   },
 };
 

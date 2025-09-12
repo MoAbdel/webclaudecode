@@ -19,7 +19,9 @@ import {
 export const metadata: Metadata = {
   title: 'P&L Statement Loans Orange County | CPA Prepared Income Verification | Mo Abdel',
   description: 'P&L Statement loans for business owners in Orange County. Use CPA-prepared profit & loss statements for income verification instead of tax returns. Flexible Non-QM financing. Call (949) 579-2057.',
-  keywords: 'P&L statement loans, profit loss statement mortgage, business income loans, CPA prepared income verification, Orange County Non-QM'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/profit-loss-statement-loans',
+  },
 };
 
 export default function ProfitLossStatementLoansPage() {

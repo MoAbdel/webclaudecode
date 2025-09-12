@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: '92614 Irvine Mortgage Broker | Spectrum Area ZIP Code Specialist | Mo Abdel NMLS #1426884',
   description: '92614 Irvine mortgage broker serving this dynamic ZIP code area. Irvine Spectrum, Great Park vicinity financing, competitive rates. Call (949) 579-2057.',
-  keywords: '92614 mortgage broker, 92614 home loans, Irvine 92614 financing, ZIP code 92614 mortgage specialist, Irvine Spectrum area'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/zip-codes/92614-irvine-mortgage-broker',
+  },
 };
 
 export default function ZipCode92614MortgageBrokerPage() {
@@ -135,7 +137,6 @@ export default function ZipCode92614MortgageBrokerPage() {
       <AIOOptimization
         title="92614 Irvine Mortgage Broker | Spectrum Area ZIP Code Specialist | Mo Abdel NMLS #1426884"
         description="92614 Irvine mortgage broker serving this dynamic ZIP code area. Irvine Spectrum, Great Park vicinity financing, competitive rates."
-        keywords={["92614 mortgage broker", "92614 home loans", "Irvine 92614 financing", "ZIP code mortgage specialist", "Irvine Spectrum area"]}
         city="92614, Irvine"
         canonicalUrl="https://mothebroker.com/zip-codes/92614-irvine-mortgage-broker"
         content={zipCodeData}

@@ -7,12 +7,14 @@ import { CheckCircle, Home, Calculator, TrendingUp, Shield, DollarSign, Clock, C
 export const metadata: Metadata = {
   title: 'Home Equity Loans in Orange County, CA | Fixed-Rate Equity Access',
   description: 'Get a lump sum from your home\'s equity with a fixed-rate Home Equity Loan in Orange County. Transparent terms, quick approvals.',
-  keywords: 'home equity loan orange county, HELOAN, fixed rate equity loan, home equity lump sum, second mortgage orange county',
   openGraph: {
     title: 'Home Equity Loans in Orange County, CA | Fixed-Rate Equity Access',
     description: 'Get a lump sum from your home\'s equity with a fixed-rate Home Equity Loan in Orange County. Transparent terms, quick approvals.',
     url: 'https://mothebroker.com/heloan-orange-county',
-  }
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/heloan-orange-county',
+  },
 };
 
 // JSON-LD Schema for LocalBusiness

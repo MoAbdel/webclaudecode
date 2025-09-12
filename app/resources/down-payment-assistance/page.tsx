@@ -21,7 +21,9 @@ import {
 export const metadata: Metadata = {
   title: 'Orange County Down Payment Assistance Programs 2025 | Complete Guide',
   description: 'Complete guide to down payment assistance programs in Orange County, CA. Find grants, loans, and programs to help with your home purchase. Updated for 2025.',
-  keywords: 'down payment assistance Orange County, first time buyer programs, CalHFA, FHA grants, home buyer assistance, Orange County housing programs',
+  alternates: {
+    canonical: 'https://www.mothebroker.com/resources/down-payment-assistance',
+  },
 };
 
 export default function DownPaymentAssistancePage() {

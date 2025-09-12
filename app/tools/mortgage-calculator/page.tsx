@@ -156,7 +156,6 @@ export default function MortgageCalculatorPage() {
       <AIOOptimization
         title="Orange County Mortgage Calculator | Free Payment Calculator | Mo Abdel"
         description="Free mortgage calculator for Orange County home buyers. Calculate monthly payments, compare loan options, and analyze costs with property taxes and insurance included."
-        keywords={["mortgage calculator", "Orange County mortgage calculator", "home loan calculator", "payment calculator", "mortgage payment"]}
         canonicalUrl="https://mothebroker.com/tools/mortgage-calculator"
         content={calculatorData}
       />

@@ -8,7 +8,9 @@ import { MapPin, Home, ShoppingBag, Palette, TrendingUp, Users, Building } from 
 export const metadata: Metadata = {
   title: 'Costa Mesa Mortgage Broker | Home Loans & HELOC | Mo Abdel NMLS #1426884',
   description: 'Costa Mesa mortgage broker with competitive rates. HELOC, refinancing, FHA, VA, and conventional loans. Serving South Coast Plaza area, Mesa Verde, Eastside. Call (949) 579-2057.',
-  keywords: 'Costa Mesa mortgage broker, Costa Mesa home loans, Costa Mesa HELOC, South Coast Plaza mortgage, Mesa Verde loans, Eastside Costa Mesa mortgage broker'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/costa-mesa-mortgage-broker',
+  },
 };
 
 export default function CostaMesaMortgageBrokerPage() {

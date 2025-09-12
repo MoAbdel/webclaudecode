@@ -8,7 +8,9 @@ import { DollarSign, Calendar, Shield, CheckCircle, AlertCircle, TrendingUp } fr
 export const metadata: Metadata = {
   title: 'HELOAN (Home Equity Loan) - Orange County | Mo The Mortgage Broker',
   description: 'Get a fixed-rate Home Equity Loan in Orange County. Lump sum up to $500K with predictable payments. Licensed mortgage broker with NEXA Mortgage. Call (949) 579-2057.',
-  keywords: 'HELOAN Orange County, home equity loan California, fixed rate home equity, second mortgage Orange County'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/heloan',
+  },
 };
 
 export default function HELOANPage() {

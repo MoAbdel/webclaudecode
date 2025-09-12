@@ -9,7 +9,9 @@ import { DollarSign, FileText, TrendingUp, Users, Check, AlertCircle, Calculator
 export const metadata: Metadata = {
   title: 'Bank Statement Loans Irvine CA | Self-Employed Mortgage | No Income Documentation | Mo Abdel NMLS #1426884',
   description: 'Bank statement loans in Irvine CA for self-employed borrowers. Qualify using 12-24 months bank statements. Up to $3M loan amounts. Expert Non-QM lender serving Irvine. Call (949) 579-2057.',
-  keywords: 'bank statement loans Irvine, self-employed mortgage Irvine, no income documentation Irvine, Non-QM loans Irvine CA, alternative income verification Irvine'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/bank-statement-loans-irvine',
+  },
 };
 
 export default function BankStatementLoansIrvinePage() {

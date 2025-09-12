@@ -9,7 +9,9 @@ import { DollarSign, FileText, TrendingUp, Users, Check, AlertCircle, Calculator
 export const metadata: Metadata = {
   title: 'Bank Statement Loans Orange County | Self-Employed Mortgage | No Income Documentation',
   description: 'Bank statement loans in Orange County for self-employed borrowers. Qualify using 12-24 months bank statements. Up to $3M loan amounts. Expert Non-QM lender. Call (949) 579-2057.',
-  keywords: 'bank statement loans, self-employed mortgage, no income documentation, Non-QM loans Orange County, alternative income verification'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/bank-statement-loans',
+  },
 };
 
 export default function BankStatementLoansPage() {

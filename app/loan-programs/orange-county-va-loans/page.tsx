@@ -8,11 +8,13 @@ import { Shield, Home, Award, DollarSign, Phone, CheckCircle, Users } from 'luci
 export const metadata: Metadata = {
   title: 'Orange County VA Loans | VA Loans Orange County | Military Home Loans | Mo Abdel NMLS #1426884',
   description: 'Orange County VA loans with no down payment required. Licensed VA loan specialist Mo Abdel helps veterans and military buy homes in Orange County CA. Call (949) 579-2057.',
-  keywords: 'Orange County VA loans, VA loans Orange County, Orange County VA home loans, military home loans Orange County, veterans loans OC, VA mortgage Orange County',
   openGraph: {
     title: 'Orange County VA Loans | VA Loans Orange County | Military Home Loans',
     description: 'Orange County VA loans with no down payment required. Licensed VA loan specialist helps veterans buy homes in Orange County CA.',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/loan-programs/orange-county-va-loans',
   },
 };
 

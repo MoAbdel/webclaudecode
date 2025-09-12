@@ -34,11 +34,13 @@ const gardenGroveData = {
 export const metadata: Metadata = {
   title: 'Garden Grove Mortgage Rates 2025 | Garden Grove Mortgage Broker | Mo Abdel NMLS #1426884',
   description: 'Current Garden Grove mortgage rates and refinance rates. Licensed Garden Grove mortgage broker Mo Abdel offers competitive FHA, VA, conventional home loan rates.',
-  keywords: 'garden grove mortgage rates, mortgage rates garden grove, garden grove refinance rates, garden grove mortgage broker, garden grove home loans',
   openGraph: {
     title: 'Garden Grove Mortgage Rates 2025 | Garden Grove Mortgage Broker',
     description: 'Current Garden Grove mortgage rates and refinance rates. Licensed Garden Grove mortgage broker Mo Abdel offers competitive home loan rates.',
     type: 'website',
+  },
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/garden-grove-mortgage-broker',
   },
 };
 

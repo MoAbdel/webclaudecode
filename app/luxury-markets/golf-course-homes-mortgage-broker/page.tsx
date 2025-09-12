@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Orange County Golf Course Homes Mortgage Broker | Luxury Fairway Properties | Mo Abdel NMLS #1426884',
   description: 'Orange County golf course homes mortgage broker specializing in luxury fairway properties. Championship courses, resort amenities, and prestige living. Call (949) 579-2057.',
-  keywords: 'golf course homes mortgage Orange County, luxury fairway properties, golf community financing, championship course homes, resort living mortgage'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/luxury-markets/golf-course-homes-mortgage-broker',
+  },
 };
 
 export default function GolfCourseHomesMortgageBrokerPage() {
@@ -203,7 +205,6 @@ export default function GolfCourseHomesMortgageBrokerPage() {
       <AIOOptimization
         title="Orange County Golf Course Homes Mortgage Broker | Luxury Fairway Properties | Mo Abdel NMLS #1426884"
         description="Orange County golf course homes mortgage broker specializing in luxury fairway properties. Championship courses, resort amenities, and prestige living."
-        keywords={["golf course homes mortgage Orange County", "luxury fairway properties", "golf community financing", "championship course homes", "resort living mortgage"]}
         city="Orange County"
         canonicalUrl="https://mothebroker.com/luxury-markets/golf-course-homes-mortgage-broker"
         content={golfCourseData}

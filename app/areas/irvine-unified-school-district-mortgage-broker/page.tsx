@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Irvine Unified School District Mortgage Broker | Top Rated Schools | Mo Abdel NMLS #1426884',
   description: 'Irvine Unified School District mortgage broker specializing in homes within top-rated IUSD boundaries. Expert financing for families prioritizing education. Call (949) 579-2057.',
-  keywords: 'Irvine Unified School District mortgage, IUSD homes, top rated schools mortgage, Irvine schools mortgage broker, education focused home buying'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/irvine-unified-school-district-mortgage-broker',
+  },
 };
 
 export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
@@ -170,7 +172,6 @@ export default function IrvineUnifiedSchoolDistrictMortgageBrokerPage() {
       <AIOOptimization
         title="Irvine Unified School District Mortgage Broker | Top Rated Schools | Mo Abdel NMLS #1426884"
         description="Irvine Unified School District mortgage broker specializing in homes within top-rated IUSD boundaries. Expert financing for families prioritizing education."
-        keywords={["Irvine Unified School District mortgage", "IUSD homes", "top rated schools mortgage", "Irvine schools mortgage broker", "education focused home buying"]}
         city="Irvine Unified School District"
         canonicalUrl="https://mothebroker.com/areas/irvine-unified-school-district-mortgage-broker"
         content={iusdData}

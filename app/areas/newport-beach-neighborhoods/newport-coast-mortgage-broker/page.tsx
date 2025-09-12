@@ -11,7 +11,9 @@ import InternalLinkEngine from '@/components/optimization/InternalLinkEngine';
 export const metadata: Metadata = {
   title: 'Newport Coast Mortgage Broker | Ultra-Luxury Home Loans | Mo Abdel NMLS #1426884',
   description: 'Newport Coast mortgage broker specializing in ultra-luxury coastal estates. Prestigious community financing, ocean view properties, estate loans. Call (949) 579-2057.',
-  keywords: 'Newport Coast mortgage, luxury coastal homes, ocean view financing, Newport Coast estates, ultra-luxury mortgage broker'
+  alternates: {
+    canonical: 'https://www.mothebroker.com/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker',
+  },
 };
 
 export default function NewportCoastMortgageBrokerPage() {
@@ -148,7 +150,6 @@ export default function NewportCoastMortgageBrokerPage() {
       <AIOOptimization
         title="Newport Coast Mortgage Broker | Ultra-Luxury Home Loans | Mo Abdel NMLS #1426884"
         description="Newport Coast mortgage broker specializing in ultra-luxury coastal estates. Prestigious community financing, ocean view properties, estate loans."
-        keywords={["Newport Coast mortgage", "luxury coastal homes", "ocean view financing", "ultra-luxury mortgage broker", "Newport Coast estates"]}
         city="Newport Coast, Newport Beach"
         canonicalUrl="https://mothebroker.com/areas/newport-beach-neighborhoods/newport-coast-mortgage-broker"
         content={newportCoastData}

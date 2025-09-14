@@ -24,16 +24,17 @@ const nextConfig = {
   // URL Redirects for SEO
   async redirects() {
     return [
-      // Programs redirects with SEO-appropriate destinations
-      { source: '/programs/heloc', destination: '/heloc-orange-county', permanent: true },
-      { source: '/programs/heloan', destination: '/heloan-orange-county', permanent: true },
+      // Programs redirects to loan-programs structure
+      { source: '/programs/dscr-investment-loans', destination: '/loan-programs/dscr-investment-loans', permanent: true },
       { source: '/programs/fix-flip-loans', destination: '/loan-programs/fix-flip-loans', permanent: true },
-      { source: '/programs/usda-rural-loans', destination: '/loan-programs/usda-rural-loans', permanent: true },
-      { source: '/programs/dscr-investment-loans', destination: '/loan-programs', permanent: true },
+      { source: '/programs/foreign-national-loans', destination: '/loan-programs/foreign-national-loans', permanent: true },
+      { source: '/programs/heloan', destination: '/loan-programs/heloan', permanent: true },
+      { source: '/programs/heloc', destination: '/loan-programs/heloc', permanent: true },
+      { source: '/programs/non-qm-asset-depletion', destination: '/loan-programs/asset-depletion-loans', permanent: true },
       { source: '/programs/non-qm-bank-statement', destination: '/loan-programs/bank-statement-loans', permanent: true },
-      { source: '/programs/non-qm-asset-depletion', destination: '/non-qm-loans-orange-county', permanent: true },
-      { source: '/programs/foreign-national-loans', destination: '/non-qm-loans-orange-county', permanent: true },
-      { source: '/Mo', destination: '/about', permanent: true },
+      { source: '/programs/usda-rural-loans', destination: '/loan-programs/usda-rural-loans', permanent: true },
+      // Fix broken Mo URL - redirect to homepage
+      { source: '/Mo', destination: '/', permanent: true },
       // Remove trailing slashes for clean URLs
       { source: '/loan-programs/heloc/', destination: '/loan-programs/heloc', permanent: true },
       { source: '/loan-programs/heloan/', destination: '/loan-programs/heloan', permanent: true },

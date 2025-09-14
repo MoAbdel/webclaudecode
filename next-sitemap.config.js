@@ -33,7 +33,7 @@ module.exports = {
     }
     
     // Main loan program pages - high priority
-    else if (path.startsWith('/loan-programs/') || path.startsWith('/programs/')) {
+    else if (path.startsWith('/loan-programs/')) {
       priority = 0.9;
       changefreq = 'weekly';
     }
@@ -50,9 +50,9 @@ module.exports = {
       changefreq = 'weekly';
     }
     
-    // Profile pages - important brand content
-    else if (path === '/Mo' || path === '/cookie-policy') {
-      priority = 0.7;
+    // Legal/policy pages - important brand content
+    else if (path === '/cookie-policy' || path === '/privacy-policy' || path === '/terms-of-service') {
+      priority = 0.6;
       changefreq = 'monthly';
     }
     
@@ -117,22 +117,14 @@ module.exports = {
       '/areas/newport-beach-neighborhoods',
       '/areas/irvine-neighborhoods',
       
-      // Program pages
-      '/programs/heloc',
-      '/programs/heloan',
-      '/programs/fix-flip-loans',
-      '/programs/non-qm-bank-statement',
-      '/programs/usda-rural-loans',
-      '/programs/dscr-investment-loans',
-      '/programs/non-qm-asset-depletion',
-      '/programs/foreign-national-loans',
+      // Main loan program pages (proper /loan-programs/ structure)
+      '/loan-programs',
       
       // Resources
       '/resources/mortgage-glossary',
       
-      // Utility pages
+      // Legal pages
       '/cookie-policy',
-      '/Mo',
       
       // Main loan program redirects
       '/fha-loans-orange-county',

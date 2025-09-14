@@ -14,8 +14,8 @@ export default function HeroSectionServer() {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-slate-900">Mortgage Broker in Orange County – </span>
-                <span className="text-blue-600">Better Wholesale Loan Rates, Faster Closing</span>
+                <span className="text-slate-900">Orange County's Trusted Mortgage Broker - </span>
+                <span className="text-blue-600">Access 200+ Lenders</span>
               </h1>
               
               <p className="text-lg text-slate-600 leading-relaxed max-w-lg">

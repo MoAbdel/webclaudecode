@@ -12,8 +12,8 @@ import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
 import IndexingOptimization from '@/components/seo/IndexingOptimization';
 
 export const metadata: Metadata = {
-  title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
-  description: 'Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884.',
+  title: 'Orange County Mortgage Broker | 200+ Lenders | Mo Abdel NMLS #1426884',
+  description: 'Get competitive mortgage rates from 200+ lenders in Orange County. Licensed broker Mo Abdel (NMLS #1426884) with 18-day average closings. Free consultation!',
   alternates: {
     canonical: 'https://www.mothebroker.com',
   },
@@ -68,8 +68,8 @@ export default function HomePage() {
     <>
       {/* AI Optimization Components */}
       <AIOOptimization
-        title="Orange County Mortgage Broker | Mo Abdel NMLS #1426884"
-        description="Mortgage broker serving Orange County. Access 200+ lenders for competitive wholesale rates, fast closings. FHA, VA, conventional loans. Licensed NMLS #1426884."
+        title="Orange County Mortgage Broker | 200+ Lenders | Mo Abdel NMLS #1426884"
+        description="Get competitive mortgage rates from 200+ lenders in Orange County. Licensed broker Mo Abdel (NMLS #1426884) with 18-day average closings. Free consultation!"
         canonicalUrl="https://www.mothebroker.com"
         content={homePageContent}
       />

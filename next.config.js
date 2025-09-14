@@ -35,6 +35,13 @@ const nextConfig = {
       { source: '/programs/usda-rural-loans', destination: '/loan-programs/usda-rural-loans', permanent: true },
       // Fix broken Mo URL - redirect to homepage
       { source: '/Mo', destination: '/', permanent: true },
+      // SEO URL optimization redirects
+      { source: '/about', destination: '/about-mo-abdel-orange-county-mortgage-broker', permanent: true },
+      { source: '/contact', destination: '/contact-orange-county-mortgage-broker', permanent: true },
+      // Orange County specific loan program redirects
+      { source: '/fha-loans-orange-county', destination: '/orange-county-fha-loans', permanent: true },
+      { source: '/conventional-loans-orange-county', destination: '/orange-county-conventional-loans', permanent: true },
+      { source: '/jumbo-loans-orange-county', destination: '/orange-county-jumbo-loans', permanent: true },
       // Remove trailing slashes for clean URLs
       { source: '/loan-programs/heloc/', destination: '/loan-programs/heloc', permanent: true },
       { source: '/loan-programs/heloan/', destination: '/loan-programs/heloan', permanent: true },

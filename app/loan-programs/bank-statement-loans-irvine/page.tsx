@@ -216,41 +216,104 @@ export default function BankStatementLoansIrvinePage() {
           </div>
         </div>
 
-        {/* SEO Content */}
-        <div className="mt-12 prose prose-lg max-w-4xl mx-auto">
-          <h2>Bank Statement Loans for Irvine Self-Employed Professionals</h2>
-          <p>
-            Irvine's thriving business community includes thousands of self-employed professionals, entrepreneurs, 
-            and small business owners. Traditional mortgage approval can be challenging when your income doesn't 
-            fit conventional documentation requirements. Bank statement loans provide the perfect solution for 
-            Irvine residents with non-traditional income streams.
-          </p>
-          
-          <h3>Why Irvine Professionals Choose Bank Statement Loans</h3>
-          <p>
-            With Irvine's median home prices exceeding $1.4 million, self-employed buyers need financing solutions 
-            that match their earning potential rather than their tax returns. Bank statement loans allow you to 
-            qualify based on actual cash flow, making homeownership achievable for:
-          </p>
-          
-          <ul>
-            <li>Technology consultants and startup founders</li>
-            <li>Medical and dental practice owners</li>
-            <li>Real estate professionals and investors</li>
-            <li>Independent contractors and freelancers</li>
-            <li>Small business owners across various industries</li>
-          </ul>
+        {/* FAQ Section */}
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold text-center text-slate-900 mb-8">
+            Frequently Asked Questions - Bank Statement Loans Irvine
+          </h2>
+          <div className="max-w-4xl mx-auto space-y-6">
+            
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-600">
+                  Who qualifies for bank statement loans in Irvine?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700">
+                  Bank statement loans are perfect for Irvine's self-employed professionals, including technology consultants, startup founders, 
+                  medical and dental practice owners, real estate professionals and investors, independent contractors, freelancers, 
+                  and small business owners across various industries who have difficulty documenting income through traditional tax returns.
+                </p>
+              </CardContent>
+            </Card>
 
-          <h3>Irvine Market Advantages</h3>
-          <p>
-            Bank statement loans are particularly valuable in Irvine's competitive market where:
-          </p>
-          <ul>
-            <li>Quick approval times help you compete with cash offers</li>
-            <li>Higher loan limits accommodate premium pricing</li>
-            <li>Flexible qualification helps secure dream homes in top neighborhoods</li>
-            <li>Professional underwriting understands complex business income</li>
-          </ul>
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-600">
+                  Why are bank statement loans popular in Irvine's market?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700">
+                  With Irvine's median home prices exceeding $1.4 million, self-employed buyers need financing solutions that match their 
+                  earning potential rather than their tax returns. Bank statement loans allow you to qualify based on actual cash flow, 
+                  with quick approval times to compete with cash offers, higher loan limits for premium pricing, and flexible qualification 
+                  to secure dream homes in top neighborhoods.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-600">
+                  What documentation is needed for Irvine bank statement loans?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700">
+                  You'll need to provide 12-24 months of personal or business bank statements. We calculate qualifying income from your deposits 
+                  and cash flow rather than requiring tax returns. This streamlined documentation process is perfect for Irvine residents with 
+                  non-traditional income streams and helps speed up the approval process.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-600">
+                  What are the advantages for Irvine homebuyers?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700">
+                  Bank statement loans offer significant advantages in Irvine's competitive market: quick approval times help you compete with cash offers, 
+                  higher loan limits accommodate Irvine's premium home pricing, flexible qualification helps secure homes in top neighborhoods like 
+                  Turtle Rock and Quail Hill, and professional underwriting that understands complex business income structures.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-600">
+                  Which Irvine neighborhoods work best with bank statement loans?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700">
+                  Bank statement loans work excellently for all Irvine neighborhoods, especially premium areas like Turtle Rock ($1.8M+), 
+                  Quail Hill ($1.6M+), Shady Canyon ($3M+), University Park ($1.4M+), Woodbridge ($1.3M+), Northwood ($1.5M+), 
+                  Cypress Village ($1.2M+), and Great Park ($1.1M+). The flexible qualification helps buyers access these desirable communities.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="shadow-lg">
+              <CardHeader>
+                <CardTitle className="text-xl text-blue-600">
+                  How does the bank statement loan process work?
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-slate-700">
+                  The process is straightforward: First, submit 12-24 months of personal or business bank statements. Then, we calculate 
+                  your qualifying income from deposits and cash flow rather than tax returns. Finally, get fast approval to compete 
+                  effectively in Irvine's fast-moving real estate market with loan amounts up to $3M+ and down payments starting at 10%.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </div>
     </div>

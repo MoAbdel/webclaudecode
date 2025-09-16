@@ -9,7 +9,7 @@ import { Phone, MapPin, Star, Shield, Award, Clock, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'About Mo Abdel | Licensed Orange County Mortgage Broker NMLS #1426884',
-  description: 'Meet Mo Abdel, your trusted Orange County mortgage broker with NMLS #1426884. Access 200+ lenders, 18-day average closings, and expert local knowledge since 2010.',
+  description: 'Meet Mo Abdel, your trusted Orange County mortgage broker with NMLS #1426884. Access 200+ lenders, 18-day average closings, and expert local knowledge.',
   alternates: {
     canonical: 'https://www.mothebroker.com/about-mo-abdel-orange-county-mortgage-broker',
   },
@@ -122,7 +122,7 @@ export default function AboutMoAbdelPage() {
               Your Trusted Orange County Mortgage Broker
             </p>
             <p className="text-lg text-blue-600 font-semibold">
-              Serving Orange County Since 2010 • 200+ Lender Access
+              Orange County Mortgage Broker • 200+ Lender Access
             </p>
             
             {/* Quick Contact Bar */}
@@ -154,8 +154,8 @@ export default function AboutMoAbdelPage() {
             </Card>
             <Card className="text-center shadow-lg">
               <CardContent className="p-6">
-                <div className="text-3xl font-bold text-orange-600 mb-2">15+</div>
-                <div className="text-sm text-slate-600">Years Experience</div>
+                <div className="text-3xl font-bold text-orange-600 mb-2">NMLS</div>
+                <div className="text-sm text-slate-600">Licensed Professional</div>
               </CardContent>
             </Card>
             <Card className="text-center shadow-lg">
@@ -315,7 +315,7 @@ export default function AboutMoAbdelPage() {
                   </div>
                   <h3 className="text-xl font-bold mb-3">Expert Guidance</h3>
                   <p className="text-slate-600">
-                    15+ years of experience and deep Orange County market knowledge to guide your decision.
+                    Licensed professional with deep Orange County market knowledge to guide your decision.
                   </p>
                 </div>
               </div>
@@ -330,7 +330,7 @@ export default function AboutMoAbdelPage() {
               </h2>
               <div className="prose prose-lg max-w-none text-slate-700 text-center mb-8">
                 <p>
-                  As a Lake Forest resident serving Orange County since 2010, I understand the unique aspects of our local market—from Irvine's master-planned communities to Newport Beach's luxury coastal properties.
+                  As a Lake Forest resident serving Orange County, I understand the unique aspects of our local market—from Irvine's master-planned communities to Newport Beach's luxury coastal properties.
                 </p>
               </div>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">

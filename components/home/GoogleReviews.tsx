@@ -155,33 +155,6 @@ export default function GoogleReviews() {
               </div>
             </div>
             
-            <div className="flex items-center justify-center gap-4 text-sm">
-              <a 
-                href="https://share.google/wFT7ePRJSrCjZ6KAg" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-medium"
-              >
-                <div className="w-5 h-5 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">G</span>
-                </div>
-                View on Google Business
-                <ExternalLink className="w-4 h-4" />
-              </a>
-              
-              <a 
-                href="https://www.yelp.com/biz/mo-abdel-nexa-mortgage-lake-forest" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-red-600 hover:text-red-700 font-medium"
-              >
-                <div className="w-5 h-5 bg-red-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-xs font-bold">Y</span>
-                </div>
-                View on Yelp
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            </div>
           </div>
 
           {/* Reviews Grid */}
@@ -193,7 +166,6 @@ export default function GoogleReviews() {
                   {/* Review Header */}
                   <div className="flex items-start justify-between mb-4">
                     <div className="flex items-center gap-3">
-                      {getPlatformIcon(review.platform)}
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="font-semibold text-slate-900">{review.author}</span>

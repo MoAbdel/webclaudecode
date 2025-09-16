@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import MortgageCalculator from '@/components/calculator/MortgageCalculator';
 import AffordabilityCalculator from '@/components/calculator/AffordabilityCalculator';
 import RefinanceCalculator from '@/components/calculator/RefinanceCalculator';
-import RateComparisonTable from '@/components/calculator/RateComparisonTable';
 
 export default function CalculatorPage() {
   const [activeTab, setActiveTab] = useState('refinance');
@@ -68,9 +67,6 @@ export default function CalculatorPage() {
             {calculators.find(calc => calc.id === activeTab)?.component}
           </div>
         </div>
-
-        {/* Rate Comparison Table */}
-        <RateComparisonTable />
 
         {/* Advanced Calculator Links */}
         <div className="mt-12 mb-12">

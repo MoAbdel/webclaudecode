@@ -174,7 +174,7 @@ export default function AboutMoAbdelPage() {
               </h2>
               <div className="prose prose-lg max-w-none text-slate-700">
                 <p className="mb-4">
-                  As a licensed mortgage broker serving Orange County, I specialize in helping homeowners unlock the power of their home's equity and secure better mortgage terms through strategic refinancing. <strong>According to 2024 HMDA data analysis, research shows that mortgage brokers save borrowers an average of $10,662 over the life of their loan compared to retail lenders.</strong> With access to over 200 lenders, I can offer you rates and equity programs that traditional banks simply cannot match.
+                  As a licensed mortgage broker serving Orange County, I specialize in helping homeowners unlock the power of their home's equity and secure better mortgage terms through strategic refinancing. <strong>According to 2025 HMDA data analysis, research shows that mortgage brokers save borrowers an average of $10,662 over the life of their loan compared to retail lenders.</strong> With access to over 200 lenders, I can offer you rates and equity programs that traditional banks simply cannot match.
                 </p>
                 <p className="mb-4">
                   Your home is likely your largest asset—let's make it work harder for you. Unlike big banks that push their own products, I work exclusively for you, comparing rates and terms from hundreds of lenders to find the perfect solution for your unique situation.

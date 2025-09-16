@@ -11,24 +11,24 @@ export default function LocalMarketInsights() {
   const [marketData, setMarketData] = useState<any[]>([
     {
       metric: "Median Home Price",
-      value: "$1.25M",
-      change: "+3.3%",
+      value: "$1.18M",
+      change: "+5.1%",
       trend: "up",
-      description: "Orange County median sale price"
+      description: "Orange County median sale price (Jan 2025)"
     },
     {
-      metric: "Days on Market",
-      value: "32 days",
-      change: "+5 days",
+      metric: "Active Inventory",
+      value: "5,121 homes",
+      change: "+97% YTD",
       trend: "up",
-      description: "Homes taking longer to sell"
+      description: "Significant inventory growth since Jan 2025"
     },
     {
-      metric: "Inventory",
-      value: "2.4 months",
-      change: "+0.3",
-      trend: "up",
-      description: "Supply slightly improving"
+      metric: "Market Condition",
+      value: "Seller's Market",
+      change: "Stable",
+      trend: "stable",
+      description: "70% of homes priced above $1M"
     }
   ]);
 
@@ -64,10 +64,11 @@ export default function LocalMarketInsights() {
                 
                 <div className={`flex items-center justify-center space-x-1 text-sm font-medium mb-2 ${
                   data.trend === 'up' ? 'text-green-600' : 
-                  data.trend === 'down' ? 'text-red-500' : 'text-slate-600'
+                  data.trend === 'down' ? 'text-red-500' : 'text-blue-600'
                 }`}>
                   {data.trend === 'up' && <TrendingUp className="w-4 h-4" />}
-                  {data.trend === 'down' && <TrendingUp className="w-4 h-4 transform rotate-180" />} 
+                  {data.trend === 'down' && <TrendingUp className="w-4 h-4 transform rotate-180" />}
+                  {data.trend === 'stable' && <Home className="w-4 h-4" />}
                   <span>{data.change}</span>
                 </div>
                 

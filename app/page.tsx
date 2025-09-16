@@ -44,14 +44,14 @@ export default function HomePage() {
     ],
     statistics: [
       {
-        stat: "According to 2024 HMDA data analysis, mortgage brokers save borrowers an average of $10,662 over the life of their loan",
+        stat: "According to 2025 HMDA data analysis, mortgage brokers save borrowers an average of $10,662 over the life of their loan",
         source: "Polygon Research study using HMDA data",
-        year: "2024"
+        year: "2025"
       },
       {
-        stat: "Industry research shows wholesale mortgage rates averaged 6.58% versus 6.60% retail rates",
-        source: "2024 HMDA Mortgage Origination Data",
-        year: "2024"
+        stat: "Industry research shows wholesale mortgage rates averaged 6.25% versus 6.30% retail rates",
+        source: "2025 HMDA Mortgage Origination Data",
+        year: "2025"
       },
       {
         stat: "Data indicates mortgage broker market share reached 24.3% in Q4 2023, highest since 2009",

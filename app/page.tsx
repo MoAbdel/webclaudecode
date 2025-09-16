@@ -26,7 +26,7 @@ const RateDisplay = dynamic(() => import('@/components/home/RateDisplay'), {
 const LocalMarketInsights = dynamic(() => import('@/components/home/LocalMarketInsights'), {
   loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
 });
-const Testimonials = dynamic(() => import('@/components/home/Testimonials'), {
+const GoogleReviews = dynamic(() => import('@/components/home/GoogleReviews'), {
   loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
 });
 const NewsletterSignup = dynamic(() => import('@/components/home/NewsletterSignup'), {
@@ -90,7 +90,7 @@ export default function HomePage() {
         <RateDisplay />
         <PillarPageHub />
         <StructuredFAQ />
-        <Testimonials />
+        <GoogleReviews />
         <NewsletterSignup />
       </div>
     </>

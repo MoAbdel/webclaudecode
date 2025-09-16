@@ -74,7 +74,7 @@ const reviews: Review[] = [
     text: "It has been a delightful experience to work with Mo. You know how stressful it can be to refinance your home. Waiting for your rate, waiting for the lender decision, temporary approval and so on. Mo was great in communicating with me clearly and was willing to go the extra mile to check documents, reach out to processors and so on. It could not have been stress free without Mo. so thank you Mo from the bottom of my heart. May you have good luck in all your loans.",
     platform: "google",
     verified: true,
-    location: "Irvine, CA"
+    location: ""
   },
   {
     id: "2",
@@ -84,17 +84,7 @@ const reviews: Review[] = [
     text: "I can't recommend Mo enough! I was looking to tap into my home's equity but had no idea where to start. Mo walked me through each program and every step of the process in plain language, answered all my questions quickly, and never once made me feel pressured. The whole thing was smoother and faster than I expected. I had funds available in just days. He genuinely looked out for my best interest and got me an amazing rate. If you're thinking about a HELOC, Mo is the guy you want in your corner",
     platform: "google",
     verified: true,
-    location: "Mission Viejo, CA"
-  },
-  {
-    id: "3",
-    author: "James B.",
-    rating: 5,
-    date: "2024-12-02",
-    text: "Mo was fantastic to work with on our refinance. While other brokers just quoted rates, he took time to understand our situation and found us a better solution than we thought possible. His communication was excellent throughout the process and he made everything easy to understand. Really knows his stuff and goes above and beyond. Would definitely recommend to anyone looking for a knowledgeable mortgage professional.",
-    platform: "google",
-    verified: true,
-    location: "Orange County, CA"
+    location: ""
   }
 ];
 

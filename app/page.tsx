@@ -29,9 +29,6 @@ const LocalMarketInsights = dynamic(() => import('@/components/home/LocalMarketI
 const GoogleReviews = dynamic(() => import('@/components/home/GoogleReviews'), {
   loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
 });
-const NewsletterSignup = dynamic(() => import('@/components/home/NewsletterSignup'), {
-  loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
-});
 
 export default function HomePage() {
   const homePageContent = {
@@ -91,7 +88,6 @@ export default function HomePage() {
         <PillarPageHub />
         <StructuredFAQ />
         <GoogleReviews />
-        <NewsletterSignup />
       </div>
     </>
   );

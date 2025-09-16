@@ -88,12 +88,39 @@ export default function RootLayout({
         <link rel="preconnect" href="https://connect.facebook.net" crossOrigin="" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
         
-        {/* Critical CSS preload for above-the-fold content */}
+        {/* Critical CSS and JavaScript preloading */}
         <link rel="preload" href="/_next/static/css/app/layout.css" as="style" />
         <link rel="preload" href="/_next/static/chunks/main.js" as="script" />
         
-        {/* Non-critical stylesheets with media="print" then switch to all */}
+        {/* CRITICAL: Preload key interactive JavaScript for FID optimization */}
+        <link rel="modulepreload" href="/_next/static/chunks/framework.js" />
+        <link rel="modulepreload" href="/_next/static/chunks/webpack.js" />
+        <link rel="preload" href="/_next/static/chunks/pages/_app.js" as="script" />
+        
+        {/* CRITICAL: Optimize resource loading to prevent render blocking */}
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.facebook.com" />
+        
+        {/* CRITICAL: Preload hero section fonts to prevent CLS */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link 
+          rel="stylesheet" 
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" 
+        />
+        
+        {/* CRITICAL: Preload key images for LCP optimization with dimensions for CLS prevention */}
+        <link rel="preload" href="/images/moabdel-headshot-final.png" as="image" type="image/png" media="(min-width: 640px)" />
         <link rel="preload" href="/favicon.ico" as="image" type="image/x-icon" />
+        
+        {/* Critical: Image dimension hints to prevent CLS */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .hero-image-container { width: 100%; height: 400px; }
+            @media (min-width: 768px) { .hero-image-container { height: 500px; } }
+            @media (min-width: 1024px) { .hero-image-container { height: 600px; } }
+          `
+        }} />
         
         {/* Critical mobile viewport optimization */}
         <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />

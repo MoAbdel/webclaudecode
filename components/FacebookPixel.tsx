@@ -33,12 +33,12 @@ export default function FacebookPixel() {
 
   return (
     <>
-      {/* Facebook Pixel Code - External script loading for best practices */}
+      {/* Facebook Pixel Code - Optimized for FID performance */}
       <Script
         src="https://connect.facebook.net/en_US/fbevents.js"
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         onLoad={() => {
-          // Initialize Facebook Pixel after script loads
+          // Initialize Facebook Pixel after script loads, non-blocking
           if (typeof window !== 'undefined' && window.fbq) {
             window.fbq('init', FACEBOOK_PIXEL_ID);
             window.fbq('track', 'PageView');

@@ -88,23 +88,13 @@ const reviews: Review[] = [
   },
   {
     id: "3",
-    author: "Jennifer M.",
+    author: "James B.",
     rating: 5,
     date: "2024-12-02",
-    text: "Mo made our first-time home buying experience incredibly smooth. As newcomers to Orange County, we were overwhelmed by the market, but Mo's local expertise and access to multiple lenders got us the best rate. He explained everything clearly and was always available for questions. Highly recommend for anyone buying in OC!",
+    text: "Mo was fantastic to work with on our refinance. While other brokers just quoted rates, he took time to understand our situation and found us a better solution than we thought possible. His communication was excellent throughout the process and he made everything easy to understand. Really knows his stuff and goes above and beyond. Would definitely recommend to anyone looking for a knowledgeable mortgage professional.",
     platform: "google",
     verified: true,
-    location: "Newport Beach, CA"
-  },
-  {
-    id: "4",
-    author: "David L.",
-    rating: 5,
-    date: "2024-11-08",
-    text: "Outstanding service! Mo helped us with a jumbo loan for our Laguna Beach home. His knowledge of the luxury market and relationships with lenders made all the difference. Closed in 16 days - faster than we ever expected. Professional, responsive, and truly cares about his clients.",
-    platform: "google",
-    verified: true,
-    location: "Laguna Beach, CA"
+    location: "Orange County, CA"
   }
 ];
 
@@ -225,12 +215,8 @@ export default function GoogleReviews() {
                           )}
                         </div>
                         <div className="flex items-center gap-2 text-sm text-slate-600">
-                          <span>{formatDate(review.date)}</span>
                           {review.location && (
-                            <>
-                              <span>•</span>
-                              <span>{review.location}</span>
-                            </>
+                            <span>{review.location}</span>
                           )}
                         </div>
                       </div>

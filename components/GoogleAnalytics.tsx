@@ -7,19 +7,25 @@ const GA_TRACKING_ID = 'G-P8RJLQYRVE';
 export default function GoogleAnalytics() {
   return (
     <>
-      {/* Google tag (gtag.js) - Optimized for mobile performance */}
+      {/* Google tag (gtag.js) - Optimized for FID performance */}
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-        strategy="lazyOnload"
+        strategy="afterInteractive"
+        onLoad={() => {
+          // Initialize GA after script loads to minimize blocking
+          if (typeof window !== 'undefined') {
+            window.dataLayer = window.dataLayer || [];
+            function gtag(...args: any[]) { 
+              window.dataLayer?.push(args);
+            }
+            gtag('js', new Date());
+            gtag('config', GA_TRACKING_ID, {
+              page_title: document.title,
+              page_location: window.location.href
+            });
+          }
+        }}
       />
-      <Script id="google-analytics" strategy="lazyOnload">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${GA_TRACKING_ID}');
-        `}
-      </Script>
     </>
   );
 }

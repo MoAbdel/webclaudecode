@@ -181,7 +181,7 @@ export default function EnhancedQuickQuote() {
         case 'heloc': return 0.0875; // 8.75% (Prime + margin)
         case 'heloan': return 0.085; // 8.5% (Fixed rate)
         case 'conventional':
-        default: return 0.0625; // 6.25%
+        default: return 0.06; // 6.00%
       }
     };
     

@@ -2,32 +2,22 @@
 
 import Script from 'next/script';
 
-const GA_TRACKING_ID = 'G-P8RJLQYRVE';
-
 export default function GoogleAnalytics() {
   return (
     <>
-      {/* Google tag (gtag.js) - Optimized for FID performance */}
+      {/* Google tag (gtag.js) */}
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+        src="https://www.googletagmanager.com/gtag/js?id=G-P8RJLQYRVE"
         strategy="afterInteractive"
-        onLoad={() => {
-          // Initialize GA after script loads to minimize blocking
-          if (typeof window !== 'undefined') {
-            window.dataLayer = window.dataLayer || [];
-            function gtag(...args: any[]) { 
-              window.dataLayer?.push(args);
-            }
-            gtag('js', new Date());
-            gtag('config', GA_TRACKING_ID, {
-              page_title: document.title,
-              page_location: window.location.href
-            });
-          }
-        }}
       />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P8RJLQYRVE');
+        `}
+      </Script>
     </>
   );
 }
-
-// Extend Window interface for TypeScript

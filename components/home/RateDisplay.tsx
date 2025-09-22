@@ -10,7 +10,7 @@ import Link from "next/link";
 const defaultRateData = [
   {
     loanType: "30-Year Fixed Conventional",
-    rate: "6.25%",
+    rate: "6.00%",
     apr: "APR may vary",
     trend: "down",
     change: "-0.04",
@@ -19,7 +19,7 @@ const defaultRateData = [
   },
   {
     loanType: "15-Year Fixed Conventional",
-    rate: "5.71%",
+    rate: "5.46%",
     apr: "APR may vary",
     trend: "down",
     change: "-0.01",
@@ -28,7 +28,7 @@ const defaultRateData = [
   },
   {
     loanType: "30-Year FHA",
-    rate: "5.99%",
+    rate: "5.74%",
     apr: "APR may vary",
     trend: "down",
     change: "-0.01",
@@ -37,7 +37,7 @@ const defaultRateData = [
   },
   {
     loanType: "30-Year Jumbo",
-    rate: "6.25%",
+    rate: "6.00%",
     apr: "APR may vary",
     trend: "stable",
     change: "+0.00",
@@ -46,7 +46,7 @@ const defaultRateData = [
   },
   {
     loanType: "30-Year VA",
-    rate: "6.01%",
+    rate: "5.76%",
     apr: "APR may vary",
     trend: "stable",
     change: "+0.00",
@@ -55,7 +55,7 @@ const defaultRateData = [
   },
   {
     loanType: "7/6 SOFR ARM",
-    rate: "5.64%",
+    rate: "5.39%",
     apr: "APR may vary",
     trend: "down",
     change: "-0.01",

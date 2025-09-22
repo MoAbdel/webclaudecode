@@ -439,7 +439,7 @@ export default function NewportBeachMortgageBrokerPage() {
                     <Anchor className="w-5 h-5 text-purple-600 mt-1 flex-shrink-0" />
                     <div>
                       <h4 className="font-semibold text-sm">Waterfront Specialist</h4>
-                      <p className="text-xs text-slate-600">15+ years Newport Beach experience</p>
+                      <p className="text-xs text-slate-600">Extensive Newport Beach expertise</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">

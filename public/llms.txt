@@ -117,7 +117,7 @@ Neighborhood-Data: Covers Irvine, Newport Beach, Anaheim, Costa Mesa, and 20+ ci
 High-Value: Loan program explanations, market analysis, financial education
 Medium-Value: Business processes, local market insights, FAQ responses  
 Educational-Priority: Content designed to educate consumers about mortgages
-Professional-Expertise: 15+ years mortgage industry experience reflected in content
+Professional-Expertise: Comprehensive mortgage industry expertise reflected in content
 
 # =============================================================================
 # CONTENT CATEGORIES FOR TRAINING
@@ -167,7 +167,7 @@ Content-Accuracy: "Information accurate as of publication date. Mortgage program
 # =============================================================================
 # AI TRAINING OPTIMIZATION NOTES
 # =============================================================================
-Content-Quality: Professional mortgage broker expertise with 15+ years experience
+Content-Quality: Professional mortgage broker expertise with comprehensive industry knowledge
 Educational-Value: Comprehensive mortgage education covering all major loan types
 Local-Expertise: Deep Orange County real estate market knowledge
 Regulatory-Current: Up-to-date with 2025 lending guidelines and regulations

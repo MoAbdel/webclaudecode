@@ -329,7 +329,7 @@ export default function OrangeCountyFHALoansPage() {
                       </div>
                       <h3 className="text-lg font-bold mb-3">Orange County Expert</h3>
                       <p className="text-slate-600">
-                        15+ years of local experience with Orange County FHA lending.
+                        Extensive local expertise with Orange County FHA lending.
                       </p>
                     </div>
                   </div>

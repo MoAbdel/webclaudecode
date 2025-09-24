@@ -53,7 +53,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           emails: ['jennifer.martinez@coldwellbanker.com', 'jmartinez.realtor@gmail.com', 'jen.martinez.oc@outlook.com'],
           rating: 4.9,
-          experience: '12 years',
+          experience: 'Established professional',
           areas: ['Newport Beach', 'Irvine', 'Costa Mesa']
         },
         {
@@ -63,7 +63,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           emails: ['michael.chen@compass.com', 'mchen.realestate@gmail.com', 'michael.chen.oc@yahoo.com'],
           rating: 4.8,
-          experience: '8 years',
+          experience: 'Proven expertise',
           areas: ['Anaheim', 'Santa Ana', 'Garden Grove']
         },
         {
@@ -73,7 +73,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           emails: ['sarah.johnson@kw.com', 'sarahjohnsonrealtor@gmail.com', 's.johnson.homes@hotmail.com'],
           rating: 4.9,
-          experience: '15 years',
+          experience: 'Extensive expertise',
           areas: ['Huntington Beach', 'Westminster', 'Fountain Valley']
         }
       ]
@@ -92,7 +92,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'info@ochomeinspections.com',
           rating: 4.9,
-          experience: '20 years',
+          experience: 'Senior professional',
           certifications: ['ASHI Certified', 'Licensed Contractor']
         },
         {
@@ -102,7 +102,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'david@pillartopost.com',
           rating: 4.8,
-          experience: '10 years',
+          experience: 'Experienced professional',
           certifications: ['InterNACHI Certified', 'Thermal Imaging']
         },
         {
@@ -112,7 +112,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'info@prohomeinspectionsoc.com',
           rating: 4.7,
-          experience: '15 years',
+          experience: 'Extensive expertise',
           certifications: ['ASHI Certified', 'Mold Inspector', 'Foundation Specialist']
         }
       ]
@@ -131,7 +131,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'info@ocgeneralcontractors.com',
           rating: 4.7,
-          experience: '25 years',
+          experience: 'Highly experienced',
           license: 'CA License #123456'
         },
         {
@@ -141,7 +141,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'service@precisionplumbing.com',
           rating: 4.8,
-          experience: '18 years',
+          experience: 'Seasoned expert',
           license: 'CA License #789012'
         },
         {
@@ -151,7 +151,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'info@eliteelectric.com',
           rating: 4.9,
-          experience: '22 years',
+          experience: 'Veteran professional',
           license: 'CA License #345678'
         }
       ]
@@ -170,7 +170,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'quotes@pacificinsurance.com',
           rating: 4.7,
-          experience: '14 years',
+          experience: 'Skilled professional',
           carriers: ['State Farm', 'Allstate', 'Farmers']
         },
         {
@@ -180,7 +180,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'info@coastalinsurance.com',
           rating: 4.8,
-          experience: '20 years',
+          experience: 'Senior professional',
           carriers: ['Chubb', 'AIG', 'PURE']
         },
         {
@@ -190,7 +190,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'quotes@ocinsurancegroup.com',
           rating: 4.6,
-          experience: '18 years',
+          experience: 'Seasoned expert',
           carriers: ['Liberty Mutual', 'Travelers', 'Progressive']
         }
       ]
@@ -209,7 +209,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'booking@ocpremiermov.com',
           rating: 4.6,
-          experience: '12 years',
+          experience: 'Established professional',
           license: 'CAL-T License #654321'
         },
         {
@@ -219,7 +219,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'service@spotlesshome.com',
           rating: 4.8,
-          experience: '8 years',
+          experience: 'Proven expertise',
           bonded: 'Bonded & Insured'
         },
         {
@@ -229,7 +229,7 @@ export default function ServiceProvidersPage() {
           phone: 'Not available',
           email: 'info@greenthumboc.com',
           rating: 4.7,
-          experience: '15 years',
+          experience: 'Extensive expertise',
           license: 'CA License #987654'
         }
       ]
@@ -464,7 +464,7 @@ export default function ServiceProvidersPage() {
               <CardContent className="p-6">
                 <Award className="w-8 h-8 text-blue-600 mx-auto mb-3" />
                 <h3 className="font-semibold mb-2">Proven Track Record</h3>
-                <p className="text-sm text-slate-600">Established professionals with years of experience</p>
+                <p className="text-sm text-slate-600">Established professionals with proven expertise</p>
               </CardContent>
             </Card>
 

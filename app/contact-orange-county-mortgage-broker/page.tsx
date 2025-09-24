@@ -287,7 +287,7 @@ export default function ContactOrangeCountyMortgageBrokerPage() {
                     </div>
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />
-                      <span className="text-slate-700"><strong>15+ years</strong> Orange County experience</span>
+                      <span className="text-slate-700"><strong>Extensive</strong> Orange County expertise</span>
                     </div>
                     <div className="flex items-start space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-600 mt-1 flex-shrink-0" />

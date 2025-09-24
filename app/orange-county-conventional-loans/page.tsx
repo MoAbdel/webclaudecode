@@ -378,7 +378,7 @@ export default function OrangeCountyConventionalLoansPage() {
                       </div>
                       <h3 className="text-lg font-bold mb-3">Local Expertise</h3>
                       <p className="text-slate-600">
-                        15+ years of Orange County conventional lending experience.
+                        Extensive Orange County conventional lending expertise.
                       </p>
                     </div>
                   </div>

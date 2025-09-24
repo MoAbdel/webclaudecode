@@ -5,10 +5,10 @@
 ### 1. Update Page Titles & Meta Descriptions
 **Homepage:**
 - Title: "Mo Abdel - #1 Orange County Mortgage Broker | NMLS #1426884 | Competitive Rates"
-- Meta: "Get the lowest mortgage rates in Orange County with Mo Abdel, your trusted mortgage broker. 15+ years experience, 500+ loans closed. Call (949) 579-2057"
+- Meta: "Get the lowest mortgage rates in Orange County with Mo Abdel, your trusted mortgage broker. Expert guidance, 500+ loans closed. Call (949) 579-2057"
 
 **About Page:**
-- Title: "About Mo Abdel - Orange County Mortgage Broker with 15+ Years Experience"
+- Title: "About Mo Abdel - Orange County Mortgage Broker | Expert Guidance"
 
 ### 2. Add Missing Business Information
 - **Full Address**: Need specific street address in Orange County

@@ -3,13 +3,16 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
-import { Home, RefreshCw, Briefcase, ArrowRight, ArrowLeft, MapPin, CreditCard, Building } from "lucide-react";
+import { Home, RefreshCw, Briefcase, ArrowRight, ArrowLeft, MapPin, CreditCard, Building, DollarSign, Percent } from "lucide-react";
 
 interface QuizData {
   intent: string;
   zipCode: string;
   creditRange: string;
   occupancy: string;
+  homeValue: string;
+  currentRate: string;
+  cashAmount: string;
   firstName: string;
   email: string;
   phone: string;
@@ -33,6 +36,9 @@ export default function MortgageQuiz() {
     zipCode: "",
     creditRange: "",
     occupancy: "",
+    homeValue: "",
+    currentRate: "",
+    cashAmount: "",
     firstName: "",
     email: "",
     phone: "",
@@ -50,7 +56,7 @@ export default function MortgageQuiz() {
   }, []);
 
   const handleNext = () => {
-    if (step < 3) {
+    if (step < 4) {
       setStep(step + 1);
     } else {
       handleSubmit();
@@ -84,13 +90,25 @@ export default function MortgageQuiz() {
       case 2:
         return formData.zipCode && formData.creditRange && formData.occupancy;
       case 3:
+        // Required for all: homeValue
+        // Conditional: currentRate (for refinance/heloc), cashAmount (for heloc/cash-out)
+        const baseValid = formData.homeValue !== "";
+        if (formData.intent === 'purchase') return baseValid;
+
+        const needsRate = ['refinance', 'specialty'].includes(formData.intent);
+        const needsCash = formData.intent === 'specialty'; // HELOC/HELOAN or cash-out refi
+
+        return baseValid &&
+               (!needsRate || formData.currentRate !== "") &&
+               (!needsCash || formData.cashAmount !== "");
+      case 4:
         return formData.firstName && formData.email && formData.phone && formData.consent;
       default:
         return false;
     }
   };
 
-  const progressPercentage = (step / 3) * 100;
+  const progressPercentage = (step / 4) * 100;
 
   if (isComplete) {
     return (
@@ -134,7 +152,7 @@ export default function MortgageQuiz() {
         <div className="mb-8">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-2xl font-bold text-slate-900">Get Your Options</h2>
-            <span className="text-sm text-slate-600">Step {step} of 3</span>
+            <span className="text-sm text-slate-600">Step {step} of 4</span>
           </div>
           <Progress value={progressPercentage} />
         </div>
@@ -239,6 +257,70 @@ export default function MortgageQuiz() {
             {step === 3 && (
               <div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">
+                  Property & Financial Details
+                </h3>
+
+                <div className="space-y-6">
+                  <div>
+                    <label className="block text-sm font-medium text-slate-700 mb-2">
+                      <DollarSign className="w-4 h-4 inline mr-1" />
+                      Current Home Value (Estimated)
+                    </label>
+                    <input
+                      type="text"
+                      placeholder="e.g. $850,000"
+                      value={formData.homeValue}
+                      onChange={(e) => setFormData(prev => ({ ...prev, homeValue: e.target.value }))}
+                      className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                      required
+                    />
+                  </div>
+
+                  {(formData.intent === 'refinance' || formData.intent === 'specialty') && (
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        <Percent className="w-4 h-4 inline mr-1" />
+                        Current Mortgage Rate
+                      </label>
+                      <input
+                        type="text"
+                        placeholder="e.g. 7.25%"
+                        value={formData.currentRate}
+                        onChange={(e) => setFormData(prev => ({ ...prev, currentRate: e.target.value }))}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                      />
+                      <p className="text-xs text-slate-500 mt-1">Your current interest rate if refinancing</p>
+                    </div>
+                  )}
+
+                  {formData.intent === 'specialty' && (
+                    <div>
+                      <label className="block text-sm font-medium text-slate-700 mb-2">
+                        <DollarSign className="w-4 h-4 inline mr-1" />
+                        How much cash do you need?
+                      </label>
+                      <select
+                        value={formData.cashAmount}
+                        onChange={(e) => setFormData(prev => ({ ...prev, cashAmount: e.target.value }))}
+                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                      >
+                        <option value="">Select amount</option>
+                        <option value="Under $50,000">Under $50,000</option>
+                        <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+                        <option value="$100,000 - $200,000">$100,000 - $200,000</option>
+                        <option value="$200,000 - $300,000">$200,000 - $300,000</option>
+                        <option value="Over $300,000">Over $300,000</option>
+                      </select>
+                      <p className="text-xs text-slate-500 mt-1">For HELOC, HELOAN, or cash-out refinancing</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {step === 4 && (
+              <div>
+                <h3 className="text-2xl font-bold text-slate-900 mb-6 text-center">
                   Get Your Results
                 </h3>
 
@@ -313,7 +395,7 @@ export default function MortgageQuiz() {
                 disabled={!isStepValid()}
                 className="bg-blue-600 hover:bg-blue-700 text-white px-6"
               >
-                {step === 3 ? 'Get My Options' : 'Next'}
+                {step === 4 ? 'Get My Options' : 'Next'}
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>

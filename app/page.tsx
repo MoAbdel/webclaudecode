@@ -5,7 +5,6 @@ import HeroSectionServer from '@/components/home/HeroSectionServer';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import ProgramSnapshot from '@/components/home/ProgramSnapshot';
 import LeadMagnet from '@/components/home/LeadMagnet';
-import MortgageQuiz from '@/components/home/MortgageQuiz';
 import StructuredFAQ from '@/components/home/StructuredFAQ';
 import AIOOptimization from '@/components/seo/AIOOptimization';
 import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
@@ -88,10 +87,7 @@ export default function HomePage() {
         {/* 5. Lead Magnet */}
         <LeadMagnet />
 
-        {/* 6. Quiz */}
-        <MortgageQuiz />
-
-        {/* 7. FAQ Section */}
+        {/* 6. FAQ Section */}
         <StructuredFAQ />
       </div>
     </>

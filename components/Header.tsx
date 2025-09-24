@@ -425,7 +425,7 @@ export default function Header() {
             >
               Call Now
             </a>
-            <a href="#quiz">
+            <a href="/quiz">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Get Started
               </Button>

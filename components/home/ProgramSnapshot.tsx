@@ -65,7 +65,7 @@ export default function ProgramSnapshot() {
                   ))}
                 </ul>
 
-                <a href={`#quiz?intent=${program.intent}`}>
+                <a href={`/quiz?intent=${program.intent}`}>
                   <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3">
                     Start Here
                     <ArrowRight className="w-4 h-4 ml-2" />

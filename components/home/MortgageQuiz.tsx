@@ -11,6 +11,8 @@ interface QuizData {
   creditRange: string;
   occupancy: string;
   homeValue: string;
+  purchasePrice: string;
+  downPaymentPercent: string;
   currentRate: string;
   cashAmount: string;
   firstName: string;
@@ -37,6 +39,8 @@ export default function MortgageQuiz() {
     creditRange: "",
     occupancy: "",
     homeValue: "",
+    purchasePrice: "",
+    downPaymentPercent: "",
     currentRate: "",
     cashAmount: "",
     firstName: "",
@@ -90,11 +94,13 @@ export default function MortgageQuiz() {
       case 2:
         return formData.zipCode && formData.creditRange && formData.occupancy;
       case 3:
-        // Required for all: homeValue
-        // Conditional: currentRate (for refinance/heloc), cashAmount (for heloc/cash-out)
-        const baseValid = formData.homeValue !== "";
-        if (formData.intent === 'purchase') return baseValid;
+        if (formData.intent === 'purchase') {
+          // For purchase: require purchasePrice and downPaymentPercent
+          return formData.purchasePrice !== "" && formData.downPaymentPercent !== "";
+        }
 
+        // For refinance/specialty: require homeValue
+        const baseValid = formData.homeValue !== "";
         const needsRate = ['refinance', 'specialty'].includes(formData.intent);
         const needsCash = formData.intent === 'specialty'; // HELOC/HELOAN or cash-out refi
 
@@ -261,58 +267,103 @@ export default function MortgageQuiz() {
                 </h3>
 
                 <div className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-medium text-slate-700 mb-2">
-                      <DollarSign className="w-4 h-4 inline mr-1" />
-                      Current Home Value (Estimated)
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="e.g. $850,000"
-                      value={formData.homeValue}
-                      onChange={(e) => setFormData(prev => ({ ...prev, homeValue: e.target.value }))}
-                      className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                      required
-                    />
-                  </div>
+                  {formData.intent === 'purchase' ? (
+                    <>
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          <DollarSign className="w-4 h-4 inline mr-1" />
+                          Estimated Purchase Price
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="e.g. $950,000"
+                          value={formData.purchasePrice}
+                          onChange={(e) => setFormData(prev => ({ ...prev, purchasePrice: e.target.value }))}
+                          className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                          required
+                        />
+                      </div>
 
-                  {(formData.intent === 'refinance' || formData.intent === 'specialty') && (
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
-                        <Percent className="w-4 h-4 inline mr-1" />
-                        Current Mortgage Rate
-                      </label>
-                      <input
-                        type="text"
-                        placeholder="e.g. 7.25%"
-                        value={formData.currentRate}
-                        onChange={(e) => setFormData(prev => ({ ...prev, currentRate: e.target.value }))}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                      />
-                      <p className="text-xs text-slate-500 mt-1">Your current interest rate if refinancing</p>
-                    </div>
-                  )}
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          <Percent className="w-4 h-4 inline mr-1" />
+                          Down Payment Percentage
+                        </label>
+                        <select
+                          value={formData.downPaymentPercent}
+                          onChange={(e) => setFormData(prev => ({ ...prev, downPaymentPercent: e.target.value }))}
+                          className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                          required
+                        >
+                          <option value="">Select down payment</option>
+                          <option value="3%">3% (Conventional)</option>
+                          <option value="3.5%">3.5% (FHA)</option>
+                          <option value="0%">0% (VA)</option>
+                          <option value="5%">5%</option>
+                          <option value="10%">10%</option>
+                          <option value="15%">15%</option>
+                          <option value="20%">20%</option>
+                          <option value="25%">25%+</option>
+                        </select>
+                        <p className="text-xs text-slate-500 mt-1">Higher down payments typically get better rates</p>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          <DollarSign className="w-4 h-4 inline mr-1" />
+                          Current Home Value (Estimated)
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="e.g. $850,000"
+                          value={formData.homeValue}
+                          onChange={(e) => setFormData(prev => ({ ...prev, homeValue: e.target.value }))}
+                          className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                          required
+                        />
+                      </div>
 
-                  {formData.intent === 'specialty' && (
-                    <div>
-                      <label className="block text-sm font-medium text-slate-700 mb-2">
-                        <DollarSign className="w-4 h-4 inline mr-1" />
-                        How much cash do you need?
-                      </label>
-                      <select
-                        value={formData.cashAmount}
-                        onChange={(e) => setFormData(prev => ({ ...prev, cashAmount: e.target.value }))}
-                        className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
-                      >
-                        <option value="">Select amount</option>
-                        <option value="Under $50,000">Under $50,000</option>
-                        <option value="$50,000 - $100,000">$50,000 - $100,000</option>
-                        <option value="$100,000 - $200,000">$100,000 - $200,000</option>
-                        <option value="$200,000 - $300,000">$200,000 - $300,000</option>
-                        <option value="Over $300,000">Over $300,000</option>
-                      </select>
-                      <p className="text-xs text-slate-500 mt-1">For HELOC, HELOAN, or cash-out refinancing</p>
-                    </div>
+                      {(formData.intent === 'refinance' || formData.intent === 'specialty') && (
+                        <div>
+                          <label className="block text-sm font-medium text-slate-700 mb-2">
+                            <Percent className="w-4 h-4 inline mr-1" />
+                            Current Mortgage Rate
+                          </label>
+                          <input
+                            type="text"
+                            placeholder="e.g. 7.25%"
+                            value={formData.currentRate}
+                            onChange={(e) => setFormData(prev => ({ ...prev, currentRate: e.target.value }))}
+                            className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                          />
+                          <p className="text-xs text-slate-500 mt-1">Your current interest rate if refinancing</p>
+                        </div>
+                      )}
+
+                      {formData.intent === 'specialty' && (
+                        <div>
+                          <label className="block text-sm font-medium text-slate-700 mb-2">
+                            <DollarSign className="w-4 h-4 inline mr-1" />
+                            How much cash do you need?
+                          </label>
+                          <select
+                            value={formData.cashAmount}
+                            onChange={(e) => setFormData(prev => ({ ...prev, cashAmount: e.target.value }))}
+                            className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                          >
+                            <option value="">Select amount</option>
+                            <option value="Under $50,000">Under $50,000</option>
+                            <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+                            <option value="$100,000 - $200,000">$100,000 - $200,000</option>
+                            <option value="$200,000 - $300,000">$200,000 - $300,000</option>
+                            <option value="Over $300,000">Over $300,000</option>
+                          </select>
+                          <p className="text-xs text-slate-500 mt-1">For HELOC, HELOAN, or cash-out refinancing</p>
+                        </div>
+                      )}
+                    </>
                   )}
                 </div>
               </div>

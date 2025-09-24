@@ -14,6 +14,7 @@ interface QuizData {
   purchasePrice: string;
   downPaymentPercent: string;
   currentRate: string;
+  specialtyLoanType: string;
   cashAmount: string;
   firstName: string;
   email: string;
@@ -42,6 +43,7 @@ export default function MortgageQuiz() {
     purchasePrice: "",
     downPaymentPercent: "",
     currentRate: "",
+    specialtyLoanType: "",
     cashAmount: "",
     firstName: "",
     email: "",
@@ -99,14 +101,23 @@ export default function MortgageQuiz() {
           return formData.purchasePrice !== "" && formData.downPaymentPercent !== "";
         }
 
-        // For refinance/specialty: require homeValue
-        const baseValid = formData.homeValue !== "";
-        const needsRate = ['refinance', 'specialty'].includes(formData.intent);
-        const needsCash = formData.intent === 'specialty'; // HELOC/HELOAN or cash-out refi
+        if (formData.intent === 'refinance') {
+          // For refinance: require homeValue, currentRate, and cashAmount
+          return formData.homeValue !== "" && formData.currentRate !== "" && formData.cashAmount !== "";
+        }
 
-        return baseValid &&
-               (!needsRate || formData.currentRate !== "") &&
-               (!needsCash || formData.cashAmount !== "");
+        if (formData.intent === 'specialty') {
+          // For specialty: require homeValue, specialtyLoanType, and conditional fields
+          const baseValid = formData.homeValue !== "" && formData.specialtyLoanType !== "";
+          const needsCurrentRate = ['heloc', 'heloan', 'cash-out-refi'].includes(formData.specialtyLoanType);
+          const needsCash = ['heloc', 'heloan', 'cash-out-refi'].includes(formData.specialtyLoanType);
+
+          return baseValid &&
+                 (!needsCurrentRate || formData.currentRate !== "") &&
+                 (!needsCash || formData.cashAmount !== "");
+        }
+
+        return false;
       case 4:
         return formData.firstName && formData.email && formData.phone && formData.consent;
       default:
@@ -308,7 +319,7 @@ export default function MortgageQuiz() {
                         <p className="text-xs text-slate-500 mt-1">Higher down payments typically get better rates</p>
                       </div>
                     </>
-                  ) : (
+                  ) : formData.intent === 'refinance' ? (
                     <>
                       <div>
                         <label className="block text-sm font-medium text-slate-700 mb-2">
@@ -325,7 +336,88 @@ export default function MortgageQuiz() {
                         />
                       </div>
 
-                      {(formData.intent === 'refinance' || formData.intent === 'specialty') && (
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          <Percent className="w-4 h-4 inline mr-1" />
+                          Current Mortgage Rate
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="e.g. 7.25%"
+                          value={formData.currentRate}
+                          onChange={(e) => setFormData(prev => ({ ...prev, currentRate: e.target.value }))}
+                          className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                        />
+                        <p className="text-xs text-slate-500 mt-1">Your current interest rate</p>
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          <DollarSign className="w-4 h-4 inline mr-1" />
+                          Cash Out Amount
+                        </label>
+                        <select
+                          value={formData.cashAmount}
+                          onChange={(e) => setFormData(prev => ({ ...prev, cashAmount: e.target.value }))}
+                          className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                          required
+                        >
+                          <option value="">Select cash out amount</option>
+                          <option value="No cash out needed">No cash out needed (Rate & Term)</option>
+                          <option value="Under $50,000">Under $50,000</option>
+                          <option value="$50,000 - $100,000">$50,000 - $100,000</option>
+                          <option value="$100,000 - $200,000">$100,000 - $200,000</option>
+                          <option value="$200,000 - $300,000">$200,000 - $300,000</option>
+                          <option value="Over $300,000">Over $300,000</option>
+                        </select>
+                        <p className="text-xs text-slate-500 mt-1">Select if you want to take cash out or just lower your rate</p>
+                      </div>
+                    </>
+                  ) : (
+                    // Specialty loans
+                    <>
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          <DollarSign className="w-4 h-4 inline mr-1" />
+                          Current Home Value (Estimated)
+                        </label>
+                        <input
+                          type="text"
+                          placeholder="e.g. $850,000"
+                          value={formData.homeValue}
+                          onChange={(e) => setFormData(prev => ({ ...prev, homeValue: e.target.value }))}
+                          className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                          required
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium text-slate-700 mb-2">
+                          <Briefcase className="w-4 h-4 inline mr-1" />
+                          What type of specialty loan do you need?
+                        </label>
+                        <select
+                          value={formData.specialtyLoanType}
+                          onChange={(e) => setFormData(prev => ({ ...prev, specialtyLoanType: e.target.value }))}
+                          className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
+                          required
+                        >
+                          <option value="">Select loan type</option>
+                          <option value="heloc">HELOC (Home Equity Line of Credit)</option>
+                          <option value="heloan">HELOAN (Home Equity Loan)</option>
+                          <option value="cash-out-refi">Cash-Out Refinance</option>
+                          <option value="bank-statement">Bank Statement Loan (Self-Employed)</option>
+                          <option value="asset-based">Asset-Based Loan</option>
+                          <option value="dscr">DSCR Investment Loan</option>
+                          <option value="foreign-national">Foreign National Loan</option>
+                          <option value="jumbo-non-qm">Jumbo Non-QM Loan</option>
+                          <option value="fix-flip">Fix & Flip Loan</option>
+                          <option value="other">Other / Not Sure</option>
+                        </select>
+                        <p className="text-xs text-slate-500 mt-1">Select the loan type that best fits your situation</p>
+                      </div>
+
+                      {['heloc', 'heloan', 'cash-out-refi'].includes(formData.specialtyLoanType) && (
                         <div>
                           <label className="block text-sm font-medium text-slate-700 mb-2">
                             <Percent className="w-4 h-4 inline mr-1" />
@@ -338,11 +430,11 @@ export default function MortgageQuiz() {
                             onChange={(e) => setFormData(prev => ({ ...prev, currentRate: e.target.value }))}
                             className="w-full px-3 py-2 border border-slate-300 rounded-md focus:ring-blue-500 focus:border-blue-500"
                           />
-                          <p className="text-xs text-slate-500 mt-1">Your current interest rate if refinancing</p>
+                          <p className="text-xs text-slate-500 mt-1">Your current interest rate (if applicable)</p>
                         </div>
                       )}
 
-                      {formData.intent === 'specialty' && (
+                      {['heloc', 'heloan', 'cash-out-refi'].includes(formData.specialtyLoanType) && (
                         <div>
                           <label className="block text-sm font-medium text-slate-700 mb-2">
                             <DollarSign className="w-4 h-4 inline mr-1" />
@@ -360,7 +452,7 @@ export default function MortgageQuiz() {
                             <option value="$200,000 - $300,000">$200,000 - $300,000</option>
                             <option value="Over $300,000">Over $300,000</option>
                           </select>
-                          <p className="text-xs text-slate-500 mt-1">For HELOC, HELOAN, or cash-out refinancing</p>
+                          <p className="text-xs text-slate-500 mt-1">Amount of cash you need access to</p>
                         </div>
                       )}
                     </>

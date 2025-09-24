@@ -175,13 +175,13 @@ export default function EnhancedQuickQuote() {
     // Current market rates (2025)
     const getRateByLoanType = (type: string) => {
       switch (type.toLowerCase()) {
-        case 'fha': return 0.061; // 6.1%
-        case 'va': return 0.055; // 5.5%
-        case 'jumbo': return 0.065; // 6.5%
+        case 'fha': return 0.0574; // 5.74%
+        case 'va': return 0.0576; // 5.76%
+        case 'jumbo': return 0.060; // 6.00%
         case 'heloc': return 0.0875; // 8.75% (Prime + margin)
         case 'heloan': return 0.085; // 8.5% (Fixed rate)
         case 'conventional':
-        default: return 0.0625; // 6.25%
+        default: return 0.060; // 6.00%
       }
     };
     

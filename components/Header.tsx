@@ -214,6 +214,81 @@ const resourcesDropdown: DropdownItem[] = [
   { title: 'Service Providers Directory', url: '/resources/service-providers' }
 ];
 
+// New navigation structure for conversion-focused design
+const purchaseDropdown: DropdownItem[] = [
+  // Home Purchase Loans
+  { title: '🏠 PURCHASE LOANS', url: '#', isHeader: true },
+  { title: 'FHA Loans', url: '/loan-programs/fha-loans' },
+  { title: 'VA Loans', url: '/loan-programs/va-loans' },
+  { title: 'Conventional Loans', url: '/loan-programs/conventional-loans' },
+  { title: 'Jumbo Loans', url: '/loan-programs/jumbo-loans' },
+  { title: 'USDA Rural Loans', url: '/loan-programs/usda-rural-loans' },
+
+  // First-Time Buyer
+  { title: '🌟 FIRST-TIME BUYERS', url: '#', isHeader: true },
+  { title: 'First-Time Buyer Guide', url: '/guides/orange-county-home-buyer-guide' },
+  { title: 'Down Payment Assistance', url: '/resources/down-payment-assistance' },
+  { title: 'Orange County FHA Limits', url: '/loan-programs/orange-county-fha-loan-limits' },
+  { title: 'Orange County VA Loans', url: '/loan-programs/orange-county-va-loans' },
+];
+
+const refinanceDropdown: DropdownItem[] = [
+  // Refinancing Options
+  { title: '🔄 REFINANCING', url: '#', isHeader: true },
+  { title: 'Rate & Term Refinance', url: '/loan-programs/rate-term-refinance' },
+  { title: 'Cash-Out Refinance', url: '/loan-programs/cash-out-refinance' },
+  { title: 'Refinancing Guide', url: '/guides/orange-county-refinancing-guide' },
+
+  // Home Equity Solutions
+  { title: '💰 HOME EQUITY', url: '#', isHeader: true },
+  { title: 'HELOC', url: '/loan-programs/heloc' },
+  { title: 'HELOAN', url: '/loan-programs/heloan' },
+];
+
+const specialtyLoansDropdown: DropdownItem[] = [
+  // Self-Employed & Non-QM
+  { title: '💼 SELF-EMPLOYED', url: '#', isHeader: true },
+  { title: 'Non-QM Overview', url: '/loan-programs/non-qm-loans' },
+  { title: 'Bank Statement Loans', url: '/loan-programs/bank-statement-loans' },
+  { title: 'P&L Statement Loans', url: '/loan-programs/profit-loss-statement-loans' },
+  { title: 'Asset Depletion Loans', url: '/loan-programs/asset-depletion-loans' },
+
+  // Investment & Specialty
+  { title: '🏢 INVESTMENT', url: '#', isHeader: true },
+  { title: 'DSCR Investment Loans', url: '/loan-programs/dscr-investment-loans' },
+  { title: 'Fix & Flip Loans', url: '/loan-programs/fix-flip-loans' },
+  { title: 'Foreign National Loans', url: '/loan-programs/foreign-national-loans' },
+];
+
+// Updated guides dropdown with city pages
+const guidesDropdown: DropdownItem[] = [
+  // Complete Guides
+  { title: '📚 COMPLETE GUIDES', url: '#', isHeader: true },
+  { title: 'Orange County Home Buyer Guide', url: '/guides/orange-county-home-buyer-guide' },
+  { title: 'Orange County Refinancing Guide', url: '/guides/orange-county-refinancing-guide' },
+  { title: 'Orange County VA Loans Guide', url: '/guides/orange-county-va-loans' },
+  { title: 'Orange County Jumbo Loans Guide', url: '/guides/orange-county-jumbo-loans' },
+
+  // City Pages - Major Markets
+  { title: '🏙️ MAJOR CITIES', url: '#', isHeader: true },
+  { title: 'Irvine Mortgage Broker', url: '/areas/irvine-mortgage-broker' },
+  { title: 'Newport Beach Mortgage Broker', url: '/areas/newport-beach-mortgage-broker' },
+  { title: 'Anaheim Mortgage Broker', url: '/areas/anaheim-mortgage-broker' },
+  { title: 'Costa Mesa Mortgage Broker', url: '/areas/costa-mesa-mortgage-broker' },
+  { title: 'Mission Viejo Mortgage Broker', url: '/areas/mission-viejo-mortgage-broker' },
+  { title: 'Huntington Beach Mortgage Broker', url: '/areas/huntington-beach-mortgage-broker' },
+
+  // Premium Areas
+  { title: '🏖️ COASTAL AREAS', url: '#', isHeader: true },
+  { title: 'Laguna Beach Mortgage Broker', url: '/areas/laguna-beach-mortgage-broker' },
+  { title: 'Dana Point Mortgage Broker', url: '/areas/dana-point-mortgage-broker' },
+  { title: 'Seal Beach Mortgage Broker', url: '/areas/seal-beach-mortgage-broker' },
+
+  // All Areas Link
+  { title: '📍 ALL AREAS', url: '#', isHeader: true },
+  { title: 'View All Service Areas', url: '/areas' },
+];
+
 const navigationItems: NavigationItem[] = [
   {
     title: 'Home',
@@ -228,48 +303,36 @@ const navigationItems: NavigationItem[] = [
     icon: User,
   },
   {
-    title: 'Contact',
-    page: 'Contact',
-    url: createPageUrl('Contact'),
-    icon: Phone,
-  },
-  {
-    title: 'Calculator',
-    page: 'Calculator',
-    url: createPageUrl('Calculator'),
-    icon: Calculator,
-  },
-  {
-    title: 'Programs',
-    page: 'Programs',
-    url: createPageUrl('Programs'),
-    icon: FileText,
-    hasDropdown: true,
-    dropdownItems: loanProgramsDropdown
-  },
-  {
-    title: 'Areas',
-    page: 'ServiceAreas',
-    url: '/areas',
+    title: 'Purchase',
+    page: 'Purchase',
+    url: '/loan-programs',
     icon: Home,
     hasDropdown: true,
-    dropdownItems: serviceAreasDropdown
+    dropdownItems: purchaseDropdown
+  },
+  {
+    title: 'Refinance',
+    page: 'Refinance',
+    url: '/refinance-loans',
+    icon: FileText,
+    hasDropdown: true,
+    dropdownItems: refinanceDropdown
+  },
+  {
+    title: 'Specialty Loans',
+    page: 'Specialty',
+    url: '/loan-programs/non-qm-loans',
+    icon: FileText,
+    hasDropdown: true,
+    dropdownItems: specialtyLoansDropdown
   },
   {
     title: 'Guides',
-    page: 'Guides', 
+    page: 'Guides',
     url: '/guides',
-    icon: Home,
-    hasDropdown: true,
-    dropdownItems: guidesAndBlogDropdown
-  },
-  {
-    title: 'Resources',
-    page: 'Resources',
-    url: '/resources',
     icon: FileText,
     hasDropdown: true,
-    dropdownItems: resourcesDropdown
+    dropdownItems: guidesDropdown
   },
 ];
 
@@ -353,20 +416,20 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <a 
-              href="tel:(949) 579-2057" 
-              className="text-blue-600 font-medium hover:text-blue-700"
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-3">
+            <a
+              href="tel:(949) 579-2057"
+              className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-xl"
               onClick={trackPhoneCall}
             >
-              (949) 579-2057
+              Call Now
             </a>
-            <Link href="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                Get Quote
+            <a href="#quiz">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+                Get Started
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}

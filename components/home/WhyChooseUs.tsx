@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
-import { GitCompareArrows, Zap, Shield, Star, Award, TrendingUp } from "lucide-react";
+import { GitCompareArrows, Zap, Shield, Star, Award, TrendingUp, ArrowRight } from "lucide-react";
 
 const features = [
   {
@@ -76,8 +76,18 @@ export default function WhyChooseUs() {
           ))}
         </div>
 
-        {/* Internal Linking to Service Pages */}
+        {/* See My Options CTA */}
         <div className="text-center mt-12">
+          <a href="#quiz">
+            <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 mb-8">
+              See My Options
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+          </a>
+        </div>
+
+        {/* Internal Linking to Service Pages */}
+        <div className="text-center mt-8">
           <h3 className="text-2xl font-bold text-slate-900 mb-6">Popular Orange County Loan Programs</h3>
           <div className="flex flex-wrap justify-center gap-3">
             <Link href="/fha-loans-orange-county" className="inline-block w-full sm:w-auto">

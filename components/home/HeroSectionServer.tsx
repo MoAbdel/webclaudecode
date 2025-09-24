@@ -1,82 +1,62 @@
 import React from "react";
 import { Button } from "@/components/ui/Button";
-import { Calculator, Phone, ArrowRight, GitCompareArrows, TrendingDown, ShieldCheck } from "lucide-react";
-import Link from "next/link";
-import DynamicRates from "./DynamicRates";
+import { ArrowRight, CheckCircle, Zap, Shield } from "lucide-react";
+import { Badge } from "@/components/ui/Badge";
 
 export default function HeroSectionServer() {
   return (
-    <section className="relative py-20 lg:py-32 overflow-hidden bg-white">
+    <section className="relative py-16 lg:py-24 overflow-hidden bg-gradient-to-b from-blue-50 to-white">
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-          {/* Content */}
-          <div className="space-y-8">
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                <span className="text-slate-900">Orange County's Trusted Mortgage Broker - </span>
-                <span className="text-blue-600">Access 200+ Lenders</span>
-              </h1>
-              
-              <p className="text-lg text-slate-600 leading-relaxed max-w-lg">
-                I'm Mo, a Mortgage Broker with NEXA Mortgage—the nation's largest wholesale brokerage, and I'm proudly based in Lake Forest, serving all of Orange County. Unlike big banks that push their own products, I give you direct access to over 200 lenders with competitive pricing. That means better rates, faster approvals, and more flexible options tailored to you—not the other way around.
-              </p>
-              
-              <div className="bg-slate-50 rounded-lg p-4 border-l-4 border-blue-600">
-                <p className="text-sm text-slate-600">
-                  <span className="font-semibold text-slate-900">Serving Orange County from Lake Forest</span><br/>
-                  Licensed NMLS #1426884 • Call (949) 579-2057
-                </p>
-              </div>
-            </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 text-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-                  <Calculator className="w-5 h-5 mr-2" />
-                  Get My Rate Quote
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </Button>
-              </Link>
-              
-              <a href="tel:(949) 579-2057">
-                <Button size="lg" variant="ghost" className="border border-slate-300 text-slate-700 hover:bg-slate-50 px-8 py-4 text-lg font-semibold">
-                  <Phone className="w-5 h-5 mr-2" />
-                  (949) 579-2057
-                </Button>
-              </a>
-            </div>
+        <div className="text-center max-w-4xl mx-auto space-y-8">
+          {/* Headline */}
+          <div className="space-y-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <span className="text-slate-900">Unlock </span>
+              <span className="text-blue-600">Wholesale Mortgage Options</span>
+              <span className="text-slate-900"> in Minutes</span>
+            </h1>
 
-            {/* Trust indicators */}
-            <div className="flex flex-wrap gap-12 pt-4 justify-center lg:justify-start">
-              <div className="text-center">
-                <div className="text-2xl font-bold text-slate-900 flex items-center">
-                  <GitCompareArrows className="w-8 h-8 mr-2 text-blue-600"/>
-                  200+
-                </div>
-                <div className="text-sm text-slate-600">Lenders Competing</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-slate-900 flex items-center">
-                  <TrendingDown className="w-8 h-8 mr-2 text-green-600"/>
-                  Better
-                </div>
-                <div className="text-sm text-slate-600">Interest Rates</div>
-              </div>
-              <div className="text-center">
-                <div className="text-2xl font-bold text-slate-900 flex items-center">
-                  <ShieldCheck className="w-8 h-8 mr-2 text-blue-600"/>
-                  More
-                </div>
-                <div className="text-sm text-slate-600">Approval Options</div>
-              </div>
-            </div>
+            <p className="text-xl text-slate-600 leading-relaxed">
+              Licensed in CA, WA, VA & CO • 200+ Lenders • Wholesale Pricing Advantage
+            </p>
           </div>
 
-          {/* Right Column Content - Aligned with intro paragraph */}
-          <div className="lg:pt-20">
-            {/* Dynamic Rates Card - Client Component */}
-            <DynamicRates />
+          {/* Primary CTA */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <a href="#quiz">
+              <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 text-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
+                Get Started
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </a>
+          </div>
+
+          {/* Trust Badges Row */}
+          <div className="flex flex-wrap justify-center gap-8 pt-6">
+            <div className="flex items-center space-x-2">
+              <Badge className="bg-blue-100 text-blue-800">
+                NMLS #1426884
+              </Badge>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Badge className="bg-green-100 text-green-800">
+                <CheckCircle className="w-4 h-4 mr-1" />
+                200+ Lenders
+              </Badge>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Badge className="bg-purple-100 text-purple-800">
+                <Zap className="w-4 h-4 mr-1" />
+                Fast Closing
+              </Badge>
+            </div>
+            <div className="flex items-center space-x-2">
+              <Badge className="bg-orange-100 text-orange-800">
+                <Shield className="w-4 h-4 mr-1" />
+                Wholesale Rates
+              </Badge>
+            </div>
           </div>
         </div>
       </div>

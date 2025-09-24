@@ -3,10 +3,10 @@ import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 import HeroSectionServer from '@/components/home/HeroSectionServer';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
-import BrokerComparison from '@/components/home/BrokerComparison';
-import EnhancedQuickQuote from '@/components/home/EnhancedQuickQuote';
+import ProgramSnapshot from '@/components/home/ProgramSnapshot';
+import LeadMagnet from '@/components/home/LeadMagnet';
+import MortgageQuiz from '@/components/home/MortgageQuiz';
 import StructuredFAQ from '@/components/home/StructuredFAQ';
-import PillarPageHub from '@/components/seo/PillarPageHub';
 import AIOOptimization from '@/components/seo/AIOOptimization';
 import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
 import IndexingOptimization from '@/components/seo/IndexingOptimization';
@@ -20,12 +20,6 @@ export const metadata: Metadata = {
 };
 
 // Lazy load below-the-fold components to reduce initial bundle size
-const RateDisplay = dynamic(() => import('@/components/home/RateDisplay'), {
-  loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
-});
-const LocalMarketInsights = dynamic(() => import('@/components/home/LocalMarketInsights'), {
-  loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
-});
 const GoogleReviews = dynamic(() => import('@/components/home/GoogleReviews'), {
   loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
 });
@@ -77,17 +71,28 @@ export default function HomePage() {
         lastModified="2025-01-24"
       />
       
-      {/* Main Page Content - Cache Bust 2025-08-22 */}
-      <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
+      {/* Main Page Content - New Conversion-Focused Structure */}
+      <div className="min-h-screen">
+        {/* 1. Hero Section */}
         <HeroSectionServer />
-        <BrokerComparison />
+
+        {/* 2. Why Work With a Broker */}
         <WhyChooseUs />
-        <EnhancedQuickQuote />
-        <LocalMarketInsights />
-        <RateDisplay />
-        <PillarPageHub />
-        <StructuredFAQ />
+
+        {/* 3. Social Proof / Trust Strip */}
         <GoogleReviews />
+
+        {/* 4. Program Snapshot */}
+        <ProgramSnapshot />
+
+        {/* 5. Lead Magnet */}
+        <LeadMagnet />
+
+        {/* 6. Quiz */}
+        <MortgageQuiz />
+
+        {/* 7. FAQ Section */}
+        <StructuredFAQ />
       </div>
     </>
   );

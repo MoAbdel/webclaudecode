@@ -5,6 +5,7 @@ import path from 'path';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+// Fixed: Contact forms and quiz now use file-based storage instead of Supabase
 
 // File storage directory
 const DATA_DIR = path.join(process.cwd(), 'data', 'submissions');

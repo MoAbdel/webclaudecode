@@ -23,6 +23,10 @@ export default function HeroSectionServer() {
               <p className="text-xl text-slate-600 leading-relaxed">
                 Licensed in CA, WA, VA & CO • 200+ Lenders • Wholesale Pricing Advantage
               </p>
+
+              <p className="text-sm text-slate-500 italic">
+                • Sponsored by NEXA Mortgage, NMLS #1660690. Equal Housing Lender.
+              </p>
             </div>
 
             {/* Primary CTA */}

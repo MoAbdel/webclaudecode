@@ -20,20 +20,6 @@ export default function AboutSnippet() {
                 I'm passionate about making homeownership accessible for Orange County families. As your dedicated mortgage broker, I leverage my extensive network of 200+ lenders to secure wholesale rates that big banks simply can't match. My commitment is simple: find you the best deal with the fastest closing timeline possible.
               </p>
 
-              <div className="flex flex-wrap gap-4">
-                <Badge className="bg-blue-100 text-blue-800 px-3 py-2">
-                  <Award className="w-4 h-4 mr-2" />
-                  NMLS #1426884
-                </Badge>
-                <Badge className="bg-green-100 text-green-800 px-3 py-2">
-                  <Users className="w-4 h-4 mr-2" />
-                  Local OC Expert
-                </Badge>
-                <Badge className="bg-purple-100 text-purple-800 px-3 py-2">
-                  <Clock className="w-4 h-4 mr-2" />
-                  18-Day Avg Close
-                </Badge>
-              </div>
             </div>
           </div>
 

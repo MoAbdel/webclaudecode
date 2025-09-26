@@ -40,7 +40,7 @@ export default function AboutSnippet() {
           {/* Right Column - Photo */}
           <div className="flex justify-center lg:justify-end">
             <div className="relative">
-              <div className="w-80 h-80 relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="w-80 h-80 relative rounded-full overflow-hidden shadow-xl">
                 <Image
                   src="/images/moabdel-headshot-final.png"
                   alt="Mo Abdel - Orange County Mortgage Broker"

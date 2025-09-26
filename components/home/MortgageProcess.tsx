@@ -113,15 +113,15 @@ export default function MortgageProcess() {
 
         {/* Bottom Stats */}
         <div className="mt-16 grid md:grid-cols-3 gap-8 text-center">
-          <div className="space-y-2">
+          <div className="bg-blue-50 rounded-xl p-6 space-y-2">
             <div className="text-3xl font-bold text-blue-600">18 Days</div>
             <div className="text-slate-600">Average Closing Time</div>
           </div>
-          <div className="space-y-2">
+          <div className="bg-green-50 rounded-xl p-6 space-y-2">
             <div className="text-3xl font-bold text-green-600">200+</div>
             <div className="text-slate-600">Lender Network</div>
           </div>
-          <div className="space-y-2">
+          <div className="bg-purple-50 rounded-xl p-6 space-y-2">
             <div className="text-3xl font-bold text-purple-600">98%</div>
             <div className="text-slate-600">Client Satisfaction</div>
           </div>

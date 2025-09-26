@@ -83,12 +83,12 @@ export default function DynamicRates() {
             </div>
             
             <div className="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg h-16">
-              <span className="font-medium text-slate-700">30-Year Jumbo</span>
+              <span className="font-medium text-slate-700 text-sm">Jumbo</span>
               <span className="text-xl font-bold text-purple-600">{rates.jumboThirtyYear}</span>
             </div>
-            
+
             <div className="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg h-16">
-              <span className="font-medium text-slate-700">7/6 SOFR ARM</span>
+              <span className="font-medium text-slate-700 text-sm">7/6 ARM</span>
               <span className="text-xl font-bold text-orange-600">{rates.armRate}</span>
             </div>
           </div>

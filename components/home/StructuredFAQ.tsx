@@ -33,7 +33,7 @@ export default function StructuredFAQ() {
     },
     {
       question: "Do you offer jumbo loans for Orange County's high-priced homes?",
-      answer: "Yes, I specialize in jumbo loans for Orange County's luxury market. I offer jumbo loans up to $3 million with competitive rates, often better than what big banks offer for high-value properties."
+      answer: "Yes, I specialize in jumbo loans for Orange County's luxury market. I offer jumbo loans with competitive rates, often better than what big banks offer for high-value properties."
     },
     {
       question: "Can you help with refinancing my current mortgage?",

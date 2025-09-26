@@ -75,14 +75,14 @@ export default function HomePage() {
         {/* 1. Hero Section */}
         <HeroSectionServer />
 
-        {/* 2. Why Work With a Broker */}
+        {/* 2. Choose Your Path Forward */}
+        <ProgramSnapshot />
+
+        {/* 3. Why Work With a Broker */}
         <WhyChooseUs />
 
-        {/* 3. Social Proof / Trust Strip */}
+        {/* 4. Social Proof / Trust Strip */}
         <GoogleReviews />
-
-        {/* 4. Program Snapshot */}
-        <ProgramSnapshot />
 
         {/* 5. Lead Magnet */}
         <LeadMagnet />

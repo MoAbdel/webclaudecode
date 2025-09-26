@@ -52,7 +52,7 @@ export default function ServicesSection() {
       icon: CreditCard,
       title: "HELOC/HELOAN",
       description: "Access your home's equity with flexible credit lines and fixed-rate loans.",
-      link: "/loan-programs/heloc"
+      link: "/loan-programs"
     }
   ];
 

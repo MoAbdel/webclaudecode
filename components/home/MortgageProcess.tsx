@@ -9,21 +9,21 @@ export default function MortgageProcess() {
       number: "01",
       icon: FileText,
       title: "Initial Consultation",
-      description: "Complete our 2-minute quiz or schedule a call to discuss your goals and financial situation.",
+      description: "Complete our 2-minute quiz or schedule a call to discuss your mortgage goals and financial situation.",
       timeline: "Day 1"
     },
     {
       number: "02",
       icon: Search,
       title: "Rate Shopping",
-      description: "I shop 200+ lenders to find the best rates and terms for your specific situation.",
+      description: "I shop 200+ lenders to find the best rates and terms for your specific loan needs.",
       timeline: "Day 1-2"
     },
     {
       number: "03",
       icon: CheckCircle,
-      title: "Pre-Approval",
-      description: "Get pre-approved with a strong offer letter that sellers take seriously.",
+      title: "Loan Approval",
+      description: "Get approved with competitive terms and transparent loan details.",
       timeline: "Day 2-3"
     },
     {
@@ -44,7 +44,7 @@ export default function MortgageProcess() {
       number: "06",
       icon: Key,
       title: "Closing",
-      description: "Sign your documents and get the keys to your new home or complete your refinance.",
+      description: "Sign your documents and finalize your loan with confidence.",
       timeline: "Day 18"
     }
   ];
@@ -72,7 +72,7 @@ export default function MortgageProcess() {
           {/* Connection Line - Hidden on mobile */}
           <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-slate-200 z-0"></div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-8 relative z-10">
             {steps.map((step, index) => {
               const IconComponent = step.icon;
               return (

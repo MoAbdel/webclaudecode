@@ -8,7 +8,7 @@ import { Award, Users, Clock } from 'lucide-react';
 export default function AboutSnippet() {
   return (
     <section className="py-12 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Column - Text Content */}
           <div className="space-y-6">
@@ -42,7 +42,7 @@ export default function AboutSnippet() {
             <div className="relative">
               <div className="w-80 h-80 relative rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/images/mo-headshot.webp"
+                  src="/images/moabdel-headshot-final.png"
                   alt="Mo Abdel - Orange County Mortgage Broker"
                   fill
                   className="object-cover"

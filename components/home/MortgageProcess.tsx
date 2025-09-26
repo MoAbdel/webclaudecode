@@ -72,7 +72,7 @@ export default function MortgageProcess() {
           {/* Connection Line - Hidden on mobile */}
           <div className="hidden lg:block absolute top-20 left-0 right-0 h-0.5 bg-slate-200 z-0"></div>
 
-          <div className="grid md:grid-cols-2 gap-8 relative z-10">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8 relative z-10">
             {steps.map((step, index) => {
               const IconComponent = step.icon;
               return (
@@ -91,11 +91,11 @@ export default function MortgageProcess() {
 
                     {/* Content */}
                     <div className="space-y-3">
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-xl font-bold text-slate-900">
+                      <div className="flex items-start justify-between gap-2">
+                        <h3 className="text-xl font-bold text-slate-900 flex-1">
                           {step.title}
                         </h3>
-                        <span className="text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">
+                        <span className="text-xs sm:text-sm font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full whitespace-nowrap">
                           {step.timeline}
                         </span>
                       </div>

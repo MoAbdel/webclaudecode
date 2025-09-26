@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/Button';
-import { Home, RefreshCw, Building, ArrowRight, DollarSign } from 'lucide-react';
+import { Home, RefreshCw, Building, ArrowRight, DollarSign, CreditCard } from 'lucide-react';
 
 export default function ServicesSection() {
   const services = [
@@ -31,10 +31,10 @@ export default function ServicesSection() {
       link: "/loan-programs/dscr-investment-loans"
     },
     {
-      icon: DollarSign,
-      title: "Debt Consolidation",
-      description: "Combine multiple debts into one manageable mortgage payment.",
-      link: "/loan-programs/cash-out-refinance"
+      icon: CreditCard,
+      title: "HELOC/HELOAN",
+      description: "Access your home's equity with flexible credit lines and fixed-rate loans.",
+      link: "/loan-programs/heloc-loans"
     },
     {
       icon: Home,

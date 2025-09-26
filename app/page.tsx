@@ -82,7 +82,7 @@ export default function HomePage() {
         lastModified="2025-01-24"
       />
       
-      {/* Main Page Content - Cache Bust 2025-08-22 */}
+      {/* Main Page Content - Updated Layout 2025-09-26 */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <HeroSectionServer />
         <ProgramSnapshot />

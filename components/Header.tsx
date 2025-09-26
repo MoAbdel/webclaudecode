@@ -234,12 +234,6 @@ const navigationItems: NavigationItem[] = [
     icon: Phone,
   },
   {
-    title: 'Calculator',
-    page: 'Calculator',
-    url: createPageUrl('Calculator'),
-    icon: Calculator,
-  },
-  {
     title: 'Programs',
     page: 'Programs',
     url: createPageUrl('Programs'),

@@ -61,7 +61,7 @@ export default function DynamicRates() {
           </div>
           
           {/* CLS Prevention: Fixed grid height prevents content shifts */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 min-h-[280px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 min-h-[280px]">
             <div className="flex justify-between items-center py-4 px-6 bg-gray-50 rounded-lg min-h-[72px] hover:bg-blue-50 hover:border-blue-200 border border-transparent transition-all duration-200">
               <span className="font-medium text-slate-700">30-Year Fixed</span>
               <span className="text-xl font-bold text-green-600">{rates.thirtyYear}</span>

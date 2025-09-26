@@ -31,10 +31,10 @@ export default function ServicesSection() {
       link: "/loan-programs/dscr-investment-loans"
     },
     {
-      icon: CreditCard,
-      title: "HELOC/HELOAN",
-      description: "Access your home's equity with flexible credit lines and fixed-rate loans.",
-      link: "/loan-programs/heloc-loans"
+      icon: DollarSign,
+      title: "Debt Consolidation",
+      description: "Combine multiple debts into one manageable mortgage payment.",
+      link: "/loan-programs/cash-out-refinance"
     },
     {
       icon: Home,
@@ -47,6 +47,12 @@ export default function ServicesSection() {
       title: "VA Loans",
       description: "Special loans for veterans and active-duty military.",
       link: "/loan-programs/va-loans"
+    },
+    {
+      icon: CreditCard,
+      title: "HELOC/HELOAN",
+      description: "Access your home's equity with flexible credit lines and fixed-rate loans.",
+      link: "/loan-programs/heloc"
     }
   ];
 

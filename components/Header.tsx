@@ -334,6 +334,18 @@ const navigationItems: NavigationItem[] = [
     hasDropdown: true,
     dropdownItems: guidesDropdown
   },
+  {
+    title: 'Calculator',
+    page: 'Calculator',
+    url: '/tools/mortgage-calculator',
+    icon: Calculator,
+  },
+  {
+    title: 'Contact',
+    page: 'Contact',
+    url: createPageUrl('Contact'),
+    icon: Phone,
+  },
 ];
 
 export default function Header() {

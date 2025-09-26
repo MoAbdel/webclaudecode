@@ -145,13 +145,7 @@ export default function MortgageQuiz() {
                 A licensed advisor will reach out shortly with options.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6">
-                  Schedule a Call
-                </Button>
-                <Button variant="outline" className="border-slate-300">
-                  Download Guide
-                </Button>
+              <div className="flex justify-center">
                 <Button variant="ghost" onClick={() => window.location.href = '/'}>
                   Return Home
                 </Button>

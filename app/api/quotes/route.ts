@@ -1,9 +1,20 @@
 import { NextResponse } from 'next/server';
-import { supabase } from '@/lib/supabase';
+import fs from 'fs';
+import path from 'path';
 // import { Resend } from 'resend';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
+
+// File storage directory
+const DATA_DIR = path.join(process.cwd(), 'data', 'submissions');
+
+// Ensure data directory exists
+function ensureDataDir() {
+  if (!fs.existsSync(DATA_DIR)) {
+    fs.mkdirSync(DATA_DIR, { recursive: true });
+  }
+}
 
 // Initialize Resend with API key - temporarily disabled to fix build
 // const resend = new Resend('re_e2RhAnsw_NNMvX2jngjETx5CHMWVsq9Pw');
@@ -110,7 +121,7 @@ async function sendSMSNotification(quoteData: any) {
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    
+
     // Validate required fields
     if (!body.full_name || !body.email || !body.phone) {
       return NextResponse.json(
@@ -119,51 +130,56 @@ export async function POST(request: Request) {
       );
     }
 
-    // Insert quote into Supabase
-    const { data, error } = await supabase
-      .from('rate_quotes')
-      .insert({
-        full_name: body.full_name,
-        email: body.email.toLowerCase().trim(),
-        phone: body.phone,
-        loan_amount: body.loan_amount ? parseFloat(body.loan_amount) : 0,
-        property_value: body.property_value || (body.loan_amount ? parseFloat(body.loan_amount) * 1.25 : 0),
-        credit_score: body.credit_score || null,
-        loan_type: body.loan_type || 'conventional',
-        down_payment: body.down_payment || null,
-        employment_status: body.employment_status || null,
-        annual_income: body.annual_income || null,
-        status: body.status || 'new',
-        notes: body.notes || null
-      })
-      .select()
-      .single();
+    // Ensure data directory exists
+    ensureDataDir();
 
-    if (error) {
-      console.error('Supabase insert error:', error);
-      // Provide more detailed error message
-      if (error.code === '42P01') {
-        return NextResponse.json(
-          { success: false, error: 'Database tables not set up. Please run the SQL setup script in Supabase.' },
-          { status: 500 }
-        );
-      }
-      throw error;
-    }
+    // Create submission object
+    const submission = {
+      id: Date.now().toString() + Math.random().toString(36).substr(2, 9),
+      full_name: body.full_name,
+      email: body.email.toLowerCase().trim(),
+      phone: body.phone,
+      loan_amount: body.loan_amount ? parseFloat(body.loan_amount) : 0,
+      property_value: body.property_value || (body.loan_amount ? parseFloat(body.loan_amount) * 1.25 : 0),
+      credit_score: body.credit_score || null,
+      loan_type: body.loan_type || 'conventional',
+      loan_purpose: body.loan_purpose || 'purchase',
+      down_payment: body.down_payment || null,
+      employment_status: body.employment_status || null,
+      annual_income: body.annual_income || null,
+      zip_code: body.zip_code || null,
+      occupancy: body.occupancy || null,
+      current_rate: body.current_rate || null,
+      cash_amount: body.cash_amount || null,
+      specialty_loan_type: body.specialty_loan_type || null,
+      status: body.status || 'new',
+      source: body.source || 'Website',
+      notes: body.notes || null,
+      submitted_at: body.submitted_at || new Date().toISOString(),
+      created_at: new Date().toISOString()
+    };
+
+    // Save to file
+    const filename = `submission_${submission.id}.json`;
+    const filepath = path.join(DATA_DIR, filename);
+
+    fs.writeFileSync(filepath, JSON.stringify(submission, null, 2));
+
+    console.log('💾 New submission saved:', submission.email, 'Source:', submission.source);
 
     // Send notifications asynchronously (don't wait for them)
     Promise.all([
-      sendEmailNotification(data),
-      sendSMSNotification(data)
+      sendEmailNotification(submission),
+      sendSMSNotification(submission)
     ]).catch(error => {
       console.error('❌ Notification error:', error);
       // Log to help debug notification issues
       console.log('📧 Quote data for notifications:', {
-        id: data.id,
-        name: data.full_name,
-        email: data.email,
-        phone: data.phone,
-        loan_amount: data.loan_amount
+        id: submission.id,
+        name: submission.full_name,
+        email: submission.email,
+        phone: submission.phone,
+        loan_amount: submission.loan_amount
       });
     });
 
@@ -174,7 +190,7 @@ export async function POST(request: Request) {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           event: 'new_quote',
-          data: data,
+          data: submission,
           timestamp: new Date().toISOString()
         })
       }).catch(console.error);
@@ -183,9 +199,9 @@ export async function POST(request: Request) {
     return NextResponse.json({
       success: true,
       data: {
-        id: data.id,
-        full_name: data.full_name,
-        email: data.email
+        id: submission.id,
+        full_name: submission.full_name,
+        email: submission.email
       },
       message: 'Quote request submitted successfully'
     });
@@ -202,25 +218,30 @@ export async function POST(request: Request) {
 
 export async function GET() {
   try {
-    // Fetch quotes from Supabase (for admin use)
-    const { data, error } = await supabase
-      .from('rate_quotes')
-      .select('*')
-      .order('created_at', { ascending: false });
+    // Ensure data directory exists
+    ensureDataDir();
 
-    if (error) {
-      console.error('Supabase error:', error);
-      throw error;
-    }
+    // Read all submission files from the data directory
+    const files = fs.readdirSync(DATA_DIR);
+    const submissionFiles = files.filter(file => file.startsWith('submission_') && file.endsWith('.json'));
+
+    const submissions = submissionFiles.map(file => {
+      const filepath = path.join(DATA_DIR, file);
+      const content = fs.readFileSync(filepath, 'utf8');
+      return JSON.parse(content);
+    });
+
+    // Sort by created_at date (newest first)
+    submissions.sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
 
     return NextResponse.json({
       success: true,
-      data: data || []
+      data: submissions
     });
 
   } catch (error) {
     console.error('Error fetching quotes:', error);
-    
+
     return NextResponse.json(
       { success: false, error: 'Failed to fetch quotes' },
       { status: 500 }

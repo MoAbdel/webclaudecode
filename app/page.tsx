@@ -2,10 +2,11 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 import HeroSectionServer from '@/components/home/HeroSectionServer';
-import WhyChooseUs from '@/components/home/WhyChooseUs';
+import AboutSnippet from '@/components/home/AboutSnippet';
 import ProgramSnapshot from '@/components/home/ProgramSnapshot';
-import LeadMagnet from '@/components/home/LeadMagnet';
-import StructuredFAQ from '@/components/home/StructuredFAQ';
+import ServicesSection from '@/components/home/ServicesSection';
+import MortgageProcess from '@/components/home/MortgageProcess';
+import NewsInsights from '@/components/home/NewsInsights';
 import AIOOptimization from '@/components/seo/AIOOptimization';
 import EnhancedLocalSchema from '@/components/seo/EnhancedLocalSchema';
 import IndexingOptimization from '@/components/seo/IndexingOptimization';
@@ -20,6 +21,9 @@ export const metadata: Metadata = {
 
 // Lazy load below-the-fold components to reduce initial bundle size
 const GoogleReviews = dynamic(() => import('@/components/home/GoogleReviews'), {
+  loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
+});
+const NewsletterSignup = dynamic(() => import('@/components/home/NewsletterSignup'), {
   loading: () => <div className="h-32 bg-slate-50 animate-pulse rounded-lg" />
 });
 
@@ -70,25 +74,30 @@ export default function HomePage() {
         lastModified="2025-01-24"
       />
       
-      {/* Main Page Content - New Conversion-Focused Structure */}
+      {/* Main Page Content - Fairmont-Inspired Structure */}
       <div className="min-h-screen">
-        {/* 1. Hero Section */}
+        {/* 1. Hero Section with Rates */}
         <HeroSectionServer />
 
-        {/* 2. Choose Your Path Forward */}
+        {/* 2. About Snippet with Photo */}
+        <AboutSnippet />
+
+        {/* 3. Choose Your Path Forward */}
         <ProgramSnapshot />
 
-        {/* 3. Why Work With a Broker */}
-        <WhyChooseUs />
+        {/* 4. Comprehensive Services */}
+        <ServicesSection />
 
-        {/* 4. Social Proof / Trust Strip */}
+        {/* 5. Mortgage Process */}
+        <MortgageProcess />
+
+        {/* 6. Customer Reviews */}
         <GoogleReviews />
 
-        {/* 5. Lead Magnet */}
-        <LeadMagnet />
+        {/* 7. Mortgage News & Insights */}
+        <NewsInsights />
 
-        {/* 6. FAQ Section */}
-        <StructuredFAQ />
+        {/* 8. Footer Newsletter Signup handled within NewsInsights */}
       </div>
     </>
   );

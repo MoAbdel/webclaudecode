@@ -137,24 +137,9 @@ export default function GoogleReviews() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          {/* Header with Google Reviews Link */}
+          {/* Header */}
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-3 mb-4">
-              <h3 className="text-3xl font-bold text-slate-900">Client Reviews</h3>
-              <div className="flex items-center gap-2">
-                <div className="flex">
-                  {[...Array(5)].map((_, i) => (
-                    <Star 
-                      key={i} 
-                      className={`w-6 h-6 ${i < Math.floor(averageRating) ? 'text-yellow-400 fill-current' : 'text-gray-300'}`} 
-                    />
-                  ))}
-                </div>
-                <span className="text-xl font-bold text-slate-900">{averageRating.toFixed(1)}</span>
-                <span className="text-slate-600">({totalReviews} reviews)</span>
-              </div>
-            </div>
-            
+            <h3 className="text-3xl font-bold text-slate-900 mb-4">Recent Client Reviews</h3>
           </div>
 
           {/* Reviews Grid */}

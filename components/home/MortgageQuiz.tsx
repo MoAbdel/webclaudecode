@@ -77,37 +77,36 @@ export default function MortgageQuiz() {
 
   const handleSubmit = async () => {
     try {
-      // Save quiz data to admin dashboard
-      const response = await fetch('/api/quotes', {
+      // Submit quiz data to Formspree
+      const formData_submit = new FormData();
+      formData_submit.append('full_name', formData.firstName || 'Quiz User');
+      formData_submit.append('email', formData.email);
+      formData_submit.append('phone', formData.phone);
+      formData_submit.append('loan_amount', formData.purchasePrice || formData.homeValue || '');
+      formData_submit.append('loan_purpose', formData.intent);
+      formData_submit.append('property_type', 'Single Family Home');
+      formData_submit.append('credit_score', formData.creditRange);
+      formData_submit.append('down_payment', formData.downPaymentPercent || '');
+      formData_submit.append('zip_code', formData.zipCode);
+      formData_submit.append('occupancy', formData.occupancy);
+      formData_submit.append('current_rate', formData.currentRate || '');
+      formData_submit.append('cash_amount', formData.cashAmount || '');
+      formData_submit.append('specialty_loan_type', formData.specialtyLoanType || '');
+      formData_submit.append('source', 'Quiz');
+      formData_submit.append('_subject', `Quiz Submission - ${formData.firstName || 'Quiz User'}`);
+
+      const response = await fetch('https://formspree.io/f/mldpgrok', {
         method: 'POST',
+        body: formData_submit,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          full_name: formData.firstName || 'Quiz User',
-          email: formData.email,
-          phone: formData.phone,
-          loan_amount: formData.purchasePrice || formData.homeValue || '',
-          loan_purpose: formData.intent,
-          property_type: 'Single Family Home',
-          credit_score: formData.creditRange,
-          down_payment: formData.downPaymentPercent || '',
-          zip_code: formData.zipCode,
-          occupancy: formData.occupancy,
-          current_rate: formData.currentRate || '',
-          cash_amount: formData.cashAmount || '',
-          specialty_loan_type: formData.specialtyLoanType || '',
-          source: 'Quiz',
-          submitted_at: new Date().toISOString()
-        })
+          'Accept': 'application/json'
+        }
       });
 
-      const result = await response.json();
-
-      if (result.success) {
-        console.log('Quiz data saved successfully');
+      if (response.ok) {
+        console.log('Quiz data submitted successfully');
       } else {
-        console.error('Failed to save quiz data:', result.error);
+        console.error('Failed to submit quiz data');
       }
     } catch (error) {
       console.error('Error saving quiz data:', error);

@@ -333,21 +333,30 @@ export default function EnhancedContactForm() {
     try {
       const results = calculateMortgageDetails();
       
-      // Submit to Supabase via API
-      const response = await fetch('/api/quotes', {
+      // Submit to Formspree
+      const formData_submit = new FormData();
+      formData_submit.append('full_name', `${formData.firstName} ${formData.lastName}`);
+      formData_submit.append('email', formData.email);
+      formData_submit.append('phone', formData.phone);
+      formData_submit.append('city', formData.city);
+      formData_submit.append('loan_purpose', formData.loanPurpose || 'inquiry');
+      formData_submit.append('timeline', formData.timeline);
+      formData_submit.append('loan_amount', formData.loanAmount || 'N/A');
+      formData_submit.append('home_value', formData.homeValue || 'N/A');
+      formData_submit.append('down_payment', formData.downPayment || 'N/A');
+      formData_submit.append('additional_info', formData.additionalInfo || '');
+      if (results) {
+        formData_submit.append('estimated_payment', `$${Math.round(results.monthlyPayment)}`);
+        formData_submit.append('loan_type', results.loanType);
+      }
+      formData_submit.append('_subject', `Enhanced Contact Form - ${formData.firstName} ${formData.lastName} (${formData.city})`);
+
+      const response = await fetch('https://formspree.io/f/mldpgrok', {
         method: 'POST',
+        body: formData_submit,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          full_name: `${formData.firstName} ${formData.lastName}`,
-          email: formData.email,
-          phone: formData.phone,
-          loan_type: formData.loanPurpose || 'inquiry',
-          loan_amount: parseFloat(formData.loanAmount.replace(/[^0-9.]/g, '')) || 0,
-          notes: `Enhanced Contact Form - City: ${formData.city}, Timeline: ${formData.timeline}, Home Value: ${formData.homeValue || 'N/A'}, Down Payment: ${formData.downPayment || 'N/A'}${formData.additionalInfo ? ', Additional Info: ' + formData.additionalInfo : ''}${results ? `, Est. Monthly Payment: $${Math.round(results.monthlyPayment)}, Loan Type: ${results.loanType}` : ''}`,
-          status: 'new'
-        }),
+          'Accept': 'application/json'
+        }
       });
 
       if (!response.ok) {

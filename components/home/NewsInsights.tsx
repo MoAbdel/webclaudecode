@@ -7,34 +7,34 @@ import { Calendar, ArrowRight, TrendingUp, DollarSign, Home } from 'lucide-react
 export default function NewsInsights() {
   const articles = [
     {
-      category: "Market Update",
+      category: "Expert Guide",
       icon: TrendingUp,
-      title: "Orange County Home Prices Hit New Seasonal Highs",
-      excerpt: "Latest data shows median home prices in Orange County increased 3.2% month-over-month, with inventory remaining tight across all price segments.",
+      title: "Best Mortgage Broker in Orange County",
+      excerpt: "Discover what makes Mo Abdel the top choice for Orange County homebuyers and refinancers, with expert insights and proven results.",
       date: "September 25, 2025",
       readTime: "4 min read",
       image: "/images/oc-market-update.jpg",
-      link: "/articles/orange-county-market-update-september-2025"
+      link: "/articles/best-mortgage-broker-orange-county"
     },
     {
-      category: "Rate Analysis",
-      icon: DollarSign,
-      title: "How Rate Changes Impact Your Buying Power",
-      excerpt: "Understanding how even small rate changes can significantly affect your monthly payment and total loan amount in today's market.",
+      category: "First-Time Buyers",
+      icon: Home,
+      title: "First-Time Homebuyer Mortgage Guide",
+      excerpt: "Complete guide for first-time homebuyers in Orange County, including loan programs, down payment assistance, and expert tips.",
       date: "September 20, 2025",
       readTime: "6 min read",
       image: "/images/rate-impact-analysis.jpg",
-      link: "/articles/rate-changes-buying-power-analysis"
+      link: "/articles/first-time-homebuyer-mortgage-orange-county"
     },
     {
-      category: "Buyer Tips",
-      icon: Home,
-      title: "5 Ways to Strengthen Your Offer in a Competitive Market",
-      excerpt: "Proven strategies to make your offer stand out to sellers, including pre-approval tips and negotiation tactics that work.",
+      category: "Refinancing",
+      icon: DollarSign,
+      title: "Orange County Mortgage Refinance Specialist",
+      excerpt: "Learn about refinancing options in Orange County with expert guidance on rates, timing, and maximizing your savings.",
       date: "September 18, 2025",
       readTime: "5 min read",
       image: "/images/competitive-offer-tips.jpg",
-      link: "/articles/strengthen-offer-competitive-market"
+      link: "/articles/orange-county-mortgage-refinance-specialist"
     }
   ];
 

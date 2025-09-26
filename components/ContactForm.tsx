@@ -44,21 +44,23 @@ export default function ContactForm() {
     setIsSubmitting(true);
     
     try {
-      // Submit to Supabase via API
-      const response = await fetch('/api/quotes', {
+      // Submit to Formspree
+      const formData_submit = new FormData();
+      formData_submit.append('full_name', `${formData.firstName} ${formData.lastName}`);
+      formData_submit.append('email', formData.email);
+      formData_submit.append('phone', formData.phone);
+      formData_submit.append('loan_purpose', formData.loanPurpose || 'inquiry');
+      formData_submit.append('loan_amount', formData.loanAmount || 'Not specified');
+      formData_submit.append('timeline', formData.timeline || 'Not specified');
+      formData_submit.append('additional_info', formData.additionalInfo || '');
+      formData_submit.append('_subject', `New Contact Form - ${formData.firstName} ${formData.lastName}`);
+
+      const response = await fetch('https://formspree.io/f/mldpgrok', {
         method: 'POST',
+        body: formData_submit,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          full_name: `${formData.firstName} ${formData.lastName}`,
-          email: formData.email,
-          phone: formData.phone,
-          loan_type: formData.loanPurpose || 'inquiry',
-          loan_amount: 0, // Will be determined during consultation
-          notes: `Contact Form Inquiry - Loan Amount: ${formData.loanAmount || 'Not specified'}, Timeline: ${formData.timeline || 'Not specified'}, Purpose: ${formData.loanPurpose || 'General inquiry'}${formData.additionalInfo ? ', Additional Info: ' + formData.additionalInfo : ''}`,
-          status: 'new'
-        }),
+          'Accept': 'application/json'
+        }
       });
 
       if (!response.ok) {

@@ -17,7 +17,7 @@ export default function AboutSnippet() {
                 Meet Mo Abdel
               </h2>
               <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                With over a decade of experience in Orange County's mortgage industry, I specialize in securing wholesale rates and fast closings for my clients. As a licensed mortgage broker, I have access to 200+ lenders, allowing me to find the perfect loan program for your unique situation.
+                I'm passionate about making homeownership accessible for Orange County families. As your dedicated mortgage broker, I leverage my extensive network of 200+ lenders to secure wholesale rates that big banks simply can't match. My commitment is simple: find you the best deal with the fastest closing timeline possible.
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -27,7 +27,7 @@ export default function AboutSnippet() {
                 </Badge>
                 <Badge className="bg-green-100 text-green-800 px-3 py-2">
                   <Users className="w-4 h-4 mr-2" />
-                  1000+ Happy Clients
+                  Local OC Expert
                 </Badge>
                 <Badge className="bg-purple-100 text-purple-800 px-3 py-2">
                   <Clock className="w-4 h-4 mr-2" />

@@ -21,23 +21,23 @@ export default function NewsletterSignup() {
     setIsSubmitting(true);
     
     try {
-      // Formspree integration for email collection
-      const formData = new FormData();
-      formData.append('email', email.trim());
-      formData.append('firstName', firstName.trim());
-      formData.append('source', 'MoTheBroker Newsletter');
-      formData.append('subscribedAt', new Date().toISOString());
-      formData.append('_subject', `New Newsletter Subscription: ${firstName}`);
-      
-      const response = await fetch('https://formspree.io/f/xrbzgdyp', {
+      // Submit to newsletter API
+      const response = await fetch('/api/newsletter', {
         method: 'POST',
-        body: formData,
         headers: {
-          'Accept': 'application/json'
-        }
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email: email.trim(),
+          firstName: firstName.trim(),
+          source: 'MoTheBroker Newsletter',
+          subscribedAt: new Date().toISOString()
+        }),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (response.ok && result.success) {
         setShowSuccess(true);
         setEmail('');
         setFirstName('');

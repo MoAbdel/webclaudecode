@@ -84,17 +84,17 @@ export default function MortgageQuiz() {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          full_name: `${formData.firstName} ${formData.lastName}`,
+          full_name: formData.firstName || 'Quiz User',
           email: formData.email,
           phone: formData.phone,
           loan_type: formData.intent || 'quiz_inquiry',
           loan_amount: parseFloat(formData.purchasePrice?.replace(/[^0-9.]/g, '') || formData.homeValue?.replace(/[^0-9.]/g, '') || '0'),
           property_value: parseFloat(formData.homeValue?.replace(/[^0-9.]/g, '') || formData.purchasePrice?.replace(/[^0-9.]/g, '') || '0'),
-          credit_score: formData.creditScore || null,
-          down_payment: parseFloat(formData.downPayment?.replace(/[^0-9.]/g, '') || '0'),
-          annual_income: parseFloat(formData.annualIncome?.replace(/[^0-9.]/g, '') || '0'),
+          credit_score: formData.creditRange || null,
+          down_payment: parseFloat(formData.downPaymentPercent?.replace(/[^0-9.]/g, '') || '0'),
+          annual_income: null,
           status: 'new',
-          notes: `Quiz Submission - Intent: ${formData.intent}, Location: ${formData.zipCode}, Timeline: ${formData.timeline}, Current Rate: ${formData.currentRate || 'N/A'}, Down Payment %: ${formData.downPaymentPercent || 'N/A'}, Employment: ${formData.employment || 'N/A'}`
+          notes: `Quiz Submission - Intent: ${formData.intent}, Location: ${formData.zipCode}, Current Rate: ${formData.currentRate || 'N/A'}, Down Payment %: ${formData.downPaymentPercent || 'N/A'}, Credit Range: ${formData.creditRange || 'N/A'}, Occupancy: ${formData.occupancy || 'N/A'}, Specialty Loan: ${formData.specialtyLoanType || 'N/A'}`
         }),
       });
 

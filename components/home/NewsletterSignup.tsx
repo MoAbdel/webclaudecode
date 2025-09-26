@@ -21,23 +21,23 @@ export default function NewsletterSignup() {
     setIsSubmitting(true);
     
     try {
-      // Submit to newsletter API
-      const response = await fetch('/api/newsletter', {
+      // Submit to Formspree
+      const formData_submit = new FormData();
+      formData_submit.append('email', email.trim());
+      formData_submit.append('firstName', firstName.trim());
+      formData_submit.append('source', 'MoTheBroker Newsletter');
+      formData_submit.append('subscribedAt', new Date().toISOString());
+      formData_submit.append('_subject', `Newsletter Subscription - ${firstName.trim()}`);
+
+      const response = await fetch('https://formspree.io/f/mldpgrok', {
         method: 'POST',
+        body: formData_submit,
         headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          email: email.trim(),
-          firstName: firstName.trim(),
-          source: 'MoTheBroker Newsletter',
-          subscribedAt: new Date().toISOString()
-        }),
+          'Accept': 'application/json'
+        }
       });
 
-      const result = await response.json();
-
-      if (response.ok && result.success) {
+      if (response.ok) {
         setShowSuccess(true);
         setEmail('');
         setFirstName('');

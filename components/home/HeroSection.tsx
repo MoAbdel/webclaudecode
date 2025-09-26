@@ -124,18 +124,18 @@ export default function HeroSection() {
                   <Badge className="bg-blue-100 text-blue-600 px-3 py-1">Updated Weekly</Badge>
                 </div>
                 
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg">
+                <div className="space-y-6">
+                  <div className="flex justify-between items-center py-4 px-6 bg-gray-50 rounded-lg hover:bg-blue-50 hover:border-blue-200 border border-transparent transition-all duration-200">
                     <span className="font-medium text-slate-700">30-Year Fixed</span>
                     <span className="text-2xl font-bold text-green-600">{rates.thirtyYear}</span>
                   </div>
-                  
-                  <div className="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg">
+
+                  <div className="flex justify-between items-center py-4 px-6 bg-gray-50 rounded-lg hover:bg-blue-50 hover:border-blue-200 border border-transparent transition-all duration-200">
                     <span className="font-medium text-slate-700">15-Year Fixed</span>
                     <span className="text-2xl font-bold text-green-600">{rates.fifteenYear}</span>
                   </div>
-                  
-                  <div className="flex justify-between items-center py-3 px-4 bg-gray-50 rounded-lg">
+
+                  <div className="flex justify-between items-center py-4 px-6 bg-gray-50 rounded-lg hover:bg-blue-50 hover:border-blue-200 border border-transparent transition-all duration-200">
                     <span className="font-medium text-slate-700">FHA 30-Year</span>
                     <span className="text-2xl font-bold text-green-600">{rates.fhaThirtyYear}</span>
                   </div>

@@ -70,30 +70,30 @@ export default function ServicesSection() {
           </p>
         </div>
 
-        {/* Services Grid - Top 3 Featured */}
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {services.slice(0, 3).map((service, index) => {
+        {/* Services Grid - First Row (4 cards) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          {services.slice(0, 4).map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div
                 key={index}
-                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer text-center"
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer text-center"
                 onClick={() => window.location.href = service.link}
               >
                 {/* Icon */}
-                <div className="mb-6 flex justify-center">
-                  <div className="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
-                    <IconComponent className="w-8 h-8 text-blue-600 group-hover:text-white transition-colors duration-300" />
+                <div className="mb-4 flex justify-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center group-hover:bg-blue-600 transition-colors duration-300">
+                    <IconComponent className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
                   </div>
                 </div>
 
                 {/* Content */}
-                <div className="space-y-4">
-                  <h3 className="text-xl font-bold text-slate-900">
+                <div className="space-y-3">
+                  <h4 className="text-lg font-bold text-slate-900">
                     {service.title}
-                  </h3>
+                  </h4>
 
-                  <p className="text-slate-600 leading-relaxed">
+                  <p className="text-sm text-slate-600 leading-relaxed">
                     {service.description}
                   </p>
                 </div>
@@ -102,14 +102,14 @@ export default function ServicesSection() {
           })}
         </div>
 
-        {/* Additional Services Grid - 4 cards in 2x2 */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.slice(3).map((service, index) => {
+        {/* Services Grid - Second Row (4 cards) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {services.slice(4).map((service, index) => {
             const IconComponent = service.icon;
             return (
               <div
-                key={index + 3}
-                className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer text-center"
+                key={index + 4}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group cursor-pointer text-center"
                 onClick={() => window.location.href = service.link}
               >
                 {/* Icon */}

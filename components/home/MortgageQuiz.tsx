@@ -75,9 +75,44 @@ export default function MortgageQuiz() {
     }
   };
 
-  const handleSubmit = () => {
-    // Here you would integrate with your CRM/email service
-    console.log('Quiz submitted:', formData);
+  const handleSubmit = async () => {
+    try {
+      // Save quiz data to admin dashboard
+      const response = await fetch('/api/quotes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          full_name: formData.firstName || 'Quiz User',
+          email: formData.email,
+          phone: formData.phone,
+          loan_amount: formData.purchasePrice || formData.homeValue || '',
+          loan_purpose: formData.intent,
+          property_type: 'Single Family Home',
+          credit_score: formData.creditRange,
+          down_payment: formData.downPaymentPercent || '',
+          zip_code: formData.zipCode,
+          occupancy: formData.occupancy,
+          current_rate: formData.currentRate || '',
+          cash_amount: formData.cashAmount || '',
+          specialty_loan_type: formData.specialtyLoanType || '',
+          source: 'Quiz',
+          submitted_at: new Date().toISOString()
+        })
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        console.log('Quiz data saved successfully');
+      } else {
+        console.error('Failed to save quiz data:', result.error);
+      }
+    } catch (error) {
+      console.error('Error saving quiz data:', error);
+    }
+
     setIsComplete(true);
 
     // Track conversion event

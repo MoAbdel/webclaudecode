@@ -2,6 +2,7 @@ import React from 'react';
 import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 import HeroSectionServer from '@/components/home/HeroSectionServer';
+import ProgramSnapshot from '@/components/home/ProgramSnapshot';
 import WhyChooseUs from '@/components/home/WhyChooseUs';
 import BrokerComparison from '@/components/home/BrokerComparison';
 import EnhancedQuickQuote from '@/components/home/EnhancedQuickQuote';
@@ -84,6 +85,7 @@ export default function HomePage() {
       {/* Main Page Content - Cache Bust 2025-08-22 */}
       <div className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
         <HeroSectionServer />
+        <ProgramSnapshot />
         <BrokerComparison />
         <WhyChooseUs />
         <EnhancedQuickQuote />

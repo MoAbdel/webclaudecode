@@ -75,17 +75,47 @@ export default function MortgageQuiz() {
     }
   };
 
-  const handleSubmit = () => {
-    // Here you would integrate with your CRM/email service
-    console.log('Quiz submitted:', formData);
-    setIsComplete(true);
-
-    // Track conversion event
-    if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'quiz_complete', {
-        event_category: 'engagement',
-        event_label: formData.intent
+  const handleSubmit = async () => {
+    try {
+      // Submit quiz data to the same API endpoint as contact forms
+      const response = await fetch('/api/quotes', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          full_name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone,
+          loan_type: formData.intent || 'quiz_inquiry',
+          loan_amount: parseFloat(formData.purchasePrice?.replace(/[^0-9.]/g, '') || formData.homeValue?.replace(/[^0-9.]/g, '') || '0'),
+          property_value: parseFloat(formData.homeValue?.replace(/[^0-9.]/g, '') || formData.purchasePrice?.replace(/[^0-9.]/g, '') || '0'),
+          credit_score: formData.creditScore || null,
+          down_payment: parseFloat(formData.downPayment?.replace(/[^0-9.]/g, '') || '0'),
+          annual_income: parseFloat(formData.annualIncome?.replace(/[^0-9.]/g, '') || '0'),
+          status: 'new',
+          notes: `Quiz Submission - Intent: ${formData.intent}, Location: ${formData.zipCode}, Timeline: ${formData.timeline}, Current Rate: ${formData.currentRate || 'N/A'}, Down Payment %: ${formData.downPaymentPercent || 'N/A'}, Employment: ${formData.employment || 'N/A'}`
+        }),
       });
+
+      if (!response.ok) {
+        throw new Error('Failed to submit quiz');
+      }
+
+      console.log('Quiz submitted successfully:', formData);
+      setIsComplete(true);
+
+      // Track conversion event
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'quiz_complete', {
+          event_category: 'engagement',
+          event_label: formData.intent
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting quiz:', error);
+      // Still show completion even if API fails
+      setIsComplete(true);
     }
   };
 

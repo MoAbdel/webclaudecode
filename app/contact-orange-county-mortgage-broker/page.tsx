@@ -87,7 +87,7 @@ const contactSchema = {
   },
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.9",
+    "ratingValue": "5.0",
     "reviewCount": "50+"
   },
   "contactPoint": {
@@ -196,7 +196,7 @@ export default function ContactOrangeCountyMortgageBrokerPage() {
             </Card>
             <Card className="text-center shadow-lg">
               <CardContent className="p-4">
-                <div className="text-2xl font-bold text-purple-600 mb-1">4.9★</div>
+                <div className="text-2xl font-bold text-purple-600 mb-1">5.0★</div>
                 <div className="text-sm text-slate-600">Client Rating</div>
               </CardContent>
             </Card>

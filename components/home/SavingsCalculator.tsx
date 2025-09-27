@@ -102,9 +102,11 @@ export default function SavingsCalculator() {
                 </p>
               </div>
 
-              <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3">
-                Get Pre-Approved
-              </Button>
+              <a href="/quiz">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3">
+                  Get Pre-Approved
+                </Button>
+              </a>
             </div>
           </div>
 
@@ -154,10 +156,10 @@ export default function SavingsCalculator() {
               {/* Lower Closing Costs */}
               <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
                 <div className="flex items-center mb-2">
-                  <span className="text-blue-600 font-medium">📋 Lower Closing Costs</span>
+                  <span className="text-blue-600 font-medium">📋 Competitive Closing Costs</span>
                 </div>
                 <p className="text-sm text-blue-700">
-                  Typical savings of $1,500-$3,000 on closing costs compared to big banks
+                  Potential savings on closing costs compared to traditional lenders*
                 </p>
               </div>
 

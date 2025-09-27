@@ -3,6 +3,7 @@ import dynamic from 'next/dynamic';
 import type { Metadata } from 'next';
 import HeroSectionServer from '@/components/home/HeroSectionServer';
 import AboutSnippet from '@/components/home/AboutSnippet';
+import SavingsCalculator from '@/components/home/SavingsCalculator';
 import ProgramSnapshot from '@/components/home/ProgramSnapshot';
 import ServicesSection from '@/components/home/ServicesSection';
 import MortgageProcess from '@/components/home/MortgageProcess';
@@ -91,10 +92,13 @@ export default function HomePage() {
         {/* 5. Mortgage Process */}
         <MortgageProcess />
 
-        {/* 6. Customer Reviews */}
+        {/* 6. Savings Calculator */}
+        <SavingsCalculator />
+
+        {/* 7. Customer Reviews */}
         <GoogleReviews />
 
-        {/* 7. Mortgage News & Insights */}
+        {/* 8. Mortgage News & Insights */}
         <NewsInsights />
 
         {/* 8. Footer Newsletter Signup handled within NewsInsights */}

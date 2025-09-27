@@ -25,7 +25,7 @@ export default function HeroSectionServer() {
               </p>
 
               <p className="text-sm text-slate-500 italic">
-                • Sponsored by NEXA Mortgage, NMLS #1660690. Equal Housing Lender.
+                Sponsored by NEXA Mortgage, NMLS #1660690. Equal Housing Lender.
               </p>
             </div>
 

@@ -143,8 +143,11 @@ export default function SavingsCalculator() {
                 <div className="flex items-center mb-2">
                   <span className="text-green-600 font-medium">💰 Potential Savings</span>
                 </div>
-                <p className="text-sm text-green-700">
-                  Save up to ${annualSavings.toLocaleString('en-US', { maximumFractionDigits: 0 })} per year with our wholesale rates
+                <p className="text-sm text-green-700 mb-2">
+                  Save up to ${lifetimeSavings.toLocaleString('en-US', { maximumFractionDigits: 0 })} over the life of a 30-year loan with our wholesale rates
+                </p>
+                <p className="text-xs text-green-600 italic">
+                  *Savings based on 0.125% rate difference. Actual savings may vary based on credit profile, loan program, and market conditions. This is an estimate for comparison purposes only.
                 </p>
               </div>
 

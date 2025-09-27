@@ -169,6 +169,16 @@ export default function SavingsCalculator() {
                 </p>
               </div>
 
+              {/* Lower Closing Costs */}
+              <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                <div className="flex items-center mb-2">
+                  <span className="text-blue-600 font-medium">📋 Lower Closing Costs</span>
+                </div>
+                <p className="text-sm text-blue-700">
+                  Typical savings of $1,500-$3,000 on closing costs compared to big banks
+                </p>
+              </div>
+
               {/* Why Our Rates Are Lower */}
               <div>
                 <h4 className="font-semibold text-slate-900 mb-3">Why Our Rates Are Lower</h4>

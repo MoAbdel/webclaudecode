@@ -5,14 +5,9 @@ import { Button } from '@/components/ui/Button';
 import { Calculator, TrendingDown } from 'lucide-react';
 
 export default function SavingsCalculator() {
-  const [homePrice, setHomePrice] = useState(800000);
-  const [downPayment, setDownPayment] = useState(160000);
+  const [loanAmount, setLoanAmount] = useState(640000);
   const [interestRate, setInterestRate] = useState(7.125);
   const [loanTerm, setLoanTerm] = useState(30);
-
-  // Calculate loan amount
-  const loanAmount = homePrice - downPayment;
-  const downPaymentPercent = ((downPayment / homePrice) * 100).toFixed(1);
 
   // Big Bank Rate (baseline)
   const bigBankRate = interestRate;
@@ -56,33 +51,17 @@ export default function SavingsCalculator() {
             </div>
 
             <div className="space-y-6">
-              {/* Home Price */}
+              {/* Loan Amount */}
               <div>
                 <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Home Price
+                  Loan Amount
                 </label>
                 <input
                   type="number"
-                  value={homePrice}
-                  onChange={(e) => setHomePrice(Number(e.target.value))}
+                  value={loanAmount}
+                  onChange={(e) => setLoanAmount(Number(e.target.value))}
                   className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-              </div>
-
-              {/* Down Payment */}
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  Down Payment
-                </label>
-                <input
-                  type="number"
-                  value={downPayment}
-                  onChange={(e) => setDownPayment(Number(e.target.value))}
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                />
-                <p className="text-sm text-slate-500 mt-1">
-                  {downPaymentPercent}% of home price
-                </p>
               </div>
 
               {/* Interest Rate and Loan Term */}

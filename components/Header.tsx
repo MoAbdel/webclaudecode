@@ -362,9 +362,9 @@ export default function Header() {
             <Image
               src="/MoAbdelLogo.png"
               alt="Mo Abdel - Orange County Mortgage Broker NMLS 1426884"
-              width={810}
-              height={244}
-              className="h-18 md:h-27 w-auto"
+              width={405}
+              height={122}
+              className="h-9 md:h-14 w-auto"
               priority
             />
           </Link>
@@ -431,7 +431,7 @@ export default function Header() {
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-3">
             <a href="/quiz">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
                 Get Started
               </Button>
             </a>
@@ -517,7 +517,7 @@ export default function Header() {
             ))}
             <div className="pt-4 border-t border-slate-200 mt-4">
               <Link href="/quiz" className="block px-3 py-2" onClick={() => setMobileMenuOpen(false)}>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-xl">
+                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 shadow-lg hover:shadow-xl">
                   Get Started
                 </Button>
               </Link>

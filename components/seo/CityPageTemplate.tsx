@@ -72,7 +72,7 @@ export default function CityPageTemplate({ cityData }: CityPageProps) {
     },
     {
       question: `What are current mortgage rates in ${cityData.name}?`,
-      answer: `Mortgage rates in ${cityData.name} vary based on loan type, credit score, and down payment. Current rates start around 6.00% for 30-year fixed loans. Contact Mo for personalized rate quotes based on your specific situation.`
+      answer: `Mortgage rates in ${cityData.name} vary based on loan type, credit score, and down payment. Current rates start around 6.125% for 30-year fixed loans. Contact Mo for personalized rate quotes based on your specific situation.`
     },
     {
       question: `How much house can I afford in ${cityData.name}?`,

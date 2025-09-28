@@ -39,7 +39,7 @@ export default function CreditRepairPage() {
     {
       range: '800-850',
       label: 'Exceptional',
-      rate: '6.25%',
+      rate: '6.00%',
       description: 'Best rates available',
       color: 'bg-green-600',
       textColor: 'text-green-600'
@@ -47,7 +47,7 @@ export default function CreditRepairPage() {
     {
       range: '740-799',
       label: 'Very Good',
-      rate: '6.375%',
+      rate: '6.125%',
       description: 'Excellent rates',
       color: 'bg-blue-600',
       textColor: 'text-blue-600'
@@ -55,7 +55,7 @@ export default function CreditRepairPage() {
     {
       range: '670-739',
       label: 'Good',
-      rate: '6.625%',
+      rate: '6.25%',
       description: 'Good rates available',
       color: 'bg-yellow-600',
       textColor: 'text-yellow-600'
@@ -63,7 +63,7 @@ export default function CreditRepairPage() {
     {
       range: '580-669',
       label: 'Fair',
-      rate: '7.125%',
+      rate: '6.75%',
       description: 'Higher rates',
       color: 'bg-orange-600',
       textColor: 'text-orange-600'

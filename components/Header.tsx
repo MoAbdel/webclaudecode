@@ -299,7 +299,7 @@ const navigationItems: NavigationItem[] = [
   {
     title: 'Purchase',
     page: 'Purchase',
-    url: '/loan-programs',
+    url: '/purchase-loans',
     icon: Home,
     hasDropdown: true,
     dropdownItems: purchaseDropdown
@@ -362,9 +362,9 @@ export default function Header() {
             <Image
               src="/MoAbdelLogo.png"
               alt="Mo Abdel - Orange County Mortgage Broker NMLS 1426884"
-              width={480}
-              height={144}
-              className="h-10 md:h-16 w-auto"
+              width={624}
+              height={187}
+              className="h-13 md:h-21 w-auto"
               priority
             />
           </Link>

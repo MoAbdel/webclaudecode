@@ -16,10 +16,10 @@ export default function OrangeCountyMarketForecast() {
     },
     {
       metric: "Interest Rates",
-      current: "6.5-7.0%",
-      q4_2025: "6.0-6.5%",
-      q2_2026: "5.75-6.25%", 
-      full_2026: "5.5-6.0%",
+      current: "6.125-6.625%",
+      q4_2025: "5.75-6.25%",
+      q2_2026: "5.5-6.0%", 
+      full_2026: "5.25-5.75%",
       confidence: "Medium",
       factors: ["Fed policy", "Inflation trends", "Economic growth"]
     },
@@ -147,21 +147,21 @@ export default function OrangeCountyMarketForecast() {
   const rateScenarios = [
     {
       scenario: "Optimistic",
-      rates2026: "5.5-6.0%",
+      rates2026: "5.25-5.75%",
       probability: "30%",
       triggers: ["Inflation controlled", "Economic stability", "Fed dovish"],
       impact: "Strong buyer activity, price acceleration"
     },
     {
       scenario: "Base Case",
-      rates2026: "6.0-6.5%", 
+      rates2026: "5.75-6.25%", 
       probability: "50%",
       triggers: ["Gradual Fed easing", "Moderate inflation", "Steady economy"],
       impact: "Balanced market, modest price growth"
     },
     {
       scenario: "Conservative",
-      rates2026: "6.5-7.0%",
+      rates2026: "6.25-6.75%",
       probability: "20%",
       triggers: ["Persistent inflation", "Economic uncertainty", "Fed hawkish"],
       impact: "Slower sales, price moderation"

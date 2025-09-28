@@ -91,7 +91,7 @@ export default function RateTermRefinancePage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">Current Rate:</span>
-                    <span className="font-bold text-red-600">7.25%</span>
+                    <span className="font-bold text-red-600">7.00%</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-slate-600">Current Payment:</span>
@@ -100,7 +100,7 @@ export default function RateTermRefinancePage() {
                   <div className="border-t pt-4">
                     <div className="flex justify-between mb-2">
                       <span className="text-slate-600">New Rate:</span>
-                      <span className="font-bold text-green-600">6.50%</span>
+                      <span className="font-bold text-green-600">6.125%</span>
                     </div>
                     <div className="flex justify-between mb-2">
                       <span className="text-slate-600">New Payment:</span>

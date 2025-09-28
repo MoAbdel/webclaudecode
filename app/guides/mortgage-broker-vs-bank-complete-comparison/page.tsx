@@ -223,7 +223,7 @@ export default function MortgageBrokerVsBankComparison() {
   const costComparison = {
     scenario: "$1,000,000 Orange County Home Purchase",
     broker: {
-      rate: "6.00%",
+      rate: "6.125%",
       payment: "$5,996",
       costs: "$18,000",
       totalInterest: "$1,158,560"

@@ -92,7 +92,7 @@ export default function OrangeCountyJumboLoansGuide() {
     {
       type: "Conventional Jumbo",
       downPayment: "10-20%",
-      rates: "6.75-7.25%",
+      rates: "6.625-7.125%",
       maxLTV: "90%",
       creditScore: "740+",
       features: ["Full documentation", "Standard underwriting", "Best rates"],
@@ -101,7 +101,7 @@ export default function OrangeCountyJumboLoansGuide() {
     {
       type: "Bank Statement Jumbo",
       downPayment: "15-25%", 
-      rates: "7.25-8.0%",
+      rates: "7.125-7.875%",
       maxLTV: "80%",
       creditScore: "700+",
       features: ["Bank statements for income", "Self-employed friendly", "Flexible documentation"],

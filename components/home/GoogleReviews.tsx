@@ -154,12 +154,6 @@ export default function GoogleReviews() {
                       <div>
                         <div className="flex items-center gap-2">
                           <span className="font-semibold text-slate-900">{review.author}</span>
-                          {review.verified && (
-                            <span className="inline-flex items-center gap-1 text-xs bg-green-100 text-green-700 px-2 py-1 rounded-full">
-                              <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                              Verified
-                            </span>
-                          )}
                         </div>
                         <div className="flex items-center gap-2 text-sm text-slate-600">
                           {review.location && (

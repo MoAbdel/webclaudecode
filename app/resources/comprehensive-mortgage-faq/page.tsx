@@ -22,7 +22,7 @@ export default function ComprehensiveMortgageFAQ() {
       questions: [
         {
           question: "What are current mortgage rates in Orange County?",
-          answer: "Current rates vary by loan type and qualification factors. As of January 2025: 30-year fixed conventional around 6.00%, 15-year fixed around 5.46%, FHA loans around 5.74%, VA loans around 5.76%, and jumbo loans around 6.00%. Rates change daily and depend on credit score, down payment, loan amount, and property type. Contact for current personalized rate quotes.",
+          answer: "Current rates vary by loan type and qualification factors. As of January 2025: 30-year fixed conventional around 6.125%, 15-year fixed around 5.50%, FHA loans around 6.125%, VA loans around 5.99%, and jumbo loans around 6.625%. Rates change daily and depend on credit score, down payment, loan amount, and property type. Contact for current personalized rate quotes.",
           tags: ["rates", "orange county", "current"]
         },
         {

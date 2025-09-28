@@ -5,12 +5,12 @@ import { Badge } from "@/components/ui/Badge";
 
 export default function DynamicRates() {
   const [rates, setRates] = useState({
-    thirtyYear: "6.00%",
-    fifteenYear: "5.46%",
-    fhaThirtyYear: "5.74%",
-    vaThirtyYear: "5.76%",
-    jumboThirtyYear: "6.00%",
-    armRate: "5.39%"
+    thirtyYear: "6.125%",
+    fifteenYear: "5.50%",
+    fhaThirtyYear: "6.125%",
+    vaThirtyYear: "5.99%",
+    jumboThirtyYear: "6.625%",
+    armRate: "6.00%"
   });
 
   useEffect(() => {
@@ -31,12 +31,12 @@ export default function DynamicRates() {
           const fha = result.data.find((r: any) => r.loan_type.includes('FHA'));
           
           setRates({
-            thirtyYear: thirty ? `${thirty.rate}%` : "6.00%",
-            fifteenYear: fifteen ? `${fifteen.rate}%` : "5.46%",
-            fhaThirtyYear: fha ? `${fha.rate}%` : "5.74%",
-            vaThirtyYear: "5.76%",
-            jumboThirtyYear: "6.00%",
-            armRate: "5.39%"
+            thirtyYear: thirty ? `${thirty.rate}%` : "6.125%",
+            fifteenYear: fifteen ? `${fifteen.rate}%` : "5.50%",
+            fhaThirtyYear: fha ? `${fha.rate}%` : "6.125%",
+            vaThirtyYear: "5.99%",
+            jumboThirtyYear: "6.625%",
+            armRate: "6.00%"
           });
         }
       } catch (error) {

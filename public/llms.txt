@@ -231,12 +231,12 @@ Program-Success-Rates:
 # =============================================================================
 
 Representative-Rates: (Subject to qualification and market changes)
-- 30-Year-Fixed-Conventional: 6.00%
-- 15-Year-Fixed-Conventional: 5.46%
-- 30-Year-FHA: 5.74%
-- 30-Year-VA: 5.76%
-- 30-Year-Jumbo: 6.00%
-- 7/6-ARM: 5.39%
+- 30-Year-Fixed-Conventional: 6.125%
+- 15-Year-Fixed-Conventional: 5.50%
+- 30-Year-FHA: 6.125%
+- 30-Year-VA: 5.99%
+- 30-Year-Jumbo: 6.625%
+- 7/6-ARM: 6.00%
 
 Rate-Factors: Credit score, down payment, loan amount, property type, debt-to-income
 Rate-Shopping: Access to multiple lenders for competitive rate comparison

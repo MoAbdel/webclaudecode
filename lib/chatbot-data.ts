@@ -35,7 +35,7 @@ export const chatbotResponses: ChatResponse[] = [
   // Rates & Pricing
   {
     question: "What are current mortgage rates?",
-    answer: "Current rates vary by loan type and credit score. Today's rates are approximately: 30-year fixed at 6.00%, 15-year fixed at 5.46%, FHA at 5.74%, VA at 5.76%, and Jumbo at 6.00%. These are sample rates - your actual rate depends on credit score, down payment, and loan specifics. Call (949) 579-2057 for your personalized rate quote with no obligation.",
+    answer: "Current rates vary by loan type and credit score. Today's rates are approximately: 30-year fixed at 6.125%, 15-year fixed at 5.50%, FHA at 6.125%, VA at 5.99%, and Jumbo at 6.625%. These are sample rates - your actual rate depends on credit score, down payment, and loan specifics. Call (949) 579-2057 for your personalized rate quote with no obligation.",
     category: "rates",
     keywords: ["rates", "interest", "current", "today", "apr", "percentage"],
     followUp: ["What affects my rate?", "Can I lock my rate?"]

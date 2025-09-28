@@ -13,7 +13,7 @@ export default function StructuredFAQ() {
     },
     {
       question: "What are current mortgage rates in Orange County?",
-      answer: "Current rates vary based on loan type and credit score. As of today, 30-year fixed rates are around 6.52%, 15-year fixed at 5.90%, and FHA loans at 6.10%. With my wholesale lender access, I consistently secure competitive rates and significantly lower upfront costs compared to retail banks."
+      answer: "Current rates vary based on loan type and credit score. As of today, 30-year fixed rates are around 6.125%, 15-year fixed at 5.50%, FHA loans at 6.125%, VA loans at 5.99%, Jumbo loans at 6.625%, and 7/6 ARM at 6.00%. With my wholesale lender access, I consistently secure competitive rates and significantly lower upfront costs compared to retail banks."
     },
     {
       question: "How much can I save using a mortgage broker?",

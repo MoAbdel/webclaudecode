@@ -362,9 +362,9 @@ export default function Header() {
             <Image
               src="/MoAbdelLogo.png"
               alt="Mo Abdel - Orange County Mortgage Broker NMLS 1426884"
-              width={540}
-              height={162}
-              className="h-12 md:h-18 w-auto"
+              width={720}
+              height={216}
+              className="h-16 md:h-24 w-auto"
               priority
             />
           </Link>

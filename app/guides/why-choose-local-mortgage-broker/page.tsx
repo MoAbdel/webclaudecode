@@ -164,7 +164,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
                 <div>
                   <strong className="text-slate-900">Competitive Access to 200+ Lenders</strong>
                   <p className="text-slate-600 text-sm mt-1">
-                    I shop your loan with hundreds of lenders to find the best rates and terms
+                    I shop your loan with 200+ lenders to find the best rates and terms
                   </p>
                 </div>
               </div>
@@ -184,7 +184,7 @@ export default function WhyChooseLocalMortgageBrokerGuide() {
                 <div>
                   <strong className="text-slate-900">Orange County Specialist</strong>
                   <p className="text-slate-600 text-sm mt-1">
-                    Focused on OC market since beginning my career - I know the challenges
+                    Dedicated Orange County focus - I understand the local market challenges
                   </p>
                 </div>
               </div>

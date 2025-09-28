@@ -207,7 +207,7 @@ export default function AnaheimMortgageBrokerPage() {
                 <div>
                   <h3 className="text-xl font-bold text-slate-900 mb-2">First-Time Buyer Specialist</h3>
                   <p className="text-slate-600">
-                    Extensive experience helping Anaheim families achieve homeownership with 
+                    Dedicated to helping Anaheim families achieve homeownership with
                     FHA loans, down payment assistance, and first-time buyer programs.
                   </p>
                 </div>

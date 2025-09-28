@@ -120,6 +120,6 @@ export const refinancingFAQs: FAQItem[] = [
   },
   {
     question: "How long does the refinancing process take?",
-    answer: "Refinancing typically takes 30-45 days from application to closing. The process includes application, appraisal, underwriting, and final approval. Working with an experienced Orange County mortgage broker can streamline the process and ensure you're getting the best available rates and terms."
+    answer: "Refinancing typically takes 2-3 weeks from application to closing. The process includes application, appraisal, underwriting, and final approval. Working with an experienced Orange County mortgage broker can streamline the process and ensure you're getting the best available rates and terms."
   }
 ];

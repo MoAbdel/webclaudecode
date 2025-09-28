@@ -409,7 +409,7 @@ export default function GolfCourseHomesMortgageBrokerPage() {
                     <Trophy className="w-6 h-6 text-green-600 mt-1" />
                     <div>
                       <h3 className="font-semibold text-slate-900">Championship Course Experience</h3>
-                      <p className="text-slate-600">Extensive experience with premier golf communities and championship courses</p>
+                      <p className="text-slate-600">Specialized knowledge of premier golf communities and championship courses</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-3">

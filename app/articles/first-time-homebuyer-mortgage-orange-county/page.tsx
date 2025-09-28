@@ -65,7 +65,7 @@ export default function FirstTimeHomebuyerArticle() {
               {/* Introduction */}
               <section className="mb-12">
                 <p className="text-xl leading-relaxed text-gray-700">
-                  Congratulations on taking the first step toward homeownership in Orange County! While the median home price may seem daunting, numerous programs, strategies, and financing options can make your dream achievable. As someone who's guided hundreds of first-time buyers through this process, I'll share the insider knowledge you need to succeed.
+                  Congratulations on taking the first step toward homeownership in Orange County! While the median home price may seem daunting, numerous programs, strategies, and financing options can make your dream achievable. As someone who's guided first-time buyers through this process, I'll share the insider knowledge you need to succeed.
                 </p>
               </section>
 

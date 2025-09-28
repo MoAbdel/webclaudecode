@@ -65,7 +65,7 @@ export default function VALoanBrokerArticle() {
               {/* Introduction */}
               <section className="mb-12">
                 <p className="text-xl leading-relaxed text-gray-700">
-                  As a VA loan mortgage broker in Orange County, I've had the honor of helping hundreds of veterans, active-duty service members, and military families secure their piece of the California dream. Your service to our country earned you extraordinary homebuying benefits—let's make sure you use them to their fullest potential in one of America's most desirable housing markets.
+                  As a VA loan mortgage broker in Orange County, I've had the honor of helping veterans, active-duty service members, and military families secure their piece of the California dream. Your service to our country earned you extraordinary homebuying benefits—let's make sure you use them to their fullest potential in one of America's most desirable housing markets.
                 </p>
               </section>
 

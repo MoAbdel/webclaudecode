@@ -118,7 +118,7 @@ export const chatbotResponses: ChatResponse[] = [
   // Process & Timeline
   {
     question: "How long does the process take?",
-    answer: "My average closing time is just 18 days, much faster than the 30-45 days at most banks. Timeline: Pre-approval in 24 hours or less, full application in 1-2 days, processing/underwriting in 10-14 days, and closing appointment. My dedicated team and 200+ lender network enable this speed.",
+    answer: "My average closing time is just 18 days, much faster than the 2-3 weeks at most banks. Timeline: Pre-approval in 24 hours or less, full application in 1-2 days, processing/underwriting in 10-14 days, and closing appointment. My dedicated team and 200+ lender network enable this speed.",
     category: "process",
     keywords: ["how long", "timeline", "days", "closing", "process", "fast"],
     followUp: ["Can you close faster?", "What causes delays?"]

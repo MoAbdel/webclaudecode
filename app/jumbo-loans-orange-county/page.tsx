@@ -609,8 +609,8 @@ export default function JumboLoansOrangeCountyPage() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600">
-                    Jumbo loan approval typically takes 30-45 days due to additional documentation and 
-                    underwriting requirements. Complex financial situations or unique properties may take longer. 
+                    Jumbo loan approval typically takes 2-3 weeks due to additional documentation and
+                    underwriting requirements. Complex financial situations or unique properties may take longer.
                     Pre-approval can expedite the process significantly for serious luxury home buyers.
                   </p>
                 </CardContent>

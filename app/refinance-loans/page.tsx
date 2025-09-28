@@ -72,7 +72,7 @@ const refinanceOptions = [
       'No appraisal required in most cases',
       'Minimal documentation needed',
       'Lower monthly payments guaranteed',
-      'Faster processing (15-30 days typical)'
+      'Faster processing (2-3 weeks typical)'
     ],
     bestFor: 'Current FHA loan holders',
     averageSavings: 'Up to $300/month',
@@ -109,7 +109,7 @@ const faqs = [
   },
   {
     question: "How long does the refinance process take?",
-    answer: "Standard refinances typically take 30-45 days. Streamline refinances (FHA/VA) can close in 15-30 days. The timeline depends on appraisal scheduling, documentation completion, and lender processing times."
+    answer: "Standard refinances typically take 2-3 weeks. Streamline refinances (FHA/VA) can close in 2-3 weeks. The timeline depends on appraisal scheduling, documentation completion, and lender processing times."
   },
   {
     question: "What costs are involved in refinancing?",

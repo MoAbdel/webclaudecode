@@ -32,8 +32,8 @@ export default function OrangeCountyVALoansPage() {
             Orange County <span className="text-blue-600">VA Loans</span> & Military Home Financing
           </h1>
           <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Helping Orange County veterans, active military, and eligible spouses purchase homes with 
-            $0 down payment. Licensed VA loan specialist with extensive experience serving 
+            Helping Orange County veterans, active military, and eligible spouses purchase homes with
+            $0 down payment. Licensed VA loan specialist dedicated to serving
             military families in Orange County's competitive housing market.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

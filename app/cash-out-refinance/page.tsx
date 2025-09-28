@@ -105,7 +105,7 @@ const faqs = [
   },
   {
     question: "How long does a cash-out refinance take in Orange County?",
-    answer: "The process typically takes 30-45 days from application to closing. This includes appraisal scheduling, underwriting, and title work. I work closely with all parties to ensure a smooth, timely closing, which is especially important in Orange County's fast-moving market."
+    answer: "The process typically takes 2-3 weeks from application to closing. This includes appraisal scheduling, underwriting, and title work. I work closely with all parties to ensure a smooth, timely closing, which is especially important in Orange County's fast-moving market."
   }
 ];
 
@@ -471,8 +471,8 @@ export default function CashOutRefinancePage() {
                 </div>
                 <h3 className="text-lg font-bold text-slate-900 mb-3">Closing & Cash-Out</h3>
                 <p className="text-slate-600">
-                  At closing, you'll sign documents and receive your cash. The process 
-                  typically takes 30-45 days total.
+                  At closing, you'll sign documents and receive your cash. The process
+                  typically takes 2-3 weeks total.
                 </p>
               </div>
             </div>

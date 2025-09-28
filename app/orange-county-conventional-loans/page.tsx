@@ -360,7 +360,7 @@ export default function OrangeCountyConventionalLoansPage() {
                       </div>
                       <h3 className="text-lg font-bold mb-3">200+ Lender Network</h3>
                       <p className="text-slate-600">
-                        Compare conventional loan rates from hundreds of lenders for the best deal.
+                        Compare conventional loan rates from 200+ lenders for the best deal.
                       </p>
                     </div>
                     <div className="text-center">

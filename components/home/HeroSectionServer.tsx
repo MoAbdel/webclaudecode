@@ -2,7 +2,6 @@ import React from "react";
 import { Button } from "@/components/ui/Button";
 import { ArrowRight, CheckCircle, Zap, Shield } from "lucide-react";
 import { Badge } from "@/components/ui/Badge";
-import DynamicRates from "./DynamicRates";
 
 export default function HeroSectionServer() {
   return (
@@ -67,10 +66,6 @@ export default function HeroSectionServer() {
             </div>
           </div>
 
-          {/* Right Column - Rates Card */}
-          <div className="flex justify-center lg:justify-end">
-            <DynamicRates />
-          </div>
         </div>
       </div>
     </section>

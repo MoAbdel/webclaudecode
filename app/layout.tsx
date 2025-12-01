@@ -152,29 +152,24 @@ export default function RootLayout({
         <AdvancedSchemaMarkup type="Organization" />
         <meta name="deployment-id" content="BGDyiFiyb-rollback" />
       </head>
-      <body className="min-h-screen bg-gradient-to-b from-slate-50 to-white">
-        <Header />
-        <Breadcrumbs />
+      <body className="min-h-screen">
         <main className="flex-1">
           {children}
         </main>
-        <Footer />
         <GoogleAnalytics />
         <FacebookPixel />
         <GEOTracking />
         <ChatbotHardReset />
-        
+
         {/* Combined structured data - single script for better performance */}
-        <Script 
+        <Script
           id="combined-structured-data"
           type="application/ld+json"
           strategy="lazyOnload"
-          dangerouslySetInnerHTML={{ 
+          dangerouslySetInnerHTML={{
             __html: JSON.stringify([structuredData, mortgageLoanSchema])
           }}
         />
-        
-        <FixedChatbot />
       </body>
     </html>
   );

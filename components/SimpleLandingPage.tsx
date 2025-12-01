@@ -11,7 +11,7 @@ export default function SimpleLandingPage() {
           <div className="inline-block">
             <div className="w-32 h-32 rounded-full border-4 border-yellow-500 overflow-hidden mx-auto">
               <img
-                src="/favicon-headshot-cropped-512x512.png"
+                src="/images/moabdel-headshot-new.png"
                 alt="Mo Abdel"
                 className="w-full h-full object-cover"
               />

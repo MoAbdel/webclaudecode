@@ -78,7 +78,7 @@ export default function SimpleLandingPage() {
             className="flex items-center justify-center gap-2 w-full bg-white text-gray-900 py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition-colors"
           >
             <File className="w-5 h-5" />
-            HELOC 100% Digital, No Documents, Can Fund in 7 days!
+            HELOC 100% Digital, No Docs, Can Fund in 7 days!
           </a>
 
           {/* Upload Documents Securely */}
@@ -99,17 +99,6 @@ export default function SimpleLandingPage() {
           >
             <Mail className="w-5 h-5" />
             Email Me
-          </a>
-
-          {/* Schedule An Appointment (Second) */}
-          <a
-            href="https://calendly.com/mbabdel/15min"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 w-full bg-white text-gray-900 py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition-colors"
-          >
-            <Calendar className="w-5 h-5" />
-            Schedule An Appointment
           </a>
 
           {/* WestCapitalLending.com */}
@@ -152,6 +141,7 @@ export default function SimpleLandingPage() {
               width={80}
               height={80}
               className="opacity-90"
+              unoptimized
             />
           </div>
         </div>

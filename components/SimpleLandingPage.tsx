@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from 'next/image';
 import { User, Calendar, FileText, File, Lock, Mail, Globe, Shield } from 'lucide-react';
 
 export default function SimpleLandingPage() {
@@ -11,11 +10,9 @@ export default function SimpleLandingPage() {
           {/* Profile Image with Gold Border */}
           <div className="inline-block">
             <div className="w-32 h-32 rounded-full border-4 border-yellow-500 overflow-hidden mx-auto">
-              <Image
-                src="/images/moabdel-headshot-final.png"
+              <img
+                src="/favicon-headshot-cropped-512x512.png"
                 alt="Mo Abdel"
-                width={128}
-                height={128}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -135,13 +132,12 @@ export default function SimpleLandingPage() {
 
           {/* Equal Housing Logo */}
           <div className="flex justify-center pt-4">
-            <Image
-              src="/images/equal-housing-logo.png"
+            <img
+              src="/images/equal-housing.svg"
               alt="Equal Housing Opportunity"
               width={80}
               height={80}
               className="opacity-90"
-              unoptimized
             />
           </div>
         </div>

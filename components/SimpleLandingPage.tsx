@@ -133,7 +133,7 @@ export default function SimpleLandingPage() {
           {/* Equal Housing Logo */}
           <div className="flex justify-center pt-4">
             <img
-              src="/images/equal-housing-opportunity-logo.png"
+              src="/images/equal-housing-transparent.svg"
               alt="Equal Housing Opportunity"
               width={120}
               height={80}

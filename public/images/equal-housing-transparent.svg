@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
-  <!-- House icon with equal sign -->
-  <g transform="translate(50, 20)">
-    <!-- House outline -->
-    <path d="M 50 30 L 100 0 L 150 30 L 150 90 L 0 90 L 0 30 Z"
-          fill="none" stroke="white" stroke-width="8" stroke-linejoin="miter"/>
+  <!-- House with equal sign -->
+  <g transform="translate(150, 20)">
+    <!-- Roof -->
+    <polygon points="0,25 -40,50 40,50" fill="white" stroke="white" stroke-width="3"/>
 
-    <!-- Equal sign inside house -->
-    <rect x="40" y="35" width="70" height="10" fill="white"/>
-    <rect x="40" y="55" width="70" height="10" fill="white"/>
+    <!-- House body -->
+    <rect x="-40" y="50" width="80" height="50" fill="white"/>
+
+    <!-- Equal sign bars inside house -->
+    <rect x="-25" y="62" width="50" height="6" fill="#1e293b"/>
+    <rect x="-25" y="77" width="50" height="6" fill="#1e293b"/>
   </g>
 
   <!-- Text -->
-  <text x="150" y="130" font-family="Arial, sans-serif" font-size="28" font-weight="bold"
+  <text x="150" y="135" font-family="Arial, sans-serif" font-size="24" font-weight="bold"
         fill="white" text-anchor="middle">EQUAL HOUSING</text>
-  <text x="150" y="165" font-family="Arial, sans-serif" font-size="28" font-weight="bold"
+  <text x="150" y="165" font-family="Arial, sans-serif" font-size="24" font-weight="bold"
         fill="white" text-anchor="middle">OPPORTUNITY</text>
 </svg>

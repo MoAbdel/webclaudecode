@@ -75,7 +75,7 @@ export default function SimpleLandingPage() {
             className="flex items-center justify-center gap-2 w-full bg-white text-gray-900 py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition-colors"
           >
             <File className="w-5 h-5" />
-            HELOC 100% Digital, No Docs, Can Fund in 7 days!
+            Digital HELOC Application
           </a>
 
           {/* Upload Documents Securely */}
@@ -87,6 +87,17 @@ export default function SimpleLandingPage() {
           >
             <Lock className="w-5 h-5" />
             Upload Documents Securely
+          </a>
+
+          {/* Order Credit Report */}
+          <a
+            href="https://credit.advcredit.com/smartpay/SmartPay.aspx?uid=66239a18-5991-4274-92ff-77e6bffa5ab4#forward"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 w-full bg-white text-gray-900 py-3 px-6 rounded-lg font-medium hover:bg-gray-100 transition-colors"
+          >
+            <FileText className="w-5 h-5" />
+            Order Credit Report
           </a>
 
           {/* Email Me */}

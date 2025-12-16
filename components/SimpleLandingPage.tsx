@@ -3,7 +3,7 @@ import { User, Calendar, FileText, File, Lock, Mail, Globe, Shield } from 'lucid
 
 export default function SimpleLandingPage() {
   return (
-    <div className="min-h-screen bg-[#1e293b] flex items-center justify-center px-4 py-8">
+    <div className="min-h-screen bg-[#1e293b] flex items-center justify-center px-4 py-8" data-version="1.0.1">
       <div className="max-w-md w-full space-y-6">
         {/* Profile Section */}
         <div className="text-center space-y-4">

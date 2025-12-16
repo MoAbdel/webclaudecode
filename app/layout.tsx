@@ -20,26 +20,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://www.mothebroker.com',
   },
-  icons: {
-    icon: [
-      { url: '/favicon.ico', sizes: '48x48 32x32 16x16', type: 'image/x-icon' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-48x48.png', sizes: '48x48', type: 'image/png' },
-      { url: '/favicon-64x64.png', sizes: '64x64', type: 'image/png' },
-      { url: '/favicon-128x128.png', sizes: '128x128', type: 'image/png' },
-      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
-      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
-    ],
-    shortcut: '/favicon.ico',
-    apple: [
-      { url: '/apple-touch-icon-180x180.png', sizes: '180x180', type: 'image/png' },
-      { url: '/apple-touch-icon-192x192.png', sizes: '192x192', type: 'image/png' },
-    ],
-    other: [
-      { rel: 'mask-icon', url: '/images/MoAbdel-Favicon.png', color: '#1e40af' },
-    ],
-  },
   openGraph: {
     title: 'Orange County Mortgage Broker | Mo Abdel NMLS #1426884',
     description: 'Get competitive mortgage rates from 200+ lenders. Serving Orange County & beyond with fast closings, unbiased advice, and flexible home loan programs.',
@@ -111,7 +91,6 @@ export default function RootLayout({
         
         {/* CRITICAL: Preload key images for LCP optimization with dimensions for CLS prevention */}
         <link rel="preload" href="/images/moabdel-headshot-final.png" as="image" type="image/png" media="(min-width: 640px)" />
-        <link rel="preload" href="/favicon.ico" as="image" type="image/x-icon" />
         
         {/* Critical: Image dimension hints to prevent CLS */}
         <style dangerouslySetInnerHTML={{
